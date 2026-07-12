@@ -5,6 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Gophernment Blog</title>
 <meta name="description" content="บทความจาก Gophernment Blog">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XK3D6G7EVG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  // ปิด auto pageview เพราะ title/url ยังไม่รู้จนกว่า loadBlogPost() จะ fetch เนื้อหาเสร็จ
+  gtag('config', 'G-XK3D6G7EVG', { send_page_view: false });
+</script>
 <style>
 :root {
   --bg: #ffffff;
@@ -106,7 +114,17 @@ footer.site a:hover { text-decoration: underline; }
 </footer>
 
 <script src="/assets/markdown.js"></script>
-<script>loadBlogPost();</script>
+<script>
+  loadBlogPost().then(function () {
+    if (typeof gtag === "function") {
+      gtag("event", "page_view", {
+        page_title: document.title,
+        page_location: location.href,
+        page_path: location.pathname + location.search,
+      });
+    }
+  });
+</script>
 
 </body>
 </html>
