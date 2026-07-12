@@ -27,29 +27,7 @@ Anthropic สรุปโครงสร้างนี้ไว้ใน [Build
 
 โครงสร้างการทำงานเป็นวงเป็นดังนี้:
 
-```
-        task
-          │
-          ▼
-   ┌─────────────┐
-   │ think (LLM)  │◀────────────┐
-   └──────┬───────┘             │
-          │                     │
-   final answer? ── yes ──▶ return
-          │ no                  │
-          ▼                     │
-   ┌─────────────┐              │
-   │ select tool  │              │
-   └──────┬───────┘              │
-          ▼                     │
-   ┌─────────────┐              │
-   │ execute tool │              │
-   └──────┬───────┘              │
-          ▼                     │
-   ┌─────────────┐              │
-   │   observe    │──────────────┘
-   └─────────────┘
-```
+![โครงสร้างการทำงานของ AI Agent (ReAct Loop)](/images/agent-loop-brush.jpg)
 
 ส่วนถัดไปแกะแต่ละส่วนเป็นโค้ด Go
 
@@ -60,7 +38,10 @@ Tool คือ interface เดียว ไม่ต้องซับซ้อ
 ```go
 package agent
 
-import "context"
+import (
+	"context"
+	"fmt"
+)
 
 type Tool interface {
 	Name() string
