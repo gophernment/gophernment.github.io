@@ -75,6 +75,43 @@ header p { color: var(--muted); font-size: 1em; }
   border: 1px solid var(--border);
 }
 
+#blog-controls { display: flex; flex-direction: column; gap: 12px; margin-bottom: 24px; }
+#blog-search {
+  padding: 8px 14px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  font-size: 0.9em;
+  font-family: inherit;
+  color: var(--text);
+  background: var(--bg);
+}
+#blog-search:focus { outline: none; border-color: var(--accent); }
+#tag-filters { display: flex; flex-wrap: wrap; gap: 8px; }
+.tag-chip {
+  font-size: 0.8em;
+  color: var(--muted);
+  background: var(--hover);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 5px 12px;
+  cursor: pointer;
+  font-family: inherit;
+}
+.tag-chip:hover { border-color: var(--accent); color: var(--accent); }
+.tag-chip.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+#pagination { display: flex; gap: 8px; margin-top: 24px; justify-content: center; }
+.page-link {
+  display: inline-block;
+  padding: 6px 12px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.9em;
+}
+.page-link:hover { border-color: var(--accent); color: var(--accent); }
+.page-link.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+
 /* Archive: dev.to, de-emphasized */
 .archive { border-top: 1px solid var(--border); padding-top: 32px; }
 .archive > summary {
@@ -181,47 +218,21 @@ footer a:hover { text-decoration: underline; }
 <section class="featured">
 <h2>จาก Gophernment Blog</h2>
 
-<a class="post-card" href="/blog/post.html?slug=2026-07-12-go-fix-modernize">
-<h3>go fix ตัวใหม่ใน Go 1.26: เครื่องมือปรับโค้ดเก่าให้ทันสมัยอัตโนมัติ</h3>
-<p class="desc">go fix เขียนใหม่ทั้งหมด ยืนบน Analysis Framework เดียวกับ go vet พร้อม modernizer ที่แก้สไตล์โค้ดเก่าให้อัตโนมัติ — รวมถึงโค้ดที่ AI generate</p>
-<div class="meta">
-<span class="badge">go</span><span class="badge">tooling</span><span class="badge">static-analysis</span><span class="badge">ai</span>
-<span class="date">12 ก.ค. 2026</span>
-<span class="cta">อ่านบทความ →</span>
+<div id="blog-controls">
+<input id="blog-search" type="search" placeholder="ค้นหาบทความ...">
+<div id="tag-filters"></div>
 </div>
-</a>
 
-<a class="post-card" href="/blog/post.html?slug=2026-07-12-go-flight-recorder">
-<h3>Flight Recorder ใน Go 1.25: debug production ย้อนหลังโดยไม่ต้องเก็บ trace ทั้งเส้นทาง</h3>
-<p class="desc">เก็บ execution trace วนใน ring buffer ตลอดเวลา แล้ว snapshot เฉพาะช่วงที่มีปัญหาจริง — ไม่ต้องรู้ล่วงหน้าว่าจะพังตอนไหน</p>
-<div class="meta">
-<span class="badge">go</span><span class="badge">tracing</span><span class="badge">debugging</span><span class="badge">production</span>
-<span class="date">12 ก.ค. 2026</span>
-<span class="cta">อ่านบทความ →</span>
-</div>
-</a>
-
-<a class="post-card" href="/blog/post.html?slug=2026-07-12-ai-agent-architecture-go">
-<h3>โครงสร้าง AI Agent: หลักการสร้าง Agent ด้วยตัวเอง (สำหรับนักพัฒนา Go)</h3>
-<p class="desc">แกะโครงสร้าง AI agent เป็น 4 ส่วนประกอบ (model, tools, memory, control loop) พร้อมตัวอย่าง Go ประกอบเป็น agent เองได้ ไม่ต้องพึ่ง framework</p>
-<div class="meta">
-<span class="badge">ai</span><span class="badge">agent</span><span class="badge">architecture</span><span class="badge">go</span>
-<span class="date">12 ก.ค. 2026</span>
-<span class="cta">อ่านบทความ →</span>
-</div>
-</a>
-
-<a class="post-card" href="/blog/post.html?slug=2026-07-12-observability-ai-agent-go">
-<h3>ความสำคัญของ Observability ใน AI Agent (ตัวอย่างด้วย Go)</h3>
-<p class="desc">ทำไม AI agent ต้องการ trace/log/metric มากกว่า service ทั่วไป พร้อมตัวอย่าง OpenTelemetry ใน Go และ trade-off เรื่องค่าใช้จ่าย</p>
-<div class="meta">
-<span class="badge">ai</span><span class="badge">agent</span><span class="badge">observability</span><span class="badge">go</span>
-<span class="date">12 ก.ค. 2026</span>
-<span class="cta">อ่านบทความ →</span>
-</div>
-</a>
+<div id="blog-list"><p>กำลังโหลดบทความ...</p></div>
+<nav id="pagination"></nav>
 
 </section>
+
+<script src="/assets/blog-index.js?v=1"></script>
+<script>
+initBlogIndexEvents();
+renderBlogIndex();
+</script>
 
 <details class="archive">
 <summary>เพิ่มเติมจาก dev.to — บทความเก่าของทีม</summary>
