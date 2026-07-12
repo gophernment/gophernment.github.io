@@ -36,61 +36,29 @@ header {
 header h1 { font-size: 1.6em; font-weight: 700; margin-bottom: 8px; }
 header p { color: var(--muted); font-size: 1em; }
 
-nav.categories {
-  max-width: 720px;
-  margin: 0 auto;
-  padding: 0 24px 32px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  border-bottom: 1px solid var(--border);
-  margin-bottom: 40px;
-}
-nav.categories a {
-  font-size: 0.85em;
-  color: var(--muted);
-  text-decoration: none;
-  padding: 6px 12px;
-  border: 1px solid var(--border);
-  border-radius: 20px;
-}
-nav.categories a:hover { border-color: var(--accent); color: var(--accent); }
-
 .container { max-width: 720px; margin: 0 auto; padding: 0 24px 40px; }
 
-.category { margin-bottom: 56px; scroll-margin-top: 24px; }
-.category h2 {
-  font-size: 1.05em;
-  font-weight: 700;
-  margin-bottom: 20px;
-  padding-left: 12px;
-  border-left: 3px solid var(--border);
+/* Featured: Gophernment blog posts */
+.featured { margin-bottom: 56px; }
+.featured h2 { font-size: 1.15em; font-weight: 700; margin-bottom: 20px; }
+
+.post-card {
+  display: block;
+  padding: 24px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  text-decoration: none;
+  color: var(--text);
+  margin-bottom: 16px;
+  transition: border-color 0.15s, box-shadow 0.15s;
 }
-.category.go h2 { border-color: var(--go); }
-.category.ai h2 { border-color: var(--ai); }
-.category.devops h2 { border-color: var(--devops); }
-.category.dev h2 { border-color: var(--dev); }
-.category.career h2 { border-color: var(--career); }
+.post-card:hover { border-color: var(--accent); box-shadow: 0 2px 12px rgba(9, 105, 218, 0.08); }
+.post-card h3 { font-size: 1.15em; font-weight: 700; margin-bottom: 8px; }
+.post-card p.desc { color: var(--muted); font-size: 0.95em; margin-bottom: 14px; }
+.post-card .meta { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; font-size: 0.8em; }
+.post-card .date { color: var(--muted); }
+.post-card .cta { color: var(--accent); font-weight: 600; margin-left: auto; }
 
-article {
-  padding: 20px 0;
-  border-bottom: 1px solid var(--border);
-}
-article:last-child { border-bottom: none; }
-
-article h3 { font-size: 1.05em; font-weight: 600; margin-bottom: 6px; }
-article h3 a { text-decoration: none; }
-article h3 a:hover { color: var(--accent); }
-
-article p.desc { color: var(--muted); font-size: 0.92em; margin-bottom: 10px; }
-
-.meta {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  flex-wrap: wrap;
-  font-size: 0.8em;
-}
 .badge {
   display: inline-block;
   padding: 2px 8px;
@@ -99,14 +67,81 @@ article p.desc { color: var(--muted); font-size: 0.92em; margin-bottom: 10px; }
   color: var(--muted);
   border: 1px solid var(--border);
 }
-.views { color: var(--muted); }
-.source {
+
+/* Archive: dev.to, de-emphasized */
+.archive { border-top: 1px solid var(--border); padding-top: 32px; }
+.archive > summary {
+  cursor: pointer;
+  color: var(--muted);
+  font-size: 0.95em;
+  list-style: none;
+  padding: 4px 0;
+}
+.archive > summary::-webkit-details-marker { display: none; }
+.archive > summary:hover { color: var(--accent); }
+.archive > summary::before { content: "＋ "; }
+.archive[open] > summary::before { content: "－ "; }
+.archive-body { margin-top: 28px; }
+
+nav.categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-bottom: 28px;
+  margin-bottom: 32px;
+  border-bottom: 1px solid var(--border);
+}
+nav.categories a {
+  font-size: 0.8em;
+  color: var(--muted);
+  text-decoration: none;
+  padding: 5px 10px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+}
+nav.categories a:hover { border-color: var(--accent); color: var(--accent); }
+
+.category { margin-bottom: 40px; scroll-margin-top: 24px; }
+.category h2 {
+  font-size: 0.9em;
+  font-weight: 700;
+  color: var(--muted);
+  margin-bottom: 12px;
+  padding-left: 10px;
+  border-left: 2px solid var(--border);
+}
+.category.go h2 { border-color: var(--go); }
+.category.ai h2 { border-color: var(--ai); }
+.category.devops h2 { border-color: var(--devops); }
+.category.dev h2 { border-color: var(--dev); }
+.category.career h2 { border-color: var(--career); }
+
+.archive article {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.9em;
+}
+.archive article:last-child { border-bottom: none; }
+.archive article h3 { font-size: 1em; font-weight: 600; margin-bottom: 4px; color: var(--text); }
+.archive article h3 a { text-decoration: none; color: inherit; }
+.archive article h3 a:hover { color: var(--accent); }
+.archive article p.desc { color: var(--muted); font-size: 0.92em; margin-bottom: 8px; }
+
+.archive .meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  font-size: 0.78em;
+}
+.archive .views { color: var(--muted); }
+.archive .source {
   margin-left: auto;
   color: var(--muted);
   text-decoration: none;
   border-bottom: 1px dotted var(--border);
 }
-.source:hover { color: var(--accent); border-color: var(--accent); }
+.archive .source:hover { color: var(--accent); border-color: var(--accent); }
 
 footer {
   max-width: 720px;
@@ -122,8 +157,8 @@ footer a:hover { text-decoration: underline; }
 
 @media (max-width: 600px) {
   header { padding: 40px 20px 28px; }
-  .container, nav.categories, footer { padding-left: 20px; padding-right: 20px; }
-  .source { margin-left: 0; }
+  .container, footer { padding-left: 20px; padding-right: 20px; }
+  .archive .source { margin-left: 0; }
 }
 </style>
 </head>
@@ -134,6 +169,28 @@ footer a:hover { text-decoration: underline; }
 <p>บันทึกเรื่อง Code, AI และ Infrastructure สำหรับนักพัฒนาไทย</p>
 </header>
 
+<div class="container">
+
+<section class="featured">
+<h2>จาก Gophernment Blog</h2>
+
+<a class="post-card" href="/blog/2026-07-12-observability-ai-agent-go.html">
+<h3>ความสำคัญของ Observability ใน AI Agent (ตัวอย่างด้วย Go)</h3>
+<p class="desc">ทำไม AI agent ต้องการ trace/log/metric มากกว่า service ทั่วไป พร้อมตัวอย่าง OpenTelemetry ใน Go และ trade-off เรื่องค่าใช้จ่าย</p>
+<div class="meta">
+<span class="badge">ai</span><span class="badge">agent</span><span class="badge">observability</span><span class="badge">go</span>
+<span class="date">12 ก.ค. 2026</span>
+<span class="cta">อ่านบทความ →</span>
+</div>
+</a>
+
+</section>
+
+<details class="archive">
+<summary>เพิ่มเติมจาก dev.to — บทความเก่าของทีม</summary>
+
+<div class="archive-body">
+
 <nav class="categories">
 <a href="#go">Go</a>
 <a href="#ai">AI & Agents</a>
@@ -142,57 +199,55 @@ footer a:hover { text-decoration: underline; }
 <a href="#career">Career & Industry</a>
 </nav>
 
-<div class="container">
-
 <section class="category go" id="go">
 <h2>Go</h2>
 
 <article>
 <h3><a href="https://dev.to/gophernment/go-profiling-101-duuwaaokhderaachaatrngaihn-odyaimtngedaa-235p">Go Profiling 101 — ดูว่าโค้ดเราช้าตรงไหน โดยไม่ต้องเดา</a></h3>
 <p class="desc">เริ่มจาก pprof ไปจนถึงวิธีอ่านผล เหมาะกับ dev ที่อยาก optimize แต่ไม่เคยใช้ profiling</p>
-<div class="meta"><span class="badge">go</span><span class="badge">performance</span><span class="badge">beginners</span><span class="views">337 views</span><a class="source" href="https://dev.to/gophernment/go-profiling-101-duuwaaokhderaachaatrngaihn-odyaimtngedaa-235p">อ่านฉบับเต็มที่ dev.to ↗</a></div>
+<div class="meta"><span class="badge">go</span><span class="badge">performance</span><span class="badge">beginners</span><span class="views">337 views</span><a class="source" href="https://dev.to/gophernment/go-profiling-101-duuwaaokhderaachaatrngaihn-odyaimtngedaa-235p">อ่านที่ dev.to ↗</a></div>
 </article>
 
 <article>
 <h3><a href="https://dev.to/gophernment/double-report-emuue-error-thuuk-log-chamchaakain-go-1607">Double Report — เมื่อ Error ถูก Log ซ้ำซากใน Go</a></h3>
 <p class="desc">"log หรือ return — อย่าทำทั้งคู่" — หลักการจัดการ error ที่เปลี่ยนวิธีเขียน Go</p>
-<div class="meta"><span class="badge">go</span><span class="badge">bestpractices</span><span class="badge">errors</span><span class="views">211 views</span><a class="source" href="https://dev.to/gophernment/double-report-emuue-error-thuuk-log-chamchaakain-go-1607">อ่านฉบับเต็มที่ dev.to ↗</a></div>
+<div class="meta"><span class="badge">go</span><span class="badge">bestpractices</span><span class="badge">errors</span><span class="views">211 views</span><a class="source" href="https://dev.to/gophernment/double-report-emuue-error-thuuk-log-chamchaakain-go-1607">อ่านที่ dev.to ↗</a></div>
 </article>
 
 <article>
 <h3><a href="https://dev.to/gophernment/ekhiiyn-go-aebb-javarubyphp-thaangladsuu-technical-debt-odyaimruutaw-pi4">เขียน Go แบบ Java/Ruby/PHP — ทางลัด Technical Debt</a></h3>
 <p class="desc">เขียน Go ด้วยสำเนียงภาษาอื่น — pattern ที่ควรเลิกทำ + วิธีเขียนแบบ Go way</p>
-<div class="meta"><span class="badge">go</span><span class="badge">bestpractices</span><span class="badge">beginners</span><span class="views">40 views</span><a class="source" href="https://dev.to/gophernment/ekhiiyn-go-aebb-javarubyphp-thaangladsuu-technical-debt-odyaimruutaw-pi4">อ่านฉบับเต็มที่ dev.to ↗</a></div>
+<div class="meta"><span class="badge">go</span><span class="badge">bestpractices</span><span class="badge">beginners</span><span class="views">40 views</span><a class="source" href="https://dev.to/gophernment/ekhiiyn-go-aebb-javarubyphp-thaangladsuu-technical-debt-odyaimruutaw-pi4">อ่านที่ dev.to ↗</a></div>
 </article>
 
 <article>
 <h3><a href="https://dev.to/gophernment/go-127-generic-methods-json-v2-uuid-ain-stdlib-l-2ono">Go 1.27 — Generic Methods, JSON v2, UUID ใน stdlib</a></h3>
 <p class="desc">ฟีเจอร์ใหม่ใน Go 1.27 — generic methods, encoding/json/v2, uuid stdlib, SIMD</p>
-<div class="meta"><span class="badge">go</span><span class="badge">release</span><span class="views">26 views</span><a class="source" href="https://dev.to/gophernment/go-127-generic-methods-json-v2-uuid-ain-stdlib-l-2ono">อ่านฉบับเต็มที่ dev.to ↗</a></div>
+<div class="meta"><span class="badge">go</span><span class="badge">release</span><span class="views">26 views</span><a class="source" href="https://dev.to/gophernment/go-127-generic-methods-json-v2-uuid-ain-stdlib-l-2ono">อ่านที่ dev.to ↗</a></div>
 </article>
 
 <article>
 <h3><a href="https://dev.to/gophernment/null-nil-none-khamwaa-aimmiikhaa-ainaetlaphaasaa-b6m">Null, nil, None — คำว่า "ไม่มีค่า" ในแต่ละภาษา</a></h3>
 <p class="desc">Go nil vs Java null vs Python None — ดียังไง แปลกตรงไหน</p>
-<div class="meta"><span class="badge">go</span><span class="badge">programming</span><span class="badge">beginners</span><span class="views">20 views</span><a class="source" href="https://dev.to/gophernment/null-nil-none-khamwaa-aimmiikhaa-ainaetlaphaasaa-b6m">อ่านฉบับเต็มที่ dev.to ↗</a></div>
+<div class="meta"><span class="badge">go</span><span class="badge">programming</span><span class="badge">beginners</span><span class="views">20 views</span><a class="source" href="https://dev.to/gophernment/null-nil-none-khamwaa-aimmiikhaa-ainaetlaphaasaa-b6m">อ่านที่ dev.to ↗</a></div>
 </article>
 
 <article>
 <h3><a href="https://dev.to/gophernment/thamaim-go-thueng-compile-aiw-elaacchaakhngechirfewr-google-thiirnrau-72o">ทำไม Go ถึง compile ไว — เล่าจากห้องเซิร์ฟเวอร์ Google</a></h3>
 <p class="desc">7 เหตุผลทางวิศวกรรมที่ทำให้ Go compile เร็ว — พร้อมประวัติ Ken Thompson</p>
-<div class="meta"><span class="badge">go</span><span class="badge">history</span><span class="badge">beginners</span><span class="views">10 views</span><a class="source" href="https://dev.to/gophernment/thamaim-go-thueng-compile-aiw-elaacchaakhngechirfewr-google-thiirnrau-72o">อ่านฉบับเต็มที่ dev.to ↗</a></div>
+<div class="meta"><span class="badge">go</span><span class="badge">history</span><span class="badge">beginners</span><span class="views">10 views</span><a class="source" href="https://dev.to/gophernment/thamaim-go-thueng-compile-aiw-elaacchaakhngechirfewr-google-thiirnrau-72o">อ่านที่ dev.to ↗</a></div>
 </article>
 
 <article>
 <h3><a href="https://dev.to/gophernment/go-errors-is-kab-as-epnephuuenkan-2ebl">Go errors .Is กับ .As เป็นเพื่อนกัน</a></h3>
 <p class="desc">%w, errors.Is, errors.As — ใช้ยังไง ต่างกันตรงไหน</p>
-<div class="meta"><span class="badge">go</span><span class="badge">errors</span><span class="badge">beginners</span><span class="views">0 views</span><a class="source" href="https://dev.to/gophernment/go-errors-is-kab-as-epnephuuenkan-2ebl">อ่านฉบับเต็มที่ dev.to ↗</a></div>
+<div class="meta"><span class="badge">go</span><span class="badge">errors</span><span class="badge">beginners</span><span class="views">0 views</span><a class="source" href="https://dev.to/gophernment/go-errors-is-kab-as-epnephuuenkan-2ebl">อ่านที่ dev.to ↗</a></div>
 </article>
 
 <article>
 <h3><a href="https://dev.to/gophernment/go-127-rabrng-query-http-method-aihmthii-get-thamaimaid-mde">Go 1.27 รับรอง QUERY — HTTP Method ใหม่ที่ GET ทำไม่ได้</a></h3>
 <p class="desc">รู้จัก QUERY method — safe, idempotent, มี body ได้ — ต่างจาก GET/POST ยังไง</p>
-<div class="meta"><span class="badge">go</span><span class="badge">http</span><span class="badge">webdev</span><span class="views">0 views</span><a class="source" href="https://dev.to/gophernment/go-127-rabrng-query-http-method-aihmthii-get-thamaimaid-mde">อ่านฉบับเต็มที่ dev.to ↗</a></div>
+<div class="meta"><span class="badge">go</span><span class="badge">http</span><span class="badge">webdev</span><span class="views">0 views</span><a class="source" href="https://dev.to/gophernment/go-127-rabrng-query-http-method-aihmthii-get-thamaimaid-mde">อ่านที่ dev.to ↗</a></div>
 </article>
 
 </section>
@@ -203,49 +258,49 @@ footer a:hover { text-decoration: underline; }
 <article>
 <h3><a href="https://dev.to/gophernment/ai-ekhiiynokhdaethneraaaidaelw-aelweraacchaehluueaairaihtham-2kca">AI เขียนโค้ดแทนเราได้แล้ว — แล้วเราจะเหลืออะไรให้ทำ?</a></h3>
 <p class="desc">4 ระดับการใช้ AI + มนุษย์ควร focus ที่อะไรเมื่อ AI เก่งขึ้น</p>
-<div class="meta"><span class="badge">ai</span><span class="badge">programming</span><span class="badge">discuss</span><span class="views">37 views</span><a class="source" href="https://dev.to/gophernment/ai-ekhiiynokhdaethneraaaidaelw-aelweraacchaehluueaairaihtham-2kca">อ่านฉบับเต็มที่ dev.to ↗</a></div>
+<div class="meta"><span class="badge">ai</span><span class="badge">programming</span><span class="badge">discuss</span><span class="views">37 views</span><a class="source" href="https://dev.to/gophernment/ai-ekhiiynokhdaethneraaaidaelw-aelweraacchaehluueaairaihtham-2kca">อ่านที่ dev.to ↗</a></div>
 </article>
 
 <article>
 <h3><a href="https://dev.to/gophernment/aider-pair-programming-cchringcchangkab-ai-ain-terminal-27a2">Aider — Pair Programming จริงจังกับ AI ใน Terminal</a></h3>
 <p class="desc">ทำไมควรใช้ Aider ถ้าคุณเชื่อใน pair programming + atomic commit</p>
-<div class="meta"><span class="badge">ai</span><span class="badge">tools</span><span class="badge">git</span><span class="views">25 views</span><a class="source" href="https://dev.to/gophernment/aider-pair-programming-cchringcchangkab-ai-ain-terminal-27a2">อ่านฉบับเต็มที่ dev.to ↗</a></div>
+<div class="meta"><span class="badge">ai</span><span class="badge">tools</span><span class="badge">git</span><span class="views">25 views</span><a class="source" href="https://dev.to/gophernment/aider-pair-programming-cchringcchangkab-ai-ain-terminal-27a2">อ่านที่ dev.to ↗</a></div>
 </article>
 
 <article>
 <h3><a href="https://dev.to/gophernment/osloq-aih-ai-reproduction-ewlaaekid-bug-1blp">Osloq — ให้ AI หาสาเหตุ bug แทนเรา</a></h3>
 <p class="desc">AI reproduce bug ใน sandbox — แล้วรายงานกลับ — เราตัดสินใจเอง</p>
-<div class="meta"><span class="badge">ai</span><span class="badge">debugging</span><span class="badge">devops</span><span class="views">22 views</span><a class="source" href="https://dev.to/gophernment/osloq-aih-ai-reproduction-ewlaaekid-bug-1blp">อ่านฉบับเต็มที่ dev.to ↗</a></div>
+<div class="meta"><span class="badge">ai</span><span class="badge">debugging</span><span class="badge">devops</span><span class="views">22 views</span><a class="source" href="https://dev.to/gophernment/osloq-aih-ai-reproduction-ewlaaekid-bug-1blp">อ่านที่ dev.to ↗</a></div>
 </article>
 
 <article>
 <h3><a href="https://dev.to/gophernment/phaasaaopraekrmmingthii-syntax-ngaay-thamaih-ai-hlnnylng-cchringhruue-5al9">ภาษาโปรแกรมมิ่งที่ syntax ง่าย AI ช่วยเราได้ดีกว่า จริงหรือ?</a></h3>
 <p class="desc">3 งานวิจัยวิเคราะห์ — syntax ง่ายมีผลต่อ AI จริงไหม</p>
-<div class="meta"><span class="badge">ai</span><span class="badge">programming</span><span class="badge">research</span><span class="views">16 views</span><a class="source" href="https://dev.to/gophernment/phaasaaopraekrmmingthii-syntax-ngaay-thamaih-ai-hlnnylng-cchringhruue-5al9">อ่านฉบับเต็มที่ dev.to ↗</a></div>
+<div class="meta"><span class="badge">ai</span><span class="badge">programming</span><span class="badge">research</span><span class="views">16 views</span><a class="source" href="https://dev.to/gophernment/phaasaaopraekrmmingthii-syntax-ngaay-thamaih-ai-hlnnylng-cchringhruue-5al9">อ่านที่ dev.to ↗</a></div>
 </article>
 
 <article>
 <h3><a href="https://dev.to/gophernment/agent-skills-taxonomy-chbabsmbuurnkhng-claude-code-5g2k">Agent Skills — Taxonomy ฉบับสมบูรณ์ของ Claude Code</a></h3>
 <p class="desc">4 persistence models, 30+ event hooks, skills, subagents, output styles</p>
-<div class="meta"><span class="badge">ai</span><span class="badge">claude</span><span class="badge">tools</span><span class="views">10 views</span><a class="source" href="https://dev.to/gophernment/agent-skills-taxonomy-chbabsmbuurnkhng-claude-code-5g2k">อ่านฉบับเต็มที่ dev.to ↗</a></div>
+<div class="meta"><span class="badge">ai</span><span class="badge">claude</span><span class="badge">tools</span><span class="views">10 views</span><a class="source" href="https://dev.to/gophernment/agent-skills-taxonomy-chbabsmbuurnkhng-claude-code-5g2k">อ่านที่ dev.to ↗</a></div>
 </article>
 
 <article>
 <h3><a href="https://dev.to/gophernment/microsoft-autogen-sraangthiim-ai-agent-khuykaneng-aekpayhaaeng-5912">Microsoft AutoGen — สร้างทีม AI Agent คุยกันเอง</a></h3>
 <p class="desc">ใช้ AutoGen สร้าง agent แบบ multi-agent — coder, reviewer, tester คุยกัน</p>
-<div class="meta"><span class="badge">ai</span><span class="badge">python</span><span class="badge">tutorial</span><span class="views">10 views</span><a class="source" href="https://dev.to/gophernment/microsoft-autogen-sraangthiim-ai-agent-khuykaneng-aekpayhaaeng-5912">อ่านฉบับเต็มที่ dev.to ↗</a></div>
+<div class="meta"><span class="badge">ai</span><span class="badge">python</span><span class="badge">tutorial</span><span class="views">10 views</span><a class="source" href="https://dev.to/gophernment/microsoft-autogen-sraangthiim-ai-agent-khuykaneng-aekpayhaaeng-5912">อ่านที่ dev.to ↗</a></div>
 </article>
 
 <article>
 <h3><a href="https://dev.to/gophernment/cchaak-chatbot-thrrmdaa-suu-ai-thiithamngaanaethneraaaid-eraaetimaairekhaaaipbaang-4ilg">จาก chatbot ธรรมดา สู่ AI ที่ทำงานแทนเราได้</a></h3>
 <p class="desc">7 layers ที่เปลี่ยน LLM ธรรมดาให้กลายเป็น AI agent — ตั้งแต่ system prompt ถึง multi-agent</p>
-<div class="meta"><span class="badge">ai</span><span class="badge">beginners</span><span class="badge">llm</span><span class="views">2 views</span><a class="source" href="https://dev.to/gophernment/cchaak-chatbot-thrrmdaa-suu-ai-thiithamngaanaethneraaaid-eraaetimaairekhaaaipbaang-4ilg">อ่านฉบับเต็มที่ dev.to ↗</a></div>
+<div class="meta"><span class="badge">ai</span><span class="badge">beginners</span><span class="badge">llm</span><span class="views">2 views</span><a class="source" href="https://dev.to/gophernment/cchaak-chatbot-thrrmdaa-suu-ai-thiithamngaanaethneraaaid-eraaetimaairekhaaaipbaang-4ilg">อ่านที่ dev.to ↗</a></div>
 </article>
 
 <article>
 <h3><a href="https://dev.to/gophernment/harness-engineering-101-singthiiyuuaitphrmkhng-agentic-ai-50nk">Harness Engineering 101 — สิ่งที่อยู่ใต้พรมของ Agentic AI</a></h3>
 <p class="desc">Token budget, context compaction, error recovery — วิศวกรรมที่แท้จริงของ AI agent</p>
-<div class="meta"><span class="badge">ai</span><span class="badge">beginners</span><span class="badge">llm</span><span class="views">0 views</span><a class="source" href="https://dev.to/gophernment/harness-engineering-101-singthiiyuuaitphrmkhng-agentic-ai-50nk">อ่านฉบับเต็มที่ dev.to ↗</a></div>
+<div class="meta"><span class="badge">ai</span><span class="badge">beginners</span><span class="badge">llm</span><span class="views">0 views</span><a class="source" href="https://dev.to/gophernment/harness-engineering-101-singthiiyuuaitphrmkhng-agentic-ai-50nk">อ่านที่ dev.to ↗</a></div>
 </article>
 
 </section>
@@ -256,19 +311,19 @@ footer a:hover { text-decoration: underline; }
 <article>
 <h3><a href="https://dev.to/gophernment/microservice-tngmii-observability-aekhaihn-thuengcchakhum-1m1g">microservice ต้องมี observability แค่ไหน ถึงจะคุ้ม</a></h3>
 <p class="desc">เมื่อไหร่ควรลงทุน ต้องแลกด้วยอะไร — พร้อมคำนวณ cost จริง</p>
-<div class="meta"><span class="badge">devops</span><span class="badge">microservices</span><span class="badge">monitoring</span><span class="views">30 views</span><a class="source" href="https://dev.to/gophernment/microservice-tngmii-observability-aekhaihn-thuengcchakhum-1m1g">อ่านฉบับเต็มที่ dev.to ↗</a></div>
+<div class="meta"><span class="badge">devops</span><span class="badge">microservices</span><span class="badge">monitoring</span><span class="views">30 views</span><a class="source" href="https://dev.to/gophernment/microservice-tngmii-observability-aekhaihn-thuengcchakhum-1m1g">อ่านที่ dev.to ↗</a></div>
 </article>
 
 <article>
 <h3><a href="https://dev.to/gophernment/log-ain-microservice-khwr-log-aair-emuueaihr-aelaaairthiiaimkhwr-log-1enk">log ใน microservice — ควร log อะไร เมื่อไหร่</a></h3>
 <p class="desc">PII, structured logging, trace_id, error handling — checklist สำหรับ dev จริง</p>
-<div class="meta"><span class="badge">go</span><span class="badge">microservices</span><span class="badge">devops</span><span class="views">11 views</span><a class="source" href="https://dev.to/gophernment/log-ain-microservice-khwr-log-aair-emuueaihr-aelaaairthiiaimkhwr-log-1enk">อ่านฉบับเต็มที่ dev.to ↗</a></div>
+<div class="meta"><span class="badge">go</span><span class="badge">microservices</span><span class="badge">devops</span><span class="views">11 views</span><a class="source" href="https://dev.to/gophernment/log-ain-microservice-khwr-log-aair-emuueaihr-aelaaairthiiaimkhwr-log-1enk">อ่านที่ dev.to ↗</a></div>
 </article>
 
 <article>
 <h3><a href="https://dev.to/gophernment/kaebb-error-aihepn-first-class-citizen-tcchaak-double-report-kab-logging-578h">ออกแบบ error ให้เป็น first-class citizen</a></h3>
 <p class="desc">Sentinel, custom types, retryable, circuit breaker, error codes — ต่อจาก Double Report</p>
-<div class="meta"><span class="badge">go</span><span class="badge">errors</span><span class="badge">bestpractices</span><span class="views">0 views</span><a class="source" href="https://dev.to/gophernment/kaebb-error-aihepn-first-class-citizen-tcchaak-double-report-kab-logging-578h">อ่านฉบับเต็มที่ dev.to ↗</a></div>
+<div class="meta"><span class="badge">go</span><span class="badge">errors</span><span class="badge">bestpractices</span><span class="views">0 views</span><a class="source" href="https://dev.to/gophernment/kaebb-error-aihepn-first-class-citizen-tcchaak-double-report-kab-logging-578h">อ่านที่ dev.to ↗</a></div>
 </article>
 
 </section>
@@ -279,19 +334,19 @@ footer a:hover { text-decoration: underline; }
 <article>
 <h3><a href="https://dev.to/gophernment/jujutsu-jj-thaangeluuek-git-thiiaimaidmaaaethnthii-aetmaaetimetm-2i29">Jujutsu (jj) — ทางเลือก Git</a></h3>
 <p class="desc">No staging area, first-class undo, bookmark — jj ทำอะไรที่ git ทำไม่ได้</p>
-<div class="meta"><span class="badge">git</span><span class="badge">tools</span><span class="badge">devops</span><span class="views">12 views</span><a class="source" href="https://dev.to/gophernment/jujutsu-jj-thaangeluuek-git-thiiaimaidmaaaethnthii-aetmaaetimetm-2i29">อ่านฉบับเต็มที่ dev.to ↗</a></div>
+<div class="meta"><span class="badge">git</span><span class="badge">tools</span><span class="badge">devops</span><span class="views">12 views</span><a class="source" href="https://dev.to/gophernment/jujutsu-jj-thaangeluuek-git-thiiaimaidmaaaethnthii-aetmaaetimetm-2i29">อ่านที่ dev.to ↗</a></div>
 </article>
 
 <article>
 <h3><a href="https://dev.to/gophernment/bruno-api-client-aebb-git-native-thiiekbthukyaangepnaifl-4fj4">Bruno — API Client แบบ Git-Native</a></h3>
 <p class="desc">ทางเลือก Postman — เก็บ collection เป็น plain text ใน git</p>
-<div class="meta"><span class="badge">api</span><span class="badge">tools</span><span class="badge">devops</span><span class="views">10 views</span><a class="source" href="https://dev.to/gophernment/bruno-api-client-aebb-git-native-thiiekbthukyaangepnaifl-4fj4">อ่านฉบับเต็มที่ dev.to ↗</a></div>
+<div class="meta"><span class="badge">api</span><span class="badge">tools</span><span class="badge">devops</span><span class="views">10 views</span><a class="source" href="https://dev.to/gophernment/bruno-api-client-aebb-git-native-thiiekbthukyaangepnaifl-4fj4">อ่านที่ dev.to ↗</a></div>
 </article>
 
 <article>
 <h3><a href="https://dev.to/gophernment/oauth-elaaaebbprawatisaastr-cchaakrhasphaan-suumaatrthaanolk-16b4">OAuth เล่าแบบประวัติศาสตร์ — จากรหัสผ่าน สู่มาตรฐานโลก</a></h3>
 <p class="desc">เล่า OAuth แบบนิทาน — ตั้งแต่ password → API Key → OAuth 2.1 พร้อม PKCE</p>
-<div class="meta"><span class="badge">security</span><span class="badge">webdev</span><span class="badge">tutorial</span><span class="views">2 views</span><a class="source" href="https://dev.to/gophernment/oauth-elaaaebbprawatisaastr-cchaakrhasphaan-suumaatrthaanolk-16b4">อ่านฉบับเต็มที่ dev.to ↗</a></div>
+<div class="meta"><span class="badge">security</span><span class="badge">webdev</span><span class="badge">tutorial</span><span class="views">2 views</span><a class="source" href="https://dev.to/gophernment/oauth-elaaaebbprawatisaastr-cchaakrhasphaan-suumaatrthaanolk-16b4">อ่านที่ dev.to ↗</a></div>
 </article>
 
 </section>
@@ -302,16 +357,19 @@ footer a:hover { text-decoration: underline; }
 <article>
 <h3><a href="https://dev.to/gophernment/wsaan-qa-naakhtkhngaachiiphthdsbchftaewrainyukh-ai-ghh">อวสาน QA — อนาคตของอาชีพทดสอบซอฟต์แวร์ในยุค AI</a></h3>
 <p class="desc">QA ถูกแทนที่ด้วย AI หรือยัง — แล้ว QA ควรรอดยังไง</p>
-<div class="meta"><span class="badge">ai</span><span class="badge">career</span><span class="badge">discuss</span><span class="views">26 views</span><a class="source" href="https://dev.to/gophernment/wsaan-qa-naakhtkhngaachiiphthdsbchftaewrainyukh-ai-ghh">อ่านฉบับเต็มที่ dev.to ↗</a></div>
+<div class="meta"><span class="badge">ai</span><span class="badge">career</span><span class="badge">discuss</span><span class="views">26 views</span><a class="source" href="https://dev.to/gophernment/wsaan-qa-naakhtkhngaachiiphthdsbchftaewrainyukh-ai-ghh">อ่านที่ dev.to ↗</a></div>
 </article>
 
 </section>
 
 </div>
+</details>
+
+</div>
 
 <footer>
 <p>Gophernment Co. — เขียนโดยนักพัฒนา ให้นักพัฒนาไทยอ่าน</p>
-<p>บทความฉบับเต็มอ่านได้ที่ <a href="https://dev.to/gophernment">dev.to/gophernment</a> · Built with GitHub Pages</p>
+<p>บทความเก่าบางส่วนยังอยู่ที่ <a href="https://dev.to/gophernment">dev.to/gophernment</a> · Built with GitHub Pages</p>
 </footer>
 
 </body>

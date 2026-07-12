@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ความสำคัญของ Observability ใน AI Agent (ตัวอย่างด้วย Go) — Gophernment</title>
+<meta name="description" content="ทำไม AI agent ต้องการ observability, ตัวอย่างการ instrument ด้วย Go และ OpenTelemetry, พร้อม trade-off เรื่องค่าใช้จ่าย">
+<style>
+:root {
+  --bg: #ffffff;
+  --text: #1a1a1a;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+  --hover: #f9fafb;
+  --accent: #0969da;
+  --code-bg: #f6f8fa;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans Thai", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.75;
+}
+a { color: var(--accent); }
+
+.bar {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 32px 24px 0;
+}
+.bar a.back { color: var(--muted); text-decoration: none; font-size: 0.9em; }
+.bar a.back:hover { color: var(--accent); }
+
+article.post { max-width: 720px; margin: 0 auto; padding: 24px 24px 80px; }
+
+.post header { padding: 24px 0 32px; border-bottom: 1px solid var(--border); margin-bottom: 32px; }
+.post h1 { font-size: 1.7em; font-weight: 700; margin-bottom: 12px; line-height: 1.4; }
+.post .meta { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; font-size: 0.85em; color: var(--muted); }
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 10px;
+  background: var(--hover);
+  color: var(--muted);
+  border: 1px solid var(--border);
+}
+
+.post h2 { font-size: 1.3em; font-weight: 700; margin: 40px 0 16px; }
+.post h3 { font-size: 1.1em; font-weight: 700; margin: 28px 0 12px; }
+.post p { margin-bottom: 16px; }
+.post ul { margin: 0 0 16px 20px; }
+.post li { margin-bottom: 8px; }
+.post strong { font-weight: 700; }
+.post code {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  background: var(--code-bg);
+  padding: 2px 5px;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+.post pre {
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px;
+  overflow-x: auto;
+  margin-bottom: 20px;
+  font-size: 0.85em;
+}
+.post pre code { background: none; padding: 0; border-radius: 0; }
+.post table { width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 0.9em; }
+.post th, .post td { text-align: left; padding: 8px 12px; border: 1px solid var(--border); }
+.post th { background: var(--hover); }
+
+.post footer.refs {
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.85em;
+}
+
+site-footer, footer.site {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 24px 64px;
+  color: var(--muted);
+  font-size: 0.85em;
+}
+footer.site a { color: var(--accent); text-decoration: none; }
+footer.site a:hover { text-decoration: underline; }
+
+@media (max-width: 600px) {
+  .bar, article.post, footer.site { padding-left: 20px; padding-right: 20px; }
+}
+</style>
+</head>
+<body>
+
+<div class="bar"><a class="back" href="/">← กลับหน้าแรก</a></div>
+
+<article class="post">
+
+<header>
+<h1>ความสำคัญของ Observability ใน AI Agent (ตัวอย่างด้วย Go)</h1>
+<div class="meta">
+<span>12 กรกฎาคม 2026</span>
+<span class="badge">ai</span><span class="badge">agent</span><span class="badge">observability</span><span class="badge">go</span><span class="badge">monitoring</span><span class="badge">tracing</span>
+</div>
+</header>
+
+<p>AI agent ต่างจาก service ทั่วไปตรงที่ behavior ไม่ deterministic — input เดียวกัน รันสองครั้งอาจได้ output ต่างกัน, จำนวน step ไม่คงที่, agent ตัดสินใจเองว่าจะเรียก tool ไหน กี่รอบ ก่อนตอบ เมื่อ bug เกิดขึ้น log ทั่วไปแบบ "request in, response out" ไม่พอสืบสาเหตุ ต้องเห็น <strong>ทุก step ของ reasoning loop</strong></p>
+
+<p>บทความนี้อธิบายว่าทำไม observability จำเป็นกับ AI agent, ตัวอย่างการ instrument ด้วย Go, แล้วปิดท้ายด้วย trade-off เรื่องค่าใช้จ่าย <strong>ขอบเขต</strong>: เน้น operational observability (trace, metric, log ของ agent loop) เป็นหลัก ไม่รวมการวัด reasoning quality เช่น hallucination detection หรือ semantic drift ซึ่งต้องอาศัย evaluation layer แยกต่างหาก</p>
+
+<h2>ทำไมจำเป็น</h2>
+
+<p>Agent loop ทั่วไปมีลักษณะ: รับ input → เรียก LLM → LLM ตัดสินใจเรียก tool → เรียก tool → ส่งผลกลับให้ LLM → วนซ้ำ จนกว่าจะได้คำตอบสุดท้าย</p>
+
+<p>จุดที่ปัญหาซ่อนตัวได้เยอะกว่า service ปกติ:</p>
+
+<ul>
+<li><strong>Non-determinism</strong> — bug reproduce ยาก ถ้าไม่มี trace ของ prompt/response แต่ละรอบ ก็ debug ไม่ได้เลยว่ารอบไหนที่ agent เริ่มหลุด</li>
+<li><strong>Unbounded steps</strong> — agent อาจวน tool call 20 รอบโดยไม่รู้ตัว (infinite loop แบบ soft) ถ้าไม่ track จำนวน step กับ latency สะสม จะไม่รู้จนกว่า bill มา</li>
+<li><strong>Cost ที่มองไม่เห็น</strong> — token usage ผูกกับเงินตรง ๆ ไม่มี metric แยกตาม step/tool ก็ไม่รู้ว่าเงินหายไปกับ step ไหน</li>
+<li><strong>Partial failure</strong> — tool call หนึ่งล้มเหลว แต่ agent อาจ retry เอง หรือเปลี่ยน strategy โดยไม่ throw error ขึ้นมาที่ระดับบนเลย ถ้าไม่ trace จะไม่เห็นว่ามันล้มแล้ว recover เอง</li>
+</ul>
+
+<p>สรุปคือ: <strong>agent ที่ไม่มี observability คือ black box สองชั้น</strong> — เดาไม่ได้ทั้ง business logic และ LLM decision</p>
+
+<h2>ตัวอย่างด้วย Go</h2>
+
+<p>ใช้ <code>OpenTelemetry Go SDK</code> เป็นหลัก เพราะเป็นมาตรฐานที่ export ไป backend ไหนก็ได้ (Jaeger, Tempo, Datadog, etc.)</p>
+
+<h3>1. Trace แต่ละ step ของ agent loop</h3>
+
+<pre><code>package agent
+
+import (
+	"context"
+
+	"go.opentelemetry.io/otel"
+	"go.opentelemetry.io/otel/attribute"
+	"go.opentelemetry.io/otel/codes"
+	"go.opentelemetry.io/otel/trace"
+)
+
+var tracer = otel.Tracer("agent")
+
+func (a *Agent) Run(ctx context.Context, task string) (string, error) {
+	ctx, span := tracer.Start(ctx, "agent.run",
+		trace.WithAttributes(attribute.String("task", task)))
+	defer span.End()
+
+	for step := 0; step &lt; a.maxSteps; step++ {
+		decision, err := a.think(ctx, step)
+		if err != nil {
+			span.RecordError(err)
+			span.SetStatus(codes.Error, err.Error())
+			return "", err
+		}
+		if decision.Done {
+			span.SetAttributes(attribute.Int("total_steps", step+1))
+			stepHistogram.Record(ctx, int64(step+1)) // metric ที่จะแนะนำในหัวข้อที่ 3
+			return decision.FinalAnswer, nil
+		}
+		if err := a.callTool(ctx, decision.Tool, decision.Args); err != nil {
+			span.RecordError(err) // record แล้วไปต่อ ไม่ fail ทั้ง run
+		}
+	}
+	span.SetAttributes(attribute.Bool("hit_max_steps", true))
+	span.SetStatus(codes.Error, ErrMaxStepsExceeded.Error())
+	return "", ErrMaxStepsExceeded
+}</code></pre>
+
+<p>จุดสำคัญ: แต่ละ tool call ควรเป็น <strong>child span แยก</strong> ไม่ใช่รวมอยู่ใน span เดียวกับ <code>think</code> เพราะ tool call กับ LLM call มี latency profile คนละแบบ แยกกันจะเห็นว่าเวลาไปหมดกับฝั่งไหน</p>
+
+<pre><code>func (a *Agent) callTool(ctx context.Context, name string, args map[string]any) error {
+	ctx, span := tracer.Start(ctx, "agent.tool_call",
+		trace.WithAttributes(
+			attribute.String("tool.name", name),
+			attribute.Int("tool.args_count", len(args)),
+		))
+	defer span.End()
+
+	result, err := a.tools[name].Execute(ctx, args)
+	if err != nil {
+		span.RecordError(err)
+		span.SetStatus(codes.Error, err.Error())
+		return err
+	}
+	span.SetAttributes(attribute.Int("tool.result_bytes", len(result)))
+	return nil
+}</code></pre>
+
+<p>สังเกตว่า <code>Run()</code> เรียก <code>span.RecordError(err)</code> เฉย ๆ ตอน tool call fail (ไม่ตามด้วย <code>SetStatus</code>) ทั้งที่กฎทั่วไปคือต้อง set status คู่กันเสมอ — จุดนี้ตั้งใจ เพราะ error นี้ recoverable: <code>callTool</code>'s span เองถูก mark เป็น error status ไปแล้ว (ดูโค้ดด้านบน) ส่วน <code>agent.run</code> span จะ error ก็ต่อเมื่อทั้ง run ล้มเหลวจริง ไม่ใช่แค่ tool call ครั้งเดียวที่ agent recover ได้ — หลักการคือ <strong>set status error ที่ span ซึ่งเป็นตัวแทนของสิ่งที่ fail จริง เท่านั้น</strong> ไม่ไล่ set ทุกระดับ ไม่งั้น trace ที่จริง ๆ สำเร็จ (agent ลอง tool อื่นแล้วตอบได้) จะโดน mark เป็น error ไปด้วย ทำให้ error rate เพี้ยน</p>
+
+<h3>2. Structured log ผูกกับ trace_id</h3>
+
+<p>Log ควรมี <code>trace_id</code> เดียวกับ span เพื่อ jump จาก log entry ไปดู full trace ได้ทันที</p>
+
+<pre><code>func (a *Agent) think(ctx context.Context, step int) (Decision, error) {
+	ctx, span := tracer.Start(ctx, "agent.think")
+	defer span.End()
+
+	logger := a.logger.With(
+		"trace_id", span.SpanContext().TraceID().String(),
+		"step", step,
+	)
+
+	logger.Info("calling llm", "model", a.model)
+	resp, err := a.llm.Complete(ctx, a.buildPrompt(step))
+	if err != nil {
+		span.RecordError(err)
+		span.SetStatus(codes.Error, err.Error())
+		logger.Error("llm call failed", "error", err)
+		return Decision{}, err
+	}
+
+	logger.Info("llm decision",
+		"action", resp.Action,
+		"prompt_tokens", resp.Usage.PromptTokens,
+		"completion_tokens", resp.Usage.CompletionTokens,
+	)
+	recordUsage(ctx, a.model, resp.Usage.PromptTokens, resp.Usage.CompletionTokens) // metric ที่จะแนะนำในหัวข้อถัดไป
+	return parseDecision(resp)
+}</code></pre>
+
+<p><code>slog</code> (Go stdlib ตั้งแต่ 1.21) พอสำหรับ structured logging แล้ว ไม่จำเป็นต้องพึ่ง library ภายนอกถ้าไม่มี requirement พิเศษ</p>
+
+<p>หมายเหตุ: OpenTelemetry มีมาตรฐาน <a href="https://opentelemetry.io/docs/specs/semconv/gen-ai/" target="_blank" rel="noopener">GenAI semantic conventions</a> (<code>gen_ai.request.model</code>, <code>gen_ai.usage.input_tokens</code>, ฯลฯ) สำหรับตั้งชื่อ attribute ของ LLM call โดยเฉพาะ ถ้าต้องการให้ trace เข้ากันได้กับเครื่องมือ LLM observability สำเร็จรูป (Arize Phoenix, LangSmith, OpenLLMetry) ควรศึกษาแล้วตั้งชื่อ attribute ตามมาตรฐานนี้แทนตั้งเอง</p>
+
+<h3>3. Metric สำหรับ token usage และ cost</h3>
+
+<p>Trace บอก "เกิดอะไรขึ้นใน run เดียว" ส่วน metric บอก "แนวโน้มในภาพรวม" — สอง layer นี้ตอบคำถามคนละแบบ</p>
+
+<pre><code>package agent
+
+import (
+	"context"
+
+	"go.opentelemetry.io/otel"
+	"go.opentelemetry.io/otel/attribute"
+	"go.opentelemetry.io/otel/metric"
+)
+
+var (
+	tokenCounter  metric.Int64Counter
+	stepHistogram metric.Int64Histogram
+)
+
+func init() {
+	meter := otel.Meter("agent")
+	tokenCounter, _ = meter.Int64Counter("agent.tokens_used",
+		metric.WithDescription("token consumed per LLM call"))
+	stepHistogram, _ = meter.Int64Histogram("agent.steps_per_run",
+		metric.WithDescription("number of reasoning steps per agent run"))
+}
+
+func recordUsage(ctx context.Context, model string, promptTok, completionTok int64) {
+	tokenCounter.Add(ctx, promptTok,
+		metric.WithAttributes(attribute.String("model", model), attribute.String("token.type", "prompt")))
+	tokenCounter.Add(ctx, completionTok,
+		metric.WithAttributes(attribute.String("model", model), attribute.String("token.type", "completion")))
+}</code></pre>
+
+<p><code>recordUsage</code> ถูกเรียกจาก <code>think()</code> ทันทีที่ได้ <code>resp.Usage</code> มา (โค้ดหัวข้อที่ 2) ส่วน <code>stepHistogram</code> ถูก record ใน <code>Run()</code> ตอน agent จบงาน (โค้ดหัวข้อที่ 1) — ทั้งสอง metric ผูกกับจุดที่ข้อมูลเกิดขึ้นจริง ไม่ใช่คำนวณย้อนหลัง</p>
+
+<p><code>model</code> เป็น attribute ที่ cardinality ต่ำ ปลอดภัยจะใส่ แต่ <strong>ห้ามใส่ user_id หรือ prompt content เป็น metric label</strong> เดี๋ยว cardinality ระเบิด (รายละเอียดถัดไป)</p>
+
+<p>เครื่องมือ trace/log/metric ครบแล้ว คำถามต่อไปคือใช้แค่ไหนถึงจะคุ้ม — เพราะ observability เองก็มีต้นทุน</p>
+
+<h2>Trade-off เรื่องค่าใช้จ่าย</h2>
+
+<p>Observability ไม่ฟรี ต้องชั่งน้ำหนัก 3 อย่าง: <strong>storage cost, latency overhead, cardinality</strong></p>
+
+<h3>Storage cost</h3>
+
+<p>Agent ที่วน 10-20 step ต่อ run สร้าง span เยอะกว่า HTTP service ทั่วไปหลายเท่า ถ้า trace ทุก run แบบ 100% กับ traffic สูง ค่า storage backend (Tempo/Datadog/etc.) จะพุ่งเร็วกว่าที่คิด</p>
+
+<p>แนวทาง: <strong>sampling แบบ tail-based</strong> — เก็บทุก trace ที่ error หรือ latency สูงผิดปกติ 100% แต่ trace ที่สำเร็จปกติ sample แค่ 5-10% พอ เพราะ trace ที่ "ปกติ" ให้ข้อมูล debug น้อยกว่า trace ที่ fail</p>
+
+<pre><code>// ตัวอย่าง config แนวคิด ไม่ใช่ production-ready
+sampler := sdktrace.ParentBased(
+	sdktrace.TraceIDRatioBased(0.1), // 10% baseline
+)</code></pre>
+
+<p>ส่วน tail-based sampling จริงต้องทำที่ collector (เช่น OTel Collector's <code>tailsamplingprocessor</code>) ไม่ใช่ที่ SDK เพราะต้องเห็น trace จบก่อนถึงจะรู้ว่า error หรือเปล่า</p>
+
+<h3>Latency overhead</h3>
+
+<p>ทุก span, ทุก log line มี cost เล็กน้อยต่อ CPU/memory และถ้า export แบบ synchronous จะเพิ่ม latency ให้ response โดยตรง</p>
+
+<p>แนวทาง: ใช้ <code>BatchSpanProcessor</code> ไม่ใช่ <code>SimpleSpanProcessor</code> — export เป็น batch แบบ async, ไม่ block agent loop</p>
+
+<pre><code>bsp := sdktrace.NewBatchSpanProcessor(exporter,
+	sdktrace.WithMaxExportBatchSize(512),
+	sdktrace.WithBatchTimeout(5*time.Second),
+)</code></pre>
+
+<h3>Cardinality</h3>
+
+<p>จุดนี้พังบ่อยสุด: ใส่ high-cardinality field (user_id, session_id, raw prompt text) เป็น metric label ทำให้ time-series ระเบิดเป็นล้าน series — metric backend ส่วนใหญ่ (Prometheus โดยเฉพาะ) รับไม่ไหว บิลพุ่ง หรือ query ช้าจนใช้งานไม่ได้</p>
+
+<p>กฎง่าย ๆ: <strong>high-cardinality data ไปอยู่ใน trace/log เท่านั้น ไม่ใช่ metric label</strong> metric label ควรเป็นค่าจำกัด เช่น <code>model</code>, <code>tool_name</code>, <code>status</code> — ส่วน user_id, prompt content ใส่เป็น span attribute หรือ log field แทน ค้นด้วย trace_id ทีหลังได้ ไม่ต้องพึ่ง metric query</p>
+
+<h3>สรุป trade-off</h3>
+
+<table>
+<tr><th>ต้องการ</th><th>ต้นทุน</th><th>ทางออก</th></tr>
+<tr><td>เห็นทุก run แบบละเอียด</td><td>storage พุ่ง</td><td>tail-based sampling, เก็บ error 100% เก็บ success บางส่วน</td></tr>
+<tr><td>เห็น real-time โดยไม่กระทบ response time</td><td>latency overhead</td><td>batch + async export</td></tr>
+<tr><td>slice ข้อมูลได้ละเอียด</td><td>cardinality ระเบิด</td><td>high-cardinality → trace/log, low-cardinality → metric</td></tr>
+</table>
+
+<h2>สรุป</h2>
+
+<p>AI agent debug ยากกว่า service ปกติเพราะ non-deterministic และมีหลาย step ที่มองไม่เห็นจากภายนอก observability คือทางเดียวที่ทำให้ agent ไม่ใช่ black box — แต่ต้องออกแบบให้ถูกจุดตั้งแต่แรก (sampling strategy, cardinality ของ label) ไม่งั้นค่าใช้จ่ายด้าน infra จะโตเร็วกว่า value ที่ได้กลับมา</p>
+
+<p>ถ้าจะเริ่ม: <strong>trace ก่อน</strong> — แค่ครอบ agent loop กับ tool call ด้วย span ก็เห็นปัญหาส่วนใหญ่แล้ว ค่อยเพิ่ม <strong>metric</strong> เมื่อเริ่มมี cost ที่ต้อง track จริงจัง และทำ <strong>structured log</strong> ให้ครบเมื่อทีมโตขึ้นจนต้องแชร์ dashboard ร่วมกัน ไม่ต้องทำครบทุกอย่างตั้งแต่วันแรก</p>
+
+</article>
+
+<footer class="site">
+<p><a href="/">← กลับหน้าแรก Gophernment</a></p>
+</footer>
+
+</body>
+</html>
