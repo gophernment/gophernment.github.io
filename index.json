@@ -1,0 +1,55 @@
+[
+  {
+    "slug": "2026-07-12-observability-ai-agent-go",
+    "title": "ความสำคัญของ Observability ใน AI Agent (ตัวอย่างด้วย Go)",
+    "date": "2026-07-12",
+    "tags": [
+      "ai",
+      "agent",
+      "observability",
+      "go",
+      "monitoring",
+      "tracing"
+    ],
+    "description": "ทำไม AI agent ต้องการ trace/log/metric มากกว่า service ทั่วไป พร้อมตัวอย่าง OpenTelemetry ใน Go และ trade-off เรื่องค่าใช้จ่าย"
+  },
+  {
+    "slug": "2026-07-12-go-flight-recorder",
+    "title": "Flight Recorder ใน Go 1.25: debug production ย้อนหลังโดยไม่ต้องเก็บ trace ทั้งเส้นทาง",
+    "date": "2026-07-12",
+    "tags": [
+      "go",
+      "tracing",
+      "debugging",
+      "observability",
+      "production"
+    ],
+    "description": "เก็บ execution trace วนใน ring buffer ตลอดเวลา แล้ว snapshot เฉพาะช่วงที่มีปัญหาจริง — ไม่ต้องรู้ล่วงหน้าว่าจะพังตอนไหน"
+  },
+  {
+    "slug": "2026-07-12-go-fix-modernize",
+    "title": "go fix ตัวใหม่ใน Go 1.26: เครื่องมือปรับโค้ดเก่าให้ทันสมัยอัตโนมัติ",
+    "date": "2026-07-12",
+    "tags": [
+      "go",
+      "tooling",
+      "static-analysis",
+      "refactoring",
+      "ai"
+    ],
+    "description": "go fix เขียนใหม่ทั้งหมด ยืนบน Analysis Framework เดียวกับ go vet พร้อม modernizer ที่แก้สไตล์โค้ดเก่าให้อัตโนมัติ — รวมถึงโค้ดที่ AI generate"
+  },
+  {
+    "slug": "2026-07-12-ai-agent-architecture-go",
+    "title": "โครงสร้าง AI Agent: หลักการสร้าง Agent ด้วยตัวเอง (สำหรับนักพัฒนา Go)",
+    "date": "2026-07-12",
+    "tags": [
+      "ai",
+      "agent",
+      "architecture",
+      "go",
+      "llm"
+    ],
+    "description": "แกะโครงสร้าง AI agent เป็น 4 ส่วนประกอบ (model, tools, memory, control loop) พร้อมตัวอย่าง Go ประกอบเป็น agent เองได้ ไม่ต้องพึ่ง framework"
+  }
+]
