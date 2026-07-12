@@ -5,13 +5,14 @@ on:
     branches: [main]
     paths:
       - "_content/blog/**"
+  workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
   build-index:
-    if: ${{ !startsWith(github.event.head_commit.message, 'chore: rebuild blog index') }}
+    if: "${{ !startsWith(github.event.head_commit.message, 'chore: rebuild blog index') }}"
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
