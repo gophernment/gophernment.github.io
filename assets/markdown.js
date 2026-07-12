@@ -86,6 +86,16 @@ function renderMarkdown(md) {
       continue;
     }
 
+    if (/^>\s?/.test(line)) {
+      const quoteLines = [];
+      while (i < lines.length && /^>\s?/.test(lines[i])) {
+        quoteLines.push(lines[i].replace(/^>\s?/, ""));
+        i++;
+      }
+      html += `<blockquote><p>${renderInline(quoteLines.join(" "))}</p></blockquote>\n`;
+      continue;
+    }
+
     if (line.includes("|") && lines[i + 1] && /^\s*\|?\s*-{2,}/.test(lines[i + 1])) {
       const splitRow = (row) =>
         row
@@ -123,7 +133,8 @@ function renderMarkdown(md) {
       lines[i].trim() !== "" &&
       !lines[i].startsWith("```") &&
       !/^#{1,6}\s/.test(lines[i]) &&
-      !/^[-*]\s+/.test(lines[i])
+      !/^[-*]\s+/.test(lines[i]) &&
+      !/^>\s?/.test(lines[i])
     ) {
       paraLines.push(lines[i]);
       i++;
