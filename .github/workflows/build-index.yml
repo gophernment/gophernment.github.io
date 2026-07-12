@@ -1,0 +1,38 @@
+name: Rebuild blog index
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "_content/blog/**"
+
+permissions:
+  contents: write
+
+jobs:
+  build-index:
+    if: ${{ !startsWith(github.event.head_commit.message, 'chore: rebuild blog index') }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Build index.json
+        run: node scripts/build-index.mjs
+
+      - name: Commit index.json if changed
+        run: |
+          if git diff --quiet -- index.json; then
+            echo "index.json unchanged, nothing to commit"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add index.json
+          git commit -m "chore: rebuild blog index"
+          git push
