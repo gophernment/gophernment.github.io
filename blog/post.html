@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gophernment Blog</title>
+<meta name="description" content="บทความจาก Gophernment Blog">
+<style>
+:root {
+  --bg: #ffffff;
+  --text: #1a1a1a;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+  --hover: #f9fafb;
+  --accent: #0969da;
+  --code-bg: #f6f8fa;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans Thai", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.75;
+}
+a { color: var(--accent); }
+
+.bar {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 32px 24px 0;
+}
+.bar a.back { color: var(--muted); text-decoration: none; font-size: 0.9em; }
+.bar a.back:hover { color: var(--accent); }
+
+article.post { max-width: 720px; margin: 0 auto; padding: 24px 24px 80px; }
+
+.post header { padding: 24px 0 32px; border-bottom: 1px solid var(--border); margin-bottom: 32px; }
+.post h1 { font-size: 1.7em; font-weight: 700; margin-bottom: 12px; line-height: 1.4; }
+.post .meta { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; font-size: 0.85em; color: var(--muted); }
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 10px;
+  background: var(--hover);
+  color: var(--muted);
+  border: 1px solid var(--border);
+}
+
+#post-root h2 { font-size: 1.3em; font-weight: 700; margin: 40px 0 16px; }
+#post-root h3 { font-size: 1.1em; font-weight: 700; margin: 28px 0 12px; }
+#post-root p { margin-bottom: 16px; }
+#post-root ul { margin: 0 0 16px 20px; }
+#post-root li { margin-bottom: 8px; }
+#post-root strong { font-weight: 700; }
+#post-root code {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  background: var(--code-bg);
+  padding: 2px 5px;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+#post-root pre {
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px;
+  overflow-x: auto;
+  margin-bottom: 20px;
+  font-size: 0.85em;
+}
+#post-root pre code { background: none; padding: 0; border-radius: 0; }
+#post-root table { width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 0.9em; }
+#post-root th, #post-root td { text-align: left; padding: 8px 12px; border: 1px solid var(--border); }
+#post-root th { background: var(--hover); }
+
+footer.site {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 24px 64px;
+  color: var(--muted);
+  font-size: 0.85em;
+}
+footer.site a { color: var(--accent); text-decoration: none; }
+footer.site a:hover { text-decoration: underline; }
+
+@media (max-width: 600px) {
+  .bar, article.post, footer.site { padding-left: 20px; padding-right: 20px; }
+}
+</style>
+</head>
+<body>
+
+<div class="bar"><a class="back" href="/">← กลับหน้าแรก</a></div>
+
+<article class="post">
+<header>
+<h1 id="post-title">กำลังโหลด…</h1>
+<div class="meta" id="post-meta"></div>
+</header>
+
+<div id="post-root"><p>กำลังโหลดบทความ…</p></div>
+</article>
+
+<footer class="site">
+<p><a href="/">← กลับหน้าแรก Gophernment</a></p>
+</footer>
+
+<script src="/assets/markdown.js"></script>
+<script>loadBlogPost();</script>
+
+</body>
+</html>
