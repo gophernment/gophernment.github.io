@@ -27,7 +27,7 @@ jobs:
 
       - name: Commit index.json if changed
         run: |
-          if git diff --quiet -- index.json; then
+          if [ -z "$(git status --porcelain -- index.json)" ]; then
             echo "index.json unchanged, nothing to commit"
             exit 0
           fi
