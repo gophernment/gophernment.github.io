@@ -2,6 +2,7 @@
 title: "โครงสร้าง AI Agent: หลักการสร้าง Agent ด้วยตัวเอง (สำหรับนักพัฒนา Go)"
 date: 2026-07-12
 tags: [ai, agent, architecture, go, llm]
+description: "แกะโครงสร้าง AI agent เป็น 4 ส่วนประกอบ (model, tools, memory, control loop) พร้อมตัวอย่าง Go ประกอบเป็น agent เองได้ ไม่ต้องพึ่ง framework"
 ---
 
 Agent framework สำเร็จรูปมีให้เลือกเยอะ แต่ framework ซ่อนโครงสร้างจริงไว้ข้างหลัง abstraction จนหลายคนเรียก `agent.Run()` ได้โดยไม่รู้ว่าข้างในมันทำอะไร บทความนี้แกะโครงสร้างของ AI agent ออกมาเป็นส่วนประกอบพื้นฐาน พร้อมตัวอย่าง Go ให้ประกอบเป็น agent ของตัวเองได้ โดยไม่ต้องพึ่ง framework ใด ๆ

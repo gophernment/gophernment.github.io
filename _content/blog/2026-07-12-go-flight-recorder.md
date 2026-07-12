@@ -2,6 +2,7 @@
 title: "Flight Recorder ใน Go 1.25: debug production ย้อนหลังโดยไม่ต้องเก็บ trace ทั้งเส้นทาง"
 date: 2026-07-12
 tags: [go, tracing, debugging, observability, production]
+description: "เก็บ execution trace วนใน ring buffer ตลอดเวลา แล้ว snapshot เฉพาะช่วงที่มีปัญหาจริง — ไม่ต้องรู้ล่วงหน้าว่าจะพังตอนไหน"
 ---
 
 `runtime/trace` เป็นเครื่องมือ debug ที่ทรงพลังของ Go มานาน แต่มีข้อจำกัดหนึ่งที่ทำให้ใช้กับ production service ยาก: ต้องรู้ล่วงหน้าว่าจะมีปัญหา ถึงจะเรียก `trace.Start` ทัน — บทความนี้สรุปฟีเจอร์ **Flight Recorder** ที่ Go 1.25 เพิ่มเข้ามาแก้ปัญหานี้ตรง ๆ อ้างอิงจาก [Flight Recorder in Go 1.25](https://go.dev/blog/flight-recorder) (บล็อกทางการของทีม Go)

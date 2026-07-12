@@ -2,6 +2,7 @@
 title: "ความสำคัญของ Observability ใน AI Agent (ตัวอย่างด้วย Go)"
 date: 2026-07-12
 tags: [ai, agent, observability, go, monitoring, tracing]
+description: "ทำไม AI agent ต้องการ trace/log/metric มากกว่า service ทั่วไป พร้อมตัวอย่าง OpenTelemetry ใน Go และ trade-off เรื่องค่าใช้จ่าย"
 ---
 
 AI agent ต่างจาก service ทั่วไปตรงที่ behavior ไม่ deterministic — input เดียวกัน รันสองครั้งอาจได้ output ต่างกัน, จำนวน step ไม่คงที่, agent ตัดสินใจเองว่าจะเรียก tool ไหน กี่รอบ ก่อนตอบ เมื่อ bug เกิดขึ้น log ทั่วไปแบบ "request in, response out" ไม่พอสืบสาเหตุ ต้องเห็น **ทุก step ของ reasoning loop**

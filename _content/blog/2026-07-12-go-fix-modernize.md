@@ -2,6 +2,7 @@
 title: "go fix ตัวใหม่ใน Go 1.26: เครื่องมือปรับโค้ดเก่าให้ทันสมัยอัตโนมัติ"
 date: 2026-07-12
 tags: [go, tooling, static-analysis, refactoring, ai]
+description: "go fix เขียนใหม่ทั้งหมด ยืนบน Analysis Framework เดียวกับ go vet พร้อม modernizer ที่แก้สไตล์โค้ดเก่าให้อัตโนมัติ — รวมถึงโค้ดที่ AI generate"
 ---
 
 `go fix` มีมานานแล้วในฐานะเครื่องมือ migrate โค้ดตอน Go API เปลี่ยน แต่ที่ผ่านมาแทบไม่มีใครใช้ เพราะ scope แคบมาก Go 1.26 เขียน `go fix` ใหม่ทั้งหมด ให้กลายเป็นเครื่องมือ "ปรับโค้ดให้ทันสมัย" (modernize) แบบกว้าง ๆ อ้างอิงจาก [Using go fix to modernize Go code](https://go.dev/blog/gofix) โดย Alan Donovan (17 กุมภาพันธ์ 2026)

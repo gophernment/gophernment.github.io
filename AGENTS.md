@@ -53,5 +53,6 @@ Technology evolves rapidly. To maintain intellectual integrity and avoid mislead
   title: "Title in Thai"
   date: YYYY-MM-DD
   tags: [tag1, tag2]
+  description: "One or two sentence excerpt — shown on the homepage card and matched by search"
   ---
   ```
