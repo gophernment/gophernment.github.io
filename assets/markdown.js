@@ -17,6 +17,7 @@ function renderInline(text) {
   let s = escapeHtml(text);
   s = s.replace(/`([^`]+)`/g, (_, code) => `<code>${code}</code>`);
   s = s.replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
+  s = s.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, (_, alt, u) => `<img src="${u}" alt="${alt}" style="max-width: 100%; height: auto; display: block; margin: 1.5rem auto; border-radius: 8px;">`);
   s = s.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_, t, u) => {
     const external = /^https?:\/\//.test(u);
     return external

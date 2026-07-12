@@ -27,7 +27,7 @@ Anthropic สรุปโครงสร้างนี้ไว้ใน [Build
 
 โครงสร้างการทำงานเป็นวงเป็นดังนี้:
 
-![โครงสร้างการทำงานของ AI Agent (ReAct Loop)](/images/agent-loop-brush.jpg)
+![โครงสร้างการทำงานของ AI Agent (ReAct Loop)](/images/agent-loop-pencil.jpg)
 
 ส่วนถัดไปแกะแต่ละส่วนเป็นโค้ด Go
 
