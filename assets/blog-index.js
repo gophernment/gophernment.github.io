@@ -54,3 +54,121 @@ function paginatePosts(posts, page) {
     totalPages,
   };
 }
+
+let cachedPosts = null;
+
+async function fetchBlogIndex() {
+  if (cachedPosts) return cachedPosts;
+  const res = await fetch("/index.json");
+  if (!res.ok) throw new Error(`index.json fetch failed: ${res.status}`);
+  cachedPosts = await res.json();
+  return cachedPosts;
+}
+
+function renderTagFilters(posts, activeTag) {
+  const tags = [...new Set(posts.flatMap((p) => p.tags))].sort();
+  const container = document.getElementById("tag-filters");
+  container.innerHTML = tags
+    .map((t) => {
+      const active = t === activeTag ? " active" : "";
+      return `<button type="button" class="tag-chip${active}" data-tag="${t}">${t}</button>`;
+    })
+    .join("");
+}
+
+function renderPostList(items) {
+  const list = document.getElementById("blog-list");
+  if (items.length === 0) {
+    list.innerHTML = "<p>ไม่พบบทความที่ตรงกับคำค้นหา</p>";
+    return;
+  }
+  list.innerHTML = items
+    .map(
+      (post) => `
+<a class="post-card" href="/blog/post.html?slug=${post.slug}">
+<h3>${post.title}</h3>
+<p class="desc">${post.description}</p>
+<div class="meta">
+${post.tags.map((t) => `<span class="badge">${t}</span>`).join("")}
+<span class="date">${post.date}</span>
+<span class="cta">อ่านบทความ →</span>
+</div>
+</a>`
+    )
+    .join("\n");
+}
+
+function renderPagination(page, totalPages, query) {
+  const nav = document.getElementById("pagination");
+  if (totalPages <= 1) {
+    nav.innerHTML = "";
+    return;
+  }
+  const parts = [];
+  for (let p = 1; p <= totalPages; p++) {
+    const qs = buildQueryString({ ...query, page: p });
+    const active = p === page ? " active" : "";
+    parts.push(`<a class="page-link${active}" href="/${qs}" data-page="${p}">${p}</a>`);
+  }
+  nav.innerHTML = parts.join("");
+}
+
+async function renderBlogIndex() {
+  const listEl = document.getElementById("blog-list");
+  let posts;
+  try {
+    posts = await fetchBlogIndex();
+  } catch (e) {
+    listEl.innerHTML =
+      "<p>โหลดรายการบทความไม่สำเร็จ — อ่านบทความได้ที่ dev.to ด้านล่าง</p>";
+    document.getElementById("tag-filters").innerHTML = "";
+    document.getElementById("pagination").innerHTML = "";
+    return;
+  }
+
+  const query = parseQueryParams(location.search);
+  const searchInput = document.getElementById("blog-search");
+  if (searchInput && searchInput.value !== query.q) searchInput.value = query.q;
+
+  renderTagFilters(posts, query.tag);
+  const filtered = filterPosts(posts, query);
+  const { items, page, totalPages } = paginatePosts(filtered, query.page);
+  renderPostList(items);
+  renderPagination(page, totalPages, query);
+}
+
+function navigateBlogIndex(query) {
+  const qs = buildQueryString(query);
+  history.pushState({}, "", qs || location.pathname);
+  renderBlogIndex();
+}
+
+function initBlogIndexEvents() {
+  document.getElementById("tag-filters").addEventListener("click", (e) => {
+    const btn = e.target.closest(".tag-chip");
+    if (!btn) return;
+    const query = parseQueryParams(location.search);
+    const nextTag = query.tag === btn.dataset.tag ? "" : btn.dataset.tag;
+    navigateBlogIndex({ ...query, tag: nextTag, page: 1 });
+  });
+
+  document.getElementById("pagination").addEventListener("click", (e) => {
+    const link = e.target.closest(".page-link");
+    if (!link) return;
+    e.preventDefault();
+    const query = parseQueryParams(location.search);
+    navigateBlogIndex({ ...query, page: parseInt(link.dataset.page, 10) });
+  });
+
+  let debounceTimer;
+  document.getElementById("blog-search").addEventListener("input", (e) => {
+    clearTimeout(debounceTimer);
+    const value = e.target.value;
+    debounceTimer = setTimeout(() => {
+      const query = parseQueryParams(location.search);
+      navigateBlogIndex({ ...query, q: value, page: 1 });
+    }, 200);
+  });
+
+  window.addEventListener("popstate", renderBlogIndex);
+}
