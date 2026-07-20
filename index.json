@@ -1,5 +1,32 @@
 [
   {
+    "slug": "2026-07-20-loop-and-harness-engineering-claude-code",
+    "title": "ห้องครัวกับสูตรอาหาร: เจาะลึก Harness & Loop ใน Claude Code ให้รันลูปยาวได้ไม่สะดุด",
+    "date": "2026-07-20",
+    "tags": [
+      "claude",
+      "agent",
+      "loop",
+      "harness",
+      "automation",
+      "productivity"
+    ],
+    "description": "ทำไมเขียน Agent แล้วชอบค้างรอบที่สาม? ชวนแกะสูตรสถาปัตยกรรมลูปและเครื่องเคราของ Claude Code เพื่อสร้างเอเจนต์ที่รันได้ยาว ๆ แบบไม่มีหลุด"
+  },
+  {
+    "slug": "2026-07-13-go-future-2-years-proposals",
+    "title": "อนาคตภาษา Go ในอีก 2 ปีข้างหน้า: อ่านแนวโน้มจาก Proposal และ Roadmap",
+    "date": "2026-07-13",
+    "tags": [
+      "go",
+      "roadmap",
+      "proposal",
+      "generics",
+      "gc"
+    ],
+    "description": "ทำไม generics ใช้เวลา 4 ปีกว่าจะ ship แต่ error handling ค้างมา 8 ปียังไม่ไปไหน — ไล่ proposal จริงของ Go เพื่อเดาว่า 2 ปีข้างหน้าอะไรมาแน่ อะไรอย่าเพิ่งหวัง"
+  },
+  {
     "slug": "2026-07-12-observability-ai-agent-go",
     "title": "ความสำคัญของ Observability ใน AI Agent (ตัวอย่างด้วย Go)",
     "date": "2026-07-12",
