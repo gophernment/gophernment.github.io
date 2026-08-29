@@ -1,5 +1,93 @@
 [
   {
+    "slug": "2026-08-29-typescript-from-zero-to-test-ep8",
+    "title": "TypeScript จากศูนย์ถึงเขียน Test — ตอนที่ 8: เขียน unit test ใน Next.js ด้วย Vitest",
+    "date": "2026-08-29",
+    "tags": [
+      "typescript",
+      "nextjs",
+      "testing"
+    ],
+    "description": "เขียน unit test ใน Next.js ด้วย Vitest + React Testing Library — ปิดท้ายซีรีส์"
+  },
+  {
+    "slug": "2026-08-29-typescript-from-zero-to-test-ep7",
+    "title": "TypeScript จากศูนย์ถึงเขียน Test — ตอนที่ 7: ตั้งโปรเจกต์ Next.js + TypeScript",
+    "date": "2026-08-29",
+    "tags": [
+      "typescript",
+      "nextjs",
+      "react"
+    ],
+    "description": "ตั้งโปรเจกต์ Next.js + TypeScript และเข้าใจโครงสร้าง App Router กับ Server/Client Component"
+  },
+  {
+    "slug": "2026-08-29-typescript-from-zero-to-test-ep6",
+    "title": "TypeScript จากศูนย์ถึงเขียน Test — ตอนที่ 6: เขียน e2e test ด้วย Playwright",
+    "date": "2026-08-29",
+    "tags": [
+      "typescript",
+      "playwright",
+      "testing"
+    ],
+    "description": "เขียน e2e test ด้วย Playwright — จำลองผู้ใช้จริงคลิก พิมพ์ และตรวจผลผ่านเบราว์เซอร์"
+  },
+  {
+    "slug": "2026-08-29-typescript-from-zero-to-test-ep5",
+    "title": "TypeScript จากศูนย์ถึงเขียน Test — ตอนที่ 5: เข้าใจการทดสอบ (Testing) ก่อนลงมือเขียน",
+    "date": "2026-08-29",
+    "tags": [
+      "typescript",
+      "testing",
+      "beginners"
+    ],
+    "description": "ทำความเข้าใจการทดสอบก่อนลงมือเขียน — unit, integration, e2e และ test pyramid"
+  },
+  {
+    "slug": "2026-08-29-typescript-from-zero-to-test-ep4",
+    "title": "TypeScript จากศูนย์ถึงเขียน Test — ตอนที่ 4: Type Narrowing และ Type Guards",
+    "date": "2026-08-29",
+    "tags": [
+      "typescript",
+      "beginners",
+      "tutorial"
+    ],
+    "description": "Type narrowing และ type guards — วิธีให้ compiler รู้ว่า type คืออะไร ณ จุดนั้นของโค้ด"
+  },
+  {
+    "slug": "2026-08-29-typescript-from-zero-to-test-ep3",
+    "title": "TypeScript จากศูนย์ถึงเขียน Test — ตอนที่ 3: Generics และ Utility types",
+    "date": "2026-08-29",
+    "tags": [
+      "typescript",
+      "beginners",
+      "tutorial"
+    ],
+    "description": "Generics และ utility types — วิธีเขียน type ให้ยืดหยุ่นและนำกลับมาใช้ซ้ำโดยไม่ต้องประกาศซ้ำ"
+  },
+  {
+    "slug": "2026-08-29-typescript-from-zero-to-test-ep2",
+    "title": "TypeScript จากศูนย์ถึงเขียน Test — ตอนที่ 2: Type พื้นฐานที่ต้องรู้ก่อนไปต่อ",
+    "date": "2026-08-29",
+    "tags": [
+      "typescript",
+      "beginners",
+      "tutorial"
+    ],
+    "description": "รวม type พื้นฐานที่ต้องรู้ — primitive, array, object, interface, function, union และ literal type"
+  },
+  {
+    "slug": "2026-08-29-typescript-from-zero-to-test-ep1",
+    "title": "TypeScript จากศูนย์ถึงเขียน Test — ตอนที่ 1: รู้จัก ติดตั้ง และเขียนโค้ดแรก",
+    "date": "2026-08-29",
+    "tags": [
+      "typescript",
+      "bun",
+      "beginners"
+    ],
+    "description": "ปูพื้นฐาน TypeScript ตั้งแต่ติดตั้ง Bun เขียนโค้ดแรก แล้วเข้าใจความต่างระหว่างการรันโค้ดกับการตรวจ type"
+  },
+  {
     "slug": "2026-07-20-loop-and-harness-engineering-claude-code",
     "title": "ห้องครัวกับสูตรอาหาร: เจาะลึก Harness & Loop ใน Claude Code ให้รันลูปยาวได้ไม่สะดุด",
     "date": "2026-07-20",
