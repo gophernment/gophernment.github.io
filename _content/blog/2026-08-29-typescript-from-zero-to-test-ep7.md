@@ -5,7 +5,7 @@ tags: [typescript, nextjs, react]
 description: "ตั้งโปรเจกต์ Next.js + TypeScript และเข้าใจโครงสร้าง App Router กับ Server/Client Component"
 ---
 
-> 📅 เขียนเมื่อ: สิงหาคม 2026 | Next.js 16, React 19, Bun 1.4
+> 📅 เขียนเมื่อ: สิงหาคม 2026 | Next.js 16, React 19, Node.js 20+
 > ⚠️ API/เวอร์ชันอาจเปลี่ยนแปลง — ตรวจสอบเอกสารล่าสุดก่อนใช้งาน
 >
 > 📚 ตอนที่ 7/8 ในซีรีส์ "TypeScript จากศูนย์ถึงเขียน Test"
@@ -18,19 +18,21 @@ description: "ตั้งโปรเจกต์ Next.js + TypeScript แล�
 
 ## สร้างโปรเจกต์
 
-Next.js มีตัวสร้างโปรเจกต์สำเร็จรูป ใช้คำสั่งนี้ (รันผ่าน Bun)
+จุดนี้ต้องเปลี่ยนมาใช้ **Node.js** แล้ว — ต่างจากตอนก่อนหน้าที่ใช้ Bun เพราะ Next.js ต้องรันบน Node.js (Next.js 16 ระบุ requirement ว่า `node >= 20.9.0`) นี่คือเหตุผลที่เราเตรียม fnm ไว้ตั้งแต่ตอนที่ 1
+
+Next.js มีตัวสร้างโปรเจกต์สำเร็จรูป ใช้ `npx` (ตัวรัน package ของ Node) ตามนี้
 
 ```bash
-bunx create-next-app@latest my-app
+npx create-next-app@latest my-app
 ```
 
 ตัวสร้างจะถามคำถามหลายข้อ เช่น ใช้ TypeScript ไหม, ใช้ Tailwind ไหม, ใช้ App Router ไหม — สำหรับซีรีส์นี้เลือก **Yes** ให้ TypeScript และ **App Router** (เป็นตัวเลือก default อยู่แล้ว) ที่เหลือตอบตามใจได้เลย
 
-สร้างเสร็จ เข้าไปในโฟลเดอร์แล้วเปิด dev server
+สร้างเสร็จ เข้าไปในโฟลเดอร์แล้วเปิด dev server ด้วย `npm` (ตัวจัดการ package มาตรฐานของ Node)
 
 ```bash
 cd my-app
-bun run dev
+npm run dev
 ```
 
 เปิดเบราว์เซอร์ไปที่ `http://localhost:3000` จะเห็นหน้าแรกของ Next.js — เท่านี้โปรเจกต์ Next.js + TypeScript ก็พร้อมแล้ว (สังเกตว่าเราแทบไม่ต้องตั้งค่า TypeScript อะไรเลย เพราะ Next.js จัดการให้อัตโนมัติ)
