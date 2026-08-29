@@ -14,6 +14,8 @@ description: "ตั้งโปรเจกต์ Next.js + TypeScript แล�
 
 ถ้ายังไม่รู้จัก Next.js ขออธิบายสั้น ๆ — React คือ library สำหรับสร้าง UI จาก "component" และ Next.js คือเฟรมเวิร์กที่ห่อ React ให้ทำงานจริงจังขึ้น (จัดการ routing, rendering, และอีกสารพัดให้เราไม่ต้องตั้งเอง)
 
+> ⚠️ ถึงตรงนี้ต้องใช้ **Node.js** จริงแล้ว (Next.js ต้องการ Node) — ถ้ายังไม่ได้จัดการ Node version ให้กลับไปดู[ตอนที่ 1 เรื่อง fnm](/blog/post.html?slug=2026-08-29-typescript-from-zero-to-test-ep1) เพื่อตั้งให้เรียบร้อยก่อน
+
 ## สร้างโปรเจกต์
 
 Next.js มีตัวสร้างโปรเจกต์สำเร็จรูป ใช้คำสั่งนี้ (รันผ่าน Bun)
