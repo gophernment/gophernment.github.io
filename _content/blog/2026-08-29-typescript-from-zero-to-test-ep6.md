@@ -5,7 +5,7 @@ tags: [typescript, playwright, testing]
 description: "เขียน e2e test ด้วย Playwright — จำลองผู้ใช้จริงคลิก พิมพ์ และตรวจผลผ่านเบราว์เซอร์"
 ---
 
-> 📅 เขียนเมื่อ: สิงหาคม 2026 | Playwright 1.62, Bun 1.4
+> 📅 เขียนเมื่อ: สิงหาคม 2026 | Playwright 1.62, Node.js 20+
 > ⚠️ API/เวอร์ชันอาจเปลี่ยนแปลง — ตรวจสอบเอกสารล่าสุดก่อนใช้งาน
 >
 > 📚 ตอนที่ 6/8 ในซีรีส์ "TypeScript จากศูนย์ถึงเขียน Test"
@@ -16,16 +16,18 @@ description: "เขียน e2e test ด้วย Playwright — จำลอ�
 
 ## เตรียมโปรเจกต์และติดตั้ง
 
-สมมติเรามีโฟลเดอร์โปรเจกต์อยู่แล้ว (ถ้ายังไม่มี ใช้ `bun init` ตามตอนที่ 1) เริ่มจากติดตั้ง Playwright
+เช่นเดียวกับ tool ฝั่ง test อื่น ๆ Playwright ต้องรันบน **Node.js** (ไม่ใช่ Bun) ตรงนี้เราจึงเปลี่ยนมาใช้ `npm`/`npx` ต่อจากนี้
+
+สมมติเรามีโฟลเดอร์โปรเจกต์อยู่แล้ว (ถ้ายังไม่มี สร้างด้วย `npm init -y` ง่าย ๆ) เริ่มจากติดตั้ง Playwright
 
 ```bash
-bun add -d @playwright/test
+npm install -D @playwright/test
 ```
 
 จากนั้นโหลดเบราว์เซอร์ที่ใช้ทดสอบลงมา (Chrome, Firefox, WebKit) — รันครั้งเดียว
 
 ```bash
-bunx playwright install
+npx playwright install
 ```
 
 ## สร้างหน้าเว็บสำหรับทดสอบ
@@ -82,7 +84,7 @@ test("กดปุ่มแล้วตัวเลขเพิ่มขึ้�
 ## รัน test
 
 ```bash
-bunx playwright test
+npx playwright test
 ```
 
 จะเห็นผลประมาณนี้ — เบราว์เซอร์เปิดขึ้น (หัวแฝง) กดปุ่ม แล้วรายงานผล

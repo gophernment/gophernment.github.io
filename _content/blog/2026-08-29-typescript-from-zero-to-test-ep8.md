@@ -5,21 +5,21 @@ tags: [typescript, nextjs, testing]
 description: "เขียน unit test ใน Next.js ด้วย Vitest + React Testing Library — ปิดท้ายซีรีส์"
 ---
 
-> 📅 เขียนเมื่อ: สิงหาคม 2026 | Vitest 4, Next.js 16, Bun 1.4
+> 📅 เขียนเมื่อ: สิงหาคม 2026 | Vitest 4, Next.js 16, Node.js 20+
 > ⚠️ API/เวอร์ชันอาจเปลี่ยนแปลง — ตรวจสอบเอกสารล่าสุดก่อนใช้งาน
 >
 > 📚 ตอนที่ 8/8 ในซีรีส์ "TypeScript จากศูนย์ถึงเขียน Test"
 
 มาถึงตอนสุดท้ายแล้ว — เราจะเขียน **unit test** ให้กับโปรเจกต์ Next.js ที่ตั้งไว้ในตอนที่แล้ว นี่คือชิ้นสุดท้ายของภาพที่เราตั้งใจไว้ตั้งแต่ตอนแรก: เริ่มจากติดตั้ง TypeScript ไล่เรียน type มาทั้งหมด จนมาถึงการเขียน test ได้จริง
 
-สำหรับ unit test เราใช้ **Vitest** — test runner ที่เร็วมาก และทำงานกับ TypeScript ได้ตรง ๆ ไม่ต้องตั้งค่า compile แยก (เข้ากับไลฟ์สไตล์ Bun ที่เราใช้มาตลอดซีรีส์)
+สำหรับ unit test เราใช้ **Vitest** — test runner ที่เร็วมาก และทำงานกับ TypeScript ได้ตรง ๆ ไม่ต้องตั้งค่า compile แยก (Vitest ต้องรันบน Node.js เช่นเดียวกับ Next.js ในตอนที่แล้ว ตรงนี้เราจึงใช้ `npm` ต่อ)
 
 ## ติดตั้ง
 
 เข้าไปในโปรเจกต์ Next.js (จากตอนที่แล้ว) แล้วติดตั้ง Vitest พร้อมเครื่องมือทดสอบ React component
 
 ```bash
-bun add -d vitest jsdom @testing-library/react @testing-library/jest-dom @testing-library/user-event
+npm install -D vitest jsdom @testing-library/react @testing-library/jest-dom @testing-library/user-event
 ```
 
 แต่ละตัวทำหน้าที่:
@@ -139,13 +139,13 @@ test("กดปุ่มแล้วตัวนับเพิ่มขึ้�
 ## รัน test
 
 ```bash
-bun test
+npm test
 ```
 
 หรือ
 
 ```bash
-bunx vitest
+npx vitest
 ```
 
 จะเห็นผลประมาณนี้
