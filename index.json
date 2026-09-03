@@ -13,15 +13,16 @@
   },
   {
     "slug": "2026-09-03-api-acceptance-test",
-    "title": "มี repo API อยู่แล้ว จะเขียน acceptance test แทน Postman/Newman ยังไง — ครบตั้งแต่ติดตั้งจนถึง CI",
+    "title": "API ที่เขียนด้วย Go หรือ Java ก็เขียน acceptance test เป็นโค้ดได้ด้วย Playwright request fixture — ครบตั้งแต่ติดตั้งจนถึง CI",
     "date": "2026-09-03",
     "tags": [
       "api",
       "testing",
-      "vitest",
-      "supertest"
+      "playwright",
+      "go",
+      "java"
     ],
-    "description": "สอนเขียน API acceptance test แทน Postman/Newman ด้วย Vitest + Supertest ตั้งแต่ติดตั้ง แยก app ออกจาก listen เขียน test แรก ไปจนถึงรันบน CI"
+    "description": "สอนเขียน API acceptance test แทน Postman/Newman ด้วย Playwright request fixture เหมาะกับ API ที่เขียนด้วย Go/Java ตั้งแต่ติดตั้ง config เขียน test แรก ไปจนถึง CI"
   },
   {
     "slug": "2026-08-29-typescript-from-zero-to-test-ep8",
