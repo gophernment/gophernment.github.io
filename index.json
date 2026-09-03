@@ -12,6 +12,18 @@
     "description": "สอนทีละขั้นตอนว่าถ้ามี repo Frontend อยู่แล้ว จะเริ่มเขียน Playwright test ได้ยังไง ตั้งแต่ตรวจ Node version ติดตั้ง เขียน config เขียน test แรก ไปจนถึงรันบน GitHub Actions"
   },
   {
+    "slug": "2026-09-03-api-acceptance-test",
+    "title": "มี repo API อยู่แล้ว จะเขียน acceptance test แทน Postman/Newman ยังไง — ครบตั้งแต่ติดตั้งจนถึง CI",
+    "date": "2026-09-03",
+    "tags": [
+      "api",
+      "testing",
+      "vitest",
+      "supertest"
+    ],
+    "description": "สอนเขียน API acceptance test แทน Postman/Newman ด้วย Vitest + Supertest ตั้งแต่ติดตั้ง แยก app ออกจาก listen เขียน test แรก ไปจนถึงรันบน CI"
+  },
+  {
     "slug": "2026-08-29-typescript-from-zero-to-test-ep8",
     "title": "TypeScript จากศูนย์ถึงเขียน Test — ตอนที่ 8: เขียน unit test ใน Next.js ด้วย Vitest",
     "date": "2026-08-29",
