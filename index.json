@@ -1,5 +1,17 @@
 [
   {
+    "slug": "2026-09-03-playwright-frontend-setup",
+    "title": "มี repo Frontend อยู่แล้ว จะเริ่มเขียน Playwright test ยังไง — ไล่ขั้นตอนให้ครบจนถึง CI",
+    "date": "2026-09-03",
+    "tags": [
+      "playwright",
+      "testing",
+      "e2e",
+      "frontend"
+    ],
+    "description": "สอนทีละขั้นตอนว่าถ้ามี repo Frontend อยู่แล้ว จะเริ่มเขียน Playwright test ได้ยังไง ตั้งแต่ตรวจ Node version ติดตั้ง เขียน config เขียน test แรก ไปจนถึงรันบน GitHub Actions"
+  },
+  {
     "slug": "2026-08-29-typescript-from-zero-to-test-ep8",
     "title": "TypeScript จากศูนย์ถึงเขียน Test — ตอนที่ 8: เขียน unit test ใน Next.js ด้วย Vitest",
     "date": "2026-08-29",
