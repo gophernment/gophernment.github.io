@@ -1,5 +1,18 @@
 [
   {
+    "slug": "2026-09-05-cs-fundamentals-02-setup-go",
+    "title": "ตั้งเครื่องมือให้พร้อม — ติดตั้ง Go, Editor, Terminal แล้วรันโค้ดแรกด้วยมือคุณเอง (ตอนที่ 02)",
+    "date": "2026-09-05",
+    "tags": [
+      "cs-fundamentals",
+      "computer-science",
+      "go",
+      "setup",
+      "tooling"
+    ],
+    "description": "ตอนที่ 02 ของซีรีส์ CS Fundamentals: ตั้งเครื่องมือให้พร้อม — ติดตั้ง Go บน Windows/macOS/Linux, รู้จัก editor กับ VS Code, เรียนรู้คำสั่ง terminal พื้นฐาน แล้วรัน hello world แรกด้วย go run และ go build พร้อมวิธีเรียนแบบสร้าง→พัง→อ่าน→สร้างใหม่"
+  },
+  {
     "slug": "2026-09-05-cs-fundamentals-01-why-foundations",
     "title": "ทำไมต้องรู้ \\\"พื้นฐานที่แท้จริง\\\" — ปฐมนิเทศคอร์ส CS Fundamentals (ตอนที่ 01)",
     "date": "2026-09-05",
