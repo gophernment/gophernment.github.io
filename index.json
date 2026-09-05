@@ -1,5 +1,17 @@
 [
   {
+    "slug": "2026-09-05-cs-fundamentals-01-why-foundations",
+    "title": "ทำไมต้องรู้ \\\"พื้นฐานที่แท้จริง\\\" — ปฐมนิเทศคอร์ส CS Fundamentals (ตอนที่ 01)",
+    "date": "2026-09-05",
+    "tags": [
+      "cs-fundamentals",
+      "computer-science",
+      "go",
+      "programming"
+    ],
+    "description": "ตอนปฐมนิเทศคอร์ส CS Fundamentals: ทำไมต้องรู้พื้นฐานที่แท้จริง ต่างจากเขียนเว็บได้ยังไง พร้อมเรื่องจริงของคนสร้าง Unix, Go, Linux, Git และภาพตึก 5 ชั้นของซอฟต์แวร์"
+  },
+  {
     "slug": "2026-09-03-playwright-frontend-setup",
     "title": "มี repo Frontend อยู่แล้ว จะเริ่มเขียน Playwright test ยังไง — ไล่ขั้นตอนให้ครบจนถึง CI",
     "date": "2026-09-03",
