@@ -1,5 +1,19 @@
 [
   {
+    "slug": "2026-09-06-cs-fundamentals-03-hello-world-variables-types",
+    "title": "แกะโค้ดทีละคำ — hello world, ตัวแปร และชนิดข้อมูลพื้นฐาน (ตอนที่ 03)",
+    "date": "2026-09-06",
+    "tags": [
+      "cs-fundamentals",
+      "computer-science",
+      "go",
+      "variables",
+      "types",
+      "basics"
+    ],
+    "description": "ตอนที่ 03 ของซีรีส์ CS Fundamentals: แกะโค้ด hello world ทีละบรรทัด (package/import/func main), ประกาศตัวแปรด้วย var กับ :=, รู้จักชนิดข้อมูล int/float64/string/bool พร้อมกับดักยอดฮิตของมือใหม่ แล้วลงมือเขียนโปรแกรม MyProfile คำนวณ BMI จริง"
+  },
+  {
     "slug": "2026-09-05-cs-fundamentals-02-setup-go",
     "title": "ตั้งเครื่องมือให้พร้อม — ติดตั้ง Go, Editor, Terminal แล้วรันโค้ดแรกด้วยมือคุณเอง (ตอนที่ 02)",
     "date": "2026-09-05",
