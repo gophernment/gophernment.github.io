@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 330" width="820" height="330" role="img" aria-label="เปรียบเทียบ go run กับ go build">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#57606a"/>
+    </marker>
+  </defs>
+  <style>
+    text { font-family: "Noto Sans Thai", -apple-system, "Segoe UI", sans-serif; font-size: 13px; fill: #1a1a1a; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 12.5px; }
+    .box { fill: #ffffff; stroke: #0969da; stroke-width: 1.5; }
+    .muted { fill: #6b7280; }
+  </style>
+
+  <!-- Left column: go run -->
+  <rect class="box" x="20" y="16" width="360" height="44" rx="8"/>
+  <text x="200" y="43" text-anchor="middle"><tspan class="mono">go run main.go</tspan></text>
+  <line x1="200" y1="60" x2="200" y2="94" stroke="#57606a" stroke-width="1.5" marker-end="url(#arr)"/>
+  <rect class="box" x="20" y="98" width="360" height="52" rx="8"/>
+  <text x="200" y="120" text-anchor="middle">แปลงโค้ดเป็นภาษาเครื่อง</text>
+  <text x="200" y="138" text-anchor="middle" class="muted"><tspan class="mono">(compile)</tspan></text>
+  <line x1="200" y1="150" x2="200" y2="184" stroke="#57606a" stroke-width="1.5" marker-end="url(#arr)"/>
+  <rect class="box" x="20" y="188" width="360" height="52" rx="8"/>
+  <text x="200" y="210" text-anchor="middle">รันเลย แล้วไม่เก็บไฟล์ภาษาเครื่องชั่วคราวไว้</text>
+  <text x="200" y="228" text-anchor="middle" class="muted">(ไฟล์ภาษาเครื่องชั่วคราว)</text>
+
+  <!-- Right column: go build -->
+  <rect class="box" x="440" y="16" width="360" height="44" rx="8"/>
+  <text x="620" y="43" text-anchor="middle"><tspan class="mono">go build -o hello main.go</tspan></text>
+  <line x1="620" y1="60" x2="620" y2="94" stroke="#57606a" stroke-width="1.5" marker-end="url(#arr)"/>
+  <rect class="box" x="440" y="98" width="360" height="52" rx="8"/>
+  <text x="620" y="120" text-anchor="middle">แปลงโค้ดเป็นภาษาเครื่อง</text>
+  <text x="620" y="138" text-anchor="middle" class="muted"><tspan class="mono">(compile)</tspan></text>
+  <line x1="620" y1="150" x2="620" y2="184" stroke="#57606a" stroke-width="1.5" marker-end="url(#arr)"/>
+  <rect class="box" x="440" y="188" width="360" height="52" rx="8"/>
+  <text x="620" y="210" text-anchor="middle">เขียนผลลัพธ์เป็นไฟล์โปรแกรม</text>
+  <text x="620" y="228" text-anchor="middle" class="muted">ลงดิสก์: <tspan class="mono">executable</tspan>/binary</text>
+  <line x1="620" y1="240" x2="620" y2="274" stroke="#57606a" stroke-width="1.5" marker-end="url(#arr)"/>
+  <rect class="box" x="440" y="278" width="360" height="44" rx="8"/>
+  <text x="620" y="305" text-anchor="middle">รันเมื่อไรก็ได้: <tspan class="mono">./hello</tspan></text>
+</svg>

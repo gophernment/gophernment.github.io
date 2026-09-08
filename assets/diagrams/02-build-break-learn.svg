@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 450" width="760" height="450" role="img" aria-label="วงจรวิธีเรียน: สร้าง พัง อ่าน แก้ไข แล้ววนกลับไปสร้างใหม่">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#57606a"/>
+    </marker>
+  </defs>
+  <style>
+    text { font-family: "Noto Sans Thai", -apple-system, "Segoe UI", sans-serif; font-size: 14px; fill: #1a1a1a; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 13px; }
+    .box { fill: #ffffff; stroke: #0969da; stroke-width: 1.5; }
+    .diamond { fill: #fff8e5; stroke: #9a6700; stroke-width: 1.5; }
+    .lbl { fill: #57606a; font-size: 12px; }
+    .loop { stroke: #0969da; stroke-width: 1.5; stroke-dasharray: 5 4; fill: none; }
+  </style>
+
+  <rect class="box" x="180" y="16" width="360" height="50" rx="8"/>
+  <text x="360" y="46" text-anchor="middle" font-weight="700">สร้าง — เขียนโค้ดจากที่เรียนมา ลองเดาได้</text>
+
+  <line x1="360" y1="66" x2="360" y2="98" stroke="#57606a" stroke-width="1.5" marker-end="url(#arr)"/>
+  <rect class="box" x="260" y="100" width="200" height="44" rx="8"/>
+  <text x="360" y="127" text-anchor="middle">รัน (<tspan class="mono">go run</tspan>)</text>
+
+  <line x1="360" y1="144" x2="360" y2="174" stroke="#57606a" stroke-width="1.5"/>
+  <polygon class="diamond" points="360,178 435,214 360,250 285,214"/>
+  <text x="360" y="218" text-anchor="middle" font-weight="700">พังไหม?</text>
+
+  <!-- branch: ไม่ (right) -->
+  <line x1="435" y1="214" x2="558" y2="214" stroke="#57606a" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text class="lbl" x="480" y="205">ไม่</text>
+  <rect class="box" x="560" y="189" width="150" height="50" rx="8"/>
+  <text x="635" y="210" text-anchor="middle">ได้ผลตามคาด</text>
+  <text x="635" y="227" text-anchor="middle">→ ลองโจทย์ใหม่</text>
+
+  <!-- branch: ใช่ (down) -->
+  <line x1="360" y1="250" x2="360" y2="298" stroke="#57606a" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text class="lbl" x="372" y="278">ใช่</text>
+  <rect class="box" x="180" y="300" width="360" height="50" rx="8"/>
+  <text x="360" y="330" text-anchor="middle">อ่าน error ให้ละเอียด (มันบอกที่อยู่กับสาเหตุ)</text>
+
+  <line x1="360" y1="350" x2="360" y2="384" stroke="#57606a" stroke-width="1.5" marker-end="url(#arr)"/>
+  <rect class="box" x="180" y="386" width="360" height="50" rx="8"/>
+  <text x="360" y="416" text-anchor="middle">แก้ไข แล้วกลับไป <tspan class="mono">&quot;สร้าง&quot;</tspan> ใหม่</text>
+
+  <!-- loop back: right branch -> top -->
+  <path class="loop" d="M 635 189 L 635 41 L 545 41" marker-end="url(#arr)"/>
+  <!-- loop back: left (แก้ไข) -> top -->
+  <path class="loop" d="M 180 411 L 70 411 L 70 41 L 175 41" marker-end="url(#arr)"/>
+</svg>

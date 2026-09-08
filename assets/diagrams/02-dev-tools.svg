@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 250" width="760" height="250" role="img" aria-label="เครื่องมือ 3 อย่างที่ dev ใช้: terminal, editor, compiler/toolchain">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#57606a"/>
+    </marker>
+  </defs>
+  <style>
+    text { font-family: "Noto Sans Thai", -apple-system, "Segoe UI", sans-serif; font-size: 14px; fill: #1a1a1a; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 13px; font-weight: 700; }
+    .box { fill: #ffffff; stroke: #0969da; stroke-width: 1.5; }
+    .muted { fill: #6b7280; font-size: 12px; }
+  </style>
+
+  <rect class="box" x="270" y="16" width="220" height="44" rx="8"/>
+  <text x="380" y="43" text-anchor="middle" font-weight="700">คุณ (คนสั่งงาน)</text>
+
+  <line x1="380" y1="60" x2="380" y2="100" stroke="#57606a" stroke-width="1.5"/>
+  <line x1="150" y1="100" x2="610" y2="100" stroke="#57606a" stroke-width="1.5"/>
+
+  <line x1="150" y1="100" x2="150" y2="136" stroke="#57606a" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="380" y1="100" x2="380" y2="136" stroke="#57606a" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="610" y1="100" x2="610" y2="136" stroke="#57606a" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <rect class="box" x="50" y="140" width="200" height="84" rx="8"/>
+  <text x="150" y="166" text-anchor="middle"><tspan class="mono">terminal</tspan></text>
+  <text x="150" y="188" text-anchor="middle">พิมพ์คำสั่ง</text>
+  <text x="150" y="208" text-anchor="middle" class="muted"><tspan class="mono">go run</tspan> เป็นต้น</text>
+
+  <rect class="box" x="280" y="140" width="200" height="84" rx="8"/>
+  <text x="380" y="166" text-anchor="middle"><tspan class="mono">editor</tspan>/IDE</text>
+  <text x="380" y="188" text-anchor="middle">เขียน/แก้โค้ด</text>
+  <text x="380" y="208" text-anchor="middle" class="muted">เป็นไฟล์ <tspan class="mono">.go</tspan></text>
+
+  <rect class="box" x="510" y="140" width="200" height="84" rx="8"/>
+  <text x="610" y="166" text-anchor="middle"><tspan class="mono">compiler</tspan>/toolchain</text>
+  <text x="610" y="188" text-anchor="middle">แปลภาษาให้เครื่อง</text>
+  <text x="610" y="208" text-anchor="middle" class="muted">ทำงานได้ (Go)</text>
+</svg>

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 456" width="720" height="456" role="img" aria-label="เส้นทางของ input จากคีย์บอร์ดจนถึงโค้ด Go">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#57606a"/>
+    </marker>
+  </defs>
+  <style>
+    text { font-family: "Noto Sans Thai", -apple-system, "Segoe UI", sans-serif; font-size: 13px; fill: #1a1a1a; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 12.5px; }
+    .box { fill: #ffffff; stroke: #0969da; stroke-width: 1.5; }
+    .muted { fill: #6b7280; font-size: 12px; }
+  </style>
+
+  <rect class="box" x="140" y="16" width="440" height="44" rx="8"/>
+  <text x="360" y="43" text-anchor="middle" font-weight="700">ผู้ใช้พิมพ์ที่คีย์บอร์ด</text>
+  <line x1="360" y1="60" x2="360" y2="92" stroke="#57606a" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <rect class="box" x="140" y="92" width="440" height="56" rx="8"/>
+  <text x="360" y="116" text-anchor="middle">OS = โอเอส = operating system = ระบบปฏิบัติการ</text>
+  <text x="360" y="136" text-anchor="middle" class="muted">(ตัวกลาง: รับแรงกดแป้นพิมพ์ ส่งต่อให้โปรแกรม)</text>
+  <line x1="360" y1="148" x2="360" y2="180" stroke="#57606a" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <rect class="box" x="140" y="180" width="440" height="80" rx="8"/>
+  <text x="360" y="204" text-anchor="middle">ช่องรับข้อมูลมาตรฐานของโปรแกรม</text>
+  <text x="360" y="224" text-anchor="middle" class="muted">(เรียกสั้น ๆ ว่า <tspan class="mono">stdin</tspan> — อ่านว่า เอส-ทิน ย่อจาก standard input)</text>
+  <text x="360" y="244" text-anchor="middle" class="muted">ทุกโปรแกรมที่รันใน terminal มีช่องนี้ให้ฟรี</text>
+  <line x1="360" y1="260" x2="360" y2="292" stroke="#57606a" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <rect class="box" x="140" y="292" width="440" height="56" rx="8"/>
+  <text x="360" y="316" text-anchor="middle">โค้ด Go ของเราอ่านจากช่องนี้</text>
+  <text x="360" y="336" text-anchor="middle" class="muted">ด้วย <tspan class="mono">fmt.Scanln</tspan> หรือ <tspan class="mono">bufio</tspan> (จะเรียนด้านล่าง)</text>
+  <line x1="360" y1="348" x2="360" y2="380" stroke="#57606a" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <rect class="box" x="140" y="380" width="440" height="60" rx="8"/>
+  <text x="360" y="404" text-anchor="middle">ข้อมูลที่ได้เป็น <tspan class="mono">&quot;ข้อความ&quot;</tspan> (string) เสมอ</text>
+  <text x="360" y="426" text-anchor="middle" class="muted">→ ถ้าต้องการตัวเลข ต้องแปลงด้วย <tspan class="mono">strconv.Atoi</tspan></text>
+</svg>

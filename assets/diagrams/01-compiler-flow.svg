@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 340" width="660" height="340" role="img" aria-label="ลำดับการทำงานของ go run ตั้งแต่ source code จนถึง CPU">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#57606a"/>
+    </marker>
+  </defs>
+  <style>
+    text { font-family: "Noto Sans Thai", -apple-system, "Segoe UI", sans-serif; font-size: 14px; fill: #1a1a1a; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 13px; }
+    .box { fill: #ffffff; stroke: #0969da; stroke-width: 1.5; }
+    .lbl { fill: #57606a; font-size: 13px; }
+  </style>
+
+  <rect class="box" x="40" y="16" width="440" height="50" rx="8"/>
+  <text x="260" y="46" text-anchor="middle"><tspan class="mono">main.go</tspan> (source code ที่มนุษย์เขียน)</text>
+
+  <line x1="260" y1="66" x2="260" y2="146" stroke="#57606a" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text class="lbl" x="276" y="110"><tspan class="mono">compiler</tspan> ของ Go แปลภาษา</text>
+
+  <rect class="box" x="40" y="150" width="440" height="50" rx="8"/>
+  <text x="260" y="180" text-anchor="middle">ภาษาเครื่อง (<tspan class="mono">machine code</tspan> ที่ CPU อ่านได้)</text>
+
+  <line x1="260" y1="200" x2="260" y2="280" stroke="#57606a" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text class="lbl" x="276" y="244">OS ช่วยโหลดโปรแกรมเข้าไปทำงาน</text>
+
+  <rect class="box" x="40" y="284" width="440" height="50" rx="8"/>
+  <text x="260" y="314" text-anchor="middle">CPU ทำงานตามคำสั่ง → พิมพ์ <tspan class="mono">&quot;สวัสดี ชาวโลก!&quot;</tspan></text>
+</svg>

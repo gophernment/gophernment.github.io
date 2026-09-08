@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" width="640" height="420" role="img" aria-label="ผังงาน for loop: init, condition, body, post แล้ววนกลับไปเช็คเงื่อนไขใหม่">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#57606a"/>
+    </marker>
+  </defs>
+  <style>
+    text { font-family: "Noto Sans Thai", -apple-system, "Segoe UI", sans-serif; font-size: 13px; fill: #1a1a1a; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 12.5px; }
+    .box { fill: #ffffff; stroke: #0969da; stroke-width: 1.5; }
+    .diamond { fill: #fff8e5; stroke: #9a6700; stroke-width: 1.5; }
+    .lbl { fill: #57606a; font-size: 12px; }
+    .loop { stroke: #0969da; stroke-width: 1.5; stroke-dasharray: 5 4; fill: none; }
+  </style>
+
+  <rect class="box" x="150" y="16" width="260" height="36" rx="8"/>
+  <text x="280" y="39" text-anchor="middle"><tspan class="mono">for i := 1; i &lt;= 5; i++ {</tspan></text>
+  <line x1="280" y1="52" x2="280" y2="76" stroke="#57606a" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <rect class="box" x="160" y="78" width="240" height="40" rx="8"/>
+  <text x="280" y="103" text-anchor="middle">① init: <tspan class="mono">i := 1</tspan> (รันครั้งเดียว)</text>
+  <line x1="280" y1="118" x2="280" y2="142" stroke="#57606a" stroke-width="1.5"/>
+
+  <polygon class="diamond" points="280,144 368,184 280,224 192,184"/>
+  <text x="280" y="189" text-anchor="middle" font-weight="700" font-size="12.5">② condition: i &lt;= 5 ?</text>
+
+  <line x1="368" y1="184" x2="394" y2="184" stroke="#57606a" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text class="lbl" x="376" y="176">เท็จ</text>
+  <rect class="box" x="396" y="164" width="224" height="40" rx="8"/>
+  <text x="508" y="189" text-anchor="middle">จบ loop → ไปรันโค้ดบรรทัดถัดไป</text>
+
+  <line x1="280" y1="224" x2="280" y2="252" stroke="#57606a" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text class="lbl" x="292" y="240">จริง</text>
+
+  <rect class="box" x="160" y="254" width="240" height="52" rx="8"/>
+  <text x="280" y="276" text-anchor="middle">③ รันโค้ดในปีกกา</text>
+  <text x="280" y="294" text-anchor="middle"><tspan class="mono">fmt.Println(i)</tspan></text>
+  <line x1="280" y1="306" x2="280" y2="330" stroke="#57606a" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <rect class="box" x="160" y="332" width="240" height="40" rx="8"/>
+  <text x="280" y="357" text-anchor="middle">④ post: <tspan class="mono">i++</tspan> (i เพิ่มขึ้นทีละ 1)</text>
+
+  <path class="loop" d="M 160 352 L 70 352 L 70 184 L 188 184" marker-end="url(#arr)"/>
+  <text class="lbl" x="70" y="382" text-anchor="middle">↺ กลับไป ② เช็ค condition ใหม่</text>
+</svg>

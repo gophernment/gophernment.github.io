@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340" width="800" height="340" role="img" aria-label="เปรียบเทียบโปรแกรมเส้นตรง กับโปรแกรมที่มีทางแยก if/else และ loop">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#57606a"/>
+    </marker>
+  </defs>
+  <style>
+    text { font-family: "Noto Sans Thai", -apple-system, "Segoe UI", sans-serif; font-size: 13px; fill: #1a1a1a; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 12.5px; }
+    .box { fill: #ffffff; stroke: #0969da; stroke-width: 1.5; }
+    .diamond { fill: #fff8e5; stroke: #9a6700; stroke-width: 1.5; }
+    .lbl { fill: #57606a; font-size: 12px; }
+    .hdr { font-weight: 700; font-size: 14px; }
+    .note { fill: #ffffff; stroke: #0969da; stroke-width: 1; stroke-dasharray: 5 4; }
+  </style>
+
+  <!-- LEFT: linear -->
+  <text class="hdr" x="185" y="22" text-anchor="middle">โปรแกรมแบบตอน 03 (เส้นตรง)</text>
+  <rect class="box" x="115" y="40" width="140" height="36" rx="8"/>
+  <text x="185" y="62" text-anchor="middle">เริ่มต้น</text>
+  <line x1="185" y1="76" x2="185" y2="94" stroke="#57606a" stroke-width="1.5" marker-end="url(#arr)"/>
+  <rect class="box" x="115" y="96" width="140" height="36" rx="8"/>
+  <text x="185" y="118" text-anchor="middle">พิมพ์ <tspan class="mono">&quot;สวัสดี&quot;</tspan></text>
+  <line x1="185" y1="132" x2="185" y2="150" stroke="#57606a" stroke-width="1.5" marker-end="url(#arr)"/>
+  <rect class="box" x="115" y="152" width="140" height="36" rx="8"/>
+  <text x="185" y="174" text-anchor="middle">คำนวณ BMI</text>
+  <line x1="185" y1="188" x2="185" y2="206" stroke="#57606a" stroke-width="1.5" marker-end="url(#arr)"/>
+  <rect class="box" x="115" y="208" width="140" height="36" rx="8"/>
+  <text x="185" y="230" text-anchor="middle">จบโปรแกรม</text>
+
+  <rect class="note" x="60" y="252" width="330" height="70" rx="8"/>
+  <text x="225" y="276" text-anchor="middle" class="lbl">ถ้าอยากพิมพ์ 100 บรรทัด โดยไม่ต้องเขียนซ้ำ →</text>
+  <text x="225" y="296" text-anchor="middle" class="lbl">ลูกศรวนกลับขึ้นไปด้านบน แล้วทำใหม่ = loop</text>
+
+  <!-- RIGHT: branch -->
+  <text class="hdr" x="600" y="22" text-anchor="middle">โปรแกรมแบบตอนนี้ (มีทางแยก)</text>
+  <rect class="box" x="525" y="40" width="150" height="36" rx="8"/>
+  <text x="600" y="62" text-anchor="middle">เริ่มต้น</text>
+  <line x1="600" y1="76" x2="600" y2="98" stroke="#57606a" stroke-width="1.5"/>
+  <polygon class="diamond" points="600,102 680,132 600,162 520,132"/>
+  <text x="600" y="136" text-anchor="middle">อายุ &gt;= 18 ?</text>
+
+  <line x1="525" y1="146" x2="495" y2="186" stroke="#57606a" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text class="lbl" x="505" y="166">ใช่</text>
+  <line x1="675" y1="146" x2="705" y2="186" stroke="#57606a" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text class="lbl" x="695" y="166">ไม่ใช่</text>
+
+  <rect class="box" x="410" y="190" width="150" height="36" rx="8"/>
+  <text x="485" y="212" text-anchor="middle">พิมพ์ <tspan class="mono">&quot;ผู้ใหญ่&quot;</tspan></text>
+  <rect class="box" x="640" y="190" width="150" height="36" rx="8"/>
+  <text x="715" y="212" text-anchor="middle">พิมพ์ <tspan class="mono">&quot;เยาวชน&quot;</tspan></text>
+
+  <path d="M 485 226 L 485 248 L 600 248" stroke="#57606a" stroke-width="1.5" fill="none"/>
+  <path d="M 715 226 L 715 248 L 600 248" stroke="#57606a" stroke-width="1.5" fill="none"/>
+  <line x1="600" y1="248" x2="600" y2="268" stroke="#57606a" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <rect class="box" x="450" y="270" width="300" height="40" rx="8"/>
+  <text x="600" y="294" text-anchor="middle">คำสั่งถัดไป (ทั้งสองทางมารวมกันที่นี่)</text>
+</svg>

@@ -43,7 +43,9 @@ function parseFrontmatter(text) {
         .map((s) => s.trim())
         .filter(Boolean);
     } else {
-      val = val.replace(/^"(.*)"$/, "$1");
+      val = val
+        .replace(/^"(.*)"$/, "$1")
+        .replace(/\\(["\\])/g, "$1");
     }
     meta[key] = val;
   }
