@@ -1,5 +1,21 @@
 [
   {
+    "slug": "2026-09-08-cs-fundamentals-05-functions-decomposition",
+    "title": "แบ่งงานใหญ่เป็นชิ้นเล็ก — ฟังก์ชัน (function), การแยกส่วน และขอบเขตของตัวแปร (ตอนที่ 05)",
+    "date": "2026-09-08",
+    "tags": [
+      "cs-fundamentals",
+      "computer-science",
+      "go",
+      "functions",
+      "scope",
+      "decomposition",
+      "refactoring",
+      "basics"
+    ],
+    "description": "ตอนที่ 05 ของซีรีส์ CS Fundamentals: เรียนรู้ฟังก์ชัน (function) — กล่องคำสั่งมีชื่อที่ใช้แบ่งปัญหาใหญ่เป็นชิ้นเล็ก (decomposition), ความต่างระหว่าง parameter กับ argument, การคืนค่าหลายค่า (multiple return values) และขอบเขตของตัวแปร (scope) พร้อม refactor โปรแกรม BMI ตอน 04 ให้เป็นฟังก์ชันจริง"
+  },
+  {
     "slug": "2026-09-07-cs-fundamentals-04-conditions-loops-input",
     "title": "ทำให้โปรแกรมคิดเองได้ — if/else, for loop และการรับ input (ตอนที่ 04)",
     "date": "2026-09-07",
