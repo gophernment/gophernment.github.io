@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 470" width="800" height="470" role="img" aria-label="ขอบเขตของตัวแปร (scope): ตัวแปรที่ประกาศในปีกกาชั้นไหน ใช้ได้แค่ในปีกกาชั้นนั้นกับปีกกาลูกของมัน">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#57606a"/>
+    </marker>
+  </defs>
+  <style>
+    text { font-family: "Noto Sans Thai", -apple-system, "Segoe UI", sans-serif; font-size: 13px; fill: #1a1a1a; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 12px; }
+    .lbl { fill: #57606a; font-size: 12px; }
+    .hdr { font-weight: 700; font-size: 14px; }
+    .outer { fill: #ffffff; stroke: #0969da; stroke-width: 2; }
+    .inner { fill: #f6f8fa; stroke: #0969da; stroke-width: 1.5; stroke-dasharray: 5 4; }
+    .chip { fill: #ddf4ff; stroke: #0969da; stroke-width: 1.2; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 12px; fill: #0969da; }
+    .bad { fill: #ffebe9; stroke: #cf222e; stroke-width: 1.2; }
+    .badmono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 12px; fill: #cf222e; }
+  </style>
+
+  <text class="hdr" x="400" y="26" text-anchor="middle">ตัวแปรที่ประกาศในปีกกาชั้นไหน — ใช้ได้แค่ "ในปีกกาชั้นนั้นและปีกกาลูก" เท่านั้น</text>
+
+  <!-- OUTER: func main -->
+  <rect class="outer" x="50" y="50" width="560" height="356" rx="14"/>
+  <text x="72" y="82" class="mono">func main() {</text>
+
+  <!-- chip: total (main scope) -->
+  <rect class="chip" x="80" y="100" width="160" height="32" rx="16"/>
+  <text x="160" y="121" text-anchor="middle" class="mono">total := 0</text>
+  <text x="260" y="120" class="lbl">total เห็นได้ทั้ง func main — รวมทุกปีกกาข้างใน</text>
+
+  <!-- inner: for -->
+  <rect class="inner" x="80" y="150" width="480" height="76" rx="10"/>
+  <text x="100" y="175" class="mono">for i := 1; i &lt;= 10; i++ {</text>
+  <rect class="chip" x="120" y="184" width="70" height="30" rx="15"/>
+  <text x="155" y="204" text-anchor="middle" class="mono">i</text>
+  <text class="lbl" x="205" y="202">i เกิดในหัว for → ใช้ได้แค่ในปีกกา for นี้</text>
+  <text class="lbl" x="205" y="216">(total มองเห็นได้ เพราะประกาศชั้นนอก)</text>
+
+  <!-- inner: if -->
+  <rect class="inner" x="80" y="250" width="480" height="128" rx="10"/>
+  <text x="100" y="275" class="mono">if total &gt; 50 {</text>
+  <rect class="chip" x="120" y="290" width="160" height="30" rx="15"/>
+  <text x="200" y="310" text-anchor="middle" class="mono">verdict := "เยอะมาก"</text>
+  <text x="230" y="306" class="lbl">verdict เกิดในปีกกา if → ใช้ได้แค่ในนี้</text>
+  <text x="230" y="322" class="lbl">กับปีกกาลูกที่ซ้อนข้างในเท่านั้น</text>
+  <text x="230" y="344" class="lbl">total ยังมองเห็นได้ในนี้</text>
+  <text x="230" y="360" class="lbl">(ปีกกาลูกมองเห็นตัวแปรของปีกกาแม่)</text>
+
+  <text x="72" y="396" class="mono">}   // จบ func main</text>
+
+  <!-- bad: outside usage -->
+  <rect class="bad" x="650" y="100" width="120" height="32" rx="16"/>
+  <text x="710" y="121" text-anchor="middle" class="badmono">verdict</text>
+  <line x1="650" y1="116" x2="570" y2="300" stroke="#cf222e" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <text x="660" y="160" class="lbl">เอา verdict มาใช้</text>
+  <text x="660" y="178" class="lbl">ข้างนอกปีกกา if</text>
+  <text x="660" y="196" class="lbl">→ compile error:</text>
+  <text x="660" y="214" class="badmono" font-size="11px">undefined: verdict</text>
+
+  <!-- bottom summary -->
+  <text x="400" y="448" text-anchor="middle" class="lbl">ข้อความนี้สำคัญที่สุดของตอน: ตัวแปร "รั่ว" ออกจากปีกกาไม่ได้ — ระหว่างฟังก์ชัน ข้อมูลเดินทางด้วย argument กับ return เท่านั้น</text>
+</svg>
