@@ -20,7 +20,7 @@
   <text x="400" y="59" text-anchor="middle">func main</text>
   <text x="400" y="75" text-anchor="middle" class="lbl">(ทุกอย่างรวมกัน 60+ บรรทัด)</text>
 
-  <text class="hdr" x="400" y="150" text-anchor="middle">แบ่งงานออกเป็นฟังก์ชันย่อย — แต่ละตัวรับผิดชอบชิ้นเดียว</text>
+  <text class="hdr" x="400" y="104" text-anchor="middle">แบ่งงานออกเป็นฟังก์ชันย่อย — แต่ละตัวรับผิดชอบชิ้นเดียว</text>
 
   <!-- CHILDREN -->
   <rect class="fnbox" x="40" y="168" width="170" height="52" rx="8"/>
@@ -40,7 +40,6 @@
   <text x="695" y="207" text-anchor="middle" class="mono">for + break</text>
 
   <!-- ARROWS -->
-  <line x1="400" y1="84" x2="400" y2="120" stroke="#57606a" stroke-width="1.5"/>
   <line x1="400" y1="120" x2="125" y2="166" stroke="#57606a" stroke-width="1.5" marker-end="url(#arr)"/>
   <line x1="400" y1="120" x2="315" y2="166" stroke="#57606a" stroke-width="1.5" marker-end="url(#arr)"/>
   <line x1="400" y1="120" x2="505" y2="166" stroke="#57606a" stroke-width="1.5" marker-end="url(#arr)"/>

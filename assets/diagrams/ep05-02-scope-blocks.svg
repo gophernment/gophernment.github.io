@@ -39,12 +39,12 @@
   <!-- inner: if -->
   <rect class="inner" x="80" y="250" width="480" height="128" rx="10"/>
   <text x="100" y="275" class="mono">if total &gt; 50 {</text>
-  <rect class="chip" x="120" y="290" width="160" height="30" rx="15"/>
-  <text x="200" y="310" text-anchor="middle" class="mono">verdict := "เยอะมาก"</text>
-  <text x="230" y="306" class="lbl">verdict เกิดในปีกกา if → ใช้ได้แค่ในนี้</text>
-  <text x="230" y="322" class="lbl">กับปีกกาลูกที่ซ้อนข้างในเท่านั้น</text>
-  <text x="230" y="344" class="lbl">total ยังมองเห็นได้ในนี้</text>
-  <text x="230" y="360" class="lbl">(ปีกกาลูกมองเห็นตัวแปรของปีกกาแม่)</text>
+  <rect class="chip" x="120" y="290" width="180" height="30" rx="15"/>
+  <text x="210" y="310" text-anchor="middle" class="mono">verdict := "เยอะมาก"</text>
+  <text x="320" y="306" class="lbl">verdict เกิดในปีกกา if → ใช้ได้แค่ในนี้</text>
+  <text x="320" y="322" class="lbl">กับปีกกาลูกที่ซ้อนข้างในเท่านั้น</text>
+  <text x="320" y="344" class="lbl">total ยังมองเห็นได้ในนี้</text>
+  <text x="320" y="360" class="lbl">(ปีกกาลูกมองเห็นตัวแปรของปีกกาแม่)</text>
 
   <text x="72" y="396" class="mono">}   // จบ func main</text>
 
