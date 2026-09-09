@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" width="800" height="560" role="img" aria-label="struct คือแบบพิมพ์ที่รวมช่อง (field) หลายช่องเป็นก้อนเดียว เหมือนแบบฟอร์ม 1 ใบ และซ้อน struct ใน struct ได้">
+  <defs>
+    <marker id="arrblue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0969da"/>
+    </marker>
+  </defs>
+  <style>
+    text { font-family: "Noto Sans Thai", -apple-system, "Segoe UI", sans-serif; font-size: 13px; fill: #1a1a1a; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 13px; fill: #0969da; }
+    .mono2 { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 13px; fill: #1a1a1a; }
+    .monored { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 13px; fill: #cf222e; font-weight: 700; }
+    .lbl { fill: #57606a; font-size: 12px; }
+    .lblred { fill: #cf222e; font-size: 12px; font-weight: 700; }
+    .hdr { font-weight: 700; font-size: 16px; }
+    .codebox { fill: #ffffff; stroke: #0969da; stroke-width: 1.5; stroke-dasharray: 5 4; }
+    .card { fill: #ffffff; stroke: #0969da; stroke-width: 1.5; }
+    .inner { fill: #fff8c5; stroke: #cf222e; stroke-width: 1.6; }
+  </style>
+
+  <text class="hdr" x="400" y="26" text-anchor="middle">struct: รวมช่อง (field) หลายช่องเป็น 1 ก้อน — เหมือนแบบฟอร์ม 1 ใบ</text>
+
+  <text class="lbl" x="40" y="54">แบบพิมพ์ (type) — บอกว่ามีช่องอะไรบ้าง</text>
+  <text class="lbl" x="480" y="54">ของจริง 1 ใบ (instance) = กรอกค่าแล้ว</text>
+
+  <!-- code: type -->
+  <rect class="codebox" x="40" y="68" width="320" height="124" rx="8"/>
+  <text class="mono" x="58" y="94">type Student struct {</text>
+  <text class="mono" x="89" y="118">Name  string</text>
+  <text class="mono" x="89" y="142">Score float64</text>
+  <text class="mono" x="58" y="166">}</text>
+
+  <!-- arrows field -> card -->
+  <line x1="362" y1="117" x2="476" y2="117" stroke="#0969da" stroke-width="1.5" marker-end="url(#arrblue)"/>
+  <line x1="362" y1="141" x2="476" y2="141" stroke="#0969da" stroke-width="1.5" marker-end="url(#arrblue)"/>
+
+  <!-- card -->
+  <rect class="card" x="480" y="68" width="280" height="208" rx="12"/>
+  <text class="mono2" x="496" y="92">s1 := Student{Name: "สมชาย",</text>
+  <text class="mono2" x="540" y="108">Score: 85.5}</text>
+  <line x1="496" y1="118" x2="744" y2="118" stroke="#d0d7de" stroke-width="1"/>
+  <text class="mono2" x="496" y="144">s1.Name  = "สมชาย"</text>
+  <text class="mono2" x="496" y="168">s1.Score = 85.5</text>
+  <text class="lbl" x="496" y="200">เข้าถึง / แก้ทีละช่องด้วยจุด (.)</text>
+  <line x1="496" y1="216" x2="744" y2="216" stroke="#d0d7de" stroke-width="1"/>
+  <text class="lbl" x="496" y="238">field ที่ไม่กรอกตอนสร้าง → ได้</text>
+  <text class="lbl" x="496" y="254">zero value ของชนิดนั้นเอง</text>
+
+  <line x1="40" y1="300" x2="760" y2="300" stroke="#d0d7de" stroke-width="1.4" stroke-dasharray="5 4"/>
+
+  <text class="lbl" x="40" y="324">nested struct: field หนึ่งเป็น struct อีกตัวซ้อนข้างใน (แดง = field Address)</text>
+
+  <!-- code 2 -->
+  <rect class="codebox" x="40" y="340" width="320" height="124" rx="8"/>
+  <text class="mono" x="58" y="366">type Student struct {</text>
+  <text class="mono" x="89" y="390">Name     string</text>
+  <text class="monored" x="89" y="414">Address  Address   // struct ซ้อน</text>
+  <text class="mono" x="58" y="438">}</text>
+
+  <!-- nested card -->
+  <rect class="card" x="480" y="340" width="280" height="180" rx="12"/>
+  <text class="mono2" x="496" y="364">s := Student{</text>
+  <text class="mono2" x="530" y="384">Name: "สมชาย",</text>
+  <text class="mono2" x="530" y="404">Score: 85.5,</text>
+  <rect class="inner" x="496" y="428" width="248" height="84" rx="8"/>
+  <text class="lbl" x="512" y="450">Address — struct อีกใบข้างใน</text>
+  <text class="mono2" x="512" y="472">Street : ถนนสุขุมวิท</text>
+  <text class="mono2" x="512" y="492">City   : กรุงเทพฯ</text>
+
+  <text class="lbl" x="40" y="500">field Address เปิดกล่องแล้วเจอกล่องอีกใบ</text>
+  <text class="lbl" x="40" y="518">แต่ละกล่องยังเป็นแบบพิมพ์ของตัวเอง — แก้แยกกันได้</text>
+  <text class="lblred" x="40" y="548">เข้าถึงซ้อนด้วยจุด 2 ชั้น: s.Address.City  →  "กรุงเทพฯ"</text>
+</svg>
