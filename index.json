@@ -1,5 +1,21 @@
 [
   {
+    "slug": "2026-09-09-cs-fundamentals-06-slices-maps-structs",
+    "title": "เก็บข้อมูลหลายชิ้นไว้ด้วยกัน — slice, map, struct (ตอนที่ 06)",
+    "date": "2026-09-09",
+    "tags": [
+      "cs-fundamentals",
+      "computer-science",
+      "go",
+      "slice",
+      "map",
+      "struct",
+      "data-structures",
+      "basics"
+    ],
+    "description": "ตอนที่ 06 ของซีรีส์ CS Fundamentals: เรียนรู้ slice (รายการข้อมูล), map (สมุดค้นหา key→value) และ struct (แบบฟอร์มรวมข้อมูล) — สามเครื่องมือเก็บข้อมูลเป็นกลุ่มในภาษา Go พร้อมตัวอย่างใช้งานจริงและกับดักที่ dev เจอบ่อย"
+  },
+  {
     "slug": "2026-09-08-cs-fundamentals-05-functions-decomposition",
     "title": "แบ่งงานใหญ่เป็นชิ้นเล็ก — ฟังก์ชัน (function), การแยกส่วน และขอบเขตของตัวแปร (ตอนที่ 05)",
     "date": "2026-09-08",
