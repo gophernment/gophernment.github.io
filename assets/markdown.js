@@ -129,6 +129,12 @@ function renderMarkdown(md) {
       continue;
     }
 
+    if (/^\s*(-{3,}|\*{3,})\s*$/.test(line)) {
+      html += "<hr>\n";
+      i++;
+      continue;
+    }
+
     const paraLines = [];
     while (
       i < lines.length &&
