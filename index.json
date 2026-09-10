@@ -1,5 +1,20 @@
 [
   {
+    "slug": "2026-09-10-cs-fundamentals-07-files-cli-errors",
+    "title": "อ่านเขียนไฟล์, สร้าง CLI และจัดการ error เบื้องต้น (ตอนที่ 07)",
+    "date": "2026-09-10",
+    "tags": [
+      "cs-fundamentals",
+      "computer-science",
+      "go",
+      "file-io",
+      "cli",
+      "error-handling",
+      "basics"
+    ],
+    "description": "เก็บข้อมูลลงไฟล์ให้อยู่ถาวร รับ argument ตอนสั่งรันโปรแกรม และจัดการ error อย่างเป็นระบบด้วยหลัก \"error คือค่า\" — เรียนผ่านภาษา Go ทีละบรรทัด พร้อมโค้ดที่รันได้จริง"
+  },
+  {
     "slug": "2026-09-09-cs-fundamentals-06-slices-maps-structs",
     "title": "เก็บข้อมูลหลายชิ้นไว้ด้วยกัน — slice, map, struct (ตอนที่ 06)",
     "date": "2026-09-09",
