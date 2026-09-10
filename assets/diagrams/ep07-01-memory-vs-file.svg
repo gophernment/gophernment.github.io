@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 500" width="820" height="500" role="img" aria-label="ตัวแปรอยู่ในหน่วยความจำ RAM ซึ่งเป็นของชั่วคราว ปิดโปรแกรมแล้วหายไป ส่วนไฟล์อยู่บนดิสก์อย่างถาวร เปิดโปรแกรมใหม่ก็ยังอ่านกลับมาได้">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#57606a"/>
+    </marker>
+    <marker id="arrblue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#0969da"/>
+    </marker>
+    <marker id="arrgreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1a7f37"/>
+    </marker>
+  </defs>
+  <style>
+    text { font-family: "Noto Sans Thai", -apple-system, "Segoe UI", sans-serif; font-size: 13px; fill: #1a1a1a; }
+    .hdr { font-weight: 700; font-size: 16px; }
+    .hdrsm { font-weight: 700; font-size: 14px; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 12.5px; fill: #0969da; }
+    .mono2 { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 12.5px; fill: #1a1a1a; }
+    .lbl { fill: #57606a; font-size: 12px; }
+    .lblred { fill: #cf222e; font-size: 12px; font-weight: 700; }
+    .lblgreen { fill: #1a7f37; font-size: 12px; font-weight: 700; }
+    .step { font-size: 12px; }
+    .panel { fill: #f6f8fa; stroke: #0969da; stroke-width: 1.5; }
+    .panelgray { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.3; }
+    .filebox { fill: #ffffff; stroke: #1a7f37; stroke-width: 1.5; }
+    .warn { fill: #fff8c5; stroke: #d4a72c; stroke-width: 1.3; }
+  </style>
+
+  <text class="hdr" x="410" y="26" text-anchor="middle">ทำไมต้องมีไฟล์: ตัวแปรอยู่ใน RAM (ชั่วคราว) — ไฟล์อยู่บนดิสก์ (ถาวร)</text>
+
+  <!-- RAM panel -->
+  <rect class="panel" x="40" y="50" width="360" height="172" rx="10"/>
+  <text class="hdrsm" x="56" y="74">หน่วยความจำ RAM — ของชั่วคราว</text>
+  <text class="mono2" x="56" y="102">name := "สมชาย"</text>
+  <text class="mono2" x="56" y="126">score := 85</text>
+  <text class="mono2" x="56" y="150">notes := []string{"ซื้อนม"}</text>
+  <text class="lblred" x="56" y="186">ปิดโปรแกรม → ค่าพวกนี้หายทั้งหมด</text>
+  <text class="lbl" x="56" y="206">(RAM ถูกล้างเมื่อโปรแกรมจบ)</text>
+
+  <!-- Disk panel -->
+  <rect class="panel" x="40" y="340" width="360" height="155" rx="10"/>
+  <text class="hdrsm" x="56" y="364">ดิสก์ — ไฟล์ notes.txt (ของถาวร)</text>
+  <rect class="filebox" x="56" y="376" width="328" height="70" rx="6"/>
+  <text class="mono2" x="70" y="402">ซื้อนม</text>
+  <text class="mono2" x="70" y="426">จ่ายค่าไฟ 450 บาท</text>
+  <text class="lblgreen" x="56" y="468">เปิดโปรแกรมใหม่ → อ่านกลับมาได้เหมือนเดิม</text>
+  <text class="lbl" x="56" y="486">(ดิสก์เก็บข้อมูลไว้ได้แม้ปิดเครื่อง)</text>
+
+  <!-- arrows between panels -->
+  <line x1="150" y1="230" x2="150" y2="336" stroke="#0969da" stroke-width="1.8" marker-end="url(#arrblue)"/>
+  <text class="mono" x="162" y="258">os.WriteFile()</text>
+  <text class="lbl" x="162" y="278">เขียนค่าลงไฟล์</text>
+  <text class="lbl" x="162" y="298">(ทับของเดิม)</text>
+
+  <line x1="292" y1="338" x2="292" y2="232" stroke="#1a7f37" stroke-width="1.8" marker-end="url(#arrgreen)"/>
+  <text class="mono" x="304" y="258">os.ReadFile()</text>
+  <text class="lbl" x="304" y="278">อ่านกลับเข้ามา</text>
+  <text class="lbl" x="304" y="298">(ได้ข้อมูลเป็น []byte)</text>
+
+  <!-- right column: what happens underneath -->
+  <rect class="panelgray" x="470" y="50" width="310" height="190" rx="10"/>
+  <text class="hdrsm" x="486" y="74">เกิดอะไรขึ้นจริงตอนสั่งอ่าน/เขียน</text>
+  <text class="step" x="486" y="102">1. โปรแกรมเรียก os.WriteFile()</text>
+  <text class="step" x="486" y="128">2. ไลบรารีของ Go เรียก syscall</text>
+  <text class="step" x="486" y="152">3. kernel (แกนกลางระบบ) รับงาน</text>
+  <text class="step" x="486" y="176">4. kernel เขียนลงดิสก์จริง</text>
+  <text class="step" x="486" y="200">5. คืนจำนวนไบต์ + error กลับมา</text>
+  <text class="lbl" x="486" y="226">ทุกงานกับไฟล์ต้องผ่าน kernel</text>
+
+  <rect class="warn" x="470" y="256" width="310" height="150" rx="10"/>
+  <text class="hdrsm" x="486" y="280">ข้อควรรู้ 3 ข้อ</text>
+  <text class="step" x="486" y="306">• อ่าน/เขียนไฟล์คือ I/O ที่ช้ากว่า</text>
+  <text class="step" x="486" y="324">  การคิดใน RAM มาก</text>
+  <text class="step" x="486" y="350">• os.ReadFile อ่านทั้งไฟล์เข้า</text>
+  <text class="step" x="486" y="368">  หน่วยความจำทีเดียว</text>
+  <text class="step" x="486" y="394">• ไฟล์อาจไม่สำเร็จได้เสมอ</text>
+</svg>

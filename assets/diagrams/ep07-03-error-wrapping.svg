@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 500" width="840" height="500" role="img" aria-label="error คือค่าที่ถูกส่งกลับขึ้นมาทีละชั้นด้วยคำสั่ง fmt.Errorf และเครื่องหมายเปอร์เซ็นต์ w โปรแกรมชั้นบนสุดเช็คด้วย errors.Is ว่าต้นเหตุคือ error ตัวไหน">
+  <defs>
+    <marker id="arr3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#cf222e"/>
+    </marker>
+    <marker id="arr3b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1a7f37"/>
+    </marker>
+  </defs>
+  <style>
+    text { font-family: "Noto Sans Thai", -apple-system, "Segoe UI", sans-serif; font-size: 13px; fill: #1a1a1a; }
+    .hdr { font-weight: 700; font-size: 16px; }
+    .hdrsm { font-weight: 700; font-size: 13.5px; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 11.5px; fill: #0969da; }
+    .mono2 { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 12px; fill: #1a1a1a; }
+    .lbl { fill: #57606a; font-size: 12px; }
+    .lblred { fill: #cf222e; font-size: 12px; font-weight: 700; }
+    .lblgreen { fill: #1a7f37; font-size: 12px; font-weight: 700; }
+    .panelgray { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.3; }
+    .panelblue { fill: #f6f8fa; stroke: #0969da; stroke-width: 1.5; }
+    .inner1 { fill: #fff5f5; stroke: #cf222e; stroke-width: 1.5; }
+    .inner2 { fill: #fff8c5; stroke: #d4a72c; stroke-width: 1.3; }
+    .inner3 { fill: #ddf4ff; stroke: #0969da; stroke-width: 1.3; }
+    .warn { fill: #fff8c5; stroke: #d4a72c; stroke-width: 1.3; }
+  </style>
+
+  <text class="hdr" x="420" y="26" text-anchor="middle">error คือ "ค่า" ที่ไหลกลับขึ้นมา — เราห่อให้มีบริบท และเช็คต้นเหตุด้วย errors.Is</text>
+
+  <!-- left: call chain -->
+  <rect class="panelblue" x="40" y="46" width="380" height="222" rx="10"/>
+  <text class="hdrsm" x="56" y="70">เส้นทางของงาน (ชั้นบน → ชั้นล่าง)</text>
+
+  <rect class="panelgray" x="56" y="84" width="348" height="40" rx="6"/>
+  <text class="mono2" x="70" y="109">main() เรียก addNote(path, text)</text>
+  <line x1="230" y1="126" x2="230" y2="146" stroke="#cf222e" stroke-width="1.7" marker-end="url(#arr3)"/>
+  <rect class="panelgray" x="56" y="150" width="348" height="40" rx="6"/>
+  <text class="mono2" x="70" y="175">addNote ตรวจแล้วเจอ text ว่าง</text>
+  <line x1="230" y1="192" x2="230" y2="212" stroke="#cf222e" stroke-width="1.7" marker-end="url(#arr3)"/>
+  <rect class="panelgray" x="56" y="216" width="348" height="40" rx="6"/>
+  <text class="mono2" x="70" y="241">คืนค่า (ผลลัพธ์, error) กลับขึ้นไป</text>
+  <text class="lbl" x="56" y="262">ทุกฟังก์ชันที่เรียกไฟล์ = มี error ให้เช็คเสมอ</text>
+
+  <!-- right: error ladder -->
+  <text class="hdrsm" x="446" y="72">ชั้นของ error ที่ไหลกลับขึ้นมา</text>
+
+  <rect class="inner1" x="446" y="84" width="354" height="46" rx="6"/>
+  <text class="hdrsm" x="462" y="102">ชั้นนอก · ทำคำสั่ง add ไม่สำเร็จ</text>
+  <text class="mono" x="462" y="118">fmt.Errorf("...: %w", err)</text>
+
+  <rect class="inner2" x="462" y="134" width="338" height="46" rx="6"/>
+  <text class="hdrsm" x="478" y="152">ชั้นกลาง · บันทึกไม่ได้</text>
+  <text class="mono" x="478" y="168">fmt.Errorf("บันทึกไม่ได้: %w", err)</text>
+
+  <rect class="inner3" x="478" y="184" width="322" height="46" rx="6"/>
+  <text class="hdrsm" x="494" y="202">ชั้นใน (ต้นเหตุ) · ไม่ได้ระบุข้อความ</text>
+  <text class="mono" x="494" y="218">errors.New("ไม่ได้ระบุข้อความ")</text>
+
+  <text class="lblred" x="446" y="246">%w = ห่อ error เดิมไว้ข้างใน (ไม่ตัดขาดข้อมูลต้นเหตุ)</text>
+  <text class="lblgreen" x="446" y="266">errors.Is(err, ErrNoText) → true</text>
+
+  <!-- middle connector -->
+  <line x1="420" y1="188" x2="440" y2="188" stroke="#57606a" stroke-width="1.4" marker-end="url(#arr3)"/>
+
+  <!-- bottom: two audiences -->
+  <rect class="panelgray" x="40" y="290" width="760" height="92" rx="10"/>
+  <text class="hdrsm" x="56" y="314">สิ่งที่เกิดขึ้นจริงเมื่อ main() ได้ err</text>
+  <text class="mono2" x="56" y="340">if err != nil { fmt.Fprintln(os.Stderr, "ผิดพลาด:", err); os.Exit(1) }</text>
+  <text class="lbl" x="56" y="364">ผู้ใช้เห็นข้อความเต็มเรียงชั้น: ผิดพลาด: ทำคำสั่ง add ไม่สำเร็จ: บันทึกไม่ได้: ไม่ได้ระบุข้อความ</text>
+
+  <rect class="warn" x="40" y="400" width="760" height="86" rx="10"/>
+  <text class="hdrsm" x="56" y="424">ทำไมต้องเช็ค err ทุกครั้ง</text>
+  <text class="lblred" x="56" y="448">• ไม่เช็คแล้วใช้ค่าที่อ่านได้ = ใช้ข้อมูลที่อาจว่างเปล่า/เพี้ยน โดยเราไม่รู้ตัว</text>
+  <text class="lblred" x="56" y="470">• ข้อความ error ที่ดีบอก 3 อย่าง: ทำอะไรอยู่ · ไฟล์/ค่าอะไร · ต้นเหตุคืออะไร</text>
+</svg>
