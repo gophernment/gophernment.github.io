@@ -1,5 +1,23 @@
 [
   {
+    "slug": "2026-09-11-cs-fundamentals-08-binary-hex-data",
+    "title": "เลขฐานสอง ฐานสิบหก และการแทนข้อมูล — int, float, UTF-8 (ตอนที่ 08)",
+    "date": "2026-09-11",
+    "tags": [
+      "cs-fundamentals",
+      "computer-science",
+      "go",
+      "binary",
+      "hexadecimal",
+      "utf-8",
+      "floating-point",
+      "ieee754",
+      "integer",
+      "basics"
+    ],
+    "description": "ตอบ 3 คำถามค้างจากตอน 07 ให้ครบ: ไบต์กับบิตต่างกันยังไง ทำไมตัวอักษรไทย 1 ตัวกิน 3 ไบต์ และทำไม 0.1+0.2 ไม่เท่ากับ 0.3 — พร้อมโค้ด Go ที่รันได้จริงทุกรหัสผลลัพธ์"
+  },
+  {
     "slug": "2026-09-10-cs-fundamentals-07-files-cli-errors",
     "title": "อ่านเขียนไฟล์, สร้าง CLI และจัดการ error เบื้องต้น (ตอนที่ 07)",
     "date": "2026-09-10",
