@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 660" width="900" height="660" role="img" aria-label="อธิบายบิตกับไบต์ และการเข้ารหัส UTF-8 แบบความยาวแปรผัน ตัวอักษรอังกฤษ 1 ไบต์ ตัวอักษรไทย 3 ไบต์ อีโมจิ 4 ไบต์">
+  <style>
+    text { font-family: "Noto Sans Thai", -apple-system, "Segoe UI", sans-serif; font-size: 13px; fill: #1a1a1a; }
+    .hdr { font-weight: 700; font-size: 17px; }
+    .hdrsm { font-weight: 700; font-size: 14.5px; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 12.5px; fill: #0969da; }
+    .mono2 { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 12.5px; fill: #1a1a1a; }
+    .monob { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 14px; font-weight: 700; fill: #1f2328; }
+    .lbl { fill: #57606a; font-size: 12px; }
+    .lblred { fill: #cf222e; font-size: 12px; font-weight: 700; }
+    .lblgreen { fill: #1a7f37; font-size: 12.5px; font-weight: 700; }
+    .lblblue { fill: #0969da; font-size: 12.5px; font-weight: 700; }
+    .panel { fill: #f6f8fa; stroke: #0969da; stroke-width: 1.5; }
+    .panelg { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.3; }
+    .bit { fill: #ffffff; stroke: #0969da; stroke-width: 1.3; }
+    .biton { fill: #dafbe1; stroke: #1a7f37; stroke-width: 1.3; }
+    .batype { fill: #ddf4ff; stroke: #0969da; stroke-width: 1.2; }
+    .babyte { fill: #dafbe1; stroke: #1a7f37; stroke-width: 1.2; }
+    .balead { fill: #fff8c5; stroke: #d4a72c; stroke-width: 1.2; }
+  </style>
+
+  <text class="hdr" x="450" y="30" text-anchor="middle">บิต กับ ไบต์ — และทำไมตัวอักษรไทย 1 ตัวกิน 3 ไบต์</text>
+
+  <!-- ===== Panel A: bit vs byte ===== -->
+  <rect class="panel" x="30" y="52" width="840" height="200" rx="10"/>
+  <text class="hdrsm" x="50" y="78">บิต (bit) = หน่วยข้อมูลเล็กที่สุด เก็บได้แค่ 0 หรือ 1</text>
+  <text class="lbl" x="50" y="98">คิดซะว่าสวิตช์ไฟ 1 ตัว: เปิด = 1, ปิด = 0 · 8 สวิตช์เรียงกัน = 1 ไบต์</text>
+
+  <text class="lbl" x="70" y="132">ตำแหน่งบิต:</text>
+  <text class="wt" x="188" y="132" text-anchor="middle" style="font-family:ui-monospace,monospace;font-size:11px;fill:#8250df">7</text>
+  <text class="wt" x="240" y="132" text-anchor="middle" style="font-family:ui-monospace,monospace;font-size:11px;fill:#8250df">6</text>
+  <text class="wt" x="292" y="132" text-anchor="middle" style="font-family:ui-monospace,monospace;font-size:11px;fill:#8250df">5</text>
+  <text class="wt" x="344" y="132" text-anchor="middle" style="font-family:ui-monospace,monospace;font-size:11px;fill:#8250df">4</text>
+  <text class="wt" x="396" y="132" text-anchor="middle" style="font-family:ui-monospace,monospace;font-size:11px;fill:#8250df">3</text>
+  <text class="wt" x="448" y="132" text-anchor="middle" style="font-family:ui-monospace,monospace;font-size:11px;fill:#8250df">2</text>
+  <text class="wt" x="500" y="132" text-anchor="middle" style="font-family:ui-monospace,monospace;font-size:11px;fill:#8250df">1</text>
+  <text class="wt" x="552" y="132" text-anchor="middle" style="font-family:ui-monospace,monospace;font-size:11px;fill:#8250df">0</text>
+
+  <rect class="biton" x="170" y="140" width="36" height="40" rx="5"/>
+  <rect class="biton" x="222" y="140" width="36" height="40" rx="5"/>
+  <rect class="biton" x="274" y="140" width="36" height="40" rx="5"/>
+  <rect class="bit" x="326" y="140" width="36" height="40" rx="5"/>
+  <rect class="bit" x="378" y="140" width="36" height="40" rx="5"/>
+  <rect class="bit" x="430" y="140" width="36" height="40" rx="5"/>
+  <rect class="bit" x="482" y="140" width="36" height="40" rx="5"/>
+  <rect class="biton" x="534" y="140" width="36" height="40" rx="5"/>
+  <text class="monob" x="188" y="167" text-anchor="middle">1</text>
+  <text class="monob" x="240" y="167" text-anchor="middle">1</text>
+  <text class="monob" x="292" y="167" text-anchor="middle">1</text>
+  <text class="monob" x="344" y="167" text-anchor="middle">0</text>
+  <text class="monob" x="396" y="167" text-anchor="middle">0</text>
+  <text class="monob" x="448" y="167" text-anchor="middle">0</text>
+  <text class="monob" x="500" y="167" text-anchor="middle">0</text>
+  <text class="monob" x="552" y="167" text-anchor="middle">1</text>
+
+  <text class="lbl" x="600" y="150">ไบต์นี้ = 11100001</text>
+  <text class="mono" x="600" y="172">= 0xE1 = 225</text>
+
+  <text class="lblgreen" x="70" y="206">1 ไบต์ = 8 บิต → เก็บค่าได้ 2⁸ = 256 แบบ (0 ถึง 255)</text>
+  <text class="lblgreen" x="70" y="226">2 ไบต์ = 16 บิต → 65,536 แบบ · 4 ไบต์ = 32 บิต → 4,294,967,296 แบบ</text>
+  <text class="lbl" x="70" y="245">ทุกอย่างในคอมพิวเตอร์ — รูป เสียง วิดีโอ โปรแกรม — สุดท้ายคือกองไบต์เรียงกันทั้งนั้น</text>
+
+  <!-- ===== Panel B: UTF-8 ===== -->
+  <rect class="panelg" x="30" y="268" width="840" height="368" rx="10"/>
+  <text class="hdrsm" x="50" y="296">UTF-8 — เข้ารหัสตัวอักษรเป็นไบต์ ด้วยความยาว "แปรผัน" 1 ถึง 4 ไบต์</text>
+  <text class="lbl" x="50" y="316">UTF-8 คือ "พจนานุกรม" ที่ตกลงกันทั่วโลกว่า code point (รหัสตัวอักษร) ไหน ใช้กี่ไบต์</text>
+
+  <!-- Row 1: English 1 byte -->
+  <text class="monob" x="60" y="356">A</text>
+  <text class="lbl" x="60" y="378">อังกฤษ</text>
+  <text class="mono2" x="150" y="356">U+0041</text>
+  <rect class="babyte" x="240" y="338" width="120" height="30" rx="5"/>
+  <text class="mono" x="255" y="358">0x41</text>
+  <text class="mono" x="384" y="358">0100 0001</text>
+  <text class="lblgreen" x="620" y="358">1 ไบต์</text>
+  <text class="lbl" x="620" y="378">ขึ้นต้น 0 → ตัวเดียวจบ</text>
+
+  <!-- Row 2: Thai 3 bytes -->
+  <text class="monob" x="60" y="446">ส</text>
+  <text class="lbl" x="60" y="468">ไทย</text>
+  <text class="mono2" x="150" y="446">U+0E2A</text>
+  <rect class="balead" x="240" y="428" width="82" height="30" rx="5"/>
+  <rect class="batype" x="326" y="428" width="82" height="30" rx="5"/>
+  <rect class="batype" x="412" y="428" width="82" height="30" rx="5"/>
+  <text class="mono" x="252" y="448">0xE0</text>
+  <text class="mono" x="338" y="448">0xB8</text>
+  <text class="mono" x="424" y="448">0xAA</text>
+  <text class="mono" x="516" y="448">1110 xxxx</text>
+  <text class="mono" x="516" y="468">10 xxxxxx</text>
+  <text class="mono" x="516" y="488">10 xxxxxx</text>
+  <text class="lblgreen" x="660" y="448">3 ไบต์</text>
+  <text class="lbl" x="660" y="468">ขึ้นต้น 1110 → บอกว่า</text>
+  <text class="lbl" x="660" y="486">มีตัวตามอีก 2 ตัว</text>
+
+  <!-- Row 3: Emoji 4 bytes -->
+  <text class="monob" x="60" y="556">😀</text>
+  <text class="lbl" x="60" y="578">อีโมจิ</text>
+  <text class="mono2" x="150" y="556">U+1F600</text>
+  <rect class="balead" x="240" y="538" width="70" height="30" rx="5"/>
+  <rect class="batype" x="314" y="538" width="70" height="30" rx="5"/>
+  <rect class="batype" x="388" y="538" width="70" height="30" rx="5"/>
+  <rect class="batype" x="462" y="538" width="70" height="30" rx="5"/>
+  <text class="mono" x="250" y="558">0xF0</text>
+  <text class="mono" x="324" y="558">0x9F</text>
+  <text class="mono" x="398" y="558">0x98</text>
+  <text class="mono" x="472" y="558">0x80</text>
+  <text class="mono" x="560" y="558">11110xxx + 3 ตัวตาม</text>
+  <text class="lblgreen" x="770" y="558">4 ไบต์</text>
+
+  <line x1="50" y1="598" x2="850" y2="598" stroke="#d0d7de" stroke-width="1"/>
+  <text class="lblblue" x="50" y="620">หัวใจของ UTF-8: ไบต์แรกบอกเองว่า "ตัวอักษรนี้ยาวกี่ไบต์" — ตัวตามเริ่มด้วย 10 เสมอ</text>
+</svg>
