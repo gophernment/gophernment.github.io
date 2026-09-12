@@ -1,5 +1,21 @@
 [
   {
+    "slug": "2026-09-12-cs-fundamentals-09-gates-adder-alu",
+    "title": "ประตูตรรกะและ ALU: คอมพิวเตอร์บวกเลขได้ยังไง (ตอนที่ 09)",
+    "date": "2026-09-12",
+    "tags": [
+      "cs-fundamentals",
+      "computer-science",
+      "logic-gates",
+      "alu",
+      "adder",
+      "hardware",
+      "digital-logic",
+      "basics"
+    ],
+    "description": "เปิดฝาซีพียูดูข้างใน: จากสวิตช์เปิดปิดล้วน ๆ มาเป็นประตูตรรกะ AND/OR/NOT/XOR แล้วประกอบเป็น half adder, full adder, ripple-carry adder จนกลายเป็น ALU หน่วยคำนวณของเครื่อง พร้อมต่อวงจรจริงใน CircuitVerse"
+  },
+  {
     "slug": "2026-09-11-cs-fundamentals-08-binary-hex-data",
     "title": "เลขฐานสอง ฐานสิบหก และการแทนข้อมูล — int, float, UTF-8 (ตอนที่ 08)",
     "date": "2026-09-11",
