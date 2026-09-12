@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 730" width="960" height="730" role="img" aria-label="วงจรบวก 4 บิตแบบ ripple carry adder ที่เอาตัวบวกเต็มหนึ่งบิตมาต่อกันสี่ตัว และการลบด้วย two's complement ที่ใช้ XOR กลับบิตกับตัวทด">
+  <style>
+    text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 12.5px; fill: #1a1a1a; }
+    .hdr { font-weight: 700; font-size: 17px; }
+    .ptitle { font-weight: 700; font-size: 14.5px; }
+    .sub { fill: #57606a; font-size: 12px; }
+    .lbl { font-size: 12px; fill: #57606a; }
+    .note { font-size: 12px; fill: #1a1a1a; }
+    .mono { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12.5px; fill: #0969da; }
+    .monob { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 13px; font-weight: 700; }
+    .sig { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 11px; font-weight: 700; fill: #1a7f37; }
+    .panel { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.3; }
+    .panelb { fill: #f6f8fa; stroke: #0969da; stroke-width: 1.4; }
+    .block { fill: #eef4ff; stroke: #0969da; stroke-width: 1.6; }
+    .blocko { fill: #fff8c5; stroke: #d4a72c; stroke-width: 1.6; }
+    .wire { stroke: #57606a; stroke-width: 1.5; fill: none; }
+    .dot { fill: #57606a; }
+  </style>
+
+  <text class="hdr" x="480" y="30" text-anchor="middle">จาก 1 บิต เป็น 4 บิต: ripple-carry adder และการลบด้วย two's complement</text>
+
+  <!-- ================= Panel A ================= -->
+  <rect class="panel" x="20" y="52" width="920" height="294" rx="10"/>
+  <text class="ptitle" x="40" y="80">Ripple-carry adder 4 บิต: เอาตัวบวก 1 บิตมาต่อกัน 4 ตัว</text>
+  <text class="sub" x="40" y="100">ตัวทด (carry) ไหลจากขวาไปซ้ายทีละตัว จึงเรียกว่า ripple (ระลอก) — บิตซ้ายสุดคือบิตที่ 3 (ตัวที่มีค่าน้ำหนักมากสุด)</text>
+
+  <!-- wires above each FA: vertical input lines -->
+  <line class="wire" x1="120" y1="140" x2="120" y2="170"/>
+  <line class="wire" x1="160" y1="140" x2="160" y2="170"/>
+  <line class="wire" x1="320" y1="140" x2="320" y2="170"/>
+  <line class="wire" x1="360" y1="140" x2="360" y2="170"/>
+  <line class="wire" x1="520" y1="140" x2="520" y2="170"/>
+  <line class="wire" x1="560" y1="140" x2="560" y2="170"/>
+  <line class="wire" x1="720" y1="140" x2="720" y2="170"/>
+  <line class="wire" x1="760" y1="140" x2="760" y2="170"/>
+  <text class="monob" x="120" y="132" text-anchor="middle">A3</text>
+  <text class="monob" x="160" y="132" text-anchor="middle">B3</text>
+  <text class="monob" x="320" y="132" text-anchor="middle">A2</text>
+  <text class="monob" x="360" y="132" text-anchor="middle">B2</text>
+  <text class="monob" x="520" y="132" text-anchor="middle">A1</text>
+  <text class="monob" x="560" y="132" text-anchor="middle">B1</text>
+  <text class="monob" x="720" y="132" text-anchor="middle">A0</text>
+  <text class="monob" x="760" y="132" text-anchor="middle">B0</text>
+
+  <!-- FA boxes -->
+  <rect class="block" x="90" y="170" width="100" height="88" rx="7"/>
+  <text class="monob" x="140" y="212" text-anchor="middle">FA 3</text>
+  <text class="lbl" x="140" y="232" text-anchor="middle">full adder</text>
+  <rect class="block" x="290" y="170" width="100" height="88" rx="7"/>
+  <text class="monob" x="340" y="212" text-anchor="middle">FA 2</text>
+  <text class="lbl" x="340" y="232" text-anchor="middle">full adder</text>
+  <rect class="block" x="490" y="170" width="100" height="88" rx="7"/>
+  <text class="monob" x="540" y="212" text-anchor="middle">FA 1</text>
+  <text class="lbl" x="540" y="232" text-anchor="middle">full adder</text>
+  <rect class="block" x="690" y="170" width="100" height="88" rx="7"/>
+  <text class="monob" x="740" y="212" text-anchor="middle">FA 0</text>
+  <text class="lbl" x="740" y="232" text-anchor="middle">full adder</text>
+
+  <!-- carry chain: right to left -->
+  <line class="wire" x1="690" y1="214" x2="590" y2="214"/>
+  <text class="sig" x="640" y="206" text-anchor="middle">carry</text>
+  <line class="wire" x1="490" y1="214" x2="390" y2="214"/>
+  <text class="sig" x="440" y="206" text-anchor="middle">carry</text>
+  <line class="wire" x1="290" y1="214" x2="190" y2="214"/>
+  <text class="sig" x="240" y="206" text-anchor="middle">carry</text>
+  <line class="wire" x1="90" y1="214" x2="56" y2="214"/>
+  <text class="sig" x="56" y="206" text-anchor="end">Cout</text>
+  <line class="wire" x1="790" y1="214" x2="840" y2="214"/>
+  <text class="sig" x="846" y="210">Cin = 0</text>
+
+  <!-- sum outputs -->
+  <line class="wire" x1="140" y1="258" x2="140" y2="286"/>
+  <line class="wire" x1="340" y1="258" x2="340" y2="286"/>
+  <line class="wire" x1="540" y1="258" x2="540" y2="286"/>
+  <line class="wire" x1="740" y1="258" x2="740" y2="286"/>
+  <text class="monob" x="140" y="302" text-anchor="middle">S3</text>
+  <text class="monob" x="340" y="302" text-anchor="middle">S2</text>
+  <text class="monob" x="540" y="302" text-anchor="middle">S1</text>
+  <text class="monob" x="740" y="302" text-anchor="middle">S0</text>
+
+  <text class="note" x="40" y="330">ตัวทดเริ่มที่ Cin ของบิต 0 (ขวาสุด) แล้วไหลไปทางซ้าย · บวก 4+4 บิต ได้ผล 4 บิต + ตัวทดอีก 1 บิต</text>
+
+  <!-- ================= Panel B ================= -->
+  <rect class="panelb" x="20" y="362" width="920" height="348" rx="10"/>
+  <text class="ptitle" x="40" y="390">ลบเลขไม่ต้องมีวงจรลบ: A − B = A + (กลับบิต B) + 1</text>
+  <text class="sub" x="40" y="410">นี่คือเหตุผลว่าทำไม two's complement จากตอน 08 ถึง "ฟรี" ที่ระดับฮาร์ดแวร์</text>
+
+  <text class="monob" x="68" y="430" text-anchor="middle">A3..A0</text>
+  <circle class="dot" cx="60" cy="440" r="3.2"/>
+  <line class="wire" x1="60" y1="440" x2="430" y2="440"/>
+
+  <text class="monob" x="68" y="478" text-anchor="middle">B3..B0</text>
+  <circle class="dot" cx="60" cy="488" r="3.2"/>
+  <line class="wire" x1="60" y1="488" x2="150" y2="488"/>
+
+  <rect class="blocko" x="150" y="450" width="180" height="76" rx="7"/>
+  <text class="monob" x="240" y="484" text-anchor="middle">XOR ×4</text>
+  <text class="lbl" x="240" y="506" text-anchor="middle">กลับบิต B เมื่อ SUB = 1</text>
+  <line class="wire" x1="330" y1="488" x2="430" y2="488"/>
+
+  <rect class="block" x="430" y="414" width="200" height="150" rx="7"/>
+  <text class="monob" x="530" y="478" text-anchor="middle">4-bit adder</text>
+  <text class="lbl" x="530" y="500" text-anchor="middle">A + B' + SUB</text>
+  <line class="wire" x1="630" y1="490" x2="828" y2="490"/>
+  <circle class="dot" cx="828" cy="490" r="3.2"/>
+  <text class="mono" x="648" y="482">Sum = A − B (เมื่อ SUB = 1)</text>
+
+  <text class="monob" x="52" y="586" text-anchor="end">SUB</text>
+  <circle class="dot" cx="60" cy="590" r="3.2"/>
+  <line class="wire" x1="60" y1="590" x2="390" y2="590"/>
+  <circle class="dot" cx="240" cy="590" r="3"/>
+  <line class="wire" x1="240" y1="590" x2="240" y2="526"/>
+  <line class="wire" x1="390" y1="590" x2="390" y2="540"/>
+  <line class="wire" x1="390" y1="540" x2="430" y2="540"/>
+  <text class="lbl" x="70" y="616">SUB = 1 ต่อสายไว้ "โหมดลบ" · SUB = 0 ต่อสายไว้ "โหมดบวก"</text>
+
+  <text class="note" x="40" y="650">ตัวอย่าง 5 − 3: A = 0101, B = 0011 → กลับบิต B ได้ 1100 → 0101 + 1100 + 1 = 0010 = 2 ถูกต้อง</text>
+  <text class="note" x="40" y="676">วงจรบวกตัวเดียวจึงทำได้ทั้งบวกและลบ — ไม่ต้องมีวงจรลบแยกเลย</text>
+  <text class="lbl" x="40" y="700">ตัวทดตัวสุดท้าย (Cout) ถูกปล่อยทิ้งในโหมดลบ เพราะ two's complement จัดการเรื่องเครื่องหมายมาให้แล้ว</text>
+</svg>

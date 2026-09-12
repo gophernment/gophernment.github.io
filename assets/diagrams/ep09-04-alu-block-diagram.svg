@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 660" width="960" height="660" role="img" aria-label="แผนผัง ALU หน่วยคำนวณและตรรกะ ที่รวมบล็อกบวก ลบ AND OR XOR เข้าด้วยกัน โดยมี opcode เป็นตัวสั่งและ mux เป็นตัวเลือกผลลัพธ์">
+  <style>
+    text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 12.5px; fill: #1a1a1a; }
+    .hdr { font-weight: 700; font-size: 17px; }
+    .lbl { font-size: 12px; fill: #57606a; }
+    .note { font-size: 12px; fill: #1a1a1a; }
+    .monob { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 13px; font-weight: 700; }
+    .mono { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12.5px; fill: #0969da; }
+    .inb { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12.5px; font-weight: 700; }
+    .sig { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 11px; font-weight: 700; fill: #1a7f37; }
+    .alubox { fill: #f6f8fa; stroke: #0969da; stroke-width: 1.8; }
+    .block { fill: #eef4ff; stroke: #0969da; stroke-width: 1.6; }
+    .mux { fill: #fff8c5; stroke: #d4a72c; stroke-width: 1.6; }
+    .wire { stroke: #57606a; stroke-width: 1.5; fill: none; }
+    .bus { stroke: #0969da; stroke-width: 2.2; fill: none; }
+    .dot { fill: #57606a; }
+  </style>
+
+  <text class="hdr" x="480" y="30" text-anchor="middle">ALU — หน่วยคำนวณและตรรกะ (arithmetic logic unit)</text>
+
+  <text class="mono" x="620" y="86" text-anchor="middle">opcode (รหัสคำสั่ง)</text>
+  <line class="wire" x1="620" y1="96" x2="620" y2="190"/>
+  <circle class="dot" cx="620" cy="190" r="3"/>
+
+  <text class="inb" x="62" y="170">A, B (4 บิต)</text>
+  <circle class="dot" cx="60" cy="180" r="3.2"/>
+  <line class="bus" x1="60" y1="180" x2="270" y2="180"/>
+  <line class="bus" x1="270" y1="180" x2="270" y2="474"/>
+  <line class="bus" x1="270" y1="222" x2="320" y2="222"/>
+  <line class="bus" x1="270" y1="314" x2="320" y2="314"/>
+  <line class="bus" x1="270" y1="394" x2="320" y2="394"/>
+  <line class="bus" x1="270" y1="474" x2="320" y2="474"/>
+
+  <rect class="alubox" x="240" y="140" width="480" height="390" rx="10"/>
+  <text class="lbl" x="260" y="166">ALU — รวมวงจรที่เราสร้างไว้ในก้อนเดียว</text>
+
+  <!-- function blocks -->
+  <rect class="block" x="320" y="190" width="160" height="64" rx="7"/>
+  <text class="monob" x="400" y="217" text-anchor="middle">Adder</text>
+  <text class="lbl" x="400" y="238" text-anchor="middle">บวก / ลบ 4 บิต</text>
+
+  <rect class="block" x="320" y="286" width="160" height="56" rx="7"/>
+  <text class="monob" x="400" y="311" text-anchor="middle">AND</text>
+  <text class="lbl" x="400" y="330" text-anchor="middle">ตรรกะ (bitwise)</text>
+
+  <rect class="block" x="320" y="366" width="160" height="56" rx="7"/>
+  <text class="monob" x="400" y="391" text-anchor="middle">OR</text>
+  <text class="lbl" x="400" y="410" text-anchor="middle">ตรรกะ (bitwise)</text>
+
+  <rect class="block" x="320" y="446" width="160" height="56" rx="7"/>
+  <text class="monob" x="400" y="471" text-anchor="middle">XOR</text>
+  <text class="lbl" x="400" y="490" text-anchor="middle">ตรรกะ + เปรียบเทียบ</text>
+
+  <!-- block outputs into mux -->
+  <line class="wire" x1="480" y1="222" x2="560" y2="222"/>
+  <line class="wire" x1="480" y1="314" x2="560" y2="314"/>
+  <line class="wire" x1="480" y1="394" x2="560" y2="394"/>
+  <line class="wire" x1="480" y1="474" x2="560" y2="474"/>
+
+  <!-- mux -->
+  <rect class="mux" x="560" y="190" width="130" height="320" rx="8"/>
+  <text class="monob" x="625" y="336" text-anchor="middle">MUX</text>
+  <text class="lbl" x="625" y="358" text-anchor="middle">เลือก 1 จาก 4</text>
+  <text class="lbl" x="625" y="380" text-anchor="middle">ตาม opcode</text>
+
+  <!-- result -->
+  <line class="wire" x1="690" y1="350" x2="856" y2="350"/>
+  <circle class="dot" cx="856" cy="350" r="3.2"/>
+  <text class="mono" x="744" y="340">Result (ผลลัพธ์ 4 บิต)</text>
+
+  <!-- flags -->
+  <line class="wire" x1="480" y1="530" x2="480" y2="572"/>
+  <text class="sig" x="480" y="590" text-anchor="middle">flags: Zero / Carry / Overflow</text>
+
+  <text class="note" x="40" y="622">ALU = arithmetic logic unit (หน่วยคำนวณและตรรกะ) — ซีพียูมีของแบบนี้อยู่ข้างในจริง ๆ หนึ่งก้อน</text>
+  <text class="note" x="40" y="646">opcode บอกว่า "รอบนี้ให้ทำอะไร" · mux (multiplexer = ตัวเลือกสัญญาณ) เป็นสวิตช์เลือกว่าผลของบล็อกไหนจะออกไป</text>
+</svg>

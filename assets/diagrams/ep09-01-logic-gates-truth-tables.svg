@@ -1,0 +1,165 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 690" width="960" height="690" role="img" aria-label="ประตูตรรกะ 5 ตัว คือ AND OR NOT XOR NAND พร้อมสัญลักษณ์วงจรและตารางความจริงของแต่ละตัว">
+  <style>
+    text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 12.5px; fill: #1a1a1a; }
+    .hdr { font-weight: 700; font-size: 18px; }
+    .sub { fill: #57606a; font-size: 12.5px; }
+    .ptitle { font-weight: 700; font-size: 14.5px; }
+    .pdesc { fill: #57606a; font-size: 12px; }
+    .th { font-weight: 700; font-size: 12px; fill: #57606a; }
+    .val { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 13px; }
+    .valb { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 13px; font-weight: 700; fill: #1a7f37; }
+    .mono { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 11.5px; fill: #0969da; }
+    .note { font-size: 12px; fill: #1a1a1a; }
+    .panel { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.3; }
+    .panelhl { fill: #f6f8fa; stroke: #0969da; stroke-width: 1.4; }
+    .row { fill: #ffffff; stroke: #eaeef2; stroke-width: 1; }
+    .rowg { fill: #f6f8fa; stroke: #eaeef2; stroke-width: 1; }
+    .hrow { fill: #eaeef2; stroke: none; }
+    .thline { stroke: #d0d7de; stroke-width: 1.2; }
+    .vline { stroke: #d0d7de; stroke-width: 1; }
+    .gate { fill: #eef4ff; stroke: #0969da; stroke-width: 1.6; stroke-linejoin: round; }
+    .wire { stroke: #57606a; stroke-width: 1.4; fill: none; }
+    .bub { fill: #eef4ff; stroke: #0969da; stroke-width: 1.6; }
+  </style>
+
+  <text class="hdr" x="480" y="30" text-anchor="middle">ประตูตรรกะ (logic gate) 5 ตัวที่ต้องรู้จัก</text>
+  <text class="sub" x="480" y="54" text-anchor="middle">ทุกตัวรับอินพุต 0 กับ 1 แล้วให้ผลออกมา 0 หรือ 1 · A กับ B = อินพุต · "ผล" = เอาต์พุต · ตารางข้างล่างคือ "ตารางความจริง" (truth table)</text>
+
+<rect class="panel" x="20" y="76" width="290" height="280" rx="10"/>
+<text class="ptitle" x="36" y="103">AND — ประตู 'และ'</text>
+<text class="pdesc" x="36" y="122">ได้ 1 เมื่อเปิดพร้อมกันทั้งคู่</text>
+<path class="gate" d="M 136 138 H 158 A 18.0 18.0 0 0 1 158 174 H 136 Z"/>
+<line class="wire" x1="118" y1="148" x2="136" y2="148"/><circle cx="136" cy="148" r="2.4" fill="#57606a"/><line class="wire" x1="118" y1="164" x2="136" y2="164"/><circle cx="136" cy="164" r="2.4" fill="#57606a"/>
+<line class="wire" x1="176" y1="156.0" x2="194" y2="156.0"/><circle cx="194" cy="156.0" r="2.4" fill="#57606a"/>
+<rect class="hrow" x="64" y="199" width="202" height="22" rx="4"/>
+<text class="th" x="90" y="214" text-anchor="middle">A</text>
+<text class="th" x="136" y="214" text-anchor="middle">B</text>
+<text class="th" x="216" y="214" text-anchor="middle">ผล</text>
+<line class="thline" x1="64" y1="221" x2="266" y2="221"/>
+<line class="vline" x1="113" y1="201" x2="113" y2="317"/>
+<rect class="row" x="64" y="227" width="202" height="22" rx="3"/>
+<text class="val" x="90" y="243" text-anchor="middle">0</text>
+<text class="val" x="136" y="243" text-anchor="middle">0</text>
+<text class="valb" x="216" y="243" text-anchor="middle">0</text>
+<rect class="rowg" x="64" y="251" width="202" height="22" rx="3"/>
+<text class="val" x="90" y="267" text-anchor="middle">0</text>
+<text class="val" x="136" y="267" text-anchor="middle">1</text>
+<text class="valb" x="216" y="267" text-anchor="middle">0</text>
+<rect class="row" x="64" y="275" width="202" height="22" rx="3"/>
+<text class="val" x="90" y="291" text-anchor="middle">1</text>
+<text class="val" x="136" y="291" text-anchor="middle">0</text>
+<text class="valb" x="216" y="291" text-anchor="middle">0</text>
+<rect class="rowg" x="64" y="299" width="202" height="22" rx="3"/>
+<text class="val" x="90" y="315" text-anchor="middle">1</text>
+<text class="val" x="136" y="315" text-anchor="middle">1</text>
+<text class="valb" x="216" y="315" text-anchor="middle">1</text>
+<rect class="panel" x="335" y="76" width="290" height="280" rx="10"/>
+<text class="ptitle" x="351" y="103">OR — ประตู 'หรือ'</text>
+<text class="pdesc" x="351" y="122">ได้ 1 เมื่อมีตัวใดตัวหนึ่งเปิด</text>
+<path class="gate" d="M 451 138 Q 468 156.0 451 174 Q 482 156.0 498 156.0 Q 482 138 451 138 Z"/>
+<line class="wire" x1="433" y1="148" x2="451" y2="148"/><circle cx="451" cy="148" r="2.4" fill="#57606a"/><line class="wire" x1="433" y1="164" x2="451" y2="164"/><circle cx="451" cy="164" r="2.4" fill="#57606a"/>
+<line class="wire" x1="498" y1="156.0" x2="516" y2="156.0"/><circle cx="516" cy="156.0" r="2.4" fill="#57606a"/>
+<rect class="hrow" x="379" y="199" width="202" height="22" rx="4"/>
+<text class="th" x="405" y="214" text-anchor="middle">A</text>
+<text class="th" x="451" y="214" text-anchor="middle">B</text>
+<text class="th" x="531" y="214" text-anchor="middle">ผล</text>
+<line class="thline" x1="379" y1="221" x2="581" y2="221"/>
+<line class="vline" x1="428" y1="201" x2="428" y2="317"/>
+<rect class="row" x="379" y="227" width="202" height="22" rx="3"/>
+<text class="val" x="405" y="243" text-anchor="middle">0</text>
+<text class="val" x="451" y="243" text-anchor="middle">0</text>
+<text class="valb" x="531" y="243" text-anchor="middle">0</text>
+<rect class="rowg" x="379" y="251" width="202" height="22" rx="3"/>
+<text class="val" x="405" y="267" text-anchor="middle">0</text>
+<text class="val" x="451" y="267" text-anchor="middle">1</text>
+<text class="valb" x="531" y="267" text-anchor="middle">1</text>
+<rect class="row" x="379" y="275" width="202" height="22" rx="3"/>
+<text class="val" x="405" y="291" text-anchor="middle">1</text>
+<text class="val" x="451" y="291" text-anchor="middle">0</text>
+<text class="valb" x="531" y="291" text-anchor="middle">1</text>
+<rect class="rowg" x="379" y="299" width="202" height="22" rx="3"/>
+<text class="val" x="405" y="315" text-anchor="middle">1</text>
+<text class="val" x="451" y="315" text-anchor="middle">1</text>
+<text class="valb" x="531" y="315" text-anchor="middle">1</text>
+<rect class="panel" x="650" y="76" width="290" height="280" rx="10"/>
+<text class="ptitle" x="666" y="103">NOT — ประตู 'ไม่'</text>
+<text class="pdesc" x="666" y="122">กลับค่า: 0 กลายเป็น 1, 1 กลายเป็น 0</text>
+<path class="gate" d="M 766 138 L 766 174 L 800 156.0 Z"/><circle class="bub" cx="804" cy="156.0" r="4"/>
+<line class="wire" x1="748" y1="156.0" x2="766" y2="156.0"/><circle cx="766" cy="156.0" r="2.4" fill="#57606a"/>
+<line class="wire" x1="808" y1="156.0" x2="826" y2="156.0"/><circle cx="826" cy="156.0" r="2.4" fill="#57606a"/>
+<rect class="hrow" x="694" y="199" width="202" height="22" rx="4"/>
+<text class="th" x="728" y="214" text-anchor="middle">A</text>
+<text class="th" x="846" y="214" text-anchor="middle">ผล</text>
+<line class="thline" x1="694" y1="221" x2="896" y2="221"/>
+<rect class="row" x="694" y="227" width="202" height="22" rx="3"/>
+<text class="val" x="728" y="243" text-anchor="middle">0</text>
+<text class="valb" x="846" y="243" text-anchor="middle">1</text>
+<rect class="rowg" x="694" y="251" width="202" height="22" rx="3"/>
+<text class="val" x="728" y="267" text-anchor="middle">1</text>
+<text class="valb" x="846" y="267" text-anchor="middle">0</text>
+<rect class="panel" x="20" y="376" width="290" height="280" rx="10"/>
+<text class="ptitle" x="36" y="403">XOR — 'ต่างกัน'</text>
+<text class="pdesc" x="36" y="422">ได้ 1 เมื่อสองตัวไม่เหมือนกัน</text>
+<path class="gate" d="M 136 438 Q 153 456.0 136 474 Q 167 456.0 183 456.0 Q 167 438 136 438 Z"/><path d="M 126 438 Q 143 456.0 126 474" fill="none" stroke="#0969da" stroke-width="1.6"/>
+<line class="wire" x1="108" y1="448" x2="126" y2="448"/><circle cx="126" cy="448" r="2.4" fill="#57606a"/><line class="wire" x1="108" y1="464" x2="126" y2="464"/><circle cx="126" cy="464" r="2.4" fill="#57606a"/>
+<line class="wire" x1="183" y1="456.0" x2="201" y2="456.0"/><circle cx="201" cy="456.0" r="2.4" fill="#57606a"/>
+<rect class="hrow" x="64" y="499" width="202" height="22" rx="4"/>
+<text class="th" x="90" y="514" text-anchor="middle">A</text>
+<text class="th" x="136" y="514" text-anchor="middle">B</text>
+<text class="th" x="216" y="514" text-anchor="middle">ผล</text>
+<line class="thline" x1="64" y1="521" x2="266" y2="521"/>
+<line class="vline" x1="113" y1="501" x2="113" y2="617"/>
+<rect class="row" x="64" y="527" width="202" height="22" rx="3"/>
+<text class="val" x="90" y="543" text-anchor="middle">0</text>
+<text class="val" x="136" y="543" text-anchor="middle">0</text>
+<text class="valb" x="216" y="543" text-anchor="middle">0</text>
+<rect class="rowg" x="64" y="551" width="202" height="22" rx="3"/>
+<text class="val" x="90" y="567" text-anchor="middle">0</text>
+<text class="val" x="136" y="567" text-anchor="middle">1</text>
+<text class="valb" x="216" y="567" text-anchor="middle">1</text>
+<rect class="row" x="64" y="575" width="202" height="22" rx="3"/>
+<text class="val" x="90" y="591" text-anchor="middle">1</text>
+<text class="val" x="136" y="591" text-anchor="middle">0</text>
+<text class="valb" x="216" y="591" text-anchor="middle">1</text>
+<rect class="rowg" x="64" y="599" width="202" height="22" rx="3"/>
+<text class="val" x="90" y="615" text-anchor="middle">1</text>
+<text class="val" x="136" y="615" text-anchor="middle">1</text>
+<text class="valb" x="216" y="615" text-anchor="middle">0</text>
+<rect class="panel" x="335" y="376" width="290" height="280" rx="10"/>
+<text class="ptitle" x="351" y="403">NAND — 'ไม่และ'</text>
+<text class="pdesc" x="351" y="422">ตรงข้ามกับ AND: 1 ยกเว้นเปิดทั้งคู่</text>
+<path class="gate" d="M 445 438 H 467 A 18.0 18.0 0 0 1 467 474 H 445 Z"/><circle class="bub" cx="491" cy="456.0" r="4"/>
+<line class="wire" x1="433" y1="448" x2="451" y2="448"/><circle cx="451" cy="448" r="2.4" fill="#57606a"/><line class="wire" x1="433" y1="464" x2="451" y2="464"/><circle cx="451" cy="464" r="2.4" fill="#57606a"/>
+<line class="wire" x1="495" y1="456.0" x2="513" y2="456.0"/><circle cx="513" cy="456.0" r="2.4" fill="#57606a"/>
+<rect class="hrow" x="379" y="499" width="202" height="22" rx="4"/>
+<text class="th" x="405" y="514" text-anchor="middle">A</text>
+<text class="th" x="451" y="514" text-anchor="middle">B</text>
+<text class="th" x="531" y="514" text-anchor="middle">ผล</text>
+<line class="thline" x1="379" y1="521" x2="581" y2="521"/>
+<line class="vline" x1="428" y1="501" x2="428" y2="617"/>
+<rect class="row" x="379" y="527" width="202" height="22" rx="3"/>
+<text class="val" x="405" y="543" text-anchor="middle">0</text>
+<text class="val" x="451" y="543" text-anchor="middle">0</text>
+<text class="valb" x="531" y="543" text-anchor="middle">1</text>
+<rect class="rowg" x="379" y="551" width="202" height="22" rx="3"/>
+<text class="val" x="405" y="567" text-anchor="middle">0</text>
+<text class="val" x="451" y="567" text-anchor="middle">1</text>
+<text class="valb" x="531" y="567" text-anchor="middle">1</text>
+<rect class="row" x="379" y="575" width="202" height="22" rx="3"/>
+<text class="val" x="405" y="591" text-anchor="middle">1</text>
+<text class="val" x="451" y="591" text-anchor="middle">0</text>
+<text class="valb" x="531" y="591" text-anchor="middle">1</text>
+<rect class="rowg" x="379" y="599" width="202" height="22" rx="3"/>
+<text class="val" x="405" y="615" text-anchor="middle">1</text>
+<text class="val" x="451" y="615" text-anchor="middle">1</text>
+<text class="valb" x="531" y="615" text-anchor="middle">0</text>
+<rect class="panelhl" x="650" y="376" width="290" height="280" rx="10"/>
+<text class="ptitle" x="666" y="404">NAND คือ "ประตูสากล"</text>
+<text class="note" x="666" y="438">ประตูอื่นสร้างจาก NAND ได้ทั้งหมด</text>
+<text class="mono" x="666" y="468">AND  = NOT(NAND)</text>
+<text class="mono" x="666" y="498">NOT  = NAND(A,A)</text>
+<text class="mono" x="666" y="528">OR   = NAND(NAND(A,A), NAND(B,B))</text>
+<text class="note" x="666" y="558">ชิปจริงผลิตจาก NAND/NOR เป็นหลัก</text>
+<text class="note" x="666" y="588">เพราะสร้างง่าย ใช้ทรานซิสเตอร์น้อยกว่า</text>
+<text class="pdesc" x="666" y="634">(สมบัติ "สากล" = ประกอบเป็นอะไรก็ได้)</text>
+</svg>

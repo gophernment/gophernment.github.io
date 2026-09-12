@@ -1,0 +1,153 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 690" width="960" height="690" role="img" aria-label="วงจร half adder และ full adder วาดเป็นบล็อกไดอะแกรม พร้อมตารางความจริงของ half adder และการต่อ full adder จาก half adder สองตัวและ OR หนึ่งตัว">
+  <style>
+    text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 12.5px; fill: #1a1a1a; }
+    .hdr { font-weight: 700; font-size: 17px; }
+    .ptitle { font-weight: 700; font-size: 14.5px; }
+    .sub { fill: #57606a; font-size: 12px; }
+    .th { font-weight: 700; font-size: 12px; fill: #57606a; }
+    .val { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 13px; }
+    .valb { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 13px; font-weight: 700; fill: #1a7f37; }
+    .mono { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12.5px; fill: #0969da; }
+    .monob { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12.5px; font-weight: 700; fill: #1a1a1a; }
+    .lbl { font-size: 12px; fill: #57606a; }
+    .sig { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 11.5px; fill: #1a7f37; font-weight: 700; }
+    .panel { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.3; }
+    .panelb { fill: #f6f8fa; stroke: #0969da; stroke-width: 1.4; }
+    .block { fill: #eef4ff; stroke: #0969da; stroke-width: 1.6; }
+    .blocko { fill: #fff8c5; stroke: #d4a72c; stroke-width: 1.6; }
+    .wire { stroke: #57606a; stroke-width: 1.5; fill: none; }
+    .dot { fill: #57606a; }
+    .in { fill: #0969da; }
+    .row { fill: #ffffff; stroke: #eaeef2; stroke-width: 1; }
+    .rowg { fill: #f6f8fa; stroke: #eaeef2; stroke-width: 1; }
+    .hrow { fill: #eaeef2; }
+    .thline { stroke: #d0d7de; stroke-width: 1.2; }
+  </style>
+
+  <text class="hdr" x="480" y="30" text-anchor="middle">จากประตูตรรกะสู่ "เครื่องบวก": half adder และ full adder</text>
+
+  <!-- ================= Panel A: half adder ================= -->
+  <rect class="panel" x="20" y="52" width="920" height="242" rx="10"/>
+  <text class="ptitle" x="40" y="80">Half adder (ตัวบวกครึ่ง): บวก 2 บิต → ได้บิตผลลัพธ์ 1 บิต + ตัวทด 1 บิต</text>
+  <text class="sub" x="40" y="100">วงจรนี้ไม่ต้องใช้ชิปอะไรเลย — ใช้แค่ XOR กับ AND อย่างละตัว</text>
+
+  <!-- inputs -->
+  <text class="monob" x="52" y="146" text-anchor="end">A</text>
+  <text class="monob" x="52" y="174" text-anchor="end">B</text>
+  <circle class="dot" cx="58" cy="150" r="3.2"/>
+  <circle class="dot" cx="58" cy="178" r="3.2"/>
+  <line class="wire" x1="58" y1="150" x2="150" y2="150"/>
+  <line class="wire" x1="58" y1="178" x2="150" y2="178"/>
+  <!-- branches down to AND -->
+  <circle class="dot" cx="110" cy="150" r="3"/>
+  <line class="wire" x1="110" y1="150" x2="110" y2="214"/>
+  <line class="wire" x1="110" y1="214" x2="150" y2="214"/>
+  <circle class="dot" cx="95" cy="178" r="3"/>
+  <line class="wire" x1="95" y1="178" x2="95" y2="238"/>
+  <line class="wire" x1="95" y1="238" x2="150" y2="238"/>
+
+  <!-- XOR block -->
+  <rect class="block" x="150" y="134" width="104" height="52" rx="7"/>
+  <text class="monob" x="202" y="167" text-anchor="middle">XOR</text>
+  <!-- AND block -->
+  <rect class="block" x="150" y="200" width="104" height="52" rx="7"/>
+  <text class="monob" x="202" y="233" text-anchor="middle">AND</text>
+
+  <!-- outputs -->
+  <line class="wire" x1="254" y1="160" x2="418" y2="160"/>
+  <circle class="dot" cx="418" cy="160" r="3.2"/>
+  <line class="wire" x1="254" y1="226" x2="418" y2="226"/>
+  <circle class="dot" cx="418" cy="226" r="3.2"/>
+  <text class="mono" x="432" y="151">Sum = A XOR B</text>
+  <text class="lbl" x="432" y="182">บิตผลลัพธ์</text>
+  <text class="mono" x="432" y="217">Carry = A AND B</text>
+  <text class="lbl" x="432" y="248">ตัวทด (carry)</text>
+
+  <!-- truth table -->
+  <text class="th" x="620" y="112">ตารางความจริงของ half adder</text>
+  <rect class="hrow" x="620" y="124" width="300" height="24" rx="4"/>
+  <text class="th" x="652" y="141" text-anchor="middle">A</text>
+  <text class="th" x="698" y="141" text-anchor="middle">B</text>
+  <text class="th" x="788" y="141" text-anchor="middle">Sum</text>
+  <text class="th" x="880" y="141" text-anchor="middle">Carry</text>
+  <line class="thline" x1="620" y1="148" x2="920" y2="148"/>
+  <line class="thline" x1="734" y1="126" x2="734" y2="257"/>
+  <rect class="row" x="620" y="150" width="300" height="26" rx="3"/>
+  <text class="val" x="652" y="168" text-anchor="middle">0</text>
+  <text class="val" x="698" y="168" text-anchor="middle">0</text>
+  <text class="valb" x="788" y="168" text-anchor="middle">0</text>
+  <text class="valb" x="880" y="168" text-anchor="middle">0</text>
+  <rect class="rowg" x="620" y="176" width="300" height="26" rx="3"/>
+  <text class="val" x="652" y="194" text-anchor="middle">0</text>
+  <text class="val" x="698" y="194" text-anchor="middle">1</text>
+  <text class="valb" x="788" y="194" text-anchor="middle">1</text>
+  <text class="valb" x="880" y="194" text-anchor="middle">0</text>
+  <rect class="row" x="620" y="202" width="300" height="26" rx="3"/>
+  <text class="val" x="652" y="220" text-anchor="middle">1</text>
+  <text class="val" x="698" y="220" text-anchor="middle">0</text>
+  <text class="valb" x="788" y="220" text-anchor="middle">1</text>
+  <text class="valb" x="880" y="220" text-anchor="middle">0</text>
+  <rect class="rowg" x="620" y="228" width="300" height="26" rx="3"/>
+  <text class="val" x="652" y="246" text-anchor="middle">1</text>
+  <text class="val" x="698" y="246" text-anchor="middle">1</text>
+  <text class="valb" x="788" y="246" text-anchor="middle">0</text>
+  <text class="valb" x="880" y="246" text-anchor="middle">1</text>
+  <text class="lbl" x="620" y="276">1+1 ในฐานสอง = 10 → Sum = 0, Carry = 1</text>
+
+  <!-- ================= Panel B: full adder ================= -->
+  <rect class="panelb" x="20" y="308" width="920" height="368" rx="10"/>
+  <text class="ptitle" x="40" y="336">Full adder (ตัวบวกเต็ม): ต่อจาก half adder 2 ตัว + OR 1 ตัว — รับตัวทดจากหลักก่อนด้วย</text>
+  <text class="sub" x="40" y="356">คราวนี้รับ 3 บิต: A, B และ Cin (ตัวทดที่ยกมาจากหลักก่อน) แล้วให้ผล 2 บิต</text>
+
+  <!-- inputs -->
+  <text class="monob" x="52" y="396" text-anchor="end">A</text>
+  <text class="monob" x="52" y="420" text-anchor="end">B</text>
+  <text class="monob" x="70" y="512" text-anchor="start">Cin</text>
+  <circle class="dot" cx="60" cy="400" r="3.2"/>
+  <circle class="dot" cx="60" cy="424" r="3.2"/>
+  <circle class="dot" cx="60" cy="520" r="3.2"/>
+  <line class="wire" x1="60" y1="400" x2="140" y2="400"/>
+  <line class="wire" x1="60" y1="424" x2="140" y2="424"/>
+  <line class="wire" x1="60" y1="520" x2="280" y2="520"/>
+  <line class="wire" x1="280" y1="520" x2="280" y2="424"/>
+  <line class="wire" x1="280" y1="424" x2="320" y2="424"/>
+
+  <!-- HA1 -->
+  <rect class="block" x="140" y="384" width="80" height="64" rx="7"/>
+  <text class="monob" x="180" y="412" text-anchor="middle">HA 1</text>
+  <text class="lbl" x="180" y="432" text-anchor="middle">half adder</text>
+  <!-- S1 wire -->
+  <line class="wire" x1="220" y1="400" x2="320" y2="400"/>
+  <text class="sig" x="224" y="392">S1</text>
+  <!-- C1 route: down, left around, to OR -->
+  <line class="wire" x1="180" y1="448" x2="180" y2="470"/>
+  <line class="wire" x1="180" y1="470" x2="35" y2="470"/>
+  <line class="wire" x1="35" y1="470" x2="35" y2="584"/>
+  <line class="wire" x1="35" y1="584" x2="460" y2="584"/>
+  <text class="sig" x="138" y="463">C1</text>
+
+  <!-- HA2 -->
+  <rect class="block" x="320" y="384" width="80" height="64" rx="7"/>
+  <text class="monob" x="360" y="412" text-anchor="middle">HA 2</text>
+  <text class="lbl" x="360" y="432" text-anchor="middle">half adder</text>
+  <text class="sig" x="252" y="514">Cin</text>
+  <!-- HA2 outputs -->
+  <line class="wire" x1="400" y1="400" x2="860" y2="400"/>
+  <circle class="dot" cx="860" cy="400" r="3.2"/>
+  <text class="mono" x="600" y="391">Sum = A XOR B XOR Cin</text>
+  <line class="wire" x1="400" y1="430" x2="430" y2="430"/>
+  <line class="wire" x1="430" y1="430" x2="430" y2="560"/>
+  <line class="wire" x1="430" y1="560" x2="460" y2="560"/>
+  <text class="sig" x="404" y="458">C2</text>
+
+  <!-- OR -->
+  <rect class="blocko" x="460" y="546" width="74" height="52" rx="7"/>
+  <text class="monob" x="497" y="579" text-anchor="middle">OR</text>
+  <line class="wire" x1="534" y1="572" x2="860" y2="572"/>
+  <circle class="dot" cx="860" cy="572" r="3.2"/>
+  <text class="mono" x="600" y="563">Cout (ตัวทดออก)</text>
+
+  <text class="lbl" x="40" y="624">C1 = ตัวทดจาก HA1 (= A AND B) · C2 = ตัวทดจาก HA2 (= S1 AND Cin) · Cout = C1 OR C2</text>
+
+  <text class="lbl" x="40" y="660">"carry" (ตัวทด) = 1 บิตที่ต้องยกไปบวกในหลักถัดไป เหมือนการทดในเลขฐานสิบที่เราท่องมาตอนประถม</text>
+</svg>
