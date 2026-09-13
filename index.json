@@ -1,5 +1,22 @@
 [
   {
+    "slug": "2026-09-13-cs-fundamentals-10-memory-flipflop-ram",
+    "title": "หน่วยความจำ: จาก flip-flop สู่ RAM — คอมพิวเตอร์จำอะไรได้ยังไง (ตอนที่ 10)",
+    "date": "2026-09-13",
+    "tags": [
+      "cs-fundamentals",
+      "computer-science",
+      "memory",
+      "flip-flop",
+      "ram",
+      "register",
+      "hardware",
+      "digital-logic",
+      "basics"
+    ],
+    "description": "ต่อจากตอน 09 ที่สร้างเครื่องบวกเลข: คราวนี้สร้าง 'วงจรจำ' — จาก SR latch ที่จำได้ 1 บิต ผ่าน D flip-flop และ register ไปจนถึง RAM ทั้งก้อน พร้อมตอบว่าทำไมตัวแปรในโค้ดถึงอยู่ในหน่วยความจำ"
+  },
+  {
     "slug": "2026-09-12-cs-fundamentals-09-gates-adder-alu",
     "title": "ประตูตรรกะและ ALU: คอมพิวเตอร์บวกเลขได้ยังไง (ตอนที่ 09)",
     "date": "2026-09-12",
