@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 960" width="960" height="960" role="img" aria-label="โครงสร้าง RAM: เลข address ผ่าน decoder เพื่อเลือกแถวหน่วยความจำหนึ่งแถว โดยแต่ละแถวเก็บข้อมูลสี่บิต พร้อมตาราง address และคำอธิบายว่าตัวแปรในโค้ดอยู่ที่ address ใด">
+  <style>
+    text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 12.5px; fill: #1a1a1a; }
+    .hdr { font-weight: 700; font-size: 17px; }
+    .ptitle { font-weight: 700; font-size: 14.5px; }
+    .sub { fill: #57606a; font-size: 12px; }
+    .tiny { font-size: 11px; fill: #57606a; }
+    .mono { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12.5px; fill: #0969da; }
+    .monob { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12.5px; font-weight: 700; fill: #1a1a1a; }
+    .val { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12.5px; }
+    .th { font-weight: 700; font-size: 12px; fill: #57606a; }
+    .lbl { font-size: 12px; fill: #57606a; }
+    .panel { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.3; }
+    .panelb { fill: #f6f8fa; stroke: #0969da; stroke-width: 1.4; }
+    .block { fill: #eef4ff; stroke: #0969da; stroke-width: 1.6; }
+    .word { fill: #fff8c5; stroke: #d4a72c; stroke-width: 1.4; }
+    .cell { fill: #eef4ff; stroke: #6639ba; stroke-width: 1.3; }
+    .wire { stroke: #57606a; stroke-width: 1.5; fill: none; }
+    .sel { stroke: #1a7f37; stroke-width: 1.8; fill: none; }
+    .row { fill: #ffffff; stroke: #eaeef2; stroke-width: 1; }
+    .rowg { fill: #f6f8fa; stroke: #eaeef2; stroke-width: 1; }
+    .hrow { fill: #eaeef2; }
+    .thline { stroke: #d0d7de; stroke-width: 1.2; }
+    .dot { fill: #57606a; }
+  </style>
+
+  <text class="hdr" x="480" y="32" text-anchor="middle">RAM: flip-flop เรียงกันเป็นแถว + เลข address เป็นตัวเลือกช่อง</text>
+
+  <!-- ================= Panel A : RAM structure ================= -->
+  <rect class="panel" x="20" y="52" width="920" height="700" rx="10"/>
+  <text class="ptitle" x="40" y="80">A. RAM 4 ช่อง × 4 บิต: address 2 บิตเลือกได้ 4 ช่อง (2² = 4)</text>
+  <text class="sub" x="40" y="102">decoder จากตอน 09 แปลงเลข address ให้ "เลือกแถวเดียว" — อีก 3 แถวไม่ถูกแตะเลย</text>
+
+  <text class="mono" x="40" y="236">A1 = 1</text>
+  <text class="mono" x="40" y="286">A0 = 0</text>
+  <line class="wire" x1="95" y1="240" x2="140" y2="240"/>
+  <line class="wire" x1="95" y1="290" x2="140" y2="290"/>
+  <circle class="dot" cx="95" cy="240" r="3"/>
+  <circle class="dot" cx="95" cy="290" r="3"/>
+
+  <rect class="block" x="140" y="200" width="180" height="120" rx="8"/>
+  <text class="monob" x="230" y="248" text-anchor="middle">decoder 2→4</text>
+  <text class="tiny" x="230" y="272" text-anchor="middle">(เลือกแถวเดียว)</text>
+
+  <text class="tiny" x="332" y="130">word line</text>
+  <text class="tiny" x="332" y="150">= เลือกแถว</text>
+
+  <path class="wire" d="M320,220 L435,220 L435,170 L450,170"/>
+  <path class="sel" d="M320,250 L450,250"/>
+  <path class="wire" d="M320,280 L375,280 L375,330 L450,330"/>
+  <path class="wire" d="M320,310 L345,310 L345,410 L450,410"/>
+  <circle class="dot" cx="320" cy="250" r="3.2"/>
+  <circle class="dot" cx="320" cy="280" r="3.2"/>
+  <circle class="dot" cx="320" cy="310" r="3.2"/>
+  <circle class="dot" cx="320" cy="220" r="3.2"/>
+
+  <rect class="panelb" x="430" y="110" width="490" height="380" rx="10"/>
+  <text class="tiny" x="450" y="132">RAM 4 แถว × 4 บิต — แต่ละช่อง = D flip-flop 4 ตัว</text>
+
+  <rect class="word" x="450" y="140" width="440" height="60" rx="7"/>
+  <text class="monob" x="465" y="175">แถว 3</text>
+  <rect class="cell" x="530" y="157" width="40" height="26" rx="4"/>
+  <text class="tiny" x="550" y="175" text-anchor="middle">FF</text>
+  <rect class="cell" x="580" y="157" width="40" height="26" rx="4"/>
+  <text class="tiny" x="600" y="175" text-anchor="middle">FF</text>
+  <rect class="cell" x="630" y="157" width="40" height="26" rx="4"/>
+  <text class="tiny" x="650" y="175" text-anchor="middle">FF</text>
+  <rect class="cell" x="680" y="157" width="40" height="26" rx="4"/>
+  <text class="tiny" x="700" y="175" text-anchor="middle">FF</text>
+  <text class="val" x="750" y="175">= word 4 บิต</text>
+
+  <rect class="sel" x="444" y="214" width="452" height="72" rx="10"/>
+  <rect class="word" x="450" y="220" width="440" height="60" rx="7"/>
+  <text class="monob" x="465" y="255">แถว 2</text>
+  <rect class="cell" x="530" y="237" width="40" height="26" rx="4"/>
+  <text class="tiny" x="550" y="255" text-anchor="middle">FF</text>
+  <rect class="cell" x="580" y="237" width="40" height="26" rx="4"/>
+  <text class="tiny" x="600" y="255" text-anchor="middle">FF</text>
+  <rect class="cell" x="630" y="237" width="40" height="26" rx="4"/>
+  <text class="tiny" x="650" y="255" text-anchor="middle">FF</text>
+  <rect class="cell" x="680" y="237" width="40" height="26" rx="4"/>
+  <text class="tiny" x="700" y="255" text-anchor="middle">FF</text>
+  <text class="val" x="750" y="255">= word 4 บิต</text>
+
+  <rect class="word" x="450" y="300" width="440" height="60" rx="7"/>
+  <text class="monob" x="465" y="335">แถว 1</text>
+  <rect class="cell" x="530" y="317" width="40" height="26" rx="4"/>
+  <text class="tiny" x="550" y="335" text-anchor="middle">FF</text>
+  <rect class="cell" x="580" y="317" width="40" height="26" rx="4"/>
+  <text class="tiny" x="600" y="335" text-anchor="middle">FF</text>
+  <rect class="cell" x="630" y="317" width="40" height="26" rx="4"/>
+  <text class="tiny" x="650" y="335" text-anchor="middle">FF</text>
+  <rect class="cell" x="680" y="317" width="40" height="26" rx="4"/>
+  <text class="tiny" x="700" y="335" text-anchor="middle">FF</text>
+  <text class="val" x="750" y="335">= word 4 บิต</text>
+
+  <rect class="word" x="450" y="380" width="440" height="60" rx="7"/>
+  <text class="monob" x="465" y="415">แถว 0</text>
+  <rect class="cell" x="530" y="397" width="40" height="26" rx="4"/>
+  <text class="tiny" x="550" y="415" text-anchor="middle">FF</text>
+  <rect class="cell" x="580" y="397" width="40" height="26" rx="4"/>
+  <text class="tiny" x="600" y="415" text-anchor="middle">FF</text>
+  <rect class="cell" x="630" y="397" width="40" height="26" rx="4"/>
+  <text class="tiny" x="650" y="415" text-anchor="middle">FF</text>
+  <rect class="cell" x="680" y="397" width="40" height="26" rx="4"/>
+  <text class="tiny" x="700" y="415" text-anchor="middle">FF</text>
+  <text class="val" x="750" y="415">= word 4 บิต</text>
+
+  <text class="th" x="40" y="532">address → แถวที่ถูกเลือก</text>
+  <rect class="hrow" x="40" y="540" width="210" height="24" rx="4"/>
+  <text class="th" x="92" y="557" text-anchor="middle">A1 A0</text>
+  <text class="th" x="197" y="557" text-anchor="middle">แถวที่เลือก</text>
+  <rect class="row" x="40" y="564" width="210" height="24"/>
+  <text class="val" x="92" y="581" text-anchor="middle">0 0</text>
+  <text class="val" x="197" y="581" text-anchor="middle">แถว 0</text>
+  <rect class="rowg" x="40" y="588" width="210" height="24"/>
+  <text class="val" x="92" y="605" text-anchor="middle">0 1</text>
+  <text class="val" x="197" y="605" text-anchor="middle">แถว 1</text>
+  <rect class="row" x="40" y="612" width="210" height="24"/>
+  <text class="val" x="92" y="629" text-anchor="middle">1 0</text>
+  <text class="val" x="197" y="629" text-anchor="middle">แถว 2</text>
+  <rect class="rowg" x="40" y="636" width="210" height="24"/>
+  <text class="val" x="92" y="653" text-anchor="middle">1 1</text>
+  <text class="val" x="197" y="653" text-anchor="middle">แถว 3</text>
+  <line class="thline" x1="145" y1="540" x2="145" y2="660"/>
+
+  <text class="mono" x="440" y="506">แถว 2 ถูกเลือก: A1 A0 = 1 0 → แถวที่ 2 (แถวอื่นไม่ถูกแตะ)</text>
+  <circle class="dot" cx="450" cy="170" r="3.2"/>
+  <circle class="dot" cx="450" cy="330" r="3.2"/>
+  <circle class="dot" cx="450" cy="410" r="3.2"/>
+
+  <text class="lbl" x="40" y="690">address = "เลขที่อยู่" ของแต่ละช่องใน RAM — เข้าถึงช่องไหนก่อน-หลังก็ใช้เวลาเท่ากัน (นี่คือความหมายของ random access)</text>
+  <text class="lbl" x="40" y="712">1 ช่อง (1 address) = 1 word — ตัวอย่างนี้กว้าง 4 บิต · ในเครื่องจริง 1 address มัก = 1 ไบต์ (8 บิต)</text>
+  <text class="lbl" x="40" y="734">ของจริง: SRAM = เก็บบิตด้วย flip-flop (เร็ว แพง) · DRAM = เก็บด้วยตัวเก็บประจุ ต้องรีเฟรชเป็นระยะ (ถูก จุได้มาก)</text>
+
+  <!-- ================= Panel B : address -> variable ================= -->
+  <rect class="panelb" x="20" y="772" width="920" height="160" rx="10"/>
+  <text class="ptitle" x="40" y="800">B. address กับตัวแปรในโค้ด: "ชื่อตัวแปร" คือป้ายที่คอมไพเลอร์จำว่า "ค่าอยู่ที่ address ไหน"</text>
+
+  <text class="lbl" x="40" y="828">ในโค้ด Go: ตัวแปร x มีค่าอยู่ที่ address หนึ่ง — เราเขียน &amp;x เพื่อ "ขอ address" และพิมพ์ดูด้วย %p (เราจะใช้จริงตอน 14 เรื่อง pointer)</text>
+  <text class="lbl" x="40" y="852">ตอน 07 เรารู้ว่า "ตัวแปรอยู่ใน RAM" — ตอนนี้เรารู้ลึกอีกขั้น: มันคือ flip-flop แถวหนึ่งที่มีเลข address กำกับ</text>
+  <text class="lbl" x="40" y="876">CircuitVerse มี RAM element จริง: ตั้ง Address Width ได้ถึง 20 บิต · พินที่มี: ADDRESS, DATA IN, WRITE, DATA OUT (และ RESET, CORE DUMP)</text>
+  <text class="lbl" x="40" y="900">เพราะฉะนั้น "ตัวแปร" กับ "ช่องใน RAM" เป็นเรื่องเดียวกัน — ต่างกันแค่เราเรียกชื่อมันว่าอะไร</text>
+</svg>
