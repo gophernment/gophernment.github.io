@@ -1,5 +1,22 @@
 [
   {
+    "slug": "2026-09-14-cs-fundamentals-11-cpu-fetch-decode-execute",
+    "title": "CPU: วงจร fetch-decode-execute — เครื่องอ่านคำสั่งแล้วลงมือทำได้ยังไง (ตอนที่ 11)",
+    "date": "2026-09-14",
+    "tags": [
+      "cs-fundamentals",
+      "computer-science",
+      "cpu",
+      "fetch-decode-execute",
+      "register",
+      "program-counter",
+      "hardware",
+      "digital-logic",
+      "basics"
+    ],
+    "description": "ต่อจากตอน 09 (ALU) และตอน 10 (RAM): เอาวงจรคำนวณกับวงจรจำมาประกอบกันเป็น CPU — เรียนรอบ fetch-decode-execute ว่าเครื่อง 'อ่านคำสั่ง → ถอดความหมาย → ลงมือทำ' ซ้ำ ๆ ได้ยังไง พร้อมต่อ CPU จิ๋ว 4 บิตที่บวกเลข 3+4 ได้จริงใน CircuitVerse"
+  },
+  {
     "slug": "2026-09-13-cs-fundamentals-10-memory-flipflop-ram",
     "title": "หน่วยความจำ: จาก flip-flop สู่ RAM — คอมพิวเตอร์จำอะไรได้ยังไง (ตอนที่ 10)",
     "date": "2026-09-13",
