@@ -24,11 +24,11 @@
     .dot { fill: #57606a; }
   </style>
 
-  <text class="hdr" x="480" y="32" text-anchor="middle">จาก SR latch สู่ D flip-flop: เติมประตู แล้วเติมนาฬิกา</text>
+  <text class="hdr" x="480" y="32" text-anchor="middle">จาก SR latch สู่ D flip-flop: เติม gate แล้วเติมนาฬิกา</text>
 
   <!-- ================= Panel A : gated D latch ================= -->
   <rect class="panel" x="20" y="52" width="920" height="400" rx="10"/>
-  <text class="ptitle" x="40" y="80">A. gated D latch — เอา SR latch มาเติม "ประตู" (enable) เพื่อไม่ให้ S กับ R เป็น 1 พร้อมกันได้</text>
+  <text class="ptitle" x="40" y="80">A. gated D latch — เอา SR latch มาเติม gate (enable) เพื่อไม่ให้ S กับ R เป็น 1 พร้อมกันได้</text>
   <text class="sub" x="40" y="102">D latch = D + enable: ตราบใดที่ E = 1 เอาต์พุตวิ่งตาม D ทันที (ยังไม่ใช่ "ที่เก็บ" แบบที่เราต้องการ)</text>
 
   <text class="monob" x="60" y="152">D</text>
@@ -88,8 +88,8 @@
   <line class="thline" x1="150" y1="350" x2="150" y2="446"/>
   <line class="thline" x1="240" y1="350" x2="240" y2="446"/>
 
-  <text class="lbl" x="380" y="368">E = 1 → ประตูเปิด: Q วิ่งตาม D ทันที</text>
-  <text class="lbl" x="380" y="392">E = 0 → ประตูปิด: ตรึงค่าเดิมไว้</text>
+  <text class="lbl" x="380" y="368">E = 1 → gate เปิด: Q วิ่งตาม D ทันที</text>
+  <text class="lbl" x="380" y="392">E = 0 → gate ปิด: ตรึงค่าเดิมไว้</text>
   <text class="lbl" x="380" y="416">ถ้า D กระพริบตอน E เปิด เอาต์พุตก็กระพริบตาม — ปัญหานี้คือเหตุผลที่ต้องมี flip-flop</text>
 
   <!-- ================= Panel B : D flip-flop + clock ================= -->
