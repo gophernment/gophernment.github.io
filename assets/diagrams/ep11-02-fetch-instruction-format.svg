@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 660" width="960" height="660" role="img" aria-label="วงจรขั้น fetch: PC → MAR → RAM → MDR → IR และรูปแบบคำสั่ง 4 บิต">
+  <style>
+    text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 12.5px; fill: #1a1a1a; }
+    .hdr { font-weight: 700; font-size: 17px; }
+    .ptitle { font-weight: 700; font-size: 14.5px; }
+    .sub { fill: #57606a; font-size: 12px; }
+    .tiny { font-size: 11px; fill: #57606a; }
+    .mono { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12.5px; fill: #0969da; }
+    .monob { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12.5px; font-weight: 700; fill: #1a1a1a; }
+    .val { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12.5px; }
+    .th { font-weight: 700; font-size: 12px; fill: #57606a; }
+    .lbl { font-size: 12px; fill: #57606a; }
+    .bold { font-weight: 700; fill: #1a1a1a; }
+    .panel { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.3; }
+    .panelb { fill: #f6f8fa; stroke: #0969da; stroke-width: 1.4; }
+    .block { fill: #eef4ff; stroke: #0969da; stroke-width: 1.6; }
+    .ctrl { fill: #fff4e5; stroke: #bc4c00; stroke-width: 1.6; }
+    .ff { fill: #f3f0ff; stroke: #6639ba; stroke-width: 1.6; }
+    .mem { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.6; }
+    .dashed { fill: #fbfcfd; stroke: #8250df; stroke-width: 1.4; stroke-dasharray: 6 4; }
+    .wire { stroke: #57606a; stroke-width: 1.5; fill: none; }
+    .ctrlw { stroke: #bc4c00; stroke-width: 1.6; fill: none; }
+    .clkw { stroke: #1a7f37; stroke-width: 2; fill: none; }
+    .row { fill: #ffffff; stroke: #eaeef2; stroke-width: 1; }
+    .rowg { fill: #f6f8fa; stroke: #eaeef2; stroke-width: 1; }
+    .hrow { fill: #eaeef2; }
+    .thline { stroke: #d0d7de; stroke-width: 1.2; }
+    .dot { fill: #57606a; }
+    .badge { fill: #0969da; }
+    .badget { fill: #ffffff; font-weight: 700; font-size: 11px; }
+  </style>
+  <defs>
+    <marker id="a-grey" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#57606a"/></marker>
+    <marker id="a-ctrl" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#bc4c00"/></marker>
+    <marker id="a-clk" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1a7f37"/></marker>
+  </defs>
+  <text class="hdr" x="480" y="32" text-anchor="middle">ขั้นที่ 1 — FETCH: เอาคำสั่งจาก RAM ตามที่ PC ชี้ แล้วเก็บไว้ใน IR</text>
+  <rect class="panel" x="20" y="52" width="920" height="330" rx="10"/>
+  <text class="ptitle" x="40" y="80" text-anchor="start">A. ทางเดินของข้อมูลในขั้น fetch</text>
+  <text class="sub" x="40" y="102" text-anchor="start">ทุกลูกศรในภาพนี้คือ 'เส้นลวด' ที่เราต่อจริงใน CircuitVerse — ไม่มีอะไรเป็นกล่องดำ</text>
+  <rect class="ff" x="60" y="150" width="150" height="58" rx="10"/>
+  <text class="monob" x="135.0" y="174.24" text-anchor="middle">PC</text>
+  <text class="val" x="135.0" y="191.24" text-anchor="middle">ค่า = 01 (2 บิต)</text>
+  <rect class="block" x="60" y="240" width="150" height="50" rx="10"/>
+  <text class="monob" x="135.0" y="260.24" text-anchor="middle">วงจรบวก 1</text>
+  <text class="tiny" x="135.0" y="277.24" text-anchor="middle">PC + 1 → เก็บกลับ PC</text>
+  <line class="wire" x1="135" y1="240" x2="135" y2="208" marker-end="url(#a-grey)"/>
+  <rect class="ff" x="300" y="150" width="120" height="58" rx="10"/>
+  <text class="monob" x="360.0" y="174.24" text-anchor="middle">MAR</text>
+  <text class="tiny" x="360.0" y="191.24" text-anchor="middle">ที่พัก address</text>
+  <line class="wire" x1="210" y1="179" x2="300" y2="179" marker-end="url(#a-grey)"/>
+  <text class="tiny" x="222" y="171" text-anchor="start">address</text>
+  <rect class="mem" x="450" y="140" width="160" height="90" rx="10"/>
+  <text class="monob" x="530.0" y="171.74" text-anchor="middle">RAM</text>
+  <text class="tiny" x="530.0" y="188.74" text-anchor="middle">โปรแกรมของเรา</text>
+  <text class="tiny" x="530.0" y="205.74" text-anchor="middle">4 ช่อง × 4 บิต</text>
+  <line class="wire" x1="420" y1="185" x2="450" y2="185" marker-end="url(#a-grey)"/>
+  <rect class="ff" x="760" y="150" width="130" height="58" rx="10"/>
+  <text class="monob" x="825.0" y="174.24" text-anchor="middle">MDR</text>
+  <text class="tiny" x="825.0" y="191.24" text-anchor="middle">ที่พักข้อมูล</text>
+  <line class="wire" x1="610" y1="180" x2="760" y2="180" marker-end="url(#a-grey)"/>
+  <text class="tiny" x="622" y="172" text-anchor="start">คำสั่ง 4 บิต</text>
+  <rect class="ff" x="760" y="270" width="140" height="58" rx="10"/>
+  <text class="monob" x="830.0" y="294.24" text-anchor="middle">IR</text>
+  <text class="tiny" x="830.0" y="311.24" text-anchor="middle">คำสั่งที่อ่านมา</text>
+  <line class="wire" x1="825" y1="208" x2="825" y2="270" marker-end="url(#a-grey)"/>
+  <text class="tiny" x="833" y="245" text-anchor="start">คำสั่ง</text>
+  <rect class="block" x="60" y="298" width="170" height="50" rx="10"/>
+  <text class="monob" x="145.0" y="318.24" text-anchor="middle">ปุ่ม Clock</text>
+  <text class="tiny" x="145.0" y="335.24" text-anchor="middle">จังหวะเดียวคุมทุกตัว</text>
+  <line class="clkw" x1="230" y1="340" x2="830" y2="340"/>
+  <circle class="dot" cx="360" cy="340" r="3.2"/>
+  <circle class="dot" cx="620" cy="340" r="3.2"/>
+  <circle class="dot" cx="830" cy="340" r="3.2"/>
+  <line class="clkw" x1="830" y1="340" x2="830" y2="330" marker-end="url(#a-clk)"/>
+  <text class="tiny" x="240" y="318" text-anchor="start">นาฬิกา: register ทุกตัวรับค่าพร้อมกันในจังหวะเดียว</text>
+  <text class="lbl" x="40" y="370" text-anchor="start">หัวใจ: RAM ไม่ได้ 'รู้' ว่าคำสั่งอยู่ที่ไหน — มันแค่คืนค่าที่ address ที่เราป้อนให้ (PC → MAR → RAM)</text>
+  <rect class="panelb" x="20" y="400" width="920" height="240" rx="10"/>
+  <text class="ptitle" x="40" y="428" text-anchor="start">B. คำสั่ง 4 บิต: opcode (บอกว่า 'ทำอะไร') + operand (บอกว่า 'ทำกับข้อมูลตัวไหน')</text>
+  <rect class="row" x="150" y="462" width="80" height="56" rx="10"/>
+  <text class="monob" x="190" y="483" text-anchor="middle">0</text>
+  <text class="tiny" x="190" y="505" text-anchor="middle">bit 3</text>
+  <rect class="row" x="240" y="462" width="80" height="56" rx="10"/>
+  <text class="monob" x="280" y="483" text-anchor="middle">0</text>
+  <text class="tiny" x="280" y="505" text-anchor="middle">bit 2</text>
+  <rect class="row" x="330" y="462" width="80" height="56" rx="10"/>
+  <text class="monob" x="370" y="483" text-anchor="middle">1</text>
+  <text class="tiny" x="370" y="505" text-anchor="middle">bit 1</text>
+  <rect class="row" x="420" y="462" width="80" height="56" rx="10"/>
+  <text class="monob" x="460" y="483" text-anchor="middle">0</text>
+  <text class="tiny" x="460" y="505" text-anchor="middle">bit 0</text>
+  <text class="th" x="310" y="450" text-anchor="middle">opcode (2 บิต)</text>
+  <text class="th" x="500" y="450" text-anchor="middle">operand (2 บิต)</text>
+  <text class="lbl" x="640" y="483" text-anchor="start">← ตัวอย่าง 0010</text>
+  <text class="mono" x="640" y="505" text-anchor="start">= LOAD address 10</text>
+  <text class="lbl" x="60" y="556" text-anchor="start">ตัวอย่าง: 0010 = opcode 00 (LOAD) + operand 10 (address 2) → 'โหลดค่าจาก RAM ช่อง 10 มาใส่ ACC'</text>
+  <text class="lbl" x="60" y="580" text-anchor="start">opcode = รหัสว่า 'ให้ทำอะไร' (4 แบบในเครื่องเรา: LOAD / ADD / STORE / OUT)</text>
+  <text class="lbl" x="60" y="604" text-anchor="start">operand = ข้อมูลที่คำสั่งทำด้วย — ในเครื่องเราคือ address ของข้อมูล (2 บิต เลือกได้ 4 ช่อง)</text>
+</svg>

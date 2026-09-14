@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 640" width="960" height="640" role="img" aria-label="ขั้น decode: Control Unit อ่าน opcode แล้วเปิดสัญญาณควบคุม">
+  <style>
+    text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 12.5px; fill: #1a1a1a; }
+    .hdr { font-weight: 700; font-size: 17px; }
+    .ptitle { font-weight: 700; font-size: 14.5px; }
+    .sub { fill: #57606a; font-size: 12px; }
+    .tiny { font-size: 11px; fill: #57606a; }
+    .mono { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12.5px; fill: #0969da; }
+    .monob { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12.5px; font-weight: 700; fill: #1a1a1a; }
+    .val { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12.5px; }
+    .th { font-weight: 700; font-size: 12px; fill: #57606a; }
+    .lbl { font-size: 12px; fill: #57606a; }
+    .bold { font-weight: 700; fill: #1a1a1a; }
+    .panel { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.3; }
+    .panelb { fill: #f6f8fa; stroke: #0969da; stroke-width: 1.4; }
+    .block { fill: #eef4ff; stroke: #0969da; stroke-width: 1.6; }
+    .ctrl { fill: #fff4e5; stroke: #bc4c00; stroke-width: 1.6; }
+    .ff { fill: #f3f0ff; stroke: #6639ba; stroke-width: 1.6; }
+    .mem { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.6; }
+    .dashed { fill: #fbfcfd; stroke: #8250df; stroke-width: 1.4; stroke-dasharray: 6 4; }
+    .wire { stroke: #57606a; stroke-width: 1.5; fill: none; }
+    .ctrlw { stroke: #bc4c00; stroke-width: 1.6; fill: none; }
+    .clkw { stroke: #1a7f37; stroke-width: 2; fill: none; }
+    .row { fill: #ffffff; stroke: #eaeef2; stroke-width: 1; }
+    .rowg { fill: #f6f8fa; stroke: #eaeef2; stroke-width: 1; }
+    .hrow { fill: #eaeef2; }
+    .thline { stroke: #d0d7de; stroke-width: 1.2; }
+    .dot { fill: #57606a; }
+    .badge { fill: #0969da; }
+    .badget { fill: #ffffff; font-weight: 700; font-size: 11px; }
+  </style>
+  <defs>
+    <marker id="a-grey" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#57606a"/></marker>
+    <marker id="a-ctrl" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#bc4c00"/></marker>
+    <marker id="a-clk" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1a7f37"/></marker>
+  </defs>
+  <text class="hdr" x="480" y="32" text-anchor="middle">ขั้นที่ 2 — DECODE: Control Unit อ่าน opcode แล้ว 'เปิดสวิตช์' ให้ถูกตัว</text>
+  <rect class="panel" x="20" y="52" width="920" height="310" rx="10"/>
+  <text class="ptitle" x="40" y="80" text-anchor="start">A. จากบิตใน IR สู่สัญญาณควบคุม</text>
+  <text class="sub" x="40" y="102" text-anchor="start">Control Unit ไม่มีนาฬิกาและไม่จำอะไรเลย — มันคือ combinational logic ล้วน ๆ (เหมือนทุกวงจรในตอน 09)</text>
+  <rect class="ff" x="50" y="150" width="170" height="66" rx="10"/>
+  <text class="monob" x="135.0" y="178.24" text-anchor="middle">IR = 0010</text>
+  <text class="tiny" x="135.0" y="195.24" text-anchor="middle">LOAD address 10</text>
+  <rect class="block" x="250" y="150" width="120" height="66" rx="10"/>
+  <text class="monob" x="310.0" y="169.74" text-anchor="middle">Splitter</text>
+  <text class="tiny" x="310.0" y="186.74" text-anchor="middle">แยกกลุ่มบิต</text>
+  <text class="tiny" x="310.0" y="203.74" text-anchor="middle">opcode|operand</text>
+  <line class="wire" x1="370" y1="175" x2="450" y2="175" marker-end="url(#a-grey)"/>
+  <text class="tiny" x="376" y="167" text-anchor="start">opcode</text>
+  <rect class="ctrl" x="450" y="140" width="220" height="76" rx="10"/>
+  <text class="monob" x="560.0" y="164.74" text-anchor="middle">Control Unit</text>
+  <text class="tiny" x="560.0" y="181.74" text-anchor="middle">อ่านแค่ 2 บิตนี้</text>
+  <text class="tiny" x="560.0" y="198.74" text-anchor="middle">แล้วเปิดสัญญาณให้ตรง</text>
+  <polyline class="wire" points="310,216 310,265 700,265" marker-end="url(#a-grey)"/>
+  <text class="tiny" x="330" y="256" text-anchor="start">operand (2 บิต) = address</text>
+  <rect class="mem" x="700" y="235" width="200" height="60" rx="10"/>
+  <text class="monob" x="800.0" y="260.24" text-anchor="middle">RAM ข้อมูล</text>
+  <text class="tiny" x="800.0" y="277.24" text-anchor="middle">address = operand</text>
+  <line class="ctrlw" x1="670" y1="148" x2="780" y2="148" marker-end="url(#a-ctrl)"/>
+  <rect class="ctrl" x="780" y="138" width="150" height="20" rx="10"/>
+  <text class="monob" x="855.0" y="151.74" text-anchor="middle">LOAD_EN = 1</text>
+  <line class="ctrlw" x1="670" y1="172" x2="780" y2="172" marker-end="url(#a-ctrl)"/>
+  <rect class="ctrl" x="780" y="162" width="150" height="20" rx="10"/>
+  <text class="monob" x="855.0" y="175.74" text-anchor="middle">ADD_EN = 0</text>
+  <line class="ctrlw" x1="670" y1="196" x2="780" y2="196" marker-end="url(#a-ctrl)"/>
+  <rect class="ctrl" x="780" y="186" width="150" height="20" rx="10"/>
+  <text class="monob" x="855.0" y="199.74" text-anchor="middle">STORE_EN = 0</text>
+  <line class="ctrlw" x1="670" y1="220" x2="780" y2="220" marker-end="url(#a-ctrl)"/>
+  <rect class="ctrl" x="780" y="210" width="150" height="20" rx="10"/>
+  <text class="monob" x="855.0" y="223.74" text-anchor="middle">OUT_EN = 0</text>
+  <text class="lbl" x="40" y="322" text-anchor="start">สังเกต: เส้นทาง operand ไม่ผ่าน Control Unit เลย — มันเดินตรงไปที่ address ของ RAM ข้อมูล เพราะ 'ข้อมูลตัวไหน' ถูกกำหนดมาแล้วในตัวคำสั่ง</text>
+  <text class="lbl" x="40" y="346" text-anchor="start">ส่วน Control Unit สนใจแค่ opcode — เพราะ opcode เท่านั้นที่บอกว่า 'ต้องทำอะไร' กับค่านั้น</text>
+  <rect class="panelb" x="20" y="380" width="920" height="225" rx="10"/>
+  <text class="ptitle" x="40" y="408" text-anchor="start">B. ตาราง decode ของ CPU จิ๋วเรา — จำ 4 บรรทัดนี้ได้ ก็อ่าน CPU ออกทั้งเครื่อง</text>
+  <rect class="hrow" x="60" y="424" width="860" height="26" rx="4"/>
+  <text class="th" x="125.0" y="441" text-anchor="middle">opcode</text>
+  <text class="th" x="290.0" y="441" text-anchor="middle">ชื่อคำสั่ง</text>
+  <text class="th" x="520.0" y="441" text-anchor="middle">สัญญาณที่ถูกเปิด</text>
+  <text class="th" x="785.0" y="441" text-anchor="middle">ผลลัพธ์ที่เกิดขึ้นจริง</text>
+  <rect class="row" x="60" y="450" width="860" height="27" rx="10"/>
+  <text class="val" x="125.0" y="468" text-anchor="middle">00</text>
+  <text class="mono" x="290.0" y="468" text-anchor="middle">LOAD addr</text>
+  <text class="lbl" x="520.0" y="468" text-anchor="middle">LOAD_EN = 1</text>
+  <text class="lbl" x="785.0" y="468" text-anchor="middle">ACC ← ค่าจาก RAM[addr]</text>
+  <rect class="rowg" x="60" y="477" width="860" height="27" rx="10"/>
+  <text class="val" x="125.0" y="495" text-anchor="middle">01</text>
+  <text class="mono" x="290.0" y="495" text-anchor="middle">ADD addr</text>
+  <text class="lbl" x="520.0" y="495" text-anchor="middle">ADD_EN = 1</text>
+  <text class="lbl" x="785.0" y="495" text-anchor="middle">ACC ← ACC + RAM[addr]</text>
+  <rect class="row" x="60" y="504" width="860" height="27" rx="10"/>
+  <text class="val" x="125.0" y="522" text-anchor="middle">10</text>
+  <text class="mono" x="290.0" y="522" text-anchor="middle">STORE addr</text>
+  <text class="lbl" x="520.0" y="522" text-anchor="middle">WRITE = 1 (ที่ RAM)</text>
+  <text class="lbl" x="785.0" y="522" text-anchor="middle">RAM[addr] ← ACC</text>
+  <rect class="rowg" x="60" y="531" width="860" height="27" rx="10"/>
+  <text class="val" x="125.0" y="549" text-anchor="middle">11</text>
+  <text class="mono" x="290.0" y="549" text-anchor="middle">OUT</text>
+  <text class="lbl" x="520.0" y="549" text-anchor="middle">OUT_EN = 1</text>
+  <text class="lbl" x="785.0" y="549" text-anchor="middle">ACC → LED (แสดงผล)</text>
+  <line class="thline" x1="190" y1="424" x2="190" y2="558"/>
+  <line class="thline" x1="390" y1="424" x2="390" y2="558"/>
+  <line class="thline" x1="650" y1="424" x2="650" y2="558"/>
+  <text class="lbl" x="60" y="584" text-anchor="start">อ่านตารางนี้แล้วจะเข้าใจความลับของซีพียูทั้งหมด: มันไม่รู้จักคำว่า 'ADD' — มันเห็นแค่เลข 01 แล้วเปิดสวิตช์ที่ชื่อ ADD_EN เท่านั้น</text>
+</svg>

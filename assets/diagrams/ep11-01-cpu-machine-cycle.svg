@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 720" width="960" height="720" role="img" aria-label="ภาพรวมซีพียูและลูป fetch-decode-execute">
+  <style>
+    text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 12.5px; fill: #1a1a1a; }
+    .hdr { font-weight: 700; font-size: 17px; }
+    .ptitle { font-weight: 700; font-size: 14.5px; }
+    .sub { fill: #57606a; font-size: 12px; }
+    .tiny { font-size: 11px; fill: #57606a; }
+    .mono { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12.5px; fill: #0969da; }
+    .monob { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12.5px; font-weight: 700; fill: #1a1a1a; }
+    .val { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12.5px; }
+    .th { font-weight: 700; font-size: 12px; fill: #57606a; }
+    .lbl { font-size: 12px; fill: #57606a; }
+    .bold { font-weight: 700; fill: #1a1a1a; }
+    .panel { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.3; }
+    .panelb { fill: #f6f8fa; stroke: #0969da; stroke-width: 1.4; }
+    .block { fill: #eef4ff; stroke: #0969da; stroke-width: 1.6; }
+    .ctrl { fill: #fff4e5; stroke: #bc4c00; stroke-width: 1.6; }
+    .ff { fill: #f3f0ff; stroke: #6639ba; stroke-width: 1.6; }
+    .mem { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.6; }
+    .dashed { fill: #fbfcfd; stroke: #8250df; stroke-width: 1.4; stroke-dasharray: 6 4; }
+    .wire { stroke: #57606a; stroke-width: 1.5; fill: none; }
+    .ctrlw { stroke: #bc4c00; stroke-width: 1.6; fill: none; }
+    .clkw { stroke: #1a7f37; stroke-width: 2; fill: none; }
+    .row { fill: #ffffff; stroke: #eaeef2; stroke-width: 1; }
+    .rowg { fill: #f6f8fa; stroke: #eaeef2; stroke-width: 1; }
+    .hrow { fill: #eaeef2; }
+    .thline { stroke: #d0d7de; stroke-width: 1.2; }
+    .dot { fill: #57606a; }
+    .badge { fill: #0969da; }
+    .badget { fill: #ffffff; font-weight: 700; font-size: 11px; }
+  </style>
+  <defs>
+    <marker id="a-grey" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#57606a"/></marker>
+    <marker id="a-ctrl" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#bc4c00"/></marker>
+    <marker id="a-clk" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1a7f37"/></marker>
+  </defs>
+  <text class="hdr" x="480" y="32" text-anchor="middle">CPU = กล่องที่วนลูปสามขั้นตลอดกาล: fetch → decode → execute</text>
+  <rect class="panel" x="20" y="52" width="920" height="430" rx="10"/>
+  <text class="ptitle" x="40" y="80" text-anchor="start">A. ซีพียูคือกล่องที่มีของอยู่ไม่กี่ชิ้น — และมันคุยกับ RAM ตลอดเวลา</text>
+  <text class="sub" x="40" y="102" text-anchor="start">ตอน 09 เราสร้าง ALU (วงจรคำนวณ) · ตอน 10 เราสร้าง RAM + register (วงจรจำ) · ตอนนี้เอาทั้งสองมาประกอบเป็นเครื่องเดียว</text>
+  <rect class="mem" x="40" y="150" width="180" height="120" rx="10"/>
+  <text class="monob" x="130.0" y="196.74" text-anchor="middle">RAM</text>
+  <text class="tiny" x="130.0" y="213.74" text-anchor="middle">ที่เก็บโปรแกรม + ข้อมูล</text>
+  <text class="tiny" x="130.0" y="230.74" text-anchor="middle">address = เลขที่ช่อง</text>
+  <rect class="dashed" x="260" y="130" width="660" height="290" rx="10"/>
+  <text class="bold" x="274" y="150" text-anchor="start">CPU</text>
+  <rect class="ff" x="230" y="175" width="54" height="58" rx="10"/>
+  <text class="monob" x="257.0" y="207.74" text-anchor="middle">MAR</text>
+  <rect class="ff" x="230" y="300" width="54" height="58" rx="10"/>
+  <text class="monob" x="257.0" y="332.74" text-anchor="middle">MDR</text>
+  <rect class="ff" x="295" y="175" width="210" height="58" rx="10"/>
+  <text class="monob" x="400.0" y="199.24" text-anchor="middle">PC — Program Counter</text>
+  <text class="tiny" x="400.0" y="216.24" text-anchor="middle">ชี้ว่าคำสั่งถัดไปอยู่ address ไหน</text>
+  <rect class="ff" x="295" y="300" width="210" height="58" rx="10"/>
+  <text class="monob" x="400.0" y="324.24" text-anchor="middle">IR — Instruction Register</text>
+  <text class="tiny" x="400.0" y="341.24" text-anchor="middle">ที่พักคำสั่งที่เพิ่งอ่านมา</text>
+  <rect class="ctrl" x="560" y="175" width="170" height="80" rx="10"/>
+  <text class="monob" x="645.0" y="201.74" text-anchor="middle">Control Unit</text>
+  <text class="tiny" x="645.0" y="218.74" text-anchor="middle">ถอดความหมาย</text>
+  <text class="tiny" x="645.0" y="235.74" text-anchor="middle">ของคำสั่ง</text>
+  <rect class="block" x="560" y="300" width="170" height="68" rx="10"/>
+  <text class="monob" x="645.0" y="329.24" text-anchor="middle">ALU</text>
+  <text class="tiny" x="645.0" y="346.24" text-anchor="middle">วงจรบวกเลข (ตอน 09)</text>
+  <rect class="ff" x="780" y="300" width="140" height="68" rx="10"/>
+  <text class="monob" x="850.0" y="329.24" text-anchor="middle">ACC</text>
+  <text class="tiny" x="850.0" y="346.24" text-anchor="middle">ที่พักผลคำนวณ</text>
+  <line class="wire" x1="295" y1="204" x2="284" y2="204" marker-end="url(#a-grey)"/>
+  <line class="wire" x1="230" y1="204" x2="220" y2="204" marker-end="url(#a-grey)"/>
+  <line class="wire" x1="220" y1="330" x2="230" y2="330" marker-end="url(#a-grey)"/>
+  <line class="wire" x1="284" y1="330" x2="295" y2="330" marker-end="url(#a-grey)"/>
+  <polyline class="wire" points="505,329 530,329 530,215 560,215" marker-end="url(#a-grey)"/>
+  <text class="tiny" x="533" y="290" text-anchor="start">opcode</text>
+  <line class="ctrlw" x1="645" y1="255" x2="645" y2="300" marker-end="url(#a-ctrl)"/>
+  <text class="tiny" x="650" y="283" text-anchor="start">สัญญาณควบคุม</text>
+  <line class="wire" x1="730" y1="334" x2="780" y2="334" marker-end="url(#a-grey)"/>
+  <polyline class="wire" points="850,368 850,440 130,440 130,273" marker-end="url(#a-grey)"/>
+  <text class="tiny" x="420" y="432" text-anchor="start">เขียนผลลัพธ์กลับลง RAM (คำสั่ง STORE)</text>
+  <text class="lbl" x="40" y="453" text-anchor="start">เส้นทาง fetch: PC → MAR → RAM → MDR → IR (MAR = ที่พัก address · MDR = ที่พักข้อมูล ก่อนเข้า IR)</text>
+  <text class="lbl" x="40" y="469" text-anchor="start">ทุกครั้งที่ fetch เสร็จ PC จะถูก +1 เพื่อชี้คำสั่งถัดไป — กลไกนี้ทำให้โปรแกรม 'ไหล' ไปทีละคำสั่ง</text>
+  <rect class="panelb" x="20" y="500" width="920" height="210" rx="10"/>
+  <text class="ptitle" x="40" y="528" text-anchor="start">B. machine cycle (instruction cycle): สามขั้นที่วนซ้ำไม่รู้จบ</text>
+  <text class="sub" x="40" y="548" text-anchor="start">หนึ่งรอบ = หนึ่งคำสั่ง · ซีพียูไม่เคย 'จบ' เอง มันวนแบบนี้ไปเรื่อย ๆ จนกว่าไฟจะดับ หรือจนเจอคำสั่งสั่งให้หยุด</text>
+  <rect class="block" x="70" y="570" width="250" height="86" rx="10"/>
+  <text class="bold" x="195.0" y="599.74" text-anchor="middle">1. FETCH — อ่านคำสั่ง</text>
+  <text class="tiny" x="195.0" y="616.74" text-anchor="middle">เอา address จาก PC ไปอ่าน RAM</text>
+  <text class="tiny" x="195.0" y="633.74" text-anchor="middle">ได้คำสั่งมาใส่ IR แล้ว PC + 1</text>
+  <rect class="ctrl" x="355" y="570" width="250" height="86" rx="10"/>
+  <text class="bold" x="480.0" y="599.74" text-anchor="middle">2. DECODE — ถอดความหมาย</text>
+  <text class="tiny" x="480.0" y="616.74" text-anchor="middle">Control Unit อ่าน opcode</text>
+  <text class="tiny" x="480.0" y="633.74" text-anchor="middle">แล้วตั้งสัญญาณควบคุมให้ถูกตัว</text>
+  <rect class="ff" x="640" y="570" width="250" height="86" rx="10"/>
+  <text class="bold" x="765.0" y="599.74" text-anchor="middle">3. EXECUTE — ลงมือทำ</text>
+  <text class="tiny" x="765.0" y="616.74" text-anchor="middle">ALU / register / RAM ทำงานจริง</text>
+  <text class="tiny" x="765.0" y="633.74" text-anchor="middle">ตามสัญญาณควบคุมที่ decode บอก</text>
+  <line class="wire" x1="320" y1="613" x2="355" y2="613" marker-end="url(#a-grey)"/>
+  <line class="wire" x1="605" y1="613" x2="640" y2="613" marker-end="url(#a-grey)"/>
+  <polyline class="wire" points="765,656 765,684 195,684 195,656" marker-end="url(#a-grey)"/>
+  <text class="lbl" x="480" y="678" text-anchor="middle">วนกลับไป Fetch ใหม่ — ลูปนี้คือหัวใจของคำว่า 'โปรแกรมทำงาน'</text>
+</svg>
