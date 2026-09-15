@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 620" width="960" height="620" role="img" aria-label="การแปลง assembly เป็น machine instruction 16 บิต">
+  <style>
+    text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 12.5px; fill: #1a1a1a; }
+    .hdr { font-weight: 700; font-size: 17px; }
+    .ptitle { font-weight: 700; font-size: 14.5px; }
+    .sub { fill: #57606a; font-size: 12px; }
+    .tiny { font-size: 11px; fill: #57606a; }
+    .mono { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12.5px; fill: #0969da; }
+    .monob { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12.5px; font-weight: 700; fill: #1a1a1a; }
+    .big { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 24px; font-weight: 700; }
+    .op { fill: #0969da; }
+    .rg { fill: #6639ba; }
+    .im { fill: #1a7f37; }
+    .bit { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 15px; font-weight: 700; fill: #1a1a1a; }
+    .bitn { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 10px; fill: #57606a; }
+    .panel { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.3; }
+    .panelb { fill: #f6f8fa; stroke: #0969da; stroke-width: 1.4; }
+    .cell { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1; }
+    .band-op { fill: #eef4ff; stroke: #0969da; stroke-width: 1.4; }
+    .band-dr { fill: #f3f0ff; stroke: #6639ba; stroke-width: 1.4; }
+    .band-im { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.4; }
+    .band-flag { fill: #fff4e5; stroke: #bc4c00; stroke-width: 1.4; }
+    .lbl { font-size: 12px; fill: #57606a; }
+    .wire { stroke: #57606a; stroke-width: 1.5; fill: none; }
+  </style>
+  <defs>
+    <marker id="a-grey" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#57606a"/></marker>
+  </defs>
+  <text class="hdr" x="480" y="32" text-anchor="middle">1 บรรทัด assembly = 1 คำสั่งเครื่อง 16 บิต (แปลงแบบ 1 ต่อ 1)</text>
+
+  <rect class="panel" x="20" y="52" width="920" height="128" rx="10"/>
+  <text class="ptitle" x="40" y="80" text-anchor="start">A. assembly — ภาษาที่คนเขียน/อ่าน</text>
+  <text class="sub" x="40" y="100" text-anchor="start">หนึ่งบรรทัดบอก CPU ว่า: "บวก R1 กับค่า 1 แล้วเก็บผลกลับ R1" — แต่ละส่วนของบรรทัดมีความหมายตายตัว</text>
+  <text class="big" x="480" y="152" text-anchor="middle"><tspan class="op">ADD</tspan> <tspan class="rg">R1,</tspan> <tspan class="rg">R1,</tspan> <tspan class="im">#1</tspan></text>
+
+  <line class="wire" x1="480" y1="180" x2="480" y2="210" marker-end="url(#a-grey)"/>
+  <text class="tiny" x="492" y="200" text-anchor="start">assembler แปล 1:1</text>
+
+  <rect class="panelb" x="20" y="212" width="920" height="396" rx="10"/>
+  <text class="ptitle" x="40" y="240" text-anchor="start">B. machine instruction — 16 บิตที่ CPU อ่าน (field = ช่องย่อย)</text>
+  <text class="sub" x="40" y="258" text-anchor="start">เลข 16 บิตแบ่งเป็น 5 ช่อง: opcode (ทำอะไร) · DR (เขียนผลที่ไหน) · SR1 (อ่านค่าจากไหน) · 1 (ใช้ค่า immediate) · imm5 (ค่าที่จะบวก)</text>
+
+  <rect class="band-op" x="112" y="272" width="182" height="34" rx="6"/>
+  <text class="monob" x="203" y="294" text-anchor="middle">opcode</text>
+  <rect class="band-dr" x="296" y="272" width="136" height="34" rx="6"/>
+  <text class="monob" x="364" y="294" text-anchor="middle">DR</text>
+  <rect class="band-dr" x="434" y="272" width="136" height="34" rx="6"/>
+  <text class="monob" x="502" y="294" text-anchor="middle">SR1</text>
+  <rect class="band-flag" x="572" y="272" width="44" height="34" rx="6"/>
+  <text class="monob" x="594" y="294" text-anchor="middle">i</text>
+  <rect class="band-im" x="618" y="272" width="228" height="34" rx="6"/>
+  <text class="monob" x="732" y="294" text-anchor="middle">imm5</text>
+
+  <rect class="cell" x="112" y="318" width="44" height="46" rx="4"/><text class="bit" x="134" y="347" text-anchor="middle">0</text>
+  <rect class="cell" x="158" y="318" width="44" height="46" rx="4"/><text class="bit" x="180" y="347" text-anchor="middle">0</text>
+  <rect class="cell" x="204" y="318" width="44" height="46" rx="4"/><text class="bit" x="226" y="347" text-anchor="middle">0</text>
+  <rect class="cell" x="250" y="318" width="44" height="46" rx="4"/><text class="bit" x="272" y="347" text-anchor="middle">1</text>
+  <rect class="cell" x="296" y="318" width="44" height="46" rx="4"/><text class="bit" x="318" y="347" text-anchor="middle">0</text>
+  <rect class="cell" x="342" y="318" width="44" height="46" rx="4"/><text class="bit" x="364" y="347" text-anchor="middle">0</text>
+  <rect class="cell" x="388" y="318" width="44" height="46" rx="4"/><text class="bit" x="410" y="347" text-anchor="middle">1</text>
+  <rect class="cell" x="434" y="318" width="44" height="46" rx="4"/><text class="bit" x="456" y="347" text-anchor="middle">0</text>
+  <rect class="cell" x="480" y="318" width="44" height="46" rx="4"/><text class="bit" x="502" y="347" text-anchor="middle">0</text>
+  <rect class="cell" x="526" y="318" width="44" height="46" rx="4"/><text class="bit" x="548" y="347" text-anchor="middle">1</text>
+  <rect class="cell" x="572" y="318" width="44" height="46" rx="4"/><text class="bit" x="594" y="347" text-anchor="middle">1</text>
+  <rect class="cell" x="618" y="318" width="44" height="46" rx="4"/><text class="bit" x="640" y="347" text-anchor="middle">0</text>
+  <rect class="cell" x="664" y="318" width="44" height="46" rx="4"/><text class="bit" x="686" y="347" text-anchor="middle">0</text>
+  <rect class="cell" x="710" y="318" width="44" height="46" rx="4"/><text class="bit" x="732" y="347" text-anchor="middle">0</text>
+  <rect class="cell" x="756" y="318" width="44" height="46" rx="4"/><text class="bit" x="778" y="347" text-anchor="middle">0</text>
+  <rect class="cell" x="802" y="318" width="44" height="46" rx="4"/><text class="bit" x="824" y="347" text-anchor="middle">1</text>
+
+  <text class="bitn" x="134" y="382" text-anchor="middle">15</text>
+  <text class="bitn" x="180" y="382" text-anchor="middle">14</text>
+  <text class="bitn" x="226" y="382" text-anchor="middle">13</text>
+  <text class="bitn" x="272" y="382" text-anchor="middle">12</text>
+  <text class="bitn" x="318" y="382" text-anchor="middle">11</text>
+  <text class="bitn" x="364" y="382" text-anchor="middle">10</text>
+  <text class="bitn" x="410" y="382" text-anchor="middle">9</text>
+  <text class="bitn" x="456" y="382" text-anchor="middle">8</text>
+  <text class="bitn" x="502" y="382" text-anchor="middle">7</text>
+  <text class="bitn" x="548" y="382" text-anchor="middle">6</text>
+  <text class="bitn" x="594" y="382" text-anchor="middle">5</text>
+  <text class="bitn" x="640" y="382" text-anchor="middle">4</text>
+  <text class="bitn" x="686" y="382" text-anchor="middle">3</text>
+  <text class="bitn" x="732" y="382" text-anchor="middle">2</text>
+  <text class="bitn" x="778" y="382" text-anchor="middle">1</text>
+  <text class="bitn" x="824" y="382" text-anchor="middle">0</text>
+
+  <text class="monob" x="40" y="420" text-anchor="start">รวมกัน = 0001 0010 0110 0001 (ฐานสอง) = x1261 (ฐานสิบหก)</text>
+  <text class="lbl" x="40" y="444" text-anchor="start">· opcode 0001 = "ADD" — ส่วนที่บอกว่า CPU ต้อง "ทำอะไร" (บวกเลข)</text>
+  <text class="lbl" x="40" y="464" text-anchor="start">· DR = 001 = R1 — register ปลายทาง เก็บ "ผลลัพธ์" ไว้ตัวไหน</text>
+  <text class="lbl" x="40" y="484" text-anchor="start">· SR1 = 001 = R1 — register ต้นทาง เอาค่ามาจากตัวไหน (ตัวแรก)</text>
+  <text class="lbl" x="40" y="504" text-anchor="start">· บิต i = 1 — บอกว่า operand ตัวที่สองเป็น "ค่า immediate" (ค่าคงที่เขียนตรง ๆ ในคำสั่ง) ไม่ใช่ register</text>
+  <text class="lbl" x="40" y="524" text-anchor="start">· imm5 = 00001 = +1 — ค่าคงที่นั้น (5 บิต เก็บได้ตั้งแต่ -16 ถึง +15)</text>
+  <text class="lbl" x="40" y="552" text-anchor="start">CPU ไม่เห็นคำว่า "ADD" — มันเห็นแค่เลข 0001 0010 0110 0001 แล้วรู้ว่าต้องบวก register R1 กับค่า +1</text>
+</svg>

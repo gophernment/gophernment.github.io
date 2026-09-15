@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 760" width="960" height="760" role="img" aria-label="การเรียกฟังก์ชันด้วย JSR และ RET ผ่าน R7">
+  <style>
+    text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 12.5px; fill: #1a1a1a; }
+    .hdr { font-weight: 700; font-size: 17px; }
+    .ptitle { font-weight: 700; font-size: 14.5px; }
+    .sub { fill: #57606a; font-size: 12px; }
+    .tiny { font-size: 11px; fill: #57606a; }
+    .mono { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12.5px; fill: #0969da; }
+    .monob { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12.5px; font-weight: 700; fill: #1a1a1a; }
+    .panel { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.3; }
+    .panelb { fill: #f6f8fa; stroke: #0969da; stroke-width: 1.4; }
+    .memcell { fill: #ffffff; stroke: #d0d7de; stroke-width: 1; }
+    .addr { fill: #f6f8fa; }
+    .call { fill: #fff4e5; stroke: #bc4c00; stroke-width: 1.6; }
+    .ret { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.6; }
+    .reg { fill: #f3f0ff; stroke: #6639ba; stroke-width: 1.6; }
+    .warn { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.3; }
+    .callw { stroke: #bc4c00; stroke-width: 1.8; fill: none; }
+    .back { stroke: #1a7f37; stroke-width: 1.8; fill: none; stroke-dasharray: 6 4; }
+    .lbl { font-size: 12px; fill: #57606a; }
+    .bold { font-weight: 700; fill: #1a1a1a; }
+    .arrowlabel { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12px; font-weight: 700; }
+  </style>
+  <defs>
+    <marker id="a-ctrl" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#bc4c00"/></marker>
+    <marker id="a-ret" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1a7f37"/></marker>
+  </defs>
+  <text class="hdr" x="480" y="32" text-anchor="middle">เรียกฟังก์ชัน: JSR กระโดดไป (จำที่กลับไว้ที่ R7) · RET กระโดดกลับ</text>
+
+  <rect class="panel" x="20" y="52" width="380" height="410" rx="10"/>
+  <text class="ptitle" x="36" y="80" text-anchor="start">MAIN — โปรแกรมหลัก</text>
+  <rect class="memcell" x="36" y="94" width="348" height="40" rx="4"/>
+  <rect class="addr" x="36" y="94" width="58" height="40" rx="4"/>
+  <text class="mono" x="44" y="119" text-anchor="start">x3000</text>
+  <text class="monob" x="104" y="119" text-anchor="start">LD R0, A</text>
+  <text class="tiny" x="244" y="119" text-anchor="start">โหลด 3 ใส่ R0</text>
+  <rect class="memcell" x="36" y="138" width="348" height="40" rx="4"/>
+  <rect class="addr" x="36" y="138" width="58" height="40" rx="4"/>
+  <text class="mono" x="44" y="163" text-anchor="start">x3001</text>
+  <text class="monob" x="104" y="163" text-anchor="start">LD R1, B</text>
+  <text class="tiny" x="244" y="163" text-anchor="start">โหลด 4 ใส่ R1</text>
+  <rect class="call" x="36" y="182" width="348" height="40" rx="4"/>
+  <rect class="addr" x="36" y="182" width="58" height="40" rx="4"/>
+  <text class="mono" x="44" y="207" text-anchor="start">x3002</text>
+  <text class="monob" x="104" y="207" text-anchor="start">JSR MULT</text>
+  <text class="tiny" x="244" y="207" text-anchor="start">เรียกฟังก์ชัน MULT</text>
+  <rect class="memcell" x="36" y="226" width="348" height="40" rx="4"/>
+  <rect class="addr" x="36" y="226" width="58" height="40" rx="4"/>
+  <text class="mono" x="44" y="251" text-anchor="start">x3003</text>
+  <text class="monob" x="104" y="251" text-anchor="start">ST R2, RESULT</text>
+  <text class="tiny" x="244" y="251" text-anchor="start">← กลับมาตรงนี้</text>
+  <rect class="memcell" x="36" y="270" width="348" height="40" rx="4"/>
+  <rect class="addr" x="36" y="270" width="58" height="40" rx="4"/>
+  <text class="mono" x="44" y="295" text-anchor="start">x3004</text>
+  <text class="monob" x="104" y="295" text-anchor="start">HALT</text>
+  <text class="tiny" x="244" y="295" text-anchor="start">จบโปรแกรม</text>
+  <rect class="memcell" x="36" y="314" width="348" height="40" rx="4"/>
+  <rect class="addr" x="36" y="314" width="58" height="40" rx="4"/>
+  <text class="mono" x="44" y="339" text-anchor="start">x3005</text>
+  <text class="monob" x="104" y="339" text-anchor="start">A .FILL #3</text>
+  <text class="tiny" x="244" y="339" text-anchor="start">เก็บค่า 3</text>
+  <rect class="memcell" x="36" y="358" width="348" height="40" rx="4"/>
+  <rect class="addr" x="36" y="358" width="58" height="40" rx="4"/>
+  <text class="mono" x="44" y="383" text-anchor="start">x3006</text>
+  <text class="monob" x="104" y="383" text-anchor="start">B .FILL #4</text>
+  <text class="tiny" x="244" y="383" text-anchor="start">เก็บค่า 4</text>
+  <rect class="memcell" x="36" y="402" width="348" height="40" rx="4"/>
+  <rect class="addr" x="36" y="402" width="58" height="40" rx="4"/>
+  <text class="mono" x="44" y="427" text-anchor="start">x3007</text>
+  <text class="monob" x="104" y="427" text-anchor="start">RESULT .FILL #0</text>
+  <text class="tiny" x="244" y="427" text-anchor="start">เก็บผลลัพธ์</text>
+
+  <rect class="panelb" x="560" y="52" width="380" height="276" rx="10"/>
+  <text class="ptitle" x="576" y="80" text-anchor="start">MULT — ฟังก์ชัน (subroutine)</text>
+  <rect class="memcell" x="576" y="94" width="348" height="40" rx="4"/>
+  <rect class="addr" x="576" y="94" width="58" height="40" rx="4"/>
+  <text class="mono" x="584" y="119" text-anchor="start">x3008</text>
+  <text class="monob" x="652" y="119" text-anchor="start">AND R2, R2, #0</text>
+  <text class="tiny" x="792" y="119" text-anchor="start">R2 = 0</text>
+  <rect class="memcell" x="576" y="138" width="348" height="40" rx="4"/>
+  <rect class="addr" x="576" y="138" width="58" height="40" rx="4"/>
+  <text class="mono" x="584" y="163" text-anchor="start">x3009</text>
+  <text class="monob" x="652" y="163" text-anchor="start">ADD R2, R2, R0</text>
+  <text class="tiny" x="792" y="163" text-anchor="start">บวกสะสม</text>
+  <rect class="memcell" x="576" y="182" width="348" height="40" rx="4"/>
+  <rect class="addr" x="576" y="182" width="58" height="40" rx="4"/>
+  <text class="mono" x="584" y="207" text-anchor="start">x300A</text>
+  <text class="monob" x="652" y="207" text-anchor="start">ADD R1, R1, #-1</text>
+  <text class="tiny" x="792" y="207" text-anchor="start">นับถอยหลัง</text>
+  <rect class="memcell" x="576" y="226" width="348" height="40" rx="4"/>
+  <rect class="addr" x="576" y="226" width="58" height="40" rx="4"/>
+  <text class="mono" x="584" y="251" text-anchor="start">x300B</text>
+  <text class="monob" x="652" y="251" text-anchor="start">BRp MLOOP</text>
+  <text class="tiny" x="792" y="251" text-anchor="start">วนถ้ายัง &gt; 0</text>
+  <rect class="ret" x="576" y="270" width="348" height="40" rx="4"/>
+  <rect class="addr" x="576" y="270" width="58" height="40" rx="4"/>
+  <text class="mono" x="584" y="295" text-anchor="start">x300C</text>
+  <text class="monob" x="652" y="295" text-anchor="start">RET</text>
+  <text class="tiny" x="792" y="295" text-anchor="start">= JMP R7 (กลับ)</text>
+
+  <polyline class="callw" points="384,202 470,202 470,114 560,114" marker-end="url(#a-ctrl)"/>
+  <text class="arrowlabel" x="452" y="150" text-anchor="middle" fill="#bc4c00">JSR</text>
+  <polyline class="back" points="576,290 470,290 470,246 388,246" marker-end="url(#a-ret)"/>
+  <text class="arrowlabel" x="452" y="282" text-anchor="middle" fill="#1a7f37">RET</text>
+
+  <rect class="reg" x="20" y="482" width="920" height="88" rx="10"/>
+  <text class="bold" x="36" y="508" text-anchor="start">R7 = register เก็บ "return address" (ที่อยู่สำหรับกลับ)</text>
+  <text class="tiny" x="36" y="528" text-anchor="start">ตอน JSR ทำงาน มันจะก๊อป address ของคำสั่งถัดไป (x3003) ลง R7 ก่อน แล้วค่อยกระโดดไป MULT — พอถึง RET (ย่อจาก JMP R7)</text>
+  <text class="tiny" x="36" y="546" text-anchor="start">ก็กระโดดกลับไปที่ x3003 พอดี · กลไกนี้คือตัวเดียวกับที่ Go ใช้เรียกฟังก์ชัน (ตอน 05) เพียงแต่ Go จัดการให้เอง</text>
+  <text class="tiny" x="36" y="564" text-anchor="start">address ในภาพคือตำแหน่งจริงที่ assembler จัดวางให้ (ตรวจจาก LC3Tools) — จะต่างกันถ้าเราใส่คำสั่งเพิ่ม</text>
+
+  <rect class="warn" x="20" y="586" width="920" height="158" rx="10"/>
+  <text class="bold" x="36" y="614" text-anchor="start">ข้อควรระวัง: ฟังก์ชัน "ทับ" ค่า register ของคนเรียกได้</text>
+  <text class="tiny" x="36" y="636" text-anchor="start">ฟังก์ชัน MULT เปลี่ยนค่า R1 (นับถอยหลังจนเหลือ 0) — ถ้า MAIN ยังอยากใช้ค่าเดิมของ R1 ต่อ ต้อง "save" (เก็บ) ค่าเดิมไว้ก่อนเรียก</text>
+  <text class="tiny" x="36" y="656" text-anchor="start">แล้ว "restore" (คืน) หลังกลับมา · นี่คือที่มาของ calling convention (ข้อตกลงว่าใครเป็นคน save / restore) ซึ่งเป็นหัวข้อของตอน 15</text>
+  <text class="tiny" x="36" y="676" text-anchor="start">และเป็นเหตุผลที่ register จำนวนจำกัด (8 ตัว) กลายเป็น "ทรัพยากรมีค่า" ที่ต้องบริหาร</text>
+  <text class="tiny" x="36" y="700" text-anchor="start">หมายเหตุ: address ของ MAIN และ MULT ต่อกันเป็นชุดเดียว (โปรแกรมเดียว วางเรียงกันในหน่วยความจำ)</text>
+</svg>
