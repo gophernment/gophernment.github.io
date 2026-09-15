@@ -1,5 +1,23 @@
 [
   {
+    "slug": "2026-09-15-cs-fundamentals-12-assembly-first-program",
+    "title": "Assembly เบื้องต้น (LC-3): เขียน loop + เรียกฟังก์ชัน ด้วยภาษาที่ CPU เข้าใจโดยตรง (ตอนที่ 12)",
+    "date": "2026-09-15",
+    "tags": [
+      "cs-fundamentals",
+      "computer-science",
+      "assembly",
+      "lc-3",
+      "isa",
+      "loop",
+      "subroutine",
+      "register",
+      "condition-code",
+      "basics"
+    ],
+    "description": "ต่อจากตอน 11 (CPU fetch-decode-execute): ลงมือเขียน 'ภาษาเครื่อง' จริง ๆ ด้วย LC-3 — เรียนว่า 1 บรรทัด assembly แปลงเป็นคำสั่ง 16 บิตยังไง เขียน loop ด้วย condition code (N/Z/P) และเรียกฟังก์ชันด้วย JSR/RET พร้อมรันใน LC3Tools"
+  },
+  {
     "slug": "2026-09-14-cs-fundamentals-11-cpu-fetch-decode-execute",
     "title": "CPU: วงจร fetch-decode-execute — เครื่องอ่านคำสั่งแล้วลงมือทำได้ยังไง (ตอนที่ 11)",
     "date": "2026-09-14",
