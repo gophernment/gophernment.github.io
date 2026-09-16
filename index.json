@@ -1,5 +1,17 @@
 [
   {
+    "slug": "2026-09-16-cs-fundamentals-13-c-basics-vs-go",
+    "title": "C เบื้องต้น: เทียบกับ Go และ pointer แรกของเรา (ตอนที่ 13)",
+    "date": "2026-09-16",
+    "tags": [
+      "cs-fundamentals",
+      "c",
+      "go",
+      "pointer"
+    ],
+    "description": "ตอนที่ 13 ของคอร์ส CS Fundamentals — เขียนโปรแกรม C ตัวแรก (hello.c, types.c, pointer_demo.c) เทียบทีละบรรทัดกับ Go ที่เราเรียนมา เรียนชนิดข้อมูลและ sizeof, ถอดรหัส pointer (& และ *) ด้วยสายตาที่อ่าน assembly เป็นแล้ว และดูว่า Go ซ่อนอะไรไว้ให้เรา (GC, memory safety, การห้ามบวก address)"
+  },
+  {
     "slug": "2026-09-15-cs-fundamentals-12-assembly-first-program",
     "title": "Assembly เบื้องต้น (LC-3): เขียน loop + เรียกฟังก์ชัน ด้วยภาษาที่ CPU เข้าใจโดยตรง (ตอนที่ 12)",
     "date": "2026-09-15",
