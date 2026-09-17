@@ -1,5 +1,18 @@
 [
   {
+    "slug": "2026-09-17-cs-fundamentals-14-pointers-arrays",
+    "title": "pointer + array: มองหน่วยความจำเป็น address (ตอนที่ 14)",
+    "date": "2026-09-17",
+    "tags": [
+      "cs-fundamentals",
+      "c",
+      "pointer",
+      "array",
+      "memory"
+    ],
+    "description": "ตอนที่ 14 ของคอร์ส CS Fundamentals — เจาะลึกความสัมพันธ์ระหว่าง pointer กับ array: array decay (ชื่อ array คือ pointer ชี้ช่องแรก), ทำไมส่ง array เข้าฟังก์ชันแล้วขนาดหาย, การเดินผ่าน array ด้วย pointer arithmetic, pointer บวกได้กี่ไบต์ตามชนิดข้อมูล, array หลายมิติแบบ row-major และข้อความใน C ที่แท้จริงคือ char* — ทุกโปรแกรมคอมไพล์และรันจริง"
+  },
+  {
     "slug": "2026-09-16-cs-fundamentals-13-c-basics-vs-go",
     "title": "C เบื้องต้น: เทียบกับ Go และ pointer แรกของเรา (ตอนที่ 13)",
     "date": "2026-09-16",
