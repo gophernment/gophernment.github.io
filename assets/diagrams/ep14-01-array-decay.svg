@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 700" width="980" height="700" role="img" aria-label="array 3 ช่องในหน่วยความจำ และ pointer ที่ชี้ช่องแรก">
+  <style>
+    text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 13px; fill: #1a1a1a; }
+    .hdr { font-weight: 700; font-size: 17.5px; }
+    .ptitle { font-weight: 700; font-size: 14.5px; }
+    .sub { fill: #57606a; font-size: 12.5px; }
+    .lbl { fill: #57606a; font-size: 11.5px; }
+    .tiny { fill: #57606a; font-size: 11px; }
+    .mono { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12.5px; }
+    .monob { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12.5px; font-weight: 700; fill: #0550ae; }
+    .big { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 20px; font-weight: 700; fill: #1a7f37; }
+    .addr { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12px; fill: #57606a; }
+    .panel { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.3; }
+    .cell { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.2; }
+    .cellhi { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.9; }
+    .cellthin { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.2; }
+    .notebox { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.3; }
+    .cbox { fill: #eef4ff; stroke: #0969da; stroke-width: 1.3; }
+    .gobox { fill: #e6f4ff; stroke: #0a7ea4; stroke-width: 1.3; }
+    .warnbox { fill: #fdf2f2; stroke: #cf222e; stroke-width: 1.3; }
+    .rowband { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1; }
+    .wire { stroke: #1a7f37; stroke-width: 2.2; fill: none; }
+    .wire2 { stroke: #57606a; stroke-width: 1.6; fill: none; }
+  </style>
+  <defs>
+    <marker id="arr-g" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1a7f37"/></marker>
+    <marker id="arr-n" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#57606a"/></marker>
+  </defs>
+  <rect class="bg" x="0" y="0" width="980" height="700" fill="#ffffff"/>
+
+<text class="hdr" x="490" y="34" text-anchor="middle">ชื่อ array คือ pointer ที่ชี้ช่องแรก — แต่ sizeof ต่างกันคนละเรื่อง</text>
+<text class="sub" x="490" y="58" text-anchor="middle">int a[3] = {10, 20, 30};   int *p = a;   — ช่องที่อยู่ติดกันห่างกัน 4 ไบต์ เพราะ int กว้าง 4 ไบต์</text>
+<rect class="panel" x="30" y="96" width="330" height="92" rx="10"/>
+<text class="ptitle" x="44" y="120">ชื่อ array: a (ชนิด int a[3])</text>
+<text class="mono" x="44" y="142">int a[3] = {10, 20, 30};</text>
+<text class="lbl" x="44" y="162">sizeof(a) = 12 ไบต์ = ทั้ง array (3 x 4)</text>
+<text class="lbl" x="44" y="180">ใช้ a เดี่ยว ๆ = ได้ address ช่องแรก</text>
+<rect class="panel" x="30" y="206" width="330" height="136" rx="10"/>
+<text class="ptitle" x="44" y="230">ตัว pointer: p (ชนิด int *)</text>
+<text class="mono" x="44" y="252">int *p = a;</text>
+<text class="lbl" x="44" y="272">sizeof(p) = 8 ไบต์ = แค่ตัว pointer</text>
+<text class="lbl" x="44" y="290">a == p และ a == &amp;a[0] เป็นจริงทั้งคู่</text>
+<rect class="panel" x="30" y="352" width="330" height="108" rx="10"/>
+<text class="ptitle" x="44" y="376">ที่อยู่ของ 'ทั้ง array': &amp;a</text>
+<text class="mono" x="44" y="398">int (*pa)[3] = &amp;a;</text>
+<text class="lbl" x="44" y="418">sizeof(&amp;a) = 8 ไบต์ แต่ sizeof(*pa) = 12</text>
+<text class="lbl" x="44" y="436">address เดียวกัน แต่นับ 'ช่อง' ต่างกัน</text>
+<rect class="cellhi" x="44" y="300" width="302" height="34" rx="6"/>
+<text class="addr" x="56" y="322">0x7fffc0881418</text>
+<text class="lbl" x="334" y="322" text-anchor="end">= ค่าที่เก็บใน p</text>
+<text class="ptitle" x="430" y="88">หน่วยความจำจริง (เรียงติดกันจากบนลงล่าง)</text>
+<rect class="cell" x="430" y="100" width="520" height="62" rx="8"/>
+<text class="addr" x="446" y="124">0x7fffc0881414</text>
+<text class="big" x="446" y="150">(ช่องอื่น)</text>
+<text class="lbl" x="934" y="140" text-anchor="end">ว่าง/ไม่ได้ใช้</text>
+<rect class="cellhi" x="430" y="170" width="520" height="62" rx="8"/>
+<text class="addr" x="446" y="194">0x7fffc0881418</text>
+<text class="big" x="446" y="220">10</text>
+<text class="monob" x="934" y="210" text-anchor="end">a[0]  +0 ไบต์</text>
+<rect class="cellhi" x="430" y="240" width="520" height="62" rx="8"/>
+<text class="addr" x="446" y="264">0x7fffc088141c</text>
+<text class="big" x="446" y="290">20</text>
+<text class="monob" x="934" y="280" text-anchor="end">a[1]  +4 ไบต์</text>
+<rect class="cellhi" x="430" y="310" width="520" height="62" rx="8"/>
+<text class="addr" x="446" y="334">0x7fffc0881420</text>
+<text class="big" x="446" y="360">30</text>
+<text class="monob" x="934" y="350" text-anchor="end">a[2]  +8 ไบต์</text>
+<rect class="cell" x="430" y="380" width="520" height="62" rx="8"/>
+<text class="addr" x="446" y="404">0x7fffc0881424</text>
+<text class="big" x="446" y="430">(ช่องอื่น)</text>
+<text class="lbl" x="934" y="420" text-anchor="end">ว่าง/ไม่ได้ใช้</text>
+<line class="wire" x1="366" y1="317" x2="424" y2="317" marker-end="url(#arr-g)"/>
+<text class="lbl" x="395" y="309" text-anchor="middle">ชี้ที่</text>
+<line class="wire" x1="366" y1="317" x2="424" y2="177" marker-end="url(#arr-g)"/>
+<rect class="notebox" x="30" y="470" width="920" height="200" rx="10"/>
+<text class="ptitle" x="50" y="498">สี่ข้อที่ต้องแยกให้ออก (นี่คือหัวใจของตอนนี้)</text>
+<text class="mono" x="50" y="530">1) a กับ &amp;a[0] ให้ address เท่ากัน — เพราะชื่อ array ในนิพจน์ถูกแปลงเป็น pointer ชี้ช่องแรกให้เอง (array decay)</text>
+<text class="mono" x="50" y="562">2) sizeof(a) = 12 ไบต์ (ทั้ง array) แต่ sizeof(p) = 8 ไบต์ (ตัว pointer)</text>
+<text class="mono" x="50" y="594">     นี่คือหลักฐานว่า a ยังเป็น array ไม่ได้กลายเป็น pointer</text>
+<text class="mono" x="50" y="626">3) a + 0 ก็กลายเป็น pointer แล้ว (sizeof ได้ 8) — decay เกิดเมื่อใช้ a ในนิพจน์</text>
+<text class="mono" x="50" y="658">4) a+1 เลื่อน 4 ไบต์ (ช่องถัดไป) แต่ &amp;a+1 เลื่อน 12 ไบต์ (ข้ามทั้ง array)</text>
+</svg>

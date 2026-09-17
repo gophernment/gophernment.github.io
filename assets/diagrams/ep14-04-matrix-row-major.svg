@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 680" width="980" height="680" role="img" aria-label="int m[2][3] วางเรียงในหน่วยความจำแบบ row-major">
+  <style>
+    text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 13px; fill: #1a1a1a; }
+    .hdr { font-weight: 700; font-size: 17.5px; }
+    .ptitle { font-weight: 700; font-size: 14.5px; }
+    .sub { fill: #57606a; font-size: 12.5px; }
+    .lbl { fill: #57606a; font-size: 11.5px; }
+    .tiny { fill: #57606a; font-size: 11px; }
+    .mono { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12.5px; }
+    .monob { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12.5px; font-weight: 700; fill: #0550ae; }
+    .big { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 20px; font-weight: 700; fill: #1a7f37; }
+    .addr { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12px; fill: #57606a; }
+    .panel { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.3; }
+    .cell { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.2; }
+    .cellhi { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.9; }
+    .cellthin { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.2; }
+    .notebox { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.3; }
+    .cbox { fill: #eef4ff; stroke: #0969da; stroke-width: 1.3; }
+    .gobox { fill: #e6f4ff; stroke: #0a7ea4; stroke-width: 1.3; }
+    .warnbox { fill: #fdf2f2; stroke: #cf222e; stroke-width: 1.3; }
+    .rowband { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1; }
+    .wire { stroke: #1a7f37; stroke-width: 2.2; fill: none; }
+    .wire2 { stroke: #57606a; stroke-width: 1.6; fill: none; }
+  </style>
+  <defs>
+    <marker id="arr-g" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1a7f37"/></marker>
+    <marker id="arr-n" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#57606a"/></marker>
+  </defs>
+  <rect class="bg" x="0" y="0" width="980" height="680" fill="#ffffff"/>
+
+<text class="hdr" x="490" y="34" text-anchor="middle">int m[2][3] ในหน่วยความจำ: เรียงทีละแถว (row-major)</text>
+<text class="sub" x="490" y="58" text-anchor="middle">array ของ array ไม่ได้เป็นตารางจริง ๆ — มันคือ 6 ช่องเรียงติดกัน แล้ว C แค่คำนวณที่อยู่ให้</text>
+<rect class="cellhi" x="60" y="100" width="145" height="86" rx="8"/>
+<text class="lbl" x="132.5" y="122" text-anchor="middle">m[0][0]</text>
+<text class="big" x="132.5" y="156" text-anchor="middle">1</text>
+<text class="addr" x="132.5" y="178" text-anchor="middle">+0 ไบต์</text>
+<rect class="cellhi" x="213" y="100" width="145" height="86" rx="8"/>
+<text class="lbl" x="285.5" y="122" text-anchor="middle">m[0][1]</text>
+<text class="big" x="285.5" y="156" text-anchor="middle">2</text>
+<text class="addr" x="285.5" y="178" text-anchor="middle">+4 ไบต์</text>
+<rect class="cellhi" x="366" y="100" width="145" height="86" rx="8"/>
+<text class="lbl" x="438.5" y="122" text-anchor="middle">m[0][2]</text>
+<text class="big" x="438.5" y="156" text-anchor="middle">3</text>
+<text class="addr" x="438.5" y="178" text-anchor="middle">+8 ไบต์</text>
+<rect class="cell" x="519" y="100" width="145" height="86" rx="8"/>
+<text class="lbl" x="591.5" y="122" text-anchor="middle">m[1][0]</text>
+<text class="big" x="591.5" y="156" text-anchor="middle">4</text>
+<text class="addr" x="591.5" y="178" text-anchor="middle">+12 ไบต์</text>
+<rect class="cell" x="672" y="100" width="145" height="86" rx="8"/>
+<text class="lbl" x="744.5" y="122" text-anchor="middle">m[1][1]</text>
+<text class="big" x="744.5" y="156" text-anchor="middle">5</text>
+<text class="addr" x="744.5" y="178" text-anchor="middle">+16 ไบต์</text>
+<rect class="cell" x="825" y="100" width="145" height="86" rx="8"/>
+<text class="lbl" x="897.5" y="122" text-anchor="middle">m[1][2]</text>
+<text class="big" x="897.5" y="156" text-anchor="middle">6</text>
+<text class="addr" x="897.5" y="178" text-anchor="middle">+20 ไบต์</text>
+<text class="lbl" x="60" y="88">เรียงจากซ้ายไปขวา: แถว 0 จบก่อน แล้วต่อแถว 1 — ไม่มีที่ว่างคั่น</text>
+<path class="wire2" d="M 60 196 L 60 204 L 511 204 L 511 196" />
+<text class="monob" x="285" y="222" text-anchor="middle">แถว 0 (m[0]) = 12 ไบต์</text>
+<path class="wire2" d="M 519 196 L 519 204 L 970 204 L 970 196" />
+<text class="monob" x="744" y="222" text-anchor="middle">แถว 1 (m[1]) = 12 ไบต์</text>
+<rect class="cbox" x="30" y="244" width="450" height="180" rx="10"/>
+<text class="ptitle" x="48" y="270">ชื่อ array แต่ละชั้นมีชนิดคนละแบบ</text>
+<text class="mono" x="48" y="298">m     -&gt; int (*)[3] : sizeof(*m) = 12 (หนึ่งแถว)</text>
+<text class="mono" x="48" y="328">m[0]  -&gt; int *      : sizeof(*m[0]) = 4 (หนึ่งช่อง)</text>
+<text class="mono" x="48" y="358">m + 1 เลื่อน 12 ไบต์ ; m[0] + 1 เลื่อน 4 ไบต์</text>
+<text class="mono" x="48" y="388">m[1][2] = *(*(m + 1) + 2) = (*(m + 1))[2] = 6</text>
+<rect class="gobox" x="500" y="244" width="450" height="180" rx="10"/>
+<text class="ptitle" x="518" y="270">เดินแบบแบนด้วย pointer ช่องเดียว</text>
+<text class="mono" x="518" y="298">int *flat = &amp;amp;m[0][0];</text>
+<text class="mono" x="518" y="328">flat[4] == m[1][1] -&gt; จริง (ค่าคือ 5)</text>
+<text class="mono" x="518" y="358">เดิน i = 0..5 ได้ 1 2 3 4 5 6 ตามลำดับ</text>
+<text class="mono" x="518" y="388">ใช้ได้เพราะทุกช่องติดกัน — แต่ต้องรู้ขนาดเอง</text>
+<rect class="notebox" x="30" y="440" width="920" height="210" rx="10"/>
+<text class="ptitle" x="50" y="468">ทำไมต้องรู้เรื่องนี้</text>
+<text class="mono" x="50" y="498">• m[1][2] ที่เราเขียนสบาย ๆ จริง ๆ แล้ว compiler แปลเป็น *(*(m + 1) + 2) — บวกเป็นช่องตามชนิดของแต่ละชั้น</text>
+<text class="mono" x="50" y="528">• สูตรที่ compiler ใช้คือ offset = (แถว x จำนวนคอลัมน์ + คอลัมน์) x sizeof(ช่อง)</text>
+<text class="mono" x="50" y="558">     offset = ระยะห่างเป็นไบต์จากช่องแรก → m[1][2] = (1 x 3 + 2) x 4 = 20 ไบต์  (ตรงกับผลรันจริง)</text>
+<text class="mono" x="50" y="588">• ขนาดของ array หลายชั้น: sizeof(m) = 24, sizeof(m[0]) = 12, sizeof(m[0][0]) = 4 — เอามาหารกันได้จำนวนแถว/คอลัมน์</text>
+<text class="mono" x="50" y="618">• ส่ง m เข้าฟังก์ชัน: จำนวน “แถว” หายไป แต่ “จำนวนคอลัมน์” ติดมากับชนิด int (*)[3] ให้เอง — ส่งแค่จำนวนแถวเข้ามา</text>
+</svg>
