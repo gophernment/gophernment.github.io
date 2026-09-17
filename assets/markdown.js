@@ -129,6 +129,16 @@ function renderMarkdown(md) {
       continue;
     }
 
+    if (/^\d+[.)]\s+/.test(line)) {
+      html += "<ol>\n";
+      while (i < lines.length && /^\d+[.)]\s+/.test(lines[i])) {
+        html += `<li>${renderInline(lines[i].replace(/^\d+[.)]\s+/, ""))}</li>\n`;
+        i++;
+      }
+      html += "</ol>\n";
+      continue;
+    }
+
     if (/^\s*(-{3,}|\*{3,})\s*$/.test(line)) {
       html += "<hr>\n";
       i++;
@@ -142,6 +152,7 @@ function renderMarkdown(md) {
       !lines[i].startsWith("```") &&
       !/^#{1,6}\s/.test(lines[i]) &&
       !/^[-*]\s+/.test(lines[i]) &&
+      !/^\d+[.)]\s+/.test(lines[i]) &&
       !/^>\s?/.test(lines[i])
     ) {
       paraLines.push(lines[i]);
