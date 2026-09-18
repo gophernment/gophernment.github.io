@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 660" width="980" height="660" role="img" aria-label="พื้นที่หน่วยความจำของโปรแกรม: stack บนสุด (address สูง) ลงมาถึง text ล่างสุด (address ต่ำ)">
+  <style>
+    text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 13px; fill: #1a1a1a; }
+    .hdr { font-weight: 700; font-size: 17.5px; }
+    .ptitle { font-weight: 700; font-size: 14.5px; }
+    .sub { fill: #57606a; font-size: 12.5px; }
+    .lbl { fill: #57606a; font-size: 11.5px; }
+    .tiny { fill: #57606a; font-size: 11px; }
+    .mono { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12.5px; }
+    .monob { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12.5px; font-weight: 700; fill: #0550ae; }
+    .big { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 20px; font-weight: 700; fill: #1a7f37; }
+    .addr { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12px; fill: #57606a; }
+    .panel { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.3; }
+    .cell { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.2; }
+    .cellhi { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.9; }
+    .cellthin { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.2; }
+    .notebox { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.3; }
+    .cbox { fill: #eef4ff; stroke: #0969da; stroke-width: 1.3; }
+    .gobox { fill: #e6f4ff; stroke: #0a7ea4; stroke-width: 1.3; }
+    .warnbox { fill: #fdf2f2; stroke: #cf222e; stroke-width: 1.3; }
+    .rowband { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1; }
+    .wire { stroke: #1a7f37; stroke-width: 2.2; fill: none; }
+    .wire2 { stroke: #57606a; stroke-width: 1.6; fill: none; }
+    .textseg { fill: #eef4ff; stroke: #0969da; stroke-width: 1.3; }
+    .dataseg { fill: #e6f4ff; stroke: #0a7ea4; stroke-width: 1.3; }
+    .heapseg { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.3; }
+    .stackseg { fill: #fdf2f2; stroke: #cf222e; stroke-width: 1.3; }
+  </style>
+  <defs>
+    <marker id="arr-g" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1a7f37"/></marker>
+    <marker id="arr-r" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#cf222e"/></marker>
+    <marker id="arr-n" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#57606a"/></marker>
+  </defs>
+  <rect class="bg" x="0" y="0" width="980" height="660" fill="#ffffff"/>
+
+<text class="hdr" x="490" y="34" text-anchor="middle">พื้นที่หน่วยความจำของโปรแกรม: 4 ส่วน (มุมสูง)</text>
+<text class="sub" x="490" y="58" text-anchor="middle">เรียงจาก address สูงลงต่ำตามผลรันจริง: stack (0x7fff...) บนสุด · text/data/heap (0x5555...) อยู่ล่าง</text>
+<text class="lbl" x="20" y="86">address สูง</text>
+<line class="wire2" x1="100" y1="82" x2="100" y2="610"/>
+<text class="lbl" x="20" y="622">address ต่ำ</text>
+<rect class="stackseg" x="130" y="96" width="810" height="64" rx="10"/>
+<text class="ptitle" x="146" y="122">stack — ตัวแปรท้องถิ่น + เฟรมฟังก์ชัน</text>
+<text class="lbl" x="146" y="144">โตลง ↓ · main_local, ตัวรับ argument, ตัวแปรท้องถิ่นทุกตัว (0x7fff...)</text>
+<rect class="cell" x="130" y="170" width="810" height="130" rx="10"/>
+<text class="lbl" x="146" y="194">... ที่ว่างมหึมา (ห่างกัน ~42 เทระไบต์) ...</text>
+<text class="lbl" x="146" y="216">ตัวเลขนี้คือ "โลกเสมือน" ของโปรแกรม ไม่ใช่ RAM จริง — ชัดเต็ม ๆ ในตอน virtual memory</text>
+<rect class="heapseg" x="130" y="310" width="810" height="64" rx="10"/>
+<text class="ptitle" x="146" y="336">heap — จองเองตอนรัน (malloc / free)</text>
+<text class="lbl" x="146" y="358">โตขึ้น ↑ · h1, h2 ที่ malloc ให้อยู่ที่นี่ (0x5555...)</text>
+<rect class="dataseg" x="130" y="384" width="810" height="64" rx="10"/>
+<text class="ptitle" x="146" y="410">data — ตัวแปร global / static</text>
+<text class="lbl" x="146" y="432">เช่นตัวแปร base ใน stack_frame.c (0x5555...)</text>
+<rect class="textseg" x="130" y="458" width="810" height="64" rx="10"/>
+<text class="ptitle" x="146" y="484">text — โค้ดโปรแกรม (อ่านอย่างเดียว)</text>
+<text class="lbl" x="146" y="506">ฟังก์ชัน main / foo / bar อยู่ที่นี่ (0x5555...)</text>
+<line class="wire" x1="920" y1="108" x2="920" y2="136" marker-end="url(#arr-r)"/>
+<text class="lbl" x="904" y="130" text-anchor="end">โตลง</text>
+<line class="wire" x1="920" y1="362" x2="920" y2="334" marker-end="url(#arr-g)"/>
+<text class="lbl" x="904" y="344" text-anchor="end">โตขึ้น</text>
+<rect class="notebox" x="130" y="538" width="810" height="106" rx="10"/>
+<text class="ptitle" x="146" y="564">จำ 4 จุด: stack บนสุด (โตลง) · ตรงกลางว่าง · heap โตขึ้น · text กับ data อยู่ล่างสุด</text>
+<text class="lbl" x="146" y="592">ตัวแปรท้องถิ่นทุกตัวเกิดที่ stack · malloc/free ไปเอาเนื้อที่จาก heap — นี่คือคำตอบของคำถามค้างจากตอน 14</text>
+<text class="lbl" x="146" y="620">ข้อควรรู้: ลำดับนี้เป็นภาพรวมของ Linux ทั่วไป ไม่ใช่กฎตายตัวของทุก OS</text>
+</svg>

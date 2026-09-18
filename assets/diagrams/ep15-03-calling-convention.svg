@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 700" width="980" height="700" role="img" aria-label="6 ขั้นตอนของการเรียกฟังก์ชันบน aarch64 ผูกกับ register x0-x7, x30, sp">
+  <style>
+    text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 13px; fill: #1a1a1a; }
+    .hdr { font-weight: 700; font-size: 17.5px; }
+    .ptitle { font-weight: 700; font-size: 14.5px; }
+    .sub { fill: #57606a; font-size: 12.5px; }
+    .lbl { fill: #57606a; font-size: 11.5px; }
+    .tiny { fill: #57606a; font-size: 11px; }
+    .mono { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12.5px; }
+    .monob { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12.5px; font-weight: 700; fill: #0550ae; }
+    .big { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 20px; font-weight: 700; fill: #1a7f37; }
+    .addr { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12px; fill: #57606a; }
+    .panel { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.3; }
+    .cell { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.2; }
+    .cellhi { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.9; }
+    .cellthin { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.2; }
+    .notebox { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.3; }
+    .cbox { fill: #eef4ff; stroke: #0969da; stroke-width: 1.3; }
+    .gobox { fill: #e6f4ff; stroke: #0a7ea4; stroke-width: 1.3; }
+    .warnbox { fill: #fdf2f2; stroke: #cf222e; stroke-width: 1.3; }
+    .rowband { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1; }
+    .wire { stroke: #1a7f37; stroke-width: 2.2; fill: none; }
+    .wire2 { stroke: #57606a; stroke-width: 1.6; fill: none; }
+    .textseg { fill: #eef4ff; stroke: #0969da; stroke-width: 1.3; }
+    .dataseg { fill: #e6f4ff; stroke: #0a7ea4; stroke-width: 1.3; }
+    .heapseg { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.3; }
+    .stackseg { fill: #fdf2f2; stroke: #cf222e; stroke-width: 1.3; }
+  </style>
+  <defs>
+    <marker id="arr-g" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1a7f37"/></marker>
+    <marker id="arr-r" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#cf222e"/></marker>
+    <marker id="arr-n" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#57606a"/></marker>
+  </defs>
+  <rect class="bg" x="0" y="0" width="980" height="700" fill="#ffffff"/>
+
+<text class="hdr" x="490" y="34" text-anchor="middle">calling convention: 6 ขั้นตอนของการเรียกฟังก์ชัน (aarch64)</text>
+<text class="sub" x="490" y="58" text-anchor="middle">calling convention = "ธรรมเนียมตกลงกัน" ว่า argument เดินทางยังไง ค่าคืนกลับมาทางไหน (ดูจาก assembly จริง)</text>
+<rect class="cbox" x="70" y="86" width="840" height="74" rx="10"/>
+<text class="big" x="96" y="126">1</text>
+<text class="ptitle" x="140" y="114">ผู้เรียกใส่ argument ลง register</text>
+<text class="mono" x="140" y="138">8 ตัวแรกใส่ x0–x7 (ตัวที่ 9+ วางบน stack)</text>
+<rect class="gobox" x="70" y="170" width="840" height="74" rx="10"/>
+<text class="big" x="96" y="210">2</text>
+<text class="ptitle" x="140" y="198">bl func — เก็บ return address แล้วกระโดด</text>
+<text class="mono" x="140" y="222">return address ถูกบันทึกลง x30 (เรียกอีกชื่อว่า lr)</text>
+<rect class="gobox" x="70" y="254" width="840" height="74" rx="10"/>
+<text class="big" x="96" y="294">3</text>
+<text class="ptitle" x="140" y="282">sub sp, sp, #N — จอง stack frame</text>
+<text class="mono" x="140" y="306">เผื่อที่ให้ตัวแปรท้องถิ่นของฟังก์ชันที่ถูกเรียก</text>
+<rect class="cell" x="70" y="338" width="840" height="74" rx="10"/>
+<text class="big" x="96" y="378">4</text>
+<text class="ptitle" x="140" y="366">ทำงานตามโค้ดในตัวฟังก์ชัน</text>
+<text class="mono" x="140" y="390">อ่าน/เขียนตัวแปรท้องถิ่นจากเฟรมที่เพิ่งจอง</text>
+<rect class="gobox" x="70" y="422" width="840" height="74" rx="10"/>
+<text class="big" x="96" y="462">5</text>
+<text class="ptitle" x="140" y="450">ใส่ค่าคืนลง x0</text>
+<text class="mono" x="140" y="474">ค่าที่ return ออกไปเดินทางผ่าน register x0</text>
+<rect class="cbox" x="70" y="506" width="840" height="74" rx="10"/>
+<text class="big" x="96" y="546">6</text>
+<text class="ptitle" x="140" y="534">add sp + ret — คืนเฟรม แล้วกระโดดกลับ</text>
+<text class="mono" x="140" y="558">ret กระโดดกลับตามที่อยู่ใน x30 (= return address)</text>
+<rect class="notebox" x="70" y="590" width="840" height="96" rx="10"/>
+<text class="ptitle" x="86" y="616">ทั้งหมดนี้ = calling convention — ข้อตกลงที่ compiler กับทุกฟังก์ชันยึดร่วมกัน</text>
+<text class="lbl" x="86" y="646">บน x86-64 ชื่อ register ต่างกัน (args: rdi, rsi, rdx, rcx, r8, r9 · ค่าคืน: rax) — หลักการเหมือนกัน</text>
+</svg>
