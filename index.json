@@ -1,5 +1,18 @@
 [
   {
+    "slug": "2026-09-18-cs-fundamentals-15-stack-heap-calling",
+    "title": "stack vs heap + calling convention: เกิดอะไรขึ้นตอนเรียกฟังก์ชัน (ตอนที่ 15)",
+    "date": "2026-09-18",
+    "tags": [
+      "cs-fundamentals",
+      "c",
+      "memory",
+      "stack",
+      "heap"
+    ],
+    "description": "ตอนที่ 15 ของคอร์ส CS Fundamentals — เปิดฝาหน่วยความจำดูของจริง: stack (ที่พักตัวแปรท้องถิ่น) กับ heap (เนื้อที่ที่จองเองด้วย malloc/free) ต่างกันยังไง และ calling convention (ธรรมเนียมการเรียกฟังก์ชัน) ทำงานยังไง ดูจาก assembly จริง พร้อม stack overflow, dangling pointer และ escape analysis ของ Go — ทุกโปรแกรมคอมไพล์และรันจริง"
+  },
+  {
     "slug": "2026-09-17-cs-fundamentals-14-pointers-arrays",
     "title": "pointer + array: มองหน่วยความจำเป็น address (ตอนที่ 14)",
     "date": "2026-09-17",
