@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 690" width="1080" height="690" role="img" aria-label="confidence-gated routing: แบ่ง confidence เป็น 3 ช่วง แล้วให้โค้ดตัดสินใจต่างกัน">
+  <style>
+    text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 13px; fill: #1a1a1a; }
+    .hdr { font-weight: 700; font-size: 18px; }
+    .sub { fill: #57606a; font-size: 12.5px; }
+    .ptitle { font-weight: 700; font-size: 15px; }
+    .phdr { font-weight: 700; font-size: 13.5px; }
+    .body { font-size: 13px; }
+    .mono { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12.5px; }
+    .monob { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12.5px; font-weight: 700; fill: #0550ae; }
+    .monog { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12.5px; font-weight: 700; fill: #1a7f37; }
+    .monor { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12.5px; font-weight: 700; fill: #cf222e; }
+    .tiny { fill: #57606a; font-size: 11.5px; }
+    .panel { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.4; }
+    .cell { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.2; }
+    .bluebox { fill: #eef4ff; stroke: #0969da; stroke-width: 1.4; }
+    .greenbox { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.4; }
+    .warnbox { fill: #fdf2f2; stroke: #cf222e; stroke-width: 1.4; }
+    .notebox { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.4; }
+    .greybox { fill: #eceff3; stroke: #8c959f; stroke-width: 1.2; }
+    .head-blue { fill: #dbeafe; stroke: #0969da; stroke-width: 1.4; }
+    .head-green { fill: #dcf5e4; stroke: #1a7f37; stroke-width: 1.4; }
+    .head-grey { fill: #e3e6ea; stroke: #8c959f; stroke-width: 1.4; }
+    .band { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.2; }
+    .wire { stroke: #1a7f37; stroke-width: 2; fill: none; }
+    .wiren { stroke: #57606a; stroke-width: 1.6; fill: none; }
+  </style>
+  <defs>
+    <marker id="ag" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1a7f37"/></marker>
+    <marker id="an" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#57606a"/></marker>
+  </defs>
+  <rect x="0" y="0" width="1080" height="690" fill="#ffffff"/>
+<text class="hdr" x="540.0" y="36" text-anchor="middle">confidence-gated routing: ใช้ความมั่นใจเป็นด่านที่สอง</text>
+<text class="sub" x="540.0" y="60" text-anchor="middle">คำตอบบอกว่า "อะไร" · confidence บอกว่า "ควรลงมือเลยไหม" — โค้ดเป็นคนตั้ง threshold</text>
+<rect class="greenbox" x="40" y="84" width="1000" height="170" rx="10"/>
+<rect class="head-green" x="40" y="84" width="1000" height="32" rx="10"/>
+<text class="phdr" x="58" y="106">high confidence</text>
+<text class="tiny" x="1036" y="106" text-anchor="end">confidence 0.85 - 1.0</text>
+<text class="ptitle" x="58" y="156">ทำเลยอัตโนมัติ</text>
+<text class="body" x="58" y="184">โมเดลอ่านชัด ไม่มีอะไรต้องลังเล</text>
+<text class="body" x="58" y="206">เช่น ปิด ticket ที่ชัดว่าเป็นเรื่อง billing</text>
+<text class="tiny" x="58" y="236">threshold เป็นของเรา ไม่ใช่ของโมเดล — งานเสี่ยงสูงก็ตั้งด่านสูงขึ้น</text>
+<rect class="notebox" x="40" y="274" width="1000" height="170" rx="10"/>
+<rect class="head-grey" x="40" y="274" width="1000" height="32" rx="10"/>
+<text class="phdr" x="58" y="296">medium confidence</text>
+<text class="tiny" x="1036" y="296" text-anchor="end">confidence 0.60 - 0.85</text>
+<text class="ptitle" x="58" y="346">ทำต่อ แต่ระวังตัว</text>
+<text class="body" x="58" y="374">คำตอบใช้ได้ แต่ยังไม่นิ่ง</text>
+<text class="body" x="58" y="396">เช่น ขอให้ลูกค้ายืนยันก่อน หรือติดธงให้ตรวจ</text>
+<text class="tiny" x="58" y="426">threshold เป็นของเรา ไม่ใช่ของโมเดล — งานเสี่ยงสูงก็ตั้งด่านสูงขึ้น</text>
+<rect class="warnbox" x="40" y="464" width="1000" height="170" rx="10"/>
+<rect class="head-grey" x="40" y="464" width="1000" height="32" rx="10"/>
+<text class="phdr" x="58" y="486">low confidence</text>
+<text class="tiny" x="1036" y="486" text-anchor="end">confidence ต่ำกว่า 0.60</text>
+<text class="ptitle" x="58" y="536">อย่าลงมือ — ส่งต่อคน/LLM</text>
+<text class="body" x="58" y="564">โมเดลบอกเองว่า "อันนี้ผมไม่ชัวร์"</text>
+<text class="body" x="58" y="586">จุดนี้คือที่ที่ LLM ที่มโนคำตอบไม่มีให้</text>
+<text class="tiny" x="58" y="616">threshold เป็นของเรา ไม่ใช่ของโมเดล — งานเสี่ยงสูงก็ตั้งด่านสูงขึ้น</text>
+<text class="tiny" x="540.0" y="676" text-anchor="middle">ตัวอย่างในเอกสาร TypeSafe: งาน "เช็คยอดเงิน" 0.60 พอ แต่ "อนุมัติโอน" ต้องเกิน 0.85</text>
+</svg>

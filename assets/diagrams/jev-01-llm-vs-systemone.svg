@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 730" width="1080" height="730" role="img" aria-label="LLM แบบ chat เทียบกับ System One Model: ทางออกของข้อมูลต่างกัน">
+  <style>
+    text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 13px; fill: #1a1a1a; }
+    .hdr { font-weight: 700; font-size: 18px; }
+    .sub { fill: #57606a; font-size: 12.5px; }
+    .ptitle { font-weight: 700; font-size: 15px; }
+    .phdr { font-weight: 700; font-size: 13.5px; }
+    .body { font-size: 13px; }
+    .mono { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12.5px; }
+    .monob { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12.5px; font-weight: 700; fill: #0550ae; }
+    .monog { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12.5px; font-weight: 700; fill: #1a7f37; }
+    .monor { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12.5px; font-weight: 700; fill: #cf222e; }
+    .tiny { fill: #57606a; font-size: 11.5px; }
+    .panel { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.4; }
+    .cell { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.2; }
+    .bluebox { fill: #eef4ff; stroke: #0969da; stroke-width: 1.4; }
+    .greenbox { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.4; }
+    .warnbox { fill: #fdf2f2; stroke: #cf222e; stroke-width: 1.4; }
+    .notebox { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.4; }
+    .greybox { fill: #eceff3; stroke: #8c959f; stroke-width: 1.2; }
+    .head-blue { fill: #dbeafe; stroke: #0969da; stroke-width: 1.4; }
+    .head-green { fill: #dcf5e4; stroke: #1a7f37; stroke-width: 1.4; }
+    .head-grey { fill: #e3e6ea; stroke: #8c959f; stroke-width: 1.4; }
+    .band { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.2; }
+    .wire { stroke: #1a7f37; stroke-width: 2; fill: none; }
+    .wiren { stroke: #57606a; stroke-width: 1.6; fill: none; }
+  </style>
+  <defs>
+    <marker id="ag" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1a7f37"/></marker>
+    <marker id="an" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#57606a"/></marker>
+  </defs>
+  <rect x="0" y="0" width="1080" height="730" fill="#ffffff"/>
+<text class="hdr" x="540.0" y="36" text-anchor="middle">LLM (chat) vs System One Model: "ทางออก" ของข้อมูลต่างกัน</text>
+<text class="sub" x="540.0" y="60" text-anchor="middle">LLM ให้ข้อความที่ต้อง parse เอง · Jev ให้ค่าที่มี type พร้อม probabilities และ confidence</text>
+<rect class="panel" x="40" y="84" width="480" height="530" rx="10"/>
+<rect class="head-grey" x="40" y="84" width="480" height="34" rx="10"/>
+<text class="phdr" x="56" y="108">LLM / chatbot ทั่วไป (generate text)</text>
+<rect class="cell" x="56" y="136" width="448" height="86" rx="10"/>
+<text class="body" x="72" y="162">1. รับ prompt เป็นข้อความ</text>
+<text class="tiny" x="72" y="186">ของเดิมที่คนออกแบบให้อ่านรู้เรื่อง</text>
+<rect class="cell" x="56" y="234" width="448" height="86" rx="10"/>
+<text class="body" x="72" y="260">2. generate ทีละ token</text>
+<text class="tiny" x="72" y="284">autoregressive = ช้า และคิดเงินตาม output token</text>
+<rect class="cell" x="56" y="332" width="448" height="86" rx="10"/>
+<text class="body" x="72" y="358">3. ได้ JSON string ออกมา</text>
+<text class="tiny" x="72" y="382">ต้อง parse + ตรวจ schema เองในโค้ด</text>
+<rect class="cell" x="56" y="430" width="448" height="86" rx="10"/>
+<text class="body" x="72" y="456">4. ถ้า schema เพี้ยน → retry</text>
+<text class="tiny" x="72" y="480">hallucination / type error เกิดได้ตลอด</text>
+<rect class="warnbox" x="56" y="528" width="448" height="62" rx="10"/>
+<text class="body" x="72" y="554">จุดที่เจ็บ: ไม่รู้ว่าตัวเองพลาดตรงไหน</text>
+<text class="tiny" x="72" y="574">บอก confidence มาก็จริง แต่โมเดลมัก "มั่นใจเกินจริง"</text>
+<rect class="panel" x="560" y="84" width="480" height="530" rx="10"/>
+<rect class="head-green" x="560" y="84" width="480" height="34" rx="10"/>
+<text class="phdr" x="576" y="108">System One Model — Jev (typed decisions)</text>
+<rect class="greenbox" x="576" y="136" width="448" height="86" rx="10"/>
+<text class="body" x="592" y="162">1. รับ state + typed questions</text>
+<text class="tiny" x="592" y="186">state = ข้อมูลตั้งต้นที่ให้ตัดสิน (string/JSON/array)</text>
+<rect class="greenbox" x="576" y="234" width="448" height="86" rx="10"/>
+<text class="body" x="592" y="260">2. ประเมินทุกคำถามขนานกัน</text>
+<text class="tiny" x="592" y="284">ตอบพร้อมกันใน 1 request — เพิ่มคำถาม แทบไม่เพิ่มเวลา</text>
+<rect class="greenbox" x="576" y="332" width="448" height="86" rx="10"/>
+<text class="body" x="592" y="358">3. ได้ typed answers กลับมา</text>
+<text class="tiny" x="592" y="382">choice / score / noul + probabilities + confidence</text>
+<rect class="greenbox" x="576" y="430" width="448" height="86" rx="10"/>
+<text class="body" x="592" y="456">4. code เอาไป branch ได้เลย</text>
+<text class="tiny" x="592" y="480">ไม่มีข้อความให้ parse → ไม่มี type error</text>
+<rect class="notebox" x="576" y="528" width="448" height="62" rx="10"/>
+<text class="body" x="592" y="554">จุดที่ได้เปรียบ: คุมเกมได้ทั้งกระดาน</text>
+<text class="tiny" x="592" y="574">เรากำหนดช้อยส์เอง → โมเดล "แต่งคำตอบ" ไม่ได้</text>
+<rect class="band" x="40" y="632" width="1000" height="62" rx="10"/>
+<text class="body" x="60" y="658">ตัวเลขที่ TypeSafe อ้างบนเว็บ: 193.6x เร็วกว่า และ 444.6x ถูกกว่า LLM บนงาน System One</text>
+<text class="tiny" x="60" y="680">เป็นการวัดจาก workflow eval ของผู้ผลิตเอง (เทียบกับค่าเฉลี่ยของโมเดล frontier) — ควรลองกับงานจริงของตัวเองก่อนเชื่อ</text>
+</svg>

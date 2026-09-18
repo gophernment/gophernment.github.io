@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 700" width="1080" height="700" role="img" aria-label="รูปร่าง request และ response ของ Jev: state + typed questions เข้า, typed answers ออก">
+  <style>
+    text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 13px; fill: #1a1a1a; }
+    .hdr { font-weight: 700; font-size: 18px; }
+    .sub { fill: #57606a; font-size: 12.5px; }
+    .ptitle { font-weight: 700; font-size: 15px; }
+    .phdr { font-weight: 700; font-size: 13.5px; }
+    .body { font-size: 13px; }
+    .mono { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12.5px; }
+    .monob { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12.5px; font-weight: 700; fill: #0550ae; }
+    .monog { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12.5px; font-weight: 700; fill: #1a7f37; }
+    .monor { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12.5px; font-weight: 700; fill: #cf222e; }
+    .tiny { fill: #57606a; font-size: 11.5px; }
+    .panel { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.4; }
+    .cell { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.2; }
+    .bluebox { fill: #eef4ff; stroke: #0969da; stroke-width: 1.4; }
+    .greenbox { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.4; }
+    .warnbox { fill: #fdf2f2; stroke: #cf222e; stroke-width: 1.4; }
+    .notebox { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.4; }
+    .greybox { fill: #eceff3; stroke: #8c959f; stroke-width: 1.2; }
+    .head-blue { fill: #dbeafe; stroke: #0969da; stroke-width: 1.4; }
+    .head-green { fill: #dcf5e4; stroke: #1a7f37; stroke-width: 1.4; }
+    .head-grey { fill: #e3e6ea; stroke: #8c959f; stroke-width: 1.4; }
+    .band { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.2; }
+    .wire { stroke: #1a7f37; stroke-width: 2; fill: none; }
+    .wiren { stroke: #57606a; stroke-width: 1.6; fill: none; }
+  </style>
+  <defs>
+    <marker id="ag" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1a7f37"/></marker>
+    <marker id="an" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#57606a"/></marker>
+  </defs>
+  <rect x="0" y="0" width="1080" height="700" fill="#ffffff"/>
+<text class="hdr" x="540.0" y="36" text-anchor="middle">หน้าตา request/response ของ Jev: ถามแบบ typed คืนค่าแบบ typed</text>
+<text class="sub" x="540.0" y="60" text-anchor="middle">POST /v1/systemone — state ก้อนเดียว ประเมินทุกคำถามขนานกัน แล้วคืน answers</text>
+<rect class="panel" x="40" y="84" width="1000" height="250" rx="10"/>
+<rect class="head-blue" x="40" y="84" width="1000" height="34" rx="10"/>
+<text class="phdr" x="56" y="108">REQUEST — code ส่ง state 1 ก้อน กับคำถามที่เราตั้งชื่อเอง (questions)</text>
+<rect class="cell" x="64" y="132" width="470" height="180" rx="10"/>
+<text class="mono" x="80" y="158">state = {</text>
+<text class="mono" x="80" y="178">"ticket": { "subject": "Duplicate charge",</text>
+<text class="mono" x="80" y="198">"message": "charged twice for A-104 ..." },</text>
+<text class="mono" x="80" y="218">"order": { "id": "A-104", "charges": [49, 49] },</text>
+<text class="mono" x="80" y="238">"refund_policy": "duplicates are refundable"</text>
+<text class="mono" x="80" y="258">}</text>
+<text class="tiny" x="80" y="288">ข้อความล้วน/JSON/array ก็ได้ — text เท่านั้น</text>
+<rect class="cell" x="556" y="132" width="460" height="180" rx="10"/>
+<text class="mono" x="572" y="158">questions = {</text>
+<text class="mono" x="572" y="178">"department": Choice(...)  -&gt; 3 ตัวเลือก</text>
+<text class="mono" x="572" y="198">"frustration": Score([...])  -&gt; 3 ระดับ</text>
+<text class="mono" x="572" y="218">"wants_refund": Noul(...)  -&gt; จริง/เท็จ</text>
+<text class="mono" x="572" y="238">}</text>
+<text class="tiny" x="572" y="268">key ที่เราตั้ง = key ของคำตอบที่ได้กลับมา</text>
+<text class="tiny" x="572" y="288">ทุกคำถามเห็น state ก้อนเดียวกัน</text>
+<line class="wiren" x1="540" y1="352" x2="540" y2="386" marker-end="url(#an)"/>
+<text class="tiny" x="556" y="376">1 request เดียว</text>
+<rect class="panel" x="40" y="392" width="1000" height="216" rx="10"/>
+<rect class="head-green" x="40" y="392" width="1000" height="34" rx="10"/>
+<text class="phdr" x="56" y="416">RESPONSE — typed answers (ไม่มี prose สักคำ ไม่ต้อง parse)</text>
+<rect class="cell" x="64" y="440" width="288" height="150" rx="10"/>
+<text class="phdr" x="78" y="464">Choice</text>
+<text class="mono" x="78" y="484">"department": {</text>
+<text class="mono" x="78" y="504">"choice": "billing",</text>
+<text class="mono" x="78" y="520">"probabilities": {</text>
+<text class="mono" x="78" y="536">  "billing": 0.84,</text>
+<text class="mono" x="78" y="552">  "technical": 0.159,</text>
+<text class="mono" x="78" y="568">  "sales": 0.001 },</text>
+<text class="mono" x="78" y="584">"confidence": 0.596 }</text>
+<rect class="cell" x="396" y="440" width="288" height="150" rx="10"/>
+<text class="phdr" x="410" y="464">Score</text>
+<text class="mono" x="410" y="484">"frustration": {</text>
+<text class="mono" x="410" y="504">"score": 1.035,</text>
+<text class="mono" x="410" y="520">"legend": { 0: calm,</text>
+<text class="mono" x="410" y="536">  1: frustrated,</text>
+<text class="mono" x="410" y="552">  2: very angry },</text>
+<text class="mono" x="410" y="568">"probabilities": ... ,</text>
+<text class="mono" x="410" y="584">"confidence": 0.842 }</text>
+<rect class="cell" x="728" y="440" width="288" height="150" rx="10"/>
+<text class="phdr" x="742" y="464">Noul</text>
+<text class="mono" x="742" y="484">"wants_refund": {</text>
+<text class="mono" x="742" y="504">"noul": 0.95</text>
+<text class="mono" x="742" y="520"></text>
+<text class="mono" x="742" y="536">// 0 = ไม่จริง, 1 = จริง</text>
+<text class="mono" x="742" y="552"></text>
+<text class="mono" x="742" y="568">// ไม่มี confidence</text>
+<text class="mono" x="742" y="584">}</text>
+<rect class="notebox" x="40" y="626" width="1000" height="58" rx="10"/>
+<text class="body" x="56" y="652">ความต่างหลัก: ค่าที่ออกมา "มี type" และ "มีคุณภาพความมั่นใจ" ตั้งแต่แรก</text>
+<text class="tiny" x="56" y="672">โค้ดเลยเขียนต่อได้ตรง ๆ: if confidence &gt; 0.85: ทำเลย else: ส่งให้คนตรวจ</text>
+</svg>
