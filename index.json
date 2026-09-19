@@ -14,6 +14,18 @@
     "description": "รู้จัก Jev — System One Model ตัวแรกของ TypeSafe AI ที่เปิด early access กันยายน 2026 ไม่ generate ข้อความเลย แต่รับ state + คำถามแบบ typed แล้วคืน Choice/Score/Noul พร้อม probabilities และ confidence ให้โค้ดตัดสินใจต่อ พร้อม quick start ที่รันได้และข้อจำกัดที่ต้องรู้ก่อนใช้"
   },
   {
+    "slug": "2026-09-19-cs-fundamentals-16-memory-safety-overflow",
+    "title": "malloc/free + buffer overflow: ทำไม security = เรื่อง memory (ตอนที่ 16)",
+    "date": "2026-09-19",
+    "tags": [
+      "cs-fundamentals",
+      "c",
+      "memory",
+      "security"
+    ],
+    "description": "ตอนที่ 16 ของคอร์ส CS Fundamentals — เปิดฝา malloc/free ดูของจริง: ขอ 1 ไบต์ได้ 24, memory leak (จองแล้วลืมคืน), use-after-free กับ double free (คืนแล้วยังแตะ), และ buffer overflow (เขียนเกินขอบเขต = ทับข้อมูลเพื่อนบ้าน/return address) ที่ทำให้ security ผูกกับ memory พร้อมเกราะ 6 ชั้น (canary, ASLR, ASan, Valgrind) และเทียบ Go — ทุกโปรแกรมคอมไพล์และรันจริง"
+  },
+  {
     "slug": "2026-09-18-cs-fundamentals-15-stack-heap-calling",
     "title": "stack vs heap + calling convention: เกิดอะไรขึ้นตอนเรียกฟังก์ชัน (ตอนที่ 15)",
     "date": "2026-09-18",
