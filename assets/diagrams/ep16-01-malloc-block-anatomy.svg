@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 760" width="1000" height="760" role="img" aria-label="โครงสร้างก้อนหน่วยความจำที่ malloc คืนมา: หัวก้อน พื้นที่ใช้ได้ และการปัดให้ตรงกรอบ 16 ไบต์">
+  <style>
+    text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 13px; fill: #1a1a1a; }
+    .hdr { font-weight: 700; font-size: 17.5px; }
+    .ptitle { font-weight: 700; font-size: 14.5px; }
+    .sub { fill: #57606a; font-size: 12.5px; }
+    .lbl { fill: #57606a; font-size: 11.5px; }
+    .mono { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12.5px; }
+    .monob { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12.5px; font-weight: 700; fill: #0550ae; }
+    .monor { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12.5px; font-weight: 700; fill: #cf222e; }
+    .monog { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12.5px; font-weight: 700; fill: #1a7f37; }
+    .big { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 19px; font-weight: 700; fill: #1a7f37; }
+    .panel { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.3; }
+    .cell { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.2; }
+    .cellw { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.2; }
+    .cellhi { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.9; }
+    .cellbad { fill: #fdf2f2; stroke: #cf222e; stroke-width: 1.9; }
+    .cellcanary { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.9; }
+    .notebox { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.3; }
+    .cbox { fill: #eef4ff; stroke: #0969da; stroke-width: 1.3; }
+    .gobox { fill: #e6f4ff; stroke: #0a7ea4; stroke-width: 1.3; }
+    .warnbox { fill: #fdf2f2; stroke: #cf222e; stroke-width: 1.3; }
+    .rowband { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1; }
+    .wire { stroke: #1a7f37; stroke-width: 2.2; fill: none; }
+    .wirer { stroke: #cf222e; stroke-width: 2.2; fill: none; }
+    .wire2 { stroke: #57606a; stroke-width: 1.6; fill: none; }
+  </style>
+  <defs>
+    <marker id="arr-g" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1a7f37"/></marker>
+    <marker id="arr-r" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#cf222e"/></marker>
+    <marker id="arr-n" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#57606a"/></marker>
+  </defs>
+  <rect x="0" y="0" width="1000" height="760" fill="#ffffff"/>
+
+<text class="hdr" x="500" y="34" text-anchor="middle">malloc ให้อะไรเราจริง ๆ: ก้อนที่ได้ ≠ จำนวนไบต์ที่ขอ</text>
+<text class="sub" x="500" y="58" text-anchor="middle">ตัวเลขทั้งหมดมาจากผลรันจริง malloc_blocks.c (Linux aarch64 · GCC 14.2.0 · glibc 2.41)</text>
+<text class="ptitle" x="40" y="78">ก้อนที่ malloc คืนมา (มองเป็นแถบหน่วยความจำ)</text>
+<rect class="cell" x="40" y="84" width="150" height="84" rx="8"/>
+<text class="mono" x="52" y="110">หัวก้อน</text>
+<text class="lbl" x="52" y="134">~8 ไบต์</text>
+<text class="lbl" x="52" y="154">(ของ glibc)</text>
+<rect class="cellhi" x="194" y="84" width="330" height="84" rx="8"/>
+<text class="mono" x="206" y="110">พื้นที่ที่ได้ใช้จริง</text>
+<text class="lbl" x="206" y="134">ขอ 1 ไบต์ -> ใช้ได้ 24</text>
+<text class="lbl" x="206" y="154">(usable — ไม่ใช่สัญญา)</text>
+<rect class="cellw" x="528" y="84" width="130" height="84" rx="8"/>
+<text class="mono" x="540" y="110">ปัดขึ้นกรอบ</text>
+<text class="lbl" x="540" y="134">16 ไบต์</text>
+<text class="lbl" x="540" y="154">ให้ CPU อ่านเร็ว</text>
+<text class="lbl" x="40" y="192">ตัวอย่างจริง: ขอ 1 ไบต์ -> ได้ใช้ 24 ไบต์ -> แต่ก้อนจริงกินที่ 32 ไบต์ (หัวก้อน + ปัดขอบ)</text>
+<text class="ptitle" x="40" y="218">ผลรันจริง: ขนาดที่ขอ vs ขนาดที่ใช้ได้ vs ระยะห่างระหว่างก้อน</text>
+<text class="lbl" x="40" y="242">(ระยะห่างวัดจากที่อยู่จริง: ก้อนถัดไป = ที่อยู่ก้อนก่อน + 32/48/64 ไบต์ ตามขนาดที่ใช้ได้ + หัวก้อน)</text>
+<rect class="rowband" x="40" y="252" width="920" height="34" rx="6"/>
+<text class="ptitle" x="60" y="275">ขอ (ไบต์)</text>
+<text class="ptitle" x="200" y="275">ใช้ได้จริง (ไบต์)</text>
+<text class="ptitle" x="390" y="275">ระยะถึงก้อนถัดไป</text>
+<text class="ptitle" x="600" y="275">หมายเหตุ</text>
+<text class="monob" x="60" y="312">1</text>
+<text class="monog" x="200" y="312">24</text>
+<text class="mono" x="390" y="312">32 ไบต์</text>
+<text class="lbl" x="600" y="312">ขอ 1 ก็ได้ 24 — เศษที่เหลือใช้ได้แต่ไม่ได้ขอ</text>
+<rect class="rowband" x="40" y="320" width="920" height="34" rx="6" opacity="0.5"/>
+<text class="monob" x="60" y="346">8</text>
+<text class="monog" x="200" y="346">24</text>
+<text class="mono" x="390" y="346">32 ไบต์</text>
+<text class="lbl" x="600" y="346">ยังเท่าเดิม เพราะถูกปัดเป็นกรอบแล้ว</text>
+<text class="monob" x="60" y="380">16</text>
+<text class="monog" x="200" y="380">24</text>
+<text class="mono" x="390" y="380">32 ไบต์</text>
+<text class="lbl" x="600" y="380">ได้เพิ่มมาฟรี 8 ไบต์</text>
+<rect class="rowband" x="40" y="388" width="920" height="34" rx="6" opacity="0.5"/>
+<text class="monob" x="60" y="414">24</text>
+<text class="monog" x="200" y="414">24</text>
+<text class="mono" x="390" y="414">32 ไบต์</text>
+<text class="lbl" x="600" y="414">พอดีกรอบ — ไม่มีเศษเหลือ</text>
+<text class="monob" x="60" y="448">25</text>
+<text class="monog" x="200" y="448">40</text>
+<text class="mono" x="390" y="448">48 ไบต์</text>
+<text class="lbl" x="600" y="448">เกินกรอบ 1 ไบต์ -&gt; ขึ้นกรอบถัดไป</text>
+<rect class="rowband" x="40" y="456" width="920" height="34" rx="6" opacity="0.5"/>
+<text class="monob" x="60" y="482">40</text>
+<text class="monog" x="200" y="482">40</text>
+<text class="mono" x="390" y="482">48 ไบต์</text>
+<text class="lbl" x="600" y="482">เท่าเดิม</text>
+<text class="monob" x="60" y="516">41</text>
+<text class="monog" x="200" y="516">56</text>
+<text class="mono" x="390" y="516">64 ไบต์</text>
+<text class="lbl" x="600" y="516">เกินอีก 1 ไบต์ -&gt; ขึ้นกรอบใหม่</text>
+<rect class="rowband" x="40" y="524" width="920" height="34" rx="6" opacity="0.5"/>
+<text class="monob" x="60" y="550">100</text>
+<text class="monog" x="200" y="550">104</text>
+<text class="mono" x="390" y="550">64 ไบต์</text>
+<text class="lbl" x="600" y="550">ติดกันกับก้อน 41 พอดี (56 ใช้ได้ + หัวก้อน 8)</text>
+<rect class="notebox" x="40" y="572" width="920" height="150" rx="10"/>
+<text class="ptitle" x="56" y="596">จำ 4 ข้อนี้:  (ที่อยู่ที่ได้จากผลรันจริงทั้งหมด)</text>
+<text class="lbl" x="56" y="624">1) ที่อยู่ที่ malloc คืนมาหาร 16 ลงตัวทุกก้อนที่ทดสอบ (8 จาก 8) — เพราะ CPU อ่านหน่วยความจำเร็วที่สุดเมื่อตรงกรอบ</text>
+<text class="lbl" x="56" y="652">2) คืนแล้วจองใหม่ขนาดเดิม: ได้ที่อยู่เดิมเป๊ะ (ทดสอบในข้อ 2 ของ malloc_blocks.c)</text>
+<text class="lbl" x="56" y="680">3) เขียนได้แค่ "ที่ขอ" — อย่าเอา malloc_usable_size() มาเป็นใบอนุญาต (นั่นคือรายละเอียดของ glibc)</text>
+<text class="lbl" x="56" y="708">4) ขนาดใหญ่ที่ขอไม่ได้จะได้ NULL (malloc(SIZE_MAX) = (nil), errno = 12) จึงต้องเช็ค NULL เสมอ</text>
+</svg>
