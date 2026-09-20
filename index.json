@@ -1,5 +1,17 @@
 [
   {
+    "slug": "2026-09-20-cs-fundamentals-17-compile-assemble-link",
+    "title": "จาก .c สู่ executable — 4 ขั้นที่ซ่อนอยู่ใน gcc -o (preprocess / compile / assemble / link) (ตอนที่ 17)",
+    "date": "2026-09-20",
+    "tags": [
+      "cs-fundamentals",
+      "c",
+      "compiler",
+      "linker"
+    ],
+    "description": "ตอนที่ 17 ของคอร์ส CS Fundamentals — แกะคำสั่ง gcc -o คำเดียวออกเป็น 4 ขั้น (preprocess → compile → assemble → link) พร้อมดูไฟล์จริงของแต่ละขั้น (.i/.s/.o), object file กับตาราง symbol, ฝึกสร้างไลบรารีของตัวเอง 3 วิธี (.o ตรง ๆ / .a / .so) และเทียบกับ Go ที่ตัดสองขั้นแรกทิ้ง — ทุกโปรแกรมคอมไพล์และรันจริงบนเครื่อง"
+  },
+  {
     "slug": "2026-09-19-jev-system-one-ai-model-typesafe",
     "title": "Jev กับ System One Model: AI ที่ไม่พิมพ์ข้อความสักคำ แต่คืน \"คำตัดสิน\" ที่โค้ดเอาไปใช้ต่อได้เลย",
     "date": "2026-09-19",
