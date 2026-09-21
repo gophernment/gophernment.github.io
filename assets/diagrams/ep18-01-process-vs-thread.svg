@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 850" width="1040" height="850" role="img" aria-label="เทียบโปรเซสและเธรด: โปรเซสมี address space ของตัวเอง เธรดใช้ร่วมกันในโปรเซสเดียว">
+  <style>
+    text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 13px; fill: #1a1a1a; }
+    .hdr { font-weight: 700; font-size: 18px; }
+    .sub { fill: #57606a; font-size: 12.5px; }
+    .ptitle { font-weight: 700; font-size: 14.5px; }
+    .lbl { fill: #57606a; font-size: 11.5px; }
+    .mono { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12px; }
+    .monob { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12px; font-weight: 700; fill: #0550ae; }
+    .monor { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12px; font-weight: 700; fill: #cf222e; }
+    .monog { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12px; font-weight: 700; fill: #1a7f37; }
+    .panel { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.3; }
+    .band { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.2; }
+    .bandc { fill: #eef4ff; stroke: #0969da; stroke-width: 1.4; }
+    .bandg { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.4; }
+    .bandr { fill: #fdf2f2; stroke: #cf222e; stroke-width: 1.4; }
+    .bandy { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.4; }
+    .cell { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.1; }
+    .arrow { stroke: #57606a; stroke-width: 2; fill: none; }
+    .arrowg { stroke: #1a7f37; stroke-width: 2.4; fill: none; }
+    .arrowb { stroke: #0550ae; stroke-width: 2.4; fill: none; }
+    .arrowr { stroke: #cf222e; stroke-width: 2.2; fill: none; }
+    .dash { stroke: #8c959f; stroke-width: 1.4; fill: none; stroke-dasharray: 5 4; }
+  </style>
+  <defs>
+    <marker id="a-n" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#57606a"/></marker>
+    <marker id="a-g" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1a7f37"/></marker>
+    <marker id="a-b" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0550ae"/></marker>
+    <marker id="a-r" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#cf222e"/></marker>
+  </defs>
+  <rect x="0" y="0" width="1040" height="850" fill="#ffffff"/>
+
+<text class="hdr" x="520" y="36" text-anchor="middle">โปรเซส = คนละบ้าน · เธรด = หลายห้องในบ้านหลังเดียว</text>
+<text class="sub" x="520" y="60" text-anchor="middle">ผลจริงจาก fork_demo.c · thread_demo.c · task_view.c บน Raspberry Pi 5 (Linux 6.18, 4 CPU)</text>
+<rect class="bandc" x="40" y="88" width="470" height="470" rx="10"/>
+<text class="ptitle" x="58" y="118">โปรเซส (process) — บ้านของตัวเอง</text>
+<rect class="cell" x="58" y="134" width="434" height="26" rx="5"/>
+<text class="monob" x="68" y="152">PCB</text>
+<text class="lbl" x="190" y="152">pid, state, คิว, รีจิสเตอร์ที่บันทึกไว้</text>
+<rect class="cell" x="58" y="164" width="434" height="26" rx="5"/>
+<text class="monob" x="68" y="182">code</text>
+<text class="lbl" x="190" y="182">คำสั่งของโปรแกรม (อ่านอย่างเดียว)</text>
+<rect class="cell" x="58" y="194" width="434" height="26" rx="5"/>
+<text class="monob" x="68" y="212">data / bss</text>
+<text class="lbl" x="190" y="212">ตัวแปร global, static ของโปรเซสนี้</text>
+<rect class="cell" x="58" y="224" width="434" height="26" rx="5"/>
+<text class="monob" x="68" y="242">heap</text>
+<text class="lbl" x="190" y="242">หน่วยความจำที่ malloc() ขอมา</text>
+<rect class="cell" x="58" y="254" width="434" height="26" rx="5"/>
+<text class="monob" x="68" y="272">ไฟล์ที่เปิด</text>
+<text class="lbl" x="190" y="272">ตาราง file descriptor ของตัวเอง</text>
+<rect class="cell" x="58" y="284" width="434" height="26" rx="5"/>
+<text class="monob" x="68" y="302">stack</text>
+<text class="lbl" x="190" y="302">กรอบฟังก์ชันของเธรดหลัก</text>
+<text class="lbl" x="58" y="346">fork() = "คัดลอกทั้งบ้าน" ให้ลูก (แยกกันทันที)</text>
+<text class="mono" x="58" y="370">แม่ pid=2443974 g_counter=100</text>
+<text class="mono" x="58" y="390">ลูก  pid=2443976 g_counter=101</text>
+<text class="mono" x="58" y="410">&amp;g_counter เท่ากันทั้งคู่ = 0x5556530f0080</text>
+<rect class="bandg" x="530" y="88" width="470" height="470" rx="10"/>
+<text class="ptitle" x="548" y="118">เธรด (thread) — หลายสายงานในโปรเซสเดียว</text>
+<text class="mono" x="548" y="144">ใช้ร่วมกันทุกเธรด:</text>
+<text class="lbl" x="548" y="166">code · data · heap · ไฟล์ที่เปิด · signal handler</text>
+<text class="mono" x="548" y="196">แต่ละเธรดมีของตัวเอง:</text>
+<rect class="cell" x="548" y="202" width="434" height="26" rx="5"/>
+<text class="monob" x="558" y="220">stack</text>
+<text class="lbl" x="690" y="220">กรอบฟังก์ชันของตัวเอง (คนละ stack)</text>
+<rect class="cell" x="548" y="232" width="434" height="26" rx="5"/>
+<text class="monob" x="558" y="250">รีจิสเตอร์ + PC</text>
+<text class="lbl" x="690" y="250">ตำแหน่งที่กำลังทำอยู่ของตัวเอง</text>
+<rect class="cell" x="548" y="262" width="434" height="26" rx="5"/>
+<text class="monob" x="558" y="280">tid</text>
+<text class="lbl" x="690" y="280">หมายเลขของตัวเอง (PID ยังเป็นของโปรเซส)</text>
+<rect class="cell" x="548" y="292" width="434" height="26" rx="5"/>
+<text class="monob" x="558" y="310">nice</text>
+<text class="lbl" x="690" y="310">ความสำคัญของตัวเอง (Linux)</text>
+<text class="mono" x="548" y="356">4 เธรดบวกตัวนับตัวเดียว = 1000000 ตรงเป๊ะ</text>
+<text class="mono" x="548" y="376">(ถ้าไม่มี mutex: 1412432 → หาย 64.69%)</text>
+<text class="mono" x="548" y="396">/proc/self/status → Threads: 5 · tid 2443979-2443982</text>
+<rect class="band" x="40" y="576" width="960" height="220" rx="10"/>
+<text class="ptitle" x="60" y="606">เคอร์เนลมองแบบเดียวกันทั้งคู่: 1 โปรเซส = 1 กลุ่มงาน (Tgid) ที่มีหลาย task (TID)</text>
+<text class="mono" x="60" y="632">$ ls /proc/2444387/task  →  2444387  2444389  2444390  2444391</text>
+<text class="mono" x="60" y="654">$ ps -T -p 2444387 -o pid,tid,ni,psr,stat,comm</text>
+<text class="mono" x="60" y="676">2444387 2444387   0   2 Sl   task_view</text>
+<text class="lbl" x="540" y="676">เธรดหลัก: TID = PID</text>
+<text class="mono" x="60" y="698">2444387 2444389   0   2 Sl   worker-a</text>
+<text class="lbl" x="540" y="698">เธรดที่ 2: PID เดิม แต่ TID ใหม่</text>
+<text class="mono" x="60" y="720">2444387 2444390   0   0 Sl   worker-b</text>
+<text class="lbl" x="540" y="720">เธรดที่ 3</text>
+<text class="mono" x="60" y="742">2444387 2444391   0   0 Sl   worker-c</text>
+<text class="lbl" x="540" y="742">เธรดที่ 4</text>
+<text class="lbl" x="60" y="772">สรุป: fork ได้ "สำเนา" (คนละบ้าน) · เธรดได้ "ห้องเพิ่ม" ในบ้านเดิม — ต้นทุนและความเสี่ยงจึงต่างกันคนละเรื่อง</text>
+</svg>

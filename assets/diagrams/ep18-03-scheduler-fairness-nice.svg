@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 880" width="1040" height="880" role="img" aria-label="ผลการแบ่ง CPU ของตัวจัดคิว: 8 งานบน 4 CPU และผลของค่า nice พร้อมค่าที่ปรับได้จริง">
+  <style>
+    text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 13px; fill: #1a1a1a; }
+    .hdr { font-weight: 700; font-size: 18px; }
+    .sub { fill: #57606a; font-size: 12.5px; }
+    .ptitle { font-weight: 700; font-size: 14.5px; }
+    .lbl { fill: #57606a; font-size: 11.5px; }
+    .mono { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12px; }
+    .monob { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12px; font-weight: 700; fill: #0550ae; }
+    .monor { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12px; font-weight: 700; fill: #cf222e; }
+    .monog { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12px; font-weight: 700; fill: #1a7f37; }
+    .panel { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.3; }
+    .band { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.2; }
+    .bandc { fill: #eef4ff; stroke: #0969da; stroke-width: 1.4; }
+    .bandg { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.4; }
+    .bandr { fill: #fdf2f2; stroke: #cf222e; stroke-width: 1.4; }
+    .bandy { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.4; }
+    .cell { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.1; }
+    .arrow { stroke: #57606a; stroke-width: 2; fill: none; }
+    .arrowg { stroke: #1a7f37; stroke-width: 2.4; fill: none; }
+    .arrowb { stroke: #0550ae; stroke-width: 2.4; fill: none; }
+    .arrowr { stroke: #cf222e; stroke-width: 2.2; fill: none; }
+    .dash { stroke: #8c959f; stroke-width: 1.4; fill: none; stroke-dasharray: 5 4; }
+  </style>
+  <defs>
+    <marker id="a-n" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#57606a"/></marker>
+    <marker id="a-g" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1a7f37"/></marker>
+    <marker id="a-b" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0550ae"/></marker>
+    <marker id="a-r" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#cf222e"/></marker>
+  </defs>
+  <rect x="0" y="0" width="1040" height="880" fill="#ffffff"/>
+
+<text class="hdr" x="520" y="36" text-anchor="middle">ตัวจัดคิวแบ่ง CPU ให้ยังไง — ผลวัดจริง 8 งานบน 4 CPU</text>
+<text class="sub" x="520" y="60" text-anchor="middle">sched_demo fair 8 1500 (งานชนกันจริง ไม่ได้ปักหมุด CPU) — งานเดียวเป็นฐาน = 247,758,000 หน่วย</text>
+<rect class="band" x="40" y="92" width="960" height="268" rx="10"/>
+<text class="ptitle" x="60" y="122">งาน 8 ตัวถูกวางบน 4 CPU (แถบ = ส่วนแบ่งเวลาของแต่ละงานบน CPU นั้น)</text>
+<text class="monob" x="60" y="164">cpu 0</text>
+<rect class="cell" x="130" y="144" width="850" height="30" rx="4"/>
+<rect x="130" y="144" width="423" height="30" rx="4" fill="#eef4ff" stroke="#8c959f" stroke-width="1"/>
+<text x="342" y="164" text-anchor="middle" font-size="11.5" fill="#1a1a1a">งาน 5 · 55.9%</text>
+<rect x="555" y="144" width="423" height="30" rx="4" fill="#eefaf1" stroke="#8c959f" stroke-width="1"/>
+<text x="768" y="164" text-anchor="middle" font-size="11.5" fill="#1a1a1a">งาน 6 · 35.7%</text>
+<text class="monob" x="60" y="204">cpu 1</text>
+<rect class="cell" x="130" y="184" width="850" height="30" rx="4"/>
+<rect x="130" y="184" width="210" height="30" rx="4" fill="#eef4ff" stroke="#8c959f" stroke-width="1"/>
+<text x="236" y="204" text-anchor="middle" font-size="11.5" fill="#1a1a1a">งาน 1 · 56.5%</text>
+<rect x="342" y="184" width="210" height="30" rx="4" fill="#eefaf1" stroke="#8c959f" stroke-width="1"/>
+<text x="449" y="204" text-anchor="middle" font-size="11.5" fill="#1a1a1a">งาน 2 · 35.0%</text>
+<rect x="555" y="184" width="210" height="30" rx="4" fill="#fff8e5" stroke="#8c959f" stroke-width="1"/>
+<text x="661" y="204" text-anchor="middle" font-size="11.5" fill="#1a1a1a">งาน 4 · 35.3%</text>
+<rect x="768" y="184" width="210" height="30" rx="4" fill="#fdf2f2" stroke="#8c959f" stroke-width="1"/>
+<text x="874" y="204" text-anchor="middle" font-size="11.5" fill="#1a1a1a">งาน 7 · 34.9%</text>
+<text class="monob" x="60" y="244">cpu 2</text>
+<rect class="cell" x="130" y="224" width="850" height="30" rx="4"/>
+<rect x="130" y="224" width="848" height="30" rx="4" fill="#eef4ff" stroke="#8c959f" stroke-width="1"/>
+<text x="555" y="244" text-anchor="middle" font-size="11.5" fill="#1a1a1a">งาน 0 · 49.9%</text>
+<text class="monob" x="60" y="284">cpu 3</text>
+<rect class="cell" x="130" y="264" width="850" height="30" rx="4"/>
+<rect x="130" y="264" width="848" height="30" rx="4" fill="#eef4ff" stroke="#8c959f" stroke-width="1"/>
+<text x="555" y="284" text-anchor="middle" font-size="11.5" fill="#1a1a1a">งาน 3 · 55.0%</text>
+<text class="lbl" x="130" y="312">รวมทุกงาน = 887,364,000 หน่วย = 358.2% ของงานเดียว (อุดมคติ = 400%) · งานได้มากสุด ÷ น้อยสุด = 1.619</text>
+<text class="lbl" x="130" y="332">ความยุติธรรมยังไม่เป๊ะ: cpu 1 มี 4 งานซ้อน (34.9-56.5%) แต่ cpu 2/3 มีงานเดียว (49.9% / 55.0%)</text>
+<text class="lbl" x="130" y="350">สาเหตุ: งานถูกวางไว้คนละ CPU ตั้งแต่ตอน fork และการย้ายงานมีต้นทุน (migration_cost_ns = 500000 ns)</text>
+<rect class="bandy" x="40" y="376" width="960" height="196" rx="10"/>
+<text class="ptitle" x="60" y="406">ค่า nice = ปรับส่วนแบ่ง CPU (ต้องให้งานแย่งกันบน CPU เดียวกัน หรือมีงานเกินจำนวน CPU)</text>
+<text class="lbl" x="60" y="434">การทดลอง (ปักหมุด cpu 0)</text>
+<text class="lbl" x="420" y="434">CPU ที่ได้จริง</text>
+<text class="lbl" x="620" y="434">ทฤษฎี (nice ต่าง 1 = 1.25 เท่า)</text>
+<text class="lbl" x="60" y="460">nice +0 vs nice +10</text>
+<text class="mono" x="420" y="460">90.3% vs 9.7%</text>
+<text class="lbl" x="620" y="460">อัตราส่วน 9.31 เท่า · ทฤษฎี 9.31 เท่า</text>
+<text class="lbl" x="60" y="486">nice +0 vs nice +5</text>
+<text class="mono" x="420" y="486">75.2% vs 24.8%</text>
+<text class="lbl" x="620" y="486">อัตราส่วน 3.04 เท่า · ทฤษฎี 3.05 เท่า</text>
+<text class="lbl" x="60" y="512">ไม่ปักหมุด CPU (คนละ CPU)</text>
+<text class="mono" x="420" y="512">50.0% vs 50.0%</text>
+<text class="lbl" x="620" y="512">nice เหมือนไม่มีผล — แต่ละงานได้ CPU เต็มตัว</text>
+<rect class="band" x="40" y="592" width="960" height="148" rx="10"/>
+<text class="ptitle" x="60" y="622">ตัวจัดคิวจริงบนเครื่องนี้ (อ่านจากเคอร์เนล ไม่ได้ยกมาจากตำรา)</text>
+<text class="mono" x="60" y="650">/sys/kernel/debug/sched/base_slice_ns</text>
+<text class="lbl" x="410" y="650">2100000  → 2.1 ms (ขนาด time slice ฐาน)</text>
+<text class="mono" x="60" y="674">/boot/config-$(uname -r)</text>
+<text class="lbl" x="410" y="674">CONFIG_PREEMPT=y · CONFIG_HZ=250 (tick 4 ms) · CONFIG_NR_CPUS=4</text>
+<text class="mono" x="60" y="698">/sys/kernel/debug/sched/features</text>
+<text class="lbl" x="410" y="698">PLACE_LAG · RUN_TO_PARITY ... = ชุดกลไกของ EEVDF (แทน CFS ตั้งแต่ Linux 6.6)</text>
+<text class="mono" x="60" y="722">cgroup pids.max</text>
+<text class="lbl" x="410" y="722">9626 → สร้างเธรดได้จริง 9,601 ตัวแล้ว EAGAIN (เพดานของ cgroup ไม่ใช่ของภาษา)</text>
+</svg>
