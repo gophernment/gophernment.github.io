@@ -1,5 +1,20 @@
 [
   {
+    "slug": "2026-09-21-cs-fundamentals-18-process-thread-scheduling",
+    "title": "โปรเซสกับเธรด + ตัวจัดคิว — ทำไมคอมพิวเตอร์ \"ทำงานหลายอย่างพร้อมกัน\" ได้ (process / thread / context switch / scheduling) (ตอนที่ 18)",
+    "date": "2026-09-21",
+    "tags": [
+      "cs-fundamentals",
+      "os",
+      "process",
+      "thread",
+      "scheduling",
+      "c",
+      "go"
+    ],
+    "description": "ตอนที่ 18 ของคอร์ส CS Fundamentals — โปรเซส vs เธรด (fork คัดลอกทั้งบ้าน vs pthread แชร์หน่วยความจำ), ราคา context switch ที่วัดได้จริง ~2.1 µs/ครั้ง, ตัวจัดคิว EEVDF แบ่ง CPU ยังไง (fair/nice/preempt) และเธรด OS กับ goroutine ต่างกันแค่ไหน — ทุกโปรแกรมคอมไพล์และรันจริงบน Raspberry Pi 5"
+  },
+  {
     "slug": "2026-09-20-cs-fundamentals-17-compile-assemble-link",
     "title": "จาก .c สู่ executable — 4 ขั้นที่ซ่อนอยู่ใน gcc -o (preprocess / compile / assemble / link) (ตอนที่ 17)",
     "date": "2026-09-20",
