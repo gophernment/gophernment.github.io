@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 880" width="1040" height="880" role="img" aria-label="กลไกการเรียก syscall บน arm64: svc #0 → syscall table → handler → eret">
+  <style>
+    text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 13px; fill: #1a1a1a; }
+    .hdr { font-weight: 700; font-size: 18px; }
+    .sub { fill: #57606a; font-size: 12.5px; }
+    .ptitle { font-weight: 700; font-size: 14.5px; }
+    .btitle { font-weight: 700; font-size: 12.5px; }
+    .lbl { fill: #57606a; font-size: 11.5px; }
+    .lbl2 { fill: #1a1a1a; font-size: 11.5px; }
+    .mono { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 12px; }
+    .monob { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 12px; font-weight: 700; fill: #0550ae; }
+    .monor { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 12px; font-weight: 700; fill: #cf222e; }
+    .band { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.2; }
+    .bandc { fill: #eef4ff; stroke: #0969da; stroke-width: 1.4; }
+    .bandg { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.4; }
+    .bandr { fill: #fdf2f2; stroke: #cf222e; stroke-width: 1.4; }
+    .bandy { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.4; }
+    .cell { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.1; }
+    .arrow { stroke: #57606a; stroke-width: 2; fill: none; }
+    .arrowb { stroke: #0550ae; stroke-width: 2.4; fill: none; }
+    .arrowr { stroke: #cf222e; stroke-width: 2.2; fill: none; }
+    .dash { stroke: #8c959f; stroke-width: 1.4; fill: none; stroke-dasharray: 5 4; }
+  </style>
+  <defs>
+    <marker id="a-n" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#57606a"/></marker>
+    <marker id="a-b" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0550ae"/></marker>
+    <marker id="a-r" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#cf222e"/></marker>
+    <marker id="a-g" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1a7f37"/></marker>
+  </defs>
+  <rect x="0" y="0" width="1040" height="880" fill="#ffffff"/>
+
+<text class="hdr" x="520" y="36" text-anchor="middle">syscall ทำงานยังไงบน arm64: จาก svc #0 ถึงค่าที่ได้ใน x0</text>
+<text class="sub" x="520" y="60" text-anchor="middle">ทุกค่าในภาพมาจาก raw_write.c (โค้ด C ที่เรียก svc #0 เอง) + objdump + strace บนเครื่องนี้</text>
+<rect class="bandg" x="40" y="84" width="960" height="176" rx="10"/>
+<text class="ptitle" x="60" y="112">ฝั่ง user (EL0) — เตรียมของแล้ว "เคาะประตู"</text>
+<rect class="cell" x="60" y="126" width="220" height="112" rx="8"/>
+<text class="monob" x="70" y="148">1. โปรแกรมเรียกฟังก์ชัน</text>
+<text class="lbl" x="70" y="172">write(1, buf, n)</text>
+<text class="lbl" x="70" y="191">โค้ด C ของเราที่ EL0</text>
+<line class="arrow" x1="281" y1="182" x2="296" y2="182" marker-end="url(#a-n)"/>
+<rect class="cell" x="298" y="126" width="220" height="112" rx="8"/>
+<text class="monob" x="308" y="148">2. libc เตรียมค่า</text>
+<text class="lbl" x="308" y="172">x8 = 64  (__NR_write)</text>
+<text class="lbl" x="308" y="191">x0=1  x1=buf  x2=n</text>
+<line class="arrow" x1="519" y1="182" x2="534" y2="182" marker-end="url(#a-n)"/>
+<rect class="cell" x="536" y="126" width="220" height="112" rx="8"/>
+<text class="monob" x="546" y="148">3. svc #0</text>
+<text class="lbl" x="546" y="172">คำสั่งเดียวที่เข้า kernel</text>
+<text class="lbl" x="546" y="191">CPU เปลี่ยน EL0 → EL1</text>
+<line class="arrow" x1="757" y1="182" x2="772" y2="182" marker-end="url(#a-n)"/>
+<rect class="cell" x="774" y="126" width="220" height="112" rx="8"/>
+<text class="monob" x="784" y="148">4. CPU กระโดดตาม vector</text>
+<text class="lbl" x="784" y="172">ไปที่ exception vector</text>
+<text class="lbl" x="784" y="191">ของเคอร์เนล (EL1)</text>
+<rect class="bandc" x="40" y="286" width="960" height="176" rx="10"/>
+<text class="ptitle" x="60" y="314">ฝั่ง kernel (EL1) — ดูตาราง ทำงาน แล้วส่งผลกลับ</text>
+<rect class="cell" x="60" y="328" width="220" height="112" rx="8"/>
+<text class="monob" x="70" y="350">5. บันทึก context</text>
+<text class="lbl" x="70" y="374">เก็บรีจิสเตอร์/PC ของเรา</text>
+<text class="lbl" x="70" y="393">ไว้ใน kernel stack</text>
+<line class="arrow" x1="281" y1="384" x2="296" y2="384" marker-end="url(#a-n)"/>
+<rect class="cell" x="298" y="328" width="220" height="112" rx="8"/>
+<text class="monob" x="308" y="350">6. อ่าน x8 แล้วดูตาราง</text>
+<text class="lbl" x="308" y="374">sys_call_table[x8]</text>
+<text class="lbl" x="308" y="393">→ sys_write</text>
+<line class="arrow" x1="519" y1="384" x2="534" y2="384" marker-end="url(#a-n)"/>
+<rect class="cell" x="536" y="328" width="220" height="112" rx="8"/>
+<text class="monob" x="546" y="350">7. handler ทำงาน</text>
+<text class="lbl" x="546" y="374">เขียนไฟล์จริงให้เรา</text>
+<text class="lbl" x="546" y="393">ข้อมูลไหลผ่าน device driver</text>
+<text class="lbl" x="546" y="412">ผู้ใช้ไม่เห็นการทำงานนี้</text>
+<line class="arrow" x1="757" y1="384" x2="772" y2="384" marker-end="url(#a-n)"/>
+<rect class="cell" x="774" y="328" width="220" height="112" rx="8"/>
+<text class="monob" x="784" y="350">8. eret กลับ EL0</text>
+<text class="lbl" x="784" y="374">ผลอยู่ใน x0</text>
+<text class="lbl" x="784" y="393">libc: ค่าลบ → -1 + errno</text>
+<line class="arrowb" x1="995" y1="262" x2="995" y2="320" marker-end="url(#a-b)"/>
+<text class="lbl" x="985" y="300" text-anchor="end">เข้า kernel</text>
+<line class="arrowr" x1="42" y1="320" x2="42" y2="266" marker-end="url(#a-r)"/>
+<rect class="band" x="40" y="480" width="960" height="176" rx="10"/>
+<text class="ptitle" x="60" y="508">รีจิสเตอร์จริงที่ใช้ส่งของ (arm64 syscall ABI) — และค่าจริงจาก raw_write.c</text>
+<text class="lbl" x="60" y="532">รีจิสเตอร์</text>
+<text class="lbl" x="200" y="532">หน้าที่</text>
+<text class="lbl" x="560" y="532">ค่าจริงที่วัดได้</text>
+<text class="monob" x="60" y="554">x8</text>
+<text class="lbl2" x="200" y="554">หมายเลข syscall</text>
+<text class="lbl" x="560" y="554">x8 = 172 (getpid) · 173 (getppid) · 64 (write) · 94 (exit_group)</text>
+<line class="dash" x1="60" y1="561" x2="980" y2="561"/>
+<text class="monob" x="60" y="574">x0</text>
+<text class="lbl2" x="200" y="574">argument 1 / ค่าที่คืนกลับ</text>
+<text class="lbl" x="560" y="574">x0 = 1 (stdout) → คืนค่าอยู่ใน x0</text>
+<line class="dash" x1="60" y1="581" x2="980" y2="581"/>
+<text class="monob" x="60" y="594">x1</text>
+<text class="lbl2" x="200" y="594">argument 2</text>
+<text class="lbl" x="560" y="594">x1 = ที่อยู่ของข้อความในหน่วยความจำ</text>
+<line class="dash" x1="60" y1="601" x2="980" y2="601"/>
+<text class="monob" x="60" y="614">x2</text>
+<text class="lbl2" x="200" y="614">argument 3</text>
+<text class="lbl" x="560" y="614">x2 = จำนวนไบต์ (เช่น 96)</text>
+<line class="dash" x1="60" y1="621" x2="980" y2="621"/>
+<text class="monob" x="60" y="634">x3..x5</text>
+<text class="lbl2" x="200" y="634">argument 4..6</text>
+<text class="lbl" x="560" y="634">syscall ส่วนใหญ่บน arm64 ไม่เกิน 6 argument</text>
+<line class="dash" x1="60" y1="641" x2="980" y2="641"/>
+<rect class="bandy" x="40" y="676" width="960" height="176" rx="10"/>
+<text class="ptitle" x="60" y="704">objdump -d raw_write — เห็น "ประตู" เป็นคำสั่ง CPU จริง</text>
+<text class="mono" x="60" y="728">698:  d2801588   mov  x8, #0xac        // #172 = __NR_getpid</text>
+<text class="mono" x="60" y="750">69c:  d4000001   svc  #0x0             &lt;- คำสั่งที่เข้า kernel</text>
+<text class="mono" x="60" y="772">6c8:  d28015a8   mov  x8, #0xad        // #173 = __NR_getppid</text>
+<text class="mono" x="60" y="794">708:  d2800bc8   mov  x8, #0x5e        // #94  = __NR_exit_group</text>
+<text class="mono" x="60" y="816">8a8:  d2800808   mov  x8, #0x40        // #64  = __NR_write</text>
+<text class="lbl" x="60" y="840">ทั้งไฟล์ raw_write มีคำสั่ง svc เพียง 6 ครั้ง — โปรแกรมทั้งหมดนี้ไม่มี write() ของ libc เลย</text>
+</svg>

@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 910" width="1040" height="910" role="img" aria-label="ราคา syscall เทียบการเรียกฟังก์ชันจริง พร้อมรายการ syscall จริงของ hello world จาก strace">
+  <style>
+    text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 13px; fill: #1a1a1a; }
+    .hdr { font-weight: 700; font-size: 18px; }
+    .sub { fill: #57606a; font-size: 12.5px; }
+    .ptitle { font-weight: 700; font-size: 14.5px; }
+    .btitle { font-weight: 700; font-size: 12.5px; }
+    .lbl { fill: #57606a; font-size: 11.5px; }
+    .lbl2 { fill: #1a1a1a; font-size: 11.5px; }
+    .mono { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 12px; }
+    .monob { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 12px; font-weight: 700; fill: #0550ae; }
+    .monor { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 12px; font-weight: 700; fill: #cf222e; }
+    .band { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.2; }
+    .bandc { fill: #eef4ff; stroke: #0969da; stroke-width: 1.4; }
+    .bandg { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.4; }
+    .bandr { fill: #fdf2f2; stroke: #cf222e; stroke-width: 1.4; }
+    .bandy { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.4; }
+    .cell { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.1; }
+    .arrow { stroke: #57606a; stroke-width: 2; fill: none; }
+    .arrowb { stroke: #0550ae; stroke-width: 2.4; fill: none; }
+    .arrowr { stroke: #cf222e; stroke-width: 2.2; fill: none; }
+    .dash { stroke: #8c959f; stroke-width: 1.4; fill: none; stroke-dasharray: 5 4; }
+  </style>
+  <defs>
+    <marker id="a-n" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#57606a"/></marker>
+    <marker id="a-b" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0550ae"/></marker>
+    <marker id="a-r" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#cf222e"/></marker>
+    <marker id="a-g" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1a7f37"/></marker>
+  </defs>
+  <rect x="0" y="0" width="1040" height="910" fill="#ffffff"/>
+
+<text class="hdr" x="520" y="36" text-anchor="middle">ราคาของการเคาะประตู 1 ครั้ง — และ syscall จริงที่โปรแกรมเราเรียก</text>
+<text class="sub" x="520" y="60" text-anchor="middle">syscall_cost.c (1,000,000 รอบ วัด 5 ครั้ง เอาเร็วสุด) + strace -c hello_strace บนเครื่องนี้</text>
+<rect class="band" x="40" y="84" width="960" height="360" rx="10"/>
+<text class="ptitle" x="60" y="112">ราคาต่อ 1 ครั้ง (นาโนวินาที = หนึ่งในพันล้านวินาที) — หักราคาลูปเปล่าออกแล้ว</text>
+<text class="lbl2" x="60" y="154">เรียกฟังก์ชัน noop() เปล่า ๆ</text>
+<rect class="cell" x="350" y="140" width="600" height="22" rx="4"/>
+<rect x="350" y="140" width="3.0" height="22" rx="4" fill="#1a7f37" opacity="0.85"/>
+<text class="mono" x="361" y="155">0.96 ns</text>
+<text class="lbl2" x="60" y="194">syscall getpid (svc #0 ตรง ๆ)</text>
+<rect class="cell" x="350" y="180" width="600" height="22" rx="4"/>
+<rect x="350" y="180" width="433.8" height="22" rx="4" fill="#0969da" opacity="0.85"/>
+<text class="mono" x="792" y="195">166.3 ns</text>
+<text class="lbl2" x="60" y="234">syscall getpid (ผ่าน libc)</text>
+<rect class="cell" x="350" y="220" width="600" height="22" rx="4"/>
+<rect x="350" y="220" width="447.1" height="22" rx="4" fill="#0969da" opacity="0.85"/>
+<text class="mono" x="805" y="235">171.4 ns</text>
+<text class="lbl2" x="60" y="274">syscall getppid (ผ่าน libc)</text>
+<rect class="cell" x="350" y="260" width="600" height="22" rx="4"/>
+<rect x="350" y="260" width="460.7" height="22" rx="4" fill="#0969da" opacity="0.85"/>
+<text class="mono" x="819" y="275">176.6 ns</text>
+<text class="lbl2" x="60" y="314">syscall write 1 ไบต์ไป /dev/null</text>
+<rect class="cell" x="350" y="300" width="600" height="22" rx="4"/>
+<rect x="350" y="300" width="510.5" height="22" rx="4" fill="#0969da" opacity="0.85"/>
+<text class="mono" x="869" y="315">195.7 ns</text>
+<text class="lbl" x="60" y="354">สเกล: แถบเต็ม = 230 ns · syscall แพงกว่าเรียกฟังก์ชันธรรมดา 173 เท่า (166.3 ns vs 0.96 ns)</text>
+<text class="lbl" x="60" y="376">ตัวห่อของ libc เพิ่มราคาแค่ 5.1 ns (3%) — อีก 97% คือราคาของ "การข้ามกำแพง" เอง</text>
+<text class="lbl" x="60" y="398">เทียบตอนที่ 18: getppid ผ่าน libc = 178 ns ต่อครั้ง · วันนี้วัดใหม่ได้ 176.6 ns (ตรงกันราว 1%)</text>
+<text class="lbl" x="60" y="420">วัด noop แบบ x10 ต่อรอบ ÷10 = 0.96 ns (นิ่งกว่าแบบวัดครั้งเดียว 1.25 ns) — ของเล็กต้องขยายก่อนวัด</text>
+<rect class="bandc" x="40" y="456" width="960" height="204" rx="10"/>
+<text class="ptitle" x="60" y="484">strace -c ./hello_strace — "hello world" หนึ่งโปรแกรมเรียก syscall ไปกี่ครั้ง (ไบต์นารี static)</text>
+<text class="mono" x="60" y="510">write</text>
+<text class="monob" x="500" y="510">1</text>
+<text class="lbl" x="560" y="510">บรรทัดที่ puts() พิมพ์ออกจอ</text>
+<line class="dash" x1="60" y1="517" x2="980" y2="517"/>
+<text class="mono" x="60" y="534">getpid</text>
+<text class="monob" x="500" y="534">1</text>
+<text class="lbl" x="560" y="534">บรรทัดที่ printf("%d", getpid()) ของเรา</text>
+<line class="dash" x1="60" y1="541" x2="980" y2="541"/>
+<text class="mono" x="60" y="558">brk</text>
+<text class="monob" x="500" y="558">5</text>
+<text class="lbl" x="560" y="558">libc ขอหน่วยความจำจากเคอร์เนล (ยังไม่ใช่ malloc() ของเรา)</text>
+<line class="dash" x1="60" y1="565" x2="980" y2="565"/>
+<text class="mono" x="60" y="582">execve / readlinkat / getrandom / rseq</text>
+<text class="monob" x="500" y="582">4</text>
+<text class="lbl" x="560" y="582">งานตั้งต้นของระบบ — เราไม่ได้เขียนเอง แต่เกิดทุกครั้ง</text>
+<line class="dash" x1="60" y1="589" x2="980" y2="589"/>
+<text class="mono" x="60" y="606">fstat / mprotect / prlimit64 / set_tid_*</text>
+<text class="monob" x="500" y="606">5</text>
+<text class="lbl" x="560" y="606">งานเตรียมความปลอดภัย/เธรดของ libc</text>
+<line class="dash" x1="60" y1="613" x2="980" y2="613"/>
+<text class="lbl" x="60" y="638">รวม 16 syscall (รวม execve) · ถ้าคอมไพล์แบบไดนามิกจะเป็น 32 syscall — ที่เกินมาคือ openat/mmap ที่ตัวโหลดไลบรารีใช้</text>
+<text class="lbl" x="60" y="656">ข้อสังเกตที่สวยที่สุด: รันใน terminal ได้ write 2 ครั้ง (27 + 12 ไบต์) แต่รันผ่านท่อได้ write แค่ 1 ครั้ง (39 ไบต์)</text>
+<rect class="bandg" x="40" y="680" width="960" height="210" rx="10"/>
+<text class="ptitle" x="60" y="708">ตัวเลขที่เอาไปคิดต่อ (จากผลวัดจริงทั้งหมด)</text>
+<text class="monob" x="60" y="736">166.3 ns</text>
+<text class="lbl2" x="170" y="736">ราคา syscall 1 ครั้ง (svc #0 ตรง ๆ, getpid) · = 0.000000166 วินาที</text>
+<text class="monob" x="60" y="762">17%</text>
+<text class="lbl2" x="170" y="762">CPU ที่หายไปถ้าเรียก syscall 1,000,000 ครั้งต่อวินาที (166.3 ns x 1e6)</text>
+<text class="monob" x="60" y="788">6 ครั้ง</text>
+<text class="lbl2" x="170" y="788">จำนวนคำสั่ง svc ที่ปรากฏในไบต์นารีของ raw_write ทั้งไฟล์</text>
+<text class="monob" x="60" y="814">470</text>
+<text class="lbl2" x="170" y="814">__NR_syscalls ของ arm64 = ตาราง syscall มีช่อง 0..469 · เกินกว่านี้ได้ -ENOSYS (38)</text>
+<text class="monob" x="60" y="840">139</text>
+<text class="lbl2" x="170" y="840">รหัสออกของโปรเซสที่โดน SIGSEGV: 128 + 11 (11 = หมายเลขสัญญาณ SIGSEGV)</text>
+</svg>
