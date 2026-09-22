@@ -1,5 +1,20 @@
 [
   {
+    "slug": "2026-09-22-cs-fundamentals-19-syscalls-user-kernel",
+    "title": "syscall — ประตูบานเดียวที่โปรแกรมเข้าหาเคอร์เนลได้ (user space / kernel space) (ตอนที่ 19)",
+    "date": "2026-09-22",
+    "tags": [
+      "cs-fundamentals",
+      "os",
+      "syscall",
+      "kernel",
+      "linux",
+      "c",
+      "arm64"
+    ],
+    "description": "ตอนที่ 19 ของคอร์ส CS Fundamentals — syscall คือประตูบานเดียวที่โปรแกรมเข้าหาเคอร์เนล: user space (EL0) vs kernel space (EL1) บน arm64, กลไก svc #0 → syscall table → handler, errno มาจากไหน และราคา syscall จริง ~166 ns/ครั้ง (แพงกว่าฟังก์ชัน 173 เท่า) — โค้ด C เรียก syscall ตรง ๆ รันจริงบน Raspberry Pi 5"
+  },
+  {
     "slug": "2026-09-21-cs-fundamentals-18-process-thread-scheduling",
     "title": "โปรเซสกับเธรด + ตัวจัดคิว — ทำไมคอมพิวเตอร์ \"ทำงานหลายอย่างพร้อมกัน\" ได้ (process / thread / context switch / scheduling) (ตอนที่ 18)",
     "date": "2026-09-21",
