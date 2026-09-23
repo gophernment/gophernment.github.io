@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 980" width="1040" height="980" role="img" aria-label="ลำดับการเกิด page fault: MMU พลาดตาราง เคอร์เนลจัดหา frame แล้วกลับมาทำคำสั่งเดิม">
+  <style>
+    text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 13px; fill: #1a1a1a; }
+    .hdr { font-weight: 700; font-size: 18px; }
+    .sub { fill: #57606a; font-size: 12.5px; }
+    .ptitle { font-weight: 700; font-size: 14.5px; }
+    .btitle { font-weight: 700; font-size: 12.5px; }
+    .lbl { fill: #57606a; font-size: 11.5px; }
+    .lbl2 { fill: #1a1a1a; font-size: 11.5px; }
+    .mono { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 12px; }
+    .monob { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 12px; font-weight: 700; fill: #0550ae; }
+    .monor { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 12px; font-weight: 700; fill: #cf222e; }
+    .monog { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 12px; font-weight: 700; fill: #1a7f37; }
+    .band { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.2; }
+    .bandc { fill: #eef4ff; stroke: #0969da; stroke-width: 1.4; }
+    .bandg { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.4; }
+    .bandr { fill: #fdf2f2; stroke: #cf222e; stroke-width: 1.4; }
+    .bandy { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.4; }
+    .cell { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.1; }
+    .cellc { fill: #ffffff; stroke: #0969da; stroke-width: 1.3; }
+    .arrow { stroke: #57606a; stroke-width: 2; fill: none; }
+    .arrowb { stroke: #0550ae; stroke-width: 2.4; fill: none; }
+    .arrowr { stroke: #cf222e; stroke-width: 2.2; fill: none; }
+    .arrowg { stroke: #1a7f37; stroke-width: 2.2; fill: none; }
+    .dash { stroke: #8c959f; stroke-width: 1.4; fill: none; stroke-dasharray: 5 4; }
+  </style>
+  <defs>
+    <marker id="a-n" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#57606a"/></marker>
+    <marker id="a-b" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0550ae"/></marker>
+    <marker id="a-r" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#cf222e"/></marker>
+    <marker id="a-g" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1a7f37"/></marker>
+  </defs>
+  <rect x="0" y="0" width="1040" height="980" fill="#ffffff"/>
+
+<text class="hdr" x="520" y="36" text-anchor="middle">page fault คือเหตุการณ์ปกติ ไม่ใช่ crash</text>
+<text class="sub" x="520" y="60" text-anchor="middle">ตัวเลขจากการรัน 05_fault_lazy.c และ 06_mprotect_wall.c บนเครื่องนี้ (16K pages)</text>
+<rect class="bandc" x="40" y="84" width="960" height="290" rx="10"/>
+<text class="ptitle" x="60" y="112">ลำดับ 6 ขั้น — เกิดซ้ำทุกครั้งที่แตะหน้าที่ "ยังไม่มี frame"</text>
+<rect class="cell" x="60" y="126" width="300" height="104" rx="8"/>
+<text class="btitle" x="72" y="150">1. CPU แตะ VA</text>
+<text class="lbl" x="72" y="172">คำสั่งอ่านหรือเขียน</text>
+<text class="lbl" x="72" y="192">ที่อยู่ในรีจิสเตอร์</text>
+<line class="arrow" x1="361" y1="178" x2="379" y2="178" marker-end="url(#a-n)"/>
+<rect class="cell" x="380" y="126" width="300" height="104" rx="8"/>
+<text class="btitle" x="392" y="150">2. MMU ถาม TLB ก่อน</text>
+<text class="lbl" x="392" y="172">เจอ = จบเร็วสุด</text>
+<text class="lbl" x="392" y="192">ไม่เจอ = เดินตาราง 3 ชั้น</text>
+<line class="arrow" x1="681" y1="178" x2="699" y2="178" marker-end="url(#a-n)"/>
+<rect class="cell" x="700" y="126" width="300" height="104" rx="8"/>
+<text class="btitle" x="712" y="150">3. เจอ entry ที่ใช้ได้ไหม</text>
+<text class="lbl" x="712" y="172">เจอ + สิทธิ์ผ่าน = เข้าถึงเลย</text>
+<text class="lbl" x="712" y="192">ไม่เจอ = ไปข้อ 4</text>
+<rect class="cell" x="60" y="250" width="300" height="104" rx="8"/>
+<text class="btitle" x="72" y="274">4. page fault เกิด</text>
+<text class="lbl" x="72" y="296">CPU หยุดคำสั่งนี้ไว้</text>
+<text class="lbl" x="72" y="316">กระโดดเข้าเคอร์เนล</text>
+<line class="arrow" x1="361" y1="302" x2="379" y2="302" marker-end="url(#a-n)"/>
+<rect class="cell" x="380" y="250" width="300" height="104" rx="8"/>
+<text class="btitle" x="392" y="274">5. เคอร์เนลจัดการ</text>
+<text class="lbl" x="392" y="296">หา frame ว่างใน RAM</text>
+<text class="lbl" x="392" y="316">อ่านจากดิสก์ / ใส่ศูนย์ทั้งหน้า</text>
+<line class="arrow" x1="681" y1="302" x2="699" y2="302" marker-end="url(#a-n)"/>
+<rect class="cell" x="700" y="250" width="300" height="104" rx="8"/>
+<text class="btitle" x="712" y="274">6. เขียน entry + กลับ</text>
+<text class="lbl" x="712" y="296">ตั้ง present + สิทธิ์</text>
+<text class="lbl" x="712" y="316">กลับไปทำคำสั่งเดิมใหม่</text>
+<polyline class="arrow" points="810,231 810,240 210,240 210,247" marker-end="url(#a-n)"/>
+<text class="lbl" x="60" y="398">ขั้น 4-6 ต้องสลับไป kernel (EL0 -> EL1) ด้วยกลไกเดียวกับ syscall ในตอนที่ 19 — นี่คือราคาที่ซ่อนอยู่ของการ "จองแบบขี้เกียจ"</text>
+<text class="lbl" x="60" y="418">หน้าที่ถูกแก้ entry แล้ว ครั้งต่อไปที่แตะจะเจอใน TLB (หรือเดินตารางแล้วเจอ entry ที่ present) = ไม่ fault อีก</text>
+<rect class="bandg" x="40" y="440" width="470" height="250" rx="10"/>
+<text class="ptitle" x="60" y="468">ราคาจริง: จอง 64 MiB = 4096 หน้า</text>
+<text class="lbl2" x="60" y="494">A) calloc + เขียน</text>
+<text class="mono" x="300" y="494">fault 4095 · 14.2 ms</text>
+<text class="lbl2" x="60" y="520">B) mmap + เขียน</text>
+<text class="mono" x="300" y="520">fault 4096 · 13.4 ms</text>
+<text class="lbl2" x="60" y="546">C) mmap + MAP_POPULATE</text>
+<text class="mono" x="300" y="546">fault 4096 · 14.5 ms</text>
+<text class="lbl2" x="60" y="572">   แล้วการเขียนต่อ</text>
+<text class="mono" x="300" y="572">fault 0 · 0.19 ms</text>
+<text class="lbl" x="60" y="610">fault เกือบ 1 ครั้งต่อ 1 หน้าเสมอ</text>
+<text class="lbl" x="60" y="630">ต่างกันที่ "จ่ายตอนไหน": ตอนขอ หรือ ตอนแตะ</text>
+<text class="lbl" x="60" y="650">แตะไม่ครบทุกหน้า -&gt; แบบ lazy ประหยัดกว่า</text>
+<rect class="bandr" x="530" y="440" width="470" height="250" rx="10"/>
+<text class="ptitle" x="550" y="468">fault ที่ไม่ปกติ: เคอร์เนลปฏิเสธ</text>
+<text class="lbl2" x="550" y="494">mprotect(PROT_NONE)</text>
+<text class="mono" x="745" y="494">แตะ -&gt; SIGSEGV</text>
+<text class="lbl2" x="550" y="520">si_addr</text>
+<text class="mono" x="745" y="520">0x7ffed7414000</text>
+<text class="lbl2" x="550" y="546">ที่อยู่ที่พยายามแตะ</text>
+<text class="mono" x="745" y="546">0x7ffed7414000</text>
+<text class="lbl2" x="550" y="572">เปิดสิทธิ์คืน</text>
+<text class="mono" x="745" y="572">ข้อมูลเดิมยังอยู่</text>
+<text class="lbl" x="550" y="610">MMU ไม่ได้ดูแค่ว่า "มี frame ไหม"</text>
+<text class="lbl" x="550" y="630">แต่ดู "ธงสิทธิ์" ด้วย — ปิดปุ๊บ</text>
+<text class="lbl" x="550" y="650">ตัวชี้เดิมที่เคยใช้ได้ก็ถูกปฏิเสธทันที</text>
+<rect class="bandy" x="40" y="706" width="960" height="130" rx="10"/>
+<text class="ptitle" x="60" y="734">ความต่างของ fault 2 ชนิด</text>
+<rect class="cell" x="60" y="748" width="440" height="72" rx="8"/>
+<text class="btitle" x="70" y="768">minor fault (ru_minflt)</text>
+<text class="lbl" x="70" y="782">แก้ได้ในหน่วยความจำ</text>
+<text class="lbl" x="70" y="796">หา frame ว่างใน RAM ได้เลย</text>
+<text class="lbl" x="70" y="810">กรณี lazy, copy-on-write</text>
+<rect class="cell" x="530" y="748" width="440" height="72" rx="8"/>
+<text class="btitle" x="540" y="768">major fault (ru_majflt)</text>
+<text class="lbl" x="540" y="782">ต้องรออุปกรณ์</text>
+<text class="lbl" x="540" y="796">อ่านข้อมูลจากไฟล์/สวอป</text>
+<text class="lbl" x="540" y="810">แพงกว่า minor หลายเท่า</text>
+<rect class="band" x="40" y="852" width="960" height="112" rx="10"/>
+<text class="ptitle" x="60" y="880">ตัวเลขที่เกี่ยวกับ fault จากที่อื่นในตอนนี้</text>
+<text class="mono" x="60" y="906">fork: minflt 13 -&gt; 22</text>
+<text class="lbl2" x="340" y="906">เขียนครั้งแรกหลังแยกโปรเซส = COW เกิดจริง (minflt เพิ่มหลายครั้ง)</text>
+<text class="mono" x="60" y="930">syscall เปล่า ~178 ns</text>
+<text class="lbl2" x="340" y="930">fault หนึ่งครั้งแพงกว่านั้นมาก (ต้องสลับ EL + หา frame)</text>
+<text class="mono" x="60" y="954">~96 ns/การแตะ (พื้นที่ 16 MiB)</text>
+<text class="lbl2" x="340" y="954">ราคารวม TLB+แคชที่ต้องจ่ายเมื่อเดินพื้นที่ใหญ่ (หัวข้อ 7.3)</text>
+</svg>

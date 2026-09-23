@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 880" width="1040" height="880" role="img" aria-label="เดินตาราง 3 ชั้นบน arm64 16 KiB page: VA 47 บิต แยกเป็น L1 L2 L3 offset และธงใน entry">
+  <style>
+    text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 13px; fill: #1a1a1a; }
+    .hdr { font-weight: 700; font-size: 18px; }
+    .sub { fill: #57606a; font-size: 12.5px; }
+    .ptitle { font-weight: 700; font-size: 14.5px; }
+    .btitle { font-weight: 700; font-size: 12.5px; }
+    .lbl { fill: #57606a; font-size: 11.5px; }
+    .lbl2 { fill: #1a1a1a; font-size: 11.5px; }
+    .mono { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 12px; }
+    .monob { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 12px; font-weight: 700; fill: #0550ae; }
+    .monor { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 12px; font-weight: 700; fill: #cf222e; }
+    .monog { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 12px; font-weight: 700; fill: #1a7f37; }
+    .band { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.2; }
+    .bandc { fill: #eef4ff; stroke: #0969da; stroke-width: 1.4; }
+    .bandg { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.4; }
+    .bandr { fill: #fdf2f2; stroke: #cf222e; stroke-width: 1.4; }
+    .bandy { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.4; }
+    .cell { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.1; }
+    .cellc { fill: #ffffff; stroke: #0969da; stroke-width: 1.3; }
+    .arrow { stroke: #57606a; stroke-width: 2; fill: none; }
+    .arrowb { stroke: #0550ae; stroke-width: 2.4; fill: none; }
+    .arrowr { stroke: #cf222e; stroke-width: 2.2; fill: none; }
+    .arrowg { stroke: #1a7f37; stroke-width: 2.2; fill: none; }
+    .dash { stroke: #8c959f; stroke-width: 1.4; fill: none; stroke-dasharray: 5 4; }
+  </style>
+  <defs>
+    <marker id="a-n" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#57606a"/></marker>
+    <marker id="a-b" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0550ae"/></marker>
+    <marker id="a-r" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#cf222e"/></marker>
+    <marker id="a-g" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1a7f37"/></marker>
+  </defs>
+  <rect x="0" y="0" width="1040" height="880" fill="#ffffff"/>
+
+<text class="hdr" x="520" y="36" text-anchor="middle">MMU แปลที่อยู่ยังไง: เดินตาราง 3 ชั้นบนเครื่องนี้</text>
+<text class="sub" x="520" y="60" text-anchor="middle">ค่าจาก /boot/config-6.18.39+rpt-rpi-2712 (16K pages · PGTABLE_LEVELS=3 · VA_BITS=47) + getconf PAGESIZE = 16384</text>
+<rect class="bandc" x="40" y="84" width="960" height="150" rx="10"/>
+<text class="ptitle" x="60" y="112">virtual address 47 บิต ถูกตัดเป็น 4 ท่อน (ท่อนละ 11 บิต ยกเว้นท่อน offset 14 บิต)</text>
+<rect class="cellc" x="60" y="130" width="225" height="86" rx="8"/>
+<text class="monob" x="70" y="152">bits 46:36</text>
+<text class="lbl2" x="70" y="172">11 บิต = 2048 entry</text>
+<text class="lbl" x="70" y="192">index L1</text>
+<text class="lbl" x="287" y="178">|</text>
+<rect class="cellc" x="300" y="130" width="225" height="86" rx="8"/>
+<text class="monob" x="310" y="152">bits 35:25</text>
+<text class="lbl2" x="310" y="172">11 บิต = 2048 entry</text>
+<text class="lbl" x="310" y="192">index L2</text>
+<text class="lbl" x="527" y="178">|</text>
+<rect class="cellc" x="540" y="130" width="225" height="86" rx="8"/>
+<text class="monob" x="550" y="152">bits 24:14</text>
+<text class="lbl2" x="550" y="172">11 บิต = 2048 entry</text>
+<text class="lbl" x="550" y="192">index L3</text>
+<text class="lbl" x="767" y="178">|</text>
+<rect class="cellc" x="780" y="130" width="225" height="86" rx="8"/>
+<text class="monob" x="790" y="152">bits 13:0</text>
+<text class="lbl2" x="790" y="172">14 บิต = 16384 ค่า</text>
+<text class="lbl" x="790" y="192">offset ในหน้า</text>
+<rect class="bandg" x="40" y="250" width="960" height="256" rx="10"/>
+<text class="ptitle" x="60" y="278">เดินจากบนลงล่าง: ที่อยู่ทีละท่อนชี้ไปตารางถัดไป จนถึง frame จริง</text>
+<rect class="cell" x="46" y="296" width="184" height="96" rx="8"/>
+<text class="btitle" x="56" y="318">VA 47 บิต</text>
+<text class="lbl" x="56" y="338">0x5555a39f42a0</text>
+<text class="lbl" x="56" y="356">แยกท่อนด้านบน</text>
+<line class="arrow" x1="231" y1="344" x2="237" y2="344" marker-end="url(#a-n)"/>
+<rect class="cell" x="238" y="296" width="184" height="96" rx="8"/>
+<text class="btitle" x="248" y="318">L1 table</text>
+<text class="lbl" x="248" y="338">ฐานอยู่ใน TTBR0_EL1</text>
+<text class="lbl" x="248" y="356">2048 entry</text>
+<line class="arrow" x1="423" y1="344" x2="429" y2="344" marker-end="url(#a-n)"/>
+<rect class="cell" x="430" y="296" width="184" height="96" rx="8"/>
+<text class="btitle" x="440" y="318">L2 table</text>
+<text class="lbl" x="440" y="338">2048 entry</text>
+<text class="lbl" x="440" y="356">1 entry = 32 MiB</text>
+<line class="arrow" x1="615" y1="344" x2="621" y2="344" marker-end="url(#a-n)"/>
+<rect class="cell" x="622" y="296" width="184" height="96" rx="8"/>
+<text class="btitle" x="632" y="318">L3 table</text>
+<text class="lbl" x="632" y="338">2048 entry</text>
+<text class="lbl" x="632" y="356">1 entry = 1 หน้า</text>
+<line class="arrow" x1="807" y1="344" x2="813" y2="344" marker-end="url(#a-n)"/>
+<rect class="cell" x="814" y="296" width="184" height="96" rx="8"/>
+<text class="btitle" x="824" y="318">frame + offset</text>
+<text class="lbl" x="824" y="338">ได้ตำแหน่งบน RAM จริง</text>
+<text class="lbl" x="824" y="356">ส่งให้ CPU ต่อ</text>
+<text class="lbl" x="60" y="418">ตารางชั้นหนึ่ง = 2048 entry x 8 ไบต์ = 16 KiB = 1 หน้าเต็ม — เดินแต่ละชั้นจึงเท่ากับอ่านหน่วยความจำเพิ่มอีกก้อน</text>
+<text class="lbl" x="60" y="440">ตารางแต่ละชั้นก็ถูกจัดสรรจาก frame จริงเหมือนกัน (2048 entry × 8 ไบต์ = 16 KiB = 1 หน้าเต็มต่อ 1 ตาราง)</text>
+<text class="lbl" x="60" y="462">จึงมี TLB (ภาพที่ 4) มาช่วยจำผลแปลล่าสุด · TTBR0_EL1 เก็บฐานตารางของโปรเซสปัจจุบัน — เปลี่ยนโปรเซส = เปลี่ยนฐานตาราง</text>
+<text class="lbl" x="60" y="484">bit 55 ของ VA เป็นตัวเลือกระหว่างฝั่ง user (TTBR0) กับฝั่ง kernel (TTBR1) — ที่อยู่ 0x7fff... กับ 0x5555... จึงอยู่ฝั่งเดียวกัน</text>
+<rect class="bandy" x="40" y="524" width="960" height="212" rx="10"/>
+<text class="ptitle" x="60" y="552">ใน 1 entry ไม่ได้มีแค่เลข frame — มี "ธง" บอกกติกาด้วย</text>
+<text class="monob" x="60" y="576">present</text>
+<text class="lbl2" x="250" y="576">มี frame รองรับแล้วหรือยัง</text>
+<text class="lbl" x="600" y="576">0 = ยังไม่มี -&gt; page fault</text>
+<line class="dash" x1="60" y1="584" x2="980" y2="584"/>
+<text class="monob" x="60" y="602">read-write</text>
+<text class="lbl2" x="250" y="602">เขียนได้หรืออ่านอย่างเดียว</text>
+<text class="lbl" x="600" y="602">เขียนผิดกติกา -&gt; SIGSEGV</text>
+<line class="dash" x1="60" y1="610" x2="980" y2="610"/>
+<text class="monob" x="60" y="628">user / supervisor</text>
+<text class="lbl2" x="250" y="628">user เข้าถึงได้ไหม</text>
+<text class="lbl" x="600" y="628">0 = แค่ kernel -&gt; SIGSEGV</text>
+<line class="dash" x1="60" y1="636" x2="980" y2="636"/>
+<text class="monob" x="60" y="654">dirty</text>
+<text class="lbl2" x="250" y="654">เคยถูกเขียนหรือยัง</text>
+<text class="lbl" x="600" y="654">ใช้ตัดสินใจตอนเก็บกลับดิสก์</text>
+<line class="dash" x1="60" y1="662" x2="980" y2="662"/>
+<text class="monob" x="60" y="680">accessed</text>
+<text class="lbl2" x="250" y="680">เพิ่งถูกใช้ล่าสุดเมื่อไหร่</text>
+<text class="lbl" x="600" y="680">ใช้เลือกว่าจะเก็บหน้าออกจาก RAM</text>
+<line class="dash" x1="60" y1="688" x2="980" y2="688"/>
+<text class="lbl" x="60" y="724">ยืนยันจากการรัน: /proc/self/pagemap ให้ bit 63 (present) = 1 แต่ pfn = 0 เพราะผู้ใช้ทั่วไปไม่มี CAP_SYS_ADMIN (ปิดตั้งแต่ Linux 4.0)</text>
+<rect class="band" x="40" y="750" width="960" height="108" rx="10"/>
+<text class="ptitle" x="60" y="776">ค่าจริงของเครื่องนี้</text>
+<text class="lbl" x="60" y="804">getconf PAGESIZE</text>
+<text class="lbl2" x="60" y="824">16384 ไบต์ (16 KiB)</text>
+<text class="lbl2" x="60" y="844"> </text>
+<text class="lbl" x="300" y="804">หน้าทั้งหมดของ RAM</text>
+<text class="lbl2" x="300" y="824">515,992 หน้า</text>
+<text class="lbl2" x="300" y="844"> </text>
+<text class="lbl" x="540" y="804">VA ที่โปรแกรมเห็น</text>
+<text class="lbl2" x="540" y="824">128 TiB (47 บิต)</text>
+<text class="lbl2" x="540" y="844"> </text>
+<text class="lbl" x="780" y="804">โปรแกรมเล็ก 1 ตัว</text>
+<text class="lbl2" x="780" y="824">VS 2.4 MiB · RSS 1.4 MiB</text>
+<text class="lbl2" x="780" y="844"> </text>
+</svg>
