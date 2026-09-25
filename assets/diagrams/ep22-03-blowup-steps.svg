@@ -1,0 +1,178 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1140 700" width="1140" height="700" role="img" aria-label="กราฟจำนวนก้าวจริง: backtracking ระเบิดแบบเอกซ์โพเนนเชียล เทียบ DFA และ regexp ของ Go">
+  <style>
+    text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 13px; fill: #1a1a1a; }
+    .hdr { font-weight: 700; font-size: 18px; }
+    .sub { fill: #57606a; font-size: 12.5px; }
+    .ptitle { font-weight: 700; font-size: 14.5px; }
+    .btitle { font-weight: 700; font-size: 12.5px; }
+    .lbl { fill: #57606a; font-size: 11.5px; }
+    .lblb { fill: #0550ae; font-size: 11.5px; font-weight: 700; }
+    .lblr { fill: #cf222e; font-size: 11.5px; font-weight: 700; }
+    .lblg { fill: #1a7f37; font-size: 11.5px; font-weight: 700; }
+    .mono { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 12px; }
+    .monos { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 11.5px; }
+    .monob { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 12px; font-weight: 700; fill: #0550ae; }
+    .monor { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 12px; font-weight: 700; fill: #cf222e; }
+    .monog { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 12px; font-weight: 700; fill: #1a7f37; }
+    .band { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.2; }
+    .bandw { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.2; }
+    .bandc { fill: #eef4ff; stroke: #0969da; stroke-width: 1.4; }
+    .bandg { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.4; }
+    .bandr { fill: #fdf2f2; stroke: #cf222e; stroke-width: 1.4; }
+    .bandy { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.4; }
+    .cell { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.1; }
+    .cellb { fill: #f0f7ff; stroke: #0969da; stroke-width: 1.3; }
+    .cellg { fill: #f0fbf3; stroke: #1a7f37; stroke-width: 1.3; }
+    .cellr { fill: #fdf4f4; stroke: #cf222e; stroke-width: 1.3; }
+    .cellt { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.1; }
+    .st { fill: #ffffff; stroke: #0969da; stroke-width: 1.6; }
+    .stacc { fill: #f0fbf3; stroke: #1a7f37; stroke-width: 1.8; }
+    .stdbl { fill: #f0fbf3; stroke: #1a7f37; stroke-width: 1.6; }
+    .stdead { fill: #fdf4f4; stroke: #cf222e; stroke-width: 1.6; }
+    .arrow { stroke: #57606a; stroke-width: 2; fill: none; }
+    .arrowb { stroke: #0550ae; stroke-width: 2.2; fill: none; }
+    .arrowr { stroke: #cf212e; stroke-width: 2.2; fill: none; }
+    .arrowg { stroke: #1a7f37; stroke-width: 2.2; fill: none; }
+    .arrowgray { stroke: #8c959f; stroke-width: 1.8; fill: none; }
+    .dash { stroke: #bf8700; stroke-width: 1.8; fill: none; stroke-dasharray: 6 4; }
+    .grid { stroke: #e4e8ed; stroke-width: 1; fill: none; }
+    .axis { stroke: #57606a; stroke-width: 1.4; fill: none; }
+    .dotr { fill: #cf222e; stroke: #ffffff; stroke-width: 1.5; }
+    .dotb { fill: #0550ae; stroke: #ffffff; stroke-width: 1.5; }
+    .dotg { fill: #1a7f37; stroke: #ffffff; stroke-width: 1.5; }
+  </style>
+  <defs>
+    <marker id="a-n" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#57606a"/></marker>
+    <marker id="a-b" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0550ae"/></marker>
+    <marker id="a-r" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#cf212e"/></marker>
+    <marker id="a-g" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1a7f37"/></marker>
+    <marker id="a-gray" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8c959f"/></marker>
+    <marker id="a-y" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#bf8700"/></marker>
+  </defs>
+  <rect x="0" y="0" width="1140" height="700" fill="#ffffff"/>
+<text class="hdr" x="40" y="36">จำนวนก้าวจริง: งานเดียวกันเป๊ะ แต่ต่างกันแค่ใส่วงเล็บเกินมาคู่นึง</text>
+<text class="sub" x="40" y="60">pattern (a+)+b กับ pattern a+b รู้จักภาษาเดียวกันเป๊ะ · input = a×n ที่ไม่มี b ปิดท้าย (ไม่มีทางสำเร็จ)</text>
+<text class="sub" x="40" y="80">แกนตั้งเป็นสเกลลอการิทึม (แต่ละขีด = คูณ 100) เพราะผลต่างสูงถึงหลักสิบล้านเท่า</text>
+<rect class="bandw" x="150" y="120" width="550" height="310" rx="6"/>
+<path class="grid" d="M150,430 L700,430"/>
+<text class="lbl" x="138" y="434" text-anchor="end">1</text>
+<path class="grid" d="M150,352 L700,352"/>
+<text class="lbl" x="138" y="356" text-anchor="end">100</text>
+<path class="grid" d="M150,275 L700,275"/>
+<text class="lbl" x="138" y="279" text-anchor="end">10,000</text>
+<path class="grid" d="M150,198 L700,198"/>
+<text class="lbl" x="138" y="202" text-anchor="end">1,000,000</text>
+<path class="grid" d="M150,120 L700,120"/>
+<text class="lbl" x="138" y="124" text-anchor="end">100,000,000</text>
+<text class="lbl" x="138" y="106" text-anchor="end">ก้าว (สเกล log)</text>
+<text class="lbl" x="200" y="450" text-anchor="middle">4</text>
+<text class="lbl" x="300" y="450" text-anchor="middle">8</text>
+<text class="lbl" x="400" y="450" text-anchor="middle">12</text>
+<text class="lbl" x="500" y="450" text-anchor="middle">16</text>
+<text class="lbl" x="550" y="450" text-anchor="middle">18</text>
+<text class="lbl" x="600" y="450" text-anchor="middle">20</text>
+<text class="lbl" x="650" y="450" text-anchor="middle">22</text>
+<text class="lbl" x="425" y="468" text-anchor="middle">n = ความยาว input (จำนวนตัวอักษร a)</text>
+<path class="arrowr" d="M200,354 L300,307 L400,260 L500,213 L550,190 L600,167 L650,143"/>
+<path class="arrowb" d="M200,386 L300,375 L400,369 L500,364 L550,362 L600,361 L650,359"/>
+<path class="arrowg" d="M200,407 L300,395 L400,388 L500,383 L550,381 L600,380 L650,378"/>
+<circle class="dotr" cx="200" cy="354" r="4.5"/>
+<circle class="dotb" cx="200" cy="386" r="4.5"/>
+<circle class="dotg" cx="200" cy="407" r="4.5"/>
+<circle class="dotr" cx="300" cy="307" r="4.5"/>
+<circle class="dotb" cx="300" cy="375" r="4.5"/>
+<circle class="dotg" cx="300" cy="395" r="4.5"/>
+<circle class="dotr" cx="400" cy="260" r="4.5"/>
+<circle class="dotb" cx="400" cy="369" r="4.5"/>
+<circle class="dotg" cx="400" cy="388" r="4.5"/>
+<circle class="dotr" cx="500" cy="213" r="4.5"/>
+<circle class="dotb" cx="500" cy="364" r="4.5"/>
+<circle class="dotg" cx="500" cy="383" r="4.5"/>
+<circle class="dotr" cx="550" cy="190" r="4.5"/>
+<circle class="dotb" cx="550" cy="362" r="4.5"/>
+<circle class="dotg" cx="550" cy="381" r="4.5"/>
+<circle class="dotr" cx="600" cy="167" r="4.5"/>
+<circle class="dotb" cx="600" cy="361" r="4.5"/>
+<circle class="dotg" cx="600" cy="380" r="4.5"/>
+<circle class="dotr" cx="650" cy="143" r="4.5"/>
+<circle class="dotb" cx="650" cy="359" r="4.5"/>
+<circle class="dotg" cx="650" cy="378" r="4.5"/>
+<text class="lblr" x="642" y="131" text-anchor="end">25,165,821</text>
+<text class="lblb" x="642" y="381" text-anchor="end">a+b = 68</text>
+<text class="lblg" x="642" y="412" text-anchor="end">DFA = 22</text>
+<rect class="bandw" x="160" y="132" width="300" height="74" rx="6"/>
+<circle class="dotr" cx="176" cy="152" r="5"/>
+<text class="lblr" x="190" y="156">(a+)+b — backtracking แบบไม่จำอะไร</text>
+<circle class="dotb" cx="176" cy="172" r="5"/>
+<text class="lblb" x="190" y="176">a+b — backtracking ตัวเดียวกัน (ภาษาเดียวกัน)</text>
+<circle class="dotg" cx="176" cy="192" r="5"/>
+<text class="lblg" x="190" y="196">DFA ที่เขียนเอง — ก้าว = จำนวนตัวอักษร</text>
+<text class="btitle" x="150" y="498">ตัวเลขจริงจาก out/04_engines.out.txt</text>
+<rect class="cellt" x="150" y="508" width="86" height="26" rx="4"/>
+<text class="lbl" x="158" y="526">n (ตัวอักษร)</text>
+<rect class="cellt" x="236" y="508" width="150" height="26" rx="4"/>
+<text class="lbl" x="244" y="526">(a+)+b ก้าว</text>
+<rect class="cellt" x="386" y="508" width="130" height="26" rx="4"/>
+<text class="lbl" x="394" y="526">a+b ก้าว</text>
+<rect class="cellt" x="516" y="508" width="110" height="26" rx="4"/>
+<text class="lbl" x="524" y="526">DFA ก้าว</text>
+<rect class="cell" x="150" y="534" width="86" height="26" rx="4"/>
+<text class="lbl" x="158" y="552">12</text>
+<rect class="cellr" x="236" y="534" width="150" height="26" rx="4"/>
+<text class="lblr" x="244" y="552">24,573</text>
+<rect class="cellb" x="386" y="534" width="130" height="26" rx="4"/>
+<text class="lblb" x="394" y="552">38</text>
+<rect class="cellg" x="516" y="534" width="110" height="26" rx="4"/>
+<text class="lblg" x="524" y="552">12</text>
+<rect class="cell" x="150" y="560" width="86" height="26" rx="4"/>
+<text class="lbl" x="158" y="578">16</text>
+<rect class="cellr" x="236" y="560" width="150" height="26" rx="4"/>
+<text class="lblr" x="244" y="578">393,213</text>
+<rect class="cellb" x="386" y="560" width="130" height="26" rx="4"/>
+<text class="lblb" x="394" y="578">50</text>
+<rect class="cellg" x="516" y="560" width="110" height="26" rx="4"/>
+<text class="lblg" x="524" y="578">16</text>
+<rect class="cell" x="150" y="586" width="86" height="26" rx="4"/>
+<text class="lbl" x="158" y="604">18</text>
+<rect class="cellr" x="236" y="586" width="150" height="26" rx="4"/>
+<text class="lblr" x="244" y="604">1,572,861</text>
+<rect class="cellb" x="386" y="586" width="130" height="26" rx="4"/>
+<text class="lblb" x="394" y="604">56</text>
+<rect class="cellg" x="516" y="586" width="110" height="26" rx="4"/>
+<text class="lblg" x="524" y="604">18</text>
+<rect class="cell" x="150" y="612" width="86" height="26" rx="4"/>
+<text class="lbl" x="158" y="630">20</text>
+<rect class="cellr" x="236" y="612" width="150" height="26" rx="4"/>
+<text class="lblr" x="244" y="630">6,291,453</text>
+<rect class="cellb" x="386" y="612" width="130" height="26" rx="4"/>
+<text class="lblb" x="394" y="630">62</text>
+<rect class="cellg" x="516" y="612" width="110" height="26" rx="4"/>
+<text class="lblg" x="524" y="630">20</text>
+<rect class="cell" x="150" y="638" width="86" height="26" rx="4"/>
+<text class="lbl" x="158" y="656">22</text>
+<rect class="cellr" x="236" y="638" width="150" height="26" rx="4"/>
+<text class="lblr" x="244" y="656">25,165,821</text>
+<rect class="cellb" x="386" y="638" width="130" height="26" rx="4"/>
+<text class="lblb" x="394" y="656">68</text>
+<rect class="cellg" x="516" y="638" width="110" height="26" rx="4"/>
+<text class="lblg" x="524" y="656">22</text>
+<rect class="bandc" x="780" y="120" width="320" height="212" rx="8"/>
+<text class="btitle" x="794" y="146">เวลาจริงบน input 1,000,000 ตัว</text>
+<text class="lbl" x="794" y="168">(ตัวเลขขึ้นกับเครื่อง · Pi 5 · Go 1.24.4)</text>
+<rect class="cell" x="794" y="190" width="292" height="30" rx="4"/>
+<text class="lbl" x="804" y="210">regexp ของ Go · (a+)+b</text>
+<text class="lblr" x="1076" y="210" text-anchor="end">90.648ms</text>
+<rect class="cell" x="794" y="224" width="292" height="30" rx="4"/>
+<text class="lbl" x="804" y="244">regexp ของ Go · a+b</text>
+<text class="lblb" x="1076" y="244" text-anchor="end">19.742ms</text>
+<rect class="cell" x="794" y="258" width="292" height="30" rx="4"/>
+<text class="lbl" x="804" y="278">DFA ที่เราเขียนเอง</text>
+<text class="lblg" x="1076" y="278" text-anchor="end">2.932ms</text>
+<text class="lbl" x="794" y="302">ทั้งสามตอบ 'ไม่รับ' เหมือนกัน</text>
+<text class="lbl" x="794" y="320">แต่เวลาของ Go เป็นเชิงเส้นตาม n</text>
+<rect class="bandw" x="780" y="336" width="320" height="94" rx="8"/>
+<text class="btitle" x="794" y="360">อ่านกราฟนี้ยังไง</text>
+<text class="lbl" x="794" y="382">เส้นแดงโตแบบ 2 ยกกำลัง n → n เพิ่ม 2 ตัว</text>
+<text class="lbl" x="794" y="400">ตัวเลขคูณ 4 · ที่ n=22 ใช้ 25,165,821 ก้าว</text>
+<text class="lbl" x="794" y="418">แต่ DFA ใช้แค่ 22 ก้าว บนงานเดียวกัน</text>
+</svg>

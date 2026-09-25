@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 486" width="1180" height="486" role="img" aria-label="DFA ของภาษา a*b: สถานะ q0, q1 (รับ), q2 (กับดักตาย) พร้อมเส้นทางจริง">
+  <style>
+    text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 13px; fill: #1a1a1a; }
+    .hdr { font-weight: 700; font-size: 18px; }
+    .sub { fill: #57606a; font-size: 12.5px; }
+    .ptitle { font-weight: 700; font-size: 14.5px; }
+    .btitle { font-weight: 700; font-size: 12.5px; }
+    .lbl { fill: #57606a; font-size: 11.5px; }
+    .lblb { fill: #0550ae; font-size: 11.5px; font-weight: 700; }
+    .lblr { fill: #cf222e; font-size: 11.5px; font-weight: 700; }
+    .lblg { fill: #1a7f37; font-size: 11.5px; font-weight: 700; }
+    .mono { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 12px; }
+    .monos { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 11.5px; }
+    .monob { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 12px; font-weight: 700; fill: #0550ae; }
+    .monor { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 12px; font-weight: 700; fill: #cf222e; }
+    .monog { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 12px; font-weight: 700; fill: #1a7f37; }
+    .band { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.2; }
+    .bandw { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.2; }
+    .bandc { fill: #eef4ff; stroke: #0969da; stroke-width: 1.4; }
+    .bandg { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.4; }
+    .bandr { fill: #fdf2f2; stroke: #cf222e; stroke-width: 1.4; }
+    .bandy { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.4; }
+    .cell { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.1; }
+    .cellb { fill: #f0f7ff; stroke: #0969da; stroke-width: 1.3; }
+    .cellg { fill: #f0fbf3; stroke: #1a7f37; stroke-width: 1.3; }
+    .cellr { fill: #fdf4f4; stroke: #cf222e; stroke-width: 1.3; }
+    .cellt { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.1; }
+    .st { fill: #ffffff; stroke: #0969da; stroke-width: 1.6; }
+    .stacc { fill: #f0fbf3; stroke: #1a7f37; stroke-width: 1.8; }
+    .stdbl { fill: #f0fbf3; stroke: #1a7f37; stroke-width: 1.6; }
+    .stdead { fill: #fdf4f4; stroke: #cf222e; stroke-width: 1.6; }
+    .arrow { stroke: #57606a; stroke-width: 2; fill: none; }
+    .arrowb { stroke: #0550ae; stroke-width: 2.2; fill: none; }
+    .arrowr { stroke: #cf212e; stroke-width: 2.2; fill: none; }
+    .arrowg { stroke: #1a7f37; stroke-width: 2.2; fill: none; }
+    .arrowgray { stroke: #8c959f; stroke-width: 1.8; fill: none; }
+    .dash { stroke: #bf8700; stroke-width: 1.8; fill: none; stroke-dasharray: 6 4; }
+    .grid { stroke: #e4e8ed; stroke-width: 1; fill: none; }
+    .axis { stroke: #57606a; stroke-width: 1.4; fill: none; }
+    .dotr { fill: #cf222e; stroke: #ffffff; stroke-width: 1.5; }
+    .dotb { fill: #0550ae; stroke: #ffffff; stroke-width: 1.5; }
+    .dotg { fill: #1a7f37; stroke: #ffffff; stroke-width: 1.5; }
+  </style>
+  <defs>
+    <marker id="a-n" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#57606a"/></marker>
+    <marker id="a-b" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0550ae"/></marker>
+    <marker id="a-r" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#cf212e"/></marker>
+    <marker id="a-g" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1a7f37"/></marker>
+    <marker id="a-gray" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8c959f"/></marker>
+    <marker id="a-y" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#bf8700"/></marker>
+  </defs>
+  <rect x="0" y="0" width="1180" height="486" fill="#ffffff"/>
+<text class="hdr" x="40" y="36">DFA ของภาษา a*b — 3 สถานะ 2 สัญลักษณ์ + ทางออกสำหรับตัวอักษรอื่น</text>
+<text class="sub" x="40" y="60">เครื่องอ่านทีละตัวอักษรจากซ้ายไปขวา ไม่เคยมองย้อนหลัง ไม่มีการถอย · สถานะจำกัด และกำหนดได้แน่นอน</text>
+<text class="sub" x="40" y="80">q0 = เริ่ม · q1 = สถานะรับ (b ตัวปิดท้าย) · q2 = กับดักตาย (เข้าแล้วไม่มีทางรับ)</text>
+<circle class="st" cx="210" cy="215" r="54"/>
+<text class="monob" x="210" y="211" text-anchor="middle">q0</text>
+<text class="lbl" x="210" y="230" text-anchor="middle">ยังไม่เจอ b</text>
+<circle class="stacc" cx="560" cy="215" r="54"/>
+<circle class="stacc" cx="560" cy="215" r="48"/>
+<text class="monob" x="560" y="211" text-anchor="middle">q1</text>
+<text class="lbl" x="560" y="230" text-anchor="middle">เจอ b แล้ว = รับ</text>
+<circle class="stdead" cx="910" cy="215" r="54"/>
+<text class="monor" x="910" y="211" text-anchor="middle">q2</text>
+<text class="lbl" x="910" y="230" text-anchor="middle">กับดักตาย</text>
+<path class="arrow" d="M112,215 L148,215" marker-end="url(#a-n)"/>
+<text class="lbl" x="112" y="201">เริ่ม</text>
+<path class="arrowb" d="M172,177 C158,87 262,87 248,177" marker-end="url(#a-b)"/>
+<text class="lblb" x="210" y="103" text-anchor="middle">a</text>
+<path class="arrowb" d="M270,215 L500,215" marker-end="url(#a-b)"/>
+<text class="lblb" x="385" y="201" text-anchor="middle">b</text>
+<path class="arrowr" d="M620,215 L850,215" marker-end="url(#a-r)"/>
+<text class="lblr" x="735" y="201" text-anchor="middle">a · b · อื่นๆ</text>
+<path class="arrowr" d="M250,251 C400,385 720,385 870,251" marker-end="url(#a-r)"/>
+<text class="lblr" x="560" y="367" text-anchor="middle">ตัวอักษรอื่นที่ไม่ใช่ a และไม่ใช่ b</text>
+<path class="arrowr" d="M872,177 C858,87 962,87 948,177" marker-end="url(#a-r)"/>
+<text class="lblr" x="910" y="103" text-anchor="middle">ทุกสัญลักษณ์</text>
+<rect class="band" x="40" y="388" width="1100" height="78" rx="10"/>
+<text class="monob" x="60" y="414">เส้นทางจริงของ "aaab":  q0 -a-&gt; q0 -a-&gt; q0 -a-&gt; q0 -b-&gt; q1   =&gt; รับ (accept)</text>
+<text class="monor" x="60" y="436">เส้นทางจริงของ "aabx":  q0 -a-&gt; q0 -a-&gt; q0 -b-&gt; q1 -x-&gt; q2  =&gt; ไม่รับ (reject)</text>
+<text class="lbl" x="60" y="458">ตรวจเทียบ regexp ของ Go (^a*b$) กับ DFA นี้บนสตริง {a,b} ยาว 0–12: ทั้งหมด 8,191 เส้น · ไม่ตรงกัน 0 เส้น</text>
+</svg>

@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1140 600" width="1140" height="600" role="img" aria-label="NFA ของ a*b ที่สร้างแบบ Thompson แปลงเป็น DFA ด้วย subset construction">
+  <style>
+    text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 13px; fill: #1a1a1a; }
+    .hdr { font-weight: 700; font-size: 18px; }
+    .sub { fill: #57606a; font-size: 12.5px; }
+    .ptitle { font-weight: 700; font-size: 14.5px; }
+    .btitle { font-weight: 700; font-size: 12.5px; }
+    .lbl { fill: #57606a; font-size: 11.5px; }
+    .lblb { fill: #0550ae; font-size: 11.5px; font-weight: 700; }
+    .lblr { fill: #cf222e; font-size: 11.5px; font-weight: 700; }
+    .lblg { fill: #1a7f37; font-size: 11.5px; font-weight: 700; }
+    .mono { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 12px; }
+    .monos { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 11.5px; }
+    .monob { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 12px; font-weight: 700; fill: #0550ae; }
+    .monor { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 12px; font-weight: 700; fill: #cf222e; }
+    .monog { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 12px; font-weight: 700; fill: #1a7f37; }
+    .band { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.2; }
+    .bandw { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.2; }
+    .bandc { fill: #eef4ff; stroke: #0969da; stroke-width: 1.4; }
+    .bandg { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.4; }
+    .bandr { fill: #fdf2f2; stroke: #cf222e; stroke-width: 1.4; }
+    .bandy { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.4; }
+    .cell { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.1; }
+    .cellb { fill: #f0f7ff; stroke: #0969da; stroke-width: 1.3; }
+    .cellg { fill: #f0fbf3; stroke: #1a7f37; stroke-width: 1.3; }
+    .cellr { fill: #fdf4f4; stroke: #cf222e; stroke-width: 1.3; }
+    .cellt { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.1; }
+    .st { fill: #ffffff; stroke: #0969da; stroke-width: 1.6; }
+    .stacc { fill: #f0fbf3; stroke: #1a7f37; stroke-width: 1.8; }
+    .stdbl { fill: #f0fbf3; stroke: #1a7f37; stroke-width: 1.6; }
+    .stdead { fill: #fdf4f4; stroke: #cf222e; stroke-width: 1.6; }
+    .arrow { stroke: #57606a; stroke-width: 2; fill: none; }
+    .arrowb { stroke: #0550ae; stroke-width: 2.2; fill: none; }
+    .arrowr { stroke: #cf212e; stroke-width: 2.2; fill: none; }
+    .arrowg { stroke: #1a7f37; stroke-width: 2.2; fill: none; }
+    .arrowgray { stroke: #8c959f; stroke-width: 1.8; fill: none; }
+    .dash { stroke: #bf8700; stroke-width: 1.8; fill: none; stroke-dasharray: 6 4; }
+    .grid { stroke: #e4e8ed; stroke-width: 1; fill: none; }
+    .axis { stroke: #57606a; stroke-width: 1.4; fill: none; }
+    .dotr { fill: #cf222e; stroke: #ffffff; stroke-width: 1.5; }
+    .dotb { fill: #0550ae; stroke: #ffffff; stroke-width: 1.5; }
+    .dotg { fill: #1a7f37; stroke: #ffffff; stroke-width: 1.5; }
+  </style>
+  <defs>
+    <marker id="a-n" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#57606a"/></marker>
+    <marker id="a-b" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0550ae"/></marker>
+    <marker id="a-r" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#cf212e"/></marker>
+    <marker id="a-g" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1a7f37"/></marker>
+    <marker id="a-gray" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8c959f"/></marker>
+    <marker id="a-y" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#bf8700"/></marker>
+  </defs>
+  <rect x="0" y="0" width="1140" height="600" fill="#ffffff"/>
+<text class="hdr" x="40" y="36">NFA → DFA: จากเครื่องที่ 'เดาได้' สู่เครื่องที่ 'ต้องรู้แน่'</text>
+<text class="sub" x="40" y="60">NFA อยู่ได้หลายสถานะพร้อมกัน พร้อมขอบ ε ที่ย้ายสถานะได้โดยไม่กินตัวอักษร · DFA ต้องรู้แน่ว่าอยู่สถานะไหน</text>
+<text class="sub" x="40" y="80">ภาพนี้คือหัวใจของทฤษฎีบท: ทุก NFA มี DFA ที่รู้จักภาษาเดียวกันเสมอ (Kleene) — และนี่คือที่มาของ regex</text>
+<rect class="bandc" x="40" y="102" width="660" height="34" rx="8"/>
+<text class="btitle" x="58" y="125">NFA ของ a*b (สร้างตามวิธี Thompson: ท่อน a* มีจุดแยกออก 2 ทาง)</text>
+<circle class="st" cx="110" cy="210" r="34"/>
+<text class="monob" x="110" y="212" text-anchor="middle">0</text>
+<circle class="st" cx="290" cy="210" r="34"/>
+<text class="monob" x="290" y="212" text-anchor="middle">1</text>
+<circle class="st" cx="290" cy="375" r="34"/>
+<text class="monob" x="290" y="377" text-anchor="middle">2</text>
+<circle class="st" cx="520" cy="210" r="34"/>
+<text class="monob" x="520" y="212" text-anchor="middle">3</text>
+<circle class="stacc" cx="700" cy="210" r="34"/>
+<circle class="stacc" cx="700" cy="210" r="28"/>
+<text class="monob" x="700" y="212" text-anchor="middle">4</text>
+<text class="lbl" x="110" y="264" text-anchor="middle">เริ่ม</text>
+<text class="lbl" x="290" y="429" text-anchor="middle">อ่าน a</text>
+<text class="lblg" x="700" y="264" text-anchor="middle">รับ</text>
+<path class="dash" d="M149,210 L251,210" marker-end="url(#a-y)"/>
+<text class="lbl" x="200" y="198" text-anchor="middle">ε</text>
+<path class="dash" d="M308,248 L308,337" marker-end="url(#a-y)"/>
+<text class="lbl" x="326" y="296">ε</text>
+<path class="arrow" d="M272,337 L272,248" marker-end="url(#a-n)"/>
+<text class="mono" x="254" y="296" text-anchor="end">'a'</text>
+<path class="dash" d="M329,210 L481,210" marker-end="url(#a-y)"/>
+<text class="lbl" x="405" y="198" text-anchor="middle">ε</text>
+<path class="arrow" d="M559,210 L661,210" marker-end="url(#a-n)"/>
+<text class="mono" x="610" y="198" text-anchor="middle">'b'</text>
+<text class="lbl" x="58" y="460">ε-closure ของสถานะเริ่ม {0} = {0,1,2,3}  ← สถานะที่ NFA 'เป็นได้พร้อมกัน' ก่อนอ่านตัวอักษรตัวแรก</text>
+<text class="lbl" x="58" y="480">ε-closure ของ {1} = {1,2,3}  ← หลังอ่าน 'a' หนึ่งตัว · เซตนี้เองที่กลายเป็น 'สถานะ' หนึ่งของ DFA</text>
+<rect class="bandg" x="730" y="102" width="370" height="34" rx="8"/>
+<text class="btitle" x="748" y="125">DFA ที่ได้จาก subset construction</text>
+<rect class="cellt" x="730" y="148" width="162" height="30" rx="4"/>
+<text class="lbl" x="811" y="168" text-anchor="middle">เซตย่อย (สถานะ DFA)</text>
+<rect class="cellt" x="892" y="148" width="64" height="30" rx="4"/>
+<text class="lbl" x="924" y="168" text-anchor="middle">'a'</text>
+<rect class="cellt" x="956" y="148" width="64" height="30" rx="4"/>
+<text class="lbl" x="988" y="168" text-anchor="middle">'b'</text>
+<rect class="cellt" x="1020" y="148" width="56" height="30" rx="4"/>
+<text class="lbl" x="1048" y="168" text-anchor="middle">รับ?</text>
+<rect class="cell" x="730" y="178" width="162" height="30" rx="4"/>
+<text class="monos" x="737" y="198">S0 = {0,1,2,3}</text>
+<rect class="cell" x="892" y="178" width="64" height="30" rx="4"/>
+<text class="lbl" x="899" y="198">{1,2,3}</text>
+<rect class="cell" x="956" y="178" width="64" height="30" rx="4"/>
+<text class="lbl" x="963" y="198">{4}</text>
+<rect class="cell" x="1020" y="178" width="56" height="30" rx="4"/>
+<text class="lbl" x="1027" y="198">ไม่</text>
+<rect class="cell" x="730" y="208" width="162" height="30" rx="4"/>
+<text class="monos" x="737" y="228">S1 = {1,2,3}</text>
+<rect class="cell" x="892" y="208" width="64" height="30" rx="4"/>
+<text class="lbl" x="899" y="228">{1,2,3}</text>
+<rect class="cell" x="956" y="208" width="64" height="30" rx="4"/>
+<text class="lbl" x="963" y="228">{4}</text>
+<rect class="cell" x="1020" y="208" width="56" height="30" rx="4"/>
+<text class="lbl" x="1027" y="228">ไม่</text>
+<rect class="cellg" x="730" y="238" width="162" height="30" rx="4"/>
+<text class="monog" x="737" y="258">★ S2 = {4}</text>
+<rect class="cellg" x="892" y="238" width="64" height="30" rx="4"/>
+<text class="lbl" x="899" y="258">∅</text>
+<rect class="cellg" x="956" y="238" width="64" height="30" rx="4"/>
+<text class="lbl" x="963" y="258">∅</text>
+<rect class="cellg" x="1020" y="238" width="56" height="30" rx="4"/>
+<text class="lbl" x="1027" y="258">ใช่</text>
+<rect class="cellr" x="730" y="268" width="162" height="30" rx="4"/>
+<text class="monor" x="737" y="288">∅ (กับดักตาย)</text>
+<rect class="cellr" x="892" y="268" width="64" height="30" rx="4"/>
+<text class="lbl" x="899" y="288">∅</text>
+<rect class="cellr" x="956" y="268" width="64" height="30" rx="4"/>
+<text class="lbl" x="963" y="288">∅</text>
+<rect class="cellr" x="1020" y="268" width="56" height="30" rx="4"/>
+<text class="lbl" x="1027" y="288">ไม่</text>
+<text class="lbl" x="734" y="326">หนึ่งสถานะของ DFA = หนึ่งเซตย่อยของสถานะ NFA</text>
+<text class="lbl" x="734" y="346">→ จำนวนสถานะ DFA จึงโตได้ถึง 2 ยกกำลัง n</text>
+<text class="lblg" x="734" y="374">NFA กับ regexp: ไม่ตรงกัน 0 เส้น</text>
+<text class="lblg" x="734" y="394">DFA ที่สร้างได้กับ regexp: ไม่ตรงกัน 0 เส้น</text>
+<text class="lbl" x="734" y="414">(ทดสอบครบทุกสตริงบน {a,b} ยาว 0–12 = 8,191 เส้น)</text>
+<text class="lbl" x="734" y="434">หมายเหตุ: ∅ = เซตว่าง = กับดักตาย (ไม่มีทางรับต่อ)</text>
+</svg>

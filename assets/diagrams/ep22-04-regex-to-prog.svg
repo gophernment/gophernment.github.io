@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1140 730" width="1140" height="730" role="img" aria-label="จาก regex ถึงโปรแกรมคำสั่งของ Go และเอนจินที่เลือกใช้ พร้อมข้อจำกัดที่แท้จริง">
+  <style>
+    text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 13px; fill: #1a1a1a; }
+    .hdr { font-weight: 700; font-size: 18px; }
+    .sub { fill: #57606a; font-size: 12.5px; }
+    .ptitle { font-weight: 700; font-size: 14.5px; }
+    .btitle { font-weight: 700; font-size: 12.5px; }
+    .lbl { fill: #57606a; font-size: 11.5px; }
+    .lblb { fill: #0550ae; font-size: 11.5px; font-weight: 700; }
+    .lblr { fill: #cf222e; font-size: 11.5px; font-weight: 700; }
+    .lblg { fill: #1a7f37; font-size: 11.5px; font-weight: 700; }
+    .mono { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 12px; }
+    .monos { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 11.5px; }
+    .monob { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 12px; font-weight: 700; fill: #0550ae; }
+    .monor { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 12px; font-weight: 700; fill: #cf222e; }
+    .monog { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 12px; font-weight: 700; fill: #1a7f37; }
+    .band { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.2; }
+    .bandw { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.2; }
+    .bandc { fill: #eef4ff; stroke: #0969da; stroke-width: 1.4; }
+    .bandg { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.4; }
+    .bandr { fill: #fdf2f2; stroke: #cf222e; stroke-width: 1.4; }
+    .bandy { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.4; }
+    .cell { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.1; }
+    .cellb { fill: #f0f7ff; stroke: #0969da; stroke-width: 1.3; }
+    .cellg { fill: #f0fbf3; stroke: #1a7f37; stroke-width: 1.3; }
+    .cellr { fill: #fdf4f4; stroke: #cf222e; stroke-width: 1.3; }
+    .cellt { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.1; }
+    .st { fill: #ffffff; stroke: #0969da; stroke-width: 1.6; }
+    .stacc { fill: #f0fbf3; stroke: #1a7f37; stroke-width: 1.8; }
+    .stdbl { fill: #f0fbf3; stroke: #1a7f37; stroke-width: 1.6; }
+    .stdead { fill: #fdf4f4; stroke: #cf222e; stroke-width: 1.6; }
+    .arrow { stroke: #57606a; stroke-width: 2; fill: none; }
+    .arrowb { stroke: #0550ae; stroke-width: 2.2; fill: none; }
+    .arrowr { stroke: #cf212e; stroke-width: 2.2; fill: none; }
+    .arrowg { stroke: #1a7f37; stroke-width: 2.2; fill: none; }
+    .arrowgray { stroke: #8c959f; stroke-width: 1.8; fill: none; }
+    .dash { stroke: #bf8700; stroke-width: 1.8; fill: none; stroke-dasharray: 6 4; }
+    .grid { stroke: #e4e8ed; stroke-width: 1; fill: none; }
+    .axis { stroke: #57606a; stroke-width: 1.4; fill: none; }
+    .dotr { fill: #cf222e; stroke: #ffffff; stroke-width: 1.5; }
+    .dotb { fill: #0550ae; stroke: #ffffff; stroke-width: 1.5; }
+    .dotg { fill: #1a7f37; stroke: #ffffff; stroke-width: 1.5; }
+  </style>
+  <defs>
+    <marker id="a-n" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#57606a"/></marker>
+    <marker id="a-b" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0550ae"/></marker>
+    <marker id="a-r" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#cf212e"/></marker>
+    <marker id="a-g" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1a7f37"/></marker>
+    <marker id="a-gray" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8c959f"/></marker>
+    <marker id="a-y" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#bf8700"/></marker>
+  </defs>
+  <rect x="0" y="0" width="1140" height="730" fill="#ffffff"/>
+<text class="hdr" x="40" y="36">จาก regex ถึงโปรแกรมคำสั่ง: ข้างใน Go เป็น NFA จริง ๆ</text>
+<text class="sub" x="40" y="60">regexp/syntax แยกข้อความเป็นต้นไม้ แล้วคอมไพล์เป็น 'โปรแกรมคำสั่ง' ที่หน้าตาเหมือน NFA ที่เราวาดเองในภาพที่ 2</text>
+<text class="sub" x="40" y="80">ตัวเลขและข้อความทุกบรรทัดด้านล่างคัดจากผลรันจริงบนเครื่องนี้ (Go 1.24.4)</text>
+<rect class="bandc" x="40" y="104" width="240" height="96" rx="8"/>
+<text class="btitle" x="58" y="128">1) regex ที่เราเขียน</text>
+<text class="monob" x="58" y="156">^a*b$</text>
+<text class="lbl" x="58" y="180">ความหมาย: a กี่ตัวก็ได้</text>
+<text class="lbl" x="58" y="196">แล้วปิดท้ายด้วย b หนึ่งตัว</text>
+<rect class="bandy" x="316" y="104" width="420" height="180" rx="8"/>
+<text class="btitle" x="334" y="128">2) โปรแกรมคำสั่งที่ Go สร้าง (syntax.Prog.String())</text>
+<text class="monos" x="346" y="154">0:</text>
+<text class="mono" x="374" y="154">  0	fail</text>
+<text class="monos" x="346" y="178">1:</text>
+<text class="mono" x="374" y="178">  1	rune1 "a" -&gt; 2</text>
+<text class="monos" x="346" y="202">2:</text>
+<text class="mono" x="374" y="202">  2*	alt -&gt; 1, 3</text>
+<text class="monos" x="346" y="226">3:</text>
+<text class="mono" x="374" y="226">  3	rune1 "b" -&gt; 4</text>
+<text class="monos" x="346" y="250">4:</text>
+<text class="mono" x="374" y="250">  4	match</text>
+<text class="lbl" x="334" y="272">'*' = ตำแหน่งเริ่ม · fail = ทางที่ไม่มีคำตอบ · match = เจอแล้ว</text>
+<rect class="bandg" x="772" y="104" width="328" height="180" rx="8"/>
+<text class="btitle" x="790" y="128">3) ตอนรัน เลือกเอนจินที่เร็วที่สุด</text>
+<text class="lbl" x="790" y="152">onepass — ถ้าโปรแกรมเป็นแบบเดินได้ครั้งเดียว</text>
+<text class="lbl" x="790" y="172">backtracking — โปรแกรมสั้น + input สั้น</text>
+<text class="lbl" x="796" y="190">(จำว่าลองที่ (คำสั่ง, ตำแหน่ง) ไหนแล้ว)</text>
+<text class="lbl" x="790" y="212">NFA machine — โปรแกรมใหญ่/input ยาว ใช้ตัวนี้</text>
+<text class="lbl" x="790" y="236">ทั้งสามทางอยู่ใต้ข้อรับประกันเดียวกัน:</text>
+<text class="lblg" x="790" y="254">เวลาเป็นเชิงเส้นตามขนาด input เสมอ</text>
+<text class="lbl" x="790" y="274">ที่มา: $(go env GOROOT)/src/regexp/*.go</text>
+<rect class="bandr" x="40" y="306" width="1060" height="236" rx="8"/>
+<text class="btitle" x="58" y="332">4) สิ่งที่เอนจินแบบนี้ทำไม่ได้เลย — และเหตุผลทางทฤษฎี</text>
+<text class="lbl" x="58" y="356">ถ้าทำได้เฉพาะด้วยการ 'ถอย' (backtracking) เอนจินนี้จะไม่รองรับ · ข้อความ error ด้านล่างคือของจริงจาก Go 1.24.4:</text>
+<text class="monor" x="66" y="384">(a)\1</text>
+<text class="lbl" x="150" y="384">backreference (อ้างถึงกลุ่มที่จับไว้ก่อนหน้า)</text>
+<text class="monos" x="86" y="403">error parsing regexp: invalid escape sequence: `\1`</text>
+<text class="monor" x="66" y="428">(?=ab)a</text>
+<text class="lbl" x="150" y="428">lookahead (มองล่วงหน้า)</text>
+<text class="monos" x="86" y="447">error parsing regexp: invalid or unsupported Perl syntax: `(?=`</text>
+<text class="monor" x="66" y="472">(?&lt;=x)y</text>
+<text class="lbl" x="150" y="472">lookbehind (มองย้อนหลัง)</text>
+<text class="monos" x="86" y="491">error parsing regexp: invalid named capture: `(?&lt;=x)y`</text>
+<text class="lbl" x="58" y="520">ทฤษฎีบอกไว้ตรงกัน: ภาษาที่ต้อง 'นับแล้วเทียบย้อนหลัง' (เช่น a ยาว n ตามด้วย b ยาว n เท่ากัน) ไม่ใช่ regular language</text>
+<rect class="bandc" x="40" y="558" width="1060" height="132" rx="8"/>
+<text class="btitle" x="58" y="584">5) สามภาษาที่ 'เท่ากัน' ทางคณิตศาสตร์</text>
+<text class="lblb" x="58" y="610">regular expression ≡ NFA ≡ DFA ≡ ภาษาที่เครื่องสถานะจำกัดรู้จัก</text>
+<text class="lbl" x="58" y="634">regex ไม่ใช่ 'สิ่งที่พิเศษ' — มันคือสัญกรณ์ย่อของเครื่องสถานะจำกัด</text>
+<text class="lbl" x="58" y="656">งานที่ DFA ทำไม่ได้: ตรวจ 'วงเล็บเปิด-ปิดเท่ากัน' ต้องมีหน่วยความจำแบบเรียงซ้อน → pushdown automaton (ตอนที่ 23)</text>
+<text class="lbl" x="58" y="678">งานที่ต้องนับแบบไม่มีขีดจำกัด: Turing machine → halting problem (ตอนที่ 24)</text>
+</svg>
