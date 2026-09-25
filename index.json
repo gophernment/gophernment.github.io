@@ -1,5 +1,21 @@
 [
   {
+    "slug": "2026-09-25-cs-fundamentals-21-filesystem-shell",
+    "title": "file system + สร้าง shell จิ๋ว — ไฟล์ไม่ได้เก็บชื่อของตัวเอง (ตอนที่ 21)",
+    "date": "2026-09-25",
+    "tags": [
+      "cs-fundamentals",
+      "os",
+      "filesystem",
+      "shell",
+      "inode",
+      "linux",
+      "c",
+      "arm64"
+    ],
+    "description": "ตอนที่ 21 ของคอร์ส CS Fundamentals — file system + สร้าง shell จิ๋ว: ไฟล์ = ชื่อในไดเรกทอรี + inode (metadata) + บล็อกข้อมูลบนดิสก์; directory คือตารางชื่อ→inode; fd/offset อยู่ในตัวเปิดไฟล์; แล้วต่อ shell จริง 213 บรรทัด (fork/execvp/waitpid + ค้น PATH) — โค้ด C รันจริงบน Raspberry Pi 5"
+  },
+  {
     "slug": "2026-09-23-cs-fundamentals-20-virtual-memory-paging",
     "title": "virtual memory — ที่อยู่ปลอมที่โปรแกรมเห็น + paging (ตอนที่ 20)",
     "date": "2026-09-23",
