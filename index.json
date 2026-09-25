@@ -1,5 +1,21 @@
 [
   {
+    "slug": "2026-09-26-cs-fundamentals-22-finite-automata-regex",
+    "title": "finite automata → regular language — regex มาจากไหน (ตอนที่ 22)",
+    "date": "2026-09-26",
+    "tags": [
+      "cs-fundamentals",
+      "theory",
+      "automata",
+      "dfa",
+      "nfa",
+      "regex",
+      "regular-language",
+      "go"
+    ],
+    "description": "ตอนที่ 22 ของคอร์ส CS Fundamentals — finite automata → regular language: DFA/NFA (เครื่องสถานะจำกัด), regular language และ regex มาจากไหน (Kleene 1951 → Thompson 1968); เขียน DFA เป็น Go รันจริง เทียบกับแพ็กเกจ regexp ของ Go (เอนจิน RE2) ที่รับประกันเวลาเชิงเส้น ไม่มี catastrophic backtracking — โค้ด Go รันจริงบน Raspberry Pi 5"
+  },
+  {
     "slug": "2026-09-25-cs-fundamentals-21-filesystem-shell",
     "title": "file system + สร้าง shell จิ๋ว — ไฟล์ไม่ได้เก็บชื่อของตัวเอง (ตอนที่ 21)",
     "date": "2026-09-25",
