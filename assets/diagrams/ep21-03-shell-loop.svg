@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 800" width="1080" height="800" role="img" aria-label="วงจรของ shell: พิมพ์ prompt อ่านคำสั่ง แยกคำ fork ให้ลูกรัน execvp แล้วรอด้วย waitpid">
+  <style>
+    text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 13px; fill: #1a1a1a; }
+    .hdr { font-weight: 700; font-size: 18px; }
+    .sub { fill: #57606a; font-size: 12.5px; }
+    .ptitle { font-weight: 700; font-size: 14.5px; }
+    .btitle { font-weight: 700; font-size: 12.5px; }
+    .lbl { fill: #57606a; font-size: 11.5px; }
+    .lbl2 { fill: #1a1a1a; font-size: 11.5px; }
+    .mono { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 12px; }
+    .monob { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 12px; font-weight: 700; fill: #0550ae; }
+    .monor { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 12px; font-weight: 700; fill: #cf222e; }
+    .monog { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 12px; font-weight: 700; fill: #1a7f37; }
+    .band { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.2; }
+    .bandc { fill: #eef4ff; stroke: #0969da; stroke-width: 1.4; }
+    .bandg { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.4; }
+    .bandr { fill: #fdf2f2; stroke: #cf222e; stroke-width: 1.4; }
+    .bandy { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.4; }
+    .cell { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.1; }
+    .cellc { fill: #ffffff; stroke: #0969da; stroke-width: 1.3; }
+    .arrow { stroke: #57606a; stroke-width: 2; fill: none; }
+    .arrowb { stroke: #0550ae; stroke-width: 2.4; fill: none; }
+    .arrowr { stroke: #cf212e; stroke-width: 2.2; fill: none; }
+    .arrowg { stroke: #1a7f37; stroke-width: 2.2; fill: none; }
+    .dash { stroke: #8c959f; stroke-width: 1.4; fill: none; stroke-dasharray: 5 4; }
+  </style>
+  <defs>
+    <marker id="a-n" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#57606a"/></marker>
+    <marker id="a-b" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0550ae"/></marker>
+    <marker id="a-r" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#cf212e"/></marker>
+    <marker id="a-g" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1a7f37"/></marker>
+  </defs>
+  <rect x="0" y="0" width="1080" height="800" fill="#ffffff"/>
+
+<text class="hdr" x="540" y="36" text-anchor="middle">shell จิ๋ว: 6 ก้าวที่วนซ้ำตลอดชีวิต</text>
+<text class="sub" x="540" y="60" text-anchor="middle">ตัวเลขจริงจาก 06_shell.c + strace บน Raspberry Pi 5 · fork บน Linux arm64 = clone() · รอลูก = wait4() · pid/pointer เปลี่ยนทุกรัน</text>
+<rect class="bandc" x="30" y="84" width="560" height="440" rx="10"/>
+<text class="ptitle" x="48" y="112">โปรเซสเดียวที่ชื่อ 06_shell</text>
+<rect class="cell" x="48" y="123" width="524" height="40" rx="7"/>
+<text class="monob" x="60" y="141">1</text>
+<text class="mono" x="88" y="141">fputs(PROMPT) + fflush</text>
+<text class="lbl" x="88" y="157">พิมพ์ "ep21&gt; " แล้วดันออกจอทันที (ไม่รอ buffer)</text>
+<rect class="cell" x="48" y="175" width="524" height="40" rx="7"/>
+<text class="monob" x="60" y="193">2</text>
+<text class="mono" x="88" y="193">getline(&amp;line, &amp;cap, stdin)</text>
+<text class="lbl" x="88" y="209">อ่านทั้งบรรทัด — libc จัดการ realloc ให้เอง</text>
+<rect class="cell" x="48" y="227" width="524" height="40" rx="7"/>
+<text class="monob" x="60" y="245">3</text>
+<text class="mono" x="88" y="245">tokenize() เปลี่ยนช่องว่างเป็น \0</text>
+<text class="lbl" x="88" y="261">ได้ argv[] แบบที่ exec ต้องการ + ตรวจจำนวนคำ</text>
+<rect class="cell" x="48" y="279" width="524" height="40" rx="7"/>
+<text class="monob" x="60" y="297">4</text>
+<text class="mono" x="88" y="297">built-in? cd / exit / help</text>
+<text class="lbl" x="88" y="313">ทำในโปรเซสของ shell เอง — ไม่ fork</text>
+<rect class="cell" x="48" y="331" width="524" height="40" rx="7"/>
+<text class="monob" x="60" y="349">5</text>
+<text class="mono" x="88" y="349">ลูก: execvp(argv[0], argv)</text>
+<text class="lbl" x="88" y="365">พ่อ fork() = clone() แล้วลูกกลายเป็นโปรแกรมจริง</text>
+<rect class="cell" x="48" y="383" width="524" height="40" rx="7"/>
+<text class="monob" x="60" y="401">6</text>
+<text class="mono" x="88" y="401">พ่อ: waitpid(pid, &amp;status)</text>
+<text class="lbl" x="88" y="417">นอนรอจนลูกรายงานสถานะ แล้ววนกลับข้อ 1</text>
+<path class="arrowg" d="M 300 460 C 300 492 60 492 60 150" marker-end="url(#a-g)"/>
+<text class="monog" x="74" y="486">สถานะของลูก -> เก็บไว้ -> prompt ใหม่</text>
+<rect class="bandy" x="610" y="84" width="440" height="440" rx="10"/>
+<text class="ptitle" x="628" y="112">strace -f ตามหลัง 1 คำสั่ง (ls /etc/hostname)</text>
+<text class="mono" x="628" y="140">30897 execve("./06_shell") = 0</text>
+<text class="monor" x="628" y="164">30898 execve("/home/pallat/.local/bin/ls") = -1 ENOENT</text>
+<text class="monor" x="628" y="188">30898 execve("/home/pallat/.local/bin/ls") = -1 ENOENT</text>
+<text class="monor" x="628" y="212">30898 execve("/usr/local/sbin/ls") = -1 ENOENT</text>
+<text class="monor" x="628" y="236">30898 execve("/usr/local/bin/ls") = -1 ENOENT</text>
+<text class="monor" x="628" y="260">30898 execve("/usr/sbin/ls") = -1 ENOENT</text>
+<text class="monog" x="628" y="284">30898 execve("/usr/bin/ls") = 0        &lt;- เจอ!</text>
+<text class="mono" x="628" y="308">30897 wait4(30898,  &lt;unfinished ...&gt;</text>
+<text class="mono" x="628" y="332">30897 &lt;... wait4 resumed&gt;[... WEXITSTATUS == 0] = 30898</text>
+<text class="lbl" x="628" y="380">บทเรียนสำคัญจาก strace:</text>
+<text class="lbl" x="628" y="400">execvp ไม่ได้ stat แล้วค่อย exec — มันลอง</text>
+<text class="lbl" x="628" y="420">execve ทีละโฟลเดอร์ใน PATH จนตัวหนึ่งสำเร็จ</text>
+<text class="lbl" x="628" y="440">ลอง 6 โฟลเดอร์ (PATH มี 12 รายการ ซ้ำ 2)</text>
+<text class="lbl" x="628" y="460">fork ของ Linux จริง ๆ คือ clone() ตัวเดียว</text>
+<text class="lbl" x="628" y="480">พ่อไม่ได้ spin รอ — wait4() คือการนอนรอจริง</text>
+<text class="mono" x="628" y="512">/usr/bin/ls inode = 2925</text>
+<rect class="band" x="30" y="548" width="1020" height="152" rx="10"/>
+<text class="ptitle" x="48" y="576">transcript จริงจาก 06_shell (ขับผ่าน pty) — prompt ออกมาจาก shell เอง</text>
+<text class="mono" x="48" y="594">ep21&gt; pwd</text>
+<text class="lbl2" x="370" y="594">/home/pallat/devto-drafts/course/code/ep21</text>
+<text class="mono" x="48" y="613">ep21&gt; cd /tmp</text>
+<text class="lbl2" x="370" y="613">(ไม่มี output)</text>
+<text class="mono" x="48" y="632">ep21&gt; pwd</text>
+<text class="lbl2" x="370" y="632">/tmp</text>
+<text class="mono" x="48" y="651">ep21&gt; cd</text>
+<text class="lbl2" x="370" y="651">(ไม่มี argument = กลับบ้าน)</text>
+<text class="mono" x="48" y="670">ep21&gt; roflcopter-ep21</text>
+<text class="lbl2" x="370" y="670">[ไม่เจอคำสั่ง — shell ทั่วไปคืน 127]</text>
+<text class="lbl" x="48" y="692">ทำให้ exit 7 แล้วรันผ่าน pipe: $? = 7 จริง — waitpid ส่งสถานะของลูกกลับมาให้ผู้ใช้ต่อ</text>
+<rect class="bandr" x="30" y="708" width="1020" height="76" rx="10"/>
+<text class="ptitle" x="48" y="736">ทำไม cd ต้องเป็น built-in ไม่ใช่โปรแกรมแยก</text>
+<text class="lbl2" x="48" y="760">เพราะ cwd เป็นสมบัติของโปรเซส: ถ้าไป chdir ในโปรเซสลูก ลูกจบแล้วพ่อยังอยู่ที่เดิม — chdir ต้องเกิดในโปรเซสของ shell เอง</text>
+</svg>

@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 740" width="1240" height="740" role="img" aria-label="ไฟล์คือชื่อในไดเรกทอรีที่ชี้ไปยัง inode ซึ่งเก็บ metadata และชี้ต่อไปยังบล็อกข้อมูลบนดิสก์">
+  <style>
+    text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 13px; fill: #1a1a1a; }
+    .hdr { font-weight: 700; font-size: 18px; }
+    .sub { fill: #57606a; font-size: 12.5px; }
+    .ptitle { font-weight: 700; font-size: 14.5px; }
+    .btitle { font-weight: 700; font-size: 12.5px; }
+    .lbl { fill: #57606a; font-size: 11.5px; }
+    .lbl2 { fill: #1a1a1a; font-size: 11.5px; }
+    .mono { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 12px; }
+    .monob { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 12px; font-weight: 700; fill: #0550ae; }
+    .monor { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 12px; font-weight: 700; fill: #cf222e; }
+    .monog { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 12px; font-weight: 700; fill: #1a7f37; }
+    .band { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.2; }
+    .bandc { fill: #eef4ff; stroke: #0969da; stroke-width: 1.4; }
+    .bandg { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.4; }
+    .bandr { fill: #fdf2f2; stroke: #cf222e; stroke-width: 1.4; }
+    .bandy { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.4; }
+    .cell { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.1; }
+    .cellc { fill: #ffffff; stroke: #0969da; stroke-width: 1.3; }
+    .arrow { stroke: #57606a; stroke-width: 2; fill: none; }
+    .arrowb { stroke: #0550ae; stroke-width: 2.4; fill: none; }
+    .arrowr { stroke: #cf212e; stroke-width: 2.2; fill: none; }
+    .arrowg { stroke: #1a7f37; stroke-width: 2.2; fill: none; }
+    .dash { stroke: #8c959f; stroke-width: 1.4; fill: none; stroke-dasharray: 5 4; }
+  </style>
+  <defs>
+    <marker id="a-n" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#57606a"/></marker>
+    <marker id="a-b" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0550ae"/></marker>
+    <marker id="a-r" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#cf212e"/></marker>
+    <marker id="a-g" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1a7f37"/></marker>
+  </defs>
+  <rect x="0" y="0" width="1240" height="740" fill="#ffffff"/>
+
+<text class="hdr" x="620" y="36" text-anchor="middle">ไฟล์หนึ่งไฟล์ = 3 ส่วนที่แยกกันอยู่</text>
+<text class="sub" x="620" y="60" text-anchor="middle">ตัวเลขจริง: 02_dir_map.c + os.stat() บน Raspberry Pi 5 · ext4 (/dev/nvme0n1p2) blocksize 4096 ไบต์ · NAME_MAX 255</text>
+<rect class="bandc" x="30" y="84" width="390" height="340" rx="10"/>
+<text class="ptitle" x="48" y="112">1) ไดเรกทอรี (ตารางชื่อ -> inode)</text>
+<text class="mono" x="48" y="142">01_inode_stat.c</text>
+<text class="monob" x="310" y="142">4468251</text>
+<text class="mono" x="48" y="168">02_dir_map.c</text>
+<text class="monob" x="310" y="168">4468289</text>
+<text class="mono" x="48" y="194">06_shell.c</text>
+<text class="monob" x="310" y="194">4468259</text>
+<text class="mono" x="48" y="220">.</text>
+<text class="monob" x="310" y="220">4468249</text>
+<text class="lbl" x="48" y="268">ไฟล์ชื่อในไดเรกทอรี + เลข inode เท่านั้น</text>
+<text class="lbl" x="48" y="290">ขนาดไดเรกทอรี = 4096 ไบต์ (ไม่ใช่ผลรวมไฟล์ข้างใน)</text>
+<text class="lbl" x="48" y="312">nlink = 3 = 2 + จำนวนโฟลเดอร์ลูก (ext4/tmpfs)</text>
+<text class="mono" x="48" y="344">open(dir, O_RDONLY) -> ได้ fd</text>
+<text class="mono" x="48" y="364">read(fd, buf, 1)  -> -1 EISDIR</text>
+<text class="lbl" x="48" y="390">อ่านเป็นไบต์ไม่ได้ ต้องใช้ readdir()</text>
+<rect class="bandy" x="440" y="84" width="400" height="340" rx="10"/>
+<text class="ptitle" x="458" y="112">2) inode 4468259 (metadata)</text>
+<text class="lbl2" x="458" y="140">ชนิด</text>
+<text class="mono" x="640" y="140">ไฟล์ปกติ (S_IFREG)</text>
+<text class="lbl2" x="458" y="165">สิทธิ์</text>
+<text class="mono" x="640" y="165">0664</text>
+<text class="lbl2" x="458" y="190">เจ้าของ/กลุ่ม</text>
+<text class="mono" x="640" y="190">pallat/pallat (uid 1000)</text>
+<text class="lbl2" x="458" y="215">ขนาด (st_size)</text>
+<text class="mono" x="640" y="215">7771 ไบต์</text>
+<text class="lbl2" x="458" y="240">nlink</text>
+<text class="mono" x="640" y="240">1</text>
+<text class="lbl2" x="458" y="265">บล็อกที่จอง (st_blocks)</text>
+<text class="mono" x="640" y="265">16 x 512 = 8192 ไบต์</text>
+<text class="lbl2" x="458" y="290">เวลา</text>
+<text class="mono" x="640" y="290">mtime/atime/ctime</text>
+<text class="lbl2" x="458" y="315">ที่อยู่บล็อก</text>
+<text class="mono" x="640" y="315">รายการชี้ไปบล็อกข้อมูล</text>
+<text class="monor" x="458" y="352">ใน inode ไม่มีชื่อไฟล์เด็ดขาด</text>
+<text class="lbl" x="458" y="332">atime=อ่านล่าสุด · mtime=แก้เนื้อหา · ctime=แก้ meta</text>
+<text class="lbl" x="458" y="378">และไม่มี offset — offset อยู่ที่ตัวเปิดไฟล์</text>
+<text class="lbl" x="458" y="400">on-disk inode เก็บในกลุ่ม inode ของ ext4</text>
+<rect class="bandg" x="860" y="84" width="350" height="340" rx="10"/>
+<text class="ptitle" x="878" y="112">3) บล็อกข้อมูลบนดิสก์</text>
+<rect class="cell" x="878" y="130" width="314" height="46" rx="6"/>
+<text class="mono" x="890" y="150">block #1: 4096 ไบต์</text>
+<text class="lbl" x="890" y="168">เนื้อไฟล์ส่วนแรก (ไบต์ 0..4095)</text>
+<rect class="cell" x="878" y="186" width="314" height="46" rx="6"/>
+<text class="mono" x="890" y="206">block #2: 4096 ไบต์ (ใช้ 3675 ไบต์)</text>
+<text class="lbl" x="890" y="224">เนื้อไฟล์ส่วนที่เหลือ (ไบต์ 4096..7770)</text>
+<text class="lbl" x="878" y="262">— ไฟล์ 7771 ไบต์ จอง 16 บล็อก (8192 ไบต์)</text>
+<text class="lbl" x="878" y="284">    = 2 บล็อกของระบบไฟล์ (4096 ไบต์/บล็อก)</text>
+<text class="lbl" x="878" y="306">— ไฟล์ 1 ไบต์ก็จองเต็มหน่วย: ext4 = 4096 ไบต์</text>
+<text class="lbl" x="878" y="328">    แต่บน tmpfs (/tmp) จอง 16384 ไบต์ = 1 หน้า</text>
+<text class="lbl" x="878" y="350">    (page 16384 ไบต์ — ดูตอนที่ 20)</text>
+<text class="lbl" x="878" y="372">— ลบชื่อสุดท้าย (nlink -&gt; 0) คืน inode + บล็อก</text>
+<line class="arrowb" x1="422" y1="230" x2="438" y2="230" marker-end="url(#a-b)"/>
+<line class="arrowg" x1="842" y1="230" x2="858" y2="230" marker-end="url(#a-g)"/>
+<rect class="bandr" x="30" y="424" width="1180" height="142" rx="10"/>
+<text class="ptitle" x="48" y="456">ทำไม "ชื่อ" จึงไม่ใช่ตัวไฟล์ — หลักฐานจาก 01_inode_stat.c (โฟลเดอร์สาธิตบน /tmp = tmpfs)</text>
+<text class="lbl2" x="48" y="482">หลังเขียน "inode เก็บ metadata"</text>
+<text class="mono" x="490" y="482">inode เดิม · ขนาด 0 -&gt; 28 ไบต์ · จอง 16384 ไบต์</text>
+<text class="lbl2" x="48" y="508">link() สร้างชื่อที่สอง (alias.txt)</text>
+<text class="mono" x="490" y="508">nlink = 2 · สองชื่อ inode เดียวกัน</text>
+<text class="lbl2" x="48" y="534">rename(alias.txt -&gt; onebyte.bin)</text>
+<text class="mono" x="490" y="534">inode ไม่เปลี่ยน = ย้ายชื่อ ไม่ย้ายข้อมูล</text>
+<text class="lbl2" x="48" y="560">unlink() ชื่อสุดท้าย -&gt; lstat = ENOENT</text>
+<text class="mono" x="490" y="560">ไม่มีชื่อนี้อีกแล้ว (ถ้า nlink ยัง &gt; 0 ข้อมูลยังอยู่)</text>
+<text class="lbl" x="48" y="546">หมายเหตุ: เลข inode ของโฟลเดอร์สาธิตเปลี่ยนทุกครั้งที่รัน (ระบบเลือก inode ว่าง) — ตัวเลขที่คงที่คือของไฟล์ในโฟลเดอร์ ep21</text>
+<rect class="band" x="30" y="572" width="1180" height="120" rx="10"/>
+<text class="ptitle" x="48" y="600">จำ 3 ประโยคนี้พอ</text>
+<text class="lbl2" x="48" y="626">1) ไฟล์ = ก้อนข้อมูล + inode(metadata) · ชื่อไฟล์ไม่ได้อยู่ในไฟล์ แต่อยู่ในไดเรกทอรี</text>
+<text class="lbl2" x="48" y="650">2) path = เดินจาก / ทีละชื่อ: เปิดไดเรกทอรี -&gt; ค้นชื่อ -&gt; ได้ inode -&gt; เปิดโฟลเดอร์ถัดไป (ทุก "/" คือ 1 ก้าว)</text>
+<text class="lbl2" x="48" y="674">3) open() คืน fd = เลขช่องในตารางของโปรเซส · read/write ย้าย offset ที่อยู่ใน "ตัวเปิดไฟล์" ไม่ใช่ใน inode</text>
+</svg>

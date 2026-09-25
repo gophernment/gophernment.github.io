@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 760" width="1080" height="760" role="img" aria-label="ตาราง file descriptor ของโปรเซสชี้ไปยังตัวเปิดไฟล์ แล้วจึงไปถึง inode ของไฟล์จริง">
+  <style>
+    text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 13px; fill: #1a1a1a; }
+    .hdr { font-weight: 700; font-size: 18px; }
+    .sub { fill: #57606a; font-size: 12.5px; }
+    .ptitle { font-weight: 700; font-size: 14.5px; }
+    .btitle { font-weight: 700; font-size: 12.5px; }
+    .lbl { fill: #57606a; font-size: 11.5px; }
+    .lbl2 { fill: #1a1a1a; font-size: 11.5px; }
+    .mono { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 12px; }
+    .monob { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 12px; font-weight: 700; fill: #0550ae; }
+    .monor { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 12px; font-weight: 700; fill: #cf222e; }
+    .monog { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 12px; font-weight: 700; fill: #1a7f37; }
+    .band { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.2; }
+    .bandc { fill: #eef4ff; stroke: #0969da; stroke-width: 1.4; }
+    .bandg { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.4; }
+    .bandr { fill: #fdf2f2; stroke: #cf222e; stroke-width: 1.4; }
+    .bandy { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.4; }
+    .cell { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.1; }
+    .cellc { fill: #ffffff; stroke: #0969da; stroke-width: 1.3; }
+    .arrow { stroke: #57606a; stroke-width: 2; fill: none; }
+    .arrowb { stroke: #0550ae; stroke-width: 2.4; fill: none; }
+    .arrowr { stroke: #cf212e; stroke-width: 2.2; fill: none; }
+    .arrowg { stroke: #1a7f37; stroke-width: 2.2; fill: none; }
+    .dash { stroke: #8c959f; stroke-width: 1.4; fill: none; stroke-dasharray: 5 4; }
+  </style>
+  <defs>
+    <marker id="a-n" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#57606a"/></marker>
+    <marker id="a-b" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0550ae"/></marker>
+    <marker id="a-r" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#cf212e"/></marker>
+    <marker id="a-g" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1a7f37"/></marker>
+  </defs>
+  <rect x="0" y="0" width="1080" height="760" fill="#ffffff"/>
+
+<text class="hdr" x="540" y="36" text-anchor="middle">fd = เลขช่องในตารางของโปรเซส (ไม่ใช่ไฟล์)</text>
+<text class="sub" x="540" y="60" text-anchor="middle">ตัวเลขจริงจาก 03_fd_table.c บน Raspberry Pi 5 · offset = ตัวเลขที่ dup ใช้ร่วมกัน แต่ open ซ้ำไม่ใช้</text>
+<rect class="bandc" x="30" y="84" width="300" height="392" rx="10"/>
+<text class="ptitle" x="48" y="112">ตาราง fd ของโปรเซส</text>
+<rect class="cell" x="48" y="126" width="264" height="30" rx="6"/>
+<text class="monob" x="58" y="146">fd 0</text>
+<text class="lbl2" x="120" y="146">stdin (คีย์บอร์ด/pipe)</text>
+<rect class="cell" x="48" y="162" width="264" height="30" rx="6"/>
+<text class="monob" x="58" y="182">fd 1</text>
+<text class="lbl2" x="120" y="182">stdout (จอ/ไฟล์)</text>
+<rect class="cell" x="48" y="198" width="264" height="30" rx="6"/>
+<text class="monob" x="58" y="218">fd 2</text>
+<text class="lbl2" x="120" y="218">stderr (จอ)</text>
+<rect class="cell" x="48" y="234" width="264" height="30" rx="6"/>
+<text class="monob" x="58" y="254">fd 3</text>
+<text class="lbl2" x="120" y="254">เปิดไฟล์ a.txt</text>
+<rect class="cell" x="48" y="270" width="264" height="30" rx="6"/>
+<text class="monob" x="58" y="290">fd 4</text>
+<text class="lbl2" x="120" y="290">เปิดไฟล์ a.txt อีกครั้ง</text>
+<rect class="cell" x="48" y="306" width="264" height="30" rx="6"/>
+<text class="monob" x="58" y="326">fd 5</text>
+<text class="lbl2" x="120" y="326">dup(fd 3)</text>
+<text class="lbl" x="48" y="378">0/1/2 ถูกจองตั้งแต่โปรเซสเกิด</text>
+<text class="lbl" x="48" y="398">เลขถัดไปใช้ช่องว่างที่ต่ำที่สุดก่อน</text>
+<text class="lbl" x="48" y="418">ปิด fd 4 แล้วเปิดใหม่ -> ได้ 4 อีก</text>
+<text class="lbl" x="48" y="444">ดูของจริงได้ที่ /proc/self/fd</text>
+<text class="lbl" x="48" y="464">(symlink ชี้เป้าจริงของแต่ละช่อง)</text>
+<rect class="bandy" x="350" y="84" width="380" height="392" rx="10"/>
+<text class="ptitle" x="368" y="112">ตัวเปิดไฟล์ (open file description)</text>
+<text class="lbl" x="368" y="128">ตัวนี้มี offset ของตัวเอง — และ dup ใช้ร่วมกัน</text>
+<rect class="cellc" x="368" y="140" width="344" height="108" rx="8"/>
+<text class="btitle" x="380" y="150">description A (open ครั้งที่ 1 -> fd 3)</text>
+<text class="mono" x="380" y="170">offset = 0   ตอนเปิด</text>
+<text class="mono" x="380" y="192">write 8 ไบต์ -&gt; offset = 8</text>
+<text class="mono" x="380" y="214">lseek(0) -&gt; offset = 0</text>
+<rect class="cellc" x="368" y="258" width="344" height="88" rx="8"/>
+<text class="btitle" x="380" y="280">description B (open ครั้งที่ 2 -> fd 4)</text>
+<text class="mono" x="380" y="300">offset = 0  แยกกันเด็ดขาด</text>
+<text class="mono" x="380" y="322">อ่านผ่าน fd 3 ไม่ขยับ offset ของ fd 4</text>
+<text class="ptitle" x="368" y="374">dup(fd 3) -> description ตัวเดิม</text>
+<text class="lbl2" x="368" y="396">fd 5 ชี้ A เหมือน fd 3 (คนละช่อง, ตัวเดียวกัน)</text>
+<text class="lbl2" x="368" y="418">อ่าน 4 ไบต์ผ่าน fd 5 -&gt; offset ของ fd 3 = 4 ด้วย</text>
+<text class="lbl" x="368" y="450">offset ไม่ได้อยู่ใน inode — เก็บใน description</text>
+<rect class="bandg" x="760" y="84" width="290" height="392" rx="10"/>
+<text class="ptitle" x="778" y="112">ไฟล์บนดิสก์</text>
+<rect class="cell" x="778" y="128" width="254" height="120" rx="8"/>
+<text class="monob" x="790" y="150">a.txt</text>
+<text class="lbl2" x="790" y="172">+ inode (metadata เดียวกัน)</text>
+<text class="lbl2" x="790" y="194">เนื้อไฟล์อยู่ปลายสุดของไฟล์</text>
+<text class="lbl2" x="790" y="216">สอง description -&gt; inode เดียวกัน</text>
+<text class="lbl" x="790" y="270">open() 2 ครั้ง = 2 description</text>
+<text class="lbl" x="790" y="290">แต่ inode เดียวกัน (fd 3, 4)</text>
+<text class="lbl" x="790" y="322">ปิด fd ไม่ได้ลบไฟล์</text>
+<text class="lbl" x="790" y="342">แค่คืนช่องในตาราง</text>
+<text class="lbl" x="790" y="374">ข้อมูลยังอยู่จนกว่า nlink = 0</text>
+<line class="arrowb" x1="332" y1="240" x2="348" y2="240" marker-end="url(#a-b)"/>
+<line class="arrowb" x1="332" y1="286" x2="366" y2="291" marker-end="url(#a-b)"/>
+<line class="arrowg" x1="732" y1="240" x2="758" y2="240" marker-end="url(#a-g)"/>
+<path class="arrowr dash" d="M 200 400 C 200 470 340 430 360 380" marker-end="url(#a-r)"/>
+<text class="monor" x="150" y="486">dup = ช่องใหม่ชี้ description เดิม</text>
+<rect class="bandr" x="30" y="500" width="1020" height="150" rx="10"/>
+<text class="ptitle" x="48" y="528">"ข้อความ > ไฟล์" ใน shell ทำงานแบบนี้ — หลักฐานจาก 03_fd_table.c ข้อ 4</text>
+<text class="monob" x="48" y="550">1.</text>
+<text class="mono" x="72" y="550">saved = dup(1)</text>
+<text class="lbl2" x="330" y="550">เก็บช่องเดิมไว้ก่อน จะได้คืนค่าได้</text>
+<text class="monob" x="48" y="570">2.</text>
+<text class="mono" x="72" y="570">fflush(stdout)</text>
+<text class="lbl2" x="330" y="570">กับดัก: ไม่ล้าง buffer ข้อความก่อนหน้าจะไหลลงไฟล์</text>
+<text class="monob" x="48" y="590">3.</text>
+<text class="mono" x="72" y="590">dup2(open(file), 1)</text>
+<text class="lbl2" x="330" y="590">ช่อง 1 ย้ายไปชี้ไฟล์ — printf ไม่รู้ตัวเลย</text>
+<text class="monob" x="48" y="610">4.</text>
+<text class="mono" x="72" y="610">printf(...) -&gt; ลงไฟล์</text>
+<text class="lbl2" x="330" y="610">อ่านกลับมายืนยันได้ว่าเนื้อหาอยู่ในไฟล์จริง</text>
+<text class="monob" x="48" y="630">5.</text>
+<text class="mono" x="72" y="630">dup2(saved, 1)</text>
+<text class="lbl2" x="330" y="630">คืนช่อง 1 ให้ชี้จอเหมือนเดิม</text>
+<text class="lbl" x="48" y="646">นี่คือเหตุผลที่ child หลัง exec ยังเขียนลงไฟล์ได้: ตาราง fd สืบทอดข้าม fork/exec</text>
+<rect class="band" x="30" y="664" width="1020" height="76" rx="10"/>
+<text class="ptitle" x="48" y="692">API ทั้งชุดของระบบไฟล์คือ 4 คำนี้ + fd</text>
+<text class="mono" x="48" y="716">open(path, flags) -> fd      read(fd, buf, n) -> n อ่านได้      write(fd, buf, n)      close(fd)      lseek(fd, off, whence)</text>
+</svg>

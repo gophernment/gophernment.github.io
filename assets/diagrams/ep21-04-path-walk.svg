@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 800" width="1240" height="800" role="img" aria-label="การเดิน path ทีละชื่อจาก root เทียบกับการค้นชื่อคำสั่งใน PATH หลายโฟลเดอร์">
+  <style>
+    text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 13px; fill: #1a1a1a; }
+    .hdr { font-weight: 700; font-size: 18px; }
+    .sub { fill: #57606a; font-size: 12.5px; }
+    .ptitle { font-weight: 700; font-size: 14.5px; }
+    .btitle { font-weight: 700; font-size: 12.5px; }
+    .lbl { fill: #57606a; font-size: 11.5px; }
+    .lbl2 { fill: #1a1a1a; font-size: 11.5px; }
+    .mono { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 12px; }
+    .monob { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 12px; font-weight: 700; fill: #0550ae; }
+    .monor { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 12px; font-weight: 700; fill: #cf222e; }
+    .monog { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 12px; font-weight: 700; fill: #1a7f37; }
+    .band { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.2; }
+    .bandc { fill: #eef4ff; stroke: #0969da; stroke-width: 1.4; }
+    .bandg { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.4; }
+    .bandr { fill: #fdf2f2; stroke: #cf222e; stroke-width: 1.4; }
+    .bandy { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.4; }
+    .cell { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.1; }
+    .cellc { fill: #ffffff; stroke: #0969da; stroke-width: 1.3; }
+    .arrow { stroke: #57606a; stroke-width: 2; fill: none; }
+    .arrowb { stroke: #0550ae; stroke-width: 2.4; fill: none; }
+    .arrowr { stroke: #cf212e; stroke-width: 2.2; fill: none; }
+    .arrowg { stroke: #1a7f37; stroke-width: 2.2; fill: none; }
+    .dash { stroke: #8c959f; stroke-width: 1.4; fill: none; stroke-dasharray: 5 4; }
+  </style>
+  <defs>
+    <marker id="a-n" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#57606a"/></marker>
+    <marker id="a-b" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0550ae"/></marker>
+    <marker id="a-r" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#cf212e"/></marker>
+    <marker id="a-g" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1a7f37"/></marker>
+  </defs>
+  <rect x="0" y="0" width="1240" height="800" fill="#ffffff"/>
+
+<text class="hdr" x="620" y="36" text-anchor="middle">path กับ PATH — สองอย่างที่ชื่อคล้ายกันแต่คนละงาน</text>
+<text class="sub" x="620" y="60" text-anchor="middle">ตัวเลขจริงจาก 04_path_walk.c บน Raspberry Pi 5 · ext4 (/dev/nvme0n1p2) · NAME_MAX 255 · PATH_MAX 4096</text>
+<rect class="bandc" x="30" y="84" width="660" height="420" rx="10"/>
+<text class="ptitle" x="48" y="112">1) path ไฟล์จริง: เดินจาก / ทีละชื่อ (แต่ละก้าว = ค้น 1 ครั้ง)</text>
+<rect class="cell" x="48" y="126" width="624" height="34" rx="6"/>
+<text class="mono" x="60" y="145">/</text>
+<text class="monob" x="470" y="145">inode 2</text>
+<text class="lbl" x="590" y="145">ไดเรกทอรี</text>
+<rect class="cell" x="48" y="164" width="624" height="34" rx="6"/>
+<text class="mono" x="60" y="183">/home</text>
+<text class="monob" x="470" y="183">inode 17</text>
+<text class="lbl" x="590" y="183">ไดเรกทอรี</text>
+<rect class="cell" x="48" y="202" width="624" height="34" rx="6"/>
+<text class="mono" x="60" y="221">/home/pallat</text>
+<text class="monob" x="470" y="221">inode 1669</text>
+<text class="lbl" x="590" y="221">ไดเรกทอรี</text>
+<rect class="cell" x="48" y="240" width="624" height="34" rx="6"/>
+<text class="mono" x="60" y="259">/home/pallat/devto-drafts</text>
+<text class="monob" x="470" y="259">inode 3926359</text>
+<text class="lbl" x="590" y="259">ไดเรกทอรี</text>
+<rect class="cell" x="48" y="278" width="624" height="34" rx="6"/>
+<text class="mono" x="60" y="297">/home/pallat/devto-drafts/course</text>
+<text class="monob" x="470" y="297">inode 4177972</text>
+<text class="lbl" x="590" y="297">ไดเรกทอรี</text>
+<rect class="cell" x="48" y="316" width="624" height="34" rx="6"/>
+<text class="mono" x="60" y="335">...rafts/course/ep-20-virtual-memory-paging.md</text>
+<text class="monob" x="470" y="335">inode 4189672</text>
+<text class="lbl" x="590" y="335">ไฟล์ปกติ</text>
+<text class="lbl" x="48" y="374">รวม 6 ก้าว · ถ้าท่อนกลางหาย 1 ท่อน = ENOENT ทันที</text>
+<text class="mono" x="48" y="398">open("/path/file", O_RDONLY) -> เคอร์เนลเดินให้ทั้งหมดนี้</text>
+<rect class="bandg" x="710" y="84" width="500" height="420" rx="10"/>
+<text class="ptitle" x="728" y="112">2) PATH: คำสั่ง "ls" กลายเป็นไฟล์ได้ยังไง</text>
+<text class="mono" x="728" y="140">/home/pallat/.local/bin/ls</text>
+<text class="lbl" x="1060" y="140">no</text>
+<text class="mono" x="728" y="162">/home/pallat/.local/bin/ls</text>
+<text class="lbl" x="1060" y="162">no</text>
+<text class="mono" x="728" y="184">/usr/local/sbin/ls</text>
+<text class="lbl" x="1060" y="184">no</text>
+<text class="mono" x="728" y="206">/usr/local/bin/ls</text>
+<text class="lbl" x="1060" y="206">no</text>
+<text class="mono" x="728" y="228">/usr/sbin/ls</text>
+<text class="lbl" x="1060" y="228">no</text>
+<text class="mono" x="728" y="250">/usr/bin/ls</text>
+<text class="monog" x="1060" y="250">เจอ!</text>
+<text class="lbl2" x="728" y="282">ลอง 6 โฟลเดอร์ (PATH ของเครื่องนี้มี 12 รายการ · ซ้ำ 2) แล้วได้</text>
+<text class="monog" x="728" y="306">/usr/bin/ls inode 2925</text>
+<text class="lbl2" x="728" y="330">ไม่เจอเลย -> execvp คืน ENOENT -> shell รายงาน 127</text>
+<text class="lbl2" x="728" y="350">ชื่อที่มี "/" (เช่น ./ls) ข้ามการค้น PATH ทั้งหมด</text>
+<text class="lbl2" x="728" y="370">ไม่มี PATH เลย -> libc ใช้ /bin:/usr/bin (getconf PATH)</text>
+<rect class="band" x="30" y="524" width="1180" height="136" rx="10"/>
+<text class="ptitle" x="48" y="552">เทียบให้ชัด</text>
+<text class="btitle" x="48" y="576">หัวข้อ</text>
+<text class="monob" x="170" y="576">path</text>
+<text class="monob" x="600" y="576">PATH</text>
+<text class="lbl2" x="48" y="596">คืออะไร</text>
+<text class="mono" x="170" y="596">เส้นทางไปยังไฟล์หนึ่งไฟล์</text>
+<text class="mono" x="600" y="596">รายการโฟลเดอร์ที่จะลองหาคำสั่ง</text>
+<text class="lbl2" x="48" y="616">ตัวคั่น</text>
+<text class="mono" x="170" y="616">/</text>
+<text class="mono" x="600" y="616">:</text>
+<text class="lbl2" x="48" y="636">ตัวอย่าง</text>
+<text class="mono" x="170" y="636">/home/pallat/devto-drafts/course/code/ep21</text>
+<text class="mono" x="600" y="636">/usr/local/bin:/usr/bin:/bin</text>
+<text class="lbl2" x="48" y="656">ใครใช้</text>
+<text class="mono" x="170" y="656">open(), stat(), ทุกโปรแกรมที่แตะไฟล์</text>
+<text class="mono" x="600" y="656">execvp(), shell, exec ของ libc</text>
+<line x1="48" y1="586" x2="1176" y2="586" stroke="#d0d7de" stroke-width="1.2"/>
+<rect class="bandy" x="30" y="668" width="1180" height="96" rx="10"/>
+<text class="ptitle" x="48" y="696">ข้อควรระวังที่เจอจริง</text>
+<text class="lbl2" x="48" y="720">ลบไฟล์ระหว่างที่โปรเซสเปิดอยู่ได้ — ตราบใดที่ fd ยังเปิด ข้อมูลยังอ่านได้ (inode มีชีวิตต่อจนปิด) นี่คือเหตุผลที่ /proc ทำงานได้</text>
+<text class="lbl2" x="48" y="742">ไดเรกทอรีมี nlink = 2 + จำนวนโฟลเดอร์ลูก (ext4/tmpfs · btrfs = 1 เสมอ) และ readdir ไม่รับประกันลำดับ — อย่าเขียนโค้ดที่พึ่งลำดับรายการ</text>
+</svg>
