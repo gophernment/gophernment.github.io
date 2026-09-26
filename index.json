@@ -1,5 +1,21 @@
 [
   {
+    "slug": "2026-09-27-cs-fundamentals-23-pushdown-automata-parsing",
+    "title": "pushdown automata → context-free grammar — ทำไม parser ทำงานได้ (ตอนที่ 23)",
+    "date": "2026-09-27",
+    "tags": [
+      "cs-fundamentals",
+      "theory",
+      "automata",
+      "pushdown-automata",
+      "context-free-grammar",
+      "parsing",
+      "compiler",
+      "go"
+    ],
+    "description": "ตอนที่ 23 ของคอร์ส CS Fundamentals — pushdown automata → context-free grammar: ภาษาที่เครื่องสถานะจำกัดทำไม่ได้ (วงเล็บสมดุล, aⁿbⁿ) PDA = เครื่องสถานะจำกัด + stack (กอง LIFO) ทำได้, CFG = ไวยากรณ์นอกบริบทเขียนภาษาเป็นกฎ, ทฤษฎีบท CFG = PDA และ recursive descent parser ใช้ call stack เป็น stack ของ PDA จริง ๆ — โค้ด Go 5 โปรแกรมรันจริงบน Raspberry Pi 5"
+  },
+  {
     "slug": "2026-09-26-cs-fundamentals-22-finite-automata-regex",
     "title": "finite automata → regular language — regex มาจากไหน (ตอนที่ 22)",
     "date": "2026-09-26",
