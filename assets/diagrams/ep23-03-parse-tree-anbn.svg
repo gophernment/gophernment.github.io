@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1060 560" width="1060" height="560" role="img" aria-label="parse tree ของ a กำลังสาม b กำลังสาม จากไวยากรณ์ S → aSb | ε">
+  <style>
+    text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 13px; fill: #1a1a1a; }
+    .hdr { font-weight: 700; font-size: 19px; }
+    .sub { fill: #57606a; font-size: 12.5px; }
+    .ptitle { font-weight: 700; font-size: 14.5px; }
+    .btitle { font-weight: 700; font-size: 12.5px; }
+    .lbl { fill: #57606a; font-size: 11.5px; }
+    .lblb { fill: #0550ae; font-size: 11.5px; font-weight: 700; }
+    .lblr { fill: #cf222e; font-size: 11.5px; font-weight: 700; }
+    .lblg { fill: #1a7f37; font-size: 11.5px; font-weight: 700; }
+    .mono { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 12px; }
+    .monos { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 11.5px; }
+    .monob { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 12px; font-weight: 700; fill: #0550ae; }
+    .monor { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 12px; font-weight: 700; fill: #cf222e; }
+    .monog { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 12px; font-weight: 700; fill: #1a7f37; }
+    .band { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.2; }
+    .bandw { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.2; }
+    .bandc { fill: #eef4ff; stroke: #0969da; stroke-width: 1.4; }
+    .bandg { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.4; }
+    .bandr { fill: #fdf2f2; stroke: #cf222e; stroke-width: 1.4; }
+    .bandy { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.4; }
+    .cell { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.1; }
+    .cellb { fill: #f0f7ff; stroke: #0969da; stroke-width: 1.3; }
+    .cellg { fill: #f0fbf3; stroke: #1a7f37; stroke-width: 1.3; }
+    .cellr { fill: #fdf4f4; stroke: #cf222e; stroke-width: 1.3; }
+    .cellt { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.1; }
+    .st { fill: #ffffff; stroke: #0969da; stroke-width: 1.6; }
+    .stacc { fill: #f0fbf3; stroke: #1a7f37; stroke-width: 1.8; }
+    .stk { fill: #ffffff; stroke: #57606a; stroke-width: 1.2; }
+    .stktop { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.4; }
+    .arrow { stroke: #57606a; stroke-width: 2; fill: none; }
+    .arrowb { stroke: #0550ae; stroke-width: 2.2; fill: none; }
+    .arrowg { stroke: #1a7f37; stroke-width: 2.2; fill: none; }
+    .arrowy { stroke: #bf8700; stroke-width: 2; fill: none; }
+    .grid { stroke: #e4e8ed; stroke-width: 1; fill: none; }
+    .axis { stroke: #57606a; stroke-width: 1.4; fill: none; }
+  </style>
+  <defs>
+    <marker id="a-n" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#57606a"/></marker>
+    <marker id="a-b" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0550ae"/></marker>
+    <marker id="a-g" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1a7f37"/></marker>
+    <marker id="a-y" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#bf8700"/></marker>
+    <marker id="a-r" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#cf222e"/></marker>
+  </defs>
+  <rect x="0" y="0" width="1060" height="560" fill="#ffffff"/>
+<text class="hdr" x="40" y="38">Parse tree (ต้นไม้แจงโครงสร้าง) ของ a³b³ จากไวยากรณ์ S → aSb | ε</text>
+<text class="sub" x="40" y="60">ต้นไม้นี้พิมพ์จากโปรแกรม 02 จริง — ไวยากรณ์บอก 'โครงสร้าง' ไม่ได้ตอบแค่ 'สตริงนี้ผ่านไหม'</text>
+<rect class="bandw" x="40" y="84" width="620" height="430" rx="8"/>
+<text class="btitle" x="58" y="108">ไวยากรณ์ S → aSb | ε · 10 โหนด · ใช้กฎ S → aSb 3 ครั้ง</text>
+<rect class="cellb" x="307" y="132" width="72" height="30" rx="6"/>
+<text class="monob" x="343" y="152" text-anchor="middle">S → aSb</text>
+<path class="arrow" d="M343,162 C343,174 121,182 121,194" marker-end="url(#a-n)"/>
+<path class="arrow" d="M343,162 C343,174 343,182 343,194" marker-end="url(#a-n)"/>
+<path class="arrow" d="M343,162 C343,174 565,182 565,194" marker-end="url(#a-n)"/>
+<rect class="cell" x="86" y="194" width="70" height="30" rx="6"/>
+<text class="monob" x="121" y="214" text-anchor="middle">a</text>
+<rect class="cell" x="307" y="194" width="72" height="30" rx="6"/>
+<text class="monob" x="343" y="214" text-anchor="middle">S → aSb</text>
+<path class="arrow" d="M343,224 C343,236 195,244 195,256" marker-end="url(#a-n)"/>
+<path class="arrow" d="M343,224 C343,236 343,244 343,256" marker-end="url(#a-n)"/>
+<path class="arrow" d="M343,224 C343,236 491,244 491,256" marker-end="url(#a-n)"/>
+<rect class="cell" x="160" y="256" width="70" height="30" rx="6"/>
+<text class="monob" x="195" y="276" text-anchor="middle">a</text>
+<rect class="cell" x="307" y="256" width="72" height="30" rx="6"/>
+<text class="monob" x="343" y="276" text-anchor="middle">S → aSb</text>
+<path class="arrow" d="M343,286 C343,298 269,306 269,318" marker-end="url(#a-n)"/>
+<path class="arrow" d="M343,286 C343,298 343,306 343,318" marker-end="url(#a-n)"/>
+<path class="arrow" d="M343,286 C343,298 417,306 417,318" marker-end="url(#a-n)"/>
+<rect class="cell" x="234" y="318" width="70" height="30" rx="6"/>
+<text class="monob" x="269" y="338" text-anchor="middle">a</text>
+<rect class="cell" x="308" y="318" width="70" height="30" rx="6"/>
+<text class="monob" x="343" y="338" text-anchor="middle">S → ε</text>
+<rect class="cell" x="382" y="318" width="70" height="30" rx="6"/>
+<text class="monob" x="417" y="338" text-anchor="middle">b</text>
+<rect class="cell" x="456" y="256" width="70" height="30" rx="6"/>
+<text class="monob" x="491" y="276" text-anchor="middle">b</text>
+<rect class="cell" x="530" y="194" width="70" height="30" rx="6"/>
+<text class="monob" x="565" y="214" text-anchor="middle">b</text>
+<rect class="bandg" x="680" y="84" width="340" height="430" rx="8"/>
+<text class="btitle" x="698" y="108">อ่านต้นไม้ให้เป็น (บนลงล่าง)</text>
+<text class="lbl" x="698" y="136">ทุกครั้งที่เห็น S ชั้นใหม่ = ยังมี a กับ b</text>
+<text class="lbl" x="698" y="160">คู่ที่ยังจับกันไม่ได้ → ต้องมีที่พัก</text>
+<text class="lbl" x="698" y="184"></text>
+<text class="monob" x="698" y="208">S → aSb : มี a รออยู่ 1 ตัว รอ b ปิดท้าย</text>
+<text class="monob" x="698" y="232">S → ε   : ไม่มีอะไรเหลือ = จุดจบ</text>
+<text class="lbl" x="698" y="256"></text>
+<text class="lbl" x="698" y="280">ใช้กฎ S → aSb 3 ครั้ง = จำนวน a (= จำนวน b)</text>
+<text class="lbl" x="698" y="304"></text>
+<text class="lbl" x="698" y="328">นี่คือเหตุผลที่ PDA ต้องมี stack:</text>
+<text class="lbl" x="698" y="352">ตอนอ่าน a แต่ละตัว ยังไม่รู้ว่าต้องเจอ b</text>
+<text class="lbl" x="698" y="376">กี่ตัว → ต้องพักจำนวนไว้ก่อน</text>
+<text class="lbl" x="698" y="400">stack พักได้ไม่จำกัด → นับ aⁿbⁿ ได้ทุก n</text>
+<text class="lbl" x="698" y="424">(แต่ DFA ไม่มีที่พัก จึงทำไม่ได้)</text>
+<path class="arrowb" d="M600,300 C640,300 660,300 676,300" marker-end="url(#a-b)"/>
+<rect class="bandy" x="40" y="524" width="980" height="26" rx="6"/>
+<text class="lblb" x="58" y="542">ตอนที่ 27 จะเห็นต้นไม้แบบนี้ในรูป AST ของโค้ดจริง — parser คือโปรแกรมที่สร้างต้นไม้จากไวยากรณ์</text>
+</svg>

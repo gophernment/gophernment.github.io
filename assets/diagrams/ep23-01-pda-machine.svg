@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1060 640" width="1060" height="640" role="img" aria-label="PDA = finite control + stack: เทป input, สถานะจำกัด, และ stack แบบ LIFO">
+  <style>
+    text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 13px; fill: #1a1a1a; }
+    .hdr { font-weight: 700; font-size: 19px; }
+    .sub { fill: #57606a; font-size: 12.5px; }
+    .ptitle { font-weight: 700; font-size: 14.5px; }
+    .btitle { font-weight: 700; font-size: 12.5px; }
+    .lbl { fill: #57606a; font-size: 11.5px; }
+    .lblb { fill: #0550ae; font-size: 11.5px; font-weight: 700; }
+    .lblr { fill: #cf222e; font-size: 11.5px; font-weight: 700; }
+    .lblg { fill: #1a7f37; font-size: 11.5px; font-weight: 700; }
+    .mono { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 12px; }
+    .monos { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 11.5px; }
+    .monob { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 12px; font-weight: 700; fill: #0550ae; }
+    .monor { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 12px; font-weight: 700; fill: #cf222e; }
+    .monog { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 12px; font-weight: 700; fill: #1a7f37; }
+    .band { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.2; }
+    .bandw { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.2; }
+    .bandc { fill: #eef4ff; stroke: #0969da; stroke-width: 1.4; }
+    .bandg { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.4; }
+    .bandr { fill: #fdf2f2; stroke: #cf222e; stroke-width: 1.4; }
+    .bandy { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.4; }
+    .cell { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.1; }
+    .cellb { fill: #f0f7ff; stroke: #0969da; stroke-width: 1.3; }
+    .cellg { fill: #f0fbf3; stroke: #1a7f37; stroke-width: 1.3; }
+    .cellr { fill: #fdf4f4; stroke: #cf222e; stroke-width: 1.3; }
+    .cellt { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.1; }
+    .st { fill: #ffffff; stroke: #0969da; stroke-width: 1.6; }
+    .stacc { fill: #f0fbf3; stroke: #1a7f37; stroke-width: 1.8; }
+    .stk { fill: #ffffff; stroke: #57606a; stroke-width: 1.2; }
+    .stktop { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.4; }
+    .arrow { stroke: #57606a; stroke-width: 2; fill: none; }
+    .arrowb { stroke: #0550ae; stroke-width: 2.2; fill: none; }
+    .arrowg { stroke: #1a7f37; stroke-width: 2.2; fill: none; }
+    .arrowy { stroke: #bf8700; stroke-width: 2; fill: none; }
+    .grid { stroke: #e4e8ed; stroke-width: 1; fill: none; }
+    .axis { stroke: #57606a; stroke-width: 1.4; fill: none; }
+  </style>
+  <defs>
+    <marker id="a-n" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#57606a"/></marker>
+    <marker id="a-b" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0550ae"/></marker>
+    <marker id="a-g" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1a7f37"/></marker>
+    <marker id="a-y" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#bf8700"/></marker>
+    <marker id="a-r" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#cf222e"/></marker>
+  </defs>
+  <rect x="0" y="0" width="1060" height="640" fill="#ffffff"/>
+<text class="hdr" x="40" y="38">Pushdown automaton (PDA) = เครื่องสถานะจำกัด + stack หนึ่งกอง</text>
+<text class="sub" x="40" y="60">จำนวนสถานะยังจำกัด (ของจริงตัวนี้มี 2 สถานะ) แต่ความจำอยู่ที่ stack ซึ่งโตตาม input ได้ — นี่คือสิ่งที่ DFA ไม่มี</text>
+<text class="lbl" x="40" y="80">ทุกตัวเลขในภาพมาจากผลรันจริง: input "(())" · trace จริง 5 ก้าว · ทดสอบ 12 สตริง</text>
+<rect class="band" x="40" y="98" width="500" height="116" rx="8"/>
+<text class="btitle" x="56" y="120">1) เทป input — เครื่องเห็นทีละตัว และมองไม่เห็นอนาคต</text>
+<rect class="cellb" x="60" y="132" width="46" height="42" rx="6"/>
+<text class="monob" x="83" y="159" text-anchor="middle">(</text>
+<rect class="cellb" x="106" y="132" width="46" height="42" rx="6"/>
+<text class="monob" x="129" y="159" text-anchor="middle">(</text>
+<rect class="cellb" x="152" y="132" width="46" height="42" rx="6"/>
+<text class="monob" x="175" y="159" text-anchor="middle">)</text>
+<rect class="cellb" x="198" y="132" width="46" height="42" rx="6"/>
+<text class="monob" x="221" y="159" text-anchor="middle">)</text>
+<rect class="cell" x="244" y="132" width="62" height="42" rx="6"/>
+<text class="lbl" x="275" y="159" text-anchor="middle">จบ</text>
+<path class="arrowb" d="M175,186 L175,208" marker-end="url(#a-b)"/>
+<text class="lbl" x="210" y="202">หัวอ่าน (read head) เลื่อนซ้าย→ขวาเสมอ</text>
+<rect class="bandc" x="40" y="230" width="250" height="150" rx="8"/>
+<text class="btitle" x="56" y="254">2) finite control</text>
+<circle class="st" cx="165" cy="312" r="40"/>
+<text class="monob" x="165" y="309" text-anchor="middle">q0</text>
+<text class="lbl" x="165" y="327" text-anchor="middle">อ่านอยู่</text>
+<text class="lblb" x="56" y="368">สถานะ = { q0, qAccept } (2 สถานะ)</text>
+<rect class="bandg" x="320" y="230" width="250" height="210" rx="8"/>
+<text class="btitle" x="336" y="254">3) stack (LIFO)</text>
+<text class="lbl" x="336" y="274">ก้น stack อยู่ล่างสุด</text>
+<rect class="stk" x="350" y="306" width="110" height="28" rx="5"/>
+<text class="monob" x="405" y="326" text-anchor="middle">Z0</text>
+<rect class="stk" x="350" y="336" width="110" height="28" rx="5"/>
+<text class="monob" x="405" y="356" text-anchor="middle">(</text>
+<rect class="stktop" x="350" y="366" width="110" height="28" rx="5"/>
+<text class="monob" x="405" y="386" text-anchor="middle">(</text>
+<text class="lblb" x="470" y="386">top →</text>
+<text class="lblb" x="336" y="404">push '(' เมื่อเจอ (</text>
+<text class="lblr" x="336" y="424">pop เมื่อเจอ ) · ยอมรับเมื่อ stack ว่าง</text>
+<path class="arrowy" d="M290,312 L314,312" marker-end="url(#a-y)"/>
+<rect class="bandw" x="580" y="98" width="440" height="250" rx="8"/>
+<text class="btitle" x="598" y="122">4) ตาราง transition ทั้งหมด 4 ข้อ (ของจริง)</text>
+<text class="lbl" x="598" y="144">สถานะ · อ่าน · top → สถานะใหม่ · ทำอะไร</text>
+<text class="lbl" x="598" y="170">สถานะ</text>
+<text class="lbl" x="676" y="170">อ่าน</text>
+<text class="lbl" x="752" y="170">top</text>
+<text class="lbl" x="830" y="170">→ สถานะ</text>
+<text class="lbl" x="906" y="170">การกระทำ</text>
+<path class="grid" d="M598,180 L1004,180"/>
+<text class="monos" x="598" y="202">q0</text>
+<text class="monos" x="676" y="202">(</text>
+<text class="monos" x="752" y="202">Z0</text>
+<text class="monos" x="830" y="202">q0</text>
+<text class="monog" x="906" y="202">push (</text>
+<path class="grid" d="M598,212 L1004,212"/>
+<text class="monos" x="598" y="234">q0</text>
+<text class="monos" x="676" y="234">(</text>
+<text class="monos" x="752" y="234">(</text>
+<text class="monos" x="830" y="234">q0</text>
+<text class="monog" x="906" y="234">push (</text>
+<path class="grid" d="M598,244 L1004,244"/>
+<text class="monos" x="598" y="266">q0</text>
+<text class="monos" x="676" y="266">)</text>
+<text class="monos" x="752" y="266">(</text>
+<text class="monos" x="830" y="266">q0</text>
+<text class="monor" x="906" y="266">pop</text>
+<path class="grid" d="M598,276 L1004,276"/>
+<text class="monos" x="598" y="298">q0</text>
+<text class="monos" x="676" y="298">ε</text>
+<text class="monos" x="752" y="298">Z0</text>
+<text class="monos" x="830" y="298">qAccept</text>
+<text class="monos" x="906" y="298">accept</text>
+<path class="grid" d="M598,308 L1004,308"/>
+<rect class="bandy" x="580" y="366" width="440" height="114" rx="8"/>
+<text class="btitle" x="598" y="390">5) หลักฐานจากผลรันจริง (out/01)</text>
+<text class="lbl" x="598" y="414">"(())" เดิน 5 ก้าว → ยอมรับ (ลึกสุด 2) · ทั้ง 12 เส้น ลึกสุด 11</text>
+<text class="lblg" x="598" y="434">MISMATCH 0 จาก 12 เส้น</text>
+<text class="lblg" x="598" y="454">รันซ้ำทุกเส้นได้ผลเหมือนเดิมทุกก้าว: true</text>
+<text class="lblg" x="598" y="474">ความลึก stack = วงเล็บเปิดค้าง (จริงทุกเส้น)</text>
+<rect class="bandc" x="40" y="500" width="980" height="124" rx="8"/>
+<text class="btitle" x="58" y="524">ทำไมเรื่องนี้สำคัญ: ภาษาเดียวกันนี้ DFA ทำไม่ได้เลย (ตอนที่ 22)</text>
+<text class="lbl" x="58" y="548">DFA ตัดสินใจได้ด้วย "สถานะ" เท่านั้น · ระหว่างอ่าน ( ( ( ... จะรู้ว่าวงเล็บเปิดค้างกี่ตัว ต้องจำให้ได้ไม่จำกัดจำนวน</text>
+<text class="lbl" x="58" y="568">พอเพิ่มความจำ 1 กอง (stack) ภาษาใหม่ทั้งชั้นก็เปิดออก: aⁿbⁿ · วงเล็บสมดุล · โครงสร้างซ้อนของโค้ด — ภาษาชั้นนี้ชื่อ context-free</text>
+<text class="lblb" x="58" y="590">สำหรับสตริงที่ยอมรับ (7 เส้น): ความลึก stack สูงสุด = จำนวนวงเล็บเปิดค้างสูงสุด — ตรงทุกเส้น: true</text>
+</svg>
