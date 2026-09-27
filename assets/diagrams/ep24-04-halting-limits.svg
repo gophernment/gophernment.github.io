@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1060 720" width="1060" height="720" role="img" aria-label="ขีดจำกัดของตัวตรวจว่าหยุดไหม และการพิสูจน์สองกรณี">
+  <style>
+    text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 13px; fill: #1a1a1a; }
+    .hdr { font-weight: 700; font-size: 19px; }
+    .sub { fill: #57606a; font-size: 12.5px; }
+    .ptitle { font-weight: 700; font-size: 14.5px; }
+    .btitle { font-weight: 700; font-size: 12.5px; }
+    .lbl { fill: #57606a; font-size: 11.5px; }
+    .lblb { fill: #0550ae; font-size: 11.5px; font-weight: 700; }
+    .lblr { fill: #cf222e; font-size: 11.5px; font-weight: 700; }
+    .lblg { fill: #1a7f37; font-size: 11.5px; font-weight: 700; }
+    .lblo { fill: #9a6700; font-size: 11.5px; font-weight: 700; }
+    .mono { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 12px; }
+    .monos { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 11.5px; }
+    .monob { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 12px; font-weight: 700; fill: #0550ae; }
+    .monor { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 12px; font-weight: 700; fill: #cf222e; }
+    .monog { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 12px; font-weight: 700; fill: #1a7f37; }
+    .band { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.2; }
+    .bandw { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.2; }
+    .bandc { fill: #eef4ff; stroke: #0969da; stroke-width: 1.4; }
+    .bandg { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.4; }
+    .bandr { fill: #fdf2f2; stroke: #cf222e; stroke-width: 1.4; }
+    .bandy { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.4; }
+    .cell { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.1; }
+    .cellt { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.1; }
+    .cellg { fill: #eafaf0; stroke: #1a7f37; stroke-width: 1.3; }
+    .cellr { fill: #fdf2f2; stroke: #cf222e; stroke-width: 1.3; }
+    .celly { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.3; }
+    .celld { fill: #e7f0ff; stroke: #0969da; stroke-width: 2.4; }
+    .diagmark { fill: none; stroke: #0969da; stroke-width: 2.6; }
+    .head { fill: #fff8e5; stroke: #bf8700; stroke-width: 2.2; }
+    .arrow { stroke: #57606a; stroke-width: 2; fill: none; }
+    .arrowb { stroke: #0550ae; stroke-width: 2.2; fill: none; }
+    .arrowg { stroke: #1a7f37; stroke-width: 2.2; fill: none; }
+    .arrowr { stroke: #cf222e; stroke-width: 2.2; fill: none; }
+    .dash { stroke: #8c959f; stroke-width: 1.2; stroke-dasharray: 5 4; fill: none; }
+  </style>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#57606a"/>
+    </marker>
+    <marker id="ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#0550ae"/>
+    </marker>
+    <marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#1a7f37"/>
+    </marker>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#cf222e"/>
+    </marker>
+  </defs>
+  <rect x="0.0" y="0.0" width="1060.0" height="720.0" class="bandw"/>
+  <text x="30.0" y="36.0" class="hdr">ตัวตรวจ "หยุดไหม": ทุกเพดานมีโปรแกรมที่หลบได้ · และตัวตรวจสมบูรณ์ไม่มีอยู่จริง</text>
+  <text x="30.0" y="60.0" class="sub">ผลรันจริงของโปรแกรม 04 — เครื่อง counter ที่หยุดเมื่อเจอ '1' พอดี</text>
+  <rect x="30.0" y="96.0" width="560.0" height="236.0" class="bandy"/>
+  <text x="46.0" y="122.0" class="ptitle">1) ทุกเพดานมีโปรแกรมที่ "หยุดช้ากว่าที่ตัวตรวจดู"</text>
+  <text x="46.0" y="142.0" class="lbl">input = "0"×B + "1" → หยุดที่ก้าว B+1 พอดี</text>
+  <text x="46.0" y="172.0" class="btitle">เพดาน B</text>
+  <text x="146.0" y="172.0" class="btitle">หยุดที่ก้าว</text>
+  <text x="276.0" y="172.0" class="btitle">ตัวตรวจ(B)</text>
+  <text x="416.0" y="172.0" class="btitle">ตัวตรวจ(B+1)</text>
+  <rect x="40.0" y="184.0" width="540.0" height="26.0" class="bandw"/>
+  <text x="46.0" y="202.0" class="monos">10</text>
+  <text x="146.0" y="202.0" class="monos">11</text>
+  <text x="276.0" y="202.0" class="monor">ยังไม่รู้</text>
+  <text x="416.0" y="202.0" class="monog">หยุด (ยืนยันได้)</text>
+  <rect x="40.0" y="212.0" width="540.0" height="26.0" class="bandw"/>
+  <text x="46.0" y="230.0" class="monos">100</text>
+  <text x="146.0" y="230.0" class="monos">101</text>
+  <text x="276.0" y="230.0" class="monor">ยังไม่รู้</text>
+  <text x="416.0" y="230.0" class="monog">หยุด (ยืนยันได้)</text>
+  <rect x="40.0" y="240.0" width="540.0" height="26.0" class="bandw"/>
+  <text x="46.0" y="258.0" class="monos">1000</text>
+  <text x="146.0" y="258.0" class="monos">1001</text>
+  <text x="276.0" y="258.0" class="monor">ยังไม่รู้</text>
+  <text x="416.0" y="258.0" class="monog">หยุด (ยืนยันได้)</text>
+  <rect x="40.0" y="268.0" width="540.0" height="26.0" class="bandw"/>
+  <text x="46.0" y="286.0" class="monos">10000</text>
+  <text x="146.0" y="286.0" class="monos">10001</text>
+  <text x="276.0" y="286.0" class="monor">ยังไม่รู้</text>
+  <text x="416.0" y="286.0" class="monog">หยุด (ยืนยันได้)</text>
+  <rect x="40.0" y="296.0" width="540.0" height="26.0" class="bandw"/>
+  <text x="46.0" y="314.0" class="monos">100000</text>
+  <text x="146.0" y="314.0" class="monos">100001</text>
+  <text x="276.0" y="314.0" class="monor">ยังไม่รู้</text>
+  <text x="416.0" y="314.0" class="monog">หยุด (ยืนยันได้)</text>
+  <text x="46.0" y="342.0" class="lbl">ตัดสินได้ 0/5 ที่เพดาน B · 5/5 ที่เพดาน B+1 → เพิ่มเพดานเท่าไรก็มีตัวหลบเสมอ</text>
+  <rect x="610.0" y="96.0" width="420.0" height="236.0" class="bandr"/>
+  <text x="626.0" y="122.0" class="ptitle">2) พิสูจน์: ตัวตรวจสมบูรณ์ไม่มีอยู่จริง</text>
+  <text x="626.0" y="144.0" class="lbl">สมมติมี H ที่ตอบถูกทุกโปรแกรม</text>
+  <text x="626.0" y="164.0" class="lbl">สร้าง D: ถาม H ว่า D หยุดไหม แล้วทำตรงกันข้าม</text>
+  <rect x="626.0" y="184.0" width="388.0" height="44.0" class="bandw"/>
+  <text x="636.0" y="204.0" class="lblr">กรณี 1</text>
+  <text x="636.0" y="220.0" class="lbl">: H บอกหยุด → D วนไม่หยุด → H ตอบผิด</text>
+  <rect x="626.0" y="236.0" width="388.0" height="44.0" class="bandw"/>
+  <text x="636.0" y="256.0" class="lblr">กรณี 2</text>
+  <text x="636.0" y="272.0" class="lbl">: H บอกไม่หยุด → D หยุดทันที → H ตอบผิด</text>
+  <text x="626.0" y="310.0" class="lblb">ทั้งสองกรณีขัดแย้ง → ตัวตรวจสมบูรณ์ไม่มีอยู่จริง</text>
+  <rect x="30.0" y="356.0" width="620.0" height="150.0" class="band"/>
+  <text x="46.0" y="382.0" class="ptitle">3) Collatz: โปรแกรมที่ไม่มีใครรู้ว่าหยุดทุก input ไหม</text>
+  <text x="46.0" y="406.0" class="lbl">สแกน n = 1 ถึง 1,000,000 ตัว: จำนวนก้าวมากสุด = 524 ก้าว (ที่ n = 837799)</text>
+  <text x="46.0" y="428.0" class="lbl">ตัวอย่าง n=27 ใช้ 111 ก้าว · ที่เพดาน 100 ก้าว ตอบ "ยังไม่รู้" ถึง 655,970 จาก 1,000,000 ตัว</text>
+  <text x="46.0" y="450.0" class="lbl">การที่ยังไม่มีใครพิสูจน์ว่าทุก n หยุด = มีโปรแกรมที่ยังไม่มีใครตัดสินได้จริง ๆ (วันนี้)</text>
+  <text x="46.0" y="476.0" class="lblb">ตัวตรวจของเราจึงทำได้แค่: ยืนยัน "หยุด" เมื่อรันสั้นพอ · ตอบ "ยังไม่รู้" ที่เหลือ</text>
+  <rect x="676.0" y="356.0" width="354.0" height="150.0" class="bandg"/>
+  <text x="692.0" y="382.0" class="ptitle">4) แล้ว compiler/IDE ล่ะ</text>
+  <text x="692.0" y="406.0" class="lbl">go vet และ go build: ผ่านสะอาด ไม่มีคำเตือน</text>
+  <text x="692.0" y="428.0" class="lbl">โปรแกรมที่วนไม่รู้จบ: timeout ฆ่าที่ 3 วินาที</text>
+  <text x="692.0" y="450.0" class="lbl">(exit code 124) → วนจริง แต่ compiler ไม่เตือน</text>
+  <text x="692.0" y="476.0" class="lblb">ไม่มี tool ไหนตรวจจับได้ทุกแบบ — พิสูจน์แล้ว</text>
+  <rect x="30.0" y="528.0" width="1000.0" height="150.0" class="bandc"/>
+  <text x="46.0" y="554.0" class="ptitle">สรุปของตอนนี้</text>
+  <text x="46.0" y="580.0" class="lbl">ปัญหาที่ "ตัดสินได้" (decidable) = มีโปรแกรมที่ตอบถูกทุก input เสมอในเวลาจำกัด เช่น aⁿbⁿcⁿ (TM ตรวจได้)</text>
+  <text x="46.0" y="602.0" class="lbl">ปัญหาที่ "รับรู้ได้" (recognizable) = ยืนยันฝั่ง "ใช่" ได้ แต่ฝั่ง "ไม่" ไม่รับประกัน · halting problem อยู่ในชั้นนี้</text>
+  <text x="46.0" y="624.0" class="lbl">ปัญหาที่ไม่ใช่ทั้งคู่ = แม้แต่ฝั่ง "ใช่" ก็ยังยืนยันไม่ได้ · ตัวอย่าง: ส่วนเติมเต็มของ halting problem, "M หยุดกับทุก input"</text>
+  <text x="46.0" y="650.0" class="lblb">ขั้นถัดไป (ตอนที่ 25): ปัญหาที่ตัดสินได้ก็ยังมีราคาต่างกันมหาศาล — นั่นคือเรื่อง P/NP (ทำได้ ≠ ทำได้เร็ว)</text>
+  <text x="46.0" y="670.0" class="lbl">ตอนที่ 24 คือขอบเขตของ "ทำได้" · ตอนที่ 25 คือขอบเขตของ "เร็วพอ"</text>
+</svg>
