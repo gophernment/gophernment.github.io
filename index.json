@@ -1,5 +1,20 @@
 [
   {
+    "slug": "2026-09-28-cs-fundamentals-24-turing-machine-halting",
+    "title": "Turing machine + halting problem — อะไรที่คอมพิวเตอร์ทำไม่ได้ (ตอนที่ 24)",
+    "date": "2026-09-28",
+    "tags": [
+      "cs-fundamentals",
+      "theory",
+      "turing-machine",
+      "halting-problem",
+      "decidability",
+      "computability",
+      "go"
+    ],
+    "description": "ตอนที่ 24 ของคอร์ส CS Fundamentals — Turing machine + halting problem: เครื่องคำนวณที่ทรงพลังที่สุด (เทปไม่จำกัด + หัวอ่านเขียนทับเดินสองทาง) ทำภาษา aⁿbⁿcⁿ ที่ PDA ทำไม่ได้, เครื่องจักรสากล = โปรแกรมที่รันโปรแกรมได้, และการพิสูจน์ว่า 'โปรแกรมนี้จะหยุดไหม' เป็นปัญหาที่ตัดสินไม่ได้ (undecidable) ด้วยการทแยงกลับด้าน + Collatz — โค้ด Go 5 โปรแกรมรันจริงบน Raspberry Pi 5"
+  },
+  {
     "slug": "2026-09-27-cs-fundamentals-23-pushdown-automata-parsing",
     "title": "pushdown automata → context-free grammar — ทำไม parser ทำงานได้ (ตอนที่ 23)",
     "date": "2026-09-27",
