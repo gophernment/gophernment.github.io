@@ -1,5 +1,20 @@
 [
   {
+    "slug": "2026-09-29-cs-fundamentals-25-complexity-p-np",
+    "title": "Complexity P/NP — ทำไมบางปัญหา \"ยาก\" (ตอนที่ 25)",
+    "date": "2026-09-29",
+    "tags": [
+      "cs-fundamentals",
+      "theory",
+      "complexity",
+      "p-vs-np",
+      "np-complete",
+      "big-o",
+      "go"
+    ],
+    "description": "ตอนที่ 25 ของคอร์ส CS Fundamentals — Complexity P/NP: 'ยาก' ในทางทฤษฎีหมายถึงจำนวนขั้นตอนที่โตแบบไหนเมื่อ input ใหญ่ขึ้น (big-O), ทำไม 'ตรวจคำตอบ' ง่ายกว่า 'หาคำตอบ' (P vs NP), NP-complete + การลด (Cook–Levin 1971, Karp 1972), และทำไมการรู้ว่าโจทย์เป็น NP-hard ต้องเปลี่ยนเป้าไปใช้ heuristic — โค้ด Go 5 โปรแกรมรันจริงบน Raspberry Pi 5"
+  },
+  {
     "slug": "2026-09-28-cs-fundamentals-24-turing-machine-halting",
     "title": "Turing machine + halting problem — อะไรที่คอมพิวเตอร์ทำไม่ได้ (ตอนที่ 24)",
     "date": "2026-09-28",
