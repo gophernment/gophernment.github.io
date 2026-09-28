@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 800" width="1080" height="800" role="img" aria-label="แผนภาพความสัมพันธ์ของ P, NP, NP-complete และ NP-hard">
+  <style>
+    text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 13px; fill: #1a1a1a; }
+    .hdr { font-weight: 700; font-size: 19px; }
+    .sub { fill: #57606a; font-size: 12.5px; }
+    .ptitle { font-weight: 700; font-size: 14.5px; }
+    .btitle { font-weight: 700; font-size: 12.5px; }
+    .lbl { fill: #57606a; font-size: 11.5px; }
+    .lblb { fill: #0550ae; font-size: 11.5px; font-weight: 700; }
+    .lblr { fill: #cf222e; font-size: 11.5px; font-weight: 700; }
+    .lblg { fill: #1a7f37; font-size: 11.5px; font-weight: 700; }
+    .lblo { fill: #9a6700; font-size: 11.5px; font-weight: 700; }
+    .axis { fill: #57606a; font-size: 10.5px; }
+    .mono { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 12px; }
+    .monos { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 11.5px; }
+    .monob { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 12px; font-weight: 700; fill: #0550ae; }
+    .monor { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 12px; font-weight: 700; fill: #cf222e; }
+    .monog { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 12px; font-weight: 700; fill: #1a7f37; }
+    .band { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.2; }
+    .bandw { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.2; }
+    .bandc { fill: #eef4ff; stroke: #0969da; stroke-width: 1.4; }
+    .bandg { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.4; }
+    .bandr { fill: #fdf2f2; stroke: #cf222e; stroke-width: 1.4; }
+    .bandy { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.4; }
+    .blob { fill: #eef4ff; stroke: #0969da; stroke-width: 1.6; }
+    .blobp { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.6; }
+    .blobnc { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.6; stroke-dasharray: 6 4; }
+    .blobnh { fill: #fdf2f2; stroke: #cf222e; stroke-width: 1.6; stroke-dasharray: 6 4; }
+    .cell { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.1; }
+    .cellt { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.1; }
+    .arrow { stroke: #57606a; stroke-width: 2; fill: none; }
+    .arrowb { stroke: #0550ae; stroke-width: 2.2; fill: none; }
+    .grid { stroke: #e6eaef; stroke-width: 1; }
+    .ln1 { stroke: #8c959f; stroke-width: 2; fill: none; }
+    .ln2 { stroke: #57606a; stroke-width: 2; fill: none; }
+    .ln3 { stroke: #1a7f37; stroke-width: 2; fill: none; }
+    .ln4 { stroke: #9a6700; stroke-width: 2; fill: none; }
+    .ln5 { stroke: #0550ae; stroke-width: 2; fill: none; }
+    .ln6 { stroke: #8250df; stroke-width: 2; fill: none; }
+    .ln7 { stroke: #cf222e; stroke-width: 2.6; fill: none; }
+  </style>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#57606a"/>
+    </marker>
+    <marker id="ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#0550ae"/>
+    </marker>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#cf222e"/>
+    </marker>
+  </defs>
+  <rect x="0.0" y="0.0" width="1080.0" height="800.0" class="bandw"/>
+  <text x="30.0" y="36.0" class="hdr">P, NP, NP-complete — "ง่าย" กับ "ยาก" ในทางทฤษฎี</text>
+  <text x="30.0" y="58.0" class="sub">ตัวเลขจากการรันจริงของโปรแกรม 02 (หาคำตอบแบบไล่ทุกสับเซต เทียบกับการตรวจคำตอบ)</text>
+  <rect x="28.0" y="74.0" width="1024.0" height="318.0" class="bandw"/>
+  <text x="44.0" y="98.0" class="ptitle">1) ชั้นของปัญหา — P อยู่ใน NP · NP-complete = ส่วนที่ NP กับ NP-hard ซ้อนกัน</text>
+  <ellipse cx="620.0" cy="250.0" rx="280.0" ry="126.0" class="blob"/>
+  <ellipse cx="550.0" cy="288.0" rx="120.0" ry="68.0" class="blobp"/>
+  <ellipse cx="860.0" cy="250.0" rx="170.0" ry="140.0" class="blobnh"/>
+<path d="M 755.3 139.7 A 280 126 0 0 1 755.3 360.3 A 170 140 0 0 1 755.3 139.7 Z" class="blobnc"/>  <text x="450.0" y="162.0" class="lblb">NP</text>
+  <text x="450.0" y="182.0" class="lbl">ตรวจคำตอบได้เร็ว</text>
+  <text x="500.0" y="278.0" class="lblg">P</text>
+  <text x="500.0" y="296.0" class="lbl">หาคำตอบได้เร็ว</text>
+  <text x="500.0" y="314.0" class="lbl">n, n², n³</text>
+  <text x="716.0" y="200.0" class="lblo">NP-complete</text>
+  <text x="716.0" y="220.0" class="lbl">ยากสุดใน NP</text>
+  <text x="716.0" y="240.0" class="lbl">SAT · subset sum · TSP</text>
+  <text x="1005.0" y="240.0" class="lblr" text-anchor="end">NP-hard</text>
+  <text x="1005.0" y="258.0" class="lbl" text-anchor="end">ยากอย่างน้อยเท่า</text>
+  <text x="1005.0" y="276.0" class="lbl" text-anchor="end">NP-complete ทุกตัว</text>
+  <text x="1005.0" y="294.0" class="lbl" text-anchor="end">(ไม่ต้องอยู่ใน NP)</text>
+  <text x="46.0" y="190.0" class="btitle">ปัญหาในโลกจริง</text>
+  <text x="46.0" y="212.0" class="lbl">เรียงข้อมูล</text>
+  <text x="46.0" y="232.0" class="lbl">หาเส้นทางสั้นสุด</text>
+  <text x="46.0" y="252.0" class="lbl">หาคำใน dict</text>
+  <text x="46.0" y="272.0" class="lbl">วางแผนจัดตาราง</text>
+  <text x="46.0" y="300.0" class="lbl">ตัดสินใจเลือกตามเงื่อนไข</text>
+  <text x="46.0" y="330.0" class="lblr">NP ไม่ได้ย่อมาจาก Non-Polynomial</text>
+  <text x="46.0" y="352.0" class="lblr">ย่อมาจาก Nondeterministic Polynomial</text>
+  <text x="46.0" y="378.0" class="lbl">บริเวณสีเหลือง = ส่วนที่ซ้อนกัน</text>
+  <rect x="28.0" y="406.0" width="524.0" height="264.0" class="bandr"/>
+  <text x="44.0" y="430.0" class="ptitle">2) หาคำตอบเอง กับ ตรวจคำตอบ ต่างกันแค่ไหน</text>
+  <text x="44.0" y="450.0" class="lbl">โจทย์ subset sum · กรณีแย่สุด = ไม่มีคำตอบ ต้องไล่ครบทุกสับเซต</text>
+  <text x="44.0" y="476.0" class="btitle">n</text>
+  <text x="78.0" y="476.0" class="btitle">สับเซตทั้งหมด</text>
+  <text x="206.0" y="476.0" class="btitle">หา (ms)</text>
+  <text x="292.0" y="476.0" class="btitle">ตรวจ (ns)</text>
+  <text x="390.0" y="476.0" class="btitle">ต่างกัน (เท่า)</text>
+  <text x="44.0" y="500.0" class="monos">16</text>
+  <text x="78.0" y="500.0" class="monos">65,536</text>
+  <text x="206.0" y="500.0" class="monos">1.562</text>
+  <text x="292.0" y="500.0" class="monos">23.8</text>
+  <text x="390.0" y="500.0" class="monor">6.57e+04</text>
+  <text x="44.0" y="524.0" class="monos">18</text>
+  <text x="78.0" y="524.0" class="monos">262,144</text>
+  <text x="206.0" y="524.0" class="monos">6.706</text>
+  <text x="292.0" y="524.0" class="monos">26.8</text>
+  <text x="390.0" y="524.0" class="monor">2.5e+05</text>
+  <text x="44.0" y="548.0" class="monos">20</text>
+  <text x="78.0" y="548.0" class="monos">1,048,576</text>
+  <text x="206.0" y="548.0" class="monos">29.905</text>
+  <text x="292.0" y="548.0" class="monos">29.6</text>
+  <text x="390.0" y="548.0" class="monor">1.01e+06</text>
+  <text x="44.0" y="572.0" class="monos">22</text>
+  <text x="78.0" y="572.0" class="monos">4,194,304</text>
+  <text x="206.0" y="572.0" class="monos">132.716</text>
+  <text x="292.0" y="572.0" class="monos">33.2</text>
+  <text x="390.0" y="572.0" class="monor">4e+06</text>
+  <text x="44.0" y="608.0" class="lblr">ฝั่งหาต้องไล่ครบ 2ⁿ สับเซต (ในตารางนี้ n=22 → 4,194,304 สับเซต)</text>
+  <text x="44.0" y="628.0" class="lblr">ฝั่งตรวจใช้แค่ n ขั้นตอน → ที่ n=22 ต่างกัน 4e+06 เท่า</text>
+  <rect x="564.0" y="406.0" width="488.0" height="264.0" class="bandc"/>
+  <text x="580.0" y="430.0" class="ptitle">3) คำตอบ (certificate) สั้นแค่ไหน</text>
+  <text x="580.0" y="450.0" class="lbl">คำตอบคือบิตมาสก์ n บิต — ตรวจเสร็จใน n ขั้นตอน</text>
+  <text x="580.0" y="480.0" class="lblg">n=16</text>
+  <text x="624.0" y="480.0" class="monos">cert = 0010111110101000</text>
+  <text x="580.0" y="506.0" class="lblg">n=18</text>
+  <text x="624.0" y="506.0" class="monos">cert = 100010001111000011</text>
+  <text x="580.0" y="532.0" class="lblg">n=20</text>
+  <text x="624.0" y="532.0" class="monos">cert = 11010101011111100010</text>
+  <text x="580.0" y="558.0" class="lblg">n=22</text>
+  <text x="624.0" y="558.0" class="monos">cert = 0110101011111110110111</text>
+  <text x="580.0" y="596.0" class="lblb">แก้บิตเดียว → ตรวจเจอทันทีว่าผิด (ทดสอบจริงครบทุกขนาด)</text>
+  <text x="580.0" y="616.0" class="lblb">ตรวจง่ายเสมอ ≠ หาง่าย คือช่องว่างที่ P/NP ถาม</text>
+  <rect x="28.0" y="688.0" width="1024.0" height="94.0" class="bandy"/>
+  <text x="44.0" y="712.0" class="ptitle">อ่านภาพนี้ให้เป็นเรื่องเดียว</text>
+  <text x="44.0" y="736.0" class="lbl">P = ปัญหาที่หาคำตอบได้เร็ว · NP = ปัญหาที่ตรวจคำตอบได้เร็ว (ทุกปัญหาใน P อยู่ใน NP ด้วย)</text>
+  <text x="44.0" y="758.0" class="lbl">NP-complete = ปัญหายากที่สุดใน NP (ถ้าแก้ตัวใดตัวหนึ่งได้เร็ว ทุกตัวใน NP ก็เร็วไปด้วย)</text>
+  <text x="44.0" y="778.0" class="lblo">คำถามล้านดอลลาร์ (Clay Millennium Prize, ยังไม่มีใครพิสูจน์ ณ 2026): P = NP จริงไหม?</text>
+</svg>

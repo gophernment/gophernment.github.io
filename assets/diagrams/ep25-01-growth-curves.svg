@@ -1,0 +1,214 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 830" width="1080" height="830" role="img" aria-label="กราฟการเติบโตของจำนวนขั้นตอนของอัลกอริทึมหลายชนิด">
+  <style>
+    text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 13px; fill: #1a1a1a; }
+    .hdr { font-weight: 700; font-size: 19px; }
+    .sub { fill: #57606a; font-size: 12.5px; }
+    .ptitle { font-weight: 700; font-size: 14.5px; }
+    .btitle { font-weight: 700; font-size: 12.5px; }
+    .lbl { fill: #57606a; font-size: 11.5px; }
+    .lblb { fill: #0550ae; font-size: 11.5px; font-weight: 700; }
+    .lblr { fill: #cf222e; font-size: 11.5px; font-weight: 700; }
+    .lblg { fill: #1a7f37; font-size: 11.5px; font-weight: 700; }
+    .lblo { fill: #9a6700; font-size: 11.5px; font-weight: 700; }
+    .axis { fill: #57606a; font-size: 10.5px; }
+    .mono { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 12px; }
+    .monos { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 11.5px; }
+    .monob { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 12px; font-weight: 700; fill: #0550ae; }
+    .monor { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 12px; font-weight: 700; fill: #cf222e; }
+    .monog { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 12px; font-weight: 700; fill: #1a7f37; }
+    .band { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.2; }
+    .bandw { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.2; }
+    .bandc { fill: #eef4ff; stroke: #0969da; stroke-width: 1.4; }
+    .bandg { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.4; }
+    .bandr { fill: #fdf2f2; stroke: #cf222e; stroke-width: 1.4; }
+    .bandy { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.4; }
+    .blob { fill: #eef4ff; stroke: #0969da; stroke-width: 1.6; }
+    .blobp { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.6; }
+    .blobnc { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.6; stroke-dasharray: 6 4; }
+    .blobnh { fill: #fdf2f2; stroke: #cf222e; stroke-width: 1.6; stroke-dasharray: 6 4; }
+    .cell { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.1; }
+    .cellt { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.1; }
+    .arrow { stroke: #57606a; stroke-width: 2; fill: none; }
+    .arrowb { stroke: #0550ae; stroke-width: 2.2; fill: none; }
+    .grid { stroke: #e6eaef; stroke-width: 1; }
+    .ln1 { stroke: #8c959f; stroke-width: 2; fill: none; }
+    .ln2 { stroke: #57606a; stroke-width: 2; fill: none; }
+    .ln3 { stroke: #1a7f37; stroke-width: 2; fill: none; }
+    .ln4 { stroke: #9a6700; stroke-width: 2; fill: none; }
+    .ln5 { stroke: #0550ae; stroke-width: 2; fill: none; }
+    .ln6 { stroke: #8250df; stroke-width: 2; fill: none; }
+    .ln7 { stroke: #cf222e; stroke-width: 2.6; fill: none; }
+  </style>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#57606a"/>
+    </marker>
+    <marker id="ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#0550ae"/>
+    </marker>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#cf222e"/>
+    </marker>
+  </defs>
+  <rect x="0.0" y="0.0" width="1080.0" height="830.0" class="bandw"/>
+  <text x="30.0" y="36.0" class="hdr">การเติบโตของจำนวนขั้นตอน — ทำไม n โตขึ้นนิดเดียว งานโตขึ้นมหาศาล</text>
+  <text x="30.0" y="58.0" class="sub">ทุกตัวเลขในภาพนี้มาจากผลรันจริงของโปรแกรม 01 (Raspberry Pi 5 · 1 ขั้นตอน = 1 รอบของ spin)</text>
+  <rect x="28.0" y="74.0" width="1024.0" height="356.0" class="bandw"/>
+  <text x="44.0" y="98.0" class="ptitle">1) จำนวนขั้นตอนของแต่ละอัลกอริทึม (แกนตั้งสเกลลอการิทึม: แต่ละขีดคูณ 10)</text>
+  <path d="M 150.0 376.0 L 640.0 376.0" class="grid"/>
+  <text x="138.0" y="380.0" class="axis" text-anchor="end">10⁰</text>
+  <path d="M 150.0 351.8 L 640.0 351.8" class="grid"/>
+  <text x="138.0" y="355.8" class="axis" text-anchor="end">10²</text>
+  <path d="M 150.0 327.6 L 640.0 327.6" class="grid"/>
+  <text x="138.0" y="331.6" class="axis" text-anchor="end">10⁴</text>
+  <path d="M 150.0 303.4 L 640.0 303.4" class="grid"/>
+  <text x="138.0" y="307.4" class="axis" text-anchor="end">10⁶</text>
+  <path d="M 150.0 279.1 L 640.0 279.1" class="grid"/>
+  <text x="138.0" y="283.1" class="axis" text-anchor="end">10⁸</text>
+  <path d="M 150.0 254.9 L 640.0 254.9" class="grid"/>
+  <text x="138.0" y="258.9" class="axis" text-anchor="end">10¹⁰</text>
+  <path d="M 150.0 230.7 L 640.0 230.7" class="grid"/>
+  <text x="138.0" y="234.7" class="axis" text-anchor="end">10¹²</text>
+  <path d="M 150.0 206.5 L 640.0 206.5" class="grid"/>
+  <text x="138.0" y="210.5" class="axis" text-anchor="end">10¹⁴</text>
+  <path d="M 150.0 182.3 L 640.0 182.3" class="grid"/>
+  <text x="138.0" y="186.3" class="axis" text-anchor="end">10¹⁶</text>
+  <path d="M 150.0 158.1 L 640.0 158.1" class="grid"/>
+  <text x="138.0" y="162.1" class="axis" text-anchor="end">10¹⁸</text>
+  <path d="M 150.0 376.0 L 648.0 376.0" class="arrow" marker-end="url(#a)"/>
+  <path d="M 150.0 376.0 L 150.0 144.0" class="arrow" marker-end="url(#a)"/>
+  <text x="36.0" y="408.0" class="lbl">แกนนอน: ขนาด input n</text>
+  <text x="150.0" y="394.0" class="axis" text-anchor="middle">10</text>
+  <text x="248.0" y="394.0" class="axis" text-anchor="middle">20</text>
+  <text x="346.0" y="394.0" class="axis" text-anchor="middle">30</text>
+  <text x="444.0" y="394.0" class="axis" text-anchor="middle">40</text>
+  <text x="542.0" y="394.0" class="axis" text-anchor="middle">50</text>
+  <text x="640.0" y="394.0" class="axis" text-anchor="middle">60</text>
+  <polyline points="150.0,376.0 248.0,376.0 346.0,376.0 444.0,376.0 542.0,376.0 640.0,376.0" class="ln1"/>
+  <circle cx="150.0" cy="376.0" r="2.6" fill="#8c959f"/>
+  <circle cx="248.0" cy="376.0" r="2.6" fill="#8c959f"/>
+  <circle cx="346.0" cy="376.0" r="2.6" fill="#8c959f"/>
+  <circle cx="444.0" cy="376.0" r="2.6" fill="#8c959f"/>
+  <circle cx="542.0" cy="376.0" r="2.6" fill="#8c959f"/>
+  <circle cx="640.0" cy="376.0" r="2.6" fill="#8c959f"/>
+  <path d="M 690.0 156.0 L 720.0 156.0" class="ln1"/>
+  <text x="730.0" y="160.0" class="lbl">O(1) — ที่ n=100 → 1 ขั้นตอน</text>
+  <polyline points="150.0,368.7 248.0,367.5 346.0,367.5 444.0,366.6 542.0,366.6 640.0,366.6" class="ln2"/>
+  <circle cx="150.0" cy="368.7" r="2.6" fill="#57606a"/>
+  <circle cx="248.0" cy="367.5" r="2.6" fill="#57606a"/>
+  <circle cx="346.0" cy="367.5" r="2.6" fill="#57606a"/>
+  <circle cx="444.0" cy="366.6" r="2.6" fill="#57606a"/>
+  <circle cx="542.0" cy="366.6" r="2.6" fill="#57606a"/>
+  <circle cx="640.0" cy="366.6" r="2.6" fill="#57606a"/>
+  <path d="M 690.0 182.0 L 720.0 182.0" class="ln2"/>
+  <text x="730.0" y="186.0" class="lbl">O(log n) — ที่ n=100 → 7 ขั้นตอน</text>
+  <polyline points="150.0,363.9 248.0,360.2 346.0,358.1 444.0,356.6 542.0,355.4 640.0,354.5" class="ln3"/>
+  <circle cx="150.0" cy="363.9" r="2.6" fill="#1a7f37"/>
+  <circle cx="248.0" cy="360.2" r="2.6" fill="#1a7f37"/>
+  <circle cx="346.0" cy="358.1" r="2.6" fill="#1a7f37"/>
+  <circle cx="444.0" cy="356.6" r="2.6" fill="#1a7f37"/>
+  <circle cx="542.0" cy="355.4" r="2.6" fill="#1a7f37"/>
+  <circle cx="640.0" cy="354.5" r="2.6" fill="#1a7f37"/>
+  <path d="M 690.0 208.0 L 720.0 208.0" class="ln3"/>
+  <text x="730.0" y="212.0" class="lbl">O(n) — ที่ n=100 → 100 ขั้นตอน</text>
+  <polyline points="150.0,357.6 248.0,352.6 346.0,349.8 444.0,347.8 542.0,346.3 640.0,345.1" class="ln4"/>
+  <circle cx="150.0" cy="357.6" r="2.6" fill="#9a6700"/>
+  <circle cx="248.0" cy="352.6" r="2.6" fill="#9a6700"/>
+  <circle cx="346.0" cy="349.8" r="2.6" fill="#9a6700"/>
+  <circle cx="444.0" cy="347.8" r="2.6" fill="#9a6700"/>
+  <circle cx="542.0" cy="346.3" r="2.6" fill="#9a6700"/>
+  <circle cx="640.0" cy="345.1" r="2.6" fill="#9a6700"/>
+  <path d="M 690.0 234.0 L 720.0 234.0" class="ln4"/>
+  <text x="730.0" y="238.0" class="lbl">O(n log n) — ที่ n=100 → 664 ขั้นตอน</text>
+  <polyline points="150.0,351.8 248.0,344.5 346.0,340.2 444.0,337.2 542.0,334.9 640.0,332.9" class="ln5"/>
+  <circle cx="150.0" cy="351.8" r="2.6" fill="#0550ae"/>
+  <circle cx="248.0" cy="344.5" r="2.6" fill="#0550ae"/>
+  <circle cx="346.0" cy="340.2" r="2.6" fill="#0550ae"/>
+  <circle cx="444.0" cy="337.2" r="2.6" fill="#0550ae"/>
+  <circle cx="542.0" cy="334.9" r="2.6" fill="#0550ae"/>
+  <circle cx="640.0" cy="332.9" r="2.6" fill="#0550ae"/>
+  <path d="M 690.0 260.0 L 720.0 260.0" class="ln5"/>
+  <text x="730.0" y="264.0" class="lbl">O(n^2) — ที่ n=100 → 10,000 ขั้นตอน</text>
+  <polyline points="150.0,339.7 248.0,328.7 346.0,322.3 444.0,317.8 542.0,314.3 640.0,311.4" class="ln6"/>
+  <circle cx="150.0" cy="339.7" r="2.6" fill="#8250df"/>
+  <circle cx="248.0" cy="328.7" r="2.6" fill="#8250df"/>
+  <circle cx="346.0" cy="322.3" r="2.6" fill="#8250df"/>
+  <circle cx="444.0" cy="317.8" r="2.6" fill="#8250df"/>
+  <circle cx="542.0" cy="314.3" r="2.6" fill="#8250df"/>
+  <circle cx="640.0" cy="311.4" r="2.6" fill="#8250df"/>
+  <path d="M 690.0 286.0 L 720.0 286.0" class="ln6"/>
+  <text x="730.0" y="290.0" class="lbl">O(n^3) — ที่ n=100 → 1,000,000 ขั้นตอน</text>
+  <polyline points="150.0,339.6 248.0,303.1 346.0,266.7 444.0,230.2 542.0,193.8 640.0,157.3" class="ln7"/>
+  <circle cx="150.0" cy="339.6" r="2.6" fill="#cf222e"/>
+  <circle cx="248.0" cy="303.1" r="2.6" fill="#cf222e"/>
+  <circle cx="346.0" cy="266.7" r="2.6" fill="#cf222e"/>
+  <circle cx="444.0" cy="230.2" r="2.6" fill="#cf222e"/>
+  <circle cx="542.0" cy="193.8" r="2.6" fill="#cf222e"/>
+  <circle cx="640.0" cy="157.3" r="2.6" fill="#cf222e"/>
+  <path d="M 690.0 312.0 L 720.0 312.0" class="ln7"/>
+  <text x="730.0" y="316.0" class="lbl">O(2^n) — ที่ n=100 → 1.27e+30 ขั้นตอน</text>
+  <text x="690.0" y="346.0" class="lblr">เส้นแดง O(2ⁿ) ชันกว่าทุกเส้น</text>
+  <text x="690.0" y="366.0" class="lbl">ที่ n = 60 ก็ปาไป 1.15e+18 ขั้นตอนแล้ว</text>
+  <rect x="28.0" y="444.0" width="524.0" height="262.0" class="band"/>
+  <text x="44.0" y="470.0" class="ptitle">2) n โตขึ้น → ขั้นตอนโตกี่เท่า</text>
+  <text x="44.0" y="490.0" class="lbl">คอลัมน์ซ้าย: n 10 → 20 (n คูณ 2) · คอลัมน์ขวา: n 30 → 60 (n คูณ 2)</text>
+  <text x="44.0" y="516.0" class="btitle">อัลกอริทึม</text>
+  <text x="226.0" y="516.0" class="btitle">ขั้นตอน n=100</text>
+  <text x="378.0" y="516.0" class="btitle">10→20</text>
+  <text x="470.0" y="516.0" class="btitle">30→60</text>
+  <text x="44.0" y="538.0" class="monos">O(1)</text>
+  <text x="226.0" y="538.0" class="monos">1</text>
+  <text x="378.0" y="538.0" class="monos">x1</text>
+  <text x="470.0" y="538.0" class="monos">x1</text>
+  <text x="44.0" y="560.0" class="monos">O(log n)</text>
+  <text x="226.0" y="560.0" class="monos">7</text>
+  <text x="378.0" y="560.0" class="monos">x1.25</text>
+  <text x="470.0" y="560.0" class="monos">x1.2</text>
+  <text x="44.0" y="582.0" class="monos">O(n)</text>
+  <text x="226.0" y="582.0" class="monos">100</text>
+  <text x="378.0" y="582.0" class="monos">x2</text>
+  <text x="470.0" y="582.0" class="monos">x2</text>
+  <text x="44.0" y="604.0" class="monos">O(n log n)</text>
+  <text x="226.0" y="604.0" class="monos">664</text>
+  <text x="378.0" y="604.0" class="monos">x2.602</text>
+  <text x="470.0" y="604.0" class="monos">x2.408</text>
+  <text x="44.0" y="626.0" class="monos">O(n^2)</text>
+  <text x="226.0" y="626.0" class="monos">10,000</text>
+  <text x="378.0" y="626.0" class="monos">x4</text>
+  <text x="470.0" y="626.0" class="monos">x4</text>
+  <text x="44.0" y="648.0" class="monos">O(n^3)</text>
+  <text x="226.0" y="648.0" class="monos">1,000,000</text>
+  <text x="378.0" y="648.0" class="monos">x8</text>
+  <text x="470.0" y="648.0" class="monos">x8</text>
+  <text x="44.0" y="670.0" class="monos">O(2^n)</text>
+  <text x="226.0" y="670.0" class="monos">1.27e+30</text>
+  <text x="378.0" y="670.0" class="monos">x1024</text>
+  <text x="470.0" y="670.0" class="monos">x1.074e+09</text>
+  <text x="44.0" y="700.0" class="lblr">แถว O(2ⁿ): n จาก 10 เป็น 20 ทำให้งานคูณ 1,024 เท่า</text>
+  <rect x="564.0" y="444.0" width="488.0" height="262.0" class="bandg"/>
+  <text x="580.0" y="470.0" class="ptitle">3) ยืนยันด้วยเวลาจริงที่วัดได้</text>
+  <text x="580.0" y="490.0" class="lbl">3 งานที่จำนวนขั้นตอนไม่เท่ากัน — วัดจริงแล้วตรงกับขั้นตอน</text>
+  <text x="580.0" y="516.0" class="btitle">งาน</text>
+  <text x="656.0" y="516.0" class="btitle">ขั้นตอน</text>
+  <text x="798.0" y="516.0" class="btitle">เวลา (ms)</text>
+  <text x="920.0" y="516.0" class="btitle">เทียบ</text>
+  <text x="580.0" y="538.0" class="monos">O(n)</text>
+  <text x="656.0" y="538.0" class="monos">2,000,000→8,000,000</text>
+  <text x="798.0" y="538.0" class="monos">1.7→6.7</text>
+  <text x="920.0" y="538.0" class="monos">x4.0 / x4.0</text>
+  <text x="580.0" y="564.0" class="monos">O(n^2)</text>
+  <text x="656.0" y="564.0" class="monos">1,000,000→16,000,000</text>
+  <text x="798.0" y="564.0" class="monos">0.8→13.4</text>
+  <text x="920.0" y="564.0" class="monos">x16.0 / x16.1</text>
+  <text x="580.0" y="590.0" class="monos">O(2^n)</text>
+  <text x="656.0" y="590.0" class="monos">1,048,576→4,194,304</text>
+  <text x="798.0" y="590.0" class="monos">0.9→3.5</text>
+  <text x="920.0" y="590.0" class="monos">x4.0 / x4.0</text>
+  <text x="580.0" y="630.0" class="lbl">คอลัมน์สุดท้าย = ขั้นตอนคูณกี่เท่า / เวลาจริงคูณกี่เท่า</text>
+  <text x="580.0" y="652.0" class="lblg">เวลาจริงไล่ตามจำนวนขั้นตอนเกือบเป๊ะ (ราว 0.84 ns ต่อ 1 ขั้นตอน)</text>
+  <text x="580.0" y="672.0" class="lblg">เวลาจริงเป็นวินาทีขึ้นกับเครื่อง แต่จำนวนขั้นตอนเท่ากันทุกเครื่อง</text>
+  <rect x="28.0" y="720.0" width="1024.0" height="84.0" class="bandc"/>
+  <text x="44.0" y="746.0" class="ptitle">สรุปภาพนี้</text>
+  <text x="44.0" y="770.0" class="lbl">O(n), O(n log n) = ใช้ได้จริงกับข้อมูลใหญ่ · O(n²), O(n³) = เริ่มเจ็บ แต่ยังพอไหวเมื่อ n ไม่ใหญ่</text>
+  <text x="44.0" y="792.0" class="lblb">O(2ⁿ) = คนละโลก: n เพิ่ม 1 = งานสองเท่า — นี่คือความหมายของ "ยาก" ที่ P/NP พูดถึง</text>
+</svg>

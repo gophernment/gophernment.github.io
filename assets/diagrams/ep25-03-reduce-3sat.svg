@@ -1,0 +1,154 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 880" width="1080" height="880" role="img" aria-label="การลด 3-SAT ไปเป็น subset sum พร้อมตัวเลขจริงจากการรัน">
+  <style>
+    text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 13px; fill: #1a1a1a; }
+    .hdr { font-weight: 700; font-size: 19px; }
+    .sub { fill: #57606a; font-size: 12.5px; }
+    .ptitle { font-weight: 700; font-size: 14.5px; }
+    .btitle { font-weight: 700; font-size: 12.5px; }
+    .lbl { fill: #57606a; font-size: 11.5px; }
+    .lblb { fill: #0550ae; font-size: 11.5px; font-weight: 700; }
+    .lblr { fill: #cf222e; font-size: 11.5px; font-weight: 700; }
+    .lblg { fill: #1a7f37; font-size: 11.5px; font-weight: 700; }
+    .lblo { fill: #9a6700; font-size: 11.5px; font-weight: 700; }
+    .axis { fill: #57606a; font-size: 10.5px; }
+    .mono { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 12px; }
+    .monos { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 11.5px; }
+    .monob { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 12px; font-weight: 700; fill: #0550ae; }
+    .monor { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 12px; font-weight: 700; fill: #cf222e; }
+    .monog { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 12px; font-weight: 700; fill: #1a7f37; }
+    .band { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.2; }
+    .bandw { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.2; }
+    .bandc { fill: #eef4ff; stroke: #0969da; stroke-width: 1.4; }
+    .bandg { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.4; }
+    .bandr { fill: #fdf2f2; stroke: #cf222e; stroke-width: 1.4; }
+    .bandy { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.4; }
+    .blob { fill: #eef4ff; stroke: #0969da; stroke-width: 1.6; }
+    .blobp { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.6; }
+    .blobnc { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.6; stroke-dasharray: 6 4; }
+    .blobnh { fill: #fdf2f2; stroke: #cf222e; stroke-width: 1.6; stroke-dasharray: 6 4; }
+    .cell { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.1; }
+    .cellt { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.1; }
+    .arrow { stroke: #57606a; stroke-width: 2; fill: none; }
+    .arrowb { stroke: #0550ae; stroke-width: 2.2; fill: none; }
+    .grid { stroke: #e6eaef; stroke-width: 1; }
+    .ln1 { stroke: #8c959f; stroke-width: 2; fill: none; }
+    .ln2 { stroke: #57606a; stroke-width: 2; fill: none; }
+    .ln3 { stroke: #1a7f37; stroke-width: 2; fill: none; }
+    .ln4 { stroke: #9a6700; stroke-width: 2; fill: none; }
+    .ln5 { stroke: #0550ae; stroke-width: 2; fill: none; }
+    .ln6 { stroke: #8250df; stroke-width: 2; fill: none; }
+    .ln7 { stroke: #cf222e; stroke-width: 2.6; fill: none; }
+  </style>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#57606a"/>
+    </marker>
+    <marker id="ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#0550ae"/>
+    </marker>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#cf222e"/>
+    </marker>
+  </defs>
+  <rect x="0.0" y="0.0" width="1080.0" height="880.0" class="bandw"/>
+  <text x="30.0" y="36.0" class="hdr">การลด (reduce) 3-SAT → subset sum — หัวใจของคำว่า NP-complete</text>
+  <text x="30.0" y="58.0" class="sub">ตัวเลขจากการรันจริงของโปรแกรม 03 (สร้างโจทย์แปลงแล้วตรวจคำตอบทั้งสองทาง)</text>
+  <rect x="28.0" y="74.0" width="1024.0" height="152.0" class="bandc"/>
+  <text x="44.0" y="98.0" class="ptitle">1) โจทย์ต้นทาง: 3-SAT (หาค่าตัวแปรให้ทุกวงเล็บเป็นจริง)</text>
+  <text x="44.0" y="124.0" class="monos">สูตร F1 = (x1∨x2∨x3) ∧ (¬x1∨¬x2∨x3) ∧ (¬x1∨x2∨¬x3)</text>
+  <text x="44.0" y="148.0" class="lbl">คำถาม: มีค่าตัวแปรไหมที่ทำให้ทุกวงเล็บจริง? (3 ตัวแปร 3 ประโยค)</text>
+  <text x="44.0" y="172.0" class="lblb">ลดแล้วได้ตัวเลข 12 จำนวน หลักละ 6 หลัก — "สร้างเสร็จในไม่กี่ขั้นตอน" คือความหมายของการลด</text>
+  <text x="44.0" y="200.0" class="lbl">ไม่มีการค้นหาในขั้นนี้ แค่ประกอบตัวเลข — ความยากไม่ได้อยู่ที่การแปลง</text>
+  <rect x="28.0" y="242.0" width="524.0" height="348.0" class="band"/>
+  <text x="44.0" y="266.0" class="ptitle">2) แถวตัวเลขที่ได้จากสูตร F1</text>
+  <text x="44.0" y="286.0" class="lbl">หลักซ้ายสุด = x1 · ถัดไป = x2, x3 · ต่อด้วยหลักของประโยค 1..3</text>
+  <text x="44.0" y="314.0" class="btitle">แถว</text>
+  <text x="100.0" y="314.0" class="btitle">หลัก (เรียงตามสูตร)</text>
+  <text x="300.0" y="314.0" class="btitle">ความหมาย</text>
+  <text x="44.0" y="336.0" class="monos">y1</text>
+  <text x="100.0" y="336.0" class="monos">[1 0 0 1 0 0]</text>
+  <text x="300.0" y="336.0" class="lbl">x1 = จริง</text>
+  <text x="44.0" y="356.0" class="monos">z1</text>
+  <text x="100.0" y="356.0" class="monos">[1 0 0 0 1 1]</text>
+  <text x="300.0" y="356.0" class="lbl">x1 = เท็จ</text>
+  <text x="44.0" y="376.0" class="monos">y2</text>
+  <text x="100.0" y="376.0" class="monos">[0 1 0 1 0 1]</text>
+  <text x="300.0" y="376.0" class="lbl">x2 = จริง</text>
+  <text x="44.0" y="396.0" class="monos">z2</text>
+  <text x="100.0" y="396.0" class="monos">[0 1 0 0 1 0]</text>
+  <text x="300.0" y="396.0" class="lbl">x2 = เท็จ</text>
+  <text x="44.0" y="416.0" class="monos">y3</text>
+  <text x="100.0" y="416.0" class="monos">[0 0 1 1 1 0]</text>
+  <text x="300.0" y="416.0" class="lbl">x3 = จริง</text>
+  <text x="44.0" y="436.0" class="monos">z3</text>
+  <text x="100.0" y="436.0" class="monos">[0 0 1 0 0 1]</text>
+  <text x="300.0" y="436.0" class="lbl">x3 = เท็จ</text>
+  <text x="44.0" y="456.0" class="monos">s1_1</text>
+  <text x="100.0" y="456.0" class="monos">[0 0 0 1 0 0]</text>
+  <text x="300.0" y="456.0" class="lbl">ตัวเติม ประโยค 1</text>
+  <text x="44.0" y="476.0" class="monos">s1_2</text>
+  <text x="100.0" y="476.0" class="monos">[0 0 0 1 0 0]</text>
+  <text x="300.0" y="476.0" class="lbl">ตัวเติม ประโยค 1</text>
+  <text x="44.0" y="496.0" class="monos">s2_1</text>
+  <text x="100.0" y="496.0" class="monos">[0 0 0 0 1 0]</text>
+  <text x="300.0" y="496.0" class="lbl">ตัวเติม ประโยค 2</text>
+  <text x="44.0" y="516.0" class="monos">s2_2</text>
+  <text x="100.0" y="516.0" class="monos">[0 0 0 0 1 0]</text>
+  <text x="300.0" y="516.0" class="lbl">ตัวเติม ประโยค 2</text>
+  <text x="44.0" y="536.0" class="monos">s3_1</text>
+  <text x="100.0" y="536.0" class="monos">[0 0 0 0 0 1]</text>
+  <text x="300.0" y="536.0" class="lbl">ตัวเติม ประโยค 3</text>
+  <text x="44.0" y="556.0" class="monos">s3_2</text>
+  <text x="100.0" y="556.0" class="monos">[0 0 0 0 0 1]</text>
+  <text x="300.0" y="556.0" class="lbl">ตัวเติม ประโยค 3</text>
+  <text x="44.0" y="580.0" class="monos">เป้า</text>
+  <text x="100.0" y="580.0" class="monob">[1 1 1 3 3 3]</text>
+  <text x="300.0" y="580.0" class="lblb">หลักตัวแปร = 1 · หลักประโยค = 3</text>
+  <rect x="564.0" y="242.0" width="488.0" height="348.0" class="bandg"/>
+  <text x="580.0" y="266.0" class="ptitle">3) ตรวจสองทาง (ไม่เชื่อคำพูด)</text>
+  <text x="580.0" y="290.0" class="lblb">ทางที่ 1: ทุกคำตอบของ 3-SAT → สร้างสับเซตได้จริง</text>
+  <text x="588.0" y="310.0" class="monos">F1: 5/5</text>
+  <text x="588.0" y="330.0" class="monos">F2: 0/0</text>
+  <text x="588.0" y="350.0" class="monos">F3: 8/8</text>
+  <text x="588.0" y="370.0" class="monos">F4: 5/5</text>
+  <text x="588.0" y="390.0" class="monos">F5: 12/12</text>
+  <text x="580.0" y="418.0" class="lblg">รวม 30/30 คำตอบ (ครบทุกคำตอบ)</text>
+  <text x="580.0" y="448.0" class="lblb">ทางที่ 2: ทุกคำตอบของ subset sum → ทำให้สูตรจริง</text>
+  <text x="588.0" y="468.0" class="monos">อ่านค่าตัวแปรกลับได้ 4/4 · ทำให้สูตรจริง 4/4</text>
+  <text x="588.0" y="488.0" class="monos">F2 (สูตรที่ตอบ "จริงไม่ได้เลย"): ไม่มีสับเซตเลย</text>
+  <text x="580.0" y="554.0" class="lblg">การลดรักษาคำตอบไว้เป๊ะ — ตรวจทุกคำตอบ ไม่ใช่ตัวอย่างเดียว</text>
+  <rect x="28.0" y="606.0" width="524.0" height="200.0" class="bandy"/>
+  <text x="44.0" y="630.0" class="ptitle">4) ตัวอย่างคำตอบจริงของ F1</text>
+  <text x="44.0" y="654.0" class="monos">สับเซตที่เลือก: {z1, y2, z3, s1_1, s1_2, s2_1, s2_2}</text>
+  <text x="44.0" y="678.0" class="lbl">ผลรวม = เป้าหมาย = 111,333 พอดี</text>
+  <text x="44.0" y="702.0" class="lblb">อ่านค่าตัวแปรกลับ: x1=F x2=T x3=F</text>
+  <text x="44.0" y="730.0" class="lbl">ข้อสังเกต: คำตอบของ 3-SAT มีได้หลายชุด — สับเซตชุดนี้ให้ค่าชุดหนึ่ง</text>
+  <text x="44.0" y="750.0" class="lbl">ที่ทำให้สูตรจริง (โปรแกรมตรวจกับทุกคำตอบจริง ไม่ได้ดูตัวอย่างเดียว)</text>
+  <text x="44.0" y="774.0" class="lblb">การลดที่ถูกต้อง = "มีคำตอบก็ต่อเมื่อมีคำตอบ" ไม่ใช่ "คำตอบเหมือนกันเป๊ะ"</text>
+  <text x="44.0" y="794.0" class="lbl">ตรวจสองทางจึงจำเป็น: ทั้งขาไป (SAT → สับเซต) และขากลับ (สับเซต → SAT)</text>
+  <rect x="564.0" y="606.0" width="488.0" height="200.0" class="bandr"/>
+  <text x="580.0" y="630.0" class="ptitle">5) ราคาของสองฝั่ง (ครั้งที่ต้องลอง)</text>
+  <text x="580.0" y="652.0" class="btitle">สูตร</text>
+  <text x="714.0" y="652.0" class="btitle">3-SAT</text>
+  <text x="814.0" y="652.0" class="btitle">subset sum</text>
+  <text x="580.0" y="672.0" class="monos">F1</text>
+  <text x="714.0" y="672.0" class="monos">2 (2^3)</text>
+  <text x="814.0" y="672.0" class="monos">999 (2^12)</text>
+  <text x="580.0" y="694.0" class="monos">F2</text>
+  <text x="714.0" y="694.0" class="monos">8 (2^3)</text>
+  <text x="814.0" y="694.0" class="monos">4,194,304 (2^22)</text>
+  <text x="580.0" y="716.0" class="monos">F3</text>
+  <text x="714.0" y="716.0" class="monos">1 (2^4)</text>
+  <text x="814.0" y="716.0" class="monos">89,494 (2^18)</text>
+  <text x="580.0" y="738.0" class="monos">F4</text>
+  <text x="714.0" y="738.0" class="monos">1 (2^4)</text>
+  <text x="814.0" y="738.0" class="monos">128,423 (2^20)</text>
+  <text x="580.0" y="760.0" class="monos">F5</text>
+  <text x="714.0" y="760.0" class="monos">3 (2^5)</text>
+  <text x="814.0" y="760.0" class="monos">480,599 (2^22)</text>
+  <text x="580.0" y="780.0" class="lblr">สูตรเล็กกลายเป็นโจทย์ใหญ่เสมอ — แต่โจทย์เดิมตัดสินได้จริง</text>
+  <text x="580.0" y="798.0" class="lblr">ความยากย้ายไปพร้อมโจทย์ ไม่ได้หายไป — นั่นคือความหมายของ NP-hard</text>
+  <rect x="28.0" y="818.0" width="1024.0" height="52.0" class="bandc"/>
+  <text x="44.0" y="842.0" class="lbl">พิสูจน์ SAT เป็น NP-complete ครั้งเดียว (Cook 1971 / Levin) แล้ว Karp (1972) ลดต่อได้อีก 21 ปัญหา</text>
+  <text x="44.0" y="864.0" class="lblb">นี่คือเหตุผลที่เราไม่ต้องพิสูจน์ทีละปัญหา และทำไมเจอ NP-hard แล้วต้องเปลี่ยนแผน</text>
+</svg>

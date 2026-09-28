@@ -1,0 +1,165 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 850" width="1080" height="850" role="img" aria-label="กำแพงเวลาแบบทวีคูณ ทางออกด้วย heuristic และสมมติฐานของการเข้ารหัส">
+  <style>
+    text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 13px; fill: #1a1a1a; }
+    .hdr { font-weight: 700; font-size: 19px; }
+    .sub { fill: #57606a; font-size: 12.5px; }
+    .ptitle { font-weight: 700; font-size: 14.5px; }
+    .btitle { font-weight: 700; font-size: 12.5px; }
+    .lbl { fill: #57606a; font-size: 11.5px; }
+    .lblb { fill: #0550ae; font-size: 11.5px; font-weight: 700; }
+    .lblr { fill: #cf222e; font-size: 11.5px; font-weight: 700; }
+    .lblg { fill: #1a7f37; font-size: 11.5px; font-weight: 700; }
+    .lblo { fill: #9a6700; font-size: 11.5px; font-weight: 700; }
+    .axis { fill: #57606a; font-size: 10.5px; }
+    .mono { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 12px; }
+    .monos { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 11.5px; }
+    .monob { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 12px; font-weight: 700; fill: #0550ae; }
+    .monor { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 12px; font-weight: 700; fill: #cf222e; }
+    .monog { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 12px; font-weight: 700; fill: #1a7f37; }
+    .band { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.2; }
+    .bandw { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.2; }
+    .bandc { fill: #eef4ff; stroke: #0969da; stroke-width: 1.4; }
+    .bandg { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.4; }
+    .bandr { fill: #fdf2f2; stroke: #cf222e; stroke-width: 1.4; }
+    .bandy { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.4; }
+    .blob { fill: #eef4ff; stroke: #0969da; stroke-width: 1.6; }
+    .blobp { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.6; }
+    .blobnc { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.6; stroke-dasharray: 6 4; }
+    .blobnh { fill: #fdf2f2; stroke: #cf222e; stroke-width: 1.6; stroke-dasharray: 6 4; }
+    .cell { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.1; }
+    .cellt { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.1; }
+    .arrow { stroke: #57606a; stroke-width: 2; fill: none; }
+    .arrowb { stroke: #0550ae; stroke-width: 2.2; fill: none; }
+    .grid { stroke: #e6eaef; stroke-width: 1; }
+    .ln1 { stroke: #8c959f; stroke-width: 2; fill: none; }
+    .ln2 { stroke: #57606a; stroke-width: 2; fill: none; }
+    .ln3 { stroke: #1a7f37; stroke-width: 2; fill: none; }
+    .ln4 { stroke: #9a6700; stroke-width: 2; fill: none; }
+    .ln5 { stroke: #0550ae; stroke-width: 2; fill: none; }
+    .ln6 { stroke: #8250df; stroke-width: 2; fill: none; }
+    .ln7 { stroke: #cf222e; stroke-width: 2.6; fill: none; }
+  </style>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#57606a"/>
+    </marker>
+    <marker id="ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#0550ae"/>
+    </marker>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#cf222e"/>
+    </marker>
+  </defs>
+  <rect x="0.0" y="0.0" width="1080.0" height="850.0" class="bandw"/>
+  <text x="30.0" y="36.0" class="hdr">กำแพงเวลา · ทางออกด้วย heuristic · สมมติฐานที่การเข้ารหัสยืนอยู่</text>
+  <text x="30.0" y="58.0" class="sub">อัตราที่วัดจริงบนเครื่องนี้ 3.14e+07 สับเซต/วินาที (โปรแกรม 05) · ตัวเลข heuristic จากโปรแกรม 04</text>
+  <rect x="28.0" y="74.0" width="524.0" height="306.0" class="bandr"/>
+  <text x="44.0" y="98.0" class="ptitle">1) ไล่ทุกสับเซต 2ⁿ ต้องรอนานแค่ไหน</text>
+  <text x="44.0" y="118.0" class="lbl">พยากรณ์จากอัตราที่วัดได้จริงบน Raspberry Pi 5</text>
+  <text x="44.0" y="146.0" class="btitle">n</text>
+  <text x="74.0" y="146.0" class="btitle">สับเซตทั้งหมด</text>
+  <text x="220.0" y="146.0" class="btitle">เวลาที่ต้องใช้</text>
+  <text x="360.0" y="146.0" class="btitle">เทียบกับอายุเอกภพ</text>
+  <text x="44.0" y="168.0" class="monos">30</text>
+  <text x="74.0" y="168.0" class="monos">1,073,740,000</text>
+  <text x="220.0" y="168.0" class="monos">34.2 วินาที</text>
+  <text x="360.0" y="168.0" class="monos">เล็กจิ๋วเทียบ</text>
+  <text x="44.0" y="192.0" class="monos">40</text>
+  <text x="74.0" y="192.0" class="monos">1.1e+12</text>
+  <text x="220.0" y="192.0" class="monos">9.74 ชั่วโมง</text>
+  <text x="360.0" y="192.0" class="monos">เล็กจิ๋วเทียบ</text>
+  <text x="44.0" y="216.0" class="monos">50</text>
+  <text x="74.0" y="216.0" class="monos">1.13e+15</text>
+  <text x="220.0" y="216.0" class="monos">1.14 ปี</text>
+  <text x="360.0" y="216.0" class="monos">เล็กจิ๋วเทียบ</text>
+  <text x="44.0" y="240.0" class="monos">60</text>
+  <text x="74.0" y="240.0" class="monos">1.15e+18</text>
+  <text x="220.0" y="240.0" class="monos">1.17e+03 ปี</text>
+  <text x="360.0" y="240.0" class="monos">1/1.18e+07 ของอายุเอกภพ</text>
+  <text x="44.0" y="264.0" class="monos">100</text>
+  <text x="74.0" y="264.0" class="monos">1.27e+30</text>
+  <text x="220.0" y="264.0" class="monos">1.28e+15 ปี</text>
+  <text x="360.0" y="264.0" class="monor">9.29e+04 เท่าของอายุเอกภพ</text>
+  <text x="44.0" y="288.0" class="monos">128</text>
+  <text x="74.0" y="288.0" class="monos">3.4e+38</text>
+  <text x="220.0" y="288.0" class="monos">3.44e+23 ปี</text>
+  <text x="360.0" y="288.0" class="monor">2.49e+13 เท่าของอายุเอกภพ</text>
+  <text x="44.0" y="312.0" class="monos">256</text>
+  <text x="74.0" y="312.0" class="monos">1.16e+77</text>
+  <text x="220.0" y="312.0" class="monos">1.17e+62 ปี</text>
+  <text x="360.0" y="312.0" class="monor">8.48e+51 เท่าของอายุเอกภพ</text>
+  <text x="44.0" y="348.0" class="lblr">n เพิ่ม 1 = เวลาสองเท่า → เพิ่มคอมไม่ช่วย แต่เพิ่ม n ก็แย่ลง</text>
+  <rect x="564.0" y="74.0" width="488.0" height="306.0" class="bandy"/>
+  <text x="580.0" y="98.0" class="ptitle">2) "รอให้คอมเร็วขึ้น" ได้ผลแค่ไหน</text>
+  <text x="580.0" y="118.0" class="lbl">สมมติเครื่องเร็วขึ้น 1 พันล้านเท่า (เร็วกว่านี้มากมาย)</text>
+  <text x="580.0" y="146.0" class="btitle">n</text>
+  <text x="614.0" y="146.0" class="btitle">เวลาที่ต้องใช้</text>
+  <text x="580.0" y="168.0" class="monos">40</text>
+  <text x="614.0" y="168.0" class="monos">0.035 มิลลิวินาที</text>
+  <text x="580.0" y="192.0" class="monos">50</text>
+  <text x="614.0" y="192.0" class="monos">35.9 มิลลิวินาที</text>
+  <text x="580.0" y="216.0" class="monos">60</text>
+  <text x="614.0" y="216.0" class="monos">36.8 วินาที</text>
+  <text x="580.0" y="240.0" class="monos">70</text>
+  <text x="614.0" y="240.0" class="monos">10.5 ชั่วโมง</text>
+  <text x="580.0" y="276.0" class="lblo">เร็วขึ้น 1 พันล้านเท่า = ได้เพิ่มแค่ราว 30 บิต</text>
+  <text x="580.0" y="296.0" class="lbl">เพราะ log₂(10⁹) ≈ 29.9 → กำแพงทวีคูณไม่สนใจความเร็วเครื่อง</text>
+  <rect x="28.0" y="394.0" width="620.0" height="254.0" class="bandg"/>
+  <text x="44.0" y="420.0" class="ptitle">3) เมื่อโจทย์ NP-hard: ใช้ heuristic แทนคำตอบที่ดีที่สุด</text>
+  <text x="44.0" y="440.0" class="lbl">โจทย์ maximize ผลรวม ≤ เป้าหมาย · ชุดตัวเลขช่วง 45..55</text>
+  <text x="44.0" y="466.0" class="btitle">n</text>
+  <text x="84.0" y="466.0" class="btitle">exact (ms)</text>
+  <text x="178.0" y="466.0" class="btitle">greedy (µs)</text>
+  <text x="286.0" y="466.0" class="btitle">คุณภาพ</text>
+  <text x="414.0" y="466.0" class="btitle">rnd-greedy (µs)</text>
+  <text x="556.0" y="466.0" class="btitle">คุณภาพ</text>
+  <text x="44.0" y="488.0" class="monos">20</text>
+  <text x="84.0" y="488.0" class="monos">32.8</text>
+  <text x="178.0" y="488.0" class="monos">4.8</text>
+  <text x="286.0" y="488.0" class="monor">พลาด 2.78%</text>
+  <text x="414.0" y="488.0" class="monos">528.2</text>
+  <text x="556.0" y="488.0" class="monog">พลาด 0.00%</text>
+  <text x="44.0" y="512.0" class="monos">22</text>
+  <text x="84.0" y="512.0" class="monos">156.7</text>
+  <text x="178.0" y="512.0" class="monos">1.7</text>
+  <text x="286.0" y="512.0" class="monor">พลาด 4.82%</text>
+  <text x="414.0" y="512.0" class="monos">559.1</text>
+  <text x="556.0" y="512.0" class="monog">พลาด 0.00%</text>
+  <text x="44.0" y="536.0" class="monos">24</text>
+  <text x="84.0" y="536.0" class="monos">605.2</text>
+  <text x="178.0" y="536.0" class="monos">1.8</text>
+  <text x="286.0" y="536.0" class="monor">พลาด 4.20%</text>
+  <text x="414.0" y="536.0" class="monos">609.7</text>
+  <text x="556.0" y="536.0" class="monog">พลาด 0.00%</text>
+  <text x="44.0" y="572.0" class="lblr">กับดักของ greedy (ตัวอย่างจริง): [51 50 50 50 50 50] เป้า 100</text>
+  <text x="44.0" y="592.0" class="lblr">greedy เลือก 51 ก่อน → ตันที่ 51 · คำตอบดีสุด 50+50 = 100 → พลาด 49%</text>
+  <text x="44.0" y="612.0" class="lblg">rand-greedy สุ่ม 2,000 รอบ เจอ 100 → พลาด 0% (ยังเร็วระดับ ms)</text>
+  <text x="44.0" y="634.0" class="lbl">ที่ n=40: exact 11.02 ชั่วโมง · greedy 2.8 µs (พลาด 3.5%) · rnd-greedy พลาด 0.0%</text>
+  <rect x="664.0" y="394.0" width="388.0" height="254.0" class="bandc"/>
+  <text x="680.0" y="420.0" class="ptitle">4) ทำไมการเข้ารหัสพึ่ง "ความยาก"</text>
+  <text x="680.0" y="442.0" class="lbl">สมมติเครื่องทดลองคีย์ 10¹² คีย์/วินาที</text>
+  <text x="680.0" y="468.0" class="btitle">คีย์</text>
+  <text x="750.0" y="468.0" class="btitle">จำนวนคีย์</text>
+  <text x="864.0" y="468.0" class="btitle">เทียบกับอายุเอกภพ</text>
+  <text x="680.0" y="490.0" class="monos">64 บิต</text>
+  <text x="750.0" y="490.0" class="monos">1.84e+19</text>
+  <text x="864.0" y="490.0" class="monos">เล็กจิ๋วเทียบ</text>
+  <text x="680.0" y="514.0" class="monos">128 บิต</text>
+  <text x="750.0" y="514.0" class="monos">3.4e+38</text>
+  <text x="864.0" y="514.0" class="monos">7.82e+08 เท่าของอายุเอกภพ</text>
+  <text x="680.0" y="538.0" class="monos">256 บิต</text>
+  <text x="750.0" y="538.0" class="monos">1.16e+77</text>
+  <text x="864.0" y="538.0" class="monos">2.66e+47 เท่าของอายุเอกภพ</text>
+  <text x="680.0" y="574.0" class="lblb">ความปลอดภัยไม่ได้อยู่ที่ "เครื่องยังไม่แรง"</text>
+  <text x="680.0" y="594.0" class="lblb">แต่อยู่ที่ "ยังไม่มีใครพิสูจน์ว่าหาเร็ว ๆ ได้"</text>
+  <text x="680.0" y="616.0" class="lbl">RSA พึ่งความยากของการแยกตัวประกอบ (factorization)</text>
+  <text x="680.0" y="636.0" class="lbl">ซึ่งเชื่อกันว่าไม่อยู่ใน P — ถ้า P = NP มันจะพัง</text>
+  <rect x="28.0" y="662.0" width="1024.0" height="162.0" class="bandw"/>
+  <text x="44.0" y="686.0" class="ptitle">สรุปท้ายภาพ</text>
+  <text x="44.0" y="710.0" class="lbl">P = หาคำตอบได้เร็ว · NP = ตรวจคำตอบได้เร็ว · NP-complete = ยากที่สุดใน NP (ลดถึงกันได้หมด)</text>
+  <text x="44.0" y="732.0" class="lbl">เจอ NP-hard → อย่าเสียเวลาหาคำตอบดีที่สุด: ใช้ heuristic/approx แล้ววัด "คุณภาพ" ที่เสียไป</text>
+  <text x="44.0" y="754.0" class="lbl">ที่ n=24: exact 605 ms (ไล่ 16,777,216 สับเซต) · greedy 1.8 µs → เร็วขึ้นมหาศาลในราคาคุณภาพไม่กี่เปอร์เซ็นต์</text>
+  <text x="44.0" y="776.0" class="lblb">P vs NP ยังเป็นคำถามเปิด (Clay Millennium Prize 1 ล้านดอลลาร์) — ณ 2026 ยังไม่มีใครพิสูจน์ได้</text>
+  <text x="44.0" y="798.0" class="lbl">ถ้า P = NP วันหนึ่ง การเข้ารหัสแบบ RSA จะพังทันที และปัญหาจัดตาราง/จัดส่งจะง่ายไปหมด</text>
+  <text x="44.0" y="818.0" class="lbl">แต่ก็ยังไม่มีใครพิสูจน์ได้ทั้งสองทาง — นี่คือคำถามที่ยังเปิดอยู่จริง ไม่ใช่แค่ยังไม่มีคนเก่งพอ</text>
+</svg>
