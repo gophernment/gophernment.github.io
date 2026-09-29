@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1010 616" width="1010" height="616" role="img" aria-label="ตารางสเปกของ token">
+  <style>
+    text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 12.5px; fill: #1a1a1a; }
+    .hdr { font-weight: 700; font-size: 19px; }
+    .sub { fill: #57606a; font-size: 12.5px; }
+    .btitle { font-weight: 700; font-size: 12.5px; }
+    .lbl { fill: #57606a; font-size: 11.5px; }
+    .lblb { fill: #0550ae; font-size: 11.5px; font-weight: 700; }
+    .lblg { fill: #1a7f37; font-size: 11.5px; font-weight: 700; }
+    .lblr { fill: #cf222e; font-size: 11.5px; font-weight: 700; }
+    .axis { fill: #8c959f; font-size: 10px; }
+    .mono { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 11.5px; }
+    .mono11 { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 11.5px; }
+    .monob { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 11.5px; font-weight: 700; fill: #0550ae; }
+    .monog { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 11.5px; font-weight: 700; fill: #1a7f37; }
+    .monor { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 11.5px; font-weight: 700; fill: #cf222e; }
+    .band { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.2; }
+    .bandw { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.2; }
+    .bandc { fill: #eef4ff; stroke: #0969da; stroke-width: 1.4; }
+    .bandg { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.4; }
+    .bandr { fill: #fdf2f2; stroke: #cf222e; stroke-width: 1.4; }
+    .bandy { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.4; }
+    .bandd { fill: #ffffff; stroke: #8c959f; stroke-width: 1.2; stroke-dasharray: 6 4; }
+    .cell { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.1; }
+    .cellt { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.1; }
+    .cellhl { fill: #dbe9ff; stroke: #0969da; stroke-width: 1.6; }
+    .arrow { stroke: #57606a; stroke-width: 1.8; fill: none; }
+    .arrowb { stroke: #0550ae; stroke-width: 2; fill: none; }
+    .bus { stroke: #bf8700; stroke-width: 1.8; fill: none; }
+  </style>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#57606a"/>
+    </marker>
+    <marker id="ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#0550ae"/>
+    </marker>
+    <marker id="ao" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#bf8700"/>
+    </marker>
+  </defs>
+  <text x="32.0" y="38.0" class="hdr">สเปกของ token ทั้งหมด — และหลักฐานว่าโค้ดกับสเปกไม่หลุดกัน</text>
+  <text x="32.0" y="60.0" class="sub">สเปกเก็บเป็นข้อมูลในโปรแกรม 03 แล้ว “ยิงตัวอย่างจริง” เข้า lexer เพื่อเทียบ — ได้ 5/5 กลุ่ม</text>
+  <rect x="32.0" y="84.0" width="946.0" height="30.0" class="cellt" rx="4.0"/>
+  <text x="44.0" y="104.0" class="btitle">กลุ่ม</text>
+  <text x="194.0" y="104.0" class="btitle">ชนิด token ในกลุ่มนี้</text>
+  <text x="594.0" y="104.0" class="btitle">ตัวอย่างที่ยิงเข้าจริง</text>
+  <text x="830.0" y="104.0" class="btitle">ผลตรวจ</text>
+  <rect x="32.0" y="114.0" width="946.0" height="68.0" class="bandw" rx="4.0"/>
+  <text x="44.0" y="138.0" class="lblb">NUMBER</text>
+  <text x="44.0" y="156.0" class="lbl">1 ชนิด</text>
+  <text x="194.0" y="136.0" class="mono11">NUMBER</text>
+  <text x="594.0" y="138.0" class="mono11">42</text>
+  <text x="594.0" y="156.0" class="lbl">ตัวเลข 0-9 ติดกันตั้งแต่ 1</text>
+  <text x="594.0" y="170.0" class="lbl">ตัวขึ้นไป</text>
+  <text x="830.0" y="144.0" class="lblg">ตรง</text>
+  <rect x="32.0" y="182.0" width="946.0" height="68.0" class="bandw" rx="4.0"/>
+  <text x="44.0" y="206.0" class="lblb">IDENT</text>
+  <text x="44.0" y="224.0" class="lbl">1 ชนิด</text>
+  <text x="194.0" y="204.0" class="mono11">IDENT</text>
+  <text x="594.0" y="206.0" class="mono11">total_1</text>
+  <text x="594.0" y="224.0" class="lbl">ตัวอักษร a-z A-Z หรือ _</text>
+  <text x="594.0" y="238.0" class="lbl">แล้วตามด้วยตัวอักษร/ตัวเลข/_</text>
+  <text x="830.0" y="212.0" class="lblg">ตรง</text>
+  <rect x="32.0" y="250.0" width="946.0" height="68.0" class="bandw" rx="4.0"/>
+  <text x="44.0" y="274.0" class="lblb">KEYWORD</text>
+  <text x="44.0" y="292.0" class="lbl">6 ชนิด</text>
+  <text x="194.0" y="272.0" class="mono11">LET IF ELSE TRUE FALSE PRINT</text>
+  <text x="594.0" y="274.0" class="mono11">let if else true false print</text>
+  <text x="594.0" y="292.0" class="lbl">ชื่อที่สะกดตรงกับคำในตาราง</text>
+  <text x="594.0" y="306.0" class="lbl">Keywords</text>
+  <text x="830.0" y="280.0" class="lblg">ตรง</text>
+  <rect x="32.0" y="318.0" width="946.0" height="68.0" class="bandw" rx="4.0"/>
+  <text x="44.0" y="342.0" class="lblb">OPERATOR</text>
+  <text x="44.0" y="360.0" class="lbl">14 ชนิด</text>
+  <text x="194.0" y="340.0" class="mono11">PLUS MINUS STAR SLASH ASSIGN EQ NEQ LT GT LPAREN</text>
+  <text x="194.0" y="355.0" class="mono11">RPAREN LBRACE RBRACE SEMI</text>
+  <text x="594.0" y="342.0" class="mono11">+ - * / = == != &lt; &gt; ( ) { } ;</text>
+  <text x="594.0" y="360.0" class="lbl">เครื่องหมาย 1-2 ตัวต่อ token</text>
+  <text x="594.0" y="374.0" class="lbl">(บางตัวต้อง peek)</text>
+  <text x="830.0" y="348.0" class="lblg">ตรง</text>
+  <rect x="32.0" y="386.0" width="946.0" height="68.0" class="bandw" rx="4.0"/>
+  <text x="44.0" y="410.0" class="lblb">EOF</text>
+  <text x="44.0" y="428.0" class="lbl">1 ชนิด</text>
+  <text x="194.0" y="408.0" class="mono11">EOF</text>
+  <text x="594.0" y="410.0" class="lbl">(ไม่ใช้ตัวอักษร — จบไฟล์)</text>
+  <text x="594.0" y="428.0" class="lbl">ไม่ใช่ตัวอักษรจริง —</text>
+  <text x="594.0" y="442.0" class="lbl">คืนให้เมื่ออ่านถึงจบไฟล์</text>
+  <text x="830.0" y="416.0" class="lblg">ตรง</text>
+  <rect x="32.0" y="472.0" width="946.0" height="104.0" class="bandg" rx="8.0"/>
+  <text x="44.0" y="496.0" class="lblg">สรุปจากผลรันจริง</text>
+  <text x="44.0" y="518.0" class="">ชนิด token ทั้งหมด 23 ชนิด ใน 5 กลุ่ม · ตัวอย่าง 3 โปรแกรมให้รวม 60 token</text>
+  <text x="44.0" y="534.0" class="">ตรวจตำแหน่ง บรรทัด:คอลัมน์ แบบอิสระ 60 token → ไม่ตรง 0 จุด · ตัวอย่าง 1 ให้ 6 token</text>
+  <text x="44.0" y="550.0" class="">ยังไม่ถูกใช้ในตัวอย่างชุดนี้ 7 ชนิด → ELSE EQ FALSE LT NEQ SLASH TRUE (ตั้งใจ: ตัวอย่างยังไม่ต้องใช้ จะโผล่ในตอนถัดไป)</text>
+  <text x="44.0" y="566.0" class="">ทุกสเปกจบด้วย EOF เสมอ — parser ใช้ EOF ตัดสินว่า “อ่านจบแล้ว”</text>
+  <text x="32.0" y="598.0" class="lbl">ภาพที่ 4 — 2026-09-29 · Go go1.24.4 linux/arm64 · ตัวเลขทั้งหมดอ่านจาก course/code/ep26/out/</text>
+</svg>

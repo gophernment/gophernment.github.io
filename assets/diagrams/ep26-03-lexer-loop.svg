@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1010 672" width="1010" height="672" role="img" aria-label="วงจรการทำงานของ lexer ทีละหนึ่งคำ">
+  <style>
+    text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 12.5px; fill: #1a1a1a; }
+    .hdr { font-weight: 700; font-size: 19px; }
+    .sub { fill: #57606a; font-size: 12.5px; }
+    .btitle { font-weight: 700; font-size: 12.5px; }
+    .lbl { fill: #57606a; font-size: 11.5px; }
+    .lblb { fill: #0550ae; font-size: 11.5px; font-weight: 700; }
+    .lblg { fill: #1a7f37; font-size: 11.5px; font-weight: 700; }
+    .lblr { fill: #cf222e; font-size: 11.5px; font-weight: 700; }
+    .axis { fill: #8c959f; font-size: 10px; }
+    .mono { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 11.5px; }
+    .mono11 { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 11.5px; }
+    .monob { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 11.5px; font-weight: 700; fill: #0550ae; }
+    .monog { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 11.5px; font-weight: 700; fill: #1a7f37; }
+    .monor { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 11.5px; font-weight: 700; fill: #cf222e; }
+    .band { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.2; }
+    .bandw { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.2; }
+    .bandc { fill: #eef4ff; stroke: #0969da; stroke-width: 1.4; }
+    .bandg { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.4; }
+    .bandr { fill: #fdf2f2; stroke: #cf222e; stroke-width: 1.4; }
+    .bandy { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.4; }
+    .bandd { fill: #ffffff; stroke: #8c959f; stroke-width: 1.2; stroke-dasharray: 6 4; }
+    .cell { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.1; }
+    .cellt { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.1; }
+    .cellhl { fill: #dbe9ff; stroke: #0969da; stroke-width: 1.6; }
+    .arrow { stroke: #57606a; stroke-width: 1.8; fill: none; }
+    .arrowb { stroke: #0550ae; stroke-width: 2; fill: none; }
+    .bus { stroke: #bf8700; stroke-width: 1.8; fill: none; }
+  </style>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#57606a"/>
+    </marker>
+    <marker id="ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#0550ae"/>
+    </marker>
+    <marker id="ao" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#bf8700"/>
+    </marker>
+  </defs>
+  <text x="32.0" y="38.0" class="hdr">วงจรของ lexer: หนึ่งรอบ = หนึ่งคำ</text>
+  <text x="32.0" y="60.0" class="sub">Next() ทำงานแบบนี้ทุกรอบ — “ตัวอักษรที่ชี้อยู่” ตัวเดียวบอกได้ทันทีว่าจะอ่านอะไรต่อ</text>
+  <rect x="60.0" y="84.0" width="330.0" height="44.0" class="bandc" rx="8.0"/>
+  <text x="225.0" y="111.0" class="btitle" text-anchor="middle">เริ่มรอบใหม่: ข้ามช่องว่าง + คอมเมนต์</text>
+  <path d="M 225.0 128.0 L 225.0 142.0" class="arrow" marker-end="url(#a)"/>
+  <rect x="60.0" y="146.0" width="330.0" height="44.0" class="bandy" rx="8.0"/>
+  <text x="225.0" y="173.0" class="btitle" text-anchor="middle">อ่านถึงจบไฟล์แล้วหรือยัง?</text>
+  <rect x="430.0" y="146.0" width="330.0" height="44.0" class="bandg" rx="8.0"/>
+  <text x="595.0" y="173.0" class="btitle" text-anchor="middle">คืน EOF (สัญญาณจบไฟล์)</text>
+  <path d="M 390.0 168.0 L 426.0 168.0" class="arrow" marker-end="url(#a)"/>
+  <path d="M 225.0 190.0 L 225.0 204.0" class="arrow" marker-end="url(#a)"/>
+  <rect x="60.0" y="208.0" width="330.0" height="44.0" class="bandy" rx="8.0"/>
+  <text x="225.0" y="235.0" class="btitle" text-anchor="middle">ตัวอักษรนี้เป็นเลข 0-9?</text>
+  <rect x="430.0" y="208.0" width="330.0" height="44.0" class="bandw" rx="8.0"/>
+  <text x="595.0" y="235.0" class="btitle" text-anchor="middle">อ่านตัวเลขติดกันให้ครบ → NUMBER</text>
+  <path d="M 390.0 230.0 L 426.0 230.0" class="arrow" marker-end="url(#a)"/>
+  <path d="M 225.0 252.0 L 225.0 266.0" class="arrow" marker-end="url(#a)"/>
+  <rect x="60.0" y="270.0" width="330.0" height="44.0" class="bandy" rx="8.0"/>
+  <text x="225.0" y="297.0" class="btitle" text-anchor="middle">เป็นตัวอักษร a-z A-Z หรือ _?</text>
+  <rect x="430.0" y="262.0" width="330.0" height="54.0" class="bandw" rx="8.0"/>
+  <text x="595.0" y="288.0" class="btitle" text-anchor="middle">อ่านชื่อให้ครบ</text>
+  <text x="595.0" y="308.0" class="lbl" text-anchor="middle">ตรงคำสงวน → KEYWORD · ไม่ตรง → IDENT</text>
+  <path d="M 390.0 289.0 L 426.0 289.0" class="arrow" marker-end="url(#a)"/>
+  <path d="M 225.0 314.0 L 225.0 328.0" class="arrow" marker-end="url(#a)"/>
+  <rect x="60.0" y="332.0" width="330.0" height="44.0" class="bandy" rx="8.0"/>
+  <text x="225.0" y="359.0" class="btitle" text-anchor="middle">เป็นเครื่องหมายที่ภาษารู้จักไหม?</text>
+  <rect x="430.0" y="324.0" width="330.0" height="54.0" class="bandw" rx="8.0"/>
+  <text x="595.0" y="350.0" class="btitle" text-anchor="middle">แอบดูตัวถัดไป (peek)</text>
+  <text x="595.0" y="370.0" class="lbl" text-anchor="middle">เจอคู่ → == != · ไม่เจอ → = &lt; &gt; ( ) { } ;</text>
+  <path d="M 390.0 351.0 L 426.0 351.0" class="arrow" marker-end="url(#a)"/>
+  <path d="M 225.0 376.0 L 225.0 390.0" class="arrow" marker-end="url(#a)"/>
+  <rect x="60.0" y="394.0" width="330.0" height="54.0" class="bandr" rx="8.0"/>
+  <text x="225.0" y="416.0" class="lblr" text-anchor="middle">อักขระไม่รู้จัก → error</text>
+  <text x="225.0" y="436.0" class="monor" text-anchor="middle">line L, column C: unexpected character</text>
+  <path d="M 760.0 168.0 L 800.0 168.0" class="bus"/>
+  <path d="M 760.0 230.0 L 800.0 230.0" class="bus"/>
+  <path d="M 760.0 289.0 L 800.0 289.0" class="bus"/>
+  <path d="M 760.0 351.0 L 800.0 351.0" class="bus"/>
+  <path d="M 800 168 L 800 500" class="bus"/>
+  <path d="M 225 448 L 225 500" class="bus"/>
+  <path d="M 800 500 L 40 500" class="bus"/>
+  <path d="M 40 500 L 40 112 L 56 112" class="bus" marker-end="url(#ao)"/>
+  <text x="420.0" y="478.0" class="lbl" text-anchor="middle">ทุกเส้นทางตำแหน่งเดินหน้าแล้ว → วนเริ่มรอบใหม่ได้ (เส้นทาง error ก็ขยับก่อนคืน error)</text>
+  <rect x="32.0" y="516.0" width="946.0" height="118.0" class="band" rx="8.0"/>
+  <text x="44.0" y="540.0" class="lblb">สัญญาของ Next() ที่บทความย้ำ (โปรแกรม 05 สาธิตกับดักนี้ด้วย):</text>
+  <text x="44.0" y="562.0" class="">1) คืน error = อักขระที่ผิดถูกกินไปแล้ว และตำแหน่งเดินหน้าแล้ว → เรียกซ้ำได้เพื่อหาจุดผิดถัดไป (เก็บได้ 3</text>
+  <text x="44.0" y="578.0" class="">จุดในรอบเดียว)</text>
+  <text x="44.0" y="600.0" class="">2) ห้ามคืน error โดยไม่ขยับตำแหน่ง — โปรแกรมที่วนหาความผิดจะได้ error เดิมซ้ำไม่จบ</text>
+  <text x="32.0" y="656.0" class="lbl">ภาพที่ 3 — หนึ่งรอบของ lexer · ทำไมต้อง peek · สัญญาเรื่อง error (บันทึก 2026-09-29)</text>
+</svg>

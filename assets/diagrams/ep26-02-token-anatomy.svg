@@ -1,0 +1,156 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1010 420" width="1010" height="420" role="img" aria-label="ส่วนประกอบของ token หนึ่งตัว">
+  <style>
+    text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 12.5px; fill: #1a1a1a; }
+    .hdr { font-weight: 700; font-size: 19px; }
+    .sub { fill: #57606a; font-size: 12.5px; }
+    .btitle { font-weight: 700; font-size: 12.5px; }
+    .lbl { fill: #57606a; font-size: 11.5px; }
+    .lblb { fill: #0550ae; font-size: 11.5px; font-weight: 700; }
+    .lblg { fill: #1a7f37; font-size: 11.5px; font-weight: 700; }
+    .lblr { fill: #cf222e; font-size: 11.5px; font-weight: 700; }
+    .axis { fill: #8c959f; font-size: 10px; }
+    .mono { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 11.5px; }
+    .mono11 { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 11.5px; }
+    .monob { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 11.5px; font-weight: 700; fill: #0550ae; }
+    .monog { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 11.5px; font-weight: 700; fill: #1a7f37; }
+    .monor { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 11.5px; font-weight: 700; fill: #cf222e; }
+    .band { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.2; }
+    .bandw { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.2; }
+    .bandc { fill: #eef4ff; stroke: #0969da; stroke-width: 1.4; }
+    .bandg { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.4; }
+    .bandr { fill: #fdf2f2; stroke: #cf222e; stroke-width: 1.4; }
+    .bandy { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.4; }
+    .bandd { fill: #ffffff; stroke: #8c959f; stroke-width: 1.2; stroke-dasharray: 6 4; }
+    .cell { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.1; }
+    .cellt { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.1; }
+    .cellhl { fill: #dbe9ff; stroke: #0969da; stroke-width: 1.6; }
+    .arrow { stroke: #57606a; stroke-width: 1.8; fill: none; }
+    .arrowb { stroke: #0550ae; stroke-width: 2; fill: none; }
+    .bus { stroke: #bf8700; stroke-width: 1.8; fill: none; }
+  </style>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#57606a"/>
+    </marker>
+    <marker id="ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#0550ae"/>
+    </marker>
+    <marker id="ao" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#bf8700"/>
+    </marker>
+  </defs>
+  <text x="32.0" y="38.0" class="hdr">token 1 ตัว มี 3 ส่วน: ชนิด · ข้อความจริง · ตำแหน่ง</text>
+  <text x="32.0" y="60.0" class="sub">ตัวอย่างจริงจากไฟล์: ตัว “3” ในบรรทัดที่ 2 ไม่ได้เป็นแค่ 3 — มันบอกได้ว่าตัวเองเป็นอะไรและอยู่ตรงไหน</text>
+  <rect x="32.0" y="84.0" width="330.0" height="176.0" class="bandw" rx="8.0"/>
+  <text x="44.0" y="108.0" class="lblb">ซอร์สโค้ด (ตัวอย่าง 2 · บรรทัดที่ 2)</text>
+  <rect x="44.0" y="122.0" width="15.0" height="22.0" class="cell" rx="3.0"/>
+  <text x="51.5" y="138.0" class="mono" text-anchor="middle">l</text>
+  <rect x="59.0" y="122.0" width="15.0" height="22.0" class="cell" rx="3.0"/>
+  <text x="66.5" y="138.0" class="mono" text-anchor="middle">e</text>
+  <rect x="74.0" y="122.0" width="15.0" height="22.0" class="cell" rx="3.0"/>
+  <text x="81.5" y="138.0" class="mono" text-anchor="middle">t</text>
+  <rect x="89.0" y="122.0" width="15.0" height="22.0" class="cell" rx="3.0"/>
+  <text x="96.5" y="138.0" class="axis" text-anchor="middle">·</text>
+  <rect x="104.0" y="122.0" width="15.0" height="22.0" class="cell" rx="3.0"/>
+  <text x="111.5" y="138.0" class="mono" text-anchor="middle">x</text>
+  <rect x="119.0" y="122.0" width="15.0" height="22.0" class="cell" rx="3.0"/>
+  <text x="126.5" y="138.0" class="axis" text-anchor="middle">·</text>
+  <rect x="134.0" y="122.0" width="15.0" height="22.0" class="cell" rx="3.0"/>
+  <text x="141.5" y="138.0" class="mono" text-anchor="middle">=</text>
+  <rect x="149.0" y="122.0" width="15.0" height="22.0" class="cell" rx="3.0"/>
+  <text x="156.5" y="138.0" class="axis" text-anchor="middle">·</text>
+  <rect x="164.0" y="122.0" width="15.0" height="22.0" class="cellhl" rx="3.0"/>
+  <text x="171.5" y="138.0" class="mono" text-anchor="middle">3</text>
+  <rect x="179.0" y="122.0" width="15.0" height="22.0" class="cell" rx="3.0"/>
+  <text x="186.5" y="138.0" class="axis" text-anchor="middle">·</text>
+  <rect x="194.0" y="122.0" width="15.0" height="22.0" class="cell" rx="3.0"/>
+  <text x="201.5" y="138.0" class="mono" text-anchor="middle">+</text>
+  <rect x="209.0" y="122.0" width="15.0" height="22.0" class="cell" rx="3.0"/>
+  <text x="216.5" y="138.0" class="axis" text-anchor="middle">·</text>
+  <rect x="224.0" y="122.0" width="15.0" height="22.0" class="cell" rx="3.0"/>
+  <text x="231.5" y="138.0" class="mono" text-anchor="middle">4</text>
+  <rect x="239.0" y="122.0" width="15.0" height="22.0" class="cell" rx="3.0"/>
+  <text x="246.5" y="138.0" class="axis" text-anchor="middle">·</text>
+  <rect x="254.0" y="122.0" width="15.0" height="22.0" class="cell" rx="3.0"/>
+  <text x="261.5" y="138.0" class="mono" text-anchor="middle">*</text>
+  <rect x="269.0" y="122.0" width="15.0" height="22.0" class="cell" rx="3.0"/>
+  <text x="276.5" y="138.0" class="axis" text-anchor="middle">·</text>
+  <rect x="284.0" y="122.0" width="15.0" height="22.0" class="cell" rx="3.0"/>
+  <text x="291.5" y="138.0" class="mono" text-anchor="middle">5</text>
+  <rect x="299.0" y="122.0" width="15.0" height="22.0" class="cell" rx="3.0"/>
+  <text x="306.5" y="138.0" class="mono" text-anchor="middle">;</text>
+  <text x="51.5" y="162.0" class="axis" text-anchor="middle">1</text>
+  <text x="66.5" y="162.0" class="axis" text-anchor="middle">2</text>
+  <text x="81.5" y="162.0" class="axis" text-anchor="middle">3</text>
+  <text x="96.5" y="162.0" class="axis" text-anchor="middle">4</text>
+  <text x="111.5" y="162.0" class="axis" text-anchor="middle">5</text>
+  <text x="126.5" y="162.0" class="axis" text-anchor="middle">6</text>
+  <text x="141.5" y="162.0" class="axis" text-anchor="middle">7</text>
+  <text x="156.5" y="162.0" class="axis" text-anchor="middle">8</text>
+  <text x="171.5" y="162.0" class="axis" text-anchor="middle">9</text>
+  <text x="186.5" y="162.0" class="axis" text-anchor="middle">10</text>
+  <text x="201.5" y="162.0" class="axis" text-anchor="middle">11</text>
+  <text x="216.5" y="162.0" class="axis" text-anchor="middle">12</text>
+  <text x="231.5" y="162.0" class="axis" text-anchor="middle">13</text>
+  <text x="246.5" y="162.0" class="axis" text-anchor="middle">14</text>
+  <text x="261.5" y="162.0" class="axis" text-anchor="middle">15</text>
+  <text x="276.5" y="162.0" class="axis" text-anchor="middle">16</text>
+  <text x="291.5" y="162.0" class="axis" text-anchor="middle">17</text>
+  <text x="306.5" y="162.0" class="axis" text-anchor="middle">18</text>
+  <text x="44.0" y="196.0" class="lblb">ช่องที่ 9 (คอลัมน์ 9) คือตัวอักษร “3”</text>
+  <text x="44.0" y="216.0" class="lbl">ช่องว่างก็มีช่องของตัวเอง แต่ถูก “ข้าม” ไม่กลายเป็น token</text>
+  <text x="44.0" y="236.0" class="lbl">บรรทัด:คอลัมน์ ใช้บอกว่า “ผิดตรงไหน”</text>
+  <path d="M 362.0 152.0 L 398.0 152.0" class="arrowb" marker-end="url(#ab)"/>
+  <rect x="400.0" y="84.0" width="578.0" height="176.0" class="bandc" rx="8.0"/>
+  <text x="412.0" y="108.0" class="lblb">token ที่ได้จากช่องนั้น</text>
+  <rect x="412.0" y="122.0" width="150.0" height="62.0" class="cell" rx="6.0"/>
+  <text x="422.0" y="146.0" class="lbl">1) ชนิด (Type)</text>
+  <text x="422.0" y="170.0" class="monob">NUMBER</text>
+  <rect x="572.0" y="122.0" width="160.0" height="62.0" class="cell" rx="6.0"/>
+  <text x="582.0" y="146.0" class="lbl">2) ข้อความจริง</text>
+  <text x="582.0" y="170.0" class="monob">"3"</text>
+  <rect x="742.0" y="122.0" width="224.0" height="62.0" class="cell" rx="6.0"/>
+  <text x="752.0" y="146.0" class="lbl">3) ตำแหน่ง (ที่อยู่)</text>
+  <text x="752.0" y="170.0" class="monob">2:9</text>
+  <text x="412.0" y="232.0" class="lbl">ชนิด → ให้ parser ใช้ตัดสินใจ (switch) · ข้อความจริง → แปลงเป็นค่าจริง</text>
+  <text x="412.0" y="250.0" class="lbl">ตำแหน่ง → เอาไว้บอกมนุษย์ว่า “ผิดตรงไหน” — lexer ขาดไม่ได้เลย</text>
+  <rect x="32.0" y="274.0" width="946.0" height="108.0" class="bandg" rx="8.0"/>
+  <text x="44.0" y="298.0" class="lblg">ทุก token ของบรรทัดที่ 2 (ผลจริงจาก out/04)</text>
+  <rect x="44.0" y="310.0" width="97.1" height="60.0" class="cellt" rx="5.0"/>
+  <text x="92.6" y="330.0" class="mono" text-anchor="middle">LET</text>
+  <text x="92.6" y="348.0" class="mono11" text-anchor="middle">"let"</text>
+  <text x="92.6" y="364.0" class="axis" text-anchor="middle">2:1</text>
+  <rect x="147.1" y="310.0" width="97.1" height="60.0" class="cellt" rx="5.0"/>
+  <text x="195.7" y="330.0" class="mono" text-anchor="middle">IDENT</text>
+  <text x="195.7" y="348.0" class="mono11" text-anchor="middle">"x"</text>
+  <text x="195.7" y="364.0" class="axis" text-anchor="middle">2:5</text>
+  <rect x="250.2" y="310.0" width="97.1" height="60.0" class="cellt" rx="5.0"/>
+  <text x="298.8" y="330.0" class="mono" text-anchor="middle">ASSIGN</text>
+  <text x="298.8" y="348.0" class="mono11" text-anchor="middle">"="</text>
+  <text x="298.8" y="364.0" class="axis" text-anchor="middle">2:7</text>
+  <rect x="353.3" y="310.0" width="97.1" height="60.0" class="cellt" rx="5.0"/>
+  <text x="401.9" y="330.0" class="mono" text-anchor="middle">NUMBER</text>
+  <text x="401.9" y="348.0" class="mono11" text-anchor="middle">"3"</text>
+  <text x="401.9" y="364.0" class="axis" text-anchor="middle">2:9</text>
+  <rect x="456.4" y="310.0" width="97.1" height="60.0" class="cellt" rx="5.0"/>
+  <text x="505.0" y="330.0" class="mono" text-anchor="middle">PLUS</text>
+  <text x="505.0" y="348.0" class="mono11" text-anchor="middle">"+"</text>
+  <text x="505.0" y="364.0" class="axis" text-anchor="middle">2:11</text>
+  <rect x="559.6" y="310.0" width="97.1" height="60.0" class="cellt" rx="5.0"/>
+  <text x="608.1" y="330.0" class="mono" text-anchor="middle">NUMBER</text>
+  <text x="608.1" y="348.0" class="mono11" text-anchor="middle">"4"</text>
+  <text x="608.1" y="364.0" class="axis" text-anchor="middle">2:13</text>
+  <rect x="662.7" y="310.0" width="97.1" height="60.0" class="cellt" rx="5.0"/>
+  <text x="711.2" y="330.0" class="mono" text-anchor="middle">STAR</text>
+  <text x="711.2" y="348.0" class="mono11" text-anchor="middle">"*"</text>
+  <text x="711.2" y="364.0" class="axis" text-anchor="middle">2:15</text>
+  <rect x="765.8" y="310.0" width="97.1" height="60.0" class="cellt" rx="5.0"/>
+  <text x="814.3" y="330.0" class="mono" text-anchor="middle">NUMBER</text>
+  <text x="814.3" y="348.0" class="mono11" text-anchor="middle">"5"</text>
+  <text x="814.3" y="364.0" class="axis" text-anchor="middle">2:17</text>
+  <rect x="868.9" y="310.0" width="97.1" height="60.0" class="cellt" rx="5.0"/>
+  <text x="917.4" y="330.0" class="mono" text-anchor="middle">SEMI</text>
+  <text x="917.4" y="348.0" class="mono11" text-anchor="middle">";"</text>
+  <text x="917.4" y="364.0" class="axis" text-anchor="middle">2:18</text>
+  <text x="32.0" y="408.0" class="lbl">ภาพที่ 2 — token = (ชนิด, ข้อความจริง, ตำแหน่ง) · โปรแกรม 03 ตรวจตำแหน่งอิสระ 60 token → ไม่ตรง 0 จุด (บันทึก 2026-09-29)</text>
+</svg>
