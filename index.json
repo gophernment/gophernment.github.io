@@ -1,5 +1,19 @@
 [
   {
+    "slug": "2026-09-30-cs-fundamentals-26-lexer",
+    "title": "Lexer — ตัดข้อความโปรแกรมออกเป็น \"คำ\" (ตอนที่ 26)",
+    "date": "2026-09-30",
+    "tags": [
+      "cs-fundamentals",
+      "compiler",
+      "lexer",
+      "tokenizer",
+      "interpreter",
+      "go"
+    ],
+    "description": "ตอนที่ 26 ของคอร์ส CS Fundamentals — Lexer (tokenizer/scanner): ก้าวแรกของการสร้างตัวแปลภาษาด้วยมือ เปลี่ยนข้อความโปรแกรมที่คอมพิวเตอร์เห็นเป็นแค่ string ออกเป็นลำดับของ token (คำที่มีความหมาย) พร้อมชนิด + ข้อความจริง + ตำแหน่งบรรทัด:คอลัมน์ และทำไมต้อง peek — โค้ด Go 5 โปรแกรมรันจริงบน Raspberry Pi 5"
+  },
+  {
     "slug": "2026-09-29-cs-fundamentals-25-complexity-p-np",
     "title": "Complexity P/NP — ทำไมบางปัญหา \"ยาก\" (ตอนที่ 25)",
     "date": "2026-09-29",
