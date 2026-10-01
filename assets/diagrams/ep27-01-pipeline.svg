@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 585" width="980" height="585" role="img" aria-label="จากสตรีม token แบน ๆ สู่ต้นไม้ AST">
+  <style>
+    text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 12.5px; fill: #1a1a1a; }
+    .hdr { font-weight: 700; font-size: 19px; }
+    .sub { fill: #57606a; font-size: 12.5px; }
+    .btitle { font-weight: 700; font-size: 12.5px; }
+    .lbl { fill: #57606a; font-size: 11.5px; }
+    .lbl10 { fill: #8c959f; font-size: 10px; }
+    .lblb { fill: #0550ae; font-size: 11.5px; font-weight: 700; }
+    .lblg { fill: #1a7f37; font-size: 11.5px; font-weight: 700; }
+    .lblr { fill: #cf222e; font-size: 11.5px; font-weight: 700; }
+    .mono { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 11.5px; }
+    .mono10 { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 10px; fill: #57606a; }
+    .monos { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 10px; }
+    .monob { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 11.5px; font-weight: 700; fill: #0550ae; }
+    .monog { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 11.5px; font-weight: 700; fill: #1a7f37; }
+    .band { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.2; }
+    .bandw { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.2; }
+    .bandc { fill: #eef4ff; stroke: #0969da; stroke-width: 1.4; }
+    .bandg { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.4; }
+    .bandy { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.4; }
+    .arrow { stroke: #57606a; stroke-width: 1.8; fill: none; }
+    .arrowb { stroke: #0550ae; stroke-width: 2; fill: none; }
+  </style>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#57606a"/>
+    </marker>
+    <marker id="ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#0550ae"/>
+    </marker>
+  </defs>
+  <text x="24.0" y="32.0" class="hdr">parser: เปลี่ยนสตรีมแบน ๆ ให้เป็นต้นไม้ (AST)</text>
+  <text x="24.0" y="54.0" class="sub">ตัวอย่างที่ใช้ทั้งภาพ: 3 + 4 * 5  ·  ตัวเลขและข้อความทุกตัวดึงจากผลรันจริงใน out/</text>
+  <rect x="24.0" y="74.0" width="186.0" height="84.0" rx="8.0" class="bandw"/>
+  <text x="117.0" y="100.0" class="btitle" text-anchor="middle">ซอร์สโค้ด</text>
+  <text x="117.0" y="118.0" class="lbl" text-anchor="middle">มนุษย์เขียนแบบนี้</text>
+  <text x="117.0" y="140.0" class="mono" text-anchor="middle">3 + 4 * 5</text>
+  <rect x="236.0" y="74.0" width="186.0" height="84.0" rx="8.0" class="bandw"/>
+  <text x="329.0" y="100.0" class="btitle" text-anchor="middle">Lexer (ตอน 26)</text>
+  <text x="329.0" y="118.0" class="lbl" text-anchor="middle">ตัดเป็นคำ ๆ</text>
+  <text x="329.0" y="140.0" class="mono" text-anchor="middle">token = 1 คำ</text>
+  <rect x="448.0" y="74.0" width="186.0" height="84.0" rx="8.0" class="bandw"/>
+  <text x="541.0" y="100.0" class="btitle" text-anchor="middle">Parser (ตอนนี้)</text>
+  <text x="541.0" y="118.0" class="lbl" text-anchor="middle">เรียงเป็นต้นไม้</text>
+  <text x="541.0" y="140.0" class="mono" text-anchor="middle">1 กฎ = 1 ฟังก์ชัน</text>
+  <rect x="660.0" y="74.0" width="296.0" height="84.0" rx="8.0" class="bandc"/>
+  <text x="808.0" y="100.0" class="btitle" text-anchor="middle">AST</text>
+  <text x="808.0" y="118.0" class="lbl" text-anchor="middle">ต้นไม้โครงสร้างโปรแกรม</text>
+  <text x="808.0" y="140.0" class="mono" text-anchor="middle">S-expression + ต้นไม้</text>
+  <path d="M 210.0 116.0 L 234.0 116.0" class="arrow" marker-end="url(#a)"/>
+  <path d="M 422.0 116.0 L 446.0 116.0" class="arrow" marker-end="url(#a)"/>
+  <path d="M 634.0 116.0 L 658.0 116.0" class="arrow" marker-end="url(#a)"/>
+  <rect x="24.0" y="178.0" width="466.0" height="314.0" rx="8.0" class="band"/>
+  <text x="40.0" y="202.0" class="btitle">ผลของ lexer: สตรีมแบน 6 token — เรียงเป็นเส้นเดียว</text>
+  <text x="40.0" y="234.0" class="mono">NUMBER(3) PLUS(+) NUMBER(4) STAR(*) NUMBER(5) EOF()</text>
+  <text x="40.0" y="274.0" class="lblr">ข้อเสีย: ไม่บอกว่า “อะไรจับกับอะไร”</text>
+  <text x="40.0" y="296.0" class="lbl">— คูณก่อนบวกไหม? วงเล็บครอบตรงไหน? ถามไม่ได้เลย</text>
+  <text x="40.0" y="338.0" class="lbl">เทียบกับทั้งโปรแกรม (โปรแกรม A — 3 บรรทัด):</text>
+  <text x="40.0" y="360.0" class="monob">lexer ได้ 30 token · parser ได้ 3 คำสั่ง</text>
+  <text x="40.0" y="382.0" class="lbl">แถม: ตัวอย่างทั้ง 3 โปรแกรมใช้ชนิด token ครบ 23/23 ชนิด</text>
+  <rect x="506.0" y="178.0" width="450.0" height="314.0" rx="8.0" class="band"/>
+  <text x="522.0" y="202.0" class="btitle">ผลของ parser: ต้นไม้ AST</text>
+  <text x="540.0" y="236.0" class="mono">BinaryExpr +</text>
+  <text x="540.0" y="255.0" class="mono">├─ NumberLit 3</text>
+  <text x="540.0" y="274.0" class="mono">└─ BinaryExpr *</text>
+  <text x="540.0" y="293.0" class="mono">   ├─ NumberLit 4</text>
+  <text x="540.0" y="312.0" class="mono">   └─ NumberLit 5</text>
+  <text x="522.0" y="374.0" class="monob">S-expression: (+ 3 (* 4 5))</text>
+  <text x="522.0" y="408.0" class="lblr">“abstract” = ตัดสิ่งที่ใช้แค่จัดกลุ่มออกแล้ว</text>
+  <text x="522.0" y="430.0" class="lbl">— เหลือแต่ก้อนความหมาย: บวก(3, คูณ(4, 5))</text>
+  <text x="522.0" y="464.0" class="lbl">ทั้งโปรแกรมก็ได้ต้นไม้แบบเดียวกัน — ดู out/03</text>
+  <rect x="24.0" y="508.0" width="932.0" height="40.0" rx="8.0" class="bandy"/>
+  <text x="40.0" y="533.0" class="lbl">เส้นทางที่เหลือ: parser → AST (ตอนนี้) → interpreter: tree-walking (ตอนที่ 28) → type/scope (ตอนที่ 29) → codegen (ตอนที่ 30)</text>
+  <text x="24.0" y="572.0" class="lbl">go version go1.24.4 linux/arm64 · Linux 6.18.39+rpt-rpi-2712 aarch64 · 2026-10-01 · ภาพวาดเองด้วย SVG (ไม่มีลิขสิทธิ์)</text>
+</svg>

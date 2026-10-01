@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 545" width="780" height="545" role="img" aria-label="ตารางกฎไวยากรณ์กับฟังก์ชัน">
+  <style>
+    text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 12.5px; fill: #1a1a1a; }
+    .hdr { font-weight: 700; font-size: 19px; }
+    .sub { fill: #57606a; font-size: 12.5px; }
+    .btitle { font-weight: 700; font-size: 12.5px; }
+    .lbl { fill: #57606a; font-size: 11.5px; }
+    .lbl10 { fill: #8c959f; font-size: 10px; }
+    .lblb { fill: #0550ae; font-size: 11.5px; font-weight: 700; }
+    .lblg { fill: #1a7f37; font-size: 11.5px; font-weight: 700; }
+    .lblr { fill: #cf222e; font-size: 11.5px; font-weight: 700; }
+    .mono { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 11.5px; }
+    .mono10 { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 10px; fill: #57606a; }
+    .monos { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 10px; }
+    .monob { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 11.5px; font-weight: 700; fill: #0550ae; }
+    .monog { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 11.5px; font-weight: 700; fill: #1a7f37; }
+    .band { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.2; }
+    .bandw { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.2; }
+    .bandc { fill: #eef4ff; stroke: #0969da; stroke-width: 1.4; }
+    .bandg { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.4; }
+    .bandy { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.4; }
+    .arrow { stroke: #57606a; stroke-width: 1.8; fill: none; }
+    .arrowb { stroke: #0550ae; stroke-width: 2; fill: none; }
+  </style>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#57606a"/>
+    </marker>
+    <marker id="ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#0550ae"/>
+    </marker>
+  </defs>
+  <text x="24.0" y="32.0" class="hdr">กฎไวยากรณ์ 1 ข้อ = ฟังก์ชัน 1 ตัว</text>
+  <text x="24.0" y="54.0" class="sub">ตารางนี้พิมพ์ออกมาจาก parser.Rules ในโค้ดจริง (13 กฎ → 13 ฟังก์ชัน) — out/02</text>
+  <rect x="24.0" y="74.0" width="732.0" height="318.0" rx="8.0" class="bandw"/>
+  <text x="40.0" y="100.0" class="lblb">rule (ชื่อกฎ)</text>
+  <text x="170.0" y="100.0" class="lblb">= รูปของกฎ (ฝั่งขวา)</text>
+  <text x="560.0" y="100.0" class="lblb">→ ฟังก์ชัน</text>
+  <text x="40.0" y="124.0" class="monob">program</text>
+  <text x="158.0" y="124.0" class="mono10">=</text>
+  <text x="172.0" y="124.0" class="mono">statement* EOF</text>
+  <text x="560.0" y="124.0" class="monog">→ ParseProgram</text>
+  <text x="40.0" y="145.0" class="monob">statement</text>
+  <text x="158.0" y="145.0" class="mono10">=</text>
+  <text x="172.0" y="145.0" class="mono">letStmt | ifStmt | printStmt | exprStmt</text>
+  <text x="560.0" y="145.0" class="monog">→ parseStatement</text>
+  <text x="40.0" y="166.0" class="monob">letStmt</text>
+  <text x="158.0" y="166.0" class="mono10">=</text>
+  <text x="172.0" y="166.0" class="mono">"let" IDENT "=" expression ";"</text>
+  <text x="560.0" y="166.0" class="monog">→ parseLet</text>
+  <text x="40.0" y="187.0" class="monob">ifStmt</text>
+  <text x="158.0" y="187.0" class="mono10">=</text>
+  <text x="172.0" y="187.0" class="mono">"if" expression block ("else" block)?</text>
+  <text x="560.0" y="187.0" class="monog">→ parseIf</text>
+  <text x="40.0" y="208.0" class="monob">printStmt</text>
+  <text x="158.0" y="208.0" class="mono10">=</text>
+  <text x="172.0" y="208.0" class="mono">"print" expression ";"</text>
+  <text x="560.0" y="208.0" class="monog">→ parsePrint</text>
+  <text x="40.0" y="229.0" class="monob">exprStmt</text>
+  <text x="158.0" y="229.0" class="mono10">=</text>
+  <text x="172.0" y="229.0" class="mono">expression ";"</text>
+  <text x="560.0" y="229.0" class="monog">→ parseExprStmt</text>
+  <text x="40.0" y="250.0" class="monob">block</text>
+  <text x="158.0" y="250.0" class="mono10">=</text>
+  <text x="172.0" y="250.0" class="mono">"{" statement* "}"</text>
+  <text x="560.0" y="250.0" class="monog">→ parseBlock</text>
+  <text x="40.0" y="271.0" class="monob">expression</text>
+  <text x="158.0" y="271.0" class="mono10">=</text>
+  <text x="172.0" y="271.0" class="mono">comparison</text>
+  <text x="560.0" y="271.0" class="monog">→ parseExpression</text>
+  <text x="40.0" y="292.0" class="monob">comparison</text>
+  <text x="158.0" y="292.0" class="mono10">=</text>
+  <text x="172.0" y="292.0" class="mono">term (("==" | "!=" | "&lt;" | "&gt;") term)*</text>
+  <text x="560.0" y="292.0" class="monog">→ parseComparison</text>
+  <text x="40.0" y="313.0" class="monob">term</text>
+  <text x="158.0" y="313.0" class="mono10">=</text>
+  <text x="172.0" y="313.0" class="mono">factor (("+" | "-") factor)*</text>
+  <text x="560.0" y="313.0" class="monog">→ parseTerm</text>
+  <text x="40.0" y="334.0" class="monob">factor</text>
+  <text x="158.0" y="334.0" class="mono10">=</text>
+  <text x="172.0" y="334.0" class="mono">unary (("*" | "/") unary)*</text>
+  <text x="560.0" y="334.0" class="monog">→ parseFactor</text>
+  <text x="40.0" y="355.0" class="monob">unary</text>
+  <text x="158.0" y="355.0" class="mono10">=</text>
+  <text x="172.0" y="355.0" class="mono">("-" | "+") unary | primary</text>
+  <text x="560.0" y="355.0" class="monog">→ parseUnary</text>
+  <text x="40.0" y="376.0" class="monob">primary</text>
+  <text x="158.0" y="376.0" class="mono10">=</text>
+  <text x="172.0" y="376.0" class="mono">NUMBER | IDENT | "true" | "false" | "(" expression ")"</text>
+  <text x="560.0" y="376.0" class="monog">→ parsePrimary</text>
+  <text x="24.0" y="412.0" class="lbl">• อ่านจากบนลงล่าง = ชั้นบน (จับหลวม) → ชั้นล่าง (จับแน่น) · ชั้นที่ลึกกว่าคือชั้นที่ “ตัดสินใจก่อน”</text>
+  <text x="24.0" y="432.0" class="lbl">• ชื่อกฎอย่าง expression / term / factor ไม่ใช่คำสั่งให้ทำอะไร — มันคือ “ชื่อชั้นของไวยากรณ์”</text>
+  <text x="24.0" y="452.0" class="lbl">ที่บอกว่าใครจับกับใครแน่นกว่า</text>
+  <text x="24.0" y="472.0" class="lbl">• ยิ่งกฎมีการวนซ้ำ (*) ฟังก์ชันที่ทำตามกฎนั้นก็ยิ่งมีวงวน — รูปร่างของกฎกับรูปร่างของโค้ดจึงตรงกัน</text>
+  <text x="24.0" y="492.0" class="lbl">• ที่ primary: พอเจอ “(” จะเรียก parseExpression กลับไปชั้นบนสุด — จุดนี้เองที่ทำให้วงเล็บ</text>
+  <text x="24.0" y="512.0" class="lbl">“บังคับกลุ่ม” ได้</text>
+</svg>

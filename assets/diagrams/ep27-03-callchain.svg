@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 540" width="1000" height="540" role="img" aria-label="call chain ของ recursive descent">
+  <style>
+    text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 12.5px; fill: #1a1a1a; }
+    .hdr { font-weight: 700; font-size: 19px; }
+    .sub { fill: #57606a; font-size: 12.5px; }
+    .btitle { font-weight: 700; font-size: 12.5px; }
+    .lbl { fill: #57606a; font-size: 11.5px; }
+    .lbl10 { fill: #8c959f; font-size: 10px; }
+    .lblb { fill: #0550ae; font-size: 11.5px; font-weight: 700; }
+    .lblg { fill: #1a7f37; font-size: 11.5px; font-weight: 700; }
+    .lblr { fill: #cf222e; font-size: 11.5px; font-weight: 700; }
+    .mono { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 11.5px; }
+    .mono10 { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 10px; fill: #57606a; }
+    .monos { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 10px; }
+    .monob { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 11.5px; font-weight: 700; fill: #0550ae; }
+    .monog { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 11.5px; font-weight: 700; fill: #1a7f37; }
+    .band { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.2; }
+    .bandw { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.2; }
+    .bandc { fill: #eef4ff; stroke: #0969da; stroke-width: 1.4; }
+    .bandg { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.4; }
+    .bandy { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.4; }
+    .arrow { stroke: #57606a; stroke-width: 1.8; fill: none; }
+    .arrowb { stroke: #0550ae; stroke-width: 2; fill: none; }
+  </style>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#57606a"/>
+    </marker>
+    <marker id="ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#0550ae"/>
+    </marker>
+  </defs>
+  <text x="24.0" y="32.0" class="hdr">recursive descent: หนึ่งกฎ = หนึ่งฟังก์ชัน (ไล่ลงชั้นจริงของ 3 + 4 * 5)</text>
+  <text x="24.0" y="54.0" class="sub">ฝั่งซ้าย = สายการเรียกหกชั้นตามกฎไวยากรณ์ · ฝั่งขวา = trace ที่ parser พิมพ์ออกมาเอง (out/02)</text>
+  <rect x="24.0" y="74.0" width="440.0" height="44.0" rx="8.0" class="bandc"/>
+  <text x="38.0" y="93.0" class="monob">parseExpression</text>
+  <text x="200.0" y="93.0" class="lbl">เริ่มชั้นบนสุดของนิพจน์</text>
+  <text x="38.0" y="110.0" class="lbl10">ชั้นที่ 1 · กฎ expression = comparison</text>
+  <path d="M 244.0 118.0 L 244.0 127.0" class="arrowb" marker-end="url(#ab)"/>
+  <rect x="24.0" y="130.0" width="440.0" height="44.0" rx="8.0" class="bandw"/>
+  <text x="38.0" y="149.0" class="monob">parseComparison</text>
+  <text x="200.0" y="149.0" class="lbl">จับ == != &lt; &gt;</text>
+  <text x="38.0" y="166.0" class="lbl10">ชั้นที่ 2 · term ((== | != | &lt; | &gt;) term)*</text>
+  <path d="M 244.0 174.0 L 244.0 183.0" class="arrowb" marker-end="url(#ab)"/>
+  <rect x="24.0" y="186.0" width="440.0" height="44.0" rx="8.0" class="bandc"/>
+  <text x="38.0" y="205.0" class="monob">parseTerm</text>
+  <text x="200.0" y="205.0" class="lbl">จับ + และ -</text>
+  <text x="38.0" y="222.0" class="lbl10">ชั้นที่ 3 · factor ((+ | -) factor)*</text>
+  <path d="M 244.0 230.0 L 244.0 239.0" class="arrowb" marker-end="url(#ab)"/>
+  <rect x="24.0" y="242.0" width="440.0" height="44.0" rx="8.0" class="bandc"/>
+  <text x="38.0" y="261.0" class="monob">parseFactor</text>
+  <text x="200.0" y="261.0" class="lbl">จับ * และ /</text>
+  <text x="38.0" y="278.0" class="lbl10">ชั้นที่ 4 · unary ((* | /) unary)*</text>
+  <path d="M 244.0 286.0 L 244.0 295.0" class="arrowb" marker-end="url(#ab)"/>
+  <rect x="24.0" y="298.0" width="440.0" height="44.0" rx="8.0" class="bandw"/>
+  <text x="38.0" y="317.0" class="monob">parseUnary</text>
+  <text x="200.0" y="317.0" class="lbl">จับลบ/บวกหน้า เช่น -x</text>
+  <text x="38.0" y="334.0" class="lbl10">ชั้นที่ 5 · (- | +) unary | primary</text>
+  <path d="M 244.0 342.0 L 244.0 351.0" class="arrowb" marker-end="url(#ab)"/>
+  <rect x="24.0" y="354.0" width="440.0" height="44.0" rx="8.0" class="bandc"/>
+  <text x="38.0" y="373.0" class="monob">parsePrimary</text>
+  <text x="200.0" y="373.0" class="lbl">ตัวเลข/ชื่อ/true/false/(…)</text>
+  <text x="38.0" y="390.0" class="lbl10">ชั้นที่ 6 · ชั้นล่างสุด เจอของจริง</text>
+  <rect x="488.0" y="74.0" width="488.0" height="312.0" rx="8.0" class="band"/>
+  <text x="504.0" y="98.0" class="btitle">trace จริง 11 บรรทัด (out/02)</text>
+  <text x="504.0" y="116.0" class="lbl">“token ปัจจุบัน” = token ที่นิ้วชี้ตอนเข้าฟังก์ชัน</text>
+  <text x="504.0" y="144.0" class="monos">→ parseExpression  (NUMBER "3")</text>
+  <text x="518.0" y="164.0" class="monos">→ parseComparison  (NUMBER "3")</text>
+  <text x="532.0" y="184.0" class="monos">→ parseTerm  (NUMBER "3")</text>
+  <text x="546.0" y="204.0" class="monos">→ parseFactor  (NUMBER "3")</text>
+  <text x="560.0" y="224.0" class="monos">→ parseUnary  (NUMBER "3")</text>
+  <text x="574.0" y="244.0" class="monos">→ parsePrimary  (NUMBER "3")</text>
+  <text x="546.0" y="264.0" class="monos">→ parseFactor  (NUMBER "4")</text>
+  <text x="560.0" y="284.0" class="monos">→ parseUnary  (NUMBER "4")</text>
+  <text x="574.0" y="304.0" class="monos">→ parsePrimary  (NUMBER "4")</text>
+  <text x="560.0" y="324.0" class="monos">→ parseUnary  (NUMBER "5")</text>
+  <text x="574.0" y="344.0" class="monos">→ parsePrimary  (NUMBER "5")</text>
+  <text x="504.0" y="362.0" class="lbl">ย่อหน้ามากขึ้น = เรียกซ้อนลึกขึ้น</text>
+  <text x="504.0" y="380.0" class="lbl">ทุกชั้นยังชี้ token เดิมจนกว่าจะตัดสินใจ</text>
+  <rect x="24.0" y="428.0" width="952.0" height="84.0" rx="8.0" class="bandy"/>
+  <text x="40.0" y="454.0" class="lbl">จุดสำคัญ: หกบรรทัดแรกทุกชั้นยังชี้ token เดิม (NUMBER 3) เพราะยังไม่มีการ “ตัดสินใจ” — พอถึง parseTerm เจอ + จึงประกอบก้อน</text>
+  <text x="40.0" y="474.0" class="lbl">แล้วเรียก parseFactor อีกรอบสำหรับฝั่งขวา ที่ parseFactor เจอ * ซึ่งอยู่ลึกกว่า + จึงถูกประกอบก่อน → ได้ (+ 3 (* 4 5))</text>
+  <text x="24.0" y="532.0" class="lbl">ตัวเลขและข้อความทุกบรรทัดในภาพนี้คัดจาก out/02_call_chain.out.txt โดยตรง · ภาพวาดเองด้วย SVG</text>
+</svg>
