@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 798" width="1000" height="798" role="img" aria-label="ตารางเทียบด่าน parser กับด่าน interpreter">
+  <style>
+    text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 12.5px; fill: #1a1a1a; }
+    .hdr { font-weight: 700; font-size: 19px; }
+    .sub { fill: #57606a; font-size: 12.5px; }
+    .btitle { font-weight: 700; font-size: 12.5px; }
+    .lbl { fill: #57606a; font-size: 11.5px; }
+    .lbl10 { fill: #8c959f; font-size: 10px; }
+    .lblb { fill: #0550ae; font-size: 11.5px; font-weight: 700; }
+    .lblg { fill: #1a7f37; font-size: 11.5px; font-weight: 700; }
+    .lblr { fill: #cf222e; font-size: 11.5px; font-weight: 700; }
+    .mono { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 11.5px; }
+    .mono10 { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 10px; fill: #57606a; }
+    .monos { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 10px; }
+    .monob { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 11.5px; font-weight: 700; fill: #0550ae; }
+    .monog { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 11.5px; font-weight: 700; fill: #1a7f37; }
+    .monor { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 10px; fill: #cf222e; }
+    .band { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.2; }
+    .bandw { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.2; }
+    .bandc { fill: #eef4ff; stroke: #0969da; stroke-width: 1.4; }
+    .bandg { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.4; }
+    .bandy { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.4; }
+    .bandr { fill: #fff0f0; stroke: #cf222e; stroke-width: 1.4; }
+    .arrow { stroke: #57606a; stroke-width: 1.8; fill: none; }
+    .arrowb { stroke: #0550ae; stroke-width: 2; fill: none; }
+  </style>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#57606a"/>
+    </marker>
+    <marker id="ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#0550ae"/>
+    </marker>
+  </defs>
+  <text x="24.0" y="32.0" class="hdr">parser จับ “รูปประโยค” · interpreter จับ “ค่า” — สองด่านที่ไม่ทับกัน</text>
+  <text x="24.0" y="54.0" class="sub">7 เคสจาก out/04_runtime_errors.out.txt · ทุกเคสผ่าน parser ยกเว้นเคสสุดท้าย</text>
+  <rect x="24.0" y="90.0" width="466.0" height="108.0" rx="8.0" class="bandw"/>
+  <text x="38.0" y="110.0" class="btitle">ใช้ตัวแปรที่ยังไม่ประกาศ</text>
+  <text x="38.0" y="126.0" class="monob">โค้ด: print z;</text>
+  <text x="38.0" y="142.0" class="monos">parser     : ผ่าน — ได้ต้นไม้ (program (print z))</text>
+  <text x="38.0" y="158.0" class="monor">interpreter: error → line 1, column 7: undefined variable</text>
+  <text x="38.0" y="174.0" class="monor">             "z" (hint: declare it first, e.g. 'let z =</text>
+  <text x="38.0" y="190.0" class="monor">             1;')</text>
+  <rect x="24.0" y="206.0" width="466.0" height="92.0" rx="8.0" class="bandw"/>
+  <text x="38.0" y="226.0" class="btitle">หารด้วยศูนย์</text>
+  <text x="38.0" y="242.0" class="monob">โค้ด: let x = 7 / 0;</text>
+  <text x="38.0" y="258.0" class="monos">parser     : ผ่าน — ได้ต้นไม้ (program (let x (/ 7 0)))</text>
+  <text x="38.0" y="274.0" class="monor">interpreter: error → line 1, column 11: division by zero</text>
+  <text x="38.0" y="290.0" class="monor">             (hint: the right side of '/' must not be 0)</text>
+  <rect x="24.0" y="306.0" width="466.0" height="92.0" rx="8.0" class="bandw"/>
+  <text x="38.0" y="326.0" class="btitle">บวกจำนวนเต็มกับค่าตรรกะ (bool)</text>
+  <text x="38.0" y="342.0" class="monob">โค้ด: let x = 1 + true;</text>
+  <text x="38.0" y="358.0" class="monos">parser     : ผ่าน — ได้ต้นไม้ (program (let x (+ 1 true)))</text>
+  <text x="38.0" y="374.0" class="monor">interpreter: error → line 1, column 11: cannot use "+" with</text>
+  <text x="38.0" y="390.0" class="monor">             int and bool</text>
+  <rect x="24.0" y="406.0" width="466.0" height="124.0" rx="8.0" class="bandw"/>
+  <text x="38.0" y="426.0" class="btitle">เงื่อนไขของ if ไม่ใช่ bool</text>
+  <text x="38.0" y="442.0" class="monob">โค้ด: if 1 { print 1; }</text>
+  <text x="38.0" y="458.0" class="monos">parser     : ผ่าน — ได้ต้นไม้ (program (if 1 (block (print</text>
+  <text x="38.0" y="474.0" class="monos">             1))))</text>
+  <text x="38.0" y="490.0" class="monor">interpreter: error → line 1, column 4: condition must be</text>
+  <text x="38.0" y="506.0" class="monor">             bool, got int (hint: use a comparison, e.g.</text>
+  <text x="38.0" y="522.0" class="monor">             'if x &gt; 0 { ... }')</text>
+  <rect x="536.0" y="90.0" width="466.0" height="92.0" rx="8.0" class="bandw"/>
+  <text x="550.0" y="110.0" class="btitle">เปรียบเทียบข้ามชนิด</text>
+  <text x="550.0" y="126.0" class="monob">โค้ด: let b = 3 &lt; true;</text>
+  <text x="550.0" y="142.0" class="monos">parser     : ผ่าน — ได้ต้นไม้ (program (let b (&lt; 3 true)))</text>
+  <text x="550.0" y="158.0" class="monor">interpreter: error → line 1, column 11: cannot compare int</text>
+  <text x="550.0" y="174.0" class="monor">             with bool using "&lt;"</text>
+  <rect x="536.0" y="190.0" width="466.0" height="92.0" rx="8.0" class="bandw"/>
+  <text x="550.0" y="210.0" class="btitle">ใส่เครื่องหมายลบหน้ากับค่าตรรกะ (bool)</text>
+  <text x="550.0" y="226.0" class="monob">โค้ด: let b = -true;</text>
+  <text x="550.0" y="242.0" class="monos">parser     : ผ่าน — ได้ต้นไม้ (program (let b (- true)))</text>
+  <text x="550.0" y="258.0" class="monor">interpreter: error → line 1, column 9: cannot apply "-" to</text>
+  <text x="550.0" y="274.0" class="monor">             bool</text>
+  <rect x="536.0" y="290.0" width="466.0" height="92.0" rx="8.0" class="bandw"/>
+  <text x="550.0" y="310.0" class="btitle">ผิดไวยากรณ์ — ตกที่ parser ก่อนถึง interpreter</text>
+  <text x="550.0" y="326.0" class="monob">โค้ด: let x = 1 + ;</text>
+  <text x="550.0" y="342.0" class="monos">parser     : error → line 1, column 13: expected</text>
+  <text x="550.0" y="358.0" class="monos">             expression, found SEMI ";"</text>
+  <text x="550.0" y="374.0" class="monor">interpreter: ไม่ได้ทำงานเลย — ยังไม่มีต้นไม้ให้เดิน</text>
+  <rect x="24.0" y="542.0" width="466.0" height="154.0" rx="8.0" class="band"/>
+  <text x="40.0" y="566.0" class="btitle">อ่านตารางนี้ยังไง</text>
+  <text x="40.0" y="588.0" class="lbl">• เคส 1–6: รูปประโยคถูกทุกตัวอักษร parser จึงผ่าน —</text>
+  <text x="40.0" y="606.0" class="lbl">ความผิดโผล่ตอนค่าไหลผ่าน node</text>
+  <text x="40.0" y="624.0" class="lbl">• เคส 7: ผิดไวยากรณ์ ต้นไม้ยังไม่เกิด interpreter</text>
+  <text x="40.0" y="642.0" class="lbl">จึงไม่มีอะไรให้เดิน</text>
+  <text x="40.0" y="660.0" class="lbl">• ด่าน lexer → parser → interpreter ไม่มีด่านไหนแทนกันได้</text>
+  <text x="40.0" y="678.0" class="lbl">• ตัวเลขทุกตัวในภาพนี้: 7 เคส / parser 1 / interpreter 6</text>
+  <rect x="536.0" y="392.0" width="466.0" height="304.0" rx="8.0" class="bandr"/>
+  <text x="550.0" y="414.0" class="lblr">error ตอนรันหยุดโปรแกรมทันที</text>
+  <text x="550.0" y="436.0" class="monos">print 1;</text>
+  <text x="550.0" y="453.0" class="monos">let x = 7 / 0;</text>
+  <text x="550.0" y="470.0" class="monos">print 3;</text>
+  <text x="550.0" y="495.0" class="monog">ออกจอก่อนตาย: "1" — บรรทัดที่ 3 ไม่ถูกทำ</text>
+  <text x="550.0" y="515.0" class="monor">error: line 2, column 11: division by zero</text>
+  <rect x="24.0" y="710.0" width="952.0" height="40.0" rx="8.0" class="bandy"/>
+  <text x="40.0" y="735.0" class="lbl">สรุป out/04: 7 เคส · parser จับได้ 1 เคส · interpreter จับได้ 6 เคส · รวม 7</text>
+  <text x="24.0" y="770.0" class="lbl">ตารางและข้อความในภาพนี้ดึงจาก out/04_runtime_errors.out.txt โดยตรง</text>
+  <text x="24.0" y="786.0" class="lbl">go version go1.24.4 linux/arm64 · Linux 6.18.39+rpt-rpi-2712 aarch64 · 2026-10-01</text>
+</svg>

@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 566" width="1000" height="566" role="img" aria-label="env เก็บค่าตัวแปรอย่างไร และ if/else เลือกเส้นทางอย่างไร">
+  <style>
+    text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 12.5px; fill: #1a1a1a; }
+    .hdr { font-weight: 700; font-size: 19px; }
+    .sub { fill: #57606a; font-size: 12.5px; }
+    .btitle { font-weight: 700; font-size: 12.5px; }
+    .lbl { fill: #57606a; font-size: 11.5px; }
+    .lbl10 { fill: #8c959f; font-size: 10px; }
+    .lblb { fill: #0550ae; font-size: 11.5px; font-weight: 700; }
+    .lblg { fill: #1a7f37; font-size: 11.5px; font-weight: 700; }
+    .lblr { fill: #cf222e; font-size: 11.5px; font-weight: 700; }
+    .mono { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 11.5px; }
+    .mono10 { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 10px; fill: #57606a; }
+    .monos { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 10px; }
+    .monob { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 11.5px; font-weight: 700; fill: #0550ae; }
+    .monog { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 11.5px; font-weight: 700; fill: #1a7f37; }
+    .monor { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 10px; fill: #cf222e; }
+    .band { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.2; }
+    .bandw { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.2; }
+    .bandc { fill: #eef4ff; stroke: #0969da; stroke-width: 1.4; }
+    .bandg { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.4; }
+    .bandy { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.4; }
+    .bandr { fill: #fff0f0; stroke: #cf222e; stroke-width: 1.4; }
+    .arrow { stroke: #57606a; stroke-width: 1.8; fill: none; }
+    .arrowb { stroke: #0550ae; stroke-width: 2; fill: none; }
+  </style>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#57606a"/>
+    </marker>
+    <marker id="ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#0550ae"/>
+    </marker>
+  </defs>
+  <text x="24.0" y="32.0" class="hdr">environment + control flow: ที่เก็บค่าตัวแปร และการเลือกเส้นทาง</text>
+  <text x="24.0" y="54.0" class="sub">ฝั่งซ้ายจาก out/02_variables.out.txt · ฝั่งขวาจาก out/03_control_flow.out.txt</text>
+  <rect x="24.0" y="74.0" width="480.0" height="384.0" rx="8.0" class="band"/>
+  <text x="40.0" y="98.0" class="btitle">env = ที่เก็บค่าตัวแปร: ชื่อ → ค่า (ชั้นเดียว)</text>
+  <text x="40.0" y="118.0" class="mono">[1] let x = 3 + 4 * 5;</text>
+  <text x="56.0" y="136.0" class="monos">(let x (+ 3 (* 4 5)))  →  env { x = 23 }</text>
+  <text x="40.0" y="158.0" class="mono">[2] let y = (x - 2) * 2;</text>
+  <text x="56.0" y="176.0" class="monos">(let y (* (- x 2) 2))  →  env { x = 23, y = 42 }</text>
+  <text x="40.0" y="198.0" class="mono">[3] print x + y;</text>
+  <text x="56.0" y="216.0" class="monos">(print (+ x y))  →  เขียน "65" ออกจอ (env ไม่เปลี่ยน)</text>
+  <text x="40.0" y="244.0" class="lbl">ผลลัพธ์ออกจอ: "65\n" · ตัวแปร 2 ตัว · เดิน 16 node</text>
+  <rect x="40.0" y="270.0" width="448.0" height="62.0" rx="8.0" class="bandr"/>
+  <text x="54.0" y="292.0" class="lblr">ใช้ตัวแปรที่ยังไม่ประกาศ: print z + 1;</text>
+  <text x="54.0" y="312.0" class="monor">line 1, column 7: undefined variable "z"</text>
+  <text x="40.0" y="348.0" class="lbl">• ประกาศชื่อซ้ำ = ทับค่าเดิม (let x = 1; let x = x + 1; → env มี</text>
+  <text x="40.0" y="368.0" class="lbl">1 ตัวแปร พิมพ์ "2\n")</text>
+  <text x="40.0" y="388.0" class="lbl">• env เป็นของ interpreter แต่ละตัว: A = { a = 1 } · B = { }</text>
+  <rect x="528.0" y="74.0" width="448.0" height="384.0" rx="8.0" class="band"/>
+  <text x="544.0" y="98.0" class="btitle">if/else: เลือกเดินแขนเดียวเสมอ</text>
+  <rect x="544.0" y="122.0" width="416.0" height="58.0" rx="8.0" class="bandw"/>
+  <text x="556.0" y="140.0" class="monob">โปรแกรม 1: if x &gt; 20</text>
+  <text x="556.0" y="156.0" class="lbl">ค่าของเงื่อนไข: true</text>
+  <text x="556.0" y="172.0" class="monos">ผลลัพธ์ออกจอ: "3 ⏎"</text>
+  <rect x="544.0" y="188.0" width="416.0" height="58.0" rx="8.0" class="bandw"/>
+  <text x="556.0" y="206.0" class="monob">โปรแกรม 2: if n &gt; 5</text>
+  <text x="556.0" y="222.0" class="lbl">ค่าของเงื่อนไข: false</text>
+  <text x="556.0" y="238.0" class="monos">ผลลัพธ์ออกจอ: "3 ⏎"</text>
+  <rect x="544.0" y="254.0" width="416.0" height="58.0" rx="8.0" class="bandw"/>
+  <text x="556.0" y="272.0" class="monob">โปรแกรม 3: if t &gt; 3</text>
+  <text x="556.0" y="288.0" class="lbl">ค่าของเงื่อนไข: true</text>
+  <text x="556.0" y="304.0" class="monos">ผลลัพธ์ออกจอ: "1 ⏎"</text>
+  <text x="544.0" y="326.0" class="lblr">โปรแกรม 2 มี print 111; อยู่ในแขน then — ไม่ถูกพิมพ์เลย</text>
+  <text x="544.0" y="346.0" class="lbl">โปรแกรม 4 ไม่มี else → ข้ามทั้งบล็อก แล้วไปคำสั่งถัดไป</text>
+  <rect x="544.0" y="366.0" width="416.0" height="62.0" rx="8.0" class="bandr"/>
+  <text x="558.0" y="388.0" class="lblr">if 1 { print 1; } → เงื่อนไขไม่ใช่ bool</text>
+  <text x="558.0" y="408.0" class="monor">line 1, column 4: condition must be bool, got int</text>
+  <rect x="24.0" y="470.0" width="952.0" height="48.0" rx="8.0" class="bandy"/>
+  <text x="40.0" y="494.0" class="lbl">สรุป out/03: 5 โปรแกรม · รันสำเร็จ 4 · ติด error 1 · พิมพ์ออกจอรวม 4 บรรทัด — ภาษานี้ยังไม่มี loop จึงยังวนซ้ำเองไม่ได้</text>
+  <text x="24.0" y="538.0" class="lbl">ตัวเลขทุกตัวในภาพนี้ดึงจาก out/02_variables.out.txt และ out/03_control_flow.out.txt</text>
+  <text x="24.0" y="554.0" class="lbl">go version go1.24.4 linux/arm64 · Linux 6.18.39+rpt-rpi-2712 aarch64 · 2026-10-01</text>
+</svg>
