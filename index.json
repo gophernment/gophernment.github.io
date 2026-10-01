@@ -1,5 +1,18 @@
 [
   {
+    "slug": "2026-10-01-cs-fundamentals-28-interpreter",
+    "title": "'interpreter: tree-walking — เปลี่ยน \"ต้นไม้\" ให้เป็น \"ค่า\" (ตอนที่ 28)'",
+    "date": "2026-10-01",
+    "tags": [
+      "cs-fundamentals",
+      "compiler",
+      "interpreter",
+      "tree-walking",
+      "go"
+    ],
+    "description": "ตอนที่ 28 ของคอร์ส CS Fundamentals — Interpreter: ตัวเดินตามต้นไม้ AST (จาก parser ตอนที่ 27) แล้วคำนวณค่าออกมา (tree-walking) — eval/execute, environment เก็บค่าตัวแปร, runtime error ต่างจาก parse error, โค้ด Go 5 โปรแกรมรันจริงบน Raspberry Pi 5"
+  },
+  {
     "slug": "2026-10-01-cs-fundamentals-27-parser-ast",
     "title": "Parser — recursive descent → AST: เปลี่ยน \"คำ\" ให้เป็น \"ต้นไม้\" (ตอนที่ 27)",
     "date": "2026-10-01",
