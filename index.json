@@ -1,5 +1,19 @@
 [
   {
+    "slug": "2026-10-01-cs-fundamentals-27-parser-ast",
+    "title": "Parser — recursive descent → AST: เปลี่ยน \"คำ\" ให้เป็น \"ต้นไม้\" (ตอนที่ 27)",
+    "date": "2026-10-01",
+    "tags": [
+      "cs-fundamentals",
+      "compiler",
+      "parser",
+      "ast",
+      "recursive-descent",
+      "go"
+    ],
+    "description": "ตอนที่ 27 ของคอร์ส CS Fundamentals — Parser: เปลี่ยนลำดับ token แบน ๆ จาก lexer (ตอนที่ 26) ให้เป็น AST (ต้นไม้โครงสร้างโปรแกรม) ด้วยวิธี recursive descent — หนึ่งฟังก์ชันต่อหนึ่งกฎไวยากรณ์ และทำไม \"คูณถึงมาก่อนบวก\" โค้ด Go 5 โปรแกรมรันจริงบน Raspberry Pi 5"
+  },
+  {
     "slug": "2026-09-30-cs-fundamentals-26-lexer",
     "title": "Lexer — ตัดข้อความโปรแกรมออกเป็น \"คำ\" (ตอนที่ 26)",
     "date": "2026-09-30",
