@@ -1,5 +1,19 @@
 [
   {
+    "slug": "2026-10-02-cs-fundamentals-29-types-scope-symbols",
+    "title": "'type system, scope, symbol table — ตรวจชนิดก่อนรัน (ตอนที่ 29)'",
+    "date": "2026-10-02",
+    "tags": [
+      "cs-fundamentals",
+      "compiler",
+      "type-system",
+      "scope",
+      "symbol-table",
+      "go"
+    ],
+    "description": "ตอนที่ 29 ของคอร์ส CS Fundamentals — Type system / scope / symbol table: ตัวตรวจชนิด (type checker) ที่จับความผิดก่อนรัน — static vs dynamic typing, scope chain + shadowing, ตารางสัญลักษณ์ (ชื่อ→ชนิด+scope+ตำแหน่ง), เทียบ go/types ของ Go — โค้ด Go 5 โปรแกรม + 4 ภาพ SVG รันจริงบน Raspberry Pi 5"
+  },
+  {
     "slug": "2026-10-01-cs-fundamentals-28-interpreter",
     "title": "'interpreter: tree-walking — เปลี่ยน \"ต้นไม้\" ให้เป็น \"ค่า\" (ตอนที่ 28)'",
     "date": "2026-10-01",
