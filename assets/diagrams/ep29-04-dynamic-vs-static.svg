@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 300" width="720" height="300" role="img" aria-label="dynamic vs static">
+  <style>
+    text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 12.5px; fill: #1a1a1a; }
+    .hdr { font-weight: 700; font-size: 19px; }
+    .sub { fill: #57606a; font-size: 12.5px; }
+    .btitle { font-weight: 700; font-size: 12.5px; }
+    .lbl { fill: #57606a; font-size: 11.5px; }
+    .lblb { fill: #0550ae; font-size: 11.5px; font-weight: 700; }
+    .lblg { fill: #1a7f37; font-size: 11.5px; font-weight: 700; }
+    .lblr { fill: #cf222e; font-size: 11.5px; font-weight: 700; }
+    .mono { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 11.5px; }
+    .mono10 { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 10px; fill: #57606a; }
+    .monob { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 11.5px; font-weight: 700; fill: #0550ae; }
+    .monor { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 10px; fill: #cf222e; }
+    .band { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.2; }
+    .bandw { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.2; }
+    .bandc { fill: #eef4ff; stroke: #0969da; stroke-width: 1.6; }
+    .bandg { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.4; }
+    .bandy { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.4; }
+    .bandr { fill: #fff0f0; stroke: #cf222e; stroke-width: 1.4; }
+    .arrow { stroke: #57606a; stroke-width: 1.8; fill: none; }
+    .arrowb { stroke: #0550ae; stroke-width: 2; fill: none; }
+  </style>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#57606a"/>
+    </marker>
+    <marker id="ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#0550ae"/>
+    </marker>
+  </defs>
+  <text x="24.0" y="32.0" class="hdr">ตอน 28 (dynamic) vs ตอน 29 (static): ตรวจชนิดคนละจังหวะ</text>
+  <text x="24.0" y="54.0" class="sub">ความผิดเดียวกัน แต่ "รู้" เร็วต่างกัน</text>
+  <rect x="40.0" y="96.0" width="300.0" height="130.0" rx="8.0" class="bandy"/>
+  <text x="56.0" y="120.0" class="btitle">ตอน 28 — ตรวจตอนรัน (dynamic)</text>
+  <text x="56.0" y="144.0" class="mono">let x = 1 + true;</text>
+  <text x="56.0" y="166.0" class="lbl">→ โปรแกรมไหลถึงบรรทัดนั้น</text>
+  <text x="56.0" y="186.0" class="lbl">→ เพิ่งรู้ว่าบวก int กับ bool ไม่ได้</text>
+  <text x="56.0" y="208.0" class="lbl">รู้ช้า แต่ก็ยังดีกว่าไม่รู้เลย</text>
+  <rect x="380.0" y="96.0" width="300.0" height="130.0" rx="8.0" class="bandg"/>
+  <text x="396.0" y="120.0" class="btitle">ตอน 29 — ตรวจก่อนรัน (static)</text>
+  <text x="396.0" y="144.0" class="mono">let x = 1 + true;</text>
+  <text x="396.0" y="166.0" class="lbl">→ ตัวตรวจชนิดอ่านต้นไม้ก่อน</text>
+  <text x="396.0" y="186.0" class="lbl">→ จับได้ตั้งแต่ยังไม่รันสักบรรทัด</text>
+  <text x="396.0" y="208.0" class="lblg">รู้เร็ว = แก้เร็ว</text>
+  <path d="M 340.0 161.0 L 380.0 161.0" class="arrowb" marker-end="url(#ab)"/>
+  <text x="40.0" y="260.0" class="lbl">ภาษาที่ตรวจก่อนรันเรียกว่า statically typed · ตรวจตอนรันเรียกว่า dynamically typed</text>
+  <text x="24.0" y="286.0" class="lbl">go version go1.24.4 linux/arm64 · Linux 6.18.39+rpt-rpi-2712 aarch64 · 2026-10-02</text>
+</svg>
