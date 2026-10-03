@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" width="720" height="360" role="img" aria-label="if/else กับ branch">
+  <style>
+    text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 12.5px; fill: #1a1a1a; }
+    .hdr { font-weight: 700; font-size: 19px; }
+    .sub { fill: #57606a; font-size: 12.5px; }
+    .btitle { font-weight: 700; font-size: 12.5px; }
+    .lbl { fill: #57606a; font-size: 11.5px; }
+    .lblb { fill: #0550ae; font-size: 11.5px; font-weight: 700; }
+    .lblg { fill: #1a7f37; font-size: 11.5px; font-weight: 700; }
+    .lblr { fill: #cf222e; font-size: 11.5px; font-weight: 700; }
+    .mono { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 11.5px; }
+    .mono10 { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 10px; fill: #57606a; }
+    .monob { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 11.5px; font-weight: 700; fill: #0550ae; }
+    .monor { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 10px; fill: #cf222e; }
+    .band { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.2; }
+    .bandw { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.2; }
+    .bandc { fill: #eef4ff; stroke: #0969da; stroke-width: 1.6; }
+    .bandg { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.4; }
+    .bandy { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.4; }
+    .bandr { fill: #fff0f0; stroke: #cf222e; stroke-width: 1.4; }
+    .arrow { stroke: #57606a; stroke-width: 1.8; fill: none; }
+    .arrowb { stroke: #0550ae; stroke-width: 2; fill: none; }
+  </style>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#57606a"/>
+    </marker>
+    <marker id="ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#0550ae"/>
+    </marker>
+  </defs>
+  <text x="24.0" y="32.0" class="hdr">if ไม่มีจริงในภาษาเครื่อง — มีแต่ 'กระโดดแบบมีเงื่อนไข'</text>
+  <text x="24.0" y="54.0" class="sub">ซอร์ส 'if x &gt; 5 { ... } else { ... }' ถูกแปลเป็น cmp + branch (บรรทัดจริงจากผลรัน)</text>
+  <rect x="40.0" y="88.0" width="200.0" height="100.0" rx="8.0" class="band"/>
+  <text x="56.0" y="110.0" class="btitle">ซอร์ส (ภาษาจิ๋ว)</text>
+  <text x="56.0" y="134.0" class="mono">if x &gt; 5 {</text>
+  <text x="56.0" y="152.0" class="mono">  print x;</text>
+  <text x="56.0" y="170.0" class="mono">} else { print 0; }</text>
+  <path d="M 250.0 138.0 L 296.0 138.0" class="arrowb" marker-end="url(#ab)"/>
+  <text x="273.0" y="124.0" class="lblb" text-anchor="middle">codegen</text>
+  <rect x="306.0" y="88.0" width="380.0" height="164.0" rx="8.0" class="bandc"/>
+  <text x="322.0" y="108.0" class="lblb">assembly (คำสั่งจริงที่ปล่อย)</text>
+  <text x="322.0" y="132.0" class="mono">cmp x0, x1</text>
+  <text x="322.0" y="150.0" class="mono">cset x0, gt</text>
+  <text x="322.0" y="168.0" class="mono">cmp x0, #0</text>
+  <text x="322.0" y="186.0" class="mono">b.eq .Lelse1</text>
+  <text x="322.0" y="204.0" class="mono">b .Lend2</text>
+  <text x="322.0" y="222.0" class="mono">.Lelse1:</text>
+  <text x="322.0" y="240.0" class="mono">.Lend2:</text>
+  <text x="40.0" y="280.0" class="lbl">ไม่มีคำสั่งชื่อ 'if' ใน assembly เลย: ค่าจริง/เท็จแปลงเป็น 1/0 แล้ว cmp กับ 0</text>
+  <text x="40.0" y="298.0" class="lbl">ถ้า 'เท็จ' (==0) → b.eq กระโดดข้ามไป else · แล้ว b กระโดดข้าม else เมื่อจบ then</text>
+  <text x="40.0" y="320.0" class="lblg">การ 'เลือกเส้นทาง' ของ if จึงกลายเป็น 'กระโดดข้ามโค้ด' — นี่คือวิธีเดียวที่ CPU ทำได้</text>
+  <text x="24.0" y="346.0" class="lbl">go version go1.24.4 linux/arm64 · Linux 6.18.39+rpt-rpi-2712 aarch64 · 2026-10-03</text>
+</svg>

@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 300" width="760" height="300" role="img" aria-label="กับดักการหารด้วยศูนย์">
+  <style>
+    text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 12.5px; fill: #1a1a1a; }
+    .hdr { font-weight: 700; font-size: 19px; }
+    .sub { fill: #57606a; font-size: 12.5px; }
+    .btitle { font-weight: 700; font-size: 12.5px; }
+    .lbl { fill: #57606a; font-size: 11.5px; }
+    .lblb { fill: #0550ae; font-size: 11.5px; font-weight: 700; }
+    .lblg { fill: #1a7f37; font-size: 11.5px; font-weight: 700; }
+    .lblr { fill: #cf222e; font-size: 11.5px; font-weight: 700; }
+    .mono { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 11.5px; }
+    .mono10 { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 10px; fill: #57606a; }
+    .monob { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 11.5px; font-weight: 700; fill: #0550ae; }
+    .monor { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 10px; fill: #cf222e; }
+    .band { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.2; }
+    .bandw { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.2; }
+    .bandc { fill: #eef4ff; stroke: #0969da; stroke-width: 1.6; }
+    .bandg { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.4; }
+    .bandy { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.4; }
+    .bandr { fill: #fff0f0; stroke: #cf222e; stroke-width: 1.4; }
+    .arrow { stroke: #57606a; stroke-width: 1.8; fill: none; }
+    .arrowb { stroke: #0550ae; stroke-width: 2; fill: none; }
+  </style>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#57606a"/>
+    </marker>
+    <marker id="ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#0550ae"/>
+    </marker>
+  </defs>
+  <text x="24.0" y="32.0" class="hdr">กับดัก: 7 / 0 ผ่าน 3 ทางเดิน ให้ผลต่างกัน</text>
+  <text x="24.0" y="54.0" class="sub">โค้ดเครื่องไม่มีตาข่ายนิรภัยของ interpreter — codegen ต้องปล่อยโค้ดตรวจเอง</text>
+  <rect x="24.0" y="96.0" width="224.0" height="120.0" rx="8.0" class="bandg"/>
+  <text x="38.0" y="118.0" class="btitle">interpreter (ตอน 28)</text>
+  <text x="38.0" y="140.0" class="mono10">มีโค้ดตรวจใน evalBinary</text>
+  <text x="38.0" y="162.0" class="lbl">error อย่างสุภาพ</text>
+  <text x="38.0" y="188.0" class="lblg">division by zero</text>
+  <path d="M 248.0 156.0 L 262.0 156.0" class="arrow" marker-end="url(#a)"/>
+  <rect x="262.0" y="96.0" width="224.0" height="120.0" rx="8.0" class="bandr"/>
+  <text x="276.0" y="118.0" class="btitle">naive codegen (ไม่ตรวจ)</text>
+  <text x="276.0" y="140.0" class="mono10">ปล่อย sdiv เฉย ๆ</text>
+  <text x="276.0" y="162.0" class="lbl">ได้ 0 เงียบ ๆ (ผิด!)</text>
+  <text x="276.0" y="188.0" class="lblr">รัน → 0</text>
+  <path d="M 486.0 156.0 L 500.0 156.0" class="arrow" marker-end="url(#a)"/>
+  <rect x="500.0" y="96.0" width="224.0" height="120.0" rx="8.0" class="bandc"/>
+  <text x="514.0" y="118.0" class="btitle">guarded codegen (ตรวจ)</text>
+  <text x="514.0" y="140.0" class="mono10">ปล่อย cbz ก่อน sdiv</text>
+  <text x="514.0" y="162.0" class="lbl">พิมพ์ error + exit 1</text>
+  <text x="514.0" y="188.0" class="lblb">division by zero (exit 1)</text>
+  <text x="24.0" y="248.0" class="lblr">aarch64 หารด้วยศูนย์ด้วย sdiv ไม่พัง แต่คืน 0 เงียบ ๆ = คำตอบผิดที่อันตรายกว่า</text>
+  <text x="24.0" y="266.0" class="lbl">codegen ต้องแปลการตรวจของ interpreter ลงเป็นโค้ดเครื่องด้วย (cbz x1, .Ldiv_zero)</text>
+  <text x="24.0" y="286.0" class="lbl">go version go1.24.4 linux/arm64 · Linux 6.18.39+rpt-rpi-2712 aarch64 · 2026-10-03</text>
+</svg>

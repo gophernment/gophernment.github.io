@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" width="800" height="300" role="img" aria-label="ไปป์ไลน์ของภาษาจิ๋ว">
+  <style>
+    text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 12.5px; fill: #1a1a1a; }
+    .hdr { font-weight: 700; font-size: 19px; }
+    .sub { fill: #57606a; font-size: 12.5px; }
+    .btitle { font-weight: 700; font-size: 12.5px; }
+    .lbl { fill: #57606a; font-size: 11.5px; }
+    .lblb { fill: #0550ae; font-size: 11.5px; font-weight: 700; }
+    .lblg { fill: #1a7f37; font-size: 11.5px; font-weight: 700; }
+    .lblr { fill: #cf222e; font-size: 11.5px; font-weight: 700; }
+    .mono { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 11.5px; }
+    .mono10 { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 10px; fill: #57606a; }
+    .monob { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 11.5px; font-weight: 700; fill: #0550ae; }
+    .monor { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 10px; fill: #cf222e; }
+    .band { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.2; }
+    .bandw { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.2; }
+    .bandc { fill: #eef4ff; stroke: #0969da; stroke-width: 1.6; }
+    .bandg { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.4; }
+    .bandy { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.4; }
+    .bandr { fill: #fff0f0; stroke: #cf222e; stroke-width: 1.4; }
+    .arrow { stroke: #57606a; stroke-width: 1.8; fill: none; }
+    .arrowb { stroke: #0550ae; stroke-width: 2; fill: none; }
+  </style>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#57606a"/>
+    </marker>
+    <marker id="ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#0550ae"/>
+    </marker>
+  </defs>
+  <text x="24.0" y="32.0" class="hdr">ไปป์ไลน์ครบวงจร: จากข้อความ ไปจนถึงโค้ดเครื่องที่รันได้จริง</text>
+  <text x="24.0" y="54.0" class="sub">ตอน 26–29 ยังอยู่ใน Go · ตอนนี้ codegen ปล่อย assembly แล้ว as+ld ทำให้รันได้จริง</text>
+  <rect x="24.0" y="88.0" width="112.0" height="66.0" rx="8.0" class="band"/>
+  <text x="80.0" y="112.0" class="btitle" text-anchor="middle">lexer</text>
+  <text x="80.0" y="130.0" class="mono10" text-anchor="middle">ข้อความ → token</text>
+  <text x="80.0" y="146.0" class="lbl" text-anchor="middle">(26)</text>
+  <path d="M 136.0 121.0 L 148.0 121.0" class="arrow" marker-end="url(#a)"/>
+  <rect x="148.0" y="88.0" width="112.0" height="66.0" rx="8.0" class="band"/>
+  <text x="204.0" y="112.0" class="btitle" text-anchor="middle">parser</text>
+  <text x="204.0" y="130.0" class="mono10" text-anchor="middle">token → ต้นไม้</text>
+  <text x="204.0" y="146.0" class="lbl" text-anchor="middle">(27)</text>
+  <path d="M 260.0 121.0 L 272.0 121.0" class="arrow" marker-end="url(#a)"/>
+  <rect x="272.0" y="88.0" width="112.0" height="66.0" rx="8.0" class="band"/>
+  <text x="328.0" y="112.0" class="btitle" text-anchor="middle">check</text>
+  <text x="328.0" y="130.0" class="mono10" text-anchor="middle">ต้นไม้ → ชนิด</text>
+  <text x="328.0" y="146.0" class="lbl" text-anchor="middle">(29)</text>
+  <path d="M 384.0 121.0 L 396.0 121.0" class="arrow" marker-end="url(#a)"/>
+  <rect x="396.0" y="88.0" width="112.0" height="66.0" rx="8.0" class="bandc"/>
+  <text x="452.0" y="112.0" class="btitle" text-anchor="middle">codegen</text>
+  <text x="452.0" y="130.0" class="mono10" text-anchor="middle">ต้นไม้ → assembly</text>
+  <text x="452.0" y="146.0" class="lbl" text-anchor="middle">(30 · ใหม่)</text>
+  <path d="M 508.0 121.0 L 520.0 121.0" class="arrow" marker-end="url(#a)"/>
+  <rect x="520.0" y="88.0" width="112.0" height="66.0" rx="8.0" class="band"/>
+  <text x="576.0" y="112.0" class="btitle" text-anchor="middle">as</text>
+  <text x="576.0" y="130.0" class="mono10" text-anchor="middle">assembly → object</text>
+  <text x="576.0" y="146.0" class="lbl" text-anchor="middle">(เครื่อง)</text>
+  <path d="M 632.0 121.0 L 644.0 121.0" class="arrow" marker-end="url(#a)"/>
+  <rect x="644.0" y="88.0" width="112.0" height="66.0" rx="8.0" class="band"/>
+  <text x="700.0" y="112.0" class="btitle" text-anchor="middle">ld+run</text>
+  <text x="700.0" y="130.0" class="mono10" text-anchor="middle">object → ผลลัพธ์</text>
+  <text x="700.0" y="146.0" class="lbl" text-anchor="middle">(เครื่อง)</text>
+  <text x="24.0" y="196.0" class="lbl">ช่องสีน้ำเงิน = ของใหม่: codegen เดินต้นไม้ (เหมือน eval/check) แต่ผลลัพธ์</text>
+  <text x="24.0" y="214.0" class="lbl">ที่ได้คือ assembly ไม่ใช่ 'ค่า' หรือ 'ชนิด' — แล้ว as/ld แปลเป็น executable</text>
+  <text x="24.0" y="236.0" class="lblg">รันด้วย CPU จริงผ่าน syscall — ไม่มี interpreter มาคั่นกลาง (ต่างจากตอน 28)</text>
+  <text x="24.0" y="286.0" class="lbl">go version go1.24.4 linux/arm64 · Linux 6.18.39+rpt-rpi-2712 aarch64 · 2026-10-03</text>
+</svg>
