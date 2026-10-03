@@ -1,5 +1,19 @@
 [
   {
+    "slug": "2026-10-03-cs-fundamentals-30-codegen-assembly",
+    "title": "'codegen → assembly — แปลงต้นไม้ให้เป็นโค้ดเครื่อง (ตอนที่ 30)'",
+    "date": "2026-10-03",
+    "tags": [
+      "cs-fundamentals",
+      "compiler",
+      "codegen",
+      "assembly",
+      "aarch64",
+      "go"
+    ],
+    "description": "ตอนที่ 30 ของคอร์ส CS Fundamentals — codegen → assembly: แปลงต้นไม้ AST เป็นภาษาแอสเซมบลี (aarch64) แล้ว as+ld เป็น executable ที่รันได้จริง — register/spill, ผังเฟรม (ตัวแปร=ช่องบน stack), if=conditional branch, กับดัก sdiv หารด้วยศูนย์, differential test 10/10 — โค้ด Go 5 โปรแกรม + 4 ภาพ SVG รันจริงบน Raspberry Pi 5"
+  },
+  {
     "slug": "2026-10-02-cs-fundamentals-29-types-scope-symbols",
     "title": "'type system, scope, symbol table — ตรวจชนิดก่อนรัน (ตอนที่ 29)'",
     "date": "2026-10-02",
