@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 400" width="820" height="400" role="img" aria-label="ภาพรวม runtime ของ Go">
+  <style>
+    text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 12.5px; fill: #1a1a1a; }
+    .hdr { font-weight: 700; font-size: 19px; }
+    .sub { fill: #57606a; font-size: 12.5px; }
+    .btitle { font-weight: 700; font-size: 12.5px; }
+    .lbl { fill: #57606a; font-size: 11.5px; }
+    .lblb { fill: #0550ae; font-size: 11.5px; font-weight: 700; }
+    .lblg { fill: #1a7f37; font-size: 11.5px; font-weight: 700; }
+    .lblr { fill: #cf222e; font-size: 11.5px; font-weight: 700; }
+    .mono { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 11.5px; }
+    .mono10 { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 10px; fill: #57606a; }
+    .monob { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 11.5px; font-weight: 700; fill: #0550ae; }
+    .band { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.2; }
+    .bandw { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.2; }
+    .bandc { fill: #eef4ff; stroke: #0969da; stroke-width: 1.6; }
+    .bandg { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.4; }
+    .bandy { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.4; }
+    .bandr { fill: #fff0f0; stroke: #cf222e; stroke-width: 1.4; }
+    .bandk { fill: #e8e8e8; stroke: #1a1a1a; stroke-width: 1.4; }
+    .arrow { stroke: #57606a; stroke-width: 1.8; fill: none; }
+    .arrowb { stroke: #0550ae; stroke-width: 2; fill: none; }
+    .arrowg { stroke: #1a7f37; stroke-width: 2; fill: none; }
+  </style>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#57606a"/>
+    </marker>
+    <marker id="ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#0550ae"/>
+    </marker>
+    <marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#1a7f37"/>
+    </marker>
+  </defs>
+  <text x="24.0" y="32.0" class="hdr">runtime ของ Go — เครื่องจักรที่ซ่อนอยู่ใต้โปรแกรม Go ทุกตัว</text>
+  <text x="24.0" y="54.0" class="sub">โปรแกรม Go แนบ runtime มาด้วยเสมอ: คอมไพล์รวมเข้าไบนารี (AOT) ไม่มี VM แยกมารันทีหลัง</text>
+  <rect x="24.0" y="78.0" width="772.0" height="44.0" rx="8.0" class="bandc"/>
+  <text x="410.0" y="100.0" class="btitle" text-anchor="middle">โปรแกรม Go ของคุณ — main() และฟังก์ชันที่เราเขียนเอง</text>
+  <text x="410.0" y="116.0" class="mono10" text-anchor="middle">ทุกอย่างในตอน 1–30 ตั้งแต่ hello world ถึง compiler จิ๋ว</text>
+  <path d="M 410.0 122.0 L 410.0 146.0" class="arrowb" marker-end="url(#ab)"/>
+  <text x="422.0" y="140.0" class="lblb" text-anchor="start">runtime ถูกเรียกใช้ให้อัตโนมัติ</text>
+  <rect x="24.0" y="168.0" width="248.0" height="84.0" rx="8.0" class="bandg"/>
+  <text x="148.0" y="192.0" class="btitle" text-anchor="middle">Memory Allocator</text>
+  <text x="148.0" y="214.0" class="lbl" text-anchor="middle">จัดสรร memory ให้ new/make</text>
+  <text x="148.0" y="234.0" class="mono10" text-anchor="middle">โยงตอน 14–16 (malloc/free เองใน C)</text>
+  <rect x="286.0" y="168.0" width="248.0" height="84.0" rx="8.0" class="bandc"/>
+  <text x="410.0" y="192.0" class="btitle" text-anchor="middle">Garbage Collector</text>
+  <text x="410.0" y="214.0" class="lbl" text-anchor="middle">เก็บกวาดของที่ไม่มีใครอ้างถึง</text>
+  <text x="410.0" y="234.0" class="mono10" text-anchor="middle">หัวข้อ 3 ของตอนนี้</text>
+  <rect x="548.0" y="168.0" width="248.0" height="84.0" rx="8.0" class="bandy"/>
+  <text x="672.0" y="192.0" class="btitle" text-anchor="middle">Goroutine Scheduler</text>
+  <text x="672.0" y="214.0" class="lbl" text-anchor="middle">จับ goroutine หลายพันลงเธรด</text>
+  <text x="672.0" y="234.0" class="mono10" text-anchor="middle">โยงตอน 18 (process/thread)</text>
+  <rect x="24.0" y="276.0" width="772.0" height="44.0" rx="8.0" class="band"/>
+  <text x="410.0" y="298.0" class="btitle" text-anchor="middle">Kernel / OS — thread, virtual memory, syscall (ตอน 18–20)</text>
+  <text x="410.0" y="314.0" class="lbl" text-anchor="middle">runtime เป็นชั้นกลาง: กินบริการของ kernel ให้เรา แต่ให้ API ระดับสูงกลับมา</text>
+  <text x="24.0" y="344.0" class="lblg">ทุกกล่องสีในภาพทำงาน 'ใต้ก้น' โปรแกรมพร้อมกัน — และถูกคอมไพล์เข้าไปในไบนารีตัวเดียวกัน</text>
+  <text x="24.0" y="364.0" class="lbl">ค่าเริ่มต้นจากเครื่องนี้: GOMAXPROCS = 4 · NumCPU = 4 · go version go1.24.4 linux/arm64</text>
+  <text x="24.0" y="386.0" class="lbl">go version go1.24.4 linux/arm64 · Linux 6.18.39+rpt-rpi-2712 aarch64 · 2026-10-06</text>
+</svg>

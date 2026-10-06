@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 500" width="840" height="500" role="img" aria-label="goroutine M:N scheduler">
+  <style>
+    text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 12.5px; fill: #1a1a1a; }
+    .hdr { font-weight: 700; font-size: 19px; }
+    .sub { fill: #57606a; font-size: 12.5px; }
+    .btitle { font-weight: 700; font-size: 12.5px; }
+    .lbl { fill: #57606a; font-size: 11.5px; }
+    .lblb { fill: #0550ae; font-size: 11.5px; font-weight: 700; }
+    .lblg { fill: #1a7f37; font-size: 11.5px; font-weight: 700; }
+    .lblr { fill: #cf222e; font-size: 11.5px; font-weight: 700; }
+    .mono { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 11.5px; }
+    .mono10 { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 10px; fill: #57606a; }
+    .monob { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 11.5px; font-weight: 700; fill: #0550ae; }
+    .band { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.2; }
+    .bandw { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.2; }
+    .bandc { fill: #eef4ff; stroke: #0969da; stroke-width: 1.6; }
+    .bandg { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.4; }
+    .bandy { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.4; }
+    .bandr { fill: #fff0f0; stroke: #cf222e; stroke-width: 1.4; }
+    .bandk { fill: #e8e8e8; stroke: #1a1a1a; stroke-width: 1.4; }
+    .arrow { stroke: #57606a; stroke-width: 1.8; fill: none; }
+    .arrowb { stroke: #0550ae; stroke-width: 2; fill: none; }
+    .arrowg { stroke: #1a7f37; stroke-width: 2; fill: none; }
+  </style>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#57606a"/>
+    </marker>
+    <marker id="ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#0550ae"/>
+    </marker>
+    <marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#1a7f37"/>
+    </marker>
+  </defs>
+  <text x="24.0" y="32.0" class="hdr">M:N scheduler — goroutine หลายพันบนเธรดระบบแค่ไม่กี่ตัว</text>
+  <text x="24.0" y="54.0" class="sub">G = goroutine · M = OS thread (ของจริงจาก kernel) · P = processor (มีเท่า GOMAXPROCS)</text>
+  <text x="24.0" y="88.0" class="btitle">G — goroutine (งานของเรา)</text>
+  <rect x="24.0" y="100.0" width="210.0" height="24.0" rx="8.0" class="bandc"/>
+  <text x="36.0" y="116.0" class="mono">G1  · งานที่ 1</text>
+  <rect x="24.0" y="128.0" width="210.0" height="24.0" rx="8.0" class="bandc"/>
+  <text x="36.0" y="144.0" class="mono">G2  · งานที่ 2</text>
+  <rect x="24.0" y="156.0" width="210.0" height="24.0" rx="8.0" class="bandc"/>
+  <text x="36.0" y="172.0" class="mono">G3  · งานที่ 3</text>
+  <rect x="24.0" y="184.0" width="210.0" height="24.0" rx="8.0" class="bandc"/>
+  <text x="36.0" y="200.0" class="mono">G4  · งานที่ 4</text>
+  <rect x="24.0" y="212.0" width="210.0" height="24.0" rx="8.0" class="bandc"/>
+  <text x="36.0" y="228.0" class="mono">G5  · งานที่ 5</text>
+  <rect x="24.0" y="240.0" width="210.0" height="24.0" rx="8.0" class="bandw"/>
+  <text x="36.0" y="256.0" class="mono10">...อีก 4,995 ตัว</text>
+  <text x="300.0" y="88.0" class="btitle">P — processor</text>
+  <rect x="300.0" y="100.0" width="150.0" height="24.0" rx="8.0" class="bandy"/>
+  <text x="312.0" y="116.0" class="mono">P0</text>
+  <rect x="300.0" y="128.0" width="150.0" height="24.0" rx="8.0" class="bandy"/>
+  <text x="312.0" y="144.0" class="mono">P1</text>
+  <rect x="300.0" y="156.0" width="150.0" height="24.0" rx="8.0" class="bandy"/>
+  <text x="312.0" y="172.0" class="mono">P2</text>
+  <rect x="300.0" y="184.0" width="150.0" height="24.0" rx="8.0" class="bandy"/>
+  <text x="312.0" y="200.0" class="mono">P3</text>
+  <text x="300.0" y="232.0" class="lblb">= GOMAXPROCS = 4</text>
+  <text x="520.0" y="88.0" class="btitle">M — OS thread</text>
+  <rect x="520.0" y="100.0" width="140.0" height="24.0" rx="8.0" class="bandg"/>
+  <text x="532.0" y="116.0" class="mono">M0 → CPU core</text>
+  <rect x="520.0" y="128.0" width="140.0" height="24.0" rx="8.0" class="bandg"/>
+  <text x="532.0" y="144.0" class="mono">M1 → CPU core</text>
+  <rect x="520.0" y="156.0" width="140.0" height="24.0" rx="8.0" class="bandg"/>
+  <text x="532.0" y="172.0" class="mono">M2 → CPU core</text>
+  <rect x="520.0" y="184.0" width="140.0" height="24.0" rx="8.0" class="bandg"/>
+  <text x="532.0" y="200.0" class="mono">M3 → CPU core</text>
+  <path d="M 234.0 128.0 L 300.0 128.0" class="arrowb" marker-end="url(#ab)"/>
+  <path d="M 450.0 128.0 L 520.0 128.0" class="arrowb" marker-end="url(#ab)"/>
+  <rect x="24.0" y="292.0" width="792.0" height="124.0" rx="8.0" class="bandc"/>
+  <text x="38.0" y="318.0" class="lblb">ผลจริงจากเครื่องนี้ (03_goroutines) — G ทั้งหมดถูกจัดลง P ไม่กี่ตัว:</text>
+  <text x="38.0" y="340.0" class="lbl">spawn goroutine 5000 ตัวพร้อมกัน → NumGoroutine = 5001 ตัว (ทุกตัวมีชีวิตอยู่พร้อมกัน)</text>
+  <text x="38.0" y="358.0" class="lbl">เธรดที่รันโค้ด Go พร้อมกันมีแค่ GOMAXPROCS = 4 ตัว (บน CPU 4 คอร์)</text>
+  <text x="38.0" y="376.0" class="lbl">หน่วยความจำที่เพิ่มขึ้นเพียง ≈ 0.62 KiB ต่อ goroutine หนึ่งตัว — ถูกกว่าสร้าง thread ระบบมาก</text>
+  <text x="38.0" y="394.0" class="lbl">เราบังคับ GOMAXPROCS = 1 ได้ และ goroutine ทั้ง 5000 ตัวก็ยังสร้าง/รันได้ครบ</text>
+  <text x="24.0" y="440.0" class="lblg">นี่คือหัวใจของ M:N — goroutine (N) จำนวนมหาศาลถูกจัดลง OS thread (M) เพียงไม่กี่ตัว โดยมี P เป็นตัวกลาง</text>
+  <text x="24.0" y="460.0" class="lbl">โยงตอน 18: thread จริงเป็นของหนัก (สร้าง/สลับมีค่าใช้จ่าย) — Go จึงสร้าง thread น้อย ๆ แต่มี goroutine เยอะ ๆ</text>
+  <text x="24.0" y="486.0" class="lbl">go version go1.24.4 linux/arm64 · Linux 6.18.39+rpt-rpi-2712 aarch64 · 2026-10-06</text>
+</svg>

@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 470" width="840" height="470" role="img" aria-label="tri-color mark and sweep">
+  <style>
+    text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 12.5px; fill: #1a1a1a; }
+    .hdr { font-weight: 700; font-size: 19px; }
+    .sub { fill: #57606a; font-size: 12.5px; }
+    .btitle { font-weight: 700; font-size: 12.5px; }
+    .lbl { fill: #57606a; font-size: 11.5px; }
+    .lblb { fill: #0550ae; font-size: 11.5px; font-weight: 700; }
+    .lblg { fill: #1a7f37; font-size: 11.5px; font-weight: 700; }
+    .lblr { fill: #cf222e; font-size: 11.5px; font-weight: 700; }
+    .mono { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 11.5px; }
+    .mono10 { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 10px; fill: #57606a; }
+    .monob { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 11.5px; font-weight: 700; fill: #0550ae; }
+    .band { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.2; }
+    .bandw { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.2; }
+    .bandc { fill: #eef4ff; stroke: #0969da; stroke-width: 1.6; }
+    .bandg { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.4; }
+    .bandy { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.4; }
+    .bandr { fill: #fff0f0; stroke: #cf222e; stroke-width: 1.4; }
+    .bandk { fill: #e8e8e8; stroke: #1a1a1a; stroke-width: 1.4; }
+    .arrow { stroke: #57606a; stroke-width: 1.8; fill: none; }
+    .arrowb { stroke: #0550ae; stroke-width: 2; fill: none; }
+    .arrowg { stroke: #1a7f37; stroke-width: 2; fill: none; }
+  </style>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#57606a"/>
+    </marker>
+    <marker id="ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#0550ae"/>
+    </marker>
+    <marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#1a7f37"/>
+    </marker>
+  </defs>
+  <text x="24.0" y="32.0" class="hdr">GC ของ Go: mark-and-sweep แบบ tri-color ที่ทำงาน 'ไปพร้อมกับโปรแกรม'</text>
+  <text x="24.0" y="54.0" class="sub">ขาว = ยังไม่ตรวจ · เทา = อยู่ในคิวจะตรวจลูก · ดำ = ตรวจครบแล้ว (และที่ยังขาว = ขยะ)</text>
+  <rect x="24.0" y="82.0" width="253.3" height="66.0" rx="8.0" class="bandw"/>
+  <text x="150.7" y="108.0" class="btitle" text-anchor="middle">ขาว (white)</text>
+  <text x="150.7" y="128.0" class="lbl" text-anchor="middle">ยังไม่ถูกตรวจ — ยังไม่รู้ชะตา</text>
+  <path d="M 277.3 115.0 L 293.3 115.0" class="arrowb" marker-end="url(#ab)"/>
+  <rect x="293.3" y="82.0" width="253.3" height="66.0" rx="8.0" class="bandy"/>
+  <text x="420.0" y="108.0" class="btitle" text-anchor="middle">เทา (gray)</text>
+  <text x="420.0" y="128.0" class="lbl" text-anchor="middle">อยู่ในคิว จะไล่ตรวจลูก</text>
+  <path d="M 546.7 115.0 L 562.7 115.0" class="arrowb" marker-end="url(#ab)"/>
+  <rect x="562.7" y="82.0" width="253.3" height="66.0" rx="8.0" class="bandk"/>
+  <text x="689.3" y="108.0" class="btitle" text-anchor="middle">ดำ (black)</text>
+  <text x="689.3" y="128.0" class="lbl" text-anchor="middle">ตรวจแล้ว ลูกถูกจัดคิวครบ</text>
+  <text x="24.0" y="176.0" class="btitle">ขั้นตอนในหนึ่งรอบ GC:</text>
+  <text x="24.0" y="198.0" class="lbl">1) STW ก้อนแรก (sweep termination): ปิด sweep รอบก่อนให้เรียบร้อย แล้วเตรียม root (global/stack) เริ่มรอบใหม่</text>
+  <text x="24.0" y="217.0" class="lbl">2) เทา → ดำ (concurrent mark): ตั้ง object จาก root เป็นเทา ไล่ pointer จัดลูกขาวเป็นเทา (คู่ขนานกับโปรแกรม)</text>
+  <text x="24.0" y="236.0" class="lbl">3) STW อีกครั้ง (mark termination): ปิดงาน mark ให้แน่นอน จึงเหลือ stop-the-world แค่หลักไมโครวินาที</text>
+  <text x="24.0" y="255.0" class="lbl">4) sweep: object ที่ยังเหลือ 'ขาว' = ไม่มีใครอ้างถึง → คืนหน่วยความจำกลับมาใช้ใหม่</text>
+  <rect x="24.0" y="288.0" width="792.0" height="108.0" rx="8.0" class="bandc"/>
+  <text x="38.0" y="312.0" class="lblb">บรรทัด gctrace จริงจากเครื่องนี้ (อ่านส่วน 'clock' ที่เป็นตัวเลข 3 ก้อน · แบ่ง 2 บรรทัดเพื่อการแสดงผล):</text>
+  <text x="38.0" y="334.0" class="mono10">gc 1 @0.000s 3%: 0.010+0.089+0.004 ms clock,</text>
+  <text x="38.0" y="350.0" class="mono10">0.042+0/0.037/0.12+0.018 ms cpu, 0-&gt;0-&gt;0 MB, 4 MB goal, 0 MB stacks, 0 MB globals, 4 P (forced)</text>
+  <text x="38.0" y="370.0" class="lbl">ตัวเลข 3 ก้อน = STW sweep termination + concurrent mark (ทำงานขนานกับโปรแกรม) + STW mark termination</text>
+  <text x="38.0" y="388.0" class="lblg">pause รวมทั้งโปรแกรมของภาพนี้ = 0.171 ms — ทั้งโปรแกรม! ไม่ใช่ต่อครั้ง</text>
+  <text x="24.0" y="424.0" class="lbl">ตัวเลข GC รอบ/เวลา ต่างกันได้ตามเครื่อง · กลไก tri-color และการลดขยะไม่แปรผัน</text>
+  <text x="24.0" y="456.0" class="lbl">go version go1.24.4 linux/arm64 · Linux 6.18.39+rpt-rpi-2712 aarch64 · 2026-10-06</text>
+</svg>
