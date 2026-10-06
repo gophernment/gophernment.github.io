@@ -1,5 +1,20 @@
 [
   {
+    "slug": "2026-10-06-cs-fundamentals-31-go-runtime-gc",
+    "title": "'GC/runtime ของ Go — ทุกอย่างที่เรียนมาบรรจบกัน (ตอนที่ 31)'",
+    "date": "2026-10-06",
+    "tags": [
+      "cs-fundamentals",
+      "go",
+      "runtime",
+      "garbage-collector",
+      "escape-analysis",
+      "goroutine",
+      "scheduler"
+    ],
+    "description": "ตอนที่ 31 ของคอร์ส CS Fundamentals — GC/runtime ของ Go: เปิดฝา runtime ที่ซ่อนใต้โปรแกรม Go ทุกตัว — escape analysis (stack vs heap), GC แบบ tri-color mark-and-sweep ที่ทำงานคู่ขนาน (GODEBUG=gctrace=1), goroutine scheduler โมเดล M:N (GOMAXPROCS/P/M) — โค้ด Go 5 โปรแกรม + 4 ภาพ SVG รันจริงบน Raspberry Pi 5"
+  },
+  {
     "slug": "2026-10-03-cs-fundamentals-30-codegen-assembly",
     "title": "'codegen → assembly — แปลงต้นไม้ให้เป็นโค้ดเครื่อง (ตอนที่ 30)'",
     "date": "2026-10-03",
