@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 556" width="1400" height="556" role="img" aria-label="แผนที่ 4 โปรเจกต์ capstone และความรู้ที่นํามาใช้">
+  <style>
+    text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 12.5px; fill: #1a1a1a; }
+    .hdr { font-weight: 700; font-size: 19px; }
+    .sub { fill: #57606a; font-size: 12.5px; }
+    .ctitle { font-weight: 700; font-size: 14px; }
+    .stars { font-weight: 700; font-size: 14px; fill: #bf8700; }
+    .lbl { fill: #57606a; font-size: 11.5px; }
+    .lb { fill: #0550ae; font-size: 11.5px; font-weight: 700; }
+    .lg { fill: #1a7f37; font-size: 11.5px; font-weight: 700; }
+    .txt { font-size: 11.5px; }
+    .txtb { font-size: 11.5px; font-weight: 700; }
+    .mono { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 11px; }
+    .band { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.2; }
+    .bandw { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.2; }
+    .bandc { fill: #eef4ff; stroke: #0969da; stroke-width: 1.6; }
+    .bandg { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.4; }
+    .hdr1 { fill: #0969da; }
+    .hdr2 { fill: #8250df; }
+    .hdr3 { fill: #1a7f37; }
+    .hdr4 { fill: #cf222e; }
+    .arrow { stroke: #57606a; stroke-width: 1.8; fill: none; }
+  </style>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#57606a"/>
+    </marker>
+  </defs>
+  <text x="30.0" y="40.0" class="hdr">capstone ตอนที่ 32 — 4 โปรเจกต์ และความรู้จาก 31 ตอนที่ไหลเข้ามา</text>
+  <text x="30.0" y="64.0" class="sub">เลือก 1 โปรเจกต์ · ทุกโปรเจกต์เริ่มจาก M0 ที่เป็นสคริปต์รันได้จริงในตอนนี้ · Go go1.24.4 · gcc 14.2.0 · QEMU 10.0.13 · รัน 2026-10-07</text>
+  <rect x="30.0" y="88.0" width="305.0" height="206.0" rx="10.0" class="bandw"/>
+  <rect x="30.0" y="88.0" width="305.0" height="36.0" rx="10.0" class="band"/>
+<rect x="30.0" y="88.0" width="305.0" height="8" rx="4" class="hdr1"/>
+  <text x="44.0" y="114.0" class="ctitle">1 · Shell</text>
+  <text x="321.0" y="114.0" class="stars" text-anchor="end">★★☆</text>
+  <text x="44.0" y="144.0" class="txt">สร้าง: shell ที่ใช้ได้จริง</text>
+  <text x="44.0" y="165.0" class="lbl">ใช้ความรู้: ตอน 19 (syscall)</text>
+  <text x="44.0" y="186.0" class="lbl">             ตอน 21 (ไฟล์ + shell)</text>
+  <text x="44.0" y="207.0" class="lb">พิสูจน์: เข้าใจ exec + PATH จริง</text>
+  <text x="44.0" y="228.0" class="lg">M0: builtin cd/pwd/help/exit</text>
+  <text x="44.0" y="249.0" class="lbl">M1+: pipe | redirect | &amp;</text>
+  <text x="44.0" y="278.0" class="lbl">เวลาประมาณ 8-12 ชั่วโมง</text>
+  <rect x="375.0" y="88.0" width="305.0" height="206.0" rx="10.0" class="bandw"/>
+  <rect x="375.0" y="88.0" width="305.0" height="36.0" rx="10.0" class="band"/>
+<rect x="375.0" y="88.0" width="305.0" height="8" rx="4" class="hdr2"/>
+  <text x="389.0" y="114.0" class="ctitle">2 · Mini-compiler</text>
+  <text x="666.0" y="114.0" class="stars" text-anchor="end">★★★</text>
+  <text x="389.0" y="144.0" class="txt">สร้าง: ต่อภาษาเองให้ครบวง</text>
+  <text x="389.0" y="165.0" class="lbl">ใช้ความรู้: ตอน 26-30 ทั้งชุด</text>
+  <text x="389.0" y="186.0" class="lbl">             lexer→parser→eval</text>
+  <text x="389.0" y="207.0" class="lb">พิสูจน์: แก้ toolchain ที่มีอยู่</text>
+  <text x="389.0" y="228.0" class="lg">M0: REPL รัน expr/let/if</text>
+  <text x="389.0" y="249.0" class="lbl">M1+: while + ฟังก์ชัน + codegen</text>
+  <text x="389.0" y="278.0" class="lbl">เวลาประมาณ 15-25 ชั่วโมง</text>
+  <rect x="720.0" y="88.0" width="305.0" height="206.0" rx="10.0" class="bandw"/>
+  <rect x="720.0" y="88.0" width="305.0" height="36.0" rx="10.0" class="band"/>
+<rect x="720.0" y="88.0" width="305.0" height="8" rx="4" class="hdr3"/>
+  <text x="734.0" y="114.0" class="ctitle">3 · Tetris (terminal)</text>
+  <text x="1011.0" y="114.0" class="stars" text-anchor="end">★★☆</text>
+  <text x="734.0" y="144.0" class="txt">สร้าง: เกมเล่นได้จริงบนจอ</text>
+  <text x="734.0" y="165.0" class="lbl">ใช้ความรู้: ตอน 18-19 (syscall)</text>
+  <text x="734.0" y="186.0" class="lbl">             ตอน 26, 28 (state machine)</text>
+  <text x="734.0" y="207.0" class="lb">พิสูจน์: แยกตรรกะออกจากจอได้</text>
+  <text x="734.0" y="228.0" class="lg">M0: gravity+a/d/q+หมุน+ลบแถว+คะแนน</text>
+  <text x="734.0" y="249.0" class="lbl">M1+: 7 ชิ้น+seed · hold/next · เมนู</text>
+  <text x="734.0" y="278.0" class="lbl">เวลาประมาณ 10-15 ชั่วโมง</text>
+  <rect x="1065.0" y="88.0" width="305.0" height="206.0" rx="10.0" class="bandw"/>
+  <rect x="1065.0" y="88.0" width="305.0" height="36.0" rx="10.0" class="band"/>
+<rect x="1065.0" y="88.0" width="305.0" height="8" rx="4" class="hdr4"/>
+  <text x="1079.0" y="114.0" class="ctitle">4 · Mini-kernel</text>
+  <text x="1356.0" y="114.0" class="stars" text-anchor="end">★★★★</text>
+  <text x="1079.0" y="144.0" class="txt">สร้าง: boot บน bare metal</text>
+  <text x="1079.0" y="165.0" class="lbl">ใช้ความรู้: ตอน 12 (assembly)</text>
+  <text x="1079.0" y="186.0" class="lbl">             ตอน 19-20 (kernel/MMU)</text>
+  <text x="1079.0" y="207.0" class="lb">พิสูจน์: คุมฮาร์ดแวร์เองได้</text>
+  <text x="1079.0" y="228.0" class="lg">M0: UART พิมพ์ข้อความ</text>
+  <text x="1079.0" y="249.0" class="lbl">M1+: รับ input + exception</text>
+  <text x="1079.0" y="278.0" class="lbl">เวลาประมาณ 30-50 ชั่วโมง</text>
+  <path d="M 182.5 298.0 L 182.5 324.0" class="arrow" marker-end="url(#a)"/>
+  <path d="M 527.5 298.0 L 527.5 324.0" class="arrow" marker-end="url(#a)"/>
+  <path d="M 872.5 298.0 L 872.5 324.0" class="arrow" marker-end="url(#a)"/>
+  <path d="M 1217.5 298.0 L 1217.5 324.0" class="arrow" marker-end="url(#a)"/>
+  <rect x="30.0" y="330.0" width="1340.0" height="130.0" rx="10.0" class="bandc"/>
+  <text x="48.0" y="354.0" class="txtb">พื้นฐานร่วมที่ทั้ง 4 โปรเจกต์ใช้ (จาก 31 ตอนที่ผ่านมา)</text>
+  <rect x="38.0" y="370.0" width="320.0" height="30.0" rx="8.0" class="bandw"/>
+  <text x="198.0" y="390.0" class="txt" text-anchor="middle">หน่วยความจำ + pointer (ตอน 14-16)</text>
+  <rect x="383.0" y="370.0" width="320.0" height="30.0" rx="8.0" class="bandw"/>
+  <text x="543.0" y="390.0" class="txt" text-anchor="middle">process/thread + คิว (ตอน 18)</text>
+  <rect x="728.0" y="370.0" width="320.0" height="30.0" rx="8.0" class="bandw"/>
+  <text x="888.0" y="390.0" class="txt" text-anchor="middle">syscall: user ↔ kernel (ตอน 19)</text>
+  <rect x="1073.0" y="370.0" width="320.0" height="30.0" rx="8.0" class="bandw"/>
+  <text x="1233.0" y="390.0" class="txt" text-anchor="middle">virtual memory + paging (ตอน 20)</text>
+  <rect x="38.0" y="410.0" width="320.0" height="30.0" rx="8.0" class="bandw"/>
+  <text x="198.0" y="430.0" class="txt" text-anchor="middle">ไฟล์ + shell (ตอน 21)</text>
+  <rect x="383.0" y="410.0" width="320.0" height="30.0" rx="8.0" class="bandw"/>
+  <text x="543.0" y="430.0" class="txt" text-anchor="middle">ออโตมาตา + P/NP (ตอน 22-25)</text>
+  <rect x="728.0" y="410.0" width="320.0" height="30.0" rx="8.0" class="bandw"/>
+  <text x="888.0" y="430.0" class="txt" text-anchor="middle">lexer→parser→codegen (ตอน 26-30)</text>
+  <rect x="1073.0" y="410.0" width="320.0" height="30.0" rx="8.0" class="bandw"/>
+  <text x="1233.0" y="430.0" class="txt" text-anchor="middle">runtime + GC ของ Go (ตอน 31)</text>
+  <rect x="30.0" y="478.0" width="1340.0" height="58.0" rx="10.0" class="bandg"/>
+  <text x="48.0" y="501.0" class="txtb">หลักฐานจากผลรันจริง (out/):</text>
+  <text x="300.0" y="501.0" class="mono">shell exit code = 3</text>
+  <text x="562.0" y="501.0" class="mono">tetris: ลบ 1 แถว · score 100</text>
+  <text x="824.0" y="501.0" class="mono">kernel: EL1 · entry 0x40080000</text>
+  <text x="1086.0" y="501.0" class="mono">go test: PASS 17 · 3 แพ็กเกจ</text>
+  <text x="48.0" y="522.0" class="lbl">เครื่อง Raspberry Pi 5 (aarch64) · วันที่รัน 2026-10-07 · .bss ของ kernel = 8 ไบต์ · โมเดลความกว้าง: ไทย 0.66em · อังกฤษ 0.55em · mono 0.60em</text>
+</svg>

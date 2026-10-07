@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 596" width="1400" height="596" role="img" aria-label="ตัวอย่าง milestone roadmap จาก M0 ถึง M4">
+  <style>
+    text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 12.5px; fill: #1a1a1a; }
+    .hdr { font-weight: 700; font-size: 19px; }
+    .sub { fill: #57606a; font-size: 12.5px; }
+    .ctitle { font-weight: 700; font-size: 14px; }
+    .stars { font-weight: 700; font-size: 14px; fill: #bf8700; }
+    .lbl { fill: #57606a; font-size: 11.5px; }
+    .lb { fill: #0550ae; font-size: 11.5px; font-weight: 700; }
+    .lg { fill: #1a7f37; font-size: 11.5px; font-weight: 700; }
+    .txt { font-size: 11.5px; }
+    .txtb { font-size: 11.5px; font-weight: 700; }
+    .mono { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 11px; }
+    .band { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.2; }
+    .bandw { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.2; }
+    .bandc { fill: #eef4ff; stroke: #0969da; stroke-width: 1.6; }
+    .bandg { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.4; }
+    .hdr1 { fill: #0969da; }
+    .hdr2 { fill: #8250df; }
+    .hdr3 { fill: #1a7f37; }
+    .hdr4 { fill: #cf222e; }
+    .arrow { stroke: #57606a; stroke-width: 1.8; fill: none; }
+  </style>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#57606a"/>
+    </marker>
+  </defs>
+  <text x="30.0" y="40.0" class="hdr">ตัวอย่าง roadmap: จาก M0 (สคริปต์ที่รันได้แล้ว) ไป M4 — ยกตัวอย่างโปรเจกต์ Shell</text>
+  <text x="30.0" y="64.0" class="sub">M0 มีให้แล้วในตอนนี้ · แต่ละ M ถัดไปเพิ่มความสามารถหนึ่งชั้น · Go go1.24.4 · gcc 14.2.0 · QEMU 10.0.13 · รัน 2026-10-07</text>
+  <rect x="30.0" y="96.0" width="246.0" height="316.0" rx="10.0" class="bandg"/>
+  <text x="44.0" y="124.0" class="ctitle">M0</text>
+  <text x="69.4" y="124.0" class="lbl">· Starter (มีแล้ว)</text>
+  <text x="44.0" y="156.0" class="txt">• วงวน REPL อ่านคำสั่ง</text>
+  <text x="44.0" y="178.0" class="txt">• builtin: cd / pwd / help / exit</text>
+  <text x="44.0" y="200.0" class="txt">• exec คำสั่งภายนอก + PATH</text>
+  <text x="44.0" y="222.0" class="txt">• ต่อ stdin/stdout/stderr</text>
+  <text x="44.0" y="244.0" class="txt">• คืน exit code ให้ shell พ่อ</text>
+  <rect x="40.0" y="346.0" width="226.0" height="54.0" rx="8.0" class="band"/>
+  <text x="50.0" y="366.0" class="lb">พิสูจน์:</text>
+  <text x="50.0" y="384.0" class="txt">foundation ใช้ได้จริง</text>
+  <path d="M 279.0 254.0 L 299.0 254.0" class="arrow" marker-end="url(#a)"/>
+  <rect x="302.0" y="96.0" width="246.0" height="316.0" rx="10.0" class="bandw"/>
+  <text x="316.0" y="124.0" class="ctitle">M1</text>
+  <text x="341.4" y="124.0" class="lbl">· ตัวตัดคำของ shell</text>
+  <text x="316.0" y="156.0" class="txt">• รองรับ quote: "a b"</text>
+  <text x="316.0" y="178.0" class="txt">• รองรับ pipe:  cmd | cmd</text>
+  <text x="316.0" y="200.0" class="txt">• แยก fd แล้วต่อท่อเข้าหากัน</text>
+  <text x="316.0" y="222.0" class="txt">• ปิดท่อทุกอันด้วย defer</text>
+  <text x="316.0" y="244.0" class="txt">• กัน fd รั่ว (fd leak)</text>
+  <rect x="312.0" y="346.0" width="226.0" height="54.0" rx="8.0" class="band"/>
+  <text x="322.0" y="366.0" class="lb">พิสูจน์:</text>
+  <text x="322.0" y="384.0" class="txt">เข้าใจ pipe ระดับ fd</text>
+  <path d="M 551.0 254.0 L 571.0 254.0" class="arrow" marker-end="url(#a)"/>
+  <rect x="574.0" y="96.0" width="246.0" height="316.0" rx="10.0" class="bandw"/>
+  <text x="588.0" y="124.0" class="ctitle">M2</text>
+  <text x="613.4" y="124.0" class="lbl">· redirect + background</text>
+  <text x="588.0" y="156.0" class="txt">• &gt; &gt;&gt; &lt; : ผูกไฟล์กับ fd</text>
+  <text x="588.0" y="178.0" class="txt">• 2&gt; : แยก error ออก</text>
+  <text x="588.0" y="200.0" class="txt">• &amp; : รันเบื้องหลัง</text>
+  <text x="588.0" y="222.0" class="txt">• wait / job control</text>
+  <text x="588.0" y="244.0" class="txt">• เก็บ PID ของลูกทุกตัว</text>
+  <rect x="584.0" y="346.0" width="226.0" height="54.0" rx="8.0" class="band"/>
+  <text x="594.0" y="366.0" class="lb">พิสูจน์:</text>
+  <text x="594.0" y="384.0" class="txt">เข้าใจ fd table จริง</text>
+  <path d="M 823.0 254.0 L 843.0 254.0" class="arrow" marker-end="url(#a)"/>
+  <rect x="846.0" y="96.0" width="246.0" height="316.0" rx="10.0" class="bandw"/>
+  <text x="860.0" y="124.0" class="ctitle">M3</text>
+  <text x="885.4" y="124.0" class="lbl">· สถานะของ shell</text>
+  <text x="860.0" y="156.0" class="txt">• ตัวแปรของ shell (VAR=1)</text>
+  <text x="860.0" y="178.0" class="txt">• export ไปหาลูก</text>
+  <text x="860.0" y="200.0" class="txt">• $? $0 $1 แทนค่าได้</text>
+  <text x="860.0" y="222.0" class="txt">• รันไฟล์สคริปต์</text>
+  <text x="860.0" y="244.0" class="txt">• คืน code 127 เมื่อหาไม่เจอ</text>
+  <rect x="856.0" y="346.0" width="226.0" height="54.0" rx="8.0" class="band"/>
+  <text x="866.0" y="374.0" class="lb">พิสูจน์: คุม process env ได้</text>
+  <path d="M 1095.0 254.0 L 1115.0 254.0" class="arrow" marker-end="url(#a)"/>
+  <rect x="1118.0" y="96.0" width="246.0" height="316.0" rx="10.0" class="bandc"/>
+  <text x="1132.0" y="124.0" class="ctitle">M4</text>
+  <text x="1157.4" y="124.0" class="lbl">· ใช้จริงทุกวัน</text>
+  <text x="1132.0" y="156.0" class="txt">• ประวัติคำสั่ง + ลูกศรขึ้น</text>
+  <text x="1132.0" y="178.0" class="txt">• tab completion</text>
+  <text x="1132.0" y="200.0" class="txt">• อ่าน ~/.shellrc</text>
+  <text x="1132.0" y="222.0" class="txt">• alias</text>
+  <text x="1132.0" y="244.0" class="txt">• ทดสอบด้วย go test ครบ</text>
+  <rect x="1128.0" y="346.0" width="226.0" height="54.0" rx="8.0" class="band"/>
+  <text x="1138.0" y="366.0" class="lb">พิสูจน์:</text>
+  <text x="1138.0" y="384.0" class="txt">เอาไปใช้แทนได้จริง</text>
+  <rect x="30.0" y="436.0" width="1340.0" height="128.0" rx="10.0" class="band"/>
+  <text x="48.0" y="461.0" class="txtb">M0 ของทั้ง 4 โปรเจกต์ (สิ่งที่สคริปต์ในตอนนี้ทำให้แล้ว)</text>
+  <rect x="38.0" y="476.0" width="312.0" height="34.0" rx="8.0" class="bandw"/>
+  <text x="50.0" y="498.0" class="txtb">Shell</text>
+  <text x="342.0" y="498.0" class="lbl" text-anchor="end">REPL + builtin + exec</text>
+  <rect x="375.0" y="476.0" width="312.0" height="34.0" rx="8.0" class="bandw"/>
+  <text x="387.0" y="498.0" class="txtb">Mini-compiler</text>
+  <text x="679.0" y="498.0" class="lbl" text-anchor="end">REPL รัน expr/let/if</text>
+  <rect x="712.0" y="476.0" width="312.0" height="34.0" rx="8.0" class="bandw"/>
+  <text x="724.0" y="498.0" class="txtb">Tetris</text>
+  <text x="1016.0" y="498.0" class="lbl" text-anchor="end">gravity+หมุน+ลบแถว+คะแนน</text>
+  <rect x="1049.0" y="476.0" width="312.0" height="34.0" rx="8.0" class="bandw"/>
+  <text x="1061.0" y="498.0" class="txtb">Mini-kernel</text>
+  <text x="1353.0" y="498.0" class="lbl" text-anchor="end">UART พิมพ์ข้อความ</text>
+  <text x="48.0" y="536.0" class="mono">หลักฐานรันจริง: tetris ลบแถวได้ 1 (score 100 จาก 4 ชิ้น) · kernel บูตแล้วรายงาน EL1 · shell ส่ง exit code 3 · kernel entry 0x40080000 · .bss 8 ไบต์</text>
+  <text x="48.0" y="554.0" class="lbl">ผลดิบทั้งหมดอยู่ใน course/code/ep32/out/ — ตัวเลขทุกตัวในภาพนี้ดึงมาจากที่นั่นโดยตรง</text>
+</svg>
