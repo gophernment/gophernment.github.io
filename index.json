@@ -1,5 +1,22 @@
 [
   {
+    "slug": "2026-10-07-cs-fundamentals-32-capstone-project",
+    "title": "'Capstone project — รวมทุกอย่างที่เรียนมาเป็นของชิ้นเดียว (ตอนที่ 32)'",
+    "date": "2026-10-07",
+    "tags": [
+      "cs-fundamentals",
+      "capstone",
+      "go",
+      "shell",
+      "compiler",
+      "tetris",
+      "kernel",
+      "qemu",
+      "bare-metal"
+    ],
+    "description": "ตอนที่ 32 ของคอร์ส CS Fundamentals — capstone project: รวมความรู้ 31 ตอนเป็นโปรเจกต์จริง 1 ใน 4 ตัวเลือก (shell / mini-compiler / tetris / mini-kernel) พร้อม M0 starter รันได้จริงครบทุกตัว + milestone roadmap — โค้ด Go 3 โปรแกรม + kernel bare-metal บูตบน QEMU รันจริงบน Raspberry Pi 5"
+  },
+  {
     "slug": "2026-10-06-cs-fundamentals-31-go-runtime-gc",
     "title": "'GC/runtime ของ Go — ทุกอย่างที่เรียนมาบรรจบกัน (ตอนที่ 31)'",
     "date": "2026-10-06",
