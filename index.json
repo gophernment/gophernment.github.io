@@ -1,5 +1,20 @@
 [
   {
+    "slug": "2026-10-08-cs-fundamentals-33-wrap-up-next-steps",
+    "title": "'สรุปหลักสูตร — ตอนนี้เรารู้แล้วว่าต้องทำอะไร (ตอนที่ 33)'",
+    "date": "2026-10-08",
+    "tags": [
+      "cs-fundamentals",
+      "wrap-up",
+      "roadmap",
+      "go",
+      "compiler",
+      "shell",
+      "kernel"
+    ],
+    "description": "ตอนที่ 33 (ตอนสุดท้าย) ของคอร์ส CS Fundamentals — สรุปเส้นทาง 32 ตอนทั้ง 8 ระยะเป็นแผนที่เดียว จากอ่าน hello world แล้วเห็นข้างใต้ ไปจนถึงเขียน compiler/shell/kernel เอง พร้อมทางไปต่อ 4 สายงานและทรัพยากรจริง — โค้ด Go + สแกนผลรันครบ 321 ไฟล์บน Raspberry Pi 5"
+  },
+  {
     "slug": "2026-10-07-cs-fundamentals-32-capstone-project",
     "title": "'Capstone project — รวมทุกอย่างที่เรียนมาเป็นของชิ้นเดียว (ตอนที่ 32)'",
     "date": "2026-10-07",
