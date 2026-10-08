@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 650" width="1400" height="650" role="img" aria-label="แผนที่ 8 ระยะ (ระยะ 0 + 7 ระยะของเนื้อหา) สู่ 33 ตอน">
+  <style>
+    text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 12.5px; fill: #1a1a1a; }
+    .hdr { font-weight: 700; font-size: 19px; }
+    .sub { fill: #57606a; font-size: 12.5px; }
+    .ctitle { font-weight: 700; font-size: 14px; }
+    .lbl { fill: #57606a; font-size: 11.5px; }
+    .lb { fill: #0550ae; font-size: 11.5px; font-weight: 700; }
+    .lg { fill: #1a7f37; font-size: 11.5px; font-weight: 700; }
+    .lp { fill: #8250df; font-size: 11.5px; font-weight: 700; }
+    .lr { fill: #cf222e; font-size: 11.5px; font-weight: 700; }
+    .txt { font-size: 11.5px; }
+    .txtb { font-size: 11.5px; font-weight: 700; }
+    .mono { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 11px; }
+    .monob { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 11px; font-weight: 700; fill: #0550ae; }
+    .band { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.2; }
+    .bandw { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.2; }
+    .bandc { fill: #eef4ff; stroke: #0969da; stroke-width: 1.6; }
+    .bandg { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.4; }
+    .hdr1 { fill: #0969da; }
+    .hdr2 { fill: #8250df; }
+    .hdr3 { fill: #1a7f37; }
+    .hdr4 { fill: #cf222e; }
+  </style>
+  <text x="30.0" y="40.0" class="hdr">จาก "hello world" ถึง "เขียน kernel เอง" — แผนที่ 33 ตอน</text>
+  <text x="30.0" y="64.0" class="sub">ระยะ 0 คือการเตรียมตัวก่อนออกเดินทาง · ระยะ 1–7 คือ 7 ระยะของเนื้อหา · Go 1.24.4 · gcc 14.2.0 · Raspberry Pi 5 (aarch64) · รัน 2026-10-08</text>
+  <rect x="30.0" y="82.0" width="1340.0" height="46.0" rx="10.0" class="band"/>
+  <text x="48.0" y="111.0" class="txtb">ระยะ 0 · ปฐมนิเทศ (ตอน 01–02)</text>
+  <text x="360.0" y="111.0" class="lbl">ทำไมต้องรู้พื้นฐานที่แท้จริง · ตั้งเครื่องมือ Go · วิธีเรียนแบบ สร้าง→พัง→อ่าน→สร้างใหม่</text>
+  <rect x="30.0" y="146.0" width="320.0" height="190.0" rx="10.0" class="bandw"/>
+<rect x="30.0" y="146.0" width="320.0" height="6" rx="3" class="hdr1"/>
+  <text x="44.0" y="174.0" class="ctitle">ระยะ 1 · Go (03–07)</text>
+  <text x="44.0" y="194.0" class="lbl">บทบาท: ภาษาที่ใช้คิดและลงมือ</text>
+  <text x="44.0" y="220.0" class="txt">• 03 hello world → 04 เงื่อนไข/ลูป</text>
+  <text x="44.0" y="242.0" class="txt">• 05 ฟังก์ชัน → 06 slice/map/struct</text>
+  <text x="44.0" y="264.0" class="txt">• 07 อ่าน/เขียนไฟล์ · CLI · error</text>
+  <rect x="40.0" y="302.0" width="300.0" height="26.0" rx="6.0" class="band"/>
+  <text x="50.0" y="320.0" class="lb">ได้: อ่าน/เขียนโปรแกรมเป็น</text>
+  <rect x="370.0" y="146.0" width="320.0" height="190.0" rx="10.0" class="bandw"/>
+<rect x="370.0" y="146.0" width="320.0" height="6" rx="3" class="hdr2"/>
+  <text x="384.0" y="174.0" class="ctitle">ระยะ 2 · Computer Org (08–12)</text>
+  <text x="384.0" y="194.0" class="lbl">บทบาท: เครื่องคิดยังไง</text>
+  <text x="384.0" y="220.0" class="txt">• 08 เลขฐานสอง → 09 gate→ALU</text>
+  <text x="384.0" y="242.0" class="txt">• 10 flip-flop→register→RAM</text>
+  <text x="384.0" y="264.0" class="txt">• 11 fetch-decode-execute · 12 asm</text>
+  <rect x="380.0" y="302.0" width="300.0" height="26.0" rx="6.0" class="band"/>
+  <text x="390.0" y="320.0" class="lp">ได้: เห็นชั้นล่างของเครื่อง</text>
+  <rect x="710.0" y="146.0" width="320.0" height="190.0" rx="10.0" class="bandw"/>
+<rect x="710.0" y="146.0" width="320.0" height="6" rx="3" class="hdr3"/>
+  <text x="724.0" y="174.0" class="ctitle">ระยะ 3 · C + หน่วยความจำ (13–17)</text>
+  <text x="724.0" y="194.0" class="lbl">บทบาท: หน่วยความจำคืออะไร</text>
+  <text x="724.0" y="220.0" class="txt">• 13 C เทียบ Go → 14 pointer/array</text>
+  <text x="724.0" y="242.0" class="txt">• 15 stack/heap · calling convention</text>
+  <text x="724.0" y="264.0" class="txt">• 16 malloc/free · overflow · 17 link</text>
+  <rect x="720.0" y="302.0" width="300.0" height="26.0" rx="6.0" class="band"/>
+  <text x="730.0" y="320.0" class="lg">ได้: เข้าใจที่อยู่ + ความปลอดภัย</text>
+  <rect x="1050.0" y="146.0" width="320.0" height="190.0" rx="10.0" class="bandw"/>
+<rect x="1050.0" y="146.0" width="320.0" height="6" rx="3" class="hdr4"/>
+  <text x="1064.0" y="174.0" class="ctitle">ระยะ 4 · ระบบปฏิบัติการ (18–21)</text>
+  <text x="1064.0" y="194.0" class="lbl">บทบาท: โปรแกรมรันบนอะไร</text>
+  <text x="1064.0" y="220.0" class="txt">• 18 process/thread (คิวงาน)</text>
+  <text x="1064.0" y="242.0" class="txt">• 19 syscall · 20 virtual memory/paging</text>
+  <text x="1064.0" y="264.0" class="txt">• 21 ระบบไฟล์ + shell จิ๋ว</text>
+  <rect x="1060.0" y="302.0" width="300.0" height="26.0" rx="6.0" class="band"/>
+  <text x="1070.0" y="320.0" class="lr">ได้: เห็นพรมแดน user ↔ kernel</text>
+  <rect x="30.0" y="360.0" width="320.0" height="190.0" rx="10.0" class="bandw"/>
+<rect x="30.0" y="360.0" width="320.0" height="6" rx="3" class="hdr1"/>
+  <text x="44.0" y="388.0" class="ctitle">ระยะ 5 · ทฤษฎีการคำนวณ (22–25)</text>
+  <text x="44.0" y="408.0" class="lbl">บทบาท: ขอบเขตที่ทำได้</text>
+  <text x="44.0" y="434.0" class="txt">• 22 finite automata/regex</text>
+  <text x="44.0" y="456.0" class="txt">• 23 pushdown automata/parsing</text>
+  <text x="44.0" y="478.0" class="txt">• 24 Turing/halting · 25 P/NP</text>
+  <rect x="40.0" y="516.0" width="300.0" height="26.0" rx="6.0" class="band"/>
+  <text x="50.0" y="534.0" class="lb">ได้: รู้ว่าอะไร "ทำไม่ได้"</text>
+  <rect x="370.0" y="360.0" width="320.0" height="190.0" rx="10.0" class="bandw"/>
+<rect x="370.0" y="360.0" width="320.0" height="6" rx="3" class="hdr2"/>
+  <text x="384.0" y="388.0" class="ctitle">ระยะ 6 · Compiler/Interpreter (26–30)</text>
+  <text x="384.0" y="408.0" class="lbl">บทบาท: สร้างเครื่องมือเอง</text>
+  <text x="384.0" y="434.0" class="txt">• 26 lexer → 27 parser/AST</text>
+  <text x="384.0" y="456.0" class="txt">• 28 interpreter → 29 type/scope</text>
+  <text x="384.0" y="478.0" class="txt">• 30 codegen → assembly</text>
+  <rect x="380.0" y="516.0" width="300.0" height="26.0" rx="6.0" class="band"/>
+  <text x="390.0" y="534.0" class="lp">ได้: เขียนภาษาของตัวเอง</text>
+  <rect x="710.0" y="360.0" width="320.0" height="190.0" rx="10.0" class="bandw"/>
+<rect x="710.0" y="360.0" width="320.0" height="6" rx="3" class="hdr3"/>
+  <text x="724.0" y="388.0" class="ctitle">ระยะ 7 · Capstone (31–33)</text>
+  <text x="724.0" y="408.0" class="lbl">บทบาท: รวมทุกอย่างเป็นชิ้นเดียว</text>
+  <text x="724.0" y="434.0" class="txt">• 31 runtime/GC ของ Go</text>
+  <text x="724.0" y="456.0" class="txt">• 32 4 โปรเจกต์รันได้จริง</text>
+  <text x="724.0" y="478.0" class="txt">• 33 สรุป + ทางไปต่อ (ตอนนี้)</text>
+  <rect x="720.0" y="516.0" width="300.0" height="26.0" rx="6.0" class="band"/>
+  <text x="730.0" y="534.0" class="lg">ได้: ของจริง + แผนที่ในหัว</text>
+  <rect x="1050.0" y="360.0" width="320.0" height="190.0" rx="10.0" class="bandc"/>
+  <text x="1064.0" y="388.0" class="ctitle">และทั้งหมด "เชื่อมกัน"</text>
+  <text x="1064.0" y="408.0" class="lbl">เรื่องที่ดูแยกกันไม่ได้แยกจริง</text>
+  <text x="1064.0" y="434.0" class="mono">memory ↔ pointer ↔ syscall</text>
+  <text x="1064.0" y="456.0" class="mono">↔ virtual memory ↔ runtime</text>
+  <text x="1064.0" y="482.0" class="txt">ตัวอย่างจริงในตอนนี้:</text>
+  <text x="1064.0" y="502.0" class="txt">go run ./hello → compile → link → exec</text>
+  <rect x="1060.0" y="516.0" width="300.0" height="26.0" rx="6.0" class="band"/>
+  <text x="1070.0" y="534.0" class="lb">อ่านลิงก์นี้ให้ขึ้นใจ</text>
+  <rect x="30.0" y="576.0" width="1340.0" height="62.0" rx="10.0" class="bandg"/>
+  <text x="48.0" y="600.0" class="txtb">หลักฐานจากผลรันจริง (out/):</text>
+  <text x="300.0" y="600.0" class="mono">out/ เปิดเทียบได้ 20/21 ตอน (ep13 .. ep33) · 321 ไฟล์</text>
+  <text x="658.0" y="600.0" class="mono">capstone 4 โปรเจกต์ยังรันได้</text>
+  <text x="1016.0" y="600.0" class="mono">hello: runtime go1.24.4 · GOMAXPROCS 4 · NumCPU 4</text>
+  <text x="48.0" y="622.0" class="lbl">เครื่อง: Raspberry Pi 5 Model B Rev 1.0 · พื้นฐานที่แท้จริง = เข็มทิศ ไม่ใช่จุดหมาย</text>
+</svg>

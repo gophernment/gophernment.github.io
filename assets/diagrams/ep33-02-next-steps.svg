@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 636" width="1400" height="636" role="img" aria-label="ทางไปต่อ: 4 เส้นทางสายงาน และทรัพยากรที่อ้างอิงได้จริง">
+  <style>
+    text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 12.5px; fill: #1a1a1a; }
+    .hdr { font-weight: 700; font-size: 19px; }
+    .sub { fill: #57606a; font-size: 12.5px; }
+    .ctitle { font-weight: 700; font-size: 14px; }
+    .lbl { fill: #57606a; font-size: 11.5px; }
+    .lb { fill: #0550ae; font-size: 11.5px; font-weight: 700; }
+    .lg { fill: #1a7f37; font-size: 11.5px; font-weight: 700; }
+    .lp { fill: #8250df; font-size: 11.5px; font-weight: 700; }
+    .lr { fill: #cf222e; font-size: 11.5px; font-weight: 700; }
+    .txt { font-size: 11.5px; }
+    .txtb { font-size: 11.5px; font-weight: 700; }
+    .mono { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 11px; }
+    .monob { font-family: ui-monospace, "Noto Sans Mono", "DejaVu Sans Mono", monospace; font-size: 11px; font-weight: 700; fill: #0550ae; }
+    .band { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.2; }
+    .bandw { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.2; }
+    .bandc { fill: #eef4ff; stroke: #0969da; stroke-width: 1.6; }
+    .bandg { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.4; }
+    .hdr1 { fill: #0969da; }
+    .hdr2 { fill: #8250df; }
+    .hdr3 { fill: #1a7f37; }
+    .hdr4 { fill: #cf222e; }
+  </style>
+  <text x="30.0" y="40.0" class="hdr">ทางไปต่อ — 4 เส้นทาง เลือกตามคำถามว่า "ฉันอยากแก้ปัญหาชนิดไหน"</text>
+  <text x="30.0" y="64.0" class="sub">ทุกเส้นทางใช้พื้นฐานชุดเดียวกันที่เรียนมา ต่างกันแค่ปลายทาง · Go 1.24.4 · gcc 14.2.0 · Raspberry Pi 5 (aarch64) · รัน 2026-10-08</text>
+  <rect x="30.0" y="84.0" width="320.0" height="214.0" rx="10.0" class="bandw"/>
+  <text x="44.0" y="112.0" class="ctitle">สาย Backend / Platform</text>
+  <text x="44.0" y="138.0" class="txtb">อ่านต่อ:</text>
+  <text x="44.0" y="159.0" class="txt">• OSTEP (บท virtualization</text>
+  <text x="44.0" y="180.0" class="txt">  + persistence)</text>
+  <text x="44.0" y="201.0" class="txt">• CS:APP บท 8–12</text>
+  <text x="44.0" y="222.0" class="txt">ฝึก: HTTP server, ฐานข้อมูล</text>
+  <text x="44.0" y="243.0" class="txt">      cache, คิวงาน, Docker</text>
+  <rect x="40.0" y="264.0" width="300.0" height="26.0" rx="6.0" class="band"/>
+  <text x="50.0" y="282.0" class="lb">ภาษา: Go (ต่อยอดได้ทันที)</text>
+  <rect x="370.0" y="84.0" width="320.0" height="214.0" rx="10.0" class="bandw"/>
+  <text x="384.0" y="112.0" class="ctitle">สาย Systems / OS</text>
+  <text x="384.0" y="138.0" class="txtb">อ่านต่อ:</text>
+  <text x="384.0" y="159.0" class="txt">• OSTEP ทั้งเล่ม</text>
+  <text x="384.0" y="180.0" class="txt">• OSDev wiki (ลงมือจริง)</text>
+  <text x="384.0" y="201.0" class="txt">• ศึกษา kernel จริง (Linux)</text>
+  <text x="384.0" y="222.0" class="txt">ฝึก: ต่อ kernel M1–M4</text>
+  <text x="384.0" y="243.0" class="txt">      driver, scheduler</text>
+  <rect x="380.0" y="264.0" width="300.0" height="26.0" rx="6.0" class="band"/>
+  <text x="390.0" y="282.0" class="lr">ภาษา: C + assembly</text>
+  <rect x="710.0" y="84.0" width="320.0" height="214.0" rx="10.0" class="bandw"/>
+  <text x="724.0" y="112.0" class="ctitle">สาย Embedded / IoT</text>
+  <text x="724.0" y="138.0" class="txtb">อ่านต่อ:</text>
+  <text x="724.0" y="159.0" class="txt">• CS:APP (หน่วยความจำ I/O)</text>
+  <text x="724.0" y="180.0" class="txt">• คู่มือชิป ARM/RISC-V</text>
+  <text x="724.0" y="201.0" class="txt">• reference manual ของบอร์ด</text>
+  <text x="724.0" y="222.0" class="txt">ฝึก: sensor, timer, UART,</text>
+  <text x="724.0" y="243.0" class="txt">      interrupt, bare metal</text>
+  <rect x="720.0" y="264.0" width="300.0" height="26.0" rx="6.0" class="band"/>
+  <text x="730.0" y="282.0" class="lg">ภาษา: C + asm (ARM/RISC-V)</text>
+  <rect x="1050.0" y="84.0" width="320.0" height="214.0" rx="10.0" class="bandw"/>
+  <text x="1064.0" y="112.0" class="ctitle">สาย Compiler / Language</text>
+  <text x="1064.0" y="138.0" class="txtb">อ่านต่อ:</text>
+  <text x="1064.0" y="159.0" class="txt">• Crafting Interpreters (ฟรี)</text>
+  <text x="1064.0" y="180.0" class="txt">• Writing an Interpreter in Go</text>
+  <text x="1064.0" y="201.0" class="txt">• Dragon Book (เชิงทฤษฎี)</text>
+  <text x="1064.0" y="222.0" class="txt">ฝึก: type system, GC,</text>
+  <text x="1064.0" y="243.0" class="txt">      optimize, JIT (จับคู่ตอน 31)</text>
+  <rect x="1060.0" y="264.0" width="300.0" height="26.0" rx="6.0" class="band"/>
+  <text x="1070.0" y="282.0" class="lp">ภาษา: Go หรือ C</text>
+  <rect x="30.0" y="322.0" width="1340.0" height="152.0" rx="10.0" class="band"/>
+  <text x="48.0" y="346.0" class="txtb">ทรัพยากรที่อ้างอิงได้จริง (ตรวจลิงก์ ณ วันที่เขียน)</text>
+  <rect x="30.0" y="362.0" width="430.0" height="48.0" rx="8.0" class="bandw"/>
+  <text x="42.0" y="382.0" class="txtb">Crafting Interpreters — Nystrom</text>
+  <text x="42.0" y="400.0" class="monob">craftinginterpreters.com (อ่านฟรี)</text>
+  <rect x="480.0" y="362.0" width="430.0" height="48.0" rx="8.0" class="bandw"/>
+  <text x="492.0" y="382.0" class="txtb">CS:APP 3e — Bryant &amp; O'Hallaron</text>
+  <text x="492.0" y="400.0" class="monob">csapp.cs.cmu.edu/3e</text>
+  <rect x="930.0" y="362.0" width="430.0" height="48.0" rx="8.0" class="bandw"/>
+  <text x="942.0" y="382.0" class="txtb">Operating Systems: Three Easy Pieces</text>
+  <text x="942.0" y="400.0" class="monob">ostep.org (PDF ฟรี)</text>
+  <rect x="30.0" y="418.0" width="430.0" height="48.0" rx="8.0" class="bandw"/>
+  <text x="42.0" y="438.0" class="txtb">nand2tetris — From Nand to Tetris</text>
+  <text x="42.0" y="456.0" class="monob">nand2tetris.org (ฟรี)</text>
+  <rect x="480.0" y="418.0" width="430.0" height="48.0" rx="8.0" class="bandw"/>
+  <text x="492.0" y="438.0" class="txtb">Writing an Interpreter in Go — Ball</text>
+  <text x="492.0" y="456.0" class="monob">interpreterbook.com</text>
+  <rect x="930.0" y="418.0" width="430.0" height="48.0" rx="8.0" class="bandw"/>
+  <text x="942.0" y="438.0" class="txtb">Go spec · Go blog · OSDev wiki</text>
+  <text x="942.0" y="456.0" class="monob">go.dev/ref/spec · wiki.osdev.org</text>
+  <rect x="30.0" y="496.0" width="1340.0" height="84.0" rx="10.0" class="bandc"/>
+  <text x="48.0" y="520.0" class="txtb">และสิ่งที่ควรทำก่อนอย่างอื่น: กลับไปทำให้ capstone จบ M1 → M4</text>
+  <rect x="48.0" y="534.0" width="205.0" height="32.0" rx="8.0" class="bandg"/>
+  <text x="150.5" y="554.0" class="txt" text-anchor="middle">เลือก 1 โปรเจกต์</text>
+  <rect x="269.0" y="534.0" width="205.0" height="32.0" rx="8.0" class="bandw"/>
+  <text x="371.5" y="554.0" class="txt" text-anchor="middle">M1</text>
+  <rect x="490.0" y="534.0" width="205.0" height="32.0" rx="8.0" class="bandw"/>
+  <text x="592.5" y="554.0" class="txt" text-anchor="middle">M2</text>
+  <rect x="711.0" y="534.0" width="205.0" height="32.0" rx="8.0" class="bandw"/>
+  <text x="813.5" y="554.0" class="txt" text-anchor="middle">M3</text>
+  <rect x="932.0" y="534.0" width="205.0" height="32.0" rx="8.0" class="bandw"/>
+  <text x="1034.5" y="554.0" class="txt" text-anchor="middle">M4</text>
+  <rect x="1153.0" y="534.0" width="205.0" height="32.0" rx="8.0" class="bandg"/>
+  <text x="1255.5" y="554.0" class="txt" text-anchor="middle">commit ทุกครั้งที่ผ่านด่าน</text>
+  <text x="30.0" y="620.0" class="lbl">รันซ้ำทุกอย่างในตอนนี้: bash course/code/ep33/run_all.sh · ตัวเลขทุกตัวในภาพนี้ดึงจาก out/ (ไม่พิมพ์จากความจำ)</text>
+</svg>
