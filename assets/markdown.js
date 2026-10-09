@@ -76,7 +76,7 @@ function renderMarkdown(md) {
       i++; // skip closing fence
       const code = escapeHtml(codeLines.join("\n"));
       const cls = lang ? ` class="language-${lang}"` : "";
-      html += `<pre><code${cls}>${code}</code></pre>\n`;
+      html += `<div class="codeblock"><button class="copy-btn" type="button" onclick="copyCode(this)">คัดลอก</button><pre><code${cls}>${code}</code></pre></div>\n`;
       continue;
     }
 
@@ -174,6 +174,31 @@ function formatThaiDate(iso) {
   if (!m) return iso || "";
   const [, y, mo, d] = m;
   return `${parseInt(d, 10)} ${THAI_MONTHS[parseInt(mo, 10) - 1]} ${y}`;
+}
+
+function copyCode(btn) {
+  const pre = btn.parentElement.querySelector("pre");
+  const text = pre ? pre.textContent : "";
+  const done = () => {
+    const orig = btn.textContent;
+    btn.textContent = "คัดลอกแล้ว ✓";
+    setTimeout(() => { btn.textContent = orig; }, 1600);
+  };
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(text).then(done).catch(() => fallbackCopy(text, done));
+  } else {
+    fallbackCopy(text, done);
+  }
+}
+
+function fallbackCopy(text, done) {
+  const ta = document.createElement("textarea");
+  ta.value = text;
+  document.body.appendChild(ta);
+  ta.select();
+  try { document.execCommand("copy"); } catch (e) {}
+  document.body.removeChild(ta);
+  done();
 }
 
 async function loadBlogPost() {

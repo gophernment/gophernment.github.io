@@ -183,6 +183,14 @@ int main(int argc, char **argv) {
 gcc -std=c17 -Wall -Wextra -Wpedantic -fno-stack-protector -o overflow_c overflow_c.c
 ```
 
+คำสั่งคอมไพล์นี้เหมือนกันทั้งสาม OS แต่**เกราะของแต่ละระบบแรงไม่เท่ากัน** ผลรันจึงต่างกัน:
+
+| OS | สิ่งที่ต้องมีก่อน | ผลตอนรัน `./overflow_c ABCDEFGH` |
+|---|---|---|
+| **Linux** | `gcc` (ติดมาอยู่แล้ว) | ล้นแบบเงียบ ๆ → `balance = 768` |
+| **macOS** | `gcc` (บน Mac คือ clang) | เกราะ PAC จับได้ → `trace trap`/`abort trap` — อยากเห็นตัวเลขต้องรันใน Docker/Linux VM |
+| **Windows** | ลง MinGW (`gcc`) หรือเปิด WSL ก่อน | เหมือน Linux → `balance = 768` |
+
 ไม่มี warning อะไรออกมาเลย (`exit code 0`) — **และนั่นคือประเด็น** คอมไพเลอร์ไม่รู้ว่า `input` จะยาวเท่าไร มันจึงเตือนไม่ได้ นี่คือหน้าที่ของ *คน* ไม่ใช่ของ tool
 
 รันด้วย input สามแบบ:

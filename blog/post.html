@@ -85,6 +85,22 @@ article.post { max-width: 720px; margin: 0 auto; padding: 24px 24px 80px; }
   font-size: 0.85em;
 }
 #post-root pre code { background: none; padding: 0; border-radius: 0; }
+.codeblock { position: relative; }
+.codeblock .copy-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  font-size: 0.75em;
+  line-height: 1;
+  padding: 5px 10px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: #ffffff;
+  color: var(--muted);
+  cursor: pointer;
+  font-family: inherit;
+}
+.codeblock .copy-btn:hover { color: var(--accent); border-color: var(--accent); background: var(--hover); }
 #post-root table { width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 0.9em; }
 #post-root th, #post-root td { text-align: left; padding: 8px 12px; border: 1px solid var(--border); }
 #post-root th { background: var(--hover); }
@@ -122,7 +138,7 @@ footer.site a:hover { text-decoration: underline; }
 <p>พัฒนาโดย HaveBit Co., Ltd.</p>
 </footer>
 
-<script src="/assets/markdown.js?v=3"></script>
+<script src="/assets/markdown.js?v=4"></script>
 <script>
   loadBlogPost().then(function () {
     if (typeof gtag === "function") {
