@@ -1,5 +1,18 @@
 [
   {
+    "slug": "2026-10-09-software-security-01-why-security-matters",
+    "title": "'ทำไมต้อง software security: ภัยเริ่มจากจุดที่เรา \"เชื่อ\" (ตอนที่ 01)'",
+    "date": "2026-10-09",
+    "tags": [
+      "software-security",
+      "security",
+      "trust",
+      "threat",
+      "vulnerability"
+    ],
+    "description": "ตอนที่ 01 ของคอร์ส Software Security — ปูพื้นคำศัพท์กลาง asset, trust, threat, vulnerability ผ่านภาพ trust boundary แล้วชี้ว่าภัยเกือบทั้งหมดเริ่มจากจุดที่โปรแกรมเชื่อมากเกินไป พร้อมหลักฐานจริง (Morris Worm 1988, CVE 48,185 รายการในปี 2025, XZ Utils backdoor) และเดโมรันจริงเทียบ C กับ Go"
+  },
+  {
     "slug": "2026-10-08-cs-fundamentals-33-wrap-up-next-steps",
     "title": "'สรุปหลักสูตร — ตอนนี้เรารู้แล้วว่าต้องทำอะไร (ตอนที่ 33)'",
     "date": "2026-10-08",
