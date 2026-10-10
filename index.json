@@ -1,5 +1,18 @@
 [
   {
+    "slug": "2026-10-10-software-security-02-morris-worm-1988",
+    "title": "'Morris Worm (1988): หนอนตัวแรกที่แพร่ทาง internet — และระบบ \"trust\" ที่ยังเป็นจุดอ่อน (ตอนที่ 02)'",
+    "date": "2026-10-10",
+    "tags": [
+      "software-security",
+      "security",
+      "morris-worm",
+      "buffer-overflow",
+      "password-attack"
+    ],
+    "description": "ตอนที่ 02 ของคอร์ส Software Security — แกะเหตุการณ์ Morris Worm (1988) หนอนตัวแรกที่แพร่ทาง internet: สี่เส้นทางโจมตี (buffer overflow ของ fingerd, sendmail debug mode, dictionary attack, .rhosts trust) เหตุผลที่ trust คือจุดอ่อน กำเนิด CERT/CC และ incident response พร้อมเดโมรันจริง (C buffer overflow + Go dictionary attack)"
+  },
+  {
     "slug": "2026-10-09-software-security-01-why-security-matters",
     "title": "'ทำไมต้อง software security: ภัยเริ่มจากจุดที่เรา \"เชื่อ\" (ตอนที่ 01)'",
     "date": "2026-10-09",
