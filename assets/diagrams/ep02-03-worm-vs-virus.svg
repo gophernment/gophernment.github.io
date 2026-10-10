@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 600" width="1040" height="600" role="img" aria-label="เปรียบเทียบ worm virus trojan และผลของเดโม dictionary attack ในตอนนี้">
+<style>
+text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 13px; fill: #1a1a1a; }
+.hdr { font-weight: 700; font-size: 17.5px; }
+.ptitle { font-weight: 700; font-size: 14.5px; }
+.sub { fill: #57606a; font-size: 12.5px; }
+.lbl { fill: #57606a; font-size: 11.5px; }
+.txt { font-size: 13px; }
+.small { fill: #57606a; font-size: 11px; }
+.mono { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12.5px; }
+.monob { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12.5px; font-weight: 700; fill: #0550ae; }
+.boxn { fill: #fdf2f2; stroke: #cf222e; stroke-width: 1.6; }
+.boxi { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.6; }
+.boxg { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.3; }
+.boxw { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.3; }
+.boxy { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.4; }
+.boxb { fill: #eef4ff; stroke: #0969da; stroke-width: 1.4; }
+.chipd { fill: #ffffff; stroke: #8250df; stroke-width: 1.2; }
+.wire { stroke: #57606a; stroke-width: 1.8; fill: none; }
+</style>
+<defs>
+<marker id="a-n" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#57606a"/></marker>
+<marker id="a-r" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#cf222e"/></marker>
+</defs>
+<rect x="0" y="0" width="1040" height="600" fill="#ffffff"/>
+<text class="hdr" x="520" y="36" text-anchor="middle">worm / virus / trojan ต่างกันตรงไหน — และ 1988 ยังจริงวันนี้แค่ไหน</text>
+<text class="sub" x="520" y="60" text-anchor="middle">ความต่างสำคัญคือ “แพร่ตัวเองได้หรือไม่” และ “ต้องมีคนสั่งไหม”</text>
+<rect class="boxg" x="40" y="96" width="210" height="34" rx="9"/>
+<text class="lbl" x="52" y="118">คุณสมบัติ</text>
+<rect class="boxb" x="250" y="96" width="230" height="34" rx="9"/>
+<text class="ptitle" x="365.0" y="118" text-anchor="middle">worm (หนอน)</text>
+<rect class="boxb" x="480" y="96" width="230" height="34" rx="9"/>
+<text class="ptitle" x="595.0" y="118" text-anchor="middle">virus (ไวรัส)</text>
+<rect class="boxb" x="710" y="96" width="290" height="34" rx="9"/>
+<text class="ptitle" x="855.0" y="118" text-anchor="middle">trojan (ม้าไม้)</text>
+<rect class="boxg" x="40" y="130" width="210" height="46" rx="9"/>
+<text class="lbl" x="52" y="158">แพร่ตัวเอง</text>
+<rect class="boxw" x="250" y="130" width="230" height="46" rx="9"/>
+<text class="txt" x="262" y="158">ได้เอง อัตโนมัติ</text>
+<rect class="boxw" x="480" y="130" width="230" height="46" rx="9"/>
+<text class="txt" x="492" y="158">ได้ แต่ต้องมีไฟล์ host</text>
+<rect class="boxw" x="710" y="130" width="290" height="46" rx="9"/>
+<text class="txt" x="722" y="158">ไม่ได้</text>
+<rect class="boxg" x="40" y="180" width="210" height="46" rx="9"/>
+<text class="lbl" x="52" y="208">ต้องมีไฟล์ host</text>
+<rect class="boxw" x="250" y="180" width="230" height="46" rx="9"/>
+<text class="txt" x="262" y="208">ไม่ (โปรแกรมเดี่ยว)</text>
+<rect class="boxw" x="480" y="180" width="230" height="46" rx="9"/>
+<text class="txt" x="492" y="208">ใช่ (ฝังในไฟล์/โปรแกรม)</text>
+<rect class="boxw" x="710" y="180" width="290" height="46" rx="9"/>
+<text class="txt" x="722" y="208">ไม่</text>
+<rect class="boxg" x="40" y="230" width="210" height="46" rx="9"/>
+<text class="lbl" x="52" y="258">ต้องมีคนสั่ง</text>
+<rect class="boxw" x="250" y="230" width="230" height="46" rx="9"/>
+<text class="txt" x="262" y="258">ไม่ (หลังติดครั้งแรก)</text>
+<rect class="boxw" x="480" y="230" width="230" height="46" rx="9"/>
+<text class="txt" x="492" y="258">ต้องเปิด/รันไฟล์ที่ติด</text>
+<rect class="boxw" x="710" y="230" width="290" height="46" rx="9"/>
+<text class="txt" x="722" y="258">ต้องหลอกให้รัน</text>
+<rect class="boxg" x="40" y="280" width="210" height="46" rx="9"/>
+<text class="lbl" x="52" y="308">รูปเหตุการณ์</text>
+<rect class="boxw" x="250" y="280" width="230" height="46" rx="9"/>
+<text class="txt" x="262" y="308">1 เครื่อง → หลายพัน</text>
+<rect class="boxw" x="480" y="280" width="230" height="46" rx="9"/>
+<text class="txt" x="492" y="308">แพร่ตามไฟล์ที่ถูกส่งต่อ</text>
+<rect class="boxw" x="710" y="280" width="290" height="46" rx="9"/>
+<text class="txt" x="722" y="308">1 ครั้ง = 1 เครื่อง</text>
+<rect class="boxi" x="40" y="348" width="960" height="176" rx="9"/>
+<text class="ptitle" x="56" y="380">เดโมของวันนี้ (ผลรันจริงจาก out/05_dict.txt)</text>
+<text class="txt" x="56" y="412">พจนานุกรม 15 คำ · ผู้ใช้ 6 คน → hash เก่า (ไม่มี salt) ถูกเจาะ 5 บัญชี</text>
+<text class="txt" x="56" y="440">เติม salt ต่อผู้ใช้: rainbow table ใช้ไม่ได้ แต่คำอ่อนยังถูกเจาะ 5 บัญชี (salt ไม่ใช่ความลับ)</text>
+<text class="txt" x="56" y="468">ใช้ KDF ช้า 20000 รอบ/ครั้ง: คำอ่อนยังเจาะได้ (5) แต่แพงขึ้นมาก · รหัสผ่านยาวไม่ซ้ำรอด 1 บัญชี</text>
+<text class="lbl" x="56" y="510">ข้อมูลรั่วโดยไม่ตั้งใจ: alice/frank มี hash เดียวกัน (ไม่มี salt) → เดาได้ทันทีว่ารหัสผ่านซ้ำกัน</text>
+<rect class="boxy" x="40" y="544" width="960" height="52" rx="9"/>
+<text class="txt" x="56" y="566">หลักการไม่เปลี่ยน: ระบบที่เชื่อรหัสผ่านสั้น ๆ, ให้ไฟล์อ่านได้ทุกคน, หรือเปิด debug ทิ้งไว้ =</text>
+<text class="txt" x="56" y="586">ช่องเดิมที่ยังเจอใน CWE/OWASP วันนี้</text>
+</svg>

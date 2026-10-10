@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 610" width="1040" height="610" role="img" aria-label="สี่เส้นทางการโจมตีของ Morris Worm: fingerd, sendmail, weak password, trust">
+<style>
+text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 13px; fill: #1a1a1a; }
+.hdr { font-weight: 700; font-size: 17.5px; }
+.ptitle { font-weight: 700; font-size: 14.5px; }
+.sub { fill: #57606a; font-size: 12.5px; }
+.lbl { fill: #57606a; font-size: 11.5px; }
+.txt { font-size: 13px; }
+.small { fill: #57606a; font-size: 11px; }
+.mono { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12.5px; }
+.monob { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12.5px; font-weight: 700; fill: #0550ae; }
+.boxn { fill: #fdf2f2; stroke: #cf222e; stroke-width: 1.6; }
+.boxi { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.6; }
+.boxg { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.3; }
+.boxw { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.3; }
+.boxy { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.4; }
+.boxb { fill: #eef4ff; stroke: #0969da; stroke-width: 1.4; }
+.chipd { fill: #ffffff; stroke: #8250df; stroke-width: 1.2; }
+.wire { stroke: #57606a; stroke-width: 1.8; fill: none; }
+</style>
+<defs>
+<marker id="a-n" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#57606a"/></marker>
+<marker id="a-r" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#cf222e"/></marker>
+</defs>
+<rect x="0" y="0" width="1040" height="610" fill="#ffffff"/>
+<text class="hdr" x="520" y="36" text-anchor="middle">หนอนแพร่ได้อย่างไร — สี่เส้นทางที่ล้วนมาจากการ “เชื่อ”</text>
+<text class="sub" x="520" y="60" text-anchor="middle">ช่องเหล่านี้ไม่ใช่การแฮกที่ฉลาด แต่คือจุดที่ระบบเชื่อข้อมูล/ความเชื่อถือโดยไม่ตรวจ</text>
+<rect class="boxn" x="40" y="236" width="250" height="138" rx="9"/>
+<text class="ptitle" x="165" y="276" text-anchor="middle">worm บนเครื่อง A</text>
+<text class="small" x="165" y="300" text-anchor="middle">(แพร่ตัวเองได้เอง)</text>
+<text class="mono" x="165" y="330" text-anchor="middle">infect → scan → copy</text>
+<text class="lbl" x="165" y="356" text-anchor="middle">ไม่ต้องมีไฟล์ host</text>
+<line class="wire" x1="292" y1="305" x2="356" y2="155" marker-end="url(#a-r)"/>
+<rect class="boxy" x="366" y="100" width="634" height="110" rx="9"/>
+<text class="ptitle" x="382" y="130">① buffer overflow — fingerd</text>
+<text class="txt" x="382" y="158">gets() อ่าน input เข้า buffer 512 ไบต์ · หนอนส่ง 536 ไบต์ = เกิน 24 ไบต์ ทับ</text>
+<text class="txt" x="382" y="178">return address → รัน /bin/sh (เฉพาะ VAX)</text>
+<line class="wire" x1="292" y1="305" x2="356" y2="279" marker-end="url(#a-r)"/>
+<rect class="boxy" x="366" y="224" width="634" height="110" rx="9"/>
+<text class="ptitle" x="382" y="254">② debug mode — sendmail</text>
+<text class="txt" x="382" y="282">คำสั่ง DEBUG ถูกเปิดไว้ · ผู้ส่งสั่งให้ pipe จดหมายเข้าที่ shell →</text>
+<text class="txt" x="382" y="302">รันคำสั่งได้ (vendor หลายเจ้าเปิดทิ้งไว้)</text>
+<line class="wire" x1="292" y1="305" x2="356" y2="403" marker-end="url(#a-r)"/>
+<rect class="boxy" x="366" y="348" width="634" height="110" rx="9"/>
+<text class="ptitle" x="382" y="378">③ weak password — dictionary</text>
+<text class="txt" x="382" y="406">/etc/passwd อ่านได้ทุกคน → เดา hash กับพจนานุกรม · บาง site แตกได้ถึง 50% →</text>
+<text class="txt" x="382" y="426">เอารหัสที่ได้ไปต่อ rsh/rexec</text>
+<line class="wire" x1="292" y1="305" x2="356" y2="527" marker-end="url(#a-r)"/>
+<rect class="boxy" x="366" y="472" width="634" height="110" rx="9"/>
+<text class="ptitle" x="382" y="502">④ trust — .rhosts / hosts.equiv</text>
+<text class="txt" x="382" y="530">เครื่องที่ “เชื่อ” กัน เข้าได้โดยไม่ต้องรหัส · ได้หนึ่งเครื่อง =</text>
+<text class="txt" x="382" y="550">ได้ทั้ง lab ผ่านความเชื่อที่ต่อกัน</text>
+<rect class="boxi" x="40" y="586" width="960" height="22" rx="9"/>
+<text class="lbl" x="520" y="602" text-anchor="middle">ทั้งสี่ทางไม่ใช่การเจาะที่ฉลาด — แต่ทุกทางคือช่องที่ระบบ “เชื่อ” โดยไม่ตรวจ</text>
+</svg>
