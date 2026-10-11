@@ -1,5 +1,19 @@
 [
   {
+    "slug": "2026-10-11-software-security-03-smashing-the-stack",
+    "title": "'Smashing the Stack (1996): วันที่โลกเรียนรู้ว่า \"เขียนเกินบัฟเฟอร์\" คือการยึดเครื่อง (ตอนที่ 03)'",
+    "date": "2026-10-11",
+    "tags": [
+      "software-security",
+      "security",
+      "buffer-overflow",
+      "stack-smashing",
+      "shellcode",
+      "exploit"
+    ],
+    "description": "ตอนที่ 03 ของคอร์ส Software Security — แกะบทความ Smashing the Stack (Phrack 49, 1996, Aleph One): ผัง stack frame, กลไกเขียนเกินบัฟเฟอร์จนทับ return address, shellcode และเกราะ stack canary / NX bit / ASLR พร้อมเดโมรันจริง (C stack_smash + Go hijack model)"
+  },
+  {
     "slug": "2026-10-10-software-security-02-morris-worm-1988",
     "title": "'Morris Worm (1988): หนอนตัวแรกที่แพร่ทาง internet — และระบบ \"trust\" ที่ยังเป็นจุดอ่อน (ตอนที่ 02)'",
     "date": "2026-10-10",
