@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 566" width="1040" height="566" role="img" aria-label="ตารางผลรันจริง: input แต่ละขนาดเขียนทับเขตข้อมูลใดบน frame และการป้องกันใดจับได้">
+<style>
+text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 13px; fill: #1a1a1a; }
+.hdr { font-weight: 700; font-size: 17.5px; }
+.ptitle { font-weight: 700; font-size: 14.5px; }
+.sub { fill: #57606a; font-size: 12.5px; }
+.lbl { fill: #57606a; font-size: 11.5px; }
+.txt { font-size: 13px; }
+.small { fill: #57606a; font-size: 11px; }
+.mono { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12.5px; }
+.monob { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12.5px; font-weight: 700; fill: #0550ae; }
+.boxn { fill: #fdf2f2; stroke: #cf222e; stroke-width: 1.6; }
+.boxi { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.6; }
+.boxg { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.3; }
+.boxw { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.3; }
+.boxy { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.4; }
+.boxb { fill: #eef4ff; stroke: #0969da; stroke-width: 1.4; }
+.chipd { fill: #ffffff; stroke: #8250df; stroke-width: 1.2; }
+.wire { stroke: #57606a; stroke-width: 1.8; fill: none; }
+</style>
+<defs>
+<marker id="a-n" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#57606a"/></marker>
+<marker id="a-r" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#cf222e"/></marker>
+</defs>
+<rect x="0" y="0" width="1040" height="566" fill="#ffffff"/>
+<text class="hdr" x="520" y="36" text-anchor="middle">ส่งยาวขึ้นทีละ 4 ไบต์ — ดูว่าไบต์ที่เกินไปทับอะไร (ผลรันจริง)</text>
+<text class="sub" x="520" y="60" text-anchor="middle">ตัวเลขทุกตัวในภาพนี้ดึงจาก out/ ของตอนนี้ (stack_smash.c) — ไม่ได้พิมพ์จากความจำ</text>
+<rect class="boxb" x="40" y="92" width="126" height="34" rx="9"/>
+<text class="ptitle" x="103.0" y="114" text-anchor="middle">input</text>
+<rect class="boxb" x="170" y="92" width="130" height="34" rx="9"/>
+<text class="ptitle" x="235.0" y="114" text-anchor="middle">ล้นเกิน buf</text>
+<rect class="boxb" x="304" y="92" width="152" height="34" rx="9"/>
+<text class="ptitle" x="380.0" y="114" text-anchor="middle">canary</text>
+<rect class="boxb" x="460" y="92" width="152" height="34" rx="9"/>
+<text class="ptitle" x="536.0" y="114" text-anchor="middle">saved fp</text>
+<rect class="boxb" x="616" y="92" width="158" height="34" rx="9"/>
+<text class="ptitle" x="695.0" y="114" text-anchor="middle">ret addr</text>
+<rect class="boxg" x="778" y="92" width="222" height="34" rx="9"/>
+<text class="ptitle" x="889.0" y="114" text-anchor="middle">เกิดอะไรขึ้น</text>
+<rect class="boxw" x="40" y="130" width="126" height="58" rx="9"/>
+<text class="monob" x="54" y="165">63 byte</text>
+<rect class="boxw" x="170" y="130" width="130" height="58" rx="9"/>
+<text class="mono" x="184" y="165">0 byte</text>
+<rect class="boxw" x="304" y="130" width="152" height="58" rx="9"/>
+<text class="mono" x="316" y="165">0xDEADBEEF</text>
+<rect class="boxw" x="460" y="130" width="152" height="58" rx="9"/>
+<text class="mono" x="472" y="165">0x7FFFEFF0</text>
+<rect class="boxw" x="616" y="130" width="158" height="58" rx="9"/>
+<text class="mono" x="628" y="165">0x00400ABC</text>
+<rect class="boxw" x="778" y="130" width="222" height="58" rx="9"/>
+<text class="small" x="790" y="154">ปลอดภัย —</text>
+<text class="small" x="790" y="171">ไม่มีเขตข้อมูลใดถูกทับ</text>
+<rect class="boxw" x="40" y="192" width="126" height="58" rx="9"/>
+<text class="monob" x="54" y="227">64 byte</text>
+<rect class="boxw" x="170" y="192" width="130" height="58" rx="9"/>
+<text class="mono" x="184" y="227">0 byte</text>
+<rect class="boxw" x="304" y="192" width="152" height="58" rx="9"/>
+<text class="monob" x="316" y="227">0xDEADBE00</text>
+<rect class="boxw" x="460" y="192" width="152" height="58" rx="9"/>
+<text class="mono" x="472" y="227">0x7FFFEFF0</text>
+<rect class="boxw" x="616" y="192" width="158" height="58" rx="9"/>
+<text class="mono" x="628" y="227">0x00400ABC</text>
+<rect class="boxw" x="778" y="192" width="222" height="58" rx="9"/>
+<text class="small" x="790" y="216">ล้น 1 ไบต์เดียว ('\0'</text>
+<text class="small" x="790" y="233">ปิดสตริง) ไบต์ล่างสุดของ</text>
+<text class="small" x="790" y="250">canary หาย -&gt; canary จับได้</text>
+<rect class="boxw" x="40" y="254" width="126" height="58" rx="9"/>
+<text class="monob" x="54" y="289">68 byte</text>
+<rect class="boxw" x="170" y="254" width="130" height="58" rx="9"/>
+<text class="mono" x="184" y="289">4 byte</text>
+<rect class="boxw" x="304" y="254" width="152" height="58" rx="9"/>
+<text class="monob" x="316" y="289">0x41414141</text>
+<rect class="boxw" x="460" y="254" width="152" height="58" rx="9"/>
+<text class="monob" x="472" y="289">0x7FFFEF00</text>
+<rect class="boxw" x="616" y="254" width="158" height="58" rx="9"/>
+<text class="mono" x="628" y="289">0x00400ABC</text>
+<rect class="boxw" x="778" y="254" width="222" height="58" rx="9"/>
+<text class="small" x="790" y="278">ทับ canary ครบ 4 ไบต์ -&gt;</text>
+<text class="small" x="790" y="295">canary จับได้ (abort ก่อนถึง</text>
+<text class="small" x="790" y="312">ret)</text>
+<rect class="boxw" x="40" y="316" width="126" height="58" rx="9"/>
+<text class="monob" x="54" y="351">72 byte</text>
+<rect class="boxw" x="170" y="316" width="130" height="58" rx="9"/>
+<text class="mono" x="184" y="351">8 byte</text>
+<rect class="boxw" x="304" y="316" width="152" height="58" rx="9"/>
+<text class="monob" x="316" y="351">0x41414141</text>
+<rect class="boxw" x="460" y="316" width="152" height="58" rx="9"/>
+<text class="monob" x="472" y="351">0x41414141</text>
+<rect class="boxw" x="616" y="316" width="158" height="58" rx="9"/>
+<text class="monob" x="628" y="351">0x00400A00</text>
+<rect class="boxw" x="778" y="316" width="222" height="58" rx="9"/>
+<text class="small" x="790" y="340">ทับ canary + saved fp และแตะ</text>
+<text class="small" x="790" y="357">ret addr 1 ไบต์ -&gt;</text>
+<text class="small" x="790" y="374">ปลายทางเปลี่ยน</text>
+<rect class="boxw" x="40" y="378" width="126" height="58" rx="9"/>
+<text class="monob" x="54" y="413">76 byte</text>
+<rect class="boxw" x="170" y="378" width="130" height="58" rx="9"/>
+<text class="mono" x="184" y="413">12 byte</text>
+<rect class="boxw" x="304" y="378" width="152" height="58" rx="9"/>
+<text class="monob" x="316" y="413">0x41414141</text>
+<rect class="boxw" x="460" y="378" width="152" height="58" rx="9"/>
+<text class="monob" x="472" y="413">0x41414141</text>
+<rect class="boxw" x="616" y="378" width="158" height="58" rx="9"/>
+<text class="monob" x="628" y="413">0x41414141</text>
+<rect class="boxw" x="778" y="378" width="222" height="58" rx="9"/>
+<text class="small" x="790" y="402">ทับ ret addr ครบ 4 ไบต์ =</text>
+<text class="small" x="790" y="419">hijack control flow สำเร็จ</text>
+<rect class="boxw" x="40" y="440" width="126" height="58" rx="9"/>
+<text class="monob" x="54" y="475">79 byte</text>
+<rect class="boxw" x="170" y="440" width="130" height="58" rx="9"/>
+<text class="mono" x="184" y="475">15 byte</text>
+<rect class="boxw" x="304" y="440" width="152" height="58" rx="9"/>
+<text class="monob" x="316" y="475">0x41414141</text>
+<rect class="boxw" x="460" y="440" width="152" height="58" rx="9"/>
+<text class="monob" x="472" y="475">0x41414141</text>
+<rect class="boxw" x="616" y="440" width="158" height="58" rx="9"/>
+<text class="monob" x="628" y="475">0x41414141</text>
+<rect class="boxw" x="778" y="440" width="222" height="58" rx="9"/>
+<text class="small" x="790" y="464">เขียนเลย ret addr ไปอีก 3</text>
+<text class="small" x="790" y="481">ไบต์ (ไม่มีการตรวจขนาดเลย)</text>
+<rect class="boxy" x="40" y="512" width="960" height="44" rx="9"/>
+<text class="txt" x="56" y="532">จาก 64 ไบต์ (พอดี buffer) ถึง 76 ไบต์ (ทับ ret addr ครบ) ห่างกันแค่ 12 ไบต์ —</text>
+<text class="txt" x="56" y="552">นั่นคือเหตุผลที่การตรวจขนาดสำคัญที่สุด</text>
+</svg>
