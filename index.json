@@ -1,5 +1,19 @@
 [
   {
+    "slug": "2026-10-12-software-security-04-sql-injection",
+    "title": "'SQL Injection (1998): วันที่โลกเรียนรู้ว่า \"อย่าเชื่อ input เลยแม้แต่ตัวเดียว\" (ตอนที่ 04)'",
+    "date": "2026-10-12",
+    "tags": [
+      "software-security",
+      "security",
+      "sql-injection",
+      "sqli",
+      "owasp",
+      "go"
+    ],
+    "description": "ตอนที่ 04 ของคอร์ส Software Security — SQL Injection: จุดกำเนิดแนวคิด 'never trust input' จาก Phrack 54 (1998), ทำไม string concat query คือหายนะ, กลไก parameterized query และกับดักที่ escape ไม่ช่วย (numeric/column/stacked/second-order) พร้อมเดโมรันจริงใน Go + SQLite"
+  },
+  {
     "slug": "2026-10-11-software-security-03-smashing-the-stack",
     "title": "'Smashing the Stack (1996): วันที่โลกเรียนรู้ว่า \"เขียนเกินบัฟเฟอร์\" คือการยึดเครื่อง (ตอนที่ 03)'",
     "date": "2026-10-11",
