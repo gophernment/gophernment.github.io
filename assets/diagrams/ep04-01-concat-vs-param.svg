@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1060 690" width="1060" height="690" role="img" aria-label="แผนผังเทียบสองช่องทาง: ต่อสตริงทำให้ input เป็นไวยากรณ์ SQL ส่วน parameterized query ส่งค่าแยกออกจากคำสั่ง">
+<style>
+text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 13px; fill: #1a1a1a; }
+.hdr { font-weight: 700; font-size: 17.5px; }
+.ptitle { font-weight: 700; font-size: 14.5px; }
+.sub { fill: #57606a; font-size: 12.5px; }
+.lbl { fill: #57606a; font-size: 11.5px; }
+.txt { font-size: 13px; }
+.small { fill: #57606a; font-size: 11px; }
+.mono { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12.5px; }
+.monob { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12.5px; font-weight: 700; fill: #0550ae; }
+.boxn { fill: #fdf2f2; stroke: #cf222e; stroke-width: 1.6; }
+.boxi { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.6; }
+.boxg { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.3; }
+.boxw { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.3; }
+.boxy { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.4; }
+.boxb { fill: #eef4ff; stroke: #0969da; stroke-width: 1.4; }
+.wire { stroke: #57606a; stroke-width: 1.8; fill: none; }
+</style>
+<defs>
+<marker id="a-n" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#57606a"/></marker>
+<marker id="a-r" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#cf222e"/></marker>
+</defs>
+<rect x="0" y="0" width="1060" height="690" fill="#ffffff"/>
+<text class="hdr" x="530" y="34" text-anchor="middle">input เดียวกัน ต่างกันที่ "ช่องทาง": ทำไม concat ถึงพัง และ ? ถึงกันได้</text>
+<text class="sub" x="530" y="58" text-anchor="middle">ผลรันจริงจาก sqli_demo.go บน SQLite 3.53.4 — ตัวเลขทุกตัวดึงจาก out/ ของตอนนี้</text>
+<rect class="boxn" x="30" y="84" width="500" height="26" rx="7"/>
+<text class="ptitle" x="280" y="102" text-anchor="middle">① vulnerable — ต่อสตริงเป็นข้อความเดียว</text>
+<rect class="boxn" x="30" y="118" width="500" height="88" rx="9"/>
+<text class="mono" x="46" y="140" text-anchor="start">q := "SELECT id FROM users WHERE username = '" + user +</text>
+<text class="mono" x="46" y="159" text-anchor="start">     "' AND password_hash = '" + pw + "'"</text>
+<text class="mono" x="46" y="178" text-anchor="start">-- =&gt; WHERE username = 'admin'--' AND password_hash = 'x'</text>
+<text class="mono" x="46" y="197" text-anchor="start">// (ย่อ: SELECT ตัด id, username, role ออก · ชื่อตัวแปรย่อ)</text>
+<rect class="boxw" x="30" y="214" width="500" height="120" rx="9"/>
+<text class="txt" x="46" y="238" text-anchor="start">SQL parser อ่าน "ข้อความก้อนเดียว"</text>
+<text class="txt" x="46" y="258" text-anchor="start">และตีความเป็นไวยากรณ์ทีละคำ —</text>
+<text class="txt" x="46" y="278" text-anchor="start">มันแยกไม่ออกว่าส่วนไหนผู้เขียนตั้งใจ</text>
+<text class="txt" x="46" y="298" text-anchor="start">ส่วนไหนผู้ใช้แอบใส่</text>
+<text class="monob" x="46" y="328" text-anchor="start">=&gt; ' กับ -- กลายเป็น “ไวยากรณ์” ไม่ใช่ “ข้อมูล”</text>
+<rect class="boxn" x="30" y="344" width="500" height="74" rx="9"/>
+<text class="ptitle" x="46" y="368" text-anchor="start">ผลรัน: bypass สำเร็จ</text>
+<text class="small" x="46" y="392" text-anchor="start">A3 concat: 1 แถว (ผ่าน) · ? : 0 แถว (ปฏิเสธ)</text>
+<text class="small" x="46" y="412" text-anchor="start">A4 tautology: 3 แถว &lt;-&gt; 0 แถว</text>
+<rect class="boxi" x="530" y="84" width="500" height="26" rx="7"/>
+<text class="ptitle" x="780" y="102" text-anchor="middle">② safe — ส่งค่าแยกจากคำสั่ง (parameterized)</text>
+<rect class="boxi" x="530" y="118" width="500" height="88" rx="9"/>
+<text class="mono" x="546" y="140" text-anchor="start">const q = "SELECT id FROM users WHERE username = ?</text>
+<text class="mono" x="546" y="159" text-anchor="start">              AND password_hash = ?"</text>
+<text class="mono" x="546" y="178" text-anchor="start">db.QueryContext(ctx, q, username, password)</text>
+<text class="mono" x="546" y="197" text-anchor="start">// ส่ง 2 อย่างแยกกัน: คำสั่ง + ค่า (ย่อเช่นกัน)</text>
+<rect class="boxw" x="530" y="214" width="500" height="120" rx="9"/>
+<text class="txt" x="546" y="238" text-anchor="start">parser เห็นคำสั่งที่ "ครบถ้วนแล้ว" (มี ? เป็นช่องว่าง)</text>
+<text class="txt" x="546" y="258" text-anchor="start">จึง compile ทิ้งไว้ก่อน แล้วค่อยผูกค่าทีหลัง —</text>
+<text class="txt" x="546" y="278" text-anchor="start">ค่าจึงไม่มีทางกลายเป็นไวยากรณ์ได้เลย</text>
+<text class="monob" x="546" y="328" text-anchor="start">=&gt; "admin'--" ยังเป็นแค่สตริงชื่อผู้ใช้</text>
+<rect class="boxi" x="530" y="344" width="500" height="74" rx="9"/>
+<text class="ptitle" x="546" y="368" text-anchor="start">ผลรัน: ตรวจ "ค่า" ตามที่ควรเป็น</text>
+<text class="small" x="546" y="392" text-anchor="start">payload เดียวกัน: A3 0 · A4 0 · A5 0 แถว</text>
+<text class="small" x="546" y="412" text-anchor="start">แต่ผู้ใช้ที่ชื่อ admin'-- จริง ล็อกอินได้ 1 แถว (แถวของตัวเอง)</text>
+<rect class="boxb" x="30" y="430" width="1000" height="66" rx="9"/>
+<text class="txt" x="46" y="454" text-anchor="start">รวม 5 กรณี: concat คืนแถวทั้งหมด 6 แถว · ? คืนแค่ 1 แถว (เฉพาะกรณีที่รหัสผ่านถูกจริง) — ตัวเลขที่ concat คืนเกินมา</text>
+<text class="txt" x="46" y="474" text-anchor="start">คือจำนวนแถวที่ "ไม่ควรผ่าน" เลย</text>
+<rect class="boxy" x="30" y="508" width="1000" height="158" rx="9"/>
+<text class="ptitle" x="46" y="534" text-anchor="start">กับดัก: "escape เครื่องหมาย ' " ไม่พอกัน</text>
+<text class="txt" x="46" y="558" text-anchor="start">มีอย่างน้อยสามบริบทที่การ escape ไม่ช่วยเลย เพราะไม่ใช่บริบทของสตริง:</text>
+<text class="monob" x="60" y="600" text-anchor="start">ค่าตัวเลข</text>
+<text class="small" x="320" y="600" text-anchor="start">WHERE id = "0 OR 1=1" -&gt; concat คืน 4 แถว (ควรได้ 0)</text>
+<text class="monob" x="60" y="621" text-anchor="start">ชื่อคอลัมน์</text>
+<text class="small" x="320" y="621" text-anchor="start">ORDER BY ? ไม่เรียงตามที่สั่ง (orderby_charparam_sorted=0) -&gt; ต้องใช้ allow-list</text>
+<text class="monob" x="60" y="642" text-anchor="start">stacked query</text>
+<text class="small" x="320" y="642" text-anchor="start">"SELECT 1; DROP TABLE canary" — modernc=1, mattn=1: รันคำสั่งที่สองจริงทั้งคู่</text>
+</svg>

@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1060 620" width="1060" height="620" role="img" aria-label="ไทม์ไลน์ SQL injection ตั้งแต่ 1998 ถึง MOVEit 2023 และการป้องกันที่ตามมา">
+<style>
+text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 13px; fill: #1a1a1a; }
+.hdr { font-weight: 700; font-size: 17.5px; }
+.ptitle { font-weight: 700; font-size: 14.5px; }
+.sub { fill: #57606a; font-size: 12.5px; }
+.lbl { fill: #57606a; font-size: 11.5px; }
+.txt { font-size: 13px; }
+.small { fill: #57606a; font-size: 11px; }
+.mono { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12.5px; }
+.monob { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12.5px; font-weight: 700; fill: #0550ae; }
+.boxn { fill: #fdf2f2; stroke: #cf222e; stroke-width: 1.6; }
+.boxi { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.6; }
+.boxg { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.3; }
+.boxw { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.3; }
+.boxy { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.4; }
+.boxb { fill: #eef4ff; stroke: #0969da; stroke-width: 1.4; }
+.wire { stroke: #57606a; stroke-width: 1.8; fill: none; }
+</style>
+<defs>
+<marker id="a-n" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#57606a"/></marker>
+<marker id="a-r" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#cf222e"/></marker>
+</defs>
+<rect x="0" y="0" width="1060" height="620" fill="#ffffff"/>
+<text class="hdr" x="530" y="36" text-anchor="middle">SQL Injection: 1998 → วันนี้ และการป้องกันที่ตามมา</text>
+<text class="sub" x="530" y="60" text-anchor="middle">จาก "หมายเหตุท้ายบทความ" ใน Phrack 54 สู่ช่องโหว่คลาสเดียวกันที่ล้มกว่า 2,700 องค์กรในปี 2023</text>
+<rect class="boxw" x="40" y="88" width="980" height="62" rx="9"/>
+<text class="monob" x="56" y="126" text-anchor="start">25 ธ.ค. 1998</text>
+<text class="small" x="220" y="114" text-anchor="start">Phrack ฉบับที่ 54 (บทความ NT Web Technology Vulnerabilities) พูดถึงการยัดคำสั่ง SQL ผ่าน input ของเว็บ — ยังไม่มีคำว่า</text>
+<text class="small" x="220" y="131" text-anchor="start">"SQL injection" ในบทความนั้นเลย</text>
+<rect class="boxw" x="40" y="154" width="980" height="62" rx="9"/>
+<text class="monob" x="56" y="192" text-anchor="start">1999–2002</text>
+<text class="small" x="220" y="180" text-anchor="start">เกิดสำนวนเรียกและงานเขียนเชิงลึกที่ทำให้เทคนิคแพร่หลายในฐานะคู่มือ · ต่อมาจึงถูกจัดหมวดเป็นสามแบบ: error-based</text>
+<text class="small" x="220" y="197" text-anchor="start">(เดาจากข้อความ error ของฐานข้อมูล), UNION-based (ดึงผ่าน UNION), blind (เดาจากพฤติกรรม)</text>
+<rect class="boxw" x="40" y="220" width="980" height="62" rx="9"/>
+<text class="monob" x="56" y="258" text-anchor="start">2003</text>
+<text class="small" x="220" y="246" text-anchor="start">OWASP Top 10 ฉบับแรกมี "Injection Flaws" ที่ A6 · ต่อมา injection ขึ้นเป็นอันดับ 1 ในฉบับ 2010–2017 แล้วถอยไปอันดับ 3</text>
+<text class="small" x="220" y="263" text-anchor="start">ในฉบับ 2021</text>
+<rect class="boxw" x="40" y="286" width="980" height="62" rx="9"/>
+<text class="monob" x="56" y="324" text-anchor="start">~2005–2015</text>
+<text class="small" x="220" y="312" text-anchor="start">parameterized query กลายเป็นค่าปริยายของ library/driver สมัยใหม่ + ORM สร้าง query ที่มี placeholder ให้เอง</text>
+<rect class="boxw" x="40" y="352" width="980" height="62" rx="9"/>
+<text class="monob" x="56" y="390" text-anchor="start">พ.ค. 2023</text>
+<text class="small" x="220" y="378" text-anchor="start">MOVEit Transfer: SQL injection zero-day (CVE-2023-34362) ถูกใช้ติดตั้ง web shell แล้วขโมยข้อมูล — Emsisoft นับสะสมได้ 2,773</text>
+<text class="small" x="220" y="395" text-anchor="start">องค์กร (ณ 28 มิ.ย. 2024)</text>
+<rect class="boxw" x="40" y="418" width="980" height="62" rx="9"/>
+<text class="monob" x="56" y="456" text-anchor="start">2025</text>
+<text class="small" x="220" y="444" text-anchor="start">รหัสมาตรฐานของคลาสนี้คือ CWE-89 — ปัจจุบันยังอยู่อันดับ 2 ของ CWE Top 25 (ขยับขึ้นจากอันดับ 3) ·</text>
+<text class="small" x="220" y="461" text-anchor="start">คลาสเดิมที่ยังไม่มีวันตาย</text>
+<rect class="boxy" x="40" y="490" width="980" height="118" rx="9"/>
+<text class="ptitle" x="56" y="516" text-anchor="start">แล้วทำไมยังพังอยู่ — ทั้งที่ทางแก้รู้กันมา 20 ปี</text>
+<text class="small" x="56" y="540" text-anchor="start">ทางแก้ไม่ใช่เรื่องลับ: ส่ง "ค่า" แยกจาก "คำสั่ง" (parameterized query) · ORM ช่วยได้ในเส้นทางปกติ แต่ raw query ที่ ORM เปิดให้ = ประตูหลัง</text>
+<text class="small" x="56" y="557" text-anchor="start">· ชื่อตาราง/คอลัมน์ใส่ ? ไม่ได้ จึงต้อง allow-list · escape อย่างเดียวไม่พอ (บริบทตัวเลข, second-order) ·</text>
+<text class="small" x="56" y="574" text-anchor="start">โค้ดเก่าที่สืบทอดมาจากการซื้อกิจการคือจุดที่พังบ่อยที่สุด</text>
+</svg>
