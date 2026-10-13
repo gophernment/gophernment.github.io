@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1060 820" width="1060" height="820" role="img" aria-label="แผนผังเทียบการตีความข้อมูลสองระดับ: ฐานข้อมูลอ่านข้อความเป็นไวยากรณ์ เบราว์เซอร์อ่านข้อความเป็นสคริปต์ พร้อมตารางการเข้ารหัสตามบริบท">
+<style>
+text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 13px; fill: #1a1a1a; }
+.hdr { font-weight: 700; font-size: 17.5px; }
+.ptitle { font-weight: 700; font-size: 14.5px; }
+.sub { fill: #57606a; font-size: 12.5px; }
+.lbl { fill: #57606a; font-size: 11.5px; }
+.txt { font-size: 13px; }
+.small { fill: #57606a; font-size: 11px; }
+.mono { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12.5px; }
+.monob { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12.5px; font-weight: 700; fill: #0550ae; }
+.boxn { fill: #fdf2f2; stroke: #cf222e; stroke-width: 1.6; }
+.boxi { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.6; }
+.boxg { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.3; }
+.boxw { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.3; }
+.boxy { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.4; }
+.boxb { fill: #eef4ff; stroke: #0969da; stroke-width: 1.4; }
+</style>
+<rect x="0" y="0" width="1060" height="820" fill="#ffffff"/>
+<text class="hdr" x="530" y="34" text-anchor="middle">ข้อมูลก้อนเดียวกัน สอง interpreter: ฐานข้อมูล (ตอน 04) กับเบราว์เซอร์ (ตอน 05)</text>
+<text class="sub" x="530" y="58" text-anchor="middle">ผลรันจริงจาก code/ep05/out (go1.27.1) — เบราว์เซอร์จริงที่ทดสอบ: HeadlessChrome 151</text>
+<rect class="boxg" x="30" y="84" width="500" height="28" rx="7"/>
+<text class="ptitle" x="280" y="103" text-anchor="middle">ตอน 04 — ข้อมูลกลายเป็น "ไวยากรณ์"</text>
+<rect class="boxw" x="30" y="116" width="500" height="118" rx="9"/>
+<text class="small" x="46" y="140" text-anchor="start">ส่งค่าจากผู้ใช้ต่อเข้าไปในคำสั่ง SQL แล้ว parser</text>
+<text class="small" x="46" y="157" text-anchor="start">ของฐานข้อมูลอ่านค่าเหล่านั้นเป็นส่วนหนึ่งของไวยากรณ์</text>
+<text class="small" x="46" y="174" text-anchor="start">(ค่าที่ควรเป็น 'ชื่อผู้ใช้' กลายเป็นคำสั่ง)</text>
+<text class="monob" x="46" y="214" text-anchor="start">ทางแก้: ส่งค่าแยกจากคำสั่ง (parameterized query)</text>
+<rect class="boxb" x="530" y="84" width="500" height="28" rx="7"/>
+<text class="ptitle" x="780" y="103" text-anchor="middle">ตอน 05 — ข้อมูลกลายเป็น "สคริปต์"</text>
+<rect class="boxw" x="530" y="116" width="500" height="118" rx="9"/>
+<text class="small" x="546" y="140" text-anchor="start">ส่งค่าจากผู้ใช้ต่อเข้าไปในหน้า HTML</text>
+<text class="small" x="546" y="157" text-anchor="start">แล้วเบราว์เซอร์อ่านค่าเหล่านั้นเป็นแท็ก/สคริปต์</text>
+<text class="small" x="546" y="174" text-anchor="start">(ชื่อที่ควรเป็นข้อความ กลายเป็นโค้ดที่รันในเครื่องของคนอื่น)</text>
+<text class="monob" x="546" y="214" text-anchor="start">ผลรัน: แท็กดิบฝั่ง vulnerable = 1 ตัว, ฝั่ง safe = 0 ตัว</text>
+<rect class="boxb" x="30" y="248" width="1000" height="30" rx="7"/>
+<text class="ptitle" x="530" y="268" text-anchor="middle">"ค่าเดียวกัน" ใน 6 บริบท — html/template เข้ารหัสต่างกัน (ผลรันจริงจาก out/01_xss.txt)</text>
+<rect class="boxg" x="30" y="282" width="210" height="26" rx="6"/>
+<text class="lbl" x="42" y="300" text-anchor="start">บริบทในเอกสาร</text>
+<rect class="boxg" x="240" y="282" width="230" height="26" rx="6"/>
+<text class="lbl" x="252" y="300" text-anchor="start">escape ที่เกิดขึ้นจริง</text>
+<rect class="boxg" x="470" y="282" width="560" height="26" rx="6"/>
+<text class="lbl" x="482" y="300" text-anchor="start">ทำไมต้องต่างกัน</text>
+<rect class="boxw" x="30" y="308" width="210" height="34" rx="6"/>
+<text class="mono" x="42" y="330" text-anchor="start">HTML text</text>
+<rect class="boxw" x="240" y="308" width="230" height="34" rx="6"/>
+<text class="monob" x="252" y="330" text-anchor="start">&amp;lt;script&amp;gt;</text>
+<rect class="boxw" x="470" y="308" width="560" height="34" rx="6"/>
+<text class="small" x="482" y="330" text-anchor="start">ค่าในเอกสารกลายเป็นข้อความ — เบราว์เซอร์ไม่สร้างแท็ก</text>
+<rect class="boxw" x="30" y="346" width="210" height="34" rx="6"/>
+<text class="mono" x="42" y="368" text-anchor="start">attr (quoted)</text>
+<rect class="boxw" x="240" y="346" width="230" height="34" rx="6"/>
+<text class="monob" x="252" y="368" text-anchor="start">&amp;#39;</text>
+<rect class="boxw" x="470" y="346" width="560" height="34" rx="6"/>
+<text class="small" x="482" y="368" text-anchor="start">เครื่องหมายคำพูด/quote ถูกเข้ารหัส: ปิด attribute ไม่ได้</text>
+<rect class="boxw" x="30" y="384" width="210" height="34" rx="6"/>
+<text class="mono" x="42" y="406" text-anchor="start">attr (unquote)</text>
+<rect class="boxw" x="240" y="384" width="230" height="34" rx="6"/>
+<text class="monob" x="252" y="406" text-anchor="start">&amp;#32;</text>
+<rect class="boxw" x="470" y="384" width="560" height="34" rx="6"/>
+<text class="small" x="482" y="406" text-anchor="start">ช่องว่างใน attribute ถูกเข้ารหัส: ต่อ attribute ใหม่ไม่ได้</text>
+<rect class="boxw" x="30" y="422" width="210" height="34" rx="6"/>
+<text class="mono" x="42" y="444" text-anchor="start">URI (href)</text>
+<rect class="boxw" x="240" y="422" width="230" height="34" rx="6"/>
+<text class="monob" x="252" y="444" text-anchor="start">%3c</text>
+<rect class="boxw" x="470" y="422" width="560" height="34" rx="6"/>
+<text class="small" x="482" y="444" text-anchor="start">ค่าใน URL ถูก percent-encode: ปิดพารามิเตอร์ไม่ได้</text>
+<rect class="boxw" x="30" y="460" width="210" height="34" rx="6"/>
+<text class="mono" x="42" y="482" text-anchor="start">JS string</text>
+<rect class="boxw" x="240" y="460" width="230" height="34" rx="6"/>
+<text class="monob" x="252" y="482" text-anchor="start">\u003c</text>
+<rect class="boxw" x="470" y="460" width="560" height="34" rx="6"/>
+<text class="small" x="482" y="482" text-anchor="start">ค่าในสตริง JS กลายเป็น \u003c: ปิดสตริงไม่ได้</text>
+<rect class="boxw" x="30" y="498" width="210" height="34" rx="6"/>
+<text class="mono" x="42" y="520" text-anchor="start">CSS value</text>
+<rect class="boxw" x="240" y="498" width="230" height="34" rx="6"/>
+<text class="monob" x="252" y="520" text-anchor="start">ZgotmplZ</text>
+<rect class="boxw" x="470" y="498" width="560" height="34" rx="6"/>
+<text class="small" x="482" y="520" text-anchor="start">ค่าที่ไม่ปลอดภัยในบริบท CSS ถูกปฏิเสธทั้งค่า</text>
+<rect class="boxy" x="30" y="550" width="1000" height="128" rx="9"/>
+<text class="ptitle" x="46" y="576" text-anchor="start">กับดักสามข้อ: "ยังพัง" แม้คิดว่ากรองแล้ว</text>
+<text class="monob" x="60" y="604" text-anchor="start">template.HTML(...) ข้ามการเข้ารหัส</text>
+<text class="small" x="378" y="604" text-anchor="start">แท็ก &lt;img&gt; ดิบรันได้ = 1 ตัว — อย่าใส่ input ผู้ใช้ในนี้</text>
+<text class="monob" x="60" y="626" text-anchor="start">blacklist (ลบ &lt;script&gt; ออก)</text>
+<text class="small" x="378" y="626" text-anchor="start">เหลือแท็ก &lt;script&gt; 0 ตัว แต่แท็ก &lt;img onerror&gt; ยังรันได้ 1 ตัว</text>
+<text class="monob" x="60" y="648" text-anchor="start">ค่าใน URL / CSS</text>
+<text class="small" x="378" y="648" text-anchor="start">javascript: ใน href ถูกตัดเป็น #ZgotmplZ 1 จุด · ค่าใน CSS ถูกปฏิเสธ 1 จุด</text>
+<rect class="boxi" x="30" y="690" width="1000" height="104" rx="9"/>
+<text class="ptitle" x="46" y="716" text-anchor="start">บทเรียน: จุดที่ต้องเข้ารหัสคือ "ตอนส่งออก" ไม่ใช่ "ตอนรับเข้า"</text>
+<text class="small" x="46" y="740" text-anchor="start">ข้อมูลผู้ใช้เก็บไว้ดิบ ๆ ได้ — ที่สำคัญคือตอนประกอบเอกสาร: ฝั่ง vulnerable มีแท็กดิบออกมา (script 1, img 1) แต่ฝั่ง safe ไม่มีเลย (script 0,</text>
+<text class="small" x="46" y="757" text-anchor="start">img 0) เพราะบริบทของ output เป็นตัวกำหนดว่าจะต้องเข้ารหัสแบบไหน และเบราว์เซอร์จะรันสคริปต์ที่ถูกฉีดเข้ามาให้เอง ตราบใดที่มันยัง</text>
+<text class="small" x="46" y="774" text-anchor="start">"เป็นแท็ก" ไม่ใช่ "เป็นข้อความ"</text>
+</svg>
