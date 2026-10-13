@@ -1,5 +1,20 @@
 [
   {
+    "slug": "2026-10-13-software-security-05-xss-csrf",
+    "title": "'XSS + CSRF (1999): วันที่ข้อมูลของเรากลายเป็นสคริปต์ในเบราว์เซอร์ของคนอื่น (ตอนที่ 05)'",
+    "date": "2026-10-13",
+    "tags": [
+      "software-security",
+      "security",
+      "xss",
+      "csrf",
+      "web-security",
+      "samy-worm",
+      "go"
+    ],
+    "description": "ตอนที่ 05 ของคอร์ส Software Security — XSS + CSRF: วันที่ข้อมูลของผู้ใช้กลายเป็นสคริปต์ในเบราว์เซอร์คนอื่น จาก Samy worm (MySpace 2005) สู่เกราะ same-origin policy, CSP, HttpOnly และ SameSite พร้อมเดโม Go รันจริง (reflected/stored XSS + CSRF)"
+  },
+  {
     "slug": "2026-10-12-software-security-04-sql-injection",
     "title": "'SQL Injection (1998): วันที่โลกเรียนรู้ว่า \"อย่าเชื่อ input เลยแม้แต่ตัวเดียว\" (ตอนที่ 04)'",
     "date": "2026-10-12",
