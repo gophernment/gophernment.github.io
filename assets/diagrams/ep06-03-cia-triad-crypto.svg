@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1060 523" width="1060" height="523" role="img" aria-label="ตารางจับคู่ CIA triad สามข้อกับเครื่องมือ crypto ที่ให้คุณสมบัตินั้น พร้อมผลรันจริงที่พิสูจน์แต่ละคุณสมบัติ">
+<style>
+text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 13px; fill: #1a1a1a; }
+.hdr { font-weight: 700; font-size: 17.5px; }
+.ptitle { font-weight: 700; font-size: 14.5px; }
+.sub { fill: #57606a; font-size: 12.5px; }
+.lbl { fill: #57606a; font-size: 11.5px; }
+.txt { font-size: 13px; }
+.small { fill: #57606a; font-size: 11px; }
+.mono { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12.5px; }
+.monob { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12.5px; font-weight: 700; fill: #0550ae; }
+.boxn { fill: #fdf2f2; stroke: #cf222e; stroke-width: 1.6; }
+.boxi { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.6; }
+.boxg { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.3; }
+.boxw { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.3; }
+.boxy { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.4; }
+.boxb { fill: #eef4ff; stroke: #0969da; stroke-width: 1.4; }
+bar { }
+.barp { fill: #0969da; }
+.barc { fill: #cf222e; }
+.barv { fill: #1a7f37; }
+.grid { stroke: #e6e9ed; stroke-width: 1; }
+.axis { stroke: #8c959f; stroke-width: 1.4; }
+.arr { stroke: #57606a; stroke-width: 1.6; fill: none; }
+</style>
+<rect x="0" y="0" width="1060" height="523" fill="#ffffff"/>
+<text class="hdr" x="30" y="36" text-anchor="start">CIA triad ทั้งสามข้อ มาจาก "คณิตศาสตร์" คนละตัวกัน</text>
+<text class="sub" x="30" y="59" text-anchor="start">ผลรันจริงจาก code/ep06/out — Go 1.27.1 · standard library ล้วน (ไม่มี dependency ภายนอก)</text>
+<rect class="boxg" x="30" y="78" width="190" height="28" rx="6"/>
+<text class="lbl" x="42" y="97" text-anchor="start">คุณสมบัติ</text>
+<rect class="boxg" x="228" y="78" width="330" height="28" rx="6"/>
+<text class="lbl" x="240" y="97" text-anchor="start">เครื่องมือที่ให้คุณสมบัตินั้น</text>
+<rect class="boxg" x="566" y="78" width="464" height="28" rx="6"/>
+<text class="lbl" x="578" y="97" text-anchor="start">ผลรันจริงที่พิสูจน์</text>
+<rect class="boxn" x="30" y="110" width="190" height="80" rx="7"/>
+<text class="monob" x="44" y="136" text-anchor="start">confidentiality</text>
+<text class="small" x="44" y="156" text-anchor="start">CWE-319 · OWASP A04:2025</text>
+<rect class="boxw" x="228" y="110" width="330" height="80" rx="7"/>
+<text class="small" x="242" y="136" text-anchor="start">เข้ารหัส: AES-256-GCM (key 256 บิต · nonce 12</text>
+<text class="small" x="242" y="153" text-anchor="start">ไบต์) หรือ RSA-OAEP กับ public key</text>
+<rect class="boxw" x="566" y="110" width="464" height="80" rx="7"/>
+<text class="small" x="580" y="136" text-anchor="start">GCM ซ่อนข้อความได้จริง (roundtrip = 1) · แบนเนอร์ "บนสาย" ของ</text>
+<text class="small" x="580" y="153" text-anchor="start">TLS: plain HTTP เห็นรหัสผ่าน 1 แต่ TLS เห็น 0</text>
+<rect class="boxy" x="30" y="204" width="190" height="97" rx="7"/>
+<text class="monob" x="44" y="230" text-anchor="start">integrity</text>
+<text class="small" x="44" y="250" text-anchor="start">CWE-353 · CWE-327</text>
+<rect class="boxw" x="228" y="204" width="330" height="97" rx="7"/>
+<text class="small" x="242" y="230" text-anchor="start">ตรวจการแก้ไข: tag ของ GCM (16 ไบต์) หรือ</text>
+<text class="small" x="242" y="247" text-anchor="start">HMAC-SHA256 (32 ไบต์) — ไม่ได้ซ่อน แต่</text>
+<text class="small" x="242" y="264" text-anchor="start">"จับได้"</text>
+<rect class="boxw" x="566" y="204" width="464" height="97" rx="7"/>
+<text class="small" x="580" y="230" text-anchor="start">แก้ ciphertext 1 บิต → "cipher: message authentication failed"</text>
+<text class="small" x="580" y="247" text-anchor="start">(จับได้ = 1) · แก้ข้อความที่ HMAC คุมไว้ → ตรวจไม่ผ่าน = 1</text>
+<rect class="boxi" x="30" y="315" width="190" height="80" rx="7"/>
+<text class="monob" x="44" y="341" text-anchor="start">authenticity</text>
+<text class="small" x="44" y="361" text-anchor="start">CWE-347 · CWE-295</text>
+<rect class="boxw" x="228" y="315" width="330" height="80" rx="7"/>
+<text class="small" x="242" y="341" text-anchor="start">ลายเซ็นดิจิทัล (RSA/ECDSA) และ certificate</text>
+<text class="small" x="242" y="358" text-anchor="start">chain ที่ผูกกุญแจกับ "ชื่อ" ใน TLS</text>
+<rect class="boxw" x="566" y="315" width="464" height="80" rx="7"/>
+<text class="small" x="580" y="341" text-anchor="start">ลายเซ็น RSA 256 ไบต์: ข้อความแท้ผ่าน = 1 · แก้ 1000→9000 ไม่ผ่าน</text>
+<text class="small" x="580" y="358" text-anchor="start">= 1 · TLS ปฏิเสธ CA ที่ไม่รู้จัก = 1 และชื่อที่ไม่ตรง = 1</text>
+<rect class="boxy" x="30" y="399" width="1000" height="94" rx="9"/>
+<text class="ptitle" x="46" y="425" text-anchor="start">สามข้อนี้แยกกันจริง — และแยกกันพัง</text>
+<text class="small" x="46" y="449" text-anchor="start">hash (SHA-256) ให้ integrity แบบ "ใครก็ตรวจได้" แต่ไม่ให้ authenticity เพราะใครก็สร้าง hash ได้ · HMAC ให้ integrity + authenticity (ต้องมี key</text>
+<text class="small" x="46" y="466" text-anchor="start">ร่วม) แต่ไม่ให้ confidentiality (ข้อความอ่านได้ตรง ๆ = 1) · ตัวเลขที่ควรจำ: เปลี่ยน input 1 ตัว ทำให้ผล SHA-256 เปลี่ยนไป 141/256 บิต (55.1%)</text>
+</svg>

@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1060 1088" width="1060" height="1088" role="img" aria-label="ไทม์ไลน์ประวัติศาสตร์ cryptography จาก Caesar cipher ถึง TLS และ post-quantum โดยแต่ละขั้นเกิดขึ้นเพื่อแก้ช่องโหว่ของขั้นก่อน">
+<style>
+text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 13px; fill: #1a1a1a; }
+.hdr { font-weight: 700; font-size: 17.5px; }
+.ptitle { font-weight: 700; font-size: 14.5px; }
+.sub { fill: #57606a; font-size: 12.5px; }
+.lbl { fill: #57606a; font-size: 11.5px; }
+.txt { font-size: 13px; }
+.small { fill: #57606a; font-size: 11px; }
+.mono { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12.5px; }
+.monob { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12.5px; font-weight: 700; fill: #0550ae; }
+.boxn { fill: #fdf2f2; stroke: #cf222e; stroke-width: 1.6; }
+.boxi { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.6; }
+.boxg { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.3; }
+.boxw { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.3; }
+.boxy { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.4; }
+.boxb { fill: #eef4ff; stroke: #0969da; stroke-width: 1.4; }
+bar { }
+.barp { fill: #0969da; }
+.barc { fill: #cf222e; }
+.barv { fill: #1a7f37; }
+.grid { stroke: #e6e9ed; stroke-width: 1; }
+.axis { stroke: #8c959f; stroke-width: 1.4; }
+.arr { stroke: #57606a; stroke-width: 1.6; fill: none; }
+</style>
+<rect x="0" y="0" width="1060" height="1088" fill="#ffffff"/>
+<text class="hdr" x="30" y="36" text-anchor="start">ทุกขั้นของ crypto เกิดเพราะขั้นก่อนมีช่องโหว่</text>
+<text class="sub" x="30" y="60" text-anchor="start">ตัวเลขทุกตัวในภาพนี้คือผลรันจริงจาก code/ep06/out (Go 1.27.1) · ข้อความทดสอบยาว 820 ตัวอักษร · รันซ้ำได้ผลเดิมทุกครั้ง</text>
+<rect class="boxb" x="30" y="90" width="160" height="58" rx="7"/>
+<text class="monob" x="110" y="114" text-anchor="middle">~58 ปีก่อน ค.ศ.</text>
+<rect class="boxw" x="198" y="90" width="832" height="58" rx="7"/>
+<text class="small" x="214" y="114" text-anchor="start">Caesar cipher — สับเปลี่ยนตัวอักษรด้วย shift คงที่ · key space มีแค่ 26 แบบ · ในเดโมของเรา brute force ทั้ง 26 shift แล้ว</text>
+<text class="small" x="214" y="131" text-anchor="start">chi-square จับ shift จริงได้เป็นอันดับ 1</text>
+<rect class="boxb" x="30" y="162" width="160" height="58" rx="7"/>
+<text class="monob" x="110" y="186" text-anchor="middle">~ค.ศ. 850</text>
+<rect class="boxw" x="198" y="162" width="832" height="58" rx="7"/>
+<text class="small" x="214" y="186" text-anchor="start">Al-Kindi เขียน Risalah fi Istikhraj al-Mu'amma — กำเนิด frequency analysis: ตัวอักษรแต่ละตัวมีความถี่ของมัน และ cipher</text>
+<text class="small" x="214" y="203" text-anchor="start">ที่สับเปลี่ยนตัวอักษรไม่เปลี่ยนความถี่นั้น (ในเดโม: IC ของ Caesar = 0.0701 เท่ากับ plaintext เป๊ะ ๆ)</text>
+<rect class="boxb" x="30" y="234" width="160" height="58" rx="7"/>
+<text class="monob" x="110" y="258" text-anchor="middle">1553</text>
+<rect class="boxw" x="198" y="234" width="832" height="58" rx="7"/>
+<text class="small" x="214" y="258" text-anchor="start">Vigenère cipher (Giovan Battista Bellaso ตีพิมพ์ก่อน Blaise de Vigenère) — เลื่อนตัวอักษรละแบบด้วย key ที่วนซ้ำ</text>
+<text class="small" x="214" y="275" text-anchor="start">จึงเกลี่ยยอดความถี่ให้แบน (เดโม: IC ลดจาก 0.0701 เหลือ 0.0424) — ถูกเรียกว่า le chiffrage indéchiffrable ราวสามศตวรรษ</text>
+<rect class="boxb" x="30" y="306" width="160" height="75" rx="7"/>
+<text class="monob" x="110" y="330" text-anchor="middle">1863</text>
+<rect class="boxw" x="198" y="306" width="832" height="75" rx="7"/>
+<text class="small" x="214" y="330" text-anchor="start">Friedrich Kasiski เผยวิธีทั่วไปในการหัก Vigenère — มองหาระยะห่างของข้อความซ้ำเพื่อเดาความยาว key</text>
+<text class="small" x="214" y="347" text-anchor="start">แล้วแยกโจมตีทีละคอลัมน์ (เดโมของเราทำแบบเดียวกันด้วย index of coincidence: เดาคาบได้ 5 แล้วกู้ key "LEMON"</text>
+<text class="small" x="214" y="364" text-anchor="start">ได้ตรงเป๊ะ)</text>
+<rect class="boxb" x="30" y="395" width="160" height="75" rx="7"/>
+<text class="monob" x="110" y="419" text-anchor="middle">1932 → 1945</text>
+<rect class="boxw" x="198" y="395" width="832" height="75" rx="7"/>
+<text class="small" x="214" y="419" text-anchor="start">เครื่อง Enigma ของเยอรมนี: rotor + plugboard ทำให้ keystream ยาวและซับซ้อน · Marian Rejewski หักได้เดือนธันวาคม 1932 ·</text>
+<text class="small" x="214" y="436" text-anchor="start">เทคนิคส่งต่อไป Bletchley Park (ก.ค. 1939) ที่ Alan Turing พัฒนาเครื่อง bombe ต่อ — จุดที่พลาดคือ "คน" ไม่ใช่เครื่อง:</text>
+<text class="small" x="214" y="453" text-anchor="start">ผู้ใช้เลือก settings ซ้ำ และข้อความซ้ำทำให้เกิด crib</text>
+<rect class="boxb" x="30" y="484" width="160" height="58" rx="7"/>
+<text class="monob" x="110" y="508" text-anchor="middle">1949</text>
+<rect class="boxw" x="198" y="484" width="832" height="58" rx="7"/>
+<text class="small" x="214" y="508" text-anchor="start">Claude Shannon ตีพิมพ์ Communication Theory of Secrecy Systems — เปลี่ยน crypto จากงานฝีมือ เป็นคณิตศาสตร์ที่พิสูจน์ได้</text>
+<text class="small" x="214" y="525" text-anchor="start">และให้หลัก Kerckhoffs: ความปลอดภัยต้องอยู่ที่ key ไม่ใช่ความลับของวิธี</text>
+<rect class="boxb" x="30" y="556" width="160" height="75" rx="7"/>
+<text class="monob" x="110" y="580" text-anchor="middle">1976 → 1977</text>
+<rect class="boxw" x="198" y="556" width="832" height="75" rx="7"/>
+<text class="small" x="214" y="580" text-anchor="start">ยุค public-key: Diffie–Hellman (พ.ย. 1976) ทำให้สองฝ่ายตกลง key ร่วมกันบนช่องทางที่คนอื่นดักอ่านได้ · RSA ตามมา (เม.ย.</text>
+<text class="small" x="214" y="597" text-anchor="start">1977) แยก "กุญแจเข้ารหัส" ออกจาก "กุญแจถอดรหัส" · เดโมของเราเขียน RSA เองด้วย math/big แล้วโชว์ว่ามันพังแค่ไหนเมื่อ</text>
+<text class="small" x="214" y="614" text-anchor="start">n เล็ก: n 27 บิตถูกแยกตัวประกอบได้ใน 10006 รอบ (1 รอบถ้าใช้ Fermat)</text>
+<rect class="boxb" x="30" y="645" width="160" height="75" rx="7"/>
+<text class="monob" x="110" y="669" text-anchor="middle">1977</text>
+<rect class="boxw" x="198" y="645" width="832" height="75" rx="7"/>
+<text class="small" x="214" y="669" text-anchor="start">DES เป็นมาตรฐานการเข้ารหัสของรัฐบาลสหรัฐฯ ตัวแรก (FIPS 46, ประกาศ ม.ค. 1977) — key เพียง 56 บิต · ก.ค. 1998 EFF สร้าง</text>
+<text class="small" x="214" y="686" text-anchor="start">Deep Crack (ราคาไม่ถึง 250,000 ดอลลาร์) ไล่ key 56 บิตครบใน 56 ชั่วโมง · ม.ค. 1999 ใช้เวลาเหลือ 22 ชั่วโมง 15 นาที →</text>
+<text class="small" x="214" y="703" text-anchor="start">บทเรียน: keyspace ที่เล็กเกินไปพังได้ด้วยฮาร์ดแวร์</text>
+<rect class="boxb" x="30" y="734" width="160" height="58" rx="7"/>
+<text class="monob" x="110" y="758" text-anchor="middle">2001</text>
+<rect class="boxw" x="198" y="734" width="832" height="58" rx="7"/>
+<text class="small" x="214" y="758" text-anchor="start">AES (FIPS 197, 26 พ.ย. 2001) แทน DES — block 128 บิต · key 128/192/256 บิต · AES ไม่ถูกหักด้วยกำลังคำนวณแบบ DES ·</text>
+<text class="small" x="214" y="775" text-anchor="start">สิ่งที่พังแทนคือ "วิธีใช้": nonce ซ้ำใน GCM ทำให้ข้อความรั่ว (เดโม: 1)</text>
+<rect class="boxb" x="30" y="806" width="160" height="75" rx="7"/>
+<text class="monob" x="110" y="830" text-anchor="middle">1995 → 2018 → 2025</text>
+<rect class="boxw" x="198" y="806" width="832" height="75" rx="7"/>
+<text class="small" x="214" y="830" text-anchor="start">TLS ทั้งสาย: SSL 2.0 (1995) → SSL 3.0 (1996) → TLS 1.0 (RFC 2246, 1999) → 1.2 (RFC 5246, 2008) → 1.3 (RFC 8446, 2018 ·</text>
+<text class="small" x="214" y="847" text-anchor="start">ฉบับปรับปรุง RFC 9846, ก.ค. 2026) · เดโมของเราเปิดเซิร์ฟเวอร์ TLS จริง บน loopback แล้วได้ TLS 1.3 ด้วย suite</text>
+<text class="small" x="214" y="864" text-anchor="start">TLS_AES_128_GCM_SHA256</text>
+<rect class="boxb" x="30" y="895" width="160" height="75" rx="7"/>
+<text class="monob" x="110" y="919" text-anchor="middle">2024 → วันนี้</text>
+<rect class="boxw" x="198" y="895" width="832" height="75" rx="7"/>
+<text class="small" x="214" y="919" text-anchor="start">ยุค post-quantum: NIST ประกาศ FIPS 203 (ML-KEM) · FIPS 204 (ML-DSA) · FIPS 205 (SLH-DSA) เมื่อ 13 ส.ค. 2024 —</text>
+<text class="small" x="214" y="936" text-anchor="start">คอมพิวเตอร์ควอนตัมที่ใหญ่พอจะทำลาย RSA/ECDH ได้จะทำให้ ข้อมูลที่ดักเก็บไว้ตอนนี้ถอดได้ในอนาคต (harvest now, decrypt</text>
+<text class="small" x="214" y="953" text-anchor="start">later) จึงต้องเปลี่ยน key exchange ตั้งแต่ตอนนี้</text>
+<rect class="boxi" x="30" y="990" width="1000" height="58" rx="9"/>
+<text class="small" x="46" y="1016" text-anchor="start">เส้นเรื่องเดียว: "ข้อมูล" ถูกอ่านเป็น "คำสั่ง" ได้ที่ไหน ความลับก็รั่วที่นั่น — crypto ที่ดีไม่ได้ทำให้ข้อความอ่านไม่ออกเท่านั้น แต่ทำให้</text>
+<text class="small" x="46" y="1033" text-anchor="start">"การแก้ไข" ตรวจจับได้ (GCM tag 16 ไบต์ · HMAC 32 ไบต์ · ลายเซ็น RSA 256 ไบต์) และเชื่อได้ว่าเราคุยกับคนที่เราคิด (cert chain ใน TLS)</text>
+</svg>

@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1060 657" width="1060" height="657" role="img" aria-label="ตารางเปรียบเทียบขนาด keyspace ของ Caesar, Vigenère, DES, AES และ RSA พร้อมจำนวนรอบที่ต้องลองจริงจากผลรัน">
+<style>
+text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 13px; fill: #1a1a1a; }
+.hdr { font-weight: 700; font-size: 17.5px; }
+.ptitle { font-weight: 700; font-size: 14.5px; }
+.sub { fill: #57606a; font-size: 12.5px; }
+.lbl { fill: #57606a; font-size: 11.5px; }
+.txt { font-size: 13px; }
+.small { fill: #57606a; font-size: 11px; }
+.mono { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12.5px; }
+.monob { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12.5px; font-weight: 700; fill: #0550ae; }
+.boxn { fill: #fdf2f2; stroke: #cf222e; stroke-width: 1.6; }
+.boxi { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.6; }
+.boxg { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.3; }
+.boxw { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.3; }
+.boxy { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.4; }
+.boxb { fill: #eef4ff; stroke: #0969da; stroke-width: 1.4; }
+bar { }
+.barp { fill: #0969da; }
+.barc { fill: #cf222e; }
+.barv { fill: #1a7f37; }
+.grid { stroke: #e6e9ed; stroke-width: 1; }
+.axis { stroke: #8c959f; stroke-width: 1.4; }
+.arr { stroke: #57606a; stroke-width: 1.6; fill: none; }
+</style>
+<rect x="0" y="0" width="1060" height="657" fill="#ffffff"/>
+<text class="hdr" x="30" y="36" text-anchor="start">keyspace ไม่เคยโกหก: จาก 26 แบบ ถึง 2^1024 รอบ</text>
+<text class="sub" x="30" y="59" text-anchor="start">ตัวเลขจากผลรันจริง code/ep06/out · เปรียบเทียบกับ "กำลังที่ต้องใช้" ในการหักแต่ละแบบ</text>
+<rect class="boxw" x="30" y="96" width="1000" height="64" rx="7"/>
+<text class="ptitle" x="46" y="120" text-anchor="start">Caesar (shift 0–25)</text>
+<text class="monob" x="360" y="120" text-anchor="start">key space = 26 แบบ</text>
+<rect class="boxg" x="46" y="130" width="960" height="8" rx="4"/>
+<rect class="boxb" x="46" y="130" width="6.0" height="8" rx="4"/>
+<text class="small" x="46" y="156" text-anchor="start">ลองครบทั้ง 26 แบบ แล้วจับ shift จริงได้เป็นอันดับ 1 ทันที</text>
+<rect class="boxw" x="30" y="172" width="1000" height="81" rx="7"/>
+<text class="ptitle" x="46" y="196" text-anchor="start">Vigenère (key 5 ตัวอักษร)</text>
+<text class="monob" x="360" y="196" text-anchor="start">key space = 11,881,376 แบบ</text>
+<rect class="boxg" x="46" y="206" width="960" height="8" rx="4"/>
+<rect class="boxb" x="46" y="206" width="22.03331117878637" height="8" rx="4"/>
+<text class="small" x="46" y="232" text-anchor="start">Brute force บน key space นี้ยังทำได้ (ไม่ถึงหนึ่งวินาที) · แต่ที่จริงเราไม่ต้อง brute force เลย: โจมตีด้วย index of coincidence กู้ key</text>
+<text class="small" x="46" y="249" text-anchor="start">"LEMON" ได้จาก 5 คอลัมน์ เพราะ keystream มีคาบ ทำให้ข้อความกลายเป็น Caesar 5 ชุดซ้อนกัน</text>
+<rect class="boxw" x="30" y="265" width="1000" height="81" rx="7"/>
+<text class="ptitle" x="46" y="289" text-anchor="start">DES (1977)</text>
+<text class="monob" x="360" y="289" text-anchor="start">key space = 2^56 ≈ 72,057,594,037,927,936 แบบ (10^16.9)</text>
+<rect class="boxg" x="46" y="299" width="960" height="8" rx="4"/>
+<rect class="boxb" x="46" y="299" width="52.5" height="8" rx="4"/>
+<text class="small" x="46" y="325" text-anchor="start">1998: EFF สร้าง Deep Crack (ราคาไม่ถึง 250,000 ดอลลาร์) ไล่ key ครบใน 56 ชั่วโมง · 1999: เหลือ 22 ชั่วโมง 15 นาที (DES Challenge III) → 56</text>
+<text class="small" x="46" y="342" text-anchor="start">บิตเล็กเกินไปตั้งแต่ตอนนั้น</text>
+<rect class="boxw" x="30" y="358" width="1000" height="64" rx="7"/>
+<text class="ptitle" x="46" y="382" text-anchor="start">AES-128 (2001)</text>
+<text class="monob" x="360" y="382" text-anchor="start">key space = 2^128 ≈ 340,282,366,920,938,463,463,374,607,431,768,211,456 แบบ (10^38.5)</text>
+<rect class="boxg" x="46" y="392" width="960" height="8" rx="4"/>
+<rect class="boxb" x="46" y="392" width="120.0" height="8" rx="4"/>
+<text class="small" x="46" y="418" text-anchor="start">ไม่มีใครหักด้วยกำลังดิบได้ — แต่ก็ไม่พังเพราะกำลัง: ที่พังคือ "วิธีใช้" nonce ซ้ำในโหมด GCM ทำให้ข้อความรั่วทันที (เดโมของเรา: 1)</text>
+<rect class="boxw" x="30" y="434" width="1000" height="81" rx="7"/>
+<text class="ptitle" x="46" y="458" text-anchor="start">RSA-2048 (ที่ใช้จริงวันนี้)</text>
+<text class="monob" x="360" y="458" text-anchor="start">ต้องลอง √n = 2^1024 ≈ 10^308.3 (309 หลัก)</text>
+<rect class="boxg" x="46" y="468" width="960" height="8" rx="4"/>
+<rect class="boxb" x="46" y="468" width="960.0" height="8" rx="4"/>
+<text class="small" x="46" y="494" text-anchor="start">ต้องลองหารถึง √n = 2^1024 (309 หลัก) · RSA ของเล่นของเรา (n = 27 บิต) ถูกแยกใน 10006 รอบด้วย trial division และ 1 รอบด้วย Fermat factoring ·</text>
+<text class="small" x="46" y="511" text-anchor="start">ของจริง: RSA-250 (829 บิต) ถูกแยกได้ปี 2020 ด้วยกำลัง ~2,700 core-years · NIST แนะนำ ≥ 2048 บิตถึงปี 2030 และ 3072 บิตหลังจากนั้น</text>
+<rect class="boxi" x="30" y="533" width="1000" height="108" rx="9"/>
+<text class="ptitle" x="46" y="559" text-anchor="start">สิ่งที่ทั้งห้าบรรทัดนี้สอนเหมือนกัน</text>
+<text class="small" x="46" y="583" text-anchor="start">"ปลอดภัย" ไม่ใช่คุณสมบัติของ cipher แต่เป็นคุณสมบัติของ "ช่องว่างระหว่างกำลังของเรา กับกำลังของผู้โจมตี" · Caesar พังเพราะ keyspace 26 · DES</text>
+<text class="small" x="46" y="600" text-anchor="start">พังเพราะ keyspace 2^56 กับฮาร์ดแวร์ปี 1998 · AES-128 ยืนได้เพราะ keyspace 2^128 แต่พังทันทีถ้าใช้ nonce ซ้ำ · RSA ยืนได้เพราะการแยกตัวประกอบ n</text>
+<text class="small" x="46" y="617" text-anchor="start">2048 บิตไม่มีทางทำได้ในทางปฏิบัติ และทุกข้อสรุปนี้ต้อง "วัด" ไม่ใช่ "เชื่อ"</text>
+</svg>

@@ -1,0 +1,221 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1060 850" width="1060" height="850" role="img" aria-label="กราฟแท่งเปรียบเทียบความถี่ตัวอักษร A–Z ของข้อความ plaintext, ข้อความที่เข้ารหัสด้วย Caesar และข้อความที่เข้ารหัสด้วย Vigenère พร้อมค่า index of coincidence">
+<style>
+text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 13px; fill: #1a1a1a; }
+.hdr { font-weight: 700; font-size: 17.5px; }
+.ptitle { font-weight: 700; font-size: 14.5px; }
+.sub { fill: #57606a; font-size: 12.5px; }
+.lbl { fill: #57606a; font-size: 11.5px; }
+.txt { font-size: 13px; }
+.small { fill: #57606a; font-size: 11px; }
+.mono { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12.5px; }
+.monob { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12.5px; font-weight: 700; fill: #0550ae; }
+.boxn { fill: #fdf2f2; stroke: #cf222e; stroke-width: 1.6; }
+.boxi { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.6; }
+.boxg { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.3; }
+.boxw { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.3; }
+.boxy { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.4; }
+.boxb { fill: #eef4ff; stroke: #0969da; stroke-width: 1.4; }
+bar { }
+.barp { fill: #0969da; }
+.barc { fill: #cf222e; }
+.barv { fill: #1a7f37; }
+.grid { stroke: #e6e9ed; stroke-width: 1; }
+.axis { stroke: #8c959f; stroke-width: 1.4; }
+.arr { stroke: #57606a; stroke-width: 1.6; fill: none; }
+</style>
+<rect x="0" y="0" width="1060" height="850" fill="#ffffff"/>
+<text class="hdr" x="30" y="36" text-anchor="start">ความถี่ตัวอักษร A–Z กับ index of coincidence (IC) — ยิ่งเรียบยิ่งหักง่าย</text>
+<text class="sub" x="30" y="59" text-anchor="start">ผลรันจริงจาก code/ep06/out: ข้อความเดียวกัน 820 ตัวอักษร · ภาษาอังกฤษธรรมชาติ ≈ 0.0667 · ข้อความสุ่ม ≈ 0.0385</text>
+<text class="ptitle" x="30" y="116" text-anchor="start">plaintext (ภาษาอังกฤษธรรมชาติ)</text>
+<text class="mono" x="30" y="136" text-anchor="start">IC = 0.0701</text>
+<line class="axis" x1="150" y1="216" x2="1030" y2="216"/>
+<line class="grid" x1="150" y1="196.5" x2="1030" y2="196.5"/>
+<line class="grid" x1="150" y1="177.0" x2="1030" y2="177.0"/>
+<line class="grid" x1="150" y1="157.5" x2="1030" y2="157.5"/>
+<text class="lbl" x="142" y="138" text-anchor="end">14%</text>
+<text class="lbl" x="142" y="216" text-anchor="end">0</text>
+<rect class="barp" x="155.92307692307693" y="169.42446043165467" width="22" height="46.57553956834533" rx="2"/>
+<text class="lbl" x="166.92307692307693" y="231" text-anchor="middle">A</text>
+<rect class="barp" x="189.76923076923077" y="200.28776978417267" width="22" height="15.712230215827336" rx="2"/>
+<text class="lbl" x="200.76923076923077" y="231" text-anchor="middle">B</text>
+<rect class="barp" x="223.6153846153846" y="200.84892086330936" width="22" height="15.15107913669065" rx="2"/>
+<text class="lbl" x="234.6153846153846" y="231" text-anchor="middle">C</text>
+<rect class="barp" x="257.46153846153845" y="197.4820143884892" width="22" height="18.51798561151079" rx="2"/>
+<text class="lbl" x="268.46153846153845" y="231" text-anchor="middle">D</text>
+<rect class="barp" x="291.30769230769226" y="138.0" width="22" height="78.0" rx="2"/>
+<text class="lbl" x="302.30769230769226" y="231" text-anchor="middle">E</text>
+<text class="lbl" x="302.30769230769226" y="133.0" text-anchor="middle">13.9</text>
+<rect class="barp" x="325.15384615384613" y="206.46043165467626" width="22" height="9.53956834532374" rx="2"/>
+<text class="lbl" x="336.15384615384613" y="231" text-anchor="middle">F</text>
+<rect class="barp" x="359.0" y="209.26618705035972" width="22" height="6.733812949640287" rx="2"/>
+<text class="lbl" x="370.0" y="231" text-anchor="middle">G</text>
+<rect class="barp" x="392.8461538461538" y="188.50359712230215" width="22" height="27.496402877697843" rx="2"/>
+<text class="lbl" x="403.8461538461538" y="231" text-anchor="middle">H</text>
+<rect class="barp" x="426.6923076923077" y="185.6978417266187" width="22" height="30.3021582733813" rx="2"/>
+<text class="lbl" x="437.6923076923077" y="231" text-anchor="middle">I</text>
+<rect class="barp" x="460.53846153846155" y="215.0" width="22" height="1.0" rx="2"/>
+<text class="lbl" x="471.53846153846155" y="231" text-anchor="middle">J</text>
+<rect class="barp" x="494.38461538461536" y="208.70503597122303" width="22" height="7.294964028776978" rx="2"/>
+<text class="lbl" x="505.38461538461536" y="231" text-anchor="middle">K</text>
+<rect class="barp" x="528.2307692307693" y="204.77697841726618" width="22" height="11.223021582733812" rx="2"/>
+<text class="lbl" x="539.2307692307693" y="231" text-anchor="middle">L</text>
+<rect class="barp" x="562.0769230769231" y="201.41007194244605" width="22" height="14.589928057553957" rx="2"/>
+<text class="lbl" x="573.0769230769231" y="231" text-anchor="middle">M</text>
+<rect class="barp" x="595.9230769230769" y="182.89208633093526" width="22" height="33.10791366906475" rx="2"/>
+<text class="lbl" x="606.9230769230769" y="231" text-anchor="middle">N</text>
+<rect class="barp" x="629.7692307692307" y="167.17985611510792" width="22" height="48.820143884892076" rx="2"/>
+<text class="lbl" x="640.7692307692307" y="231" text-anchor="middle">O</text>
+<rect class="barp" x="663.6153846153845" y="205.89928057553956" width="22" height="10.100719424460431" rx="2"/>
+<text class="lbl" x="674.6153846153845" y="231" text-anchor="middle">P</text>
+<rect class="barp" x="697.4615384615385" y="215.0" width="22" height="1.0" rx="2"/>
+<text class="lbl" x="708.4615384615385" y="231" text-anchor="middle">Q</text>
+<rect class="barp" x="731.3076923076923" y="182.33093525179856" width="22" height="33.669064748201436" rx="2"/>
+<text class="lbl" x="742.3076923076923" y="231" text-anchor="middle">R</text>
+<rect class="barp" x="765.1538461538462" y="168.863309352518" width="22" height="47.13669064748201" rx="2"/>
+<text class="lbl" x="776.1538461538462" y="231" text-anchor="middle">S</text>
+<rect class="barp" x="799.0" y="154.83453237410072" width="22" height="61.16546762589928" rx="2"/>
+<text class="lbl" x="810.0" y="231" text-anchor="middle">T</text>
+<rect class="barp" x="832.8461538461538" y="203.09352517985613" width="22" height="12.906474820143883" rx="2"/>
+<text class="lbl" x="843.8461538461538" y="231" text-anchor="middle">U</text>
+<rect class="barp" x="866.6923076923077" y="209.8273381294964" width="22" height="6.172661870503598" rx="2"/>
+<text class="lbl" x="877.6923076923077" y="231" text-anchor="middle">V</text>
+<rect class="barp" x="900.5384615384615" y="202.53237410071944" width="22" height="13.467625899280574" rx="2"/>
+<text class="lbl" x="911.5384615384615" y="231" text-anchor="middle">W</text>
+<rect class="barp" x="934.3846153846154" y="215.0" width="22" height="1.0" rx="2"/>
+<text class="lbl" x="945.3846153846154" y="231" text-anchor="middle">X</text>
+<rect class="barp" x="968.2307692307693" y="203.09352517985613" width="22" height="12.906474820143883" rx="2"/>
+<text class="lbl" x="979.2307692307693" y="231" text-anchor="middle">Y</text>
+<rect class="barp" x="1002.0769230769231" y="215.0" width="22" height="1.0" rx="2"/>
+<text class="lbl" x="1013.0769230769231" y="231" text-anchor="middle">Z</text>
+<text class="small" x="30" y="252" text-anchor="start">ยอดแหลมชัด: 'E' = 13.9% · IC = 0.0701 (ใกล้ค่าภาษาอังกฤษ 0.0667)</text>
+<text class="ptitle" x="30" y="286" text-anchor="start">Caesar (shift = 7)</text>
+<text class="mono" x="30" y="306" text-anchor="start">IC = 0.0701</text>
+<line class="axis" x1="150" y1="386" x2="1030" y2="386"/>
+<line class="grid" x1="150" y1="366.5" x2="1030" y2="366.5"/>
+<line class="grid" x1="150" y1="347.0" x2="1030" y2="347.0"/>
+<line class="grid" x1="150" y1="327.5" x2="1030" y2="327.5"/>
+<text class="lbl" x="142" y="308" text-anchor="end">14%</text>
+<text class="lbl" x="142" y="386" text-anchor="end">0</text>
+<rect class="barc" x="155.92307692307693" y="324.8345323741007" width="22" height="61.16546762589928" rx="2"/>
+<text class="lbl" x="166.92307692307693" y="401" text-anchor="middle">A</text>
+<rect class="barc" x="189.76923076923077" y="373.0935251798561" width="22" height="12.906474820143883" rx="2"/>
+<text class="lbl" x="200.76923076923077" y="401" text-anchor="middle">B</text>
+<rect class="barc" x="223.6153846153846" y="379.8273381294964" width="22" height="6.172661870503598" rx="2"/>
+<text class="lbl" x="234.6153846153846" y="401" text-anchor="middle">C</text>
+<rect class="barc" x="257.46153846153845" y="372.53237410071944" width="22" height="13.467625899280574" rx="2"/>
+<text class="lbl" x="268.46153846153845" y="401" text-anchor="middle">D</text>
+<rect class="barc" x="291.30769230769226" y="385.0" width="22" height="1.0" rx="2"/>
+<text class="lbl" x="302.30769230769226" y="401" text-anchor="middle">E</text>
+<rect class="barc" x="325.15384615384613" y="373.0935251798561" width="22" height="12.906474820143883" rx="2"/>
+<text class="lbl" x="336.15384615384613" y="401" text-anchor="middle">F</text>
+<rect class="barc" x="359.0" y="385.0" width="22" height="1.0" rx="2"/>
+<text class="lbl" x="370.0" y="401" text-anchor="middle">G</text>
+<rect class="barc" x="392.8461538461538" y="339.42446043165467" width="22" height="46.57553956834533" rx="2"/>
+<text class="lbl" x="403.8461538461538" y="401" text-anchor="middle">H</text>
+<rect class="barc" x="426.6923076923077" y="370.28776978417267" width="22" height="15.712230215827336" rx="2"/>
+<text class="lbl" x="437.6923076923077" y="401" text-anchor="middle">I</text>
+<rect class="barc" x="460.53846153846155" y="370.84892086330933" width="22" height="15.15107913669065" rx="2"/>
+<text class="lbl" x="471.53846153846155" y="401" text-anchor="middle">J</text>
+<rect class="barc" x="494.38461538461536" y="367.48201438848923" width="22" height="18.51798561151079" rx="2"/>
+<text class="lbl" x="505.38461538461536" y="401" text-anchor="middle">K</text>
+<rect class="barc" x="528.2307692307693" y="308.0" width="22" height="78.0" rx="2"/>
+<text class="lbl" x="539.2307692307693" y="401" text-anchor="middle">L</text>
+<text class="lbl" x="539.2307692307693" y="303.0" text-anchor="middle">13.9</text>
+<rect class="barc" x="562.0769230769231" y="376.46043165467626" width="22" height="9.53956834532374" rx="2"/>
+<text class="lbl" x="573.0769230769231" y="401" text-anchor="middle">M</text>
+<rect class="barc" x="595.9230769230769" y="379.2661870503597" width="22" height="6.733812949640287" rx="2"/>
+<text class="lbl" x="606.9230769230769" y="401" text-anchor="middle">N</text>
+<rect class="barc" x="629.7692307692307" y="358.50359712230215" width="22" height="27.496402877697843" rx="2"/>
+<text class="lbl" x="640.7692307692307" y="401" text-anchor="middle">O</text>
+<rect class="barc" x="663.6153846153845" y="355.6978417266187" width="22" height="30.3021582733813" rx="2"/>
+<text class="lbl" x="674.6153846153845" y="401" text-anchor="middle">P</text>
+<rect class="barc" x="697.4615384615385" y="385.0" width="22" height="1.0" rx="2"/>
+<text class="lbl" x="708.4615384615385" y="401" text-anchor="middle">Q</text>
+<rect class="barc" x="731.3076923076923" y="378.705035971223" width="22" height="7.294964028776978" rx="2"/>
+<text class="lbl" x="742.3076923076923" y="401" text-anchor="middle">R</text>
+<rect class="barc" x="765.1538461538462" y="374.7769784172662" width="22" height="11.223021582733812" rx="2"/>
+<text class="lbl" x="776.1538461538462" y="401" text-anchor="middle">S</text>
+<rect class="barc" x="799.0" y="371.41007194244605" width="22" height="14.589928057553957" rx="2"/>
+<text class="lbl" x="810.0" y="401" text-anchor="middle">T</text>
+<rect class="barc" x="832.8461538461538" y="352.89208633093523" width="22" height="33.10791366906475" rx="2"/>
+<text class="lbl" x="843.8461538461538" y="401" text-anchor="middle">U</text>
+<rect class="barc" x="866.6923076923077" y="337.1798561151079" width="22" height="48.820143884892076" rx="2"/>
+<text class="lbl" x="877.6923076923077" y="401" text-anchor="middle">V</text>
+<rect class="barc" x="900.5384615384615" y="375.8992805755396" width="22" height="10.100719424460431" rx="2"/>
+<text class="lbl" x="911.5384615384615" y="401" text-anchor="middle">W</text>
+<rect class="barc" x="934.3846153846154" y="385.0" width="22" height="1.0" rx="2"/>
+<text class="lbl" x="945.3846153846154" y="401" text-anchor="middle">X</text>
+<rect class="barc" x="968.2307692307693" y="352.33093525179856" width="22" height="33.669064748201436" rx="2"/>
+<text class="lbl" x="979.2307692307693" y="401" text-anchor="middle">Y</text>
+<rect class="barc" x="1002.0769230769231" y="338.863309352518" width="22" height="47.13669064748201" rx="2"/>
+<text class="lbl" x="1013.0769230769231" y="401" text-anchor="middle">Z</text>
+<text class="small" x="30" y="422" text-anchor="start">รูปร่างเหมือนเดิมเป๊ะ แค่เลื่อนชื่อตัวอักษร: 'L' = 13.9% · IC = 0.0701</text>
+<text class="ptitle" x="30" y="456" text-anchor="start">Vigenère (key LEMON)</text>
+<text class="mono" x="30" y="476" text-anchor="start">IC = 0.0424</text>
+<line class="axis" x1="150" y1="556" x2="1030" y2="556"/>
+<line class="grid" x1="150" y1="536.5" x2="1030" y2="536.5"/>
+<line class="grid" x1="150" y1="517.0" x2="1030" y2="517.0"/>
+<line class="grid" x1="150" y1="497.5" x2="1030" y2="497.5"/>
+<text class="lbl" x="142" y="478" text-anchor="end">14%</text>
+<text class="lbl" x="142" y="556" text-anchor="end">0</text>
+<rect class="barv" x="155.92307692307693" y="527.3812949640288" width="22" height="28.618705035971217" rx="2"/>
+<text class="lbl" x="166.92307692307693" y="571" text-anchor="middle">A</text>
+<rect class="barv" x="189.76923076923077" y="537.4820143884892" width="22" height="18.51798561151079" rx="2"/>
+<text class="lbl" x="200.76923076923077" y="571" text-anchor="middle">B</text>
+<rect class="barv" x="223.6153846153846" y="537.4820143884892" width="22" height="18.51798561151079" rx="2"/>
+<text class="lbl" x="234.6153846153846" y="571" text-anchor="middle">C</text>
+<rect class="barv" x="257.46153846153845" y="539.1654676258993" width="22" height="16.834532374100718" rx="2"/>
+<text class="lbl" x="268.46153846153845" y="571" text-anchor="middle">D</text>
+<rect class="barv" x="291.30769230769226" y="520.6474820143885" width="22" height="35.352517985611506" rx="2"/>
+<text class="lbl" x="302.30769230769226" y="571" text-anchor="middle">E</text>
+<text class="lbl" x="302.30769230769226" y="515.6474820143885" text-anchor="middle">6.3</text>
+<rect class="barv" x="325.15384615384613" y="524.0143884892086" width="22" height="31.98561151079137" rx="2"/>
+<text class="lbl" x="336.15384615384613" y="571" text-anchor="middle">F</text>
+<rect class="barv" x="359.0" y="525.6978417266187" width="22" height="30.3021582733813" rx="2"/>
+<text class="lbl" x="370.0" y="571" text-anchor="middle">G</text>
+<rect class="barv" x="392.8461538461538" y="527.9424460431654" width="22" height="28.057553956834532" rx="2"/>
+<text class="lbl" x="403.8461538461538" y="571" text-anchor="middle">H</text>
+<rect class="barv" x="426.6923076923077" y="533.5539568345324" width="22" height="22.446043165467625" rx="2"/>
+<text class="lbl" x="437.6923076923077" y="571" text-anchor="middle">I</text>
+<rect class="barv" x="460.53846153846155" y="550.3884892086331" width="22" height="5.611510791366906" rx="2"/>
+<text class="lbl" x="471.53846153846155" y="571" text-anchor="middle">J</text>
+<rect class="barv" x="494.38461538461536" y="549.8273381294964" width="22" height="6.172661870503598" rx="2"/>
+<text class="lbl" x="505.38461538461536" y="571" text-anchor="middle">K</text>
+<rect class="barv" x="528.2307692307693" y="536.3597122302158" width="22" height="19.640287769784173" rx="2"/>
+<text class="lbl" x="539.2307692307693" y="571" text-anchor="middle">L</text>
+<rect class="barv" x="562.0769230769231" y="534.6762589928057" width="22" height="21.323741007194243" rx="2"/>
+<text class="lbl" x="573.0769230769231" y="571" text-anchor="middle">M</text>
+<rect class="barv" x="595.9230769230769" y="540.8489208633093" width="22" height="15.15107913669065" rx="2"/>
+<text class="lbl" x="606.9230769230769" y="571" text-anchor="middle">N</text>
+<rect class="barv" x="629.7692307692307" y="534.6762589928057" width="22" height="21.323741007194243" rx="2"/>
+<text class="lbl" x="640.7692307692307" y="571" text-anchor="middle">O</text>
+<rect class="barv" x="663.6153846153845" y="530.1870503597122" width="22" height="25.812949640287766" rx="2"/>
+<text class="lbl" x="674.6153846153845" y="571" text-anchor="middle">P</text>
+<rect class="barv" x="697.4615384615385" y="531.3093525179856" width="22" height="24.69064748201439" rx="2"/>
+<text class="lbl" x="708.4615384615385" y="571" text-anchor="middle">Q</text>
+<rect class="barv" x="731.3076923076923" y="522.8920863309353" width="22" height="33.10791366906475" rx="2"/>
+<text class="lbl" x="742.3076923076923" y="571" text-anchor="middle">R</text>
+<rect class="barv" x="765.1538461538462" y="521.2086330935251" width="22" height="34.79136690647482" rx="2"/>
+<text class="lbl" x="776.1538461538462" y="571" text-anchor="middle">S</text>
+<rect class="barv" x="799.0" y="543.0935251798561" width="22" height="12.906474820143883" rx="2"/>
+<text class="lbl" x="810.0" y="571" text-anchor="middle">T</text>
+<rect class="barv" x="832.8461538461538" y="540.8489208633093" width="22" height="15.15107913669065" rx="2"/>
+<text class="lbl" x="843.8461538461538" y="571" text-anchor="middle">U</text>
+<rect class="barv" x="866.6923076923077" y="534.115107913669" width="22" height="21.884892086330932" rx="2"/>
+<text class="lbl" x="877.6923076923077" y="571" text-anchor="middle">V</text>
+<rect class="barv" x="900.5384615384615" y="535.2374100719425" width="22" height="20.762589928057555" rx="2"/>
+<text class="lbl" x="911.5384615384615" y="571" text-anchor="middle">W</text>
+<rect class="barv" x="934.3846153846154" y="539.1654676258993" width="22" height="16.834532374100718" rx="2"/>
+<text class="lbl" x="945.3846153846154" y="571" text-anchor="middle">X</text>
+<rect class="barv" x="968.2307692307693" y="543.6546762589928" width="22" height="12.345323741007196" rx="2"/>
+<text class="lbl" x="979.2307692307693" y="571" text-anchor="middle">Y</text>
+<rect class="barv" x="1002.0769230769231" y="533.5539568345324" width="22" height="22.446043165467625" rx="2"/>
+<text class="lbl" x="1013.0769230769231" y="571" text-anchor="middle">Z</text>
+<text class="small" x="30" y="592" text-anchor="start">ยอดถูกเกลี่ยให้แบน: 'E' = 6.3% เท่านั้น · IC ลดเหลือ 0.0424</text>
+<rect class="boxi" x="30" y="628" width="1000" height="154" rx="9"/>
+<text class="ptitle" x="46" y="654" text-anchor="start">อ่านภาพนี้ให้เป็น</text>
+<text class="small" x="46" y="678" text-anchor="start">Caesar "เลื่อน" กราฟทั้งก้อนไปข้าง ๆ — รูปร่างเดิมเป๊ะ ยอดแหลมยังชี้ทางไปที่ E เพราะการสลับชื่อตัวอักษรไม่ได้เปลี่ยน "ความถี่" เลย แต่</text>
+<text class="small" x="46" y="695" text-anchor="start">Vigenère "เกลี่ย" กราฟให้แบน เพราะตัวอักษรเดียวกันถูกเลื่อนด้วยค่าที่ต่างกันในแต่ละตำแหน่ง การหัก Vigenère จึงต้อง "หาความยาว key ก่อน"</text>
+<text class="small" x="46" y="712" text-anchor="start">(เราใช้ index of coincidence: คาบที่ผ่านเกณฑ์คือ 5) แล้วแยกโจมตีทีละคอลัมน์ ซึ่งเมื่อแยกแล้วแต่ละคอลัมน์ก็กลับเป็น Caesar</text>
+<text class="small" x="46" y="729" text-anchor="start">ที่กราฟรูปร่างเดิมโผล่ขึ้นมาอีกครั้ง — และเรากู้ key ได้ตรงเป๊ะ</text>
+</svg>
