@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1060 640" width="1060" height="640" role="img" aria-label="เปรียบเทียบ heartbeat ปกติกับ Heartbleed: เฟรมบนสายและผลลัพธ์จากเดโมของเรา">
+<style>
+text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 13px; fill: #1a1a1a; }
+.hdr { font-weight: 700; font-size: 17.5px; }
+.ptitle { font-weight: 700; font-size: 14.5px; }
+.sub { fill: #57606a; font-size: 12.5px; }
+.lbl { fill: #57606a; font-size: 11.5px; }
+.txt { font-size: 13px; }
+.small { fill: #57606a; font-size: 11px; }
+.mono { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12.5px; }
+.monob { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12.5px; font-weight: 700; fill: #0550ae; }
+.boxn { fill: #fdf2f2; stroke: #cf222e; stroke-width: 1.6; }
+.boxi { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.6; }
+.boxg { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.3; }
+.boxw { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.3; }
+.boxy { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.4; }
+.boxb { fill: #eef4ff; stroke: #0969da; stroke-width: 1.4; }
+.readw { fill: #0969da; opacity: 0.16; }
+.over { fill: #cf222e; opacity: 0.22; }
+.grid { stroke: #e6e9ed; stroke-width: 1; }
+.axis { stroke: #8c959f; stroke-width: 1.4; }
+.arr { stroke: #57606a; stroke-width: 1.6; fill: none; }
+.arrr { stroke: #cf222e; stroke-width: 2.0; fill: none; }
+</style>
+<rect x="0" y="0" width="1060" height="640" fill="#ffffff"/>
+<text class="hdr" x="30.0" y="36.0" text-anchor="start">Heartbeat ปกติ กับ Heartbleed — ต่างกันที่ช่อง payload_length ช่องเดียว</text>
+<text class="sub" x="30.0" y="60.0" text-anchor="start">ตัวเลขทั้งหมดคือผลรันจริงจาก code/ep07/out (C: gcc 14.2.0 · Go: 1.24.4) · รันซ้ำได้ผลเดิมทุกครั้ง</text>
+<line class="grid" x1="30.0" y1="74.0" x2="1030.0" y2="74.0"/>
+<line class="grid" x1="18.0" y1="74.0" x2="18.0" y2="620.0"/>
+<text class="ptitle" x="30.0" y="100.0" text-anchor="start">1) คำขอปกติ (client จริง)</text>
+<rect class="boxb" x="30.0" y="116.0" width="15.2" height="30.0" rx="4"/>
+<text class="lbl" x="37.6" y="136.0" text-anchor="middle">1</text>
+<rect class="boxb" x="45.2" y="116.0" width="30.4" height="30.0" rx="4"/>
+<text class="lbl" x="60.4" y="136.0" text-anchor="middle">2</text>
+<rect class="boxi" x="75.6" y="116.0" width="121.5" height="30.0" rx="4"/>
+<text class="lbl" x="136.3" y="136.0" text-anchor="middle">8</text>
+<rect class="boxg" x="197.0" y="116.0" width="243.0" height="30.0" rx="4"/>
+<text class="lbl" x="318.5" y="136.0" text-anchor="middle">16</text>
+<text class="small" x="30.0" y="166.0" text-anchor="start">← 1 ไบต์ →</text>
+<text class="small" x="30.0" y="196.0" text-anchor="start">• เฟรมบนสาย 27 ไบต์ = type(1) + payload_length(2) + payload(8) +</text>
+<text class="small" x="30.0" y="213.0" text-anchor="start">padding(16)</text>
+<text class="small" x="30.0" y="229.0" text-anchor="start">• payload_length ที่ประกาศ = 8 ตรงกับ payload จริง 8 ไบต์</text>
+<text class="small" x="30.0" y="245.0" text-anchor="start">• เซิร์ฟเวอร์ echo กลับตามนั้น: 11 ไบต์ · ไม่มีอะไรเกินออกมา</text>
+<rect class="boxy" x="30.0" y="265.0" width="460.0" height="30.0" rx="6"/>
+<text class="mono" x="40.0" y="285.0" text-anchor="start">secret_leaked=0 · fixed_result=refused(กรณีโกหก)</text>
+<line class="grid" x1="548.0" y1="74.0" x2="548.0" y2="620.0"/>
+<text class="ptitle" x="560.0" y="100.0" text-anchor="start">2) คำขอ Heartbleed (โกหก)</text>
+<rect class="boxw" x="560.0" y="116.0" width="20.5" height="30.0" rx="4"/>
+<text class="lbl" x="570.2" y="136.0" text-anchor="middle">1</text>
+<rect class="boxb" x="580.5" y="116.0" width="41.0" height="30.0" rx="4"/>
+<text class="lbl" x="601.0" y="136.0" text-anchor="middle">2</text>
+<rect class="boxi" x="621.5" y="116.0" width="20.5" height="30.0" rx="4"/>
+<text class="lbl" x="631.8" y="136.0" text-anchor="middle">1</text>
+<rect class="boxg" x="642.0" y="116.0" width="328.0" height="30.0" rx="4"/>
+<text class="lbl" x="806.0" y="136.0" text-anchor="middle">16</text>
+<text class="small" x="560.0" y="166.0" text-anchor="start">← 1 ไบต์ →</text>
+<text class="small" x="560.0" y="196.0" text-anchor="start">• เฟรมบนสาย 20 ไบต์ (01ffff58…) = type(1) + length(2) + payload 1 +</text>
+<text class="small" x="560.0" y="213.0" text-anchor="start">padding(16)</text>
+<text class="small" x="560.0" y="229.0" text-anchor="start">• payload_length ที่ประกาศ = 65535 แต่ payload จริงมีแค่ 1 ไบต์</text>
+<text class="small" x="560.0" y="245.0" text-anchor="start">• เซิร์ฟเวอร์ echo 115 ไบต์ → เกิน record จริงไป 111 ไบต์</text>
+<rect class="boxy" x="560.0" y="265.0" width="460.0" height="30.0" rx="6"/>
+<text class="mono" x="570.0" y="285.0" text-anchor="start">secret_leaked=1 · ขอข้อมูลเพิ่ม 3276 เท่าของเฟรมจริง</text>
+<rect class="boxg" x="30.0" y="470.0" width="1000.0" height="78.0" rx="9"/>
+<text class="small" x="46.0" y="496.0" text-anchor="start">เหตุผลเดียวที่สองภาพนี้ต่างกัน: ฝั่งซ้ายที่เซิร์ฟเวอร์เทียบ payload_length กับ "ความยาว record จริง" (27 ไบต์) กับฝั่งขวาที่ไม่เทียบเลย —</text>
+<text class="small" x="46.0" y="513.0" text-anchor="start">โค้ดที่ต่างกันมีแค่การเปรียบเทียบ 2 ครั้ง และผลคือความลับที่อยู่ติดกันในหน่วยความจำ (offset 68) รั่วออกไป (TLS-PRIVATE-KEY-…) โดยไม่มี crash</text>
+<text class="small" x="46.0" y="530.0" text-anchor="start">ไม่มี log ไม่มีสัญญาณเตือน (program_exit_status=0)</text>
+<rect class="boxi" x="30.0" y="560.0" width="1000.0" height="62.0" rx="9"/>
+<text class="small" x="46.0" y="586.0" text-anchor="start">กับดักของการอ่านเกินขอบเขต: มันไม่ฆ่าโปรเซส — มันแค่ตอบคำถามที่เราไม่ควรตอบ (ตัวเลขจากเดโม C: รั่ว 111 ไบต์ · ตัวนับ Go:</text>
+<text class="small" x="46.0" y="603.0" text-anchor="start">stale_memory_leaked=1, unsafe_read_past_cap=39)</text>
+</svg>

@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1060 610" width="1060" height="610" role="img" aria-label="ผังหน่วยความจำของ struct ในเดโม: บัฟเฟอร์คำขอ ความยาว record และความลับที่อยู่ติดกัน">
+<style>
+text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 13px; fill: #1a1a1a; }
+.hdr { font-weight: 700; font-size: 17.5px; }
+.ptitle { font-weight: 700; font-size: 14.5px; }
+.sub { fill: #57606a; font-size: 12.5px; }
+.lbl { fill: #57606a; font-size: 11.5px; }
+.txt { font-size: 13px; }
+.small { fill: #57606a; font-size: 11px; }
+.mono { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12.5px; }
+.monob { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12.5px; font-weight: 700; fill: #0550ae; }
+.boxn { fill: #fdf2f2; stroke: #cf222e; stroke-width: 1.6; }
+.boxi { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.6; }
+.boxg { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.3; }
+.boxw { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.3; }
+.boxy { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.4; }
+.boxb { fill: #eef4ff; stroke: #0969da; stroke-width: 1.4; }
+.readw { fill: #0969da; opacity: 0.16; }
+.over { fill: #cf222e; opacity: 0.22; }
+.grid { stroke: #e6e9ed; stroke-width: 1; }
+.axis { stroke: #8c959f; stroke-width: 1.4; }
+.arr { stroke: #57606a; stroke-width: 1.6; fill: none; }
+.arrr { stroke: #cf222e; stroke-width: 2.0; fill: none; }
+</style>
+<rect x="0" y="0" width="1060" height="610" fill="#ffffff"/>
+<text class="hdr" x="30.0" y="36.0" text-anchor="start">หน่วยความจำจริงของเดโม (108 ไบต์) และหน้าต่างที่ถูกอ่าน</text>
+<text class="sub" x="30.0" y="60.0" text-anchor="start">จาก code/ep07/c_demo/heartbleed_mini.c — struct conn = req[64] + req_len(4) + secret[40] · secret อยู่ที่ offset 68</text>
+<line class="grid" x1="30.0" y1="74.0" x2="1030.0" y2="74.0"/>
+<text class="ptitle" x="60.0" y="108.0" text-anchor="start">1) แถบหน่วยความจำ (เรียงตามลำดับฟิลด์ใน struct)</text>
+<rect class="boxb" x="60.0" y="124.0" width="557.0" height="44.0" rx="5"/>
+<text class="lbl" x="338.5" y="151.0" text-anchor="middle">64</text>
+<text class="small" x="338.5" y="184.0" text-anchor="middle">64 ไบต์</text>
+<rect class="boxg" x="617.0" y="124.0" width="34.8" height="44.0" rx="5"/>
+<text class="lbl" x="634.4" y="151.0" text-anchor="middle">4</text>
+<text class="small" x="634.4" y="184.0" text-anchor="middle">4 ไบต์</text>
+<rect class="boxn" x="651.9" y="124.0" width="348.1" height="44.0" rx="5"/>
+<text class="lbl" x="825.9" y="151.0" text-anchor="middle">40</text>
+<text class="small" x="825.9" y="184.0" text-anchor="middle">40 ไบต์</text>
+<text class="small" x="60.0" y="204.0" text-anchor="start">offset 0</text>
+<text class="small" x="651.9" y="204.0" text-anchor="start">offset 68</text>
+<text class="small" x="996.0" y="204.0" text-anchor="end">offset 108 = ปลาย struct</text>
+<text class="small" x="60.0" y="226.0" text-anchor="start">req: บัฟเฟอร์คำขอ</text>
+<text class="small" x="591.9" y="226.0" text-anchor="start">req_len</text>
+<text class="small" x="671.9" y="226.0" text-anchor="start">secret (ความลับ)</text>
+<text class="ptitle" x="60.0" y="274.0" text-anchor="start">2) หน้าต่างที่เซิร์ฟเวอร์อ่าน (declared = 112 ไบต์, เริ่มที่ offset 3)</text>
+<rect class="readw" x="86.1" y="290.0" width="913.9" height="30.0" rx="4"/>
+<rect class="over" x="1000.0" y="290.0" width="60.0" height="30.0" rx="4"/>
+<line class="arr" x1="86.1" y1="286.0" x2="86.1" y2="326.0"/>
+<line class="axis" x1="1000.0" y1="282.0" x2="1000.0" y2="330.0"/>
+<text class="small" x="92.1" y="340.0" text-anchor="start">อ่านเริ่มที่ offset 3 (payload 1 ไบต์จริง + padding 16 ไบต์)</text>
+<text class="small" x="1030.0" y="340.0" text-anchor="end">พ้น struct ไป 7 ไบต์</text>
+<rect class="boxw" x="60.0" y="366.0" width="940.0" height="92.0" rx="9"/>
+<text class="ptitle" x="76.0" y="392.0" text-anchor="start">3) สิ่งที่ผู้โจมตีได้รับกลับไป</text>
+<text class="small" x="76.0" y="416.0" text-anchor="start">response 115 ไบต์ = header 3 + declared 112 ไบต์ · ในนั้นมี payload จริง 1 ไบต์ และไบต์ที่อ่านเกินอีก 111 ไบต์ ซึ่งครอบความลับที่</text>
+<text class="small" x="76.0" y="433.0" text-anchor="start">offset 68 พอดี → found_marker=TLS-PRIVATE-KEY-DEMO-ONLY-STRICTLY-0001</text>
+<rect class="boxn" x="60.0" y="472.0" width="940.0" height="108.0" rx="9"/>
+<text class="ptitle" x="76.0" y="498.0" text-anchor="start">4) เครื่องมือที่จับได้ / ตัวเลขที่จับไม่ได้</text>
+<text class="small" x="76.0" y="522.0" text-anchor="start">gcc -Wall -Wextra ตอนคอมไพล์: เตือน 0 ครั้ง (ความยาวมาจากเครือข่าย) · AddressSanitizer: heap-buffer-overflow READ of size 65535 ที่</text>
+<text class="small" x="76.0" y="539.0" text-anchor="start">c_demo/heartbleed_mini.c:51 — เกิน 108-byte region พอดี · แพตช์ที่ถูกต้อง: fixed_result=refused เมื่อเทียบ declared กับ record จริง</text>
+<text class="small" x="76.0" y="556.0" text-anchor="start">(ตัวที่แก้แล้วจึงคืน bytes_sent_back=0)</text>
+</svg>

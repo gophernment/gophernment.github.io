@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1060 837" width="1060" height="837" role="img" aria-label="ไทม์ไลน์ของ Heartbleed ตั้งแต่ commit ปี 2011 ถึงนโยบาย memory-safe languages ในปัจจุบัน">
+<style>
+text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 13px; fill: #1a1a1a; }
+.hdr { font-weight: 700; font-size: 17.5px; }
+.ptitle { font-weight: 700; font-size: 14.5px; }
+.sub { fill: #57606a; font-size: 12.5px; }
+.lbl { fill: #57606a; font-size: 11.5px; }
+.txt { font-size: 13px; }
+.small { fill: #57606a; font-size: 11px; }
+.mono { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12.5px; }
+.monob { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12.5px; font-weight: 700; fill: #0550ae; }
+.boxn { fill: #fdf2f2; stroke: #cf222e; stroke-width: 1.6; }
+.boxi { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.6; }
+.boxg { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.3; }
+.boxw { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.3; }
+.boxy { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.4; }
+.boxb { fill: #eef4ff; stroke: #0969da; stroke-width: 1.4; }
+.readw { fill: #0969da; opacity: 0.16; }
+.over { fill: #cf222e; opacity: 0.22; }
+.grid { stroke: #e6e9ed; stroke-width: 1; }
+.axis { stroke: #8c959f; stroke-width: 1.4; }
+.arr { stroke: #57606a; stroke-width: 1.6; fill: none; }
+.arrr { stroke: #cf222e; stroke-width: 2.0; fill: none; }
+</style>
+<rect x="0" y="0" width="1060" height="837" fill="#ffffff"/>
+<text class="hdr" x="30.0" y="36.0" text-anchor="start">จากบั๊กที่ขาดการเทียบ 1 ครั้ง ถึงนโยบายระดับชาติเรื่อง memory safety</text>
+<text class="sub" x="30.0" y="60.0" text-anchor="start">ไทม์ไลน์นี้ตรวจจากแหล่งปัจจุบันเมื่อ 15 ต.ค. 2026 · ผลรันของเดโมในบท (secret_leaked=1, stale_memory_leaked=1) คือบั๊กชนิดเดียวกัน</text>
+<rect class="boxb" x="30.0" y="90.0" width="160.0" height="75.0" rx="7"/>
+<text class="monob" x="110.0" y="114.0" text-anchor="middle">31 ธ.ค. 2011</text>
+<rect class="boxw" x="198.0" y="90.0" width="832.0" height="75.0" rx="7"/>
+<text class="small" x="214.0" y="114.0" text-anchor="start">commit 4817504d069b เข้า repository ของ OpenSSL — เพิ่มการรองรับ TLS heartbeat extension (ตอนนั้นยังเป็น Internet-Draft —</text>
+<text class="small" x="214.0" y="131.0" text-anchor="start">ตีพิมพ์เป็น RFC 6520 เมื่อ ก.พ. 2012) ผู้เขียนคือ Robin Seggelmann (หนึ่งในผู้เขียน RFC) และผ่านการ review ของ core</text>
+<text class="small" x="214.0" y="148.0" text-anchor="start">developer — ไม่มีใครเห็นว่าขาดการเทียบความยาว 1 ครั้ง</text>
+<rect class="boxb" x="30.0" y="179.0" width="160.0" height="58.0" rx="7"/>
+<text class="monob" x="110.0" y="203.0" text-anchor="middle">14 มี.ค. 2012</text>
+<rect class="boxw" x="198.0" y="179.0" width="832.0" height="58.0" rx="7"/>
+<text class="small" x="214.0" y="203.0" text-anchor="start">OpenSSL 1.0.1 ออก โดยเปิด heartbeat ไว้ตามค่าเริ่มต้น (enabled by default) → บั๊กออกสู่ production</text>
+<text class="small" x="214.0" y="220.0" text-anchor="start">และอยู่ในนั้นต่อเนื่อง 2 ปี กับอีก 24 วัน</text>
+<rect class="boxb" x="30.0" y="251.0" width="160.0" height="75.0" rx="7"/>
+<text class="monob" x="110.0" y="275.0" text-anchor="middle">7 เม.ย. 2014</text>
+<rect class="boxw" x="198.0" y="251.0" width="832.0" height="75.0" rx="7"/>
+<text class="small" x="214.0" y="275.0" text-anchor="start">เปิดเผยพร้อมกันโดย Codenomicon (ตั้งชื่อ Heartbleed) และ Neel Mehta แห่ง Google Security · CVE-2014-0160 · กระทบ OpenSSL</text>
+<text class="small" x="214.0" y="292.0" text-anchor="start">1.0.1 ถึง 1.0.1f และ 1.0.2-beta1 · แพตช์คือการเพิ่มการเทียบ 2 บรรทัด (1+2+16 และ 1+2+payload+16 เทียบกับ rrec.length) ·</text>
+<text class="small" x="214.0" y="309.0" text-anchor="start">เวอร์ชันที่แก้คือ 1.0.1g ออกวันเดียวกัน · CVSS v2 = 5.0 MEDIUM (v3.1 = 7.5 HIGH) · CWE-125 Out-of-bounds Read</text>
+<rect class="boxb" x="30.0" y="340.0" width="160.0" height="75.0" rx="7"/>
+<text class="monob" x="110.0" y="364.0" text-anchor="middle">11 เม.ย. 2014</text>
+<rect class="boxw" x="198.0" y="340.0" width="832.0" height="75.0" rx="7"/>
+<text class="small" x="214.0" y="364.0" text-anchor="start">Cloudflare เปิด Heartbleed Challenge ให้ใครก็ได้ลองขโมย private key จากเซิร์ฟเวอร์ที่ตั้งใจให้เจาะ · Fedor Indutny ขอ 2.5</text>
+<text class="small" x="214.0" y="381.0" text-anchor="start">ล้านครั้งแล้วได้ private key จริง · Ilkka Mattila (NCSC-FI) ได้ใน 1 แสนครั้ง · ภายในวันรุ่งขึ้นมีผู้สำเร็จรวม 4 คน →</text>
+<text class="small" x="214.0" y="398.0" text-anchor="start">ยืนยันว่า "อ่าน key ออก" ไม่ใช่ทฤษฎี</text>
+<rect class="boxb" x="30.0" y="429.0" width="160.0" height="58.0" rx="7"/>
+<text class="monob" x="110.0" y="453.0" text-anchor="middle">14 เม.ย. 2014</text>
+<rect class="boxw" x="198.0" y="429.0" width="832.0" height="58.0" rx="7"/>
+<text class="small" x="214.0" y="453.0" text-anchor="start">Canada Revenue Agency แจ้งว่าเลขประกันสังคม (SIN) ราว 900 รายรั่วจากการโจมตีที่ใช้ Heartbleed ภายในช่วง 6 ชั่วโมง —</text>
+<text class="small" x="214.0" y="470.0" text-anchor="start">ตัวอย่างจริงว่าร่องรอยของการอ่านความจำคือ "ข้อมูลของประชาชน"</text>
+<rect class="boxb" x="30.0" y="501.0" width="160.0" height="92.0" rx="7"/>
+<text class="monob" x="110.0" y="525.0" text-anchor="middle">เม.ย. – พ.ค. 2014</text>
+<rect class="boxw" x="198.0" y="501.0" width="832.0" height="92.0" rx="7"/>
+<text class="small" x="214.0" y="525.0" text-anchor="start">ผลตอบสนองเชิงโครงสร้าง: OpenBSD fork OpenSSL เป็น LibreSSL (ประกาศชื่อ 22 เม.ย.) และในเดือนแรก ลบโค้ด C ไปกว่า 90,000</text>
+<text class="small" x="214.0" y="542.0" text-anchor="start">บรรทัด (จากราว 388,000 บรรทัด) · 24 เม.ย. Linux Foundation เปิด Core Infrastructure Initiative (CII)</text>
+<text class="small" x="214.0" y="559.0" text-anchor="start">โดยบริษัทยักษ์ใหญ่ด้านเทคโนโลยีรับปากบริจาครายละ 100,000 ดอลลาร์ต่อปี 3 ปี (รวมราว 3.9 ล้านดอลลาร์) · ก่อนหน้านั้น</text>
+<text class="small" x="214.0" y="576.0" text-anchor="start">OpenSSL มีคนทำงานเต็มเวลา 1 คน และเงินบริจาคราว 2,000 ดอลลาร์ต่อปี</text>
+<rect class="boxb" x="30.0" y="607.0" width="160.0" height="92.0" rx="7"/>
+<text class="monob" x="110.0" y="631.0" text-anchor="middle">2023 – ปัจจุบัน</text>
+<rect class="boxw" x="198.0" y="607.0" width="832.0" height="92.0" rx="7"/>
+<text class="small" x="214.0" y="631.0" text-anchor="start">บทเรียนกลายเป็นนโยบาย: CISA/NSA/FBI และพันธมิตร Five Eyes เผยแพร่ "The Case for Memory Safe Roadmaps" (ธ.ค. 2023)</text>
+<text class="small" x="214.0" y="648.0" text-anchor="start">โดยอ้างว่าประมาณ 70% ของ CVE ของ Microsoft และของ Chromium เป็นปัญหา memory safety · Android</text>
+<text class="small" x="214.0" y="665.0" text-anchor="start">รายงานว่าสัดส่วนช่องโหว่ด้าน memory safety ลดจาก 76% (2019) เหลือ 24% (2024) หลังเริ่มใช้ Rust ในโค้ดใหม่ · ภาษา</text>
+<text class="small" x="214.0" y="682.0" text-anchor="start">memory-safe จึงถูกพูดถึงในระดับผู้บริหาร ไม่ใช่แค่ในห้องแล็บ</text>
+<rect class="boxi" x="30.0" y="719.0" width="1000.0" height="74.0" rx="9"/>
+<text class="small" x="46.0" y="745.0" text-anchor="start">เส้นเรื่องเดียว: ช่องโหว่ระดับตำนานมักไม่ได้เกิดจากความไม่รู้ แต่เกิดจาก "การละเว้น 1 ครั้ง" บนเส้นทางที่ถูกเรียกบ่อย ·</text>
+<text class="small" x="46.0" y="762.0" text-anchor="start">แพตช์ใช้การเทียบ 2 ครั้ง (fixed_result=refused ในเดโมของเรา) แต่การป้องกันไม่ให้เกิดครั้งต่อไปต้องพึ่งสิ่งที่ตรวจให้อัตโนมัติทุกครั้ง:</text>
+<text class="small" x="46.0" y="779.0" text-anchor="start">ภาษา memory-safe, fuzzing/ASan (heap-buffer-overflow ที่จับได้ใน c_demo/heartbleed_mini.c:51) และการตรวจโค้ดอย่างจริงจัง</text>
+</svg>
