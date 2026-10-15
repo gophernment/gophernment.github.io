@@ -1,5 +1,21 @@
 [
   {
+    "slug": "2026-10-15-software-security-07-heartbleed-2014",
+    "title": "'Heartbleed (2014): วันที่ความลับ 64 กิโลไบต์ไหลออกจากหน่วยความจำ (ตอนที่ 07)'",
+    "date": "2026-10-15",
+    "tags": [
+      "software-security",
+      "security",
+      "heartbleed",
+      "openssl",
+      "cve-2014-0160",
+      "memory-safety",
+      "go",
+      "c"
+    ],
+    "description": "ตอนที่ 07 ของคอร์ส Software Security — Heartbleed (2014): ช่องโหว่ CVE-2014-0160 ใน OpenSSL heartbeat (RFC 6520) ที่อ่านหน่วยความจำเกินขอบเขต (buffer over-read) แบบเงียบ ๆ ไม่ crash พร้อมเดโม C + Go รันจริง และบทเรียนว่าทำไม memory-safe language ถึงเปลี่ยนเกม"
+  },
+  {
     "slug": "2026-10-14-software-security-06-crypto-history",
     "title": "'Cryptography: จาก Caesar ถึง TLS — วันที่ \"ความลับ\" กลายเป็นคณิตศาสตร์ (ตอนที่ 06)'",
     "date": "2026-10-14",
