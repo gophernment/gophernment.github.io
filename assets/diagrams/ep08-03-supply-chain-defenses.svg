@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 700" width="1120" height="700" role="img">
+<defs>
+<marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+<path d="M0,0 L10,5 L0,10 z" fill="#3b4a5a"/>
+</marker>
+<style>
+  .t  { font-family: sans-serif; font-size: 15px; fill: #12263a; }
+  .s  { font-family: sans-serif; font-size: 13px; fill: #3b4a5a; }
+  .h  { font-family: sans-serif; font-size: 20px; font-weight: 700; fill: #0b2545; }
+  .hd { font-family: sans-serif; font-size: 15px; font-weight: 700; fill: #0b2545; }
+  .m  { font-family: monospace; font-size: 13px; fill: #0b2545; }
+  .bad { font-family: sans-serif; font-size: 13px; fill: #7a1f1f; }
+  .good{ font-family: sans-serif; font-size: 13px; fill: #14532d; }
+</style>
+</defs>
+<text x="560" y="40" class="h" text-anchor="middle">หกชั้นป้องกัน supply chain</text>
+<text x="560" y="64" class="s" text-anchor="middle">เรียงจาก "รู้ว่ามีอะไร" → "ไม่ให้ถูกแก้" → "จำกัดความเสียหาย"</text>
+<rect x="50" y="92" width="330" height="66" rx="10" fill="#eef4fb" stroke="#4a7bb5" stroke-width="1.5"/>
+<text x="215.0" y="130.0" class="hd" text-anchor="middle">1. SBOM</text>
+<rect x="400" y="92" width="670" height="66" rx="10" fill="#ffffff" stroke="#4a7bb5" stroke-width="1.5"/>
+<text x="735.0" y="130.0" class="t" text-anchor="middle">รู้ว่ามี component อะไรอยู่ข้างใน (รวมตัวที่ถูกดึงต่อ)</text>
+<rect x="50" y="170" width="330" height="66" rx="10" fill="#eef4fb" stroke="#4a7bb5" stroke-width="1.5"/>
+<text x="215.0" y="208.0" class="hd" text-anchor="middle">2. Dependency scanning</text>
+<rect x="400" y="170" width="670" height="66" rx="10" fill="#ffffff" stroke="#4a7bb5" stroke-width="1.5"/>
+<text x="735.0" y="208.0" class="t" text-anchor="middle">govulncheck / Dependabot / OSV — จับช่องโหว่ที่รู้จักแล้ว</text>
+<rect x="50" y="248" width="330" height="66" rx="10" fill="#fdf7e3" stroke="#c9a227" stroke-width="1.5"/>
+<text x="215.0" y="286.0" class="hd" text-anchor="middle">3. Pin + lockfile</text>
+<rect x="400" y="248" width="670" height="66" rx="10" fill="#ffffff" stroke="#c9a227" stroke-width="1.5"/>
+<text x="735.0" y="286.0" class="t" text-anchor="middle">ล็อกเวอร์ชันให้แน่นอน — ไม่ปล่อยให้ "ตามมาเอง" แบบเงียบ ๆ</text>
+<rect x="50" y="326" width="330" height="66" rx="10" fill="#fdf7e3" stroke="#c9a227" stroke-width="1.5"/>
+<text x="215.0" y="364.0" class="hd" text-anchor="middle">4. Signed artifact + provenance</text>
+<rect x="400" y="326" width="670" height="66" rx="10" fill="#ffffff" stroke="#c9a227" stroke-width="1.5"/>
+<text x="735.0" y="364.0" class="t" text-anchor="middle">SLSA / cosign / sigstore — พิสูจน์ว่าใครสร้าง และสร้างอย่างไร</text>
+<rect x="50" y="404" width="330" height="66" rx="10" fill="#eefaf1" stroke="#3f9c63" stroke-width="1.5"/>
+<text x="215.0" y="442.0" class="hd" text-anchor="middle">5. Reproducible build</text>
+<rect x="400" y="404" width="670" height="66" rx="10" fill="#ffffff" stroke="#3f9c63" stroke-width="1.5"/>
+<text x="735.0" y="442.0" class="t" text-anchor="middle">บิลด์ซ้ำได้ hash เดิม — จับ build server ที่ถูกยึดได้</text>
+<rect x="50" y="482" width="330" height="66" rx="10" fill="#eefaf1" stroke="#3f9c63" stroke-width="1.5"/>
+<text x="215.0" y="520.0" class="hd" text-anchor="middle">6. Least privilege + egress filter</text>
+<rect x="400" y="482" width="670" height="66" rx="10" fill="#ffffff" stroke="#3f9c63" stroke-width="1.5"/>
+<text x="735.0" y="520.0" class="t" text-anchor="middle">จำกัดสิทธิ์และทางออกเครือข่าย — ลดความเสียหายถ้าชั้นบนพัง</text>
+<rect x="50" y="566" width="1020" height="78" rx="10" fill="#f5f7f9" stroke="#9aa9b8" stroke-width="1.5"/>
+<text x="560.0" y="599.0" class="t" text-anchor="middle">"trust but verify" — เราไว้ใจคู่ค้าได้ แต่ต้องตรวจสอบได้เสมอ</text>
+<text x="560.0" y="621.0" class="s" text-anchor="middle">ลายเซ็นพิสูจน์ว่า "ใครเซ็น" · provenance + reproducible build พิสูจน์ว่า "บิลด์สะอาด"</text>
+<text x="560" y="674" class="s" text-anchor="middle">บทเรียนจาก Log4Shell + SolarWinds: ไว้ใจน้อยลง ตรวจสอบมากขึ้น</text>
+</svg>

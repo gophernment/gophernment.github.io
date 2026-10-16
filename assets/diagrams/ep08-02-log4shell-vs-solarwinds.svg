@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 700" width="1120" height="700" role="img">
+<defs>
+<marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+<path d="M0,0 L10,5 L0,10 z" fill="#3b4a5a"/>
+</marker>
+<style>
+  .t  { font-family: sans-serif; font-size: 15px; fill: #12263a; }
+  .s  { font-family: sans-serif; font-size: 13px; fill: #3b4a5a; }
+  .h  { font-family: sans-serif; font-size: 20px; font-weight: 700; fill: #0b2545; }
+  .hd { font-family: sans-serif; font-size: 15px; font-weight: 700; fill: #0b2545; }
+  .m  { font-family: monospace; font-size: 13px; fill: #0b2545; }
+  .bad { font-family: sans-serif; font-size: 13px; fill: #7a1f1f; }
+  .good{ font-family: sans-serif; font-size: 13px; fill: #14532d; }
+</style>
+</defs>
+<text x="560" y="40" class="h" text-anchor="middle">สองหน้าของ supply chain attack</text>
+<text x="560" y="64" class="s" text-anchor="middle">โจมตี "dependency ที่เราเลือก" ต่างจาก "build pipeline ที่เราไว้ใจ"</text>
+<rect x="40" y="92" width="500" height="66" rx="10" fill="#fdf7e3" stroke="#c9a227" stroke-width="1.5"/>
+<text x="290.0" y="119.0" class="hd" text-anchor="middle">Log4Shell (CVE-2021-44228, 2021)</text>
+<text x="290.0" y="141.0" class="s" text-anchor="middle">โจมตี dependency ที่ "เรา" ดึงเข้ามาเอง</text>
+<rect x="40" y="172" width="500" height="92" rx="10" fill="#f5f7f9" stroke="#9aa9b8" stroke-width="1.5"/>
+<text x="290.0" y="201.0" class="t" text-anchor="middle">library ยอดนิยมที่ทุกคนใส่เข้ามา</text>
+<text x="290.0" y="223.0" class="m" text-anchor="middle">log4j-core — ถูกดึงต่อ (transitive)</text>
+<text x="290.0" y="245.0" class="s" text-anchor="middle">ไม่มีใครอ่านโค้ดของ dependency นี้</text>
+<rect x="40" y="278" width="500" height="92" rx="10" fill="#fdeeee" stroke="#c05050" stroke-width="1.5"/>
+<text x="290.0" y="307.0" class="t" text-anchor="middle">ช่องโหว่: message lookup → JNDI</text>
+<text x="290.0" y="329.0" class="s" text-anchor="middle">ผู้โจมตีอยู่ที่ปลายทางที่ library</text>
+<text x="290.0" y="351.0" class="s" text-anchor="middle">ไปเรียก (LDAP / RMI server ของเขา)</text>
+<rect x="40" y="384" width="500" height="92" rx="10" fill="#eefaf1" stroke="#3f9c63" stroke-width="1.5"/>
+<text x="290.0" y="413.0" class="t" text-anchor="middle">จุดแก้: ที่ตัวเราเอง</text>
+<text x="290.0" y="435.0" class="s" text-anchor="middle">อัปเกรด · ปิด lookup · allowlist prefix</text>
+<text x="290.0" y="457.0" class="s" text-anchor="middle">ทุกองค์กรทำได้เอง ไม่ต้องรอใคร</text>
+<rect x="580" y="92" width="500" height="66" rx="10" fill="#fdf7e3" stroke="#c9a227" stroke-width="1.5"/>
+<text x="830.0" y="119.0" class="hd" text-anchor="middle">SolarWinds Orion (SUNBURST, 2020)</text>
+<text x="830.0" y="141.0" class="s" text-anchor="middle">โจมตี build pipeline ต้นน้ำของ "ผู้ขาย"</text>
+<rect x="580" y="172" width="500" height="92" rx="10" fill="#fdeeee" stroke="#c05050" stroke-width="1.5"/>
+<text x="830.0" y="201.0" class="t" text-anchor="middle">SUNSPOT แทรกโค้ด "ก่อนคอมไพล์"</text>
+<text x="830.0" y="223.0" class="s" text-anchor="middle">source ใน repository ยังสะอาด</text>
+<text x="830.0" y="245.0" class="s" text-anchor="middle">code review จึงเห็น"ปกติ"ทุกอย่าง</text>
+<rect x="580" y="278" width="500" height="92" rx="10" fill="#fdeeee" stroke="#c05050" stroke-width="1.5"/>
+<text x="830.0" y="307.0" class="t" text-anchor="middle">อัปเดตเซ็นชื่อถูกต้อง 100%</text>
+<text x="830.0" y="329.0" class="s" text-anchor="middle">แจ้งลูกค้า ~33,000 ราย</text>
+<text x="830.0" y="351.0" class="s" text-anchor="middle">ติดตั้งบิลด์ที่มี backdoor &lt; 18,000 ราย</text>
+<rect x="580" y="384" width="500" height="92" rx="10" fill="#eefaf1" stroke="#3f9c63" stroke-width="1.5"/>
+<text x="830.0" y="413.0" class="t" text-anchor="middle">จุดแก้: ตรวจ provenance ต้นน้ำ</text>
+<text x="830.0" y="435.0" class="s" text-anchor="middle">reproducible build · harden CI/CD</text>
+<text x="830.0" y="457.0" class="s" text-anchor="middle">ยืนยันว่า "บิลด์จาก source นั้นจริง"</text>
+<rect x="40" y="500" width="1040" height="96" rx="10" fill="#eef4fb" stroke="#4a7bb5" stroke-width="1.5"/>
+<text x="560.0" y="531.0" class="t" text-anchor="middle">สาระร่วม: supply chain attack = โจมตี "คนที่เราไว้ใจ" แทนที่จะเจาะตัวเราโดยตรง</text>
+<text x="560.0" y="553.0" class="s" text-anchor="middle">attack surface จึงไม่ใช่แค่โค้ดของเรา — แต่รวมทุก dependency, toolchain และ build pipeline</text>
+<text x="560.0" y="575.0" class="s" text-anchor="middle">ต่างกันที่ตำแหน่ง: Log4Shell = dependency ที่ผู้ใช้เลือก · SolarWinds = บิลด์ต้นน้ำที่ผู้ขายส่งมา</text>
+<text x="560" y="630" class="s" text-anchor="middle">"เราไม่ได้ถูกเจาะ — แต่คนที่เราไว้ใจถูกเจาะ แล้วเรารับของที่เขาส่งต่อมา"</text>
+<text x="560" y="660" class="s" text-anchor="middle">นี่คือเหตุผลที่ทั้งสองเหตุการณ์ผลักดัน SBOM · dependency scanning · signed artifact</text>
+</svg>
