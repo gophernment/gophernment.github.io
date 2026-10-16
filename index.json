@@ -1,5 +1,25 @@
 [
   {
+    "slug": "2026-10-16-software-security-08-supply-chain-log4shell-solarwinds",
+    "title": "'Supply Chain Attack: Log4Shell + SolarWinds (2020–21) — เมื่อ \"คนที่เราไว้ใจ\" กลายเป็น attack surface (ตอนที่ 08)'",
+    "date": "2026-10-16",
+    "tags": [
+      "software-security",
+      "security",
+      "supply-chain",
+      "log4shell",
+      "log4j",
+      "cve-2021-44228",
+      "solarwinds",
+      "sunburst",
+      "sbom",
+      "slsa",
+      "govulncheck",
+      "go"
+    ],
+    "description": "ตอนที่ 08 ของคอร์ส Software Security — Log4Shell (CVE-2021-44228) และ SolarWinds/SUNBURST (2020): สองเหตุการณ์ที่ทำให้คำว่า supply chain กลายเป็นคำที่ผู้บริหารต้องรู้จัก พร้อมเดโม Go รันจริง 3 ตัว (จำลองกลไก message lookup, dependency scan + SBOM, signed artifact + reproducible build) และบทเรียนว่า dependency กับ build pipeline คือ attack surface ที่เราไม่ได้เลือกอ่าน"
+  },
+  {
     "slug": "2026-10-15-software-security-07-heartbleed-2014",
     "title": "'Heartbleed (2014): วันที่ความลับ 64 กิโลไบต์ไหลออกจากหน่วยความจำ (ตอนที่ 07)'",
     "date": "2026-10-15",
