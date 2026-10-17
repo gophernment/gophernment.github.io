@@ -1,5 +1,24 @@
 [
   {
+    "slug": "2026-10-17-software-security-09-threat-landscape-today",
+    "title": "'ภาพปัจจุบันของภัยคุกคาม (2026): ransomware, ตลาด zero-day, bug bounty และทำไมอาชีพนี้ถึงโต (ตอนที่ 09)'",
+    "date": "2026-10-17",
+    "tags": [
+      "software-security",
+      "security",
+      "threat-landscape",
+      "ransomware",
+      "zero-day",
+      "bug-bounty",
+      "kev",
+      "cve",
+      "cvss",
+      "risk",
+      "go"
+    ],
+    "description": "ตอนที่ 09 (ปิดระยะที่ 1) — ภาพรวมภัยคุกคามปี 2025–2026: ตัวเลข CVE 48,244 รายการ, CISA KEV 1,748 รายการ, zero-day 90 ราย, ค่าเฉลี่ย exploit ก่อนแพตช์ -7 วัน, ค่าไถ่ 820 ล้านดอลลาร์, ตลาด zero-day หลัง Zerodium ปิดเว็บ และระบบ bug bounty 81 ล้านดอลลาร์ พร้อมเดโม Go 3 ตัวที่เปลี่ยนภาพรวมให้เป็นโค้ดตัดสินใจได้ (จัดลำดับช่องโหว่, คำนวณความเสี่ยงเป็นเงิน, ตรวจรอบการเปิดเผยช่องโหว่)"
+  },
+  {
     "slug": "2026-10-16-software-security-08-supply-chain-log4shell-solarwinds",
     "title": "'Supply Chain Attack: Log4Shell + SolarWinds (2020–21) — เมื่อ \"คนที่เราไว้ใจ\" กลายเป็น attack surface (ตอนที่ 08)'",
     "date": "2026-10-16",
