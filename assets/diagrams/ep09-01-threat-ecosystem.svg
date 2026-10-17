@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1160 700" width="1160" height="700" role="img">
+<defs>
+<marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+<path d="M0,0 L10,5 L0,10 z" fill="#3b4a5a"/>
+</marker>
+<style>
+  .t  { font-family: sans-serif; font-size: 15px; fill: #12263a; }
+  .s  { font-family: sans-serif; font-size: 13px; fill: #3b4a5a; }
+  .n  { font-family: sans-serif; font-size: 26px; font-weight: 700; fill: #0b2545; }
+  .h  { font-family: sans-serif; font-size: 20px; font-weight: 700; fill: #0b2545; }
+  .hd { font-family: sans-serif; font-size: 15px; font-weight: 700; fill: #0b2545; }
+  .m  { font-family: monospace; font-size: 13px; fill: #0b2545; }
+  .bad { font-family: sans-serif; font-size: 13px; fill: #7a1f1f; }
+  .good{ font-family: sans-serif; font-size: 13px; fill: #14532d; }
+</style>
+</defs>
+<text x="580" y="40" class="h" text-anchor="middle">ระบบนิเวศของภัยคุกคามปี 2026: ใครได้เงิน จากอะไร</text>
+<text x="580" y="64" class="s" text-anchor="middle">ภัยคุกคามสมัยนี้ไม่ใช่ "แฮกเกอร์คนเดียว" — แต่เป็นตลาดที่มีผู้ขาย ผู้ซื้อ และคนกลาง</text>
+<rect x="40" y="88" width="330" height="48" rx="10" fill="#eef4fb" stroke="#4a7bb5" stroke-width="1.5"/>
+<text x="205.0" y="117.0" class="hd" text-anchor="middle">① ต้นทาง: ช่องโหว่และการเข้าถึง</text>
+<rect x="415" y="88" width="330" height="48" rx="10" fill="#eef4fb" stroke="#4a7bb5" stroke-width="1.5"/>
+<text x="580.0" y="117.0" class="hd" text-anchor="middle">② คนกลาง: ทำให้เป็นเงิน</text>
+<rect x="790" y="88" width="330" height="48" rx="10" fill="#eef4fb" stroke="#4a7bb5" stroke-width="1.5"/>
+<text x="955.0" y="117.0" class="hd" text-anchor="middle">③ ปลายทาง: ใครเป็นคนจ่าย</text>
+<rect x="40" y="152" width="330" height="88" rx="10" fill="#eefaf1" stroke="#3f9c63" stroke-width="1.5"/>
+<text x="205.0" y="190.0" class="hd" text-anchor="middle">นักวิจัยอิสระ / ทีมเจาะระบบ</text>
+<text x="205.0" y="212.0" class="s" text-anchor="middle">ค้นช่องโหว่ แล้วเลือกว่าจะขายให้ใคร</text>
+<rect x="415" y="152" width="330" height="88" rx="10" fill="#eefaf1" stroke="#3f9c63" stroke-width="1.5"/>
+<text x="580.0" y="190.0" class="hd" text-anchor="middle">แพลตฟอร์ม bug bounty</text>
+<text x="580.0" y="212.0" class="s" text-anchor="middle">จ่ายรางวัลตามระดับความรุนแรง</text>
+<rect x="790" y="152" width="330" height="88" rx="10" fill="#eefaf1" stroke="#3f9c63" stroke-width="1.5"/>
+<text x="955.0" y="190.0" class="hd" text-anchor="middle">vendor เจ้าของซอฟต์แวร์</text>
+<text x="955.0" y="212.0" class="s" text-anchor="middle">ได้ข้อมูลไปแพตช์ก่อนถูกใช้</text>
+<line x1="374" y1="196" x2="411" y2="196" stroke="#3b4a5a" stroke-width="2" marker-end="url(#ah)"/>
+<line x1="749" y1="196" x2="786" y2="196" stroke="#3b4a5a" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="40" y="264" width="330" height="88" rx="10" fill="#fdf7e3" stroke="#c9a227" stroke-width="1.5"/>
+<text x="205.0" y="302.0" class="hd" text-anchor="middle">broker ซื้อขาย exploit</text>
+<text x="205.0" y="324.0" class="s" text-anchor="middle">รับซื้อ exploit แล้วขายต่อให้ลูกค้า</text>
+<rect x="415" y="264" width="330" height="88" rx="10" fill="#fdf7e3" stroke="#c9a227" stroke-width="1.5"/>
+<text x="580.0" y="302.0" class="hd" text-anchor="middle">spyware vendor</text>
+<text x="580.0" y="324.0" class="s" text-anchor="middle">ประกอบ exploit เป็นผลิตภัณฑ์สอดแนม</text>
+<rect x="790" y="264" width="330" height="88" rx="10" fill="#fdf7e3" stroke="#c9a227" stroke-width="1.5"/>
+<text x="955.0" y="302.0" class="hd" text-anchor="middle">หน่วยงานรัฐ / ลูกค้าของ broker</text>
+<text x="955.0" y="324.0" class="s" text-anchor="middle">จ่ายเพื่อความสามารถที่ไม่มีใครรู้</text>
+<line x1="374" y1="308" x2="411" y2="308" stroke="#3b4a5a" stroke-width="2" marker-end="url(#ah)"/>
+<line x1="749" y1="308" x2="786" y2="308" stroke="#3b4a5a" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="40" y="376" width="330" height="88" rx="10" fill="#fdeeee" stroke="#c05050" stroke-width="1.5"/>
+<text x="205.0" y="414.0" class="hd" text-anchor="middle">initial access broker (IAB)</text>
+<text x="205.0" y="436.0" class="s" text-anchor="middle">ขายสิทธิ์เข้าเครือข่ายที่เจาะแล้ว</text>
+<rect x="415" y="376" width="330" height="88" rx="10" fill="#fdeeee" stroke="#c05050" stroke-width="1.5"/>
+<text x="580.0" y="414.0" class="hd" text-anchor="middle">RaaS affiliate</text>
+<text x="580.0" y="436.0" class="s" text-anchor="middle">เช่าเครื่องมือเข้ารหัส แล้วแบ่งกำไร</text>
+<rect x="790" y="376" width="330" height="88" rx="10" fill="#fdeeee" stroke="#c05050" stroke-width="1.5"/>
+<text x="955.0" y="414.0" class="hd" text-anchor="middle">เหยื่อ ransomware</text>
+<text x="955.0" y="436.0" class="s" text-anchor="middle">จ่ายค่าไถ่ หรือหยุดกิจการชั่วคราว</text>
+<line x1="374" y1="420" x2="411" y2="420" stroke="#3b4a5a" stroke-width="2" marker-end="url(#ah)"/>
+<line x1="749" y1="420" x2="786" y2="420" stroke="#3b4a5a" stroke-width="2" marker-end="url(#ah)"/>
+<rect x="40" y="512" width="1080" height="74" rx="10" fill="#fdeeee" stroke="#c05050" stroke-width="1.5"/>
+<text x="580.0" y="543.0" class="t" text-anchor="middle">ค่าไถ่ปี 2025 ประมาณ 820 ล้านดอลลาร์ · การเรียกร้องค่าไถ่เพิ่มขึ้น 50% · แต่จ่ายจริงเพียง 28%</text>
+<text x="580.0" y="565.0" class="s" text-anchor="middle">เงินที่หมุนในระบบ = แรงจูงใจให้มีคนลงทุนหา exploit ใหม่ต่อไป — นี่คือเหตุที่ภัยไม่หมดไป</text>
+<rect x="40" y="606" width="1080" height="62" rx="10" fill="#eefaf1" stroke="#3f9c63" stroke-width="1.5"/>
+<text x="580.0" y="642.0" class="good" text-anchor="middle">จุดที่ฝ่ายป้องกันตัดวงจรได้: MFA · แพตช์อุปกรณ์ขอบเครือข่าย · EDR · backup ที่กู้ได้จริง · coordinated disclosure</text>
+<text x="580" y="690" class="s" text-anchor="middle">ไม่มีจุดใดจุดเดียวที่หยุดทั้งระบบได้ — จึงต้องป้องกันเป็นชั้น (และนี่คือหัวข้อของระยะที่ 2)</text>
+</svg>

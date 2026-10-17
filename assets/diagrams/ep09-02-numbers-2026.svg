@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1160 640" width="1160" height="640" role="img">
+<defs>
+<marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+<path d="M0,0 L10,5 L0,10 z" fill="#3b4a5a"/>
+</marker>
+<style>
+  .t  { font-family: sans-serif; font-size: 15px; fill: #12263a; }
+  .s  { font-family: sans-serif; font-size: 13px; fill: #3b4a5a; }
+  .n  { font-family: sans-serif; font-size: 26px; font-weight: 700; fill: #0b2545; }
+  .h  { font-family: sans-serif; font-size: 20px; font-weight: 700; fill: #0b2545; }
+  .hd { font-family: sans-serif; font-size: 15px; font-weight: 700; fill: #0b2545; }
+  .m  { font-family: monospace; font-size: 13px; fill: #0b2545; }
+  .bad { font-family: sans-serif; font-size: 13px; fill: #7a1f1f; }
+  .good{ font-family: sans-serif; font-size: 13px; fill: #14532d; }
+</style>
+</defs>
+<text x="580" y="40" class="h" text-anchor="middle">ตัวเลขที่ควรจำ (ณ ตุลาคม 2026)</text>
+<text x="580" y="64" class="s" text-anchor="middle">ทุกตัวเลขมีแหล่งอ้างอิงในบท — และทุกตัวเลขบอกอะไรบางอย่างเกี่ยวกับงานของเรา</text>
+<rect x="50" y="96" width="250" height="132" rx="10" fill="#eef4fb" stroke="#4a7bb5" stroke-width="1.5"/>
+<text x="175.0" y="142" class="n" text-anchor="middle">48,244</text>
+<text x="175.0" y="172" class="t" text-anchor="middle">CVE ที่เผยแพร่ในปี 2025</text>
+<text x="175.0" y="200" class="s" text-anchor="middle">CVE Program · 2024: 40,077</text>
+<rect x="320" y="96" width="250" height="132" rx="10" fill="#eef4fb" stroke="#4a7bb5" stroke-width="1.5"/>
+<text x="445.0" y="142" class="n" text-anchor="middle">1,748</text>
+<text x="445.0" y="172" class="t" text-anchor="middle">รายการใน CISA KEV</text>
+<text x="445.0" y="200" class="s" text-anchor="middle">CISA · 16 ต.ค. 2026</text>
+<rect x="590" y="96" width="250" height="132" rx="10" fill="#fdf7e3" stroke="#c9a227" stroke-width="1.5"/>
+<text x="715.0" y="142" class="n" text-anchor="middle">90</text>
+<text x="715.0" y="172" class="t" text-anchor="middle">zero-day ที่ถูกใช้จริง</text>
+<text x="715.0" y="200" class="s" text-anchor="middle">Google GTIG · 2024: 78</text>
+<rect x="860" y="96" width="250" height="132" rx="10" fill="#fdf7e3" stroke="#c9a227" stroke-width="1.5"/>
+<text x="985.0" y="142" class="n" text-anchor="middle">-7 วัน</text>
+<text x="985.0" y="172" class="t" text-anchor="middle">exploit มาก่อนแพตช์</text>
+<text x="985.0" y="200" class="s" text-anchor="middle">Mandiant M-Trends · ค่าเฉลี่ย</text>
+<rect x="50" y="250" width="250" height="132" rx="10" fill="#fdeeee" stroke="#c05050" stroke-width="1.5"/>
+<text x="175.0" y="296" class="n" text-anchor="middle">$820M</text>
+<text x="175.0" y="326" class="t" text-anchor="middle">ค่าไถ่ที่จ่ายบนเชน 2025</text>
+<text x="175.0" y="354" class="s" text-anchor="middle">Chainalysis · ลด 8%</text>
+<rect x="320" y="250" width="250" height="132" rx="10" fill="#fdeeee" stroke="#c05050" stroke-width="1.5"/>
+<text x="445.0" y="296" class="n" text-anchor="middle">28%</text>
+<text x="445.0" y="326" class="t" text-anchor="middle">สัดส่วนที่ยอมจ่าย</text>
+<text x="445.0" y="354" class="s" text-anchor="middle">Chainalysis · 2022: 79%</text>
+<rect x="590" y="250" width="250" height="132" rx="10" fill="#eefaf1" stroke="#3f9c63" stroke-width="1.5"/>
+<text x="715.0" y="296" class="n" text-anchor="middle">$81M</text>
+<text x="715.0" y="326" class="t" text-anchor="middle">bug bounty ในหนึ่งปี</text>
+<text x="715.0" y="354" class="s" text-anchor="middle">HackerOne · +13%</text>
+<rect x="860" y="250" width="250" height="132" rx="10" fill="#eefaf1" stroke="#3f9c63" stroke-width="1.5"/>
+<text x="985.0" y="296" class="n" text-anchor="middle">+21%</text>
+<text x="985.0" y="326" class="t" text-anchor="middle">งานสายนี้เติบโต</text>
+<text x="985.0" y="354" class="s" text-anchor="middle">BLS สหรัฐ · 2025–2035</text>
+<rect x="50" y="428" width="1060" height="88" rx="10" fill="#f5f7f9" stroke="#9aa9b8" stroke-width="1.5"/>
+<text x="580.0" y="466.0" class="t" text-anchor="middle">อ่านตัวเลขให้เป็น: ปริมาณช่องโหว่ไม่ได้แปลว่าองค์กรเรามีความเสี่ยงเพิ่มขึ้นเท่าตัว</text>
+<text x="580.0" y="488.0" class="s" text-anchor="middle">การถูกใช้จริง (KEV) · ความเร็วของการถูกใช้ (TTE) · แรงจูงใจทางเงิน (ค่าไถ่) — สามมิตินี้บอกว่า 'ควรทำอะไรก่อน'</text>
+<text x="580" y="556" class="s" text-anchor="middle">ตัวเลขที่ดีที่สุดคือตัวเลขที่ทำให้เราตัดสินใจได้ — ไม่ใช่ตัวเลขที่ทำให้เรากลัว</text>
+<text x="580" y="584" class="s" text-anchor="middle">ในเดโมของบทนี้ เราจะเอาแนวคิดเดียวกันนี้ไปเขียนเป็นโค้ดที่ตัดสินใจแทนเราได้</text>
+<text x="580" y="612" class="s" text-anchor="middle">ที่มา: CVE Program · CISA · Google GTIG · Mandiant · Chainalysis · HackerOne · BLS (รายละเอียดท้ายบท)</text>
+</svg>

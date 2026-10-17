@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1160 780" width="1160" height="780" role="img">
+<defs>
+<marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+<path d="M0,0 L10,5 L0,10 z" fill="#3b4a5a"/>
+</marker>
+<style>
+  .t  { font-family: sans-serif; font-size: 15px; fill: #12263a; }
+  .s  { font-family: sans-serif; font-size: 13px; fill: #3b4a5a; }
+  .n  { font-family: sans-serif; font-size: 26px; font-weight: 700; fill: #0b2545; }
+  .h  { font-family: sans-serif; font-size: 20px; font-weight: 700; fill: #0b2545; }
+  .hd { font-family: sans-serif; font-size: 15px; font-weight: 700; fill: #0b2545; }
+  .m  { font-family: monospace; font-size: 13px; fill: #0b2545; }
+  .bad { font-family: sans-serif; font-size: 13px; fill: #7a1f1f; }
+  .good{ font-family: sans-serif; font-size: 13px; fill: #14532d; }
+</style>
+</defs>
+<text x="580" y="40" class="h" text-anchor="middle">เลือก 4 จาก 12: CVSS อย่างเดียว กับ exploitation-aware</text>
+<text x="580" y="64" class="s" text-anchor="middle">ข้อมูลสมมติจากเดโม 1 · แถบสีเขียว = 4 รายการที่ถูกเลือกให้แพตช์สัปดาห์นี้ · จุดแดง = มีหลักฐานว่าถูกใช้จริงแล้ว</text>
+<text x="295" y="106" class="hd" text-anchor="middle">เรียงตาม CVSS อย่างเดียว</text>
+<rect x="60" y="120" width="470" height="38" rx="8" fill="#eefaf1" stroke="#3f9c63" stroke-width="1.5"/>
+<text x="74" y="145" class="m"> 1. ADV-01  payment-gateway</text>
+<text x="360" y="145" class="s">CVSS 9.8</text>
+<text x="452" y="145" class="bad">● ใช้จริง</text>
+<rect x="60" y="164" width="470" height="38" rx="8" fill="#eefaf1" stroke="#3f9c63" stroke-width="1.5"/>
+<text x="74" y="189" class="m"> 2. ADV-02  internal-wiki</text>
+<text x="360" y="189" class="s">CVSS 9.8</text>
+<rect x="60" y="208" width="470" height="38" rx="8" fill="#eefaf1" stroke="#3f9c63" stroke-width="1.5"/>
+<text x="74" y="233" class="m"> 3. ADV-07  ci-runner</text>
+<text x="360" y="233" class="s">CVSS 9.4</text>
+<rect x="60" y="252" width="470" height="38" rx="8" fill="#eefaf1" stroke="#3f9c63" stroke-width="1.5"/>
+<text x="74" y="277" class="m"> 4. ADV-04  erp-report</text>
+<text x="360" y="277" class="s">CVSS 9.1</text>
+<rect x="60" y="296" width="470" height="38" rx="8" fill="#ffffff" stroke="#c8d3dd" stroke-width="1.5"/>
+<text x="74" y="321" class="m"> 5. ADV-12  identity-sync</text>
+<text x="360" y="321" class="s">CVSS 9.0</text>
+<rect x="60" y="340" width="470" height="38" rx="8" fill="#ffffff" stroke="#c8d3dd" stroke-width="1.5"/>
+<text x="74" y="365" class="m"> 6. ADV-06  mail-filter</text>
+<text x="360" y="365" class="s">CVSS 8.8</text>
+<rect x="60" y="384" width="470" height="38" rx="8" fill="#ffffff" stroke="#c8d3dd" stroke-width="1.5"/>
+<text x="74" y="409" class="m"> 7. ADV-10  crm-plugin</text>
+<text x="360" y="409" class="s">CVSS 8.2</text>
+<rect x="60" y="428" width="470" height="38" rx="8" fill="#ffffff" stroke="#c8d3dd" stroke-width="1.5"/>
+<text x="74" y="453" class="m"> 8. ADV-03  vpn-appliance</text>
+<text x="360" y="453" class="s">CVSS 8.1</text>
+<text x="452" y="453" class="bad">● ใช้จริง</text>
+<rect x="60" y="472" width="470" height="38" rx="8" fill="#ffffff" stroke="#c8d3dd" stroke-width="1.5"/>
+<text x="74" y="497" class="m"> 9. ADV-11  print-spooler</text>
+<text x="360" y="497" class="s">CVSS 7.8</text>
+<rect x="60" y="516" width="470" height="38" rx="8" fill="#ffffff" stroke="#c8d3dd" stroke-width="1.5"/>
+<text x="74" y="541" class="m">10. ADV-05  backup-agent</text>
+<text x="360" y="541" class="s">CVSS 7.5</text>
+<text x="452" y="541" class="bad">● ใช้จริง</text>
+<rect x="60" y="560" width="470" height="38" rx="8" fill="#ffffff" stroke="#c8d3dd" stroke-width="1.5"/>
+<text x="74" y="585" class="m">11. ADV-09  monitoring</text>
+<text x="360" y="585" class="s">CVSS 7.2</text>
+<rect x="60" y="604" width="470" height="38" rx="8" fill="#ffffff" stroke="#c8d3dd" stroke-width="1.5"/>
+<text x="74" y="629" class="m">12. ADV-08  file-share</text>
+<text x="360" y="629" class="s">CVSS 6.5</text>
+<text x="74" y="664" class="s">เลือกแล้ว:</text>
+<text x="170" y="664" class="m">ADV-01, ADV-02, ADV-07, ADV-04</text>
+<text x="74" y="688" class="bad">พลาดของที่กำลังถูกใช้จริง 2 รายการ</text>
+<text x="845" y="106" class="hd" text-anchor="middle">เรียงตามการถูกใช้จริงก่อน</text>
+<rect x="610" y="120" width="470" height="38" rx="8" fill="#eefaf1" stroke="#3f9c63" stroke-width="1.5"/>
+<text x="624" y="145" class="m"> 1. ADV-01  payment-gateway</text>
+<text x="910" y="145" class="s">CVSS 9.8</text>
+<text x="1002" y="145" class="bad">● ใช้จริง</text>
+<rect x="610" y="164" width="470" height="38" rx="8" fill="#eefaf1" stroke="#3f9c63" stroke-width="1.5"/>
+<text x="624" y="189" class="m"> 2. ADV-05  backup-agent</text>
+<text x="910" y="189" class="s">CVSS 7.5</text>
+<text x="1002" y="189" class="bad">● ใช้จริง</text>
+<rect x="610" y="208" width="470" height="38" rx="8" fill="#eefaf1" stroke="#3f9c63" stroke-width="1.5"/>
+<text x="624" y="233" class="m"> 3. ADV-03  vpn-appliance</text>
+<text x="910" y="233" class="s">CVSS 8.1</text>
+<text x="1002" y="233" class="bad">● ใช้จริง</text>
+<rect x="610" y="252" width="470" height="38" rx="8" fill="#eefaf1" stroke="#3f9c63" stroke-width="1.5"/>
+<text x="624" y="277" class="m"> 4. ADV-12  identity-sync</text>
+<text x="910" y="277" class="s">CVSS 9.0</text>
+<rect x="610" y="296" width="470" height="38" rx="8" fill="#ffffff" stroke="#c8d3dd" stroke-width="1.5"/>
+<text x="624" y="321" class="m"> 5. ADV-06  mail-filter</text>
+<text x="910" y="321" class="s">CVSS 8.8</text>
+<rect x="610" y="340" width="470" height="38" rx="8" fill="#ffffff" stroke="#c8d3dd" stroke-width="1.5"/>
+<text x="624" y="365" class="m"> 6. ADV-09  monitoring</text>
+<text x="910" y="365" class="s">CVSS 7.2</text>
+<rect x="610" y="384" width="470" height="38" rx="8" fill="#ffffff" stroke="#c8d3dd" stroke-width="1.5"/>
+<text x="624" y="409" class="m"> 7. ADV-02  internal-wiki</text>
+<text x="910" y="409" class="s">CVSS 9.8</text>
+<rect x="610" y="428" width="470" height="38" rx="8" fill="#ffffff" stroke="#c8d3dd" stroke-width="1.5"/>
+<text x="624" y="453" class="m"> 8. ADV-07  ci-runner</text>
+<text x="910" y="453" class="s">CVSS 9.4</text>
+<rect x="610" y="472" width="470" height="38" rx="8" fill="#ffffff" stroke="#c8d3dd" stroke-width="1.5"/>
+<text x="624" y="497" class="m"> 9. ADV-04  erp-report</text>
+<text x="910" y="497" class="s">CVSS 9.1</text>
+<rect x="610" y="516" width="470" height="38" rx="8" fill="#ffffff" stroke="#c8d3dd" stroke-width="1.5"/>
+<text x="624" y="541" class="m">10. ADV-10  crm-plugin</text>
+<text x="910" y="541" class="s">CVSS 8.2</text>
+<rect x="610" y="560" width="470" height="38" rx="8" fill="#ffffff" stroke="#c8d3dd" stroke-width="1.5"/>
+<text x="624" y="585" class="m">11. ADV-11  print-spooler</text>
+<text x="910" y="585" class="s">CVSS 7.8</text>
+<rect x="610" y="604" width="470" height="38" rx="8" fill="#ffffff" stroke="#c8d3dd" stroke-width="1.5"/>
+<text x="624" y="629" class="m">12. ADV-08  file-share</text>
+<text x="910" y="629" class="s">CVSS 6.5</text>
+<text x="624" y="664" class="s">เลือกแล้ว:</text>
+<text x="720" y="664" class="m">ADV-01, ADV-05, ADV-03, ADV-12</text>
+<text x="624" y="688" class="good">ครอบคลุมของที่ถูกใช้จริงครบ 3/3 แต่เลื่อน critical ออก 3 รายการ</text>
+<rect x="60" y="716" width="1040" height="46" rx="10" fill="#eef4fb" stroke="#4a7bb5" stroke-width="1.5"/>
+<text x="580.0" y="744.0" class="t" text-anchor="middle">บทเรียน: ลำดับความสำคัญไม่ใช่คะแนนเดียว — มันคือการตัดสินใจว่าจะยอมรับความเสี่ยงอะไร</text>
+</svg>
