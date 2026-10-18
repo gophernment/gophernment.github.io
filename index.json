@@ -1,5 +1,22 @@
 [
   {
+    "slug": "2026-10-18-software-security-10-cia-triad-risk",
+    "title": "'CIA triad กับคำว่า risk: ภาษากลางที่ทำให้ทุกทีมพูดเรื่องความปลอดภัยรู้เรื่องเดียวกัน (ตอนที่ 10)'",
+    "date": "2026-10-18",
+    "tags": [
+      "software-security",
+      "security",
+      "cia-triad",
+      "risk",
+      "threat-modeling",
+      "vulnerability",
+      "asset",
+      "governance",
+      "go"
+    ],
+    "description": "ตอนที่ 10 (เปิดระยะที่ 2 — หลักคิด) — นิยามให้ตรงห้าคำที่ทุกทีมต้องพูดภาษาเดียวกัน: asset, threat, vulnerability, impact, risk · CIA triad (Confidentiality/Integrity/Availability) ในฐานะ 'มิติของผลกระทบ' ไม่ใช่ 'ประเภทของภัย' · NIST SP 800-30 Rev.1 และ GDPR มาตรา 32 ในฐานะหลักฐานว่าภาษานี้เป็นมาตรฐานจริง · เดโม Go 3 ตัว: ทะเบียนความเสี่ยง 12 รายการ (คะแนนรวม 163), การละเมิด CIA สามแบบที่วัดผลได้ (249 แถวหลุด, ยอดเงินหาย 500,000 cents, คำขอสำเร็จ 40.0% → 100.0%), และการจัดการความเสี่ยงที่เหลือ 108 จุดโดยครึ่งหนึ่งยังไม่มีมาตรการใดแตะ"
+  },
+  {
     "slug": "2026-10-17-software-security-09-threat-landscape-today",
     "title": "'ภาพปัจจุบันของภัยคุกคาม (2026): ransomware, ตลาด zero-day, bug bounty และทำไมอาชีพนี้ถึงโต (ตอนที่ 09)'",
     "date": "2026-10-17",
