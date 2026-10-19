@@ -1,5 +1,21 @@
 [
   {
+    "slug": "2026-10-19-software-security-11-threat-modeling",
+    "title": "'Threat modeling: วาดระบบให้เห็นก่อนเขียนโค้ด แล้วถามแบบคนที่อยากเจาะมัน (ตอนที่ 11)'",
+    "date": "2026-10-19",
+    "tags": [
+      "software-security",
+      "threat-modeling",
+      "stride",
+      "attack-tree",
+      "dfd",
+      "trust-boundary",
+      "risk",
+      "go"
+    ],
+    "description": "ตอนที่ 11 — threat modeling ในฐานะกระบวนการ ไม่ใช่แบบฟอร์ม: สี่คำถามที่ต้องตอบ, data flow diagram กับ trust boundary (เดโมพบว่า 10 จาก 12 เส้นทางข้อมูลข้าม boundary), STRIDE ครบหกตัวพร้อมกฎว่าภัยชนิดไหนใช้ได้กับองค์ประกอบชนิดไหน (ผลิต 84 ภัยจาก 11 องค์ประกอบ และ 74 ข้ออยู่บนองค์ประกอบหรือเส้นที่แตะ boundary), attack tree แบบ AND/OR (17 ใบ 12 เส้นทาง โดยเส้นที่ attacker จ่ายถูกที่สุดคือสมัครเป็น vendor ไม่ใช่ช่องโหว่ในโค้ด) และ workshop 60 นาทีที่ครอบได้ 8 จาก 26 ช่อง — พร้อมเดโม Go สามตัวที่รันซ้ำได้ผลเดิมและไม่แตะเครือข่าย"
+  },
+  {
     "slug": "2026-10-18-software-security-10-cia-triad-risk",
     "title": "'CIA triad กับคำว่า risk: ภาษากลางที่ทำให้ทุกทีมพูดเรื่องความปลอดภัยรู้เรื่องเดียวกัน (ตอนที่ 10)'",
     "date": "2026-10-18",
