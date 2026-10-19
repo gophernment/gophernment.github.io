@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 800" width="1240" height="800" role="img">
+<defs>
+<marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+<path d="M0,0 L10,5 L0,10 z" fill="#3b4a5a"/>
+</marker>
+<style>
+  .t  { font-family: sans-serif; font-size: 14px; fill: #12263a; }
+  .s  { font-family: sans-serif; font-size: 12px; fill: #3b4a5a; }
+  .sm { font-family: sans-serif; font-size: 11px; fill: #4a5b6c; }
+  .h  { font-family: sans-serif; font-size: 22px; font-weight: 700; fill: #0b2545; }
+  .hd { font-family: sans-serif; font-size: 15px; font-weight: 700; fill: #0b2545; }
+  .n  { font-family: sans-serif; font-size: 28px; font-weight: 700; fill: #0b2545; }
+  .m  { font-family: monospace; font-size: 12px; fill: #0b2545; }
+  .bad { font-family: sans-serif; font-size: 12px; fill: #7a1f1f; }
+  .good{ font-family: sans-serif; font-size: 12px; fill: #14532d; }
+</style>
+</defs>
+<text x="620" y="40" class="h" text-anchor="middle">STRIDE: หกคำถามที่ต้องถามให้ครบ ก่อนจะเริ่มเขียนโค้ด</text>
+<text x="620" y="66" class="s" text-anchor="middle">แต่ละตัวอักษรคือคำถามหนึ่งข้อ และชี้ไปที่คุณสมบัติหนึ่งอย่างที่อาจถูกทำลาย</text>
+<text x="100" y="112" class="sm">ชื่อ</text>
+<text x="302" y="112" class="sm">คำถามที่ต้องถาม</text>
+<text x="712" y="112" class="sm">คุณสมบัติที่ถูกทำลาย</text>
+<text x="870" y="112" class="sm">ตัวอย่างในระบบของเรา</text>
+<text x="1128" y="112" class="sm">ในเดโม</text>
+<line x1="40" y1="120" x2="1200" y2="120" stroke="#c8d3dd" stroke-width="1.2"/>
+<rect x="38" y="132" width="1164" height="70" rx="8" fill="#ffffff" stroke="#e3e9f0" stroke-width="1"/>
+<text x="66" y="178" class="n" text-anchor="middle">S</text>
+<text x="100" y="163" class="hd">Spoofing</text>
+<text x="100" y="183" class="sm">STRIDE</text>
+<text x="302" y="172" class="t">ใครปลอมเป็นคนอื่นได้</text>
+<text x="712" y="163" class="s">Authentication</text>
+<text x="712" y="183" class="sm">CIA: C, I</text>
+<text x="870" y="172" class="s">ปลอมเป็น payment-provider</text>
+<text x="1165" y="176" class="hd" text-anchor="middle">8</text>
+<rect x="38" y="210" width="1164" height="70" rx="8" fill="#f5f7f9" stroke="#e3e9f0" stroke-width="1"/>
+<text x="66" y="256" class="n" text-anchor="middle">T</text>
+<text x="100" y="241" class="hd">Tampering</text>
+<text x="100" y="261" class="sm">STRIDE</text>
+<text x="302" y="250" class="t">ใครแก้อะไรได้โดยไม่มีสิทธิ์</text>
+<text x="712" y="241" class="s">Integrity</text>
+<text x="712" y="261" class="sm">CIA: I</text>
+<text x="870" y="250" class="s">แก้ invoice-record ระหว่างทาง</text>
+<text x="1165" y="254" class="hd" text-anchor="middle">20</text>
+<rect x="38" y="288" width="1164" height="70" rx="8" fill="#ffffff" stroke="#e3e9f0" stroke-width="1"/>
+<text x="66" y="334" class="n" text-anchor="middle">R</text>
+<text x="100" y="319" class="hd">Repudiation</text>
+<text x="100" y="339" class="sm">STRIDE</text>
+<text x="302" y="328" class="t">ใครทำแล้วปฏิเสธได้</text>
+<text x="712" y="319" class="s">Non-repudiation</text>
+<text x="712" y="339" class="sm">CIA: I</text>
+<text x="870" y="328" class="s">ลบร่องรอยใน audit-log</text>
+<text x="1165" y="332" class="hd" text-anchor="middle">11</text>
+<rect x="38" y="366" width="1164" height="70" rx="8" fill="#f5f7f9" stroke="#e3e9f0" stroke-width="1"/>
+<text x="66" y="412" class="n" text-anchor="middle">I</text>
+<text x="100" y="397" class="hd">Information disclosure</text>
+<text x="100" y="417" class="sm">STRIDE</text>
+<text x="302" y="406" class="t">ใครอ่านอะไรเกินสิทธิ์</text>
+<text x="712" y="397" class="s">Confidentiality</text>
+<text x="712" y="417" class="sm">CIA: C</text>
+<text x="870" y="406" class="s">api-gateway คืนข้อมูลเกิน</text>
+<text x="1165" y="410" class="hd" text-anchor="middle">20</text>
+<rect x="38" y="444" width="1164" height="70" rx="8" fill="#ffffff" stroke="#e3e9f0" stroke-width="1"/>
+<text x="66" y="490" class="n" text-anchor="middle">D</text>
+<text x="100" y="475" class="hd">Denial of service</text>
+<text x="100" y="495" class="sm">STRIDE</text>
+<text x="302" y="484" class="t">ใครทำให้ระบบหยุดได้</text>
+<text x="712" y="475" class="s">Availability</text>
+<text x="712" y="495" class="sm">CIA: A</text>
+<text x="870" y="484" class="s">ท่วม invoice-service</text>
+<text x="1165" y="488" class="hd" text-anchor="middle">20</text>
+<rect x="38" y="522" width="1164" height="70" rx="8" fill="#f5f7f9" stroke="#e3e9f0" stroke-width="1"/>
+<text x="66" y="568" class="n" text-anchor="middle">E</text>
+<text x="100" y="553" class="hd">Elevation of privilege</text>
+<text x="100" y="573" class="sm">STRIDE</text>
+<text x="302" y="562" class="t">ใครได้สิทธิ์เกินตัว</text>
+<text x="712" y="553" class="s">Authorization</text>
+<text x="712" y="573" class="sm">CIA: C, I</text>
+<text x="870" y="562" class="s">employee สั่งงานระดับ admin</text>
+<text x="1165" y="566" class="hd" text-anchor="middle">5</text>
+<text x="38" y="626" class="sm">คอลัมน์สุดท้าย = จำนวนภัยที่ STRIDE ผลิตออกมาจากแบบจำลอง 11 องค์ประกอบในเดโม 1 (รวม 84 ภัย)</text>
+<rect x="38" y="646" width="588" height="106" rx="10" fill="#eef4fb" stroke="#4a7bb5" stroke-width="1.5"/>
+<text x="58" y="674" class="hd">STRIDE ไม่ได้แทน CIA</text>
+<text x="58" y="698" class="s">STRIDE เป็น 'คำถาม' ที่พาไปถึงผลกระทบ ·</text>
+<text x="58" y="718" class="s">CIA เป็น 'ปลายทาง' ของผลกระทบนั้น</text>
+<text x="58" y="738" class="sm">ถามครบหกข้อ = มองเห็นทั้งสามเสา</text>
+<rect x="646" y="646" width="556" height="106" rx="10" fill="#eefaf1" stroke="#3f9c63" stroke-width="1.5"/>
+<text x="666" y="674" class="hd">workshop: 8 จาก 26 ช่อง (30.8%)</text>
+<rect x="666" y="690" width="500" height="16" rx="6" fill="#ffffff" stroke="#3f9c63" stroke-width="1"/>
+<rect x="666" y="690" width="153.84615384615384" height="16" rx="6" fill="#3f9c63" stroke="#3f9c63" stroke-width="1"/>
+<text x="666" y="730" class="s">เหลือ 18 ช่องที่ยังไม่มีใครถาม — และนั่นคือผลลัพธ์ปกติของรอบแรก</text>
+<text x="620" y="782" class="sm" text-anchor="middle">ตัวเลขทั้งหมดอ่านจาก out/01_dfd.txt และ out/03_workshop.txt</text>
+</svg>

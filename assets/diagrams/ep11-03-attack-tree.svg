@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" role="img">
+<defs>
+<marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+<path d="M0,0 L10,5 L0,10 z" fill="#3b4a5a"/>
+</marker>
+<style>
+  .t  { font-family: sans-serif; font-size: 14px; fill: #12263a; }
+  .s  { font-family: sans-serif; font-size: 12px; fill: #3b4a5a; }
+  .sm { font-family: sans-serif; font-size: 11px; fill: #4a5b6c; }
+  .h  { font-family: sans-serif; font-size: 22px; font-weight: 700; fill: #0b2545; }
+  .hd { font-family: sans-serif; font-size: 15px; font-weight: 700; fill: #0b2545; }
+  .n  { font-family: sans-serif; font-size: 28px; font-weight: 700; fill: #0b2545; }
+  .m  { font-family: monospace; font-size: 12px; fill: #0b2545; }
+  .bad { font-family: sans-serif; font-size: 12px; fill: #7a1f1f; }
+  .good{ font-family: sans-serif; font-size: 12px; fill: #14532d; }
+</style>
+</defs>
+<text x="640" y="40" class="h" text-anchor="middle">attack tree: 12 เส้นทาง แต่มีเส้นเดียวที่ attacker จ่ายถูกที่สุด</text>
+<text x="640" y="66" class="s" text-anchor="middle">[AND] = ต้องทำครบทุกขั้น · [OR] = ทำทางใดทางหนึ่งก็พอ · ตัวเลขบนโหนด = จำนวนเส้นทางใต้โหนดนั้น</text>
+<rect x="430" y="92" width="420" height="62" rx="10" fill="#eef4fb" stroke="#4a7bb5" stroke-width="1.5"/>
+<text x="640" y="118" class="hd" text-anchor="middle">เป้าหมาย: ย้ายเงินออกจากระบบบัญชีของเรา</text>
+<text x="640" y="140" class="s" text-anchor="middle">12 เส้นทาง · ลึก 4 ชั้น · 17 ใบ</text>
+<line x1="640" y1="154" x2="640" y2="190" stroke="#3b4a5a" stroke-width="2"/>
+<line x1="178.0" y1="190" x2="1102.0" y2="190" stroke="#3b4a5a" stroke-width="2"/>
+<line x1="178.0" y1="190" x2="178.0" y2="215" stroke="#3b4a5a" stroke-width="2"/>
+<rect x="35" y="215" width="286" height="186" rx="10" fill="#ffffff" stroke="#8aa0b5" stroke-width="1.5"/>
+<text x="53" y="240" class="sm">[AND] กิ่งที่ 1</text>
+<text x="53" y="264" class="hd">ยึดบัญชีผู้ดูแลระบบ</text>
+<text x="53" y="288" class="m">paths=6 · min diff=7</text>
+<text x="53" y="318" class="sm">ง่ายสุดในกิ่งนี้:</text>
+<text x="53" y="338" class="s">L4 ยังไม่บังคับ MFA</text>
+<text x="53" y="356" class="s">กับบัญชี admin (diff 1)</text>
+<line x1="486.0" y1="190" x2="486.0" y2="215" stroke="#3b4a5a" stroke-width="2"/>
+<rect x="343" y="215" width="286" height="186" rx="10" fill="#ffffff" stroke="#8aa0b5" stroke-width="1.5"/>
+<text x="361" y="240" class="sm">[AND] กิ่งที่ 2</text>
+<text x="361" y="264" class="hd">แก้ยอดเงินในฐานข้อมูลโดยตรง</text>
+<text x="361" y="288" class="m">paths=2 · min diff=10</text>
+<text x="361" y="318" class="sm">ง่ายสุดในกิ่งนี้:</text>
+<text x="361" y="338" class="s">L8 ใช้ DB user ร่วม</text>
+<text x="361" y="356" class="s">ของ report-worker (diff 2)</text>
+<line x1="794.0" y1="190" x2="794.0" y2="215" stroke="#3b4a5a" stroke-width="2"/>
+<rect x="651" y="215" width="286" height="186" rx="10" fill="#ffffff" stroke="#8aa0b5" stroke-width="1.5"/>
+<text x="669" y="240" class="sm">[AND] กิ่งที่ 3</text>
+<text x="669" y="264" class="hd">สวมรอยผู้ให้บริการชำระเงิน</text>
+<text x="669" y="288" class="m">paths=2 · min diff=9</text>
+<text x="669" y="318" class="sm">ง่ายสุดในกิ่งนี้:</text>
+<text x="669" y="338" class="s">L13 replay callback</text>
+<text x="669" y="356" class="s">เดิมที่เคยผ่าน (diff 2)</text>
+<line x1="1102.0" y1="190" x2="1102.0" y2="215" stroke="#3b4a5a" stroke-width="2"/>
+<rect x="959" y="215" width="286" height="186" rx="10" fill="#fdeeee" stroke="#c05050" stroke-width="2.4"/>
+<text x="977" y="240" class="sm">[OR] กิ่งที่ 4</text>
+<text x="977" y="264" class="hd">ใช้ช่องทางคนและกระบวนการ</text>
+<text x="977" y="288" class="m">paths=2 · min diff=1</text>
+<text x="977" y="318" class="sm">ง่ายสุดในกิ่งนี้:</text>
+<text x="977" y="338" class="s">L16 สมัครเป็น vendor</text>
+<text x="977" y="356" class="s">แล้วขอสิทธิ์เข้าระบบ (diff 1)</text>
+<text x="977" y="382" class="bad">★ เส้นทางที่ถูกที่สุดของทั้งต้น</text>
+<rect x="35" y="424" width="1210" height="74" rx="10" fill="#fdf7e3" stroke="#c9a227" stroke-width="1.5"/>
+<text x="55" y="452" class="hd">อ่านภาพนี้ให้เป็น: กิ่งที่อันตรายที่สุดไม่ใช่กิ่งที่ฟังดูไฮเทค</text>
+<text x="55" y="476" class="s">G4 (ใช้คนและกระบวนการ) ใช้ diff เพียง 1 ก็ถึงเป้าหมาย — ไม่มีโค้ดให้สแกน ไม่มี CVE ให้แพตช์ และสแกนเนอร์ทุกตัวจะมองไม่เห็น</text>
+<rect x="35" y="526" width="386" height="110" rx="10" fill="#f5f7f9" stroke="#9aa9b8" stroke-width="1.5"/>
+<text x="57" y="574" class="n">12</text>
+<text x="57" y="600" class="s">เส้นทางทั้งหมด</text>
+<text x="57" y="620" class="sm">AND คูณ · OR บวก</text>
+<rect x="442" y="526" width="386" height="110" rx="10" fill="#f5f7f9" stroke="#9aa9b8" stroke-width="1.5"/>
+<text x="464" y="574" class="n">2</text>
+<text x="464" y="600" class="s">เส้นทางที่เหลือหลังปิดครบ 6 มาตรการ</text>
+<text x="464" y="620" class="sm">= 16.7% ของทั้งหมด</text>
+<rect x="849" y="526" width="386" height="110" rx="10" fill="#f5f7f9" stroke="#9aa9b8" stroke-width="1.5"/>
+<text x="871" y="574" class="n">50.0%</text>
+<text x="871" y="600" class="s">ที่มาตรการเดียวปิดได้ (FX-01)</text>
+<text x="871" y="620" class="sm">250,000 บาท</text>
+<text x="640" y="672" class="sm" text-anchor="middle">easiest_path_diff=1 · hardest_path_diff=11 · ตัวเลขทั้งหมดอ่านจาก out/02_tree.txt</text>
+</svg>
