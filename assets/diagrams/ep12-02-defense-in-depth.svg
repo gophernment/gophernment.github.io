@@ -1,0 +1,155 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1300 900" width="1300" height="900" role="img">
+<defs>
+<marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+<path d="M0,0 L10,5 L0,10 z" fill="#3b4a5a"/>
+</marker>
+<style>
+  .t  { font-family: sans-serif; font-size: 14px; fill: #12263a; }
+  .s  { font-family: sans-serif; font-size: 12px; fill: #3b4a5a; }
+  .sm { font-family: sans-serif; font-size: 11px; fill: #4a5b6c; }
+  .h  { font-family: sans-serif; font-size: 21px; font-weight: 700; fill: #0b2545; }
+  .hd { font-family: sans-serif; font-size: 15px; font-weight: 700; fill: #0b2545; }
+  .n  { font-family: sans-serif; font-size: 30px; font-weight: 700; fill: #0b2545; }
+  .m  { font-family: monospace; font-size: 12px; fill: #0b2545; }
+  .bad { font-family: sans-serif; font-size: 12px; fill: #7a1f1f; }
+  .good{ font-family: sans-serif; font-size: 12px; fill: #14532d; }
+</style>
+</defs>
+<text x="650" y="40" class="h" text-anchor="middle">defense in depth: คำขอ 12 แบบ ผ่าน 5 ชั้น และผลเมื่อชั้นหนึ่งพัง</text>
+<text x="650" y="66" class="s" text-anchor="middle">คำขอที่เป็นภัย 9 ตัว · คำขอปกติ 3 ตัว · ทุกชั้นเปิด: บล็อกได้ 9/9</text>
+<rect x="35" y="96" width="214" height="104" rx="10" fill="#eefaf1" stroke="#3f9c63" stroke-width="2.0"/>
+<text x="49" y="120" class="hd">L1</text>
+<text x="81" y="120" class="hd">shape</text>
+<text x="49" y="142" class="sm">ตรวจรูปร่าง/ความยาว/ชนิด</text>
+<text x="49" y="170" class="s">จับได้ 4/9</text>
+<line x1="252" y1="148.0" x2="271" y2="148.0" stroke="#3b4a5a" stroke-width="1.8" marker-end="url(#ah)"/>
+<rect x="275" y="96" width="214" height="104" rx="10" fill="#eef4fb" stroke="#4a7bb5" stroke-width="2.0"/>
+<text x="289" y="120" class="hd">L2</text>
+<text x="321" y="120" class="hd">signature</text>
+<text x="289" y="142" class="sm">WAF แบบรายการ</text>
+<text x="289" y="170" class="s">จับได้ 2/9</text>
+<line x1="492" y1="148.0" x2="511" y2="148.0" stroke="#3b4a5a" stroke-width="1.8" marker-end="url(#ah)"/>
+<rect x="515" y="96" width="214" height="104" rx="10" fill="#eef4fb" stroke="#4a7bb5" stroke-width="2.0"/>
+<text x="529" y="120" class="hd">L3</text>
+<text x="561" y="120" class="hd">authz</text>
+<text x="529" y="142" class="sm">สิทธิ์ + เจ้าของข้อมูล</text>
+<text x="529" y="170" class="s">จับได้ 2/9</text>
+<line x1="732" y1="148.0" x2="751" y2="148.0" stroke="#3b4a5a" stroke-width="1.8" marker-end="url(#ah)"/>
+<rect x="755" y="96" width="214" height="104" rx="10" fill="#eef4fb" stroke="#4a7bb5" stroke-width="2.0"/>
+<text x="769" y="120" class="hd">L4</text>
+<text x="801" y="120" class="hd">dbScope</text>
+<text x="769" y="142" class="sm">สิทธิ์ของ DB role</text>
+<text x="769" y="170" class="s">จับได้ 2/9</text>
+<line x1="972" y1="148.0" x2="991" y2="148.0" stroke="#3b4a5a" stroke-width="1.8" marker-end="url(#ah)"/>
+<rect x="995" y="96" width="214" height="104" rx="10" fill="#eef4fb" stroke="#4a7bb5" stroke-width="2.0"/>
+<text x="1009" y="120" class="hd">L5</text>
+<text x="1041" y="120" class="hd">audit</text>
+<text x="1009" y="142" class="sm">บันทึก + จำกัดการทำซ้ำ</text>
+<text x="1009" y="170" class="s">จับได้ 0 (ทำงานข้ามเวลา)</text>
+<text x="35" y="240" class="sm"># ชั้นไหนจับคำขอไหนได้ (X = ชั้นนั้นจับได้เมื่อประเมินแยกชั้น)</text>
+<text x="40" y="266" class="sm">id</text>
+<text x="100" y="266" class="sm">class</text>
+<text x="210" y="266" class="sm">value (ย่อตามที่โปรแกรมพิมพ์)</text>
+<text x="760" y="266" class="sm" text-anchor="middle">L1</text>
+<text x="860" y="266" class="sm" text-anchor="middle">L2</text>
+<text x="960" y="266" class="sm" text-anchor="middle">L3</text>
+<text x="1060" y="266" class="sm" text-anchor="middle">L4</text>
+<text x="1160" y="266" class="sm" text-anchor="middle">L5</text>
+<line x1="35" y1="274" x2="1265" y2="274" stroke="#c8d3dd" stroke-width="1.2"/>
+<rect x="33" y="276" width="1232" height="24" rx="5" fill="#ffffff" stroke="#e3e9f0" stroke-width="1"/>
+<text x="40" y="293" class="m">P01</text>
+<text x="100" y="293" class="sm">legit</text>
+<text x="210" y="293" class="m">42</text>
+<rect x="33" y="302" width="1232" height="24" rx="5" fill="#f5f7f9" stroke="#e3e9f0" stroke-width="1"/>
+<text x="40" y="319" class="m">P02</text>
+<text x="100" y="319" class="sm">legit</text>
+<text x="210" y="319" class="m">O'Brien</text>
+<text x="860" y="319" class="sm" text-anchor="middle">X</text>
+<text x="1215" y="319" class="bad" text-anchor="end">false positive</text>
+<rect x="33" y="328" width="1232" height="24" rx="5" fill="#ffffff" stroke="#e3e9f0" stroke-width="1"/>
+<text x="40" y="345" class="m">P03</text>
+<text x="100" y="345" class="sm">legit</text>
+<text x="210" y="345" class="m">invoice 42</text>
+<rect x="33" y="354" width="1232" height="24" rx="5" fill="#f5f7f9" stroke="#e3e9f0" stroke-width="1"/>
+<text x="40" y="371" class="m">P04</text>
+<text x="100" y="371" class="sm">inj</text>
+<text x="210" y="371" class="m">42 OR 1=1</text>
+<text x="760" y="371" class="bad" text-anchor="middle">X</text>
+<rect x="33" y="380" width="1232" height="24" rx="5" fill="#ffffff" stroke="#e3e9f0" stroke-width="1"/>
+<text x="40" y="397" class="m">P05</text>
+<text x="100" y="397" class="sm">inj</text>
+<text x="210" y="397" class="m">' OR '1'='1</text>
+<text x="860" y="397" class="bad" text-anchor="middle">X</text>
+<rect x="33" y="406" width="1232" height="24" rx="5" fill="#f5f7f9" stroke="#e3e9f0" stroke-width="1"/>
+<text x="40" y="423" class="m">P06</text>
+<text x="100" y="423" class="sm">inj</text>
+<text x="210" y="423" class="m">1 UNION SELECT pii FROM customers</text>
+<text x="1060" y="423" class="bad" text-anchor="middle">X</text>
+<rect x="33" y="432" width="1232" height="24" rx="5" fill="#ffffff" stroke="#e3e9f0" stroke-width="1"/>
+<text x="40" y="449" class="m">P07</text>
+<text x="100" y="449" class="sm">inj</text>
+<text x="210" y="449" class="m">DROP TABLE invoices</text>
+<text x="860" y="449" class="bad" text-anchor="middle">X</text>
+<text x="1060" y="449" class="bad" text-anchor="middle">X</text>
+<rect x="33" y="458" width="1232" height="24" rx="5" fill="#f5f7f9" stroke="#e3e9f0" stroke-width="1"/>
+<text x="40" y="475" class="m">P08</text>
+<text x="100" y="475" class="sm">authz</text>
+<text x="210" y="475" class="m">9001 (tenant อื่น)</text>
+<text x="960" y="475" class="bad" text-anchor="middle">X</text>
+<rect x="33" y="484" width="1232" height="24" rx="5" fill="#ffffff" stroke="#e3e9f0" stroke-width="1"/>
+<text x="40" y="501" class="m">P09</text>
+<text x="100" y="501" class="sm">authz</text>
+<text x="210" y="501" class="m">intern ขอ id 42</text>
+<text x="960" y="501" class="bad" text-anchor="middle">X</text>
+<rect x="33" y="510" width="1232" height="24" rx="5" fill="#f5f7f9" stroke="#e3e9f0" stroke-width="1"/>
+<text x="40" y="527" class="m">P10</text>
+<text x="100" y="527" class="sm">malformed</text>
+<text x="210" y="527" class="m">(ว่าง)</text>
+<text x="760" y="527" class="bad" text-anchor="middle">X</text>
+<rect x="33" y="536" width="1232" height="24" rx="5" fill="#ffffff" stroke="#e3e9f0" stroke-width="1"/>
+<text x="40" y="553" class="m">P11</text>
+<text x="100" y="553" class="sm">malformed</text>
+<text x="210" y="553" class="m">a×100</text>
+<text x="760" y="553" class="bad" text-anchor="middle">X</text>
+<rect x="33" y="562" width="1232" height="24" rx="5" fill="#f5f7f9" stroke="#e3e9f0" stroke-width="1"/>
+<text x="40" y="579" class="m">P12</text>
+<text x="100" y="579" class="sm">malformed</text>
+<text x="210" y="579" class="m">abc\x00def</text>
+<text x="760" y="579" class="bad" text-anchor="middle">X</text>
+<text x="35" y="606" class="sm"># ถ้าชั้นนั้นพัง: คำขอที่เป็นภัยที่ยังหลุดผ่านได้</text>
+<rect x="35" y="618" width="760" height="190" rx="10" fill="#ffffff" stroke="#e3e9f0" stroke-width="1"/>
+<text x="55" y="644" class="hd">L1</text>
+<text x="85" y="644" class="s">ปิด shape</text>
+<rect x="280" y="633" width="470" height="15" rx="7" fill="#f0f3f7" stroke="#dfe6ee" stroke-width="1"/>
+<rect x="280" y="633" width="208.88888888888889" height="15" rx="7" fill="#c05050" stroke="#c05050" stroke-width="1"/>
+<text x="758" y="644" class="bad">4/9</text>
+<text x="55" y="676" class="hd">L2</text>
+<text x="85" y="676" class="s">ปิด signature</text>
+<rect x="280" y="665" width="470" height="15" rx="7" fill="#f0f3f7" stroke="#dfe6ee" stroke-width="1"/>
+<rect x="280" y="665" width="52.22222222222222" height="15" rx="7" fill="#c05050" stroke="#c05050" stroke-width="1"/>
+<text x="758" y="676" class="bad">1/9</text>
+<text x="55" y="708" class="hd">L3</text>
+<text x="85" y="708" class="s">ปิด authz</text>
+<rect x="280" y="697" width="470" height="15" rx="7" fill="#f0f3f7" stroke="#dfe6ee" stroke-width="1"/>
+<rect x="280" y="697" width="104.44444444444444" height="15" rx="7" fill="#c05050" stroke="#c05050" stroke-width="1"/>
+<text x="758" y="708" class="bad">2/9</text>
+<text x="55" y="740" class="hd">L4</text>
+<text x="85" y="740" class="s">ปิด dbScope</text>
+<rect x="280" y="729" width="470" height="15" rx="7" fill="#f0f3f7" stroke="#dfe6ee" stroke-width="1"/>
+<rect x="280" y="729" width="52.22222222222222" height="15" rx="7" fill="#c05050" stroke="#c05050" stroke-width="1"/>
+<text x="758" y="740" class="bad">1/9</text>
+<text x="55" y="772" class="hd">L5</text>
+<text x="85" y="772" class="s">ปิด audit</text>
+<rect x="280" y="761" width="470" height="15" rx="7" fill="#f0f3f7" stroke="#dfe6ee" stroke-width="1"/>
+<text x="758" y="772" class="good">0/9</text>
+<rect x="815" y="618" width="430" height="190" rx="10" fill="#fdf7e3" stroke="#c9a227" stroke-width="1.5"/>
+<text x="835" y="646" class="hd">แย่สุด: 4/9 หลุด (44.4%)</text>
+<text x="835" y="674" class="s">เมื่อปิด L1 — และมันคือชั้นที่</text>
+<text x="835" y="694" class="s">จับได้มากที่สุด (4/9)</text>
+<text x="835" y="722" class="s">คำขอที่เป็นภัยมีผู้ป้องกันเฉลี่ย 1.1 ชั้น</text>
+<text x="835" y="742" class="s">และ 8/9 ตัวพึ่งชั้นเดียว</text>
+<text x="835" y="770" class="sm">defense in depth ที่บาง คือปัญหาที่</text>
+<text x="835" y="788" class="sm">ตัวเลขแบบนี้ทำให้เห็น</text>
+<text x="650" y="850" class="m" text-anchor="middle">ทุกชั้นเปิด: hostile_blocked=9/9 · legit_allowed=2/3 · false_positive=1</text>
+<text x="650" y="874" class="sm" text-anchor="middle">ตัวเลขทั้งหมดอ่านจาก out/02_layers.txt — ไม่มีค่าที่พิมพ์มือ</text>
+</svg>

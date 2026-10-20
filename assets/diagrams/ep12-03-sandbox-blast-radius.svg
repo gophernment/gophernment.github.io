@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 720" width="1240" height="720" role="img">
+<defs>
+<marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+<path d="M0,0 L10,5 L0,10 z" fill="#3b4a5a"/>
+</marker>
+<style>
+  .t  { font-family: sans-serif; font-size: 14px; fill: #12263a; }
+  .s  { font-family: sans-serif; font-size: 12px; fill: #3b4a5a; }
+  .sm { font-family: sans-serif; font-size: 11px; fill: #4a5b6c; }
+  .h  { font-family: sans-serif; font-size: 21px; font-weight: 700; fill: #0b2545; }
+  .hd { font-family: sans-serif; font-size: 15px; font-weight: 700; fill: #0b2545; }
+  .n  { font-family: sans-serif; font-size: 30px; font-weight: 700; fill: #0b2545; }
+  .m  { font-family: monospace; font-size: 12px; fill: #0b2545; }
+  .bad { font-family: sans-serif; font-size: 12px; fill: #7a1f1f; }
+  .good{ font-family: sans-serif; font-size: 12px; fill: #14532d; }
+</style>
+</defs>
+<text x="620" y="40" class="h" text-anchor="middle">sandbox: blast radius ของโปรเซสเดียว ภายใต้โปรไฟล์ต่างกัน</text>
+<text x="620" y="66" class="s" text-anchor="middle">วัดจาก 12 ทรัพยากรที่โปรเซสอาจเอื้อมถึง และ 3 ฟังก์ชันที่แอปต้องทำได้</text>
+<text x="40" y="104" class="sm">โปรไฟล์</text>
+<text x="420" y="104" class="sm">blast radius (เอื้อมถึงได้กี่อย่างจาก 12)</text>
+<text x="1000" y="104" class="sm" text-anchor="middle">reachable</text>
+<text x="1090" y="104" class="sm" text-anchor="middle">app_ok</text>
+<rect x="38" y="120" width="1164" height="80" rx="9" fill="#fdeeee" stroke="#c05050" stroke-width="1.4"/>
+<text x="56" y="150" class="hd">P1</text>
+<text x="92" y="144" class="s">root + cap ทั้งหมด + docker.sock</text>
+<text x="92" y="168" class="m">reachable=12/12  app_ok=3/3</text>
+<rect x="420" y="152" width="520" height="18" rx="8" fill="#ffffff" stroke="#dfe6ee" stroke-width="1"/>
+<rect x="420" y="152" width="520.0" height="18" rx="8" fill="#c05050" stroke="#c05050" stroke-width="1"/>
+<text x="1000" y="154" class="hd" text-anchor="middle">12/12</text>
+<text x="1090" y="154" class="hd" text-anchor="middle">3/3</text>
+<rect x="38" y="216" width="1164" height="80" rx="9" fill="#fdf7e3" stroke="#c9a227" stroke-width="1.4"/>
+<text x="56" y="246" class="hd">P2</text>
+<text x="92" y="240" class="s">root แต่ cap-drop=ALL</text>
+<text x="92" y="264" class="m">reachable=6/12  app_ok=3/3</text>
+<rect x="420" y="248" width="520" height="18" rx="8" fill="#ffffff" stroke="#dfe6ee" stroke-width="1"/>
+<rect x="420" y="248" width="260.0" height="18" rx="8" fill="#c9a227" stroke="#c9a227" stroke-width="1"/>
+<text x="1000" y="250" class="hd" text-anchor="middle">6/12</text>
+<text x="1090" y="250" class="hd" text-anchor="middle">3/3</text>
+<rect x="38" y="312" width="1164" height="80" rx="9" fill="#fdf7e3" stroke="#c9a227" stroke-width="1.4"/>
+<text x="56" y="342" class="hd">P3</text>
+<text x="92" y="336" class="s">uid 1001 · namespace ยังใช้ของ host</text>
+<text x="92" y="360" class="m">reachable=2/12  app_ok=3/3</text>
+<rect x="420" y="344" width="520" height="18" rx="8" fill="#ffffff" stroke="#dfe6ee" stroke-width="1"/>
+<rect x="420" y="344" width="86.66666666666667" height="18" rx="8" fill="#c9a227" stroke="#c9a227" stroke-width="1"/>
+<text x="1000" y="346" class="hd" text-anchor="middle">2/12</text>
+<text x="1090" y="346" class="hd" text-anchor="middle">3/3</text>
+<rect x="38" y="408" width="1164" height="80" rx="9" fill="#eefaf1" stroke="#3f9c63" stroke-width="2.0"/>
+<text x="56" y="438" class="hd">P4</text>
+<text x="92" y="432" class="s">uid 1001 + seccomp + chroot + ro + pid ns</text>
+<text x="92" y="456" class="m">reachable=0/12  app_ok=3/3</text>
+<rect x="420" y="440" width="520" height="18" rx="8" fill="#ffffff" stroke="#dfe6ee" stroke-width="1"/>
+<text x="1000" y="442" class="hd" text-anchor="middle">0/12</text>
+<text x="1090" y="442" class="hd" text-anchor="middle">3/3</text>
+<rect x="38" y="504" width="1164" height="80" rx="9" fill="#eef4fb" stroke="#4a7bb5" stroke-width="2.0"/>
+<text x="56" y="534" class="hd">P5</text>
+<text x="92" y="528" class="s">เหมือน P4 แต่ลืม mount data</text>
+<text x="92" y="552" class="m">reachable=0/12  app_ok=2/3</text>
+<rect x="420" y="536" width="520" height="18" rx="8" fill="#ffffff" stroke="#dfe6ee" stroke-width="1"/>
+<text x="1000" y="538" class="hd" text-anchor="middle">0/12</text>
+<text x="1090" y="538" class="bad" text-anchor="middle">2/3</text>
+<rect x="38" y="610" width="570" height="76" rx="10" fill="#eefaf1" stroke="#3f9c63" stroke-width="1.5"/>
+<text x="58" y="638" class="hd">P4 คือคำตอบที่ถูก: 0/12 และยังทำงานครบ</text>
+<text x="58" y="662" class="s">least privilege ที่ดี = reachable ต่ำสุดที่ app_ok ยังเป็น 3/3</text>
+<rect x="620" y="610" width="582" height="76" rx="10" fill="#eef4fb" stroke="#4a7bb5" stroke-width="1.5"/>
+<text x="640" y="638" class="hd">P5 เตือนว่าตัวเลขเดียวไม่พอ</text>
+<text x="640" y="662" class="s">ปลอดภัยที่สุดแต่แอปอ่านข้อมูลตัวเองไม่ได้ = outage ที่มีใบรับรอง</text>
+<text x="620" y="706" class="sm" text-anchor="middle">ตัวเลขทั้งหมดอ่านจาก out/03_sandbox.txt — เกณฑ์การตัดสินเขียนตามกฎจริงของ Linux</text>
+</svg>
