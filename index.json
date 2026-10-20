@@ -1,5 +1,21 @@
 [
   {
+    "slug": "2026-10-20-software-security-12-least-privilege-defense-in-depth",
+    "title": "'Least privilege + defense in depth: ให้สิทธิ์น้อยที่สุด และอย่าเชื่อว่าชั้นไหนจะไม่พัง (ตอนที่ 12)'",
+    "date": "2026-10-20",
+    "tags": [
+      "software-security",
+      "least-privilege",
+      "defense-in-depth",
+      "sandbox",
+      "container",
+      "rbac",
+      "blast-radius",
+      "go"
+    ],
+    "description": "ตอนที่ 12 — สองหลักคิดที่เปลี่ยนรายการภัยให้เป็นสถาปัตยกรรม: least privilege (Saltzer & Schroeder, 1975) วัดด้วย blast radius และ defense in depth ที่วัดได้จริง · เดโม Go สามตัวรันบนเครื่องเดียว: แบบการให้สิทธิ์สามแบบที่ให้ผลต่างกัน 8/8 กับ 3/8 การกระทำ, ชั้นป้องกันห้าชั้นที่คำขออันตราย 9 ตัวพึ่งชั้นเดียว 8 ตัว (ปิดชั้นที่จับได้มากที่สุดแล้วหลุด 4/9 = 44.4%) และ blast radius ของ sandbox ที่ไล่จาก 12/12 ลงมา 0/12 โดยที่แอปยังทำงานครบ"
+  },
+  {
     "slug": "2026-10-19-software-security-11-threat-modeling",
     "title": "'Threat modeling: วาดระบบให้เห็นก่อนเขียนโค้ด แล้วถามแบบคนที่อยากเจาะมัน (ตอนที่ 11)'",
     "date": "2026-10-19",
