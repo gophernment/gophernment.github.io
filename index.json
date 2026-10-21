@@ -1,5 +1,19 @@
 [
   {
+    "slug": "2026-10-21-software-security-13-fail-closed-secure-default",
+    "title": "'Fail closed + secure by default: เมื่อตัวตรวจไม่รู้คำตอบ มันต้องปฏิเสธ (ตอนที่ 13)'",
+    "date": "2026-10-21",
+    "tags": [
+      "software-security",
+      "fail-closed",
+      "secure-by-default",
+      "economy-of-mechanism",
+      "complete-mediation",
+      "go"
+    ],
+    "description": "ตอนที่ 13 — สองหน้าที่ของหลักเดียว (ปฏิเสธเมื่อล้ม และปลอดภัยเมื่อไม่มีใครตั้งค่า) บวก complete mediation กับ economy of mechanism · เดโม Go สี่ตัวรันจริง: ตัวตรวจสามแบบที่ให้ผลต่างกันที่ 5/5 กับ 0/5, config แปดค่าที่ zero value ตัดสินความปลอดภัย (7/8 → 0/8), เจ็ดเส้นทางเข้าถึงที่ตรวจไม่ครบ (1/7) และการถอนสิทธิ์ที่ยังผ่าน 12/12, กับชุดกฎเจ็ดข้อที่มีหนึ่งกฎตายและเจ็ดอินพุตที่คำตอบขึ้นกับลำดับบรรทัด"
+  },
+  {
     "slug": "2026-10-20-software-security-12-least-privilege-defense-in-depth",
     "title": "'Least privilege + defense in depth: ให้สิทธิ์น้อยที่สุด และอย่าเชื่อว่าชั้นไหนจะไม่พัง (ตอนที่ 12)'",
     "date": "2026-10-20",
