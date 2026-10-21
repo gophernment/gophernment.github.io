@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 660" width="1000" height="660" role="img">
+<defs>
+<style>
+  .t  { font-family: sans-serif; font-size: 14px; fill: #12263a; }
+  .s  { font-family: sans-serif; font-size: 12px; fill: #3b4a5a; }
+  .sm { font-family: sans-serif; font-size: 11px; fill: #4a5b6c; }
+  .h  { font-family: sans-serif; font-size: 21px; font-weight: 700; fill: #0b2545; }
+  .hd { font-family: sans-serif; font-size: 15px; font-weight: 700; fill: #0b2545; }
+  .n  { font-family: sans-serif; font-size: 30px; font-weight: 700; fill: #0b2545; }
+  .m  { font-family: monospace; font-size: 12px; fill: #0b2545; }
+  .mm { font-family: monospace; font-size: 11px; fill: #3b4a5a; }
+  .bad { font-family: sans-serif; font-size: 12px; fill: #7a1f1f; }
+  .good{ font-family: sans-serif; font-size: 12px; fill: #14532d; }
+</style>
+</defs>
+<text x="40" y="44" class="h">ค่าเริ่มต้นคือสัญญาที่ผู้ใช้ไม่เคยอ่าน</text>
+<text x="40" y="72" class="s">ค่า zero value ของ config 8 ค่า · legacy อ่านว่าผ่อนปรน · secure อ่านว่าปลอดภัย</text>
+<rect x="40" y="96" width="920" height="336" rx="10" fill="#ffffff" stroke="#9aa9b8" stroke-width="1.5"/>
+<text x="70" y="128" class="hd">field ใน config</text>
+<text x="330" y="128" class="hd">zero value</text>
+<text x="450" y="128" class="hd">legacy อ่านว่า</text>
+<text x="700" y="128" class="hd">secure อ่านว่า</text>
+<line x1="60" y1="142" x2="940" y2="142" stroke="#c8d2dc" stroke-width="1.2"/>
+<text x="70" y="172" class="m">auth_mode</text>
+<text x="330" y="172" class="mm">""</text>
+<text x="450" y="172" class="s">ไม่ตรวจสิทธิ์</text>
+<text x="700" y="172" class="s">บังคับตรวจ (on)</text>
+<line x1="60" y1="182" x2="940" y2="182" stroke="#eaeff4" stroke-width="1.0"/>
+<text x="70" y="204" class="m">allowed_hosts</text>
+<text x="330" y="204" class="mm">nil</text>
+<text x="450" y="204" class="s">รับทุก Host</text>
+<text x="700" y="204" class="s">ต้องระบุ ไม่งั้นไม่สตาร์ต</text>
+<line x1="60" y1="214" x2="940" y2="214" stroke="#eaeff4" stroke-width="1.0"/>
+<text x="70" y="236" class="m">tls_min_version</text>
+<text x="330" y="236" class="mm">""</text>
+<text x="450" y="236" class="s">TLS 1.0</text>
+<text x="700" y="236" class="s">TLS 1.2</text>
+<line x1="60" y1="246" x2="940" y2="246" stroke="#eaeff4" stroke-width="1.0"/>
+<text x="70" y="268" class="m">cookie_secure</text>
+<text x="330" y="268" class="mm">nil</text>
+<text x="450" y="268" class="s">ไม่ใส่ Secure flag</text>
+<text x="700" y="268" class="s">ใส่ Secure เสมอ</text>
+<line x1="60" y1="278" x2="940" y2="278" stroke="#eaeff4" stroke-width="1.0"/>
+<text x="70" y="300" class="m">debug_routes</text>
+<text x="330" y="300" class="mm">nil</text>
+<text x="450" y="300" class="s">ปิด (บังเอิญปลอดภัย)</text>
+<text x="700" y="300" class="s">ปิด</text>
+<line x1="60" y1="310" x2="940" y2="310" stroke="#eaeff4" stroke-width="1.0"/>
+<text x="70" y="332" class="m">rate_limit_rps</text>
+<text x="330" y="332" class="mm">0</text>
+<text x="450" y="332" class="s">ไม่จำกัด</text>
+<text x="700" y="332" class="s">60</text>
+<line x1="60" y1="342" x2="940" y2="342" stroke="#eaeff4" stroke-width="1.0"/>
+<text x="70" y="364" class="m">db_require_tls</text>
+<text x="330" y="364" class="mm">nil</text>
+<text x="450" y="364" class="s">ต่อ DB แบบ plaintext</text>
+<text x="700" y="364" class="s">บังคับ TLS</text>
+<line x1="60" y1="374" x2="940" y2="374" stroke="#eaeff4" stroke-width="1.0"/>
+<text x="70" y="396" class="m">admin_loopback_only</text>
+<text x="330" y="396" class="mm">nil</text>
+<text x="450" y="396" class="s">เปิดจาก IP ไหนก็ได้</text>
+<text x="700" y="396" class="s">loopback เท่านั้น</text>
+<rect x="40" y="452" width="296" height="132" rx="10" fill="#fdeeee" stroke="#c05050" stroke-width="1.5"/>
+<text x="188" y="482" class="hd" text-anchor="middle">legacy · config ว่าง</text>
+<text x="188" y="528" class="n" text-anchor="middle">7/8</text>
+<text x="188" y="560" class="bad" text-anchor="middle">ค่าไม่ปลอดภัย</text>
+<rect x="352" y="452" width="296" height="132" rx="10" fill="#fdf7e3" stroke="#c9a227" stroke-width="1.5"/>
+<text x="500" y="482" class="hd" text-anchor="middle">legacy · เขียน 5 ค่า</text>
+<text x="500" y="528" class="n" text-anchor="middle">3/8</text>
+<text x="500" y="560" class="bad" text-anchor="middle">ยังเหลือช่อง</text>
+<rect x="664" y="452" width="296" height="132" rx="10" fill="#eefaf1" stroke="#3f9c63" stroke-width="1.5"/>
+<text x="812" y="482" class="hd" text-anchor="middle">secure · config ว่าง</text>
+<text x="812" y="528" class="n" text-anchor="middle">0/8</text>
+<text x="812" y="560" class="good" text-anchor="middle">แต่ปฏิเสธการสตาร์ต</text>
+<text x="40" y="618" class="sm">ตัวเลขจาก out/02_defaults.txt · คำขอปกติ 5/5 ผ่านทั้ง legacy และ secure</text>
+<text x="40" y="638" class="sm">สิ่งที่ต้องเขียนเอง: legacy 8 ค่า · secure 1 ค่า (allowed_hosts)</text>
+</svg>

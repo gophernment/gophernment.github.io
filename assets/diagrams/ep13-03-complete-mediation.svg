@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 660" width="1000" height="660" role="img">
+<defs>
+<style>
+  .t  { font-family: sans-serif; font-size: 14px; fill: #12263a; }
+  .s  { font-family: sans-serif; font-size: 12px; fill: #3b4a5a; }
+  .sm { font-family: sans-serif; font-size: 11px; fill: #4a5b6c; }
+  .h  { font-family: sans-serif; font-size: 21px; font-weight: 700; fill: #0b2545; }
+  .hd { font-family: sans-serif; font-size: 15px; font-weight: 700; fill: #0b2545; }
+  .n  { font-family: sans-serif; font-size: 30px; font-weight: 700; fill: #0b2545; }
+  .m  { font-family: monospace; font-size: 12px; fill: #0b2545; }
+  .mm { font-family: monospace; font-size: 11px; fill: #3b4a5a; }
+  .bad { font-family: sans-serif; font-size: 12px; fill: #7a1f1f; }
+  .good{ font-family: sans-serif; font-size: 12px; fill: #14532d; }
+</style>
+</defs>
+<text x="40" y="44" class="h">complete mediation: ทุกเส้นทาง ทุกวัตถุ ทุกครั้ง</text>
+<text x="40" y="72" class="s">เส้นทางเข้าถึง invoices 7 เส้นทาง · ถ้าการตรวจอยู่ผิดที่ ผู้ใช้ที่ถูกถอนสิทธิ์ก็ยังผ่าน</text>
+<rect x="40" y="96" width="920" height="250" rx="10" fill="#ffffff" stroke="#9aa9b8" stroke-width="1.5"/>
+<text x="70" y="128" class="hd">path</text>
+<text x="470" y="128" class="hd" text-anchor="middle">A: handler เดียว</text>
+<text x="640" y="128" class="hd" text-anchor="middle">B: คัดลอกทุกที่</text>
+<text x="810" y="128" class="hd" text-anchor="middle">C: จุดเดียว</text>
+<line x1="60" y1="142" x2="940" y2="142" stroke="#c8d2dc" stroke-width="1.2"/>
+<text x="70" y="172" class="m">http_get</text>
+<circle cx="470" cy="168" r="7" fill="#2f8f5b" stroke="#2f8f5b" stroke-width="1.6"/>
+<circle cx="640" cy="168" r="7" fill="#2f8f5b" stroke="#2f8f5b" stroke-width="1.6"/>
+<circle cx="810" cy="168" r="7" fill="#2f8f5b" stroke="#2f8f5b" stroke-width="1.6"/>
+<text x="70" y="198" class="m">http_export</text>
+<circle cx="470" cy="194" r="7" fill="#ffffff" stroke="#c05050" stroke-width="1.6"/>
+<circle cx="640" cy="194" r="7" fill="#2f8f5b" stroke="#2f8f5b" stroke-width="1.6"/>
+<circle cx="810" cy="194" r="7" fill="#2f8f5b" stroke="#2f8f5b" stroke-width="1.6"/>
+<text x="70" y="224" class="m">batch_job</text>
+<circle cx="470" cy="220" r="7" fill="#ffffff" stroke="#c05050" stroke-width="1.6"/>
+<circle cx="640" cy="220" r="7" fill="#2f8f5b" stroke="#2f8f5b" stroke-width="1.6"/>
+<circle cx="810" cy="220" r="7" fill="#2f8f5b" stroke="#2f8f5b" stroke-width="1.6"/>
+<text x="70" y="250" class="m">admin_cli</text>
+<circle cx="470" cy="246" r="7" fill="#ffffff" stroke="#c05050" stroke-width="1.6"/>
+<circle cx="640" cy="246" r="7" fill="#2f8f5b" stroke="#2f8f5b" stroke-width="1.6"/>
+<circle cx="810" cy="246" r="7" fill="#2f8f5b" stroke="#2f8f5b" stroke-width="1.6"/>
+<text x="70" y="276" class="m">internal_api</text>
+<circle cx="470" cy="272" r="7" fill="#ffffff" stroke="#c05050" stroke-width="1.6"/>
+<circle cx="640" cy="272" r="7" fill="#2f8f5b" stroke="#2f8f5b" stroke-width="1.6"/>
+<circle cx="810" cy="272" r="7" fill="#2f8f5b" stroke="#2f8f5b" stroke-width="1.6"/>
+<text x="70" y="302" class="m">cache_hit</text>
+<circle cx="470" cy="298" r="7" fill="#ffffff" stroke="#c05050" stroke-width="1.6"/>
+<circle cx="640" cy="298" r="7" fill="#ffffff" stroke="#c05050" stroke-width="1.6"/>
+<circle cx="810" cy="298" r="7" fill="#2f8f5b" stroke="#2f8f5b" stroke-width="1.6"/>
+<text x="70" y="328" class="m">retry_queue</text>
+<circle cx="470" cy="324" r="7" fill="#ffffff" stroke="#c05050" stroke-width="1.6"/>
+<circle cx="640" cy="324" r="7" fill="#2f8f5b" stroke="#2f8f5b" stroke-width="1.6"/>
+<circle cx="810" cy="324" r="7" fill="#2f8f5b" stroke="#2f8f5b" stroke-width="1.6"/>
+<circle cx="72" cy="366" r="6" fill="#2f8f5b" stroke="#2f8f5b" stroke-width="1.6"/>
+<text x="88" y="370" class="sm">ตรวจแล้ว (1/7 · 6/7 · 7/7 ตามคอลัมน์)</text>
+<circle cx="380" cy="366" r="6" fill="#ffffff" stroke="#c05050" stroke-width="1.6"/>
+<text x="396" y="370" class="sm">ไม่ตรวจ = เส้นทางที่หลุด</text>
+<rect x="40" y="390" width="920" height="208" rx="10" fill="#f5f7f9" stroke="#9aa9b8" stroke-width="1.5"/>
+<text x="70" y="422" class="hd">guard</text>
+<text x="430" y="422" class="hd">คำขอที่ยังผ่านหลังถอนสิทธิ์ (จาก 12)</text>
+<line x1="60" y1="434" x2="940" y2="434" stroke="#c8d2dc" stroke-width="1.2"/>
+<text x="70" y="464" class="m">memo_no_ttl</text>
+<rect x="430" y="451" width="330" height="15" rx="3" fill="#f4c7c3" stroke="#c05050" stroke-width="1.0"/>
+<text x="440" y="463" class="m">12/12</text>
+<text x="790" y="464" class="mm">unbounded</text>
+<text x="70" y="494" class="m">memo_ttl_60s</text>
+<rect x="430" y="481" width="330" height="15" rx="3" fill="#f4c7c3" stroke="#c05050" stroke-width="1.0"/>
+<text x="440" y="493" class="m">12/12</text>
+<text x="790" y="494" class="mm">60s</text>
+<text x="70" y="524" class="m">memo_with_invalidation</text>
+<rect x="430" y="511" width="110" height="15" rx="3" fill="#f4c7c3" stroke="#c05050" stroke-width="1.0"/>
+<text x="440" y="523" class="m">4/12</text>
+<text x="790" y="524" class="mm">until_missed_call</text>
+<text x="70" y="554" class="m">per_request</text>
+<rect x="430" y="541" width="6" height="15" rx="3" fill="#dff0e4" stroke="#3f9c63" stroke-width="1.0"/>
+<text x="440" y="553" class="m">0/12</text>
+<text x="790" y="554" class="mm">0</text>
+<text x="40" y="628" class="sm">ผลจาก out/03_mediation.txt · ตรวจทุกคำขอ = 0/12 · memo ไม่มี TTL = 12/12</text>
+<text x="40" y="648" class="sm">คำตอบ: วางตัวตรวจไว้ใต้ cache และให้ทุกเส้นทางผ่านมัน — ไม่ใช่คัดลอกไปทุกที่</text>
+</svg>

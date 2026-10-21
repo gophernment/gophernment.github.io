@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 620" width="1000" height="620" role="img">
+<defs>
+<style>
+  .t  { font-family: sans-serif; font-size: 14px; fill: #12263a; }
+  .s  { font-family: sans-serif; font-size: 12px; fill: #3b4a5a; }
+  .sm { font-family: sans-serif; font-size: 11px; fill: #4a5b6c; }
+  .h  { font-family: sans-serif; font-size: 21px; font-weight: 700; fill: #0b2545; }
+  .hd { font-family: sans-serif; font-size: 15px; font-weight: 700; fill: #0b2545; }
+  .n  { font-family: sans-serif; font-size: 30px; font-weight: 700; fill: #0b2545; }
+  .m  { font-family: monospace; font-size: 12px; fill: #0b2545; }
+  .mm { font-family: monospace; font-size: 11px; fill: #3b4a5a; }
+  .bad { font-family: sans-serif; font-size: 12px; fill: #7a1f1f; }
+  .good{ font-family: sans-serif; font-size: 12px; fill: #14532d; }
+</style>
+</defs>
+<text x="40" y="44" class="h">เมื่อตัวตรวจตอบไม่ได้: สามทางเลือก และราคาที่ต่างกัน</text>
+<text x="40" y="72" class="s">เดโม: คำขอ 10 ตัว (ภัย 5 · ปกติ 5) · บริการตัดสินสิทธิ์ timeout ทุกครั้ง</text>
+<rect x="40" y="100" width="300" height="190" rx="10" fill="#fdeeee" stroke="#c05050" stroke-width="1.5"/>
+<text x="190" y="130" class="hd" text-anchor="middle">fail_open</text>
+<text x="190" y="154" class="sm" text-anchor="middle">error = ปล่อยผ่าน</text>
+<text x="190" y="186" class="sm" text-anchor="middle">ภัยที่ผ่าน</text>
+<text x="190" y="220" class="n" text-anchor="middle">5/5</text>
+<text x="190" y="250" class="sm" text-anchor="middle">งานที่ยังทำได้</text>
+<text x="190" y="284" class="n" text-anchor="middle">5/5</text>
+<text x="190" y="316" class="bad" text-anchor="middle">รับภัยทั้งหมด</text>
+<rect x="360" y="100" width="300" height="190" rx="10" fill="#f5f7f9" stroke="#9aa9b8" stroke-width="1.5"/>
+<text x="510" y="130" class="hd" text-anchor="middle">fail_closed</text>
+<text x="510" y="154" class="sm" text-anchor="middle">error = ปฏิเสธ</text>
+<text x="510" y="186" class="sm" text-anchor="middle">ภัยที่ผ่าน</text>
+<text x="510" y="220" class="n" text-anchor="middle">0/5</text>
+<text x="510" y="250" class="sm" text-anchor="middle">งานที่ยังทำได้</text>
+<text x="510" y="284" class="n" text-anchor="middle">0/5</text>
+<text x="510" y="316" class="bad" text-anchor="middle">ปิดงานทั้งหมดด้วย</text>
+<rect x="680" y="100" width="300" height="190" rx="10" fill="#eefaf1" stroke="#3f9c63" stroke-width="1.5"/>
+<text x="830" y="130" class="hd" text-anchor="middle">closed_degraded</text>
+<text x="830" y="154" class="sm" text-anchor="middle">ปฏิเสธ ยกเว้นอ่านที่เคยอนุญาต</text>
+<text x="830" y="186" class="sm" text-anchor="middle">ภัยที่ผ่าน</text>
+<text x="830" y="220" class="n" text-anchor="middle">0/5</text>
+<text x="830" y="250" class="sm" text-anchor="middle">งานที่ยังทำได้</text>
+<text x="830" y="284" class="n" text-anchor="middle">5/5</text>
+<text x="830" y="316" class="good" text-anchor="middle">แคบและประกาศได้</text>
+<rect x="40" y="336" width="920" height="190" rx="10" fill="#f5f7f9" stroke="#9aa9b8" stroke-width="1.5"/>
+<text x="70" y="368" class="hd">สภาวะที่ตอบไม่ได้</text>
+<text x="250" y="368" class="hd">หน้าตาเป็นอย่างไร</text>
+<text x="700" y="368" class="hd">fail_open</text>
+<text x="850" y="368" class="hd">fail_closed</text>
+<line x1="60" y1="380" x2="940" y2="380" stroke="#c8d2dc" stroke-width="1.2"/>
+<text x="70" y="408" class="m">timeout</text>
+<text x="250" y="408" class="s">error จากปลายทาง</text>
+<text x="700" y="408" class="m">allow</text>
+<text x="850" y="408" class="m">deny</text>
+<text x="70" y="432" class="m">not_found</text>
+<text x="250" y="432" class="s">ไม่มีกฎสำหรับคำขอนี้</text>
+<text x="700" y="432" class="m">allow</text>
+<text x="850" y="432" class="m">deny</text>
+<text x="70" y="456" class="m">unknown_value</text>
+<text x="250" y="456" class="s">ค่าใน config ที่ไม่รู้จัก</text>
+<text x="700" y="456" class="m">allow</text>
+<text x="850" y="456" class="m">deny</text>
+<text x="70" y="480" class="m">nil_decision</text>
+<text x="250" y="480" class="s">ไม่มีการตัดสินใจ (typed nil)</text>
+<text x="700" y="480" class="m">allow</text>
+<text x="850" y="480" class="m">deny</text>
+<text x="70" y="504" class="m">process_down</text>
+<text x="250" y="504" class="s">โปรเซสตาย</text>
+<text x="700" y="504" class="m">down</text>
+<text x="850" y="504" class="m">down</text>
+<rect x="40" y="544" width="920" height="62" rx="10" fill="#fdf7e3" stroke="#c9a227" stroke-width="1.5"/>
+<text x="60" y="568" class="s">typed nil: err == nil -&gt; false · แต่ guard ที่ fail open เมื่อ err != nil -&gt; true</text>
+<text x="60" y="592" class="s">nil receiver: d == nil -&gt; true · d.Allow() -&gt; true ("ไม่มีคำตอบ" กลายเป็นอนุญาต)</text>
+</svg>
