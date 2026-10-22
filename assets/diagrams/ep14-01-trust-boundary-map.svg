@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 640" width="1000" height="640" role="img">
+<defs>
+<style>
+  .t  { font-family: sans-serif; font-size: 14px; fill: #12263a; }
+  .s  { font-family: sans-serif; font-size: 12px; fill: #3b4a5a; }
+  .sm { font-family: sans-serif; font-size: 11px; fill: #4a5b6c; }
+  .h  { font-family: sans-serif; font-size: 21px; font-weight: 700; fill: #0b2545; }
+  .hd { font-family: sans-serif; font-size: 15px; font-weight: 700; fill: #0b2545; }
+  .n  { font-family: sans-serif; font-size: 30px; font-weight: 700; fill: #0b2545; }
+  .m  { font-family: monospace; font-size: 12px; fill: #0b2545; }
+  .mm { font-family: monospace; font-size: 11px; fill: #3b4a5a; }
+  .bad { font-family: sans-serif; font-size: 12px; fill: #7a1f1f; }
+  .good{ font-family: sans-serif; font-size: 12px; fill: #14532d; }
+</style>
+</defs>
+<text x="40" y="44" class="h">trust boundary: เส้นที่ลากผ่านโปรแกรม</text>
+<text x="40" y="74" class="s">ค่า 40 ตัวจาก 5 ขอบเขต · ตัวตรวจที่กระจายอยู่ที่ sink เห็นแค่ 2/5 ของขอบเขต</text>
+<text x="50" y="112" class="hd">ข้างนอก · ข้อมูลที่คนอื่นผลิต</text>
+<text x="452" y="136" class="hd">ข้างใน · sink 4 ตัวที่ค่าถูกใช้จริง</text>
+<rect x="50" y="128" width="230" height="64" rx="10" fill="#eef4fb" stroke="#4a7bb5" stroke-width="1.5"/>
+<text x="62" y="154" class="m">http_query</text>
+<text x="62" y="176" class="sm">8 ค่า · ภัย 3 · กันได้ 2</text>
+<text x="268" y="154" class="good" text-anchor="end">checked</text>
+<rect x="50" y="200" width="230" height="64" rx="10" fill="#eef4fb" stroke="#4a7bb5" stroke-width="1.5"/>
+<text x="62" y="226" class="m">http_body</text>
+<text x="62" y="248" class="sm">8 ค่า · ภัย 4 · กันได้ 3</text>
+<text x="268" y="226" class="good" text-anchor="end">checked</text>
+<rect x="50" y="272" width="230" height="64" rx="10" fill="#eef4fb" stroke="#4a7bb5" stroke-width="1.5"/>
+<text x="62" y="298" class="m">upload_filename</text>
+<text x="62" y="320" class="sm">8 ค่า · ภัย 4 · กันได้ 0</text>
+<text x="268" y="298" class="bad" text-anchor="end">no check</text>
+<rect x="50" y="344" width="230" height="64" rx="10" fill="#fdf7e3" stroke="#c9a227" stroke-width="1.5"/>
+<text x="62" y="370" class="m">env</text>
+<text x="62" y="392" class="sm">8 ค่า · ภัย 4 · กันได้ 0</text>
+<text x="268" y="370" class="bad" text-anchor="end">ถือว่า trusted</text>
+<rect x="50" y="416" width="230" height="64" rx="10" fill="#fdf7e3" stroke="#c9a227" stroke-width="1.5"/>
+<text x="62" y="442" class="m">db_row</text>
+<text x="62" y="464" class="sm">8 ค่า · ภัย 3 · กันได้ 0</text>
+<text x="268" y="442" class="bad" text-anchor="end">ถือว่า trusted</text>
+<line x1="352" y1="104" x2="352" y2="486" stroke="#c05050" stroke-width="2.0" stroke-dasharray="7 5"/>
+<text x="352" y="96" class="mm" text-anchor="middle">trust boundary</text>
+<rect x="286" y="246" width="140" height="100" rx="10" fill="#f5f7f9" stroke="#9aa9b8" stroke-width="1.5"/>
+<text x="356.0" y="281.0" class="m" text-anchor="middle">parse(rule, raw)</text>
+<text x="356.0" y="301.0" class="bad" text-anchor="middle">ไม่ผ่าน = ปฏิเสธ</text>
+<text x="356.0" y="321.0" class="good" text-anchor="middle">ผ่าน = ค่าใช้ได้</text>
+<rect x="452" y="150" width="252" height="70" rx="10" fill="#ffffff" stroke="#9aa9b8" stroke-width="1.5"/>
+<text x="464" y="178" class="m">sql</text>
+<text x="464" y="200" class="sm">query · ชื่อตาราง</text>
+<rect x="452" y="232" width="252" height="70" rx="10" fill="#ffffff" stroke="#9aa9b8" stroke-width="1.5"/>
+<text x="464" y="260" class="m">path</text>
+<text x="464" y="282" class="sm">ไฟล์ใต้ base</text>
+<rect x="452" y="314" width="252" height="70" rx="10" fill="#ffffff" stroke="#9aa9b8" stroke-width="1.5"/>
+<text x="464" y="342" class="m">shell</text>
+<text x="464" y="364" class="sm">อาร์กิวเมนต์</text>
+<rect x="452" y="396" width="252" height="70" rx="10" fill="#ffffff" stroke="#9aa9b8" stroke-width="1.5"/>
+<text x="464" y="424" class="m">redirect</text>
+<text x="464" y="446" class="sm">ปลายทางภายใน</text>
+<rect x="730" y="150" width="230" height="316" rx="10" fill="#f5f7f9" stroke="#9aa9b8" stroke-width="1.5"/>
+<text x="845" y="182" class="hd" text-anchor="middle">ตัวเลขจากเดโม</text>
+<text x="845" y="240" class="n" text-anchor="middle">40</text>
+<text x="845" y="268" class="sm" text-anchor="middle">ค่าที่ข้ามเส้น</text>
+<text x="845" y="316" class="n" text-anchor="middle">18</text>
+<text x="845" y="344" class="sm" text-anchor="middle">ภัยในชุดนั้น</text>
+<text x="845" y="392" class="n" text-anchor="middle">13</text>
+<text x="845" y="420" class="sm" text-anchor="middle">ผ่านถึง sink (at_sink)</text>
+<rect x="40" y="496" width="920" height="124" rx="10" fill="#ffffff" stroke="#9aa9b8" stroke-width="1.5"/>
+<text x="60" y="522" class="s">ตัวตรวจที่อยู่ที่ sink = คนที่เจอปัญหาก่อนเป็นคนแก้ · หนึ่งขอบเขต = หนึ่งสัญญา</text>
+<text x="60" y="550" class="s">out/01: ตรวจที่ sink กันได้ 5/18 · ตรวจที่ขอบเขตกันได้ 18/18 โดยมีผลข้างเคียงก่อนตรวจ 0/18</text>
+<text x="60" y="578" class="sm">กล่อง parse = ทางที่ค่าควรเดิน · ตัวเลขในการ์ดขวา = ผลของ at_sink</text>
+</svg>

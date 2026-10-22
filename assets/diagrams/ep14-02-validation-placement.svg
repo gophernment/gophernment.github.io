@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 580" width="1000" height="580" role="img">
+<defs>
+<style>
+  .t  { font-family: sans-serif; font-size: 14px; fill: #12263a; }
+  .s  { font-family: sans-serif; font-size: 12px; fill: #3b4a5a; }
+  .sm { font-family: sans-serif; font-size: 11px; fill: #4a5b6c; }
+  .h  { font-family: sans-serif; font-size: 21px; font-weight: 700; fill: #0b2545; }
+  .hd { font-family: sans-serif; font-size: 15px; font-weight: 700; fill: #0b2545; }
+  .n  { font-family: sans-serif; font-size: 30px; font-weight: 700; fill: #0b2545; }
+  .m  { font-family: monospace; font-size: 12px; fill: #0b2545; }
+  .mm { font-family: monospace; font-size: 11px; fill: #3b4a5a; }
+  .bad { font-family: sans-serif; font-size: 12px; fill: #7a1f1f; }
+  .good{ font-family: sans-serif; font-size: 12px; fill: #14532d; }
+</style>
+</defs>
+<text x="40" y="44" class="h">ตัวตรวจสามที่ตั้ง: ผลต่างอยู่ที่ "ตรวจเมื่อไร"</text>
+<text x="40" y="74" class="s">ค่า 40 ตัว · ภัย 18 · ค่าปกติ 22 · sink 4 · ขอบเขต 5</text>
+<rect x="40" y="96" width="296" height="200" rx="10" fill="#fdeeee" stroke="#c05050" stroke-width="1.5"/>
+<text x="188" y="130" class="hd" text-anchor="middle">at_sink</text>
+<text x="188" y="154" class="sm" text-anchor="middle">ตรวจที่ปลายทาง · ข้ามค่าที่ "ไว้ใจ"</text>
+<text x="72" y="186" class="s">กันภัยได้</text>
+<text x="304" y="186" class="m" text-anchor="end">5/18</text>
+<text x="72" y="218" class="s">ภัยที่ยังผ่าน</text>
+<text x="304" y="218" class="m" text-anchor="end">13/18</text>
+<text x="72" y="250" class="s">ผลก่อนตรวจ</text>
+<text x="304" y="250" class="m" text-anchor="end">0/18</text>
+<text x="72" y="284" class="sm">ตัวตรวจ 3 จุด · ครอบ 2/5 ขอบเขต</text>
+<rect x="352" y="96" width="296" height="200" rx="10" fill="#fdf7e3" stroke="#c9a227" stroke-width="1.5"/>
+<text x="500" y="130" class="hd" text-anchor="middle">after_use</text>
+<text x="500" y="154" class="sm" text-anchor="middle">ตรวจครบ แต่ตรวจหลังใช้</text>
+<text x="384" y="186" class="s">กันภัยได้</text>
+<text x="616" y="186" class="m" text-anchor="end">18/18</text>
+<text x="384" y="218" class="s">ภัยที่ยังผ่าน</text>
+<text x="616" y="218" class="m" text-anchor="end">0/18</text>
+<text x="384" y="250" class="s">ผลก่อนตรวจ</text>
+<text x="616" y="250" class="m" text-anchor="end">18/18</text>
+<text x="384" y="284" class="sm">ตัวตรวจ 1 จุด · ครอบ 5/5 ขอบเขต</text>
+<rect x="664" y="96" width="296" height="200" rx="10" fill="#eefaf1" stroke="#3f9c63" stroke-width="1.5"/>
+<text x="812" y="130" class="hd" text-anchor="middle">at_boundary</text>
+<text x="812" y="154" class="sm" text-anchor="middle">ตรวจครั้งเดียวที่ขอบเขต</text>
+<text x="696" y="186" class="s">กันภัยได้</text>
+<text x="928" y="186" class="m" text-anchor="end">18/18</text>
+<text x="696" y="218" class="s">ภัยที่ยังผ่าน</text>
+<text x="928" y="218" class="m" text-anchor="end">0/18</text>
+<text x="696" y="250" class="s">ผลก่อนตรวจ</text>
+<text x="928" y="250" class="m" text-anchor="end">0/18</text>
+<text x="696" y="284" class="sm">ตัวตรวจ 1 จุด · ครอบ 5/5 ขอบเขต</text>
+<rect x="40" y="320" width="920" height="190" rx="10" fill="#ffffff" stroke="#9aa9b8" stroke-width="1.5"/>
+<text x="70" y="352" class="hd">source</text>
+<text x="300" y="352" class="hd">values</text>
+<text x="400" y="352" class="hd">hostile</text>
+<text x="520" y="352" class="hd">blocked</text>
+<text x="680" y="352" class="hd">at_sink มองเห็นไหม</text>
+<line x1="60" y1="366" x2="940" y2="366" stroke="#c8d2dc" stroke-width="1.2"/>
+<text x="70" y="394" class="m">http_query</text>
+<text x="300" y="394" class="m">8</text>
+<text x="400" y="394" class="m">3</text>
+<text x="520" y="394" class="m">2</text>
+<text x="680" y="394" class="good">ตรวจ</text>
+<line x1="60" y1="402" x2="940" y2="402" stroke="#eaeff4" stroke-width="1.0"/>
+<text x="70" y="420" class="m">http_body</text>
+<text x="300" y="420" class="m">8</text>
+<text x="400" y="420" class="m">4</text>
+<text x="520" y="420" class="m">3</text>
+<text x="680" y="420" class="good">ตรวจ</text>
+<line x1="60" y1="428" x2="940" y2="428" stroke="#eaeff4" stroke-width="1.0"/>
+<text x="70" y="446" class="m">upload_filename</text>
+<text x="300" y="446" class="m">8</text>
+<text x="400" y="446" class="m">4</text>
+<text x="520" y="446" class="m">0</text>
+<text x="680" y="446" class="bad">ข้าม (no check)</text>
+<line x1="60" y1="454" x2="940" y2="454" stroke="#eaeff4" stroke-width="1.0"/>
+<text x="70" y="472" class="m">env</text>
+<text x="300" y="472" class="m">8</text>
+<text x="400" y="472" class="m">4</text>
+<text x="520" y="472" class="m">0</text>
+<text x="680" y="472" class="bad">ข้าม (trusted)</text>
+<line x1="60" y1="480" x2="940" y2="480" stroke="#eaeff4" stroke-width="1.0"/>
+<text x="70" y="498" class="m">db_row</text>
+<text x="300" y="498" class="m">8</text>
+<text x="400" y="498" class="m">3</text>
+<text x="520" y="498" class="m">0</text>
+<text x="680" y="498" class="bad">ข้าม (trusted)</text>
+<text x="40" y="536" class="s">at_sink กันภัยได้ 5/18 · after_use 18/18 แต่ผลข้างเคียงเกิดก่อนตรวจ 18/18 · at_boundary 18/18 และ 0/18</text>
+<text x="40" y="560" class="sm">ค่าปกติ: at_sink รับ 21/22 (ปฏิเสธชื่อที่มีขีด) · สองแบบที่เหลือ 22/22</text>
+</svg>

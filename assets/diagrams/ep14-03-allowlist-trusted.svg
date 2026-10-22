@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" width="1000" height="700" role="img">
+<defs>
+<style>
+  .t  { font-family: sans-serif; font-size: 14px; fill: #12263a; }
+  .s  { font-family: sans-serif; font-size: 12px; fill: #3b4a5a; }
+  .sm { font-family: sans-serif; font-size: 11px; fill: #4a5b6c; }
+  .h  { font-family: sans-serif; font-size: 21px; font-weight: 700; fill: #0b2545; }
+  .hd { font-family: sans-serif; font-size: 15px; font-weight: 700; fill: #0b2545; }
+  .n  { font-family: sans-serif; font-size: 30px; font-weight: 700; fill: #0b2545; }
+  .m  { font-family: monospace; font-size: 12px; fill: #0b2545; }
+  .mm { font-family: monospace; font-size: 11px; fill: #3b4a5a; }
+  .bad { font-family: sans-serif; font-size: 12px; fill: #7a1f1f; }
+  .good{ font-family: sans-serif; font-size: 12px; fill: #14532d; }
+</style>
+</defs>
+<text x="40" y="44" class="h">allowlist กับ blacklist — และของที่ "ไว้ใจแล้ว"</text>
+<text x="40" y="74" class="s">payload 45 ตัว (5 ตระกูล) · ค่าปกติ 32 ตัว · แถว path 12 แถว</text>
+<text x="40" y="104" class="sm">แท่ง = จำนวนที่หลุดผ่าน (ยิ่งยาวยิ่งแย่) · แดง = มีค่าหลุด · เขียว = 0</text>
+<text x="40" y="138" class="hd">ตัวตรวจสามแบบบนชุดข้อมูลเดียวกัน — payload 45 ตัว</text>
+<text x="70" y="172" class="m">blacklist_raw</text>
+<rect x="250" y="158" width="380" height="18" rx="4" fill="#f2f5f8" stroke="#d6dee6" stroke-width="1.0"/>
+<rect x="250" y="158" width="135" height="18" rx="4" fill="#f4c7c3" stroke="#c05050" stroke-width="1.0"/>
+<text x="645" y="172" class="m">16/45</text>
+<text x="250" y="188" class="sm">legit_rejected 2/32 · families 4/5 · encoded 2/5</text>
+<text x="70" y="226" class="m">blacklist_decoded</text>
+<rect x="250" y="212" width="380" height="18" rx="4" fill="#f2f5f8" stroke="#d6dee6" stroke-width="1.0"/>
+<rect x="250" y="212" width="93" height="18" rx="4" fill="#f4c7c3" stroke="#c05050" stroke-width="1.0"/>
+<text x="645" y="226" class="m">11/45</text>
+<text x="250" y="242" class="sm">legit_rejected 2/32 · families 4/5 · encoded 0/5</text>
+<text x="70" y="280" class="m">allowlist</text>
+<rect x="250" y="266" width="380" height="18" rx="4" fill="#f2f5f8" stroke="#d6dee6" stroke-width="1.0"/>
+<rect x="250" y="266" width="4" height="18" rx="4" fill="#dff0e4" stroke="#3f9c63" stroke-width="1.0"/>
+<text x="645" y="280" class="m">0/45</text>
+<text x="250" y="296" class="sm">legit_rejected 0/32 · families 0/5 · encoded 0/5</text>
+<line x1="40" y1="320" x2="960" y2="320" stroke="#dde5ee" stroke-width="1.2"/>
+<text x="40" y="352" class="hd">ของที่ "ไว้ใจแล้ว" — root จาก env · name จาก db_row/API (12 แถว)</text>
+<text x="40" y="376" class="sm">escape 8 แถวจาก 12 · latent 2 แถวจาก 12 · แท่ง = หลุด/8</text>
+<text x="70" y="404" class="mm">design</text>
+<text x="330" y="404" class="mm">หลุดจาก 8 (แท่ง)</text>
+<text x="665" y="404" class="mm">escapes</text>
+<text x="756" y="404" class="mm">latent (หลุด/2)</text>
+<text x="70" y="432" class="m">trust_internal</text>
+<rect x="330" y="419" width="320" height="17" rx="4" fill="#f2f5f8" stroke="#d6dee6" stroke-width="1.0"/>
+<rect x="330" y="419" width="320" height="17" rx="4" fill="#f4c7c3" stroke="#c05050" stroke-width="1.0"/>
+<text x="665" y="432" class="m">8/8</text>
+<text x="756" y="432" class="m">2/2</text>
+<text x="70" y="474" class="m">prefix_string</text>
+<rect x="330" y="461" width="320" height="17" rx="4" fill="#f2f5f8" stroke="#d6dee6" stroke-width="1.0"/>
+<rect x="330" y="461" width="40" height="17" rx="4" fill="#f4c7c3" stroke="#c05050" stroke-width="1.0"/>
+<text x="665" y="474" class="m">1/8</text>
+<text x="756" y="474" class="m">2/2</text>
+<text x="70" y="516" class="m">clean_prefix_sep</text>
+<rect x="330" y="503" width="320" height="17" rx="4" fill="#f2f5f8" stroke="#d6dee6" stroke-width="1.0"/>
+<rect x="330" y="503" width="4" height="17" rx="4" fill="#dff0e4" stroke="#3f9c63" stroke-width="1.0"/>
+<text x="665" y="516" class="m">0/8</text>
+<text x="756" y="516" class="m">2/2</text>
+<text x="70" y="558" class="m">decode_islocal</text>
+<rect x="330" y="545" width="320" height="17" rx="4" fill="#f2f5f8" stroke="#d6dee6" stroke-width="1.0"/>
+<rect x="330" y="545" width="4" height="17" rx="4" fill="#dff0e4" stroke="#3f9c63" stroke-width="1.0"/>
+<text x="665" y="558" class="m">0/8</text>
+<text x="756" y="558" class="m">0/2</text>
+<rect x="40" y="614" width="920" height="46" rx="10" fill="#fdf7e3" stroke="#c9a227" stroke-width="1.5"/>
+<text x="60" y="642" class="s">ask: "ค่านี้เป็นชื่อที่ถูกต้องไหม" — ไม่ใช่ "ค่านี้มีอะไรที่ฉันคิดว่าแย่ไหม"</text>
+</svg>
