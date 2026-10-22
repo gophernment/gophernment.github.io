@@ -1,5 +1,19 @@
 [
   {
+    "slug": "2026-10-22-software-security-14-trust-boundaries-input",
+    "title": "'Never trust input + trust boundaries: ขีดเส้นให้ถูก แล้วการตรวจจะตามมาเอง (ตอนที่ 14)'",
+    "date": "2026-10-22",
+    "tags": [
+      "software-security",
+      "trust-boundary",
+      "input-validation",
+      "allowlist",
+      "path-traversal",
+      "go"
+    ],
+    "description": "ตอนที่ 14 — trust boundary คือเส้นที่ทำให้คำว่า 'ตรวจ' มีความหมาย · เดโม Go สามตัวรันจริง: ตัวตรวจสามที่ตั้งบนค่า 40 ตัวจาก 5 ขอบเขต (5/18 · 18/18 ที่มีผลข้างเคียงก่อนตรวจ 18/18), allowlist กับ blacklist บน payload 45 ตัว (16/45 · 11/45 · 0/45) และค่าที่ 'ไว้ใจแล้ว' 12 แถวที่หลุด 8/12"
+  },
+  {
     "slug": "2026-10-21-software-security-13-fail-closed-secure-default",
     "title": "'Fail closed + secure by default: เมื่อตัวตรวจไม่รู้คำตอบ มันต้องปฏิเสธ (ตอนที่ 13)'",
     "date": "2026-10-21",
