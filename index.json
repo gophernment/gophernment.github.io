@@ -1,5 +1,19 @@
 [
   {
+    "slug": "2026-10-23-software-security-15-security-tradeoff",
+    "title": "'Security = trade-off: ปลอดภัย 100% ไม่มีอยู่จริง — คิดแบบวิศวกรด้วย risk = likelihood × impact (ตอนที่ 15)'",
+    "date": "2026-10-23",
+    "tags": [
+      "software-security",
+      "risk",
+      "likelihood-impact",
+      "cost-benefit",
+      "residual-risk",
+      "go"
+    ],
+    "description": "ตอนที่ 15 — ไม่มีระบบไหนปลอดภัย 100% สิ่งที่วิศวกรทำได้คือคิดเลข · เดโม Go สามตัวรันจริง: ทะเบียนความเสี่ยง 8 รายการ (ALE รวม 942000 บาท/ปี · จัดอันดับตาม ALE กับตาม impact ไม่ตรงกัน 7/8 รายการ), มาตรการ 6 ตัวเลือกจากทั้ง 64 ชุด (net สูงสุด 1127750 ที่ k=5 แต่ในงบ 600000 ได้ 1067150), และราคาของแต่ละเก้า (เก้าที่ห้าแลกมาด้วย 384477.87 บาทต่อ 1 บาทของขาดทุนที่ลดได้)"
+  },
+  {
     "slug": "2026-10-22-software-security-14-trust-boundaries-input",
     "title": "'Never trust input + trust boundaries: ขีดเส้นให้ถูก แล้วการตรวจจะตามมาเอง (ตอนที่ 14)'",
     "date": "2026-10-22",
