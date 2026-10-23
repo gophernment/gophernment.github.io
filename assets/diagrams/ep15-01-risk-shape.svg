@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600" role="img">
+<defs>
+<style>
+  .t  { font-family: sans-serif; font-size: 14px; fill: #12263a; }
+  .s  { font-family: sans-serif; font-size: 12px; fill: #3b4a5a; }
+  .sm { font-family: sans-serif; font-size: 11px; fill: #4a5b6c; }
+  .h  { font-family: sans-serif; font-size: 21px; font-weight: 700; fill: #0b2545; }
+  .hd { font-family: sans-serif; font-size: 15px; font-weight: 700; fill: #0b2545; }
+  .n  { font-family: sans-serif; font-size: 30px; font-weight: 700; fill: #0b2545; }
+  .m  { font-family: monospace; font-size: 12px; fill: #0b2545; }
+  .mm { font-family: monospace; font-size: 11px; fill: #3b4a5a; }
+  .bad { font-family: sans-serif; font-size: 12px; fill: #7a1f1f; }
+  .good{ font-family: sans-serif; font-size: 12px; fill: #14532d; }
+</style>
+</defs>
+<text x="40" y="44" class="h">risk = likelihood × impact — คูณสองตัวที่ไม่เหมือนกัน</text>
+<text x="40" y="74" class="s">ทะเบียน 8 รายการ · ALE รวม 942000 บาท/ปี · กรอบเวลา 3 ปี</text>
+<rect x="40" y="100" width="150" height="64" rx="10" fill="#eef4fb" stroke="#4a7bb5" stroke-width="1.5"/>
+<text x="115.0" y="127.0" class="hd" text-anchor="middle">likelihood</text>
+<text x="115.0" y="147.0" class="sm" text-anchor="middle">aro = 0.06/ปี</text>
+<text x="205" y="138" class="h" text-anchor="middle">×</text>
+<rect x="225" y="100" width="150" height="64" rx="10" fill="#eef4fb" stroke="#4a7bb5" stroke-width="1.5"/>
+<text x="300.0" y="127.0" class="hd" text-anchor="middle">impact</text>
+<text x="300.0" y="147.0" class="sm" text-anchor="middle">sle = 2400000</text>
+<text x="390" y="138" class="h" text-anchor="middle">=</text>
+<rect x="410" y="100" width="200" height="64" rx="10" fill="#eefaf1" stroke="#3f9c63" stroke-width="1.5"/>
+<text x="510.0" y="127.0" class="hd" text-anchor="middle">risk</text>
+<text x="510.0" y="147.0" class="sm" text-anchor="middle">ale = 144000</text>
+<text x="630" y="126" class="s">คูณกันได้ตัวเลขเดียว แต่สองตัวนั้น</text>
+<text x="630" y="148" class="s">ลดได้ด้วยวิธีที่ต่างกันสิ้นเชิง</text>
+<rect x="40" y="190" width="440" height="280" rx="10" fill="#fdf7e3" stroke="#c9a227" stroke-width="1.5"/>
+<text x="60" y="224" class="hd">R3 · แรนซัมแวร์เข้ารหัสเครื่องสำรอง</text>
+<text x="60" y="264" class="sm">โอกาสเกิดต่อปี</text>
+<text x="460" y="264" class="m" text-anchor="end">0.06 ครั้ง</text>
+<text x="60" y="292" class="sm">เสียหายต่อครั้ง</text>
+<text x="460" y="292" class="m" text-anchor="end">2400000 บาท</text>
+<text x="60" y="320" class="sm">ขาดทุนคาดหวัง/ปี</text>
+<text x="460" y="320" class="m" text-anchor="end">144000 บาท</text>
+<text x="60" y="348" class="sm">โอกาสใน 3 ปี</text>
+<text x="460" y="348" class="m" text-anchor="end">16.5%</text>
+<rect x="56" y="378" width="408" height="76" rx="8" fill="#ffffff" stroke="#c9a227" stroke-width="1.2"/>
+<text x="70" y="406" class="s">เกิดไม่บ่อย แต่เจ็บครั้งละมหาศาล</text>
+<text x="70" y="428" class="s">→ ลด impact: สำรองข้อมูลที่กู้ได้จริง</text>
+<rect x="520" y="190" width="440" height="280" rx="10" fill="#eef4fb" stroke="#4a7bb5" stroke-width="1.5"/>
+<text x="540" y="224" class="hd">R4 · รหัสผ่านผู้ดูแลอ่อนถูกยึดบัญชี</text>
+<text x="540" y="264" class="sm">โอกาสเกิดต่อปี</text>
+<text x="940" y="264" class="m" text-anchor="end">2.00 ครั้ง</text>
+<text x="540" y="292" class="sm">เสียหายต่อครั้ง</text>
+<text x="940" y="292" class="m" text-anchor="end">45000 บาท</text>
+<text x="540" y="320" class="sm">ขาดทุนคาดหวัง/ปี</text>
+<text x="940" y="320" class="m" text-anchor="end">90000 บาท</text>
+<text x="540" y="348" class="sm">โอกาสใน 3 ปี</text>
+<text x="940" y="348" class="m" text-anchor="end">99.8%</text>
+<rect x="536" y="378" width="408" height="76" rx="8" fill="#ffffff" stroke="#4a7bb5" stroke-width="1.2"/>
+<text x="550" y="406" class="s">เกิดบ่อยมาก แต่เจ็บครั้งละน้อย</text>
+<text x="550" y="428" class="s">→ ลด likelihood: MFA · rate limit</text>
+<rect x="40" y="490" width="920" height="90" rx="10" fill="#f5f7f9" stroke="#9aa9b8" stroke-width="1.5"/>
+<text x="60" y="518" class="s">อันดับตาม ALE กับตาม SLE ไม่ตรงกัน: เปลี่ยน 7/8 รายการ · R7 ขยับจาก 3 ไป 7</text>
+<text x="60" y="544" class="s">top-3 ตาม ALE = 494000 บาท/ปี = 52.4% ของทั้งทะเบียน</text>
+<text x="60" y="570" class="sm">จัดอันดับด้วยความเสียหายต่อครั้ง ให้คำตอบคนละชุดกับจัดอันดับด้วยขาดทุนคาดหวัง</text>
+</svg>

@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 660" width="1000" height="660" role="img">
+<defs>
+<style>
+  .t  { font-family: sans-serif; font-size: 14px; fill: #12263a; }
+  .s  { font-family: sans-serif; font-size: 12px; fill: #3b4a5a; }
+  .sm { font-family: sans-serif; font-size: 11px; fill: #4a5b6c; }
+  .h  { font-family: sans-serif; font-size: 21px; font-weight: 700; fill: #0b2545; }
+  .hd { font-family: sans-serif; font-size: 15px; font-weight: 700; fill: #0b2545; }
+  .n  { font-family: sans-serif; font-size: 30px; font-weight: 700; fill: #0b2545; }
+  .m  { font-family: monospace; font-size: 12px; fill: #0b2545; }
+  .mm { font-family: monospace; font-size: 11px; fill: #3b4a5a; }
+  .bad { font-family: sans-serif; font-size: 12px; fill: #7a1f1f; }
+  .good{ font-family: sans-serif; font-size: 12px; fill: #14532d; }
+</style>
+</defs>
+<text x="40" y="44" class="h">เก้าตัวท้าย: ราคาของความสมบูรณ์แบบ</text>
+<text x="40" y="74" class="s">ความเสี่ยง R2 · ขาดทุนคาดหวัง 200000 บาท/ปี · ต้นทุนฐาน 30000 บาท/ปี · คูณขึ้น 3.2 เท่าต่อเก้า</text>
+<text x="40" y="112" class="hd">ส่วน A · แต่ละเก้าแลกมาด้วยอะไร (cum = เฉลี่ยสะสม, marg = เก้าถัดไป)</text>
+<text x="60" y="142" class="mm">nines</text>
+<text x="150" y="142" class="mm">coverage</text>
+<text x="282" y="142" class="mm">cost_yr</text>
+<text x="430" y="142" class="mm">cum_ratio</text>
+<text x="560" y="142" class="mm">marg_ratio</text>
+<text x="700" y="142" class="mm">มาร์จินัลของเก้านั้น</text>
+<line x1="52" y1="152" x2="940" y2="152" stroke="#c8d2dc" stroke-width="1.2"/>
+<text x="60" y="178" class="m">1</text>
+<text x="150" y="178" class="m">90%</text>
+<text x="282" y="178" class="m">96000</text>
+<text x="430" y="178" class="m">0.53</text>
+<text x="560" y="178" class="m">0.53</text>
+<text x="60" y="204" class="m">2</text>
+<text x="150" y="204" class="m">99%</text>
+<text x="282" y="204" class="m">307200</text>
+<text x="430" y="204" class="m">1.55</text>
+<text x="560" y="204" class="m">11.73</text>
+<text x="700" y="204" class="sm">เริ่มจ่ายเกิน 1 บาทต่อบาท — 11.73</text>
+<text x="60" y="230" class="m">3</text>
+<text x="150" y="230" class="m">99.9%</text>
+<text x="282" y="230" class="m">983040</text>
+<text x="430" y="230" class="m">4.92</text>
+<text x="560" y="230" class="m">375.47</text>
+<text x="60" y="256" class="m">4</text>
+<text x="150" y="256" class="m">99.99%</text>
+<text x="282" y="256" class="m">3145728</text>
+<text x="430" y="256" class="m">15.73</text>
+<text x="560" y="256" class="m">12014.93</text>
+<text x="60" y="282" class="m">5</text>
+<text x="150" y="282" class="m">99.999%</text>
+<text x="282" y="282" class="m">10066330</text>
+<text x="430" y="282" class="m">50.33</text>
+<text x="560" y="282" class="m">384477.87</text>
+<text x="700" y="282" class="bad">จ่าย 384477.87 บาท ต่อ 1 บาท</text>
+<text x="40" y="322" class="sm">cum_ratio = ต้นทุนสะสม ÷ ขาดทุนที่ลดได้ · marg_ratio = ต้นทุนที่เพิ่ม ÷ ขาดทุนที่ลดได้เพิ่ม</text>
+<text x="40" y="366" class="hd">ส่วน B · ต้นทุนรวม = ค่ามาตรการ + ขาดทุนที่ยังคาดว่าจะเกิด</text>
+<text x="60" y="396" class="mm">design</text>
+<text x="220" y="396" class="mm">residual_loss</text>
+<text x="350" y="396" class="mm">cost_yr</text>
+<text x="450" y="396" class="mm">total_yr</text>
+<text x="590" y="396" class="mm">total_yr (แท่ง)</text>
+<line x1="52" y1="406" x2="940" y2="406" stroke="#c8d2dc" stroke-width="1.2"/>
+<text x="60" y="436" class="m">none</text>
+<text x="220" y="436" class="m">942000</text>
+<text x="350" y="436" class="m">0</text>
+<text x="450" y="436" class="m">942000</text>
+<rect x="590" y="423" width="330" height="16" rx="4" fill="#f2f5f8" stroke="#d6dee6" stroke-width="1.0"/>
+<rect x="590" y="423" width="330" height="16" rx="4" fill="#f4c7c3" stroke="#c05050" stroke-width="1.0"/>
+<text x="60" y="466" class="m">prev_only_low</text>
+<text x="220" y="466" class="m">376800</text>
+<text x="350" y="466" class="m">40000</text>
+<text x="450" y="466" class="m">416800</text>
+<rect x="590" y="453" width="330" height="16" rx="4" fill="#f2f5f8" stroke="#d6dee6" stroke-width="1.0"/>
+<rect x="590" y="453" width="146" height="16" rx="4" fill="#f4c7c3" stroke="#c05050" stroke-width="1.0"/>
+<text x="60" y="496" class="m">prev_only_max</text>
+<text x="220" y="496" class="m">9420</text>
+<text x="350" y="496" class="m">320000</text>
+<text x="450" y="496" class="m">329420</text>
+<rect x="590" y="483" width="330" height="16" rx="4" fill="#f2f5f8" stroke="#d6dee6" stroke-width="1.0"/>
+<rect x="590" y="483" width="115" height="16" rx="4" fill="#f4c7c3" stroke="#c05050" stroke-width="1.0"/>
+<rect x="48" y="506" width="904" height="27" rx="6" fill="#eefaf1" stroke="#3f9c63" stroke-width="1.0"/>
+<text x="60" y="526" class="m">layered_mid</text>
+<text x="220" y="526" class="m">16956</text>
+<text x="350" y="526" class="m">90000</text>
+<text x="450" y="526" class="m">106956</text>
+<rect x="590" y="513" width="330" height="16" rx="4" fill="#f2f5f8" stroke="#d6dee6" stroke-width="1.0"/>
+<rect x="590" y="513" width="37" height="16" rx="4" fill="#dff0e4" stroke="#3f9c63" stroke-width="1.0"/>
+<text x="60" y="556" class="m">layered_high</text>
+<text x="220" y="556" class="m">5299</text>
+<text x="350" y="556" class="m">210000</text>
+<text x="450" y="556" class="m">215299</text>
+<rect x="590" y="543" width="330" height="16" rx="4" fill="#f2f5f8" stroke="#d6dee6" stroke-width="1.0"/>
+<rect x="590" y="543" width="75" height="16" rx="4" fill="#f4c7c3" stroke="#c05050" stroke-width="1.0"/>
+<text x="60" y="586" class="m">layered_max</text>
+<text x="220" y="586" class="m">47</text>
+<text x="350" y="586" class="m">700000</text>
+<text x="450" y="586" class="m">700047</text>
+<rect x="590" y="573" width="330" height="16" rx="4" fill="#f2f5f8" stroke="#d6dee6" stroke-width="1.0"/>
+<rect x="590" y="573" width="245" height="16" rx="4" fill="#f4c7c3" stroke="#c05050" stroke-width="1.0"/>
+<text x="40" y="620" class="s">ถูกที่สุด: layered_mid total 106956 · prev_only_max 329420 = แพงกว่า 3.08 เท่า · ทุ่มสุดทางไหนก็แพงขึ้น</text>
+<text x="40" y="646" class="sm">5 ชั้นที่ 0.90 ต่อชั้น → เหลือ 0.000010 ของความเสี่ยง = 9.42 บาท/ปี — ไม่เคยเป็นศูนย์</text>
+</svg>
