@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 650" width="940" height="650" role="img">
+<defs>
+<style>
+  .t  { font-family: sans-serif; font-size: 14px; fill: #12263a; }
+  .s  { font-family: sans-serif; font-size: 12px; fill: #3b4a5a; }
+  .sm { font-family: sans-serif; font-size: 11px; fill: #4a5b6c; }
+  .h  { font-family: sans-serif; font-size: 21px; font-weight: 700; fill: #0b2545; }
+  .hd { font-family: sans-serif; font-size: 15px; font-weight: 700; fill: #0b2545; }
+  .n  { font-family: sans-serif; font-size: 30px; font-weight: 700; fill: #0b2545; }
+  .m  { font-family: monospace; font-size: 12px; fill: #0b2545; }
+  .mm { font-family: monospace; font-size: 11px; fill: #3b4a5a; }
+  .bad { font-family: sans-serif; font-size: 12px; fill: #7a1f1f; }
+  .good{ font-family: sans-serif; font-size: 12px; fill: #14532d; }
+</style>
+</defs>
+<text x="40" y="44" class="h">สามทะเบียนกับหนึ่งฐานข้อมูล: ใครออกอะไร และใครใช้ทำอะไร</text>
+<text x="40" y="72" class="s">รหัสของเหตุการณ์ · รหัสของรูปแบบจุดอ่อน · คะแนนความแรง · และที่ที่ทั้งสามมาบรรจบกัน</text>
+<rect x="40" y="96" width="272" height="248" rx="10" fill="#ffffff" stroke="#4a7bb5" stroke-width="1.5"/>
+<text x="176.0" y="165.0" class="hd" text-anchor="middle">CVE</text>
+<text x="176.0" y="185.0" class="s" text-anchor="middle">Common Vulnerabilities and Exposures</text>
+<text x="176.0" y="205.0" class="t" text-anchor="middle">รหัสของเหตุการณ์ที่เกิดจริง</text>
+<text x="176.0" y="225.0" class="sm" text-anchor="middle">หนึ่งใบ = ช่องโหว่หนึ่งรายการ</text>
+<text x="176.0" y="245.0" class="sm" text-anchor="middle">เจ้าของ: CNA 559 ราย</text>
+<text x="176.0" y="265.0" class="sm" text-anchor="middle">ทะเบียนกลาง: CVE Program</text>
+<text x="176.0" y="285.0" class="m" text-anchor="middle">CVE-2021-44228</text>
+<line x1="176" y1="344" x2="176" y2="376" stroke="#7d93a8" stroke-width="1.6"/>
+<polygon points="176,376 171,368 181,368" fill="#7d93a8"/>
+<rect x="334" y="96" width="272" height="248" rx="10" fill="#ffffff" stroke="#4a7bb5" stroke-width="1.5"/>
+<text x="470.0" y="155.0" class="hd" text-anchor="middle">CWE</text>
+<text x="470.0" y="175.0" class="s" text-anchor="middle">Common Weakness Enumeration</text>
+<text x="470.0" y="195.0" class="t" text-anchor="middle">รหัสของรูปแบบจุดอ่อน</text>
+<text x="470.0" y="215.0" class="sm" text-anchor="middle">หนึ่งรหัส = จุดอ่อนหนึ่งแบบ</text>
+<text x="470.0" y="235.0" class="sm" text-anchor="middle">เจ้าของ: MITRE</text>
+<text x="470.0" y="255.0" class="sm" text-anchor="middle">CWE List 4.20</text>
+<text x="470.0" y="275.0" class="sm" text-anchor="middle">CWE 5.0 · กำหนด 28 ต.ค. 2026</text>
+<text x="470.0" y="295.0" class="m" text-anchor="middle">CWE-89 · SQL injection</text>
+<line x1="470" y1="344" x2="470" y2="376" stroke="#7d93a8" stroke-width="1.6"/>
+<polygon points="470,376 465,368 475,368" fill="#7d93a8"/>
+<rect x="628" y="96" width="272" height="248" rx="10" fill="#ffffff" stroke="#4a7bb5" stroke-width="1.5"/>
+<text x="764.0" y="165.0" class="hd" text-anchor="middle">CVSS</text>
+<text x="764.0" y="185.0" class="s" text-anchor="middle">Common Vulnerability Scoring System</text>
+<text x="764.0" y="205.0" class="t" text-anchor="middle">คะแนนความแรง 0.0 ถึง 10.0</text>
+<text x="764.0" y="225.0" class="sm" text-anchor="middle">เจ้าของ: FIRST</text>
+<text x="764.0" y="245.0" class="sm" text-anchor="middle">ปัจจุบัน CVSS v4.0 (พ.ย. 2023)</text>
+<text x="764.0" y="265.0" class="sm" text-anchor="middle">ให้ severity ไม่ใช่ risk</text>
+<text x="764.0" y="285.0" class="m" text-anchor="middle">9.8 · Critical</text>
+<line x1="764" y1="344" x2="764" y2="376" stroke="#7d93a8" stroke-width="1.6"/>
+<polygon points="764,376 759,368 769,368" fill="#7d93a8"/>
+<rect x="40" y="380" width="860" height="120" rx="10" fill="#fdf7e3" stroke="#c9a227" stroke-width="1.5"/>
+<text x="470.0" y="415.0" class="hd" text-anchor="middle">NVD — National Vulnerability Database (NIST)</text>
+<text x="470.0" y="435.0" class="s" text-anchor="middle">รวม CVE + CWE + CVSS ไว้ที่เดียว แล้วเพิ่มข้อมูลที่ทำให้ค้นเจอในระบบจริง (CPE)</text>
+<text x="470.0" y="455.0" class="sm" text-anchor="middle">ตั้งแต่ 15 เม.ย. 2026 NIST enrich เฉพาะใบที่เข้าเกณฑ์ ใบอื่นยังอยู่ในฐานแต่ไม่มี CVSS/CWE จาก NIST</text>
+<text x="470.0" y="475.0" class="sm" text-anchor="middle">สถานะ Not Scheduled คือสถานะของคิว ไม่ใช่คำตัดสินว่าช่องโหว่ไม่ร้าย</text>
+<line x1="470" y1="500" x2="470" y2="526" stroke="#7d93a8" stroke-width="1.6"/>
+<polygon points="470,526 465,518 475,518" fill="#7d93a8"/>
+<rect x="40" y="530" width="860" height="86" rx="10" fill="#eefaf1" stroke="#3f9c63" stroke-width="1.5"/>
+<text x="470.0" y="558.0" class="hd" text-anchor="middle">ทีมของคุณใช้ทั้งสามอย่างพร้อมกัน ไม่ใช่ทีละอย่าง</text>
+<text x="470.0" y="578.0" class="s" text-anchor="middle">CVE บอกว่าใบไหน · CWE บอกว่าแบบไหน · CVSS บอกว่าแรงแค่ไหน · บริบทของระบบคุณบอกว่าสำคัญไหม</text>
+<text x="470.0" y="598.0" class="sm" text-anchor="middle">ทะเบียน CVE สะสม 345260 ใบ (ถึง Q2 2026) · ปี 2025 เพิ่ม 48244 ใบ · ปี 2024 เพิ่ม 40077 ใบ</text>
+</svg>

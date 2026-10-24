@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 640" width="940" height="640" role="img">
+<defs>
+<style>
+  .t  { font-family: sans-serif; font-size: 14px; fill: #12263a; }
+  .s  { font-family: sans-serif; font-size: 12px; fill: #3b4a5a; }
+  .sm { font-family: sans-serif; font-size: 11px; fill: #4a5b6c; }
+  .h  { font-family: sans-serif; font-size: 21px; font-weight: 700; fill: #0b2545; }
+  .hd { font-family: sans-serif; font-size: 15px; font-weight: 700; fill: #0b2545; }
+  .n  { font-family: sans-serif; font-size: 30px; font-weight: 700; fill: #0b2545; }
+  .m  { font-family: monospace; font-size: 12px; fill: #0b2545; }
+  .mm { font-family: monospace; font-size: 11px; fill: #3b4a5a; }
+  .bad { font-family: sans-serif; font-size: 12px; fill: #7a1f1f; }
+  .good{ font-family: sans-serif; font-size: 12px; fill: #14532d; }
+</style>
+</defs>
+<text x="40" y="44" class="h">จากประกาศถึงการตัดสินใจ: ห้าขั้น และทางแยกที่คนข้าม</text>
+<text x="40" y="70" class="s">ขั้นตอนที่ทำซ้ำได้ทุกครั้งที่เจอ CVE หนึ่งใบ — และสามจุดที่คนมักข้ามไป</text>
+<rect x="40" y="90" width="160" height="150" rx="10" fill="#ffffff" stroke="#4a7bb5" stroke-width="1.5"/>
+<text x="120.0" y="140.0" class="hd" text-anchor="middle">1 ประกาศ</text>
+<text x="120.0" y="160.0" class="sm" text-anchor="middle">vendor advisory</text>
+<text x="120.0" y="180.0" class="sm" text-anchor="middle">mailing list</text>
+<text x="120.0" y="200.0" class="sm" text-anchor="middle">CVE feed</text>
+<line x1="200" y1="165" x2="218" y2="165" stroke="#7d93a8" stroke-width="1.6"/>
+<polygon points="218,165 210,160 210,170" fill="#7d93a8"/>
+<rect x="220" y="90" width="160" height="150" rx="10" fill="#ffffff" stroke="#4a7bb5" stroke-width="1.5"/>
+<text x="300.0" y="150.0" class="hd" text-anchor="middle">2 CVE ID</text>
+<text x="300.0" y="170.0" class="sm" text-anchor="middle">จดรหัสไว้</text>
+<text x="300.0" y="190.0" class="sm" text-anchor="middle">อย่าจำแต่ชื่อสินค้า</text>
+<line x1="380" y1="165" x2="398" y2="165" stroke="#7d93a8" stroke-width="1.6"/>
+<polygon points="398,165 390,160 390,170" fill="#7d93a8"/>
+<rect x="400" y="90" width="160" height="150" rx="10" fill="#ffffff" stroke="#4a7bb5" stroke-width="1.5"/>
+<text x="480.0" y="150.0" class="hd" text-anchor="middle">3 CVE Record</text>
+<text x="480.0" y="170.0" class="sm" text-anchor="middle">คำอธิบายจาก CNA</text>
+<text x="480.0" y="190.0" class="sm" text-anchor="middle">affected versions</text>
+<line x1="560" y1="165" x2="578" y2="165" stroke="#7d93a8" stroke-width="1.6"/>
+<polygon points="578,165 570,160 570,170" fill="#7d93a8"/>
+<rect x="580" y="90" width="160" height="150" rx="10" fill="#ffffff" stroke="#4a7bb5" stroke-width="1.5"/>
+<text x="660.0" y="150.0" class="hd" text-anchor="middle">4 NVD</text>
+<text x="660.0" y="170.0" class="sm" text-anchor="middle">มี CVSS/CWE ไหม</text>
+<text x="660.0" y="190.0" class="sm" text-anchor="middle">ถ้าไม่มี ไป advisory</text>
+<line x1="740" y1="165" x2="758" y2="165" stroke="#7d93a8" stroke-width="1.6"/>
+<polygon points="758,165 750,160 750,170" fill="#7d93a8"/>
+<rect x="760" y="90" width="160" height="150" rx="10" fill="#ffffff" stroke="#3f9c63" stroke-width="1.5"/>
+<text x="840.0" y="150.0" class="hd" text-anchor="middle">5 ตัดสินใจ</text>
+<text x="840.0" y="170.0" class="sm" text-anchor="middle">แพตช์/ชดเชย/ยอมรับ</text>
+<text x="840.0" y="190.0" class="sm" text-anchor="middle">เขียนเจ้าของ+วันที่</text>
+<rect x="40" y="268" width="880" height="204" rx="10" fill="#fdeeee" stroke="#c05050" stroke-width="1.5"/>
+<text x="64" y="298" class="hd">ทางแยกที่คนข้ามสามจุด</text>
+<text x="64" y="326" class="t">• CVE กับ CWE ไม่ใช่ของเดียวกัน — CVE คือใบที่เกิด CWE คือแบบที่ทำให้เกิด</text>
+<text x="78" y="346" class="sm">ในทะเบียนตัวอย่าง CWE-89 มี 3 ใบ = 30.0% ของใบที่คิดคะแนนได้</text>
+<text x="64" y="376" class="t">• CVSS ไม่ใช่ risk — 9.8 บอกความแรงของแผล ไม่ได้บอกว่าแผลนั้นอยู่บนระบบที่คุณเปิดไว้หรือเปล่า</text>
+<text x="78" y="396" class="sm">คะแนนเดียวกันบนเครื่องที่ไม่มีใครเข้าถึง กับเครื่องที่เปิดทั้งโลก คือคนละเรื่องกันสิ้นเชิง</text>
+<text x="64" y="426" class="t">• ไม่มีคะแนนไม่ได้แปลว่าไม่ร้าย — NVD ไม่ enrich ทุกใบตั้งแต่ 15 เม.ย. 2026</text>
+<text x="78" y="446" class="sm">ทะเบียนตัวอย่าง 12 ใบ: คิดคะแนนได้ 10 · อีก 2 ใบไม่มี CVSS และจะหายไปถ้าเครื่องมือกรองด้วยคะแนน</text>
+<rect x="40" y="486" width="880" height="118" rx="10" fill="#f5f7f9" stroke="#9aa9b8" stroke-width="1.5"/>
+<text x="480.0" y="520.0" class="hd" text-anchor="middle">ตัวเลขจากเดโมของตอนนี้</text>
+<text x="480.0" y="540.0" class="s" text-anchor="middle">ทะเบียน 12 ใบ · คิดคะแนนได้ 10 · ไม่มีคะแนน 2 · CWE ทั้งหมด 8 แบบ</text>
+<text x="480.0" y="560.0" class="s" text-anchor="middle">CWE-89 กินส่วนแบ่ง 30.0% (3 ใบ) · v2.0 กับ v3.1 ให้คะแนนต่างกัน 4/10 ใบเรียงอันดับเปลี่ยน</text>
+<text x="480.0" y="580.0" class="s" text-anchor="middle">สองชั้นที่คะแนนสูงสุด (CWE-89 สูงสุด 9.8 · CWE-502 สูงสุด 10.0) ครอบ 5/10 = 50.0% ของใบที่คิดคะแนนได้</text>
+</svg>

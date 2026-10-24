@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 690" width="940" height="690" role="img">
+<defs>
+<style>
+  .t  { font-family: sans-serif; font-size: 14px; fill: #12263a; }
+  .s  { font-family: sans-serif; font-size: 12px; fill: #3b4a5a; }
+  .sm { font-family: sans-serif; font-size: 11px; fill: #4a5b6c; }
+  .h  { font-family: sans-serif; font-size: 21px; font-weight: 700; fill: #0b2545; }
+  .hd { font-family: sans-serif; font-size: 15px; font-weight: 700; fill: #0b2545; }
+  .n  { font-family: sans-serif; font-size: 30px; font-weight: 700; fill: #0b2545; }
+  .m  { font-family: monospace; font-size: 12px; fill: #0b2545; }
+  .mm { font-family: monospace; font-size: 11px; fill: #3b4a5a; }
+  .bad { font-family: sans-serif; font-size: 12px; fill: #7a1f1f; }
+  .good{ font-family: sans-serif; font-size: 12px; fill: #14532d; }
+</style>
+</defs>
+<text x="40" y="44" class="h">แกะ vector string ออกเป็นแปดคำถาม</text>
+<text x="40" y="74" class="m">CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</text>
+<text x="40" y="100" class="sm">แต่ละชิ้นคือคำถามหนึ่งข้อ และคำตอบแต่ละข้อมีน้ำหนักของมันเอง (Table 16 ของ spec)</text>
+<text x="60" y="128" class="sm">metric</text>
+<text x="200" y="128" class="sm">คำถามที่ metric นี้ตอบ</text>
+<text x="900" y="128" class="sm" text-anchor="end">ค่าคงที่</text>
+<rect x="50" y="136" width="96" height="34" rx="8" fill="#eef4fb" stroke="#4a7bb5" stroke-width="1.2"/>
+<text x="98" y="158" class="m" text-anchor="middle">AV:N</text>
+<text x="200" y="160" class="t">โจมตีจากระยะไหน — Network คือมาจากที่ไหนก็ได้</text>
+<text x="900" y="160" class="m" text-anchor="end">0.85</text>
+<line x1="50" y1="174" x2="900" y2="174" stroke="#eef2f6" stroke-width="1.0"/>
+<rect x="50" y="182" width="96" height="34" rx="8" fill="#eef4fb" stroke="#4a7bb5" stroke-width="1.2"/>
+<text x="98" y="204" class="m" text-anchor="middle">AC:L</text>
+<text x="200" y="206" class="t">ต้องมีเงื่อนไขพิเศษก่อนโจมตีไหม — Low คือไม่ต้องมี</text>
+<text x="900" y="206" class="m" text-anchor="end">0.77</text>
+<line x1="50" y1="220" x2="900" y2="220" stroke="#eef2f6" stroke-width="1.0"/>
+<rect x="50" y="228" width="96" height="34" rx="8" fill="#eef4fb" stroke="#4a7bb5" stroke-width="1.2"/>
+<text x="98" y="250" class="m" text-anchor="middle">PR:N</text>
+<text x="200" y="252" class="t">ต้องมีสิทธิ์ในระบบก่อนไหม — None คือไม่ต้องมีเลย</text>
+<text x="900" y="252" class="m" text-anchor="end">0.85</text>
+<line x1="50" y1="266" x2="900" y2="266" stroke="#eef2f6" stroke-width="1.0"/>
+<rect x="50" y="274" width="96" height="34" rx="8" fill="#eef4fb" stroke="#4a7bb5" stroke-width="1.2"/>
+<text x="98" y="296" class="m" text-anchor="middle">UI:N</text>
+<text x="200" y="298" class="t">ต้องให้เหยื่อกดหรือเปิดอะไรไหม — None คือไม่ต้อง</text>
+<text x="900" y="298" class="m" text-anchor="end">0.85</text>
+<line x1="50" y1="312" x2="900" y2="312" stroke="#eef2f6" stroke-width="1.0"/>
+<rect x="50" y="320" width="96" height="34" rx="8" fill="#eef4fb" stroke="#4a7bb5" stroke-width="1.2"/>
+<text x="98" y="342" class="m" text-anchor="middle">S:U</text>
+<text x="200" y="344" class="t">ผลกระทบข้ามขอบเขตความปลอดภัยไหม — Unchanged คือไม่ข้าม</text>
+<text x="900" y="344" class="m" text-anchor="end">—</text>
+<line x1="50" y1="358" x2="900" y2="358" stroke="#eef2f6" stroke-width="1.0"/>
+<rect x="50" y="366" width="96" height="34" rx="8" fill="#eef4fb" stroke="#4a7bb5" stroke-width="1.2"/>
+<text x="98" y="388" class="m" text-anchor="middle">C:H</text>
+<text x="200" y="390" class="t">ข้อมูลลับรั่วไหม — High คือเห็นได้ทั้งระบบ</text>
+<text x="900" y="390" class="m" text-anchor="end">0.56</text>
+<line x1="50" y1="404" x2="900" y2="404" stroke="#eef2f6" stroke-width="1.0"/>
+<rect x="50" y="412" width="96" height="34" rx="8" fill="#eef4fb" stroke="#4a7bb5" stroke-width="1.2"/>
+<text x="98" y="434" class="m" text-anchor="middle">I:H</text>
+<text x="200" y="436" class="t">ข้อมูลถูกแก้ไหม — High คือแก้ได้ทุกไฟล์</text>
+<text x="900" y="436" class="m" text-anchor="end">0.56</text>
+<line x1="50" y1="450" x2="900" y2="450" stroke="#eef2f6" stroke-width="1.0"/>
+<rect x="50" y="458" width="96" height="34" rx="8" fill="#eef4fb" stroke="#4a7bb5" stroke-width="1.2"/>
+<text x="98" y="480" class="m" text-anchor="middle">A:H</text>
+<text x="200" y="482" class="t">บริการล่มไหม — High คือล่มทั้งบริการ</text>
+<text x="900" y="482" class="m" text-anchor="end">0.56</text>
+<line x1="50" y1="496" x2="900" y2="496" stroke="#eef2f6" stroke-width="1.0"/>
+<text x="40" y="552" class="hd">จากแปดคำถามถึงคะแนนเดียว</text>
+<rect x="40" y="566" width="200" height="76" rx="10" fill="#eef4fb" stroke="#4a7bb5" stroke-width="1.5"/>
+<text x="140" y="592" class="sm" text-anchor="middle">Impact Sub-Score</text>
+<text x="140" y="626" class="n" text-anchor="middle">0.914816</text>
+<rect x="260" y="566" width="200" height="76" rx="10" fill="#eef4fb" stroke="#4a7bb5" stroke-width="1.5"/>
+<text x="360" y="592" class="sm" text-anchor="middle">Impact = 6.42 × ISS</text>
+<text x="360" y="626" class="n" text-anchor="middle">5.873119</text>
+<rect x="480" y="566" width="200" height="76" rx="10" fill="#eef4fb" stroke="#4a7bb5" stroke-width="1.5"/>
+<text x="580" y="592" class="sm" text-anchor="middle">Exploitability</text>
+<text x="580" y="626" class="n" text-anchor="middle">3.887043</text>
+<rect x="700" y="566" width="200" height="76" rx="10" fill="#fdeeee" stroke="#c05050" stroke-width="1.5"/>
+<text x="800" y="592" class="sm" text-anchor="middle">Base score</text>
+<text x="800" y="626" class="n" text-anchor="middle">9.8</text>
+<text x="40" y="674" class="sm">Total = Roundup(min(Impact + Exploitability, 10)) · ถ้า Scope=C ใช้ Impact อีกสูตร และ PR:L เปลี่ยนจาก 0.62 เป็น 0.68</text>
+</svg>
