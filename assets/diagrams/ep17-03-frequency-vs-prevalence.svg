@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 620" width="940" height="620" role="img">
+<defs>
+<style>
+  .t  { font-family: sans-serif; font-size: 14px; fill: #12263a; }
+  .s  { font-family: sans-serif; font-size: 12px; fill: #3b4a5a; }
+  .sm { font-family: sans-serif; font-size: 11px; fill: #4a5b6c; }
+  .h  { font-family: sans-serif; font-size: 21px; font-weight: 700; fill: #0b2545; }
+  .hd { font-family: sans-serif; font-size: 15px; font-weight: 700; fill: #0b2545; }
+  .n  { font-family: sans-serif; font-size: 22px; font-weight: 700; fill: #0b2545; }
+  .m  { font-family: monospace; font-size: 12px; fill: #0b2545; }
+  .mm { font-family: monospace; font-size: 11px; fill: #3b4a5a; }
+  .bad { font-family: sans-serif; font-size: 12px; fill: #7a1f1f; }
+  .good{ font-family: sans-serif; font-size: 12px; fill: #14532d; }
+</style>
+</defs>
+<text x="40" y="44" class="h">นับครั้งที่เจอ กับนับแอปที่กระทบ: อันดับคนละชุด</text>
+<text x="40" y="70" class="s">ชุดข้อมูลจำลอง 20 แอป · 80 findings · อันดับเปลี่ยน 7 หมวด</text>
+<rect x="520" y="88" width="18" height="10" rx="2" fill="#4a7bb5" stroke="#4a7bb5" stroke-width="1"/>
+<text x="544" y="98" class="sm">findings (ครั้งที่เจอ)</text>
+<rect x="700" y="88" width="18" height="10" rx="2" fill="#3f9c63" stroke="#3f9c63" stroke-width="1"/>
+<text x="724" y="98" class="sm">apps (แอปที่กระทบ)</text>
+<text x="40" y="136" class="m">1</text>
+<text x="70" y="136" class="m">A05</text>
+<rect x="120" y="124" width="240.0" height="12" rx="3" fill="#4a7bb5" stroke="#4a7bb5" stroke-width="1"/>
+<rect x="120" y="140" width="70.58823529411765" height="12" rx="3" fill="#3f9c63" stroke="#3f9c63" stroke-width="1"/>
+<text x="366.0" y="135" class="mm">17</text>
+<text x="196.58823529411765" y="151" class="mm">5</text>
+<text x="700" y="146" class="sm">อันดับตามแอป: 7</text>
+<text x="40" y="176" class="m">2</text>
+<text x="70" y="176" class="m">A01</text>
+<rect x="120" y="164" width="155.2941176470588" height="12" rx="3" fill="#4a7bb5" stroke="#4a7bb5" stroke-width="1"/>
+<rect x="120" y="180" width="155.2941176470588" height="12" rx="3" fill="#3f9c63" stroke="#3f9c63" stroke-width="1"/>
+<text x="281.2941176470588" y="175" class="mm">11</text>
+<text x="281.2941176470588" y="191" class="mm">11</text>
+<text x="700" y="186" class="sm">อันดับตามแอป: 1</text>
+<text x="40" y="216" class="m">3</text>
+<text x="70" y="216" class="m">A02</text>
+<rect x="120" y="204" width="141.1764705882353" height="12" rx="3" fill="#4a7bb5" stroke="#4a7bb5" stroke-width="1"/>
+<rect x="120" y="220" width="127.05882352941177" height="12" rx="3" fill="#3f9c63" stroke="#3f9c63" stroke-width="1"/>
+<text x="267.1764705882353" y="215" class="mm">10</text>
+<text x="253.05882352941177" y="231" class="mm">9</text>
+<text x="700" y="226" class="sm">อันดับตามแอป: 2</text>
+<text x="40" y="256" class="m">4</text>
+<text x="70" y="256" class="m">A07</text>
+<rect x="120" y="244" width="141.1764705882353" height="12" rx="3" fill="#4a7bb5" stroke="#4a7bb5" stroke-width="1"/>
+<rect x="120" y="260" width="127.05882352941177" height="12" rx="3" fill="#3f9c63" stroke="#3f9c63" stroke-width="1"/>
+<text x="267.1764705882353" y="255" class="mm">10</text>
+<text x="253.05882352941177" y="271" class="mm">9</text>
+<text x="700" y="266" class="sm">อันดับตามแอป: 3</text>
+<text x="40" y="296" class="m">5</text>
+<text x="70" y="296" class="m">A10</text>
+<rect x="120" y="284" width="127.05882352941177" height="12" rx="3" fill="#4a7bb5" stroke="#4a7bb5" stroke-width="1"/>
+<rect x="120" y="300" width="112.94117647058823" height="12" rx="3" fill="#3f9c63" stroke="#3f9c63" stroke-width="1"/>
+<text x="253.05882352941177" y="295" class="mm">9</text>
+<text x="238.94117647058823" y="311" class="mm">8</text>
+<text x="700" y="306" class="sm">อันดับตามแอป: 4</text>
+<text x="40" y="336" class="m">6</text>
+<text x="70" y="336" class="m">A04</text>
+<rect x="120" y="324" width="98.8235294117647" height="12" rx="3" fill="#4a7bb5" stroke="#4a7bb5" stroke-width="1"/>
+<rect x="120" y="340" width="98.8235294117647" height="12" rx="3" fill="#3f9c63" stroke="#3f9c63" stroke-width="1"/>
+<text x="224.8235294117647" y="335" class="mm">7</text>
+<text x="224.8235294117647" y="351" class="mm">7</text>
+<text x="700" y="346" class="sm">อันดับตามแอป: 5</text>
+<text x="40" y="376" class="m">7</text>
+<text x="70" y="376" class="m">A06</text>
+<rect x="120" y="364" width="84.70588235294117" height="12" rx="3" fill="#4a7bb5" stroke="#4a7bb5" stroke-width="1"/>
+<rect x="120" y="380" width="84.70588235294117" height="12" rx="3" fill="#3f9c63" stroke="#3f9c63" stroke-width="1"/>
+<text x="210.70588235294116" y="375" class="mm">6</text>
+<text x="210.70588235294116" y="391" class="mm">6</text>
+<text x="700" y="386" class="sm">อันดับตามแอป: 6</text>
+<text x="40" y="416" class="m">8</text>
+<text x="70" y="416" class="m">A09</text>
+<rect x="120" y="404" width="70.58823529411765" height="12" rx="3" fill="#4a7bb5" stroke="#4a7bb5" stroke-width="1"/>
+<rect x="120" y="420" width="70.58823529411765" height="12" rx="3" fill="#3f9c63" stroke="#3f9c63" stroke-width="1"/>
+<text x="196.58823529411765" y="415" class="mm">5</text>
+<text x="196.58823529411765" y="431" class="mm">5</text>
+<text x="700" y="426" class="sm">อันดับตามแอป: 8</text>
+<text x="40" y="456" class="m">9</text>
+<text x="70" y="456" class="m">A08</text>
+<rect x="120" y="444" width="42.35294117647059" height="12" rx="3" fill="#4a7bb5" stroke="#4a7bb5" stroke-width="1"/>
+<rect x="120" y="460" width="42.35294117647059" height="12" rx="3" fill="#3f9c63" stroke="#3f9c63" stroke-width="1"/>
+<text x="168.35294117647058" y="455" class="mm">3</text>
+<text x="168.35294117647058" y="471" class="mm">3</text>
+<text x="700" y="466" class="sm">อันดับตามแอป: 9</text>
+<text x="40" y="496" class="m">10</text>
+<text x="70" y="496" class="m">A03</text>
+<rect x="120" y="484" width="28.235294117647058" height="12" rx="3" fill="#4a7bb5" stroke="#4a7bb5" stroke-width="1"/>
+<rect x="120" y="500" width="28.235294117647058" height="12" rx="3" fill="#3f9c63" stroke="#3f9c63" stroke-width="1"/>
+<text x="154.23529411764707" y="495" class="mm">2</text>
+<text x="154.23529411764707" y="511" class="mm">2</text>
+<text x="700" y="506" class="sm">อันดับตามแอป: 10</text>
+<rect x="30" y="112" width="5" height="34" rx="2" fill="#c05050" stroke="#c05050" stroke-width="1"/>
+<text x="40" y="560" class="s">A05 Injection: findings 17 (อันดับ 1) แต่กระทบแค่ 5 แอป (อันดับ 7) — สแกนเนอร์นับทุกจุดที่เจอ</text>
+<rect x="40" y="572" width="860" height="36" rx="8" fill="#fdf7e3" stroke="#c9a227" stroke-width="1.2"/>
+<text x="470.0" y="595.0" class="sm" text-anchor="middle">top-3 ตามจำนวน findings = A05,A01,A02 · top-3 ตามแอปที่กระทบ = A01,A02,A07 · ทับกัน 2/3</text>
+</svg>

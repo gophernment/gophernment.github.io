@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 600" width="940" height="600" role="img">
+<defs>
+<style>
+  .t  { font-family: sans-serif; font-size: 14px; fill: #12263a; }
+  .s  { font-family: sans-serif; font-size: 12px; fill: #3b4a5a; }
+  .sm { font-family: sans-serif; font-size: 11px; fill: #4a5b6c; }
+  .h  { font-family: sans-serif; font-size: 21px; font-weight: 700; fill: #0b2545; }
+  .hd { font-family: sans-serif; font-size: 15px; font-weight: 700; fill: #0b2545; }
+  .n  { font-family: sans-serif; font-size: 22px; font-weight: 700; fill: #0b2545; }
+  .m  { font-family: monospace; font-size: 12px; fill: #0b2545; }
+  .mm { font-family: monospace; font-size: 11px; fill: #3b4a5a; }
+  .bad { font-family: sans-serif; font-size: 12px; fill: #7a1f1f; }
+  .good{ font-family: sans-serif; font-size: 12px; fill: #14532d; }
+</style>
+</defs>
+<text x="40" y="44" class="h">จากข้อมูลจริงถึง checklist: ห้าขั้นของการทำ Top 10</text>
+<text x="40" y="72" class="s">รุ่นที่ 8 · ประกาศ 6 พ.ย. 2025 · ข้อมูลจาก 2.8 ล้าน แอป</text>
+<rect x="40" y="100" width="860" height="78" rx="10" fill="#ffffff" stroke="#4a7bb5" stroke-width="1.5"/>
+<rect x="56" y="118" width="40" height="40" rx="20" fill="#eef4fb" stroke="#4a7bb5" stroke-width="1.4"/>
+<text x="76" y="144" class="hd" text-anchor="middle">1</text>
+<text x="112" y="134" class="hd">เก็บข้อมูล</text>
+<text x="112" y="158" class="s">ผู้ให้ข้อมูล 12 ราย (และผู้ไม่ประสงค์ออกนาม) ส่งผลทดสอบรวม 2.8 ล้าน แอป</text>
+<rect x="40" y="188" width="860" height="78" rx="10" fill="#ffffff" stroke="#4a7bb5" stroke-width="1.5"/>
+<rect x="56" y="206" width="40" height="40" rx="20" fill="#eef4fb" stroke="#4a7bb5" stroke-width="1.4"/>
+<text x="76" y="232" class="hd" text-anchor="middle">2</text>
+<text x="112" y="222" class="hd">จัดกลุ่ม CWE</text>
+<text x="112" y="246" class="s">589 CWE ในชุดข้อมูล ถูกจัดเป็น 12 หมวด แล้วจัดอันดับด้วยข้อมูล</text>
+<rect x="40" y="276" width="860" height="78" rx="10" fill="#ffffff" stroke="#4a7bb5" stroke-width="1.5"/>
+<rect x="56" y="294" width="40" height="40" rx="20" fill="#eef4fb" stroke="#4a7bb5" stroke-width="1.4"/>
+<text x="76" y="320" class="hd" text-anchor="middle">3</text>
+<text x="112" y="310" class="hd">เติมสิ่งที่ข้อมูลจับไม่ได้</text>
+<text x="112" y="334" class="s">2 หมวดมาจากแบบสำรวจชุมชน · อีก 8 หมวดมาจากข้อมูล</text>
+<rect x="40" y="364" width="860" height="78" rx="10" fill="#ffffff" stroke="#3f9c63" stroke-width="1.5"/>
+<rect x="56" y="382" width="40" height="40" rx="20" fill="#eefaf1" stroke="#3f9c63" stroke-width="1.4"/>
+<text x="76" y="408" class="hd" text-anchor="middle">4</text>
+<text x="112" y="398" class="hd">ได้สิบหมวด</text>
+<text x="112" y="422" class="s">10 หมวด · 248 CWE ตามเอกสาร introduction (ผลบวกใน score table = 249)</text>
+<rect x="40" y="452" width="860" height="78" rx="10" fill="#ffffff" stroke="#4a7bb5" stroke-width="1.5"/>
+<rect x="56" y="470" width="40" height="40" rx="20" fill="#eef4fb" stroke="#4a7bb5" stroke-width="1.4"/>
+<text x="76" y="496" class="hd" text-anchor="middle">5</text>
+<text x="112" y="486" class="hd">ใช้เป็น checklist</text>
+<text x="112" y="510" class="s">ตรวจทีละหมวด · จดหลักฐาน · เรียงลำดับด้วยบริบทของแอปตัวเอง</text>
+<rect x="40" y="548" width="860" height="44" rx="8" fill="#fdf7e3" stroke="#c9a227" stroke-width="1.2"/>
+<text x="470.0" y="575.0" class="sm" text-anchor="middle">ทำไมต้องอัปเดต: ข้อมูลคือภาพของอดีต — หมวดที่เพิ่งเกิดยังไม่มีเครื่องมือทดสอบที่ดีพอจะทำให้โผล่ในข้อมูล</text>
+</svg>
