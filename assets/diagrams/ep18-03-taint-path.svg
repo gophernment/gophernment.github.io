@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400" width="900" height="400" role="img">
+<defs>
+<style>
+  .t  { font-family: sans-serif; font-size: 14px; fill: #12263a; }
+  .s  { font-family: sans-serif; font-size: 12px; fill: #3b4a5a; }
+  .sm { font-family: sans-serif; font-size: 11px; fill: #4a5b6c; }
+  .h  { font-family: sans-serif; font-size: 21px; font-weight: 700; fill: #0b2545; }
+  .hd { font-family: sans-serif; font-size: 15px; font-weight: 700; fill: #0b2545; }
+  .n  { font-family: sans-serif; font-size: 24px; font-weight: 700; fill: #0b2545; }
+  .m  { font-family: monospace; font-size: 12px; fill: #0b2545; }
+  .mm { font-family: monospace; font-size: 11px; fill: #3b4a5a; }
+  .bad { font-family: sans-serif; font-size: 12px; fill: #7a1f1f; }
+  .good{ font-family: sans-serif; font-size: 12px; fill: #14532d; }
+</style>
+</defs>
+<text x="40" y="44" class="h">gate อ่าน "การไหลของข้อมูล" ไม่ใช่คำที่พิมพ์</text>
+<text x="40" y="70" class="s">สองฟังก์ชันที่หน้าตาเกือบเหมือนกัน แต่ผลของ gate ต่างกัน (ผลจริงจากเดโม 2)</text>
+<text x="40" y="96" class="hd">แบบที่ 1 — ค่าจาก request ไหลถึง os.Open</text>
+<rect x="40" y="108" width="180" height="58" rx="8" fill="#ffffff" stroke="#8aa0b5" stroke-width="1.5"/>
+<text x="130.0" y="132.0" class="m" text-anchor="middle">?name=../../etc</text>
+<text x="130.0" y="152.0" class="m" text-anchor="middle">/passwd</text>
+<line x1="224" y1="137" x2="246" y2="137" stroke="#7d93a8" stroke-width="1.6"/>
+<polygon points="246,137 238,132 238,142" fill="#7d93a8"/>
+<rect x="250" y="108" width="180" height="58" rx="8" fill="#ffffff" stroke="#8aa0b5" stroke-width="1.5"/>
+<text x="340.0" y="132.0" class="m" text-anchor="middle">name :=</text>
+<text x="340.0" y="152.0" class="m" text-anchor="middle">r.URL.Query().Get</text>
+<line x1="434" y1="137" x2="456" y2="137" stroke="#7d93a8" stroke-width="1.6"/>
+<polygon points="456,137 448,132 448,142" fill="#7d93a8"/>
+<rect x="460" y="108" width="180" height="58" rx="8" fill="#ffffff" stroke="#8aa0b5" stroke-width="1.5"/>
+<text x="550.0" y="132.0" class="m" text-anchor="middle">path :=</text>
+<text x="550.0" y="152.0" class="m" text-anchor="middle">filepath.Join(...,name)</text>
+<line x1="644" y1="137" x2="666" y2="137" stroke="#7d93a8" stroke-width="1.6"/>
+<polygon points="666,137 658,132 658,142" fill="#7d93a8"/>
+<rect x="670" y="108" width="180" height="58" rx="8" fill="#fdeeee" stroke="#c05050" stroke-width="1.5"/>
+<text x="760.0" y="142.0" class="m" text-anchor="middle">os.Open(path)</text>
+<text x="760.0" y="186" class="bad" text-anchor="middle">G5 gate ฟ้อง: CWE-22</text>
+<text x="40" y="214" class="hd">แบบที่ 2 — ผ่าน filepath.Base ก่อนถึง sink</text>
+<rect x="40" y="232" width="180" height="58" rx="8" fill="#ffffff" stroke="#8aa0b5" stroke-width="1.5"/>
+<text x="130.0" y="256.0" class="m" text-anchor="middle">?name=../../etc</text>
+<text x="130.0" y="276.0" class="m" text-anchor="middle">/passwd</text>
+<line x1="224" y1="261" x2="246" y2="261" stroke="#7d93a8" stroke-width="1.6"/>
+<polygon points="246,261 238,256 238,266" fill="#7d93a8"/>
+<rect x="250" y="232" width="180" height="58" rx="8" fill="#ffffff" stroke="#8aa0b5" stroke-width="1.5"/>
+<text x="340.0" y="256.0" class="m" text-anchor="middle">name :=</text>
+<text x="340.0" y="276.0" class="m" text-anchor="middle">filepath.Base(...)</text>
+<line x1="434" y1="261" x2="456" y2="261" stroke="#7d93a8" stroke-width="1.6"/>
+<polygon points="456,261 448,256 448,266" fill="#7d93a8"/>
+<rect x="460" y="232" width="180" height="58" rx="8" fill="#ffffff" stroke="#8aa0b5" stroke-width="1.5"/>
+<text x="550.0" y="256.0" class="m" text-anchor="middle">path :=</text>
+<text x="550.0" y="276.0" class="m" text-anchor="middle">filepath.Join(...,name)</text>
+<line x1="644" y1="261" x2="666" y2="261" stroke="#7d93a8" stroke-width="1.6"/>
+<polygon points="666,261 658,256 658,266" fill="#7d93a8"/>
+<rect x="670" y="232" width="180" height="58" rx="8" fill="#eefaf1" stroke="#3f9c63" stroke-width="1.5"/>
+<text x="760.0" y="266.0" class="m" text-anchor="middle">os.Open(path)</text>
+<text x="340.0" y="310" class="good" text-anchor="middle">Base ตัดทุกอย่างก่อน / ตัวสุดท้าย → taint ขาด</text>
+<text x="760.0" y="310" class="good" text-anchor="middle">gate PASS: ไม่ฟ้อง</text>
+<rect x="40" y="336" width="820" height="46" rx="8" fill="#f5f7f9" stroke="#9aa9b8" stroke-width="1.5"/>
+<text x="450.0" y="364.0" class="s" text-anchor="middle">เดโม 2: โค้ดที่มีช่องโหว่ 5 finding (critical 2 · high 2 · medium 1) → exit 1  ·  โค้ดที่แก้แล้ว 0 finding → exit 0</text>
+</svg>

@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 520" width="1000" height="520" role="img">
+<defs>
+<style>
+  .t  { font-family: sans-serif; font-size: 14px; fill: #12263a; }
+  .s  { font-family: sans-serif; font-size: 12px; fill: #3b4a5a; }
+  .sm { font-family: sans-serif; font-size: 11px; fill: #4a5b6c; }
+  .h  { font-family: sans-serif; font-size: 21px; font-weight: 700; fill: #0b2545; }
+  .hd { font-family: sans-serif; font-size: 15px; font-weight: 700; fill: #0b2545; }
+  .n  { font-family: sans-serif; font-size: 24px; font-weight: 700; fill: #0b2545; }
+  .m  { font-family: monospace; font-size: 12px; fill: #0b2545; }
+  .mm { font-family: monospace; font-size: 11px; fill: #3b4a5a; }
+  .bad { font-family: sans-serif; font-size: 12px; fill: #7a1f1f; }
+  .good{ font-family: sans-serif; font-size: 12px; fill: #14532d; }
+</style>
+</defs>
+<text x="40" y="46" class="h">สองกระบวนการบนแกนเวลาเดียวกัน: gate อยู่ตรงไหน = ต้นทุนเท่านั้น</text>
+<text x="40" y="74" class="s">ข้อบกพร่องชุดเดียวกัน 60 รายการ · ความสามารถในการตรวจจับต่อ gate เท่ากัน · ต่างกันแค่ว่ามี gate ที่ขั้นไหน</text>
+<text x="40" y="92" class="sm">prod = ขั้น deploy → monitor — กล่องในคอลัมน์นี้คือที่ที่ข้อบกพร่อง "ตกถึง" ไม่ใช่ gate</text>
+<rect x="190" y="100" width="180" height="34" rx="6" fill="#eef4fb" stroke="#4a7bb5" stroke-width="1.5"/>
+<text x="280.0" y="122.0" class="hd" text-anchor="middle">design</text>
+<rect x="384" y="100" width="180" height="34" rx="6" fill="#eef4fb" stroke="#4a7bb5" stroke-width="1.5"/>
+<text x="474.0" y="122.0" class="hd" text-anchor="middle">code</text>
+<rect x="578" y="100" width="180" height="34" rx="6" fill="#eef4fb" stroke="#4a7bb5" stroke-width="1.5"/>
+<text x="668.0" y="122.0" class="hd" text-anchor="middle">test (CI)</text>
+<rect x="772" y="100" width="180" height="34" rx="6" fill="#eef4fb" stroke="#4a7bb5" stroke-width="1.5"/>
+<text x="862.0" y="122.0" class="hd" text-anchor="middle">prod</text>
+<text x="40" y="190" class="hd">A</text>
+<text x="40" y="208" class="s">ตรวจท้าย</text>
+<rect x="190" y="160" width="180" height="70" rx="8" fill="#f5f7f9" stroke="#9aa9b8" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text x="280.0" y="200.0" class="sm" text-anchor="middle">ไม่มี gate</text>
+<rect x="384" y="160" width="180" height="70" rx="8" fill="#f5f7f9" stroke="#9aa9b8" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text x="474.0" y="200.0" class="sm" text-anchor="middle">ไม่มี gate</text>
+<rect x="578" y="160" width="180" height="70" rx="8" fill="#fdf7e3" stroke="#c9a227" stroke-width="1.5"/>
+<text x="668.0" y="190.0" class="s" text-anchor="middle">gate: pre-release</text>
+<text x="668.0" y="210.0" class="hd" text-anchor="middle">จับได้ 32</text>
+<rect x="772" y="160" width="180" height="70" rx="8" fill="#fdeeee" stroke="#c05050" stroke-width="1.5"/>
+<text x="862.0" y="190.0" class="s" text-anchor="middle">ตกถึง production</text>
+<text x="862.0" y="210.0" class="hd" text-anchor="middle">28 รายการ</text>
+<text x="40" y="300" class="hd">B</text>
+<text x="40" y="318" class="s">shift left</text>
+<rect x="190" y="270" width="180" height="70" rx="8" fill="#eefaf1" stroke="#3f9c63" stroke-width="1.5"/>
+<text x="280.0" y="300.0" class="s" text-anchor="middle">gate</text>
+<text x="280.0" y="320.0" class="hd" text-anchor="middle">จับได้ 24</text>
+<rect x="384" y="270" width="180" height="70" rx="8" fill="#eefaf1" stroke="#3f9c63" stroke-width="1.5"/>
+<text x="474.0" y="300.0" class="s" text-anchor="middle">gate</text>
+<text x="474.0" y="320.0" class="hd" text-anchor="middle">จับได้ 18</text>
+<rect x="578" y="270" width="180" height="70" rx="8" fill="#eefaf1" stroke="#3f9c63" stroke-width="1.5"/>
+<text x="668.0" y="300.0" class="s" text-anchor="middle">gate</text>
+<text x="668.0" y="320.0" class="hd" text-anchor="middle">จับได้ 9</text>
+<rect x="772" y="270" width="180" height="70" rx="8" fill="#fdeeee" stroke="#c05050" stroke-width="1.5"/>
+<text x="862.0" y="300.0" class="s" text-anchor="middle">ตกถึง production</text>
+<text x="862.0" y="320.0" class="hd" text-anchor="middle">9 รายการ</text>
+<text x="40" y="392" class="hd">ต้นทุนรวม</text>
+<rect x="190" y="368" width="380" height="44" rx="8" fill="#fdeeee" stroke="#c05050" stroke-width="1.5"/>
+<text x="380.0" y="395.0" class="t" text-anchor="middle">A ตรวจท้าย = 3280 หน่วย</text>
+<rect x="590" y="368" width="380" height="44" rx="8" fill="#eefaf1" stroke="#3f9c63" stroke-width="1.5"/>
+<text x="780.0" y="395.0" class="t" text-anchor="middle">B shift left = 1176 หน่วย</text>
+<text x="580" y="440" class="hd" text-anchor="middle">A/B = 2.79 เท่า · B ประหยัด 64%</text>
+<text x="40" y="476" class="s">จุดที่ต้องเห็น: แถว A ไม่มีกล่องในคอลัมน์ design เลย — ไม่ใช่เพราะไม่มีช่องโหว่เกิดที่นั่น</text>
+<text x="40" y="498" class="s">แต่เพราะทั้งกระบวนการไม่มี gate ที่จะเห็นมัน (B จับได้ 24 รายการในขั้น design ที่ต้นทุน ×1)</text>
+</svg>
