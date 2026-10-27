@@ -1,5 +1,19 @@
 [
   {
+    "slug": "2026-10-27-software-security-18-secure-sdlc",
+    "title": "'Secure SDLC: เอา security เข้าไปทุกขั้นตั้งแต่ design — ไม่ใช่รอตรวจตอนท้าย (ตอนที่ 18)'",
+    "date": "2026-10-27",
+    "tags": [
+      "software-security",
+      "secure-sdlc",
+      "shift-left",
+      "devsecops",
+      "threat-modeling",
+      "go"
+    ],
+    "description": "ตอนที่ 18 — ต่อจาก OWASP Top 10 ในระยะที่สาม ด้วยคำถามว่า security ควรอยู่ตรงไหนของวงจรพัฒนา · เดโม Go สองตัวรันจริง: แบบจำลอง 60 ข้อบกพร่องชุดเดียวกันเทียบ 'ตรวจท้าย' กับ 'shift left' (ต้นทุน 3280 vs 1176 หน่วย · A/B = 2.79 เท่า · ตกถึง production 28 vs 9 · จับได้ตอน design 0 vs 24 · ทดสอบซ้ำ 10 seed ได้ 2.22–3.76 เท่าทุกครั้ง) และ security gate ที่เขียนเองด้วย go/ast (อ่าน AST ไม่ใช่ grep) จับโค้ดตัวอย่างได้ 5 finding (critical 2 · high 2 · medium 1) exit 1 แล้วผ่านโค้ดที่แก้แล้วด้วย 0 finding exit 0"
+  },
+  {
     "slug": "2026-10-26-software-security-17-owasp-top10",
     "title": "'OWASP Top 10: ลิสต์สิบข้อที่วงการเว็บใช้จริง — อ่านให้เป็น ใช้ให้ถูก และรู้ว่ามันไม่บอกอะไร (ตอนที่ 17)'",
     "date": "2026-10-26",
