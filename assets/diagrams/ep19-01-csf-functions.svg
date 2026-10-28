@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 560" width="920" height="560" role="img">
+<defs>
+<style>
+  .t  { font-family: sans-serif; font-size: 14px; fill: #12263a; }
+  .s  { font-family: sans-serif; font-size: 12px; fill: #3b4a5a; }
+  .sm { font-family: sans-serif; font-size: 11px; fill: #4a5b6c; }
+  .h  { font-family: sans-serif; font-size: 21px; font-weight: 700; fill: #0b2545; }
+  .hd { font-family: sans-serif; font-size: 15px; font-weight: 700; fill: #0b2545; }
+  .n  { font-family: sans-serif; font-size: 19px; font-weight: 700; fill: #0b2545; }
+  .m  { font-family: monospace; font-size: 12px; fill: #0b2545; }
+  .mm { font-family: monospace; font-size: 11px; fill: #3b4a5a; }
+  .bad { font-family: sans-serif; font-size: 12px; fill: #7a1f1f; }
+  .good{ font-family: sans-serif; font-size: 12px; fill: #14532d; }
+</style>
+</defs>
+<text x="40" y="46" class="h">NIST CSF 2.0: หกฟังก์ชัน และช่องว่างขององค์กรตัวอย่าง</text>
+<text x="40" y="74" class="s">แท่งทึบ = current profile (ทำได้วันนี้) · เส้นกรอบ = target profile (เป้าที่ตั้งไว้) · สเกล 0-4</text>
+<text x="40" y="125" class="hd">GV</text>
+<text x="78" y="125" class="t">Govern</text>
+<rect x="250" y="111" width="440" height="12" rx="3" fill="#f0f3f7" stroke="#e2e8ef" stroke-width="1"/>
+<rect x="250" y="111" width="165.0" height="12" rx="3" fill="#4a7bb5" stroke="#4a7bb5" stroke-width="1"/>
+<rect x="250" y="127" width="330.0" height="8" rx="3" fill="#fdf7e3" stroke="#c9a227" stroke-width="1.4"/>
+<text x="588.0" y="134" class="sm">3.00</text>
+<text x="700" y="125" class="m">1.50</text>
+<text x="40" y="172" class="hd">ID</text>
+<text x="78" y="172" class="t">Identify</text>
+<rect x="250" y="158" width="440" height="12" rx="3" fill="#f0f3f7" stroke="#e2e8ef" stroke-width="1"/>
+<rect x="250" y="158" width="183.7" height="12" rx="3" fill="#4a7bb5" stroke="#4a7bb5" stroke-width="1"/>
+<rect x="250" y="174" width="293.7" height="8" rx="3" fill="#fdf7e3" stroke="#c9a227" stroke-width="1.4"/>
+<text x="551.7" y="181" class="sm">2.67</text>
+<text x="700" y="172" class="m">1.67</text>
+<text x="40" y="219" class="hd">PR</text>
+<text x="78" y="219" class="t">Protect</text>
+<rect x="250" y="205" width="440" height="12" rx="3" fill="#f0f3f7" stroke="#e2e8ef" stroke-width="1"/>
+<rect x="250" y="205" width="264.0" height="12" rx="3" fill="#4a7bb5" stroke="#4a7bb5" stroke-width="1"/>
+<rect x="250" y="221" width="396.0" height="8" rx="3" fill="#fdf7e3" stroke="#c9a227" stroke-width="1.4"/>
+<text x="654.0" y="228" class="sm">3.60</text>
+<text x="700" y="219" class="m">2.40</text>
+<text x="40" y="266" class="hd">DE</text>
+<text x="78" y="266" class="t">Detect</text>
+<rect x="250" y="252" width="440" height="12" rx="3" fill="#f0f3f7" stroke="#e2e8ef" stroke-width="1"/>
+<rect x="250" y="252" width="275.0" height="12" rx="3" fill="#4a7bb5" stroke="#4a7bb5" stroke-width="1"/>
+<rect x="250" y="268" width="385.0" height="8" rx="3" fill="#fdf7e3" stroke="#c9a227" stroke-width="1.4"/>
+<text x="643.0" y="275" class="sm">3.50</text>
+<text x="700" y="266" class="m">2.50</text>
+<text x="40" y="313" class="hd">RS</text>
+<text x="78" y="313" class="t">Respond</text>
+<rect x="250" y="299" width="440" height="12" rx="3" fill="#f0f3f7" stroke="#e2e8ef" stroke-width="1"/>
+<rect x="250" y="299" width="192.5" height="12" rx="3" fill="#4a7bb5" stroke="#4a7bb5" stroke-width="1"/>
+<rect x="250" y="315" width="330.0" height="8" rx="3" fill="#fdf7e3" stroke="#c9a227" stroke-width="1.4"/>
+<text x="588.0" y="322" class="sm">3.00</text>
+<text x="700" y="313" class="m">1.75</text>
+<text x="40" y="360" class="hd">RC</text>
+<text x="78" y="360" class="t">Recover</text>
+<rect x="250" y="346" width="440" height="12" rx="3" fill="#f0f3f7" stroke="#e2e8ef" stroke-width="1"/>
+<rect x="250" y="346" width="110.0" height="12" rx="3" fill="#4a7bb5" stroke="#4a7bb5" stroke-width="1"/>
+<rect x="250" y="362" width="275.0" height="8" rx="3" fill="#fdf7e3" stroke="#c9a227" stroke-width="1.4"/>
+<text x="533.0" y="369" class="sm">2.50</text>
+<text x="700" y="360" class="m">1.00</text>
+<line x1="250" y1="108" x2="690" y2="108" stroke="#c8d3de" stroke-width="1"/>
+<line x1="250.0" y1="108" x2="250.0" y2="112" stroke="#c8d3de" stroke-width="1"/>
+<text x="250.0" y="103" class="sm" text-anchor="middle">0</text>
+<line x1="360.0" y1="108" x2="360.0" y2="112" stroke="#c8d3de" stroke-width="1"/>
+<text x="360.0" y="103" class="sm" text-anchor="middle">1</text>
+<line x1="470.0" y1="108" x2="470.0" y2="112" stroke="#c8d3de" stroke-width="1"/>
+<text x="470.0" y="103" class="sm" text-anchor="middle">2</text>
+<line x1="580.0" y1="108" x2="580.0" y2="112" stroke="#c8d3de" stroke-width="1"/>
+<text x="580.0" y="103" class="sm" text-anchor="middle">3</text>
+<line x1="690.0" y1="108" x2="690.0" y2="112" stroke="#c8d3de" stroke-width="1"/>
+<text x="690.0" y="103" class="sm" text-anchor="middle">4</text>
+<rect x="40" y="412" width="840" height="62" rx="10" fill="#eef4fb" stroke="#4a7bb5" stroke-width="1.5"/>
+<text x="58" y="438" class="hd">coverage current 45.5%  →  target 77.3%</text>
+<text x="58" y="462" class="s">ตัวเลขนี้คือ "ทำได้กี่คะแนน" — ไม่ใช่ Tier และไม่ใช่คำตอบว่าปลอดภัยแค่ไหน</text>
+<rect x="40" y="488" width="840" height="56" rx="10" fill="#fdf7e3" stroke="#c9a227" stroke-width="1.5"/>
+<text x="58" y="512" class="hd">Tier วันนี้ = 2 (Risk Informed)</text>
+<text x="58" y="534" class="s">Tier วัดความเข้มของ governance (มีนโยบาย/เจ้าของ/ทบทวนตามรอบ) ไม่ได้วัดจำนวน category</text>
+</svg>

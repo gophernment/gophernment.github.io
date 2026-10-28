@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 520" width="920" height="520" role="img">
+<defs>
+<style>
+  .t  { font-family: sans-serif; font-size: 14px; fill: #12263a; }
+  .s  { font-family: sans-serif; font-size: 12px; fill: #3b4a5a; }
+  .sm { font-family: sans-serif; font-size: 11px; fill: #4a5b6c; }
+  .h  { font-family: sans-serif; font-size: 21px; font-weight: 700; fill: #0b2545; }
+  .hd { font-family: sans-serif; font-size: 15px; font-weight: 700; fill: #0b2545; }
+  .n  { font-family: sans-serif; font-size: 19px; font-weight: 700; fill: #0b2545; }
+  .m  { font-family: monospace; font-size: 12px; fill: #0b2545; }
+  .mm { font-family: monospace; font-size: 11px; fill: #3b4a5a; }
+  .bad { font-family: sans-serif; font-size: 12px; fill: #7a1f1f; }
+  .good{ font-family: sans-serif; font-size: 12px; fill: #14532d; }
+</style>
+</defs>
+<text x="40" y="46" class="h">ISO/IEC 27001:2022 Annex A: 93 controls ใน 4 กลุ่ม</text>
+<text x="40" y="74" class="s">ความสอดคล้อง (conformity) จาก Statement of Applicability · implemented=1 · partial=0.5 · planned=0</text>
+<text x="40" y="124" class="hd">A.5</text>
+<text x="92" y="124" class="t">Organizational</text>
+<text x="40" y="144" class="sm">37 controls · 2 excluded</text>
+<rect x="300" y="110" width="340" height="16" rx="3" fill="#f0f3f7" stroke="#e2e8ef" stroke-width="1"/>
+<rect x="300" y="110" width="165.24" height="16" rx="3" fill="#fdeeee" stroke="#c05050" stroke-width="1.4"/>
+<text x="654" y="123" class="n">48.6%</text>
+<text x="732" y="123" class="sm">13 impl / 8 part / 14 plan</text>
+<text x="40" y="188" class="hd">A.6</text>
+<text x="92" y="188" class="t">People</text>
+<text x="40" y="208" class="sm">8 controls · 1 excluded</text>
+<rect x="300" y="174" width="340" height="16" rx="3" fill="#f0f3f7" stroke="#e2e8ef" stroke-width="1"/>
+<rect x="300" y="174" width="194.14" height="16" rx="3" fill="#fdf7e3" stroke="#c9a227" stroke-width="1.4"/>
+<text x="654" y="187" class="n">57.1%</text>
+<text x="732" y="187" class="sm">3 impl / 2 part / 2 plan</text>
+<text x="40" y="252" class="hd">A.7</text>
+<text x="92" y="252" class="t">Physical</text>
+<text x="40" y="272" class="sm">14 controls · 1 excluded</text>
+<rect x="300" y="238" width="340" height="16" rx="3" fill="#f0f3f7" stroke="#e2e8ef" stroke-width="1"/>
+<rect x="300" y="238" width="222.36" height="16" rx="3" fill="#eefaf1" stroke="#3f9c63" stroke-width="1.4"/>
+<text x="654" y="251" class="n">65.4%</text>
+<text x="732" y="251" class="sm">7 impl / 3 part / 3 plan</text>
+<text x="40" y="316" class="hd">A.8</text>
+<text x="92" y="316" class="t">Technological</text>
+<text x="40" y="336" class="sm">34 controls · 1 excluded</text>
+<rect x="300" y="302" width="340" height="16" rx="3" fill="#f0f3f7" stroke="#e2e8ef" stroke-width="1"/>
+<rect x="300" y="302" width="216.24" height="16" rx="3" fill="#fdf7e3" stroke="#c9a227" stroke-width="1.4"/>
+<text x="654" y="315" class="n">63.6%</text>
+<text x="732" y="315" class="sm">17 impl / 8 part / 8 plan</text>
+<line x1="300" y1="96" x2="300" y2="332" stroke="#c8d3de" stroke-width="1"/>
+<rect x="40" y="392" width="840" height="50" rx="10" fill="#eef4fb" stroke="#4a7bb5" stroke-width="1.5"/>
+<text x="58" y="415" class="hd">รวม 57.4% · applicable 88 จาก 93 · implemented 40</text>
+<text x="58" y="434" class="s">Annex A เป็นเมนู ไม่ใช่คำสั่ง: ข้อที่ไม่เกี่ยวข้อง exclude ได้ แต่ต้องมีเหตุผลใน SoA</text>
+<rect x="40" y="452" width="840" height="50" rx="10" fill="#fdeeee" stroke="#c05050" stroke-width="1.5"/>
+<text x="58" y="475" class="bad">excluded 5 ข้อ · ไม่มีเหตุผล 1 ข้อ → nonconformity</text>
+<text x="58" y="494" class="s">นี่คือ finding ที่ auditor เปิดก่อนทุกครั้ง — ไม่ใช่ % ที่ต่ำ แต่คือช่องที่อธิบายไม่ได้</text>
+</svg>

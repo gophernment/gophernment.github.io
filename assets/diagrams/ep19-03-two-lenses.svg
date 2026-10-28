@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 540" width="920" height="540" role="img">
+<defs>
+<style>
+  .t  { font-family: sans-serif; font-size: 14px; fill: #12263a; }
+  .s  { font-family: sans-serif; font-size: 12px; fill: #3b4a5a; }
+  .sm { font-family: sans-serif; font-size: 11px; fill: #4a5b6c; }
+  .h  { font-family: sans-serif; font-size: 21px; font-weight: 700; fill: #0b2545; }
+  .hd { font-family: sans-serif; font-size: 15px; font-weight: 700; fill: #0b2545; }
+  .n  { font-family: sans-serif; font-size: 19px; font-weight: 700; fill: #0b2545; }
+  .m  { font-family: monospace; font-size: 12px; fill: #0b2545; }
+  .mm { font-family: monospace; font-size: 11px; fill: #3b4a5a; }
+  .bad { font-family: sans-serif; font-size: 12px; fill: #7a1f1f; }
+  .good{ font-family: sans-serif; font-size: 12px; fill: #14532d; }
+</style>
+</defs>
+<text x="40" y="46" class="h">สองเลนส์บนงานเดียวกัน: CSF มองผลลัพธ์ · ISO มองข้อกำหนดที่ตรวจได้</text>
+<text x="40" y="74" class="s">map แบบหยาบเพื่อการสอน (ไม่ใช่ crosswalk ทางการของ NIST) — 22 categories ชี้ไปที่ control 93 ข้อ</text>
+<rect x="40" y="100" width="300" height="150" rx="10" fill="#eef4fb" stroke="#4a7bb5" stroke-width="1.5"/>
+<text x="60" y="128" class="hd">NIST CSF 2.0</text>
+<text x="60" y="152" class="t">6 functions</text>
+<text x="60" y="174" class="t">22 categories</text>
+<text x="60" y="196" class="t">106 subcategories</text>
+<text x="60" y="226" class="sm">ภาษา: "ผลลัพธ์ที่ต้องได้"</text>
+<rect x="580" y="100" width="300" height="150" rx="10" fill="#eefaf1" stroke="#3f9c63" stroke-width="1.5"/>
+<text x="600" y="128" class="hd">ISO/IEC 27001:2022</text>
+<text x="600" y="152" class="t">93 Annex A controls</text>
+<text x="600" y="174" class="t">4 กลุ่ม (37/8/14/34)</text>
+<text x="600" y="196" class="t">clauses 4-10 + Annex A</text>
+<text x="600" y="226" class="sm">ภาษา: "ข้อกำหนดที่ตรวจได้"</text>
+<line x1="348" y1="175" x2="572" y2="175" stroke="#7d93a8" stroke-width="1.8"/>
+<polygon points="572,175 564,170 564,180" fill="#7d93a8"/>
+<text x="460" y="165" class="n" text-anchor="middle">57 of 93</text>
+<text x="460" y="196" class="sm" text-anchor="middle">control ที่ถูกอ้างถึง</text>
+<text x="40" y="286" class="hd">control ที่ CSF แต่ละฟังก์ชันชี้ถึง — แยกตามกลุ่มของ Annex A</text>
+<text x="40" y="314" class="t">A.5 Organizational</text>
+<rect x="300" y="301" width="400" height="14" rx="3" fill="#f0f3f7" stroke="#e2e8ef" stroke-width="1"/>
+<rect x="300" y="301" width="313.5135135135135" height="14" rx="3" fill="#4a7bb5" stroke="#4a7bb5" stroke-width="1"/>
+<text x="714" y="314" class="m">29 / 37</text>
+<text x="40" y="350" class="t">A.6 People</text>
+<rect x="300" y="337" width="400" height="14" rx="3" fill="#f0f3f7" stroke="#e2e8ef" stroke-width="1"/>
+<rect x="300" y="337" width="100.0" height="14" rx="3" fill="#4a7bb5" stroke="#4a7bb5" stroke-width="1"/>
+<text x="714" y="350" class="m">2 / 8</text>
+<text x="40" y="386" class="t">A.7 Physical</text>
+<rect x="300" y="373" width="400" height="14" rx="3" fill="#f0f3f7" stroke="#e2e8ef" stroke-width="1"/>
+<rect x="300" y="373" width="57.142857142857146" height="14" rx="3" fill="#4a7bb5" stroke="#4a7bb5" stroke-width="1"/>
+<text x="714" y="386" class="m">2 / 14</text>
+<text x="40" y="422" class="t">A.8 Technological</text>
+<rect x="300" y="409" width="400" height="14" rx="3" fill="#f0f3f7" stroke="#e2e8ef" stroke-width="1"/>
+<rect x="300" y="409" width="282.3529411764706" height="14" rx="3" fill="#4a7bb5" stroke="#4a7bb5" stroke-width="1"/>
+<text x="714" y="422" class="m">24 / 34</text>
+<rect x="40" y="458" width="840" height="78" rx="10" fill="#fdf7e3" stroke="#c9a227" stroke-width="1.5"/>
+<text x="58" y="482" class="hd">เหลือ 36 ข้อที่ไม่มี category ไหนของ CSF ชี้ถึง</text>
+<text x="58" y="504" class="s">ครึ่งหนึ่ง (18 จาก 36) คือกลุ่ม People และ Physical</text>
+<text x="58" y="522" class="s">ถ้าดูแต่ CSF profile จะไม่มีใครตรวจว่ามีกล้อง ประตู และสัญญาจ้างครบไหม</text>
+</svg>
