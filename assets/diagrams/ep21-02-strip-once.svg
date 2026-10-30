@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 600" width="920" height="600" role="img">
+<defs>
+<style>
+  .t  { font-family: sans-serif; font-size: 14px; fill: #12263a; }
+  .s  { font-family: sans-serif; font-size: 12px; fill: #3b4a5a; }
+  .sm { font-family: sans-serif; font-size: 11px; fill: #4a5b6c; }
+  .h  { font-family: sans-serif; font-size: 21px; font-weight: 700; fill: #0b2545; }
+  .hd { font-family: sans-serif; font-size: 15px; font-weight: 700; fill: #0b2545; }
+  .n  { font-family: sans-serif; font-size: 19px; font-weight: 700; fill: #0b2545; }
+  .m  { font-family: monospace; font-size: 12px; fill: #0b2545; }
+  .mm { font-family: monospace; font-size: 11px; fill: #3b4a5a; }
+  .bad { font-family: sans-serif; font-size: 12px; fill: #7a1f1f; }
+  .good{ font-family: sans-serif; font-size: 12px; fill: #14532d; }
+</style>
+</defs>
+<text x="40" y="46" class="h">ทำไมลบแท็กครั้งเดียวไม่พอ</text>
+<text x="40" y="74" class="s">StripScriptOnce ลบ &lt;script&gt; ครั้งเดียว และไม่สแกนผลลัพธ์ซ้ำ — payload ประกอบแท็กใหม่จากชิ้นส่วนที่เหลือ</text>
+<text x="60" y="112" class="hd">payload ที่ผู้โจมตีส่งมา</text>
+<rect x="60" y="124" width="60" height="44" rx="8" fill="#f5f7f9" stroke="#9aa9b8" stroke-width="1.5"/>
+<text x="72" y="152" class="m">&lt;</text>
+<rect x="128" y="124" width="150" height="44" rx="8" fill="#fdeeee" stroke="#c05050" stroke-width="1.5"/>
+<text x="140" y="152" class="m">&lt;script&gt;</text>
+<rect x="286" y="124" width="320" height="44" rx="8" fill="#f5f7f9" stroke="#9aa9b8" stroke-width="1.5"/>
+<text x="298" y="152" class="m">script&gt;alert(1)&lt;/script&gt;</text>
+<text x="216" y="190" class="bad">ลบส่วนนี้ทิ้ง</text>
+<line x1="203" y1="172" x2="203" y2="206" stroke="#c05050" stroke-width="1.6"/>
+<polygon points="203,206 198,198 208,198" fill="#c05050"/>
+<rect x="60" y="210" width="546" height="46" rx="8" fill="#ffffff" stroke="#c05050" stroke-width="1.5"/>
+<text x="72" y="238" class="m">&lt;script&gt;alert(1)&lt;/script&gt;</text>
+<text x="300" y="238" class="bad">← ชิ้นที่เหลือต่อกันเป็นแท็กที่เพิ่งถูกลบ</text>
+<text x="60" y="292" class="hd">สี่ payload กับผลหลังลบ</text>
+<text x="60" y="314" class="sm">payload</text>
+<text x="430" y="314" class="sm">หลังลบ</text>
+<text x="760" y="314" class="sm">รันได้</text>
+<line x1="60" y1="320" x2="860" y2="320" stroke="#c8d3de" stroke-width="1"/>
+<text x="60" y="342" class="mm">&lt;&lt;script&gt;script&gt;alert(1)&lt;/script&gt;</text>
+<text x="430" y="342" class="mm">&lt;script&gt;alert(1)&lt;/script&gt;</text>
+<text x="760" y="342" class="s" fill="#7a1f1f">YES</text>
+<text x="60" y="368" class="mm">&lt;img src=x onerror=zz()&gt;</text>
+<text x="430" y="368" class="mm">&lt;img src=x onerror=zz()&gt;</text>
+<text x="760" y="368" class="s" fill="#7a1f1f">YES</text>
+<text x="60" y="394" class="mm">&lt;scr&lt;script&gt;ipt&gt;zz()&lt;/script&gt;</text>
+<text x="430" y="394" class="mm">&lt;script&gt;zz()&lt;/script&gt;</text>
+<text x="760" y="394" class="s" fill="#7a1f1f">YES</text>
+<text x="60" y="420" class="mm">zz()&lt;SCRIPT&gt;alert(1)&lt;/SCRIPT&gt;</text>
+<text x="430" y="420" class="mm">zz()alert(1)&lt;/SCRIPT&gt;</text>
+<text x="760" y="420" class="s" fill="#14532d">NO</text>
+<rect x="40" y="460" width="400" height="72" rx="10" fill="#eefaf1" stroke="#3f9c63" stroke-width="1.5"/>
+<text x="58" y="486" class="hd">ปฏิเสธทั้งค่า: กันได้ 4 จาก 4</text>
+<text x="58" y="508" class="s">ไม่ผ่านคือไม่ผ่าน — ไม่พยายามตัดของอันตรายออก</text>
+<rect x="480" y="460" width="400" height="72" rx="10" fill="#fdeeee" stroke="#c05050" stroke-width="1.5"/>
+<text x="498" y="486" class="hd">sanitize ครั้งเดียว: เหลือรันได้ 3 จาก 4</text>
+<text x="498" y="506" class="s">เพราะมันตอบคำถาม "มีอะไรต้องห้าม"</text>
+<text x="498" y="522" class="s">ไม่ใช่ "ค่านี้อยู่ในรูปที่ยอมรับไหม"</text>
+<text x="40" y="566" class="sm">ตัวเลข: code/ep21/out/01_boundary.txt ส่วน [3] — YES ในตารางคือ payload ที่ยังรันโค้ดได้หลังผ่านตัวกรอง</text>
+</svg>

@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 580" width="920" height="580" role="img">
+<defs>
+<style>
+  .t  { font-family: sans-serif; font-size: 14px; fill: #12263a; }
+  .s  { font-family: sans-serif; font-size: 12px; fill: #3b4a5a; }
+  .sm { font-family: sans-serif; font-size: 11px; fill: #4a5b6c; }
+  .h  { font-family: sans-serif; font-size: 21px; font-weight: 700; fill: #0b2545; }
+  .hd { font-family: sans-serif; font-size: 15px; font-weight: 700; fill: #0b2545; }
+  .n  { font-family: sans-serif; font-size: 19px; font-weight: 700; fill: #0b2545; }
+  .m  { font-family: monospace; font-size: 12px; fill: #0b2545; }
+  .mm { font-family: monospace; font-size: 11px; fill: #3b4a5a; }
+  .bad { font-family: sans-serif; font-size: 12px; fill: #7a1f1f; }
+  .good{ font-family: sans-serif; font-size: 12px; fill: #14532d; }
+</style>
+</defs>
+<text x="40" y="46" class="h">ห้า sink สี่วิธีเขียน — ทะลุ 11 จาก 20 ช่อง</text>
+<text x="40" y="74" class="s">LANDED = payload ยังกลายเป็นโค้ดได้ · ตัวเลขทุกช่องอ่านจาก out/02_encode.txt</text>
+<text x="60" y="112" class="hd">sink</text>
+<text x="240" y="112" class="hd">concat</text>
+<text x="390" y="112" class="hd">escape_string</text>
+<text x="570" y="112" class="hd">text_template</text>
+<text x="740" y="112" class="hd">html_template</text>
+<rect x="40" y="126" width="840" height="48" rx="8" fill="#ffffff" stroke="#dbe3ec" stroke-width="1"/>
+<text x="60" y="156" class="m">html_text</text>
+<rect x="232" y="135" width="118" height="30" rx="6" fill="#fdeeee" stroke="#c05050" stroke-width="1"/>
+<text x="291" y="155" class="s" fill="#7a1f1f" text-anchor="middle">LANDED</text>
+<rect x="382" y="135" width="118" height="30" rx="6" fill="#eefaf1" stroke="#3f9c63" stroke-width="1"/>
+<text x="441" y="155" class="s" fill="#14532d" text-anchor="middle">blocked</text>
+<rect x="562" y="135" width="118" height="30" rx="6" fill="#fdeeee" stroke="#c05050" stroke-width="1"/>
+<text x="621" y="155" class="s" fill="#7a1f1f" text-anchor="middle">LANDED</text>
+<rect x="732" y="135" width="118" height="30" rx="6" fill="#eefaf1" stroke="#3f9c63" stroke-width="1"/>
+<text x="791" y="155" class="s" fill="#14532d" text-anchor="middle">blocked</text>
+<rect x="40" y="180" width="840" height="48" rx="8" fill="#f5f7f9" stroke="#dbe3ec" stroke-width="1"/>
+<text x="60" y="210" class="m">attr_quoted</text>
+<rect x="232" y="189" width="118" height="30" rx="6" fill="#fdeeee" stroke="#c05050" stroke-width="1"/>
+<text x="291" y="209" class="s" fill="#7a1f1f" text-anchor="middle">LANDED</text>
+<rect x="382" y="189" width="118" height="30" rx="6" fill="#eefaf1" stroke="#3f9c63" stroke-width="1"/>
+<text x="441" y="209" class="s" fill="#14532d" text-anchor="middle">blocked</text>
+<rect x="562" y="189" width="118" height="30" rx="6" fill="#fdeeee" stroke="#c05050" stroke-width="1"/>
+<text x="621" y="209" class="s" fill="#7a1f1f" text-anchor="middle">LANDED</text>
+<rect x="732" y="189" width="118" height="30" rx="6" fill="#eefaf1" stroke="#3f9c63" stroke-width="1"/>
+<text x="791" y="209" class="s" fill="#14532d" text-anchor="middle">blocked</text>
+<rect x="40" y="234" width="840" height="48" rx="8" fill="#ffffff" stroke="#dbe3ec" stroke-width="1"/>
+<text x="60" y="264" class="m">url_query</text>
+<rect x="232" y="243" width="118" height="30" rx="6" fill="#fdeeee" stroke="#c05050" stroke-width="1"/>
+<text x="291" y="263" class="s" fill="#7a1f1f" text-anchor="middle">LANDED</text>
+<rect x="382" y="243" width="118" height="30" rx="6" fill="#eefaf1" stroke="#3f9c63" stroke-width="1"/>
+<text x="441" y="263" class="s" fill="#14532d" text-anchor="middle">blocked</text>
+<rect x="562" y="243" width="118" height="30" rx="6" fill="#fdeeee" stroke="#c05050" stroke-width="1"/>
+<text x="621" y="263" class="s" fill="#7a1f1f" text-anchor="middle">LANDED</text>
+<rect x="732" y="243" width="118" height="30" rx="6" fill="#eefaf1" stroke="#3f9c63" stroke-width="1"/>
+<text x="791" y="263" class="s" fill="#14532d" text-anchor="middle">blocked</text>
+<rect x="40" y="288" width="840" height="48" rx="8" fill="#f5f7f9" stroke="#dbe3ec" stroke-width="1"/>
+<text x="60" y="318" class="m">url_href</text>
+<rect x="232" y="297" width="118" height="30" rx="6" fill="#fdeeee" stroke="#c05050" stroke-width="1"/>
+<text x="291" y="317" class="s" fill="#7a1f1f" text-anchor="middle">LANDED</text>
+<rect x="382" y="297" width="118" height="30" rx="6" fill="#fdeeee" stroke="#c05050" stroke-width="1"/>
+<text x="441" y="317" class="s" fill="#7a1f1f" text-anchor="middle">LANDED</text>
+<rect x="562" y="297" width="118" height="30" rx="6" fill="#fdeeee" stroke="#c05050" stroke-width="1"/>
+<text x="621" y="317" class="s" fill="#7a1f1f" text-anchor="middle">LANDED</text>
+<rect x="732" y="297" width="118" height="30" rx="6" fill="#eefaf1" stroke="#3f9c63" stroke-width="1"/>
+<text x="791" y="317" class="s" fill="#14532d" text-anchor="middle">blocked</text>
+<rect x="40" y="342" width="840" height="48" rx="8" fill="#ffffff" stroke="#dbe3ec" stroke-width="1"/>
+<text x="60" y="372" class="m">js_string</text>
+<rect x="232" y="351" width="118" height="30" rx="6" fill="#fdeeee" stroke="#c05050" stroke-width="1"/>
+<text x="291" y="371" class="s" fill="#7a1f1f" text-anchor="middle">LANDED</text>
+<rect x="382" y="351" width="118" height="30" rx="6" fill="#eefaf1" stroke="#3f9c63" stroke-width="1"/>
+<text x="441" y="371" class="s" fill="#14532d" text-anchor="middle">blocked</text>
+<rect x="562" y="351" width="118" height="30" rx="6" fill="#fdeeee" stroke="#c05050" stroke-width="1"/>
+<text x="621" y="371" class="s" fill="#7a1f1f" text-anchor="middle">LANDED</text>
+<rect x="732" y="351" width="118" height="30" rx="6" fill="#eefaf1" stroke="#3f9c63" stroke-width="1"/>
+<text x="791" y="371" class="s" fill="#14532d" text-anchor="middle">blocked</text>
+<line x1="40" y1="400" x2="880" y2="400" stroke="#c8d3de" stroke-width="1"/>
+<text x="60" y="428" class="hd">landed_total</text>
+<text x="291" y="428" class="n" text-anchor="middle">5</text>
+<text x="441" y="428" class="n" text-anchor="middle">1</text>
+<text x="621" y="428" class="n" text-anchor="middle">5</text>
+<text x="791" y="428" class="n" text-anchor="middle">0</text>
+<rect x="40" y="448" width="400" height="78" rx="10" fill="#fdeeee" stroke="#c05050" stroke-width="1.5"/>
+<text x="58" y="474" class="hd">concat ทะลุ 5 · escape_string ทะลุ 1</text>
+<text x="58" y="496" class="s">escape ด้วยมือผ่าน 4 ใน 5 sink — ตกที่ href เพราะ</text>
+<text x="58" y="514" class="s">javascript:zz() ไม่มีอักขระที่ html.EscapeString แตะ</text>
+<rect x="480" y="448" width="400" height="78" rx="10" fill="#eefaf1" stroke="#3f9c63" stroke-width="1.5"/>
+<text x="498" y="474" class="hd">html/template ทะลุ 0 · text/template ทะลุ 5</text>
+<text x="498" y="496" class="s">engine เดียวกัน ต่างกันที่การมี escaper ที่รู้ context</text>
+<text x="498" y="514" class="s">import ผิดตัว = compile ผ่าน แต่พังเมื่อมี payload</text>
+</svg>
