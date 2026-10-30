@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 620" width="920" height="620" role="img">
+<defs>
+<style>
+  .t  { font-family: sans-serif; font-size: 14px; fill: #12263a; }
+  .s  { font-family: sans-serif; font-size: 12px; fill: #3b4a5a; }
+  .sm { font-family: sans-serif; font-size: 11px; fill: #4a5b6c; }
+  .h  { font-family: sans-serif; font-size: 21px; font-weight: 700; fill: #0b2545; }
+  .hd { font-family: sans-serif; font-size: 15px; font-weight: 700; fill: #0b2545; }
+  .n  { font-family: sans-serif; font-size: 19px; font-weight: 700; fill: #0b2545; }
+  .m  { font-family: monospace; font-size: 12px; fill: #0b2545; }
+  .mm { font-family: monospace; font-size: 11px; fill: #3b4a5a; }
+  .bad { font-family: sans-serif; font-size: 12px; fill: #7a1f1f; }
+  .good{ font-family: sans-serif; font-size: 12px; fill: #14532d; }
+</style>
+</defs>
+<text x="40" y="46" class="h">หนึ่งคำขอลบ ไหลผ่านอะไรบ้าง (และทำไมลบไม่หมด)</text>
+<text x="40" y="74" class="s">ตัวเลขทั้งหมดมาจากเดโม: 16 ระเบียน ของเจ้าของข้อมูล 3 ราย</text>
+<rect x="40" y="100" width="230" height="92" rx="10" fill="#eef4fb" stroke="#4a7bb5" stroke-width="1.5"/>
+<text x="50" y="126" class="hd">คำขอจากเจ้าของข้อมูล</text>
+<text x="50" y="146" class="sm">อีเมล/ฟอร์ม/โทร</text>
+<text x="50" y="160" class="sm"> Art 12: ห้ามเรียก</text>
+<text x="50" y="174" class="sm">ค่าธรรมเนียมถ้าไม่เกินเหตุ</text>
+<rect x="320" y="100" width="230" height="92" rx="10" fill="#eef4fb" stroke="#4a7bb5" stroke-width="1.5"/>
+<text x="330" y="126" class="hd">ยืนยันตัวตน</text>
+<text x="330" y="146" class="sm">ขอยืนยันตัวตนเพิ่มได้ ·</text>
+<text x="330" y="160" class="sm">ใช้เท่าที่จำเป็น</text>
+<rect x="600" y="100" width="280" height="92" rx="10" fill="#eef4fb" stroke="#4a7bb5" stroke-width="1.5"/>
+<text x="610" y="126" class="hd">นาฬิกาเริ่มเดิน</text>
+<text x="610" y="146" class="sm">ครบกำหนด 2026-11-29</text>
+<text x="610" y="160" class="sm">หนึ่งเดือนตามปฏิทิน</text>
+<text x="610" y="174" class="sm">ต่อได้อีก 2 เดือน (ต้องแจ้ง)</text>
+<line x1="272" y1="146" x2="314" y2="146" stroke="#7d93a8" stroke-width="1.6"/>
+<polygon points="314,146 306,141 306,151" fill="#7d93a8"/>
+<line x1="552" y1="146" x2="594" y2="146" stroke="#7d93a8" stroke-width="1.6"/>
+<polygon points="594,146 586,141 586,151" fill="#7d93a8"/>
+<rect x="40" y="212" width="840" height="52" rx="10" fill="#fdf7e3" stroke="#c9a227" stroke-width="1.5"/>
+<text x="58" y="234" class="hd">ตัดสินทีละระเบียน — ไม่ใช่ตัดสินทั้งคน</text>
+<text x="58" y="254" class="s">Art 17(1) บอกว่า "ต้องลบเมื่อ..." · Art 17(3) บอกว่า "ไม่ต้องลบเมื่อ..." — ทั้งสองข้อใช้พร้อมกันได้</text>
+<line x1="460" y1="196" x2="460" y2="208" stroke="#7d93a8" stroke-width="1.6"/>
+<polygon points="460,208 455,200 465,200" fill="#7d93a8"/>
+<rect x="40" y="292" width="200" height="126" rx="10" fill="#fdeeee" stroke="#c05050" stroke-width="1.5"/>
+<text x="50" y="320" class="hd">ลบ 6 ระเบียน</text>
+<line x1="50" y1="330" x2="230" y2="330" stroke="#c05050" stroke-width="1"/>
+<text x="50" y="350" class="sm">ไม่เหลือความจำเป็น</text>
+<text x="50" y="369" class="sm">และไม่มีเหตุยกเว้น</text>
+<text x="50" y="388" class="sm">ลบจริง = หายจากระบบ</text>
+<text x="50" y="407" class="sm">Art 17(1)(a)</text>
+<line x1="140" y1="268" x2="140" y2="286" stroke="#7d93a8" stroke-width="1.6"/>
+<polygon points="140,286 135,278 145,278" fill="#7d93a8"/>
+<rect x="250" y="292" width="200" height="126" rx="10" fill="#eefaf1" stroke="#3f9c63" stroke-width="1.5"/>
+<text x="260" y="320" class="hd">ไม่ระบุตัว 3</text>
+<line x1="260" y1="330" x2="440" y2="330" stroke="#3f9c63" stroke-width="1"/>
+<text x="260" y="350" class="sm">ตัด email/phone ออก</text>
+<text x="260" y="369" class="sm">เก็บสถิติรวมได้</text>
+<text x="260" y="388" class="sm">ย้อนกลับไม่ได้</text>
+<text x="260" y="407" class="sm">Art 17(1)(a)</text>
+<line x1="350" y1="268" x2="350" y2="286" stroke="#7d93a8" stroke-width="1.6"/>
+<polygon points="350,286 345,278 355,278" fill="#7d93a8"/>
+<rect x="460" y="292" width="200" height="126" rx="10" fill="#fdf7e3" stroke="#c9a227" stroke-width="1.5"/>
+<text x="470" y="320" class="hd">เก็บแต่พอ 2</text>
+<line x1="470" y1="330" x2="650" y2="330" stroke="#c9a227" stroke-width="1"/>
+<text x="470" y="350" class="sm">เฉพาะฟิลด์ที่กฎหมาย</text>
+<text x="470" y="369" class="sm">ต้องการ (เช่น ภาษี)</text>
+<text x="470" y="388" class="sm">ทิ้ง email/phone</text>
+<text x="470" y="407" class="sm">Art 17(3)(b)</text>
+<line x1="560" y1="268" x2="560" y2="286" stroke="#7d93a8" stroke-width="1.6"/>
+<polygon points="560,286 555,278 565,278" fill="#7d93a8"/>
+<rect x="670" y="292" width="200" height="126" rx="10" fill="#eef4fb" stroke="#4a7bb5" stroke-width="1.5"/>
+<text x="680" y="320" class="hd">เก็บทั้งระเบียน 5</text>
+<line x1="680" y1="330" x2="860" y2="330" stroke="#4a7bb5" stroke-width="1"/>
+<text x="680" y="350" class="sm">สัญญา 3 · legal 2</text>
+<text x="680" y="369" class="sm">ต้องมีเหตุผลรายข้อ</text>
+<text x="680" y="388" class="sm">ห้ามเหมารวมทั้งคน</text>
+<text x="680" y="407" class="sm">Art 6(1)(b)/17(3)</text>
+<line x1="770" y1="268" x2="770" y2="286" stroke="#7d93a8" stroke-width="1.6"/>
+<polygon points="770,286 765,278 775,278" fill="#7d93a8"/>
+<rect x="40" y="442" width="840" height="66" rx="10" fill="#f5f7f9" stroke="#9aa9b8" stroke-width="1.5"/>
+<text x="58" y="468" class="hd">ทุกคำตัดสินเขียนลง audit trail 16 รายการ</text>
+<text x="58" y="490" class="s">หนึ่งแถวต่อหนึ่งระเบียน: ทำอะไร เพราะอะไร ใครอนุมัติ — นี่คือสิ่งที่ทำให้ตอบ auditor ได้</text>
+<rect x="40" y="522" width="840" height="74" rx="10" fill="#eefaf1" stroke="#3f9c63" stroke-width="1.5"/>
+<text x="58" y="548" class="hd">ตัวตรวจ: unexplained_identifier_leaks = 0</text>
+<text x="58" y="568" class="s">ระเบียน 16 → เหลือ 10 · อีเมล/เบอร์ที่ยังโผล่โดยไม่มีเหตุผล = 0</text>
+<text x="58" y="586" class="sm">อีก 2 ระเบียนที่ยังมีอีเมลอยู่ ถูกประกาศ legal hold ไว้ชัดเจน (ไม่ใช่ลืม)</text>
+</svg>

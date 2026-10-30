@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 560" width="920" height="560" role="img">
+<defs>
+<style>
+  .t  { font-family: sans-serif; font-size: 14px; fill: #12263a; }
+  .s  { font-family: sans-serif; font-size: 12px; fill: #3b4a5a; }
+  .sm { font-family: sans-serif; font-size: 11px; fill: #4a5b6c; }
+  .h  { font-family: sans-serif; font-size: 21px; font-weight: 700; fill: #0b2545; }
+  .hd { font-family: sans-serif; font-size: 15px; font-weight: 700; fill: #0b2545; }
+  .n  { font-family: sans-serif; font-size: 19px; font-weight: 700; fill: #0b2545; }
+  .m  { font-family: monospace; font-size: 12px; fill: #0b2545; }
+  .mm { font-family: monospace; font-size: 11px; fill: #3b4a5a; }
+  .bad { font-family: sans-serif; font-size: 12px; fill: #7a1f1f; }
+  .good{ font-family: sans-serif; font-size: 12px; fill: #14532d; }
+</style>
+</defs>
+<text x="40" y="46" class="h">PAN หนึ่งหมายเลข ห้าสถานะ — และแต่ละสถานะทำอะไรได้</text>
+<text x="40" y="74" class="s">คำถามที่ต้องตอบก่อนเก็บทุกครั้ง: เก็บตัวจริงไหม · ย้อนกลับได้ไหม · ยัง join กับข้อมูลอื่นได้ไหม</text>
+<text x="60" y="112" class="hd">วิธี</text>
+<text x="224" y="112" class="hd">ตัวอย่าง</text>
+<text x="470" y="112" class="hd">เก็บตัวจริง</text>
+<text x="588" y="112" class="hd">ย้อนกลับได้</text>
+<text x="698" y="112" class="hd">join ได้</text>
+<line x1="40" y1="122" x2="880" y2="122" stroke="#c8d3de" stroke-width="1"/>
+<rect x="40" y="136" width="840" height="48" rx="8" fill="#f5f7f9" stroke="#9aa9b8" stroke-width="1.2"/>
+<text x="60" y="165" class="t">full PAN</text>
+<text x="224" y="165" class="m">4111111111111111</text>
+<text x="470" y="165" class="s" fill="#7a1f1f">yes</text>
+<text x="588" y="165" class="s">yes</text>
+<text x="698" y="165" class="s">yes</text>
+<rect x="40" y="192" width="840" height="48" rx="8" fill="#fdf7e3" stroke="#c9a227" stroke-width="1.2"/>
+<text x="60" y="221" class="t">mask (3.4.1)</text>
+<text x="224" y="221" class="m">411111******1111</text>
+<text x="470" y="221" class="s" fill="#7a1f1f">yes</text>
+<text x="588" y="221" class="s">yes</text>
+<text x="698" y="221" class="s">yes</text>
+<rect x="40" y="248" width="840" height="48" rx="8" fill="#eefaf1" stroke="#3f9c63" stroke-width="1.2"/>
+<text x="60" y="277" class="t">truncate (3.5.1)</text>
+<text x="224" y="277" class="m">411111XXXXXX1111</text>
+<text x="470" y="277" class="s" fill="#14532d">no</text>
+<text x="588" y="277" class="s">no</text>
+<text x="698" y="277" class="s">no</text>
+<rect x="40" y="304" width="840" height="48" rx="8" fill="#eefaf1" stroke="#3f9c63" stroke-width="1.2"/>
+<text x="60" y="333" class="t">token (3.5.1)</text>
+<text x="224" y="333" class="m">tok_6maaga37ftyifk76</text>
+<text x="470" y="333" class="s" fill="#14532d">no</text>
+<text x="588" y="333" class="s">no</text>
+<text x="698" y="333" class="s">yes</text>
+<rect x="40" y="360" width="840" height="48" rx="8" fill="#eefaf1" stroke="#3f9c63" stroke-width="1.2"/>
+<text x="60" y="389" class="t">keyed hash (3.5.1.1)</text>
+<text x="224" y="389" class="m">64 hex chars</text>
+<text x="470" y="389" class="s" fill="#14532d">no</text>
+<text x="588" y="389" class="s">no</text>
+<text x="698" y="389" class="s">yes</text>
+<rect x="40" y="424" width="840" height="60" rx="10" fill="#fdeeee" stroke="#c05050" stroke-width="1.5"/>
+<text x="58" y="450" class="hd">mask ไม่ใช่การป้องกันตอนเก็บ — PAN เต็มยังอยู่ที่ใดที่หนึ่งเสมอ</text>
+<text x="58" y="470" class="s">เพราะอย่างนั้นประตูของเดโมจึงปฏิเสธ masked_store: accepted=3 rejected=3</text>
+<rect x="40" y="494" width="840" height="56" rx="10" fill="#eef4fb" stroke="#4a7bb5" stroke-width="1.5"/>
+<text x="58" y="518" class="s">truncate เก็บ 10 หลัก ทิ้ง 6 · token ยาว 20 คงที่ · hash ยาว 64</text>
+<text x="58" y="538" class="s">และ log ต้องถูกกรอง: เดโมลบข้อมูลบัตรออกจาก log 3 จุดใน 2 บรรทัด</text>
+</svg>
