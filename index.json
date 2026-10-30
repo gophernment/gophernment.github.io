@@ -1,5 +1,20 @@
 [
   {
+    "slug": "2026-10-30-software-security-21-input-validation-output-encoding",
+    "title": "'Input validation และ output encoding: ปฏิบัติการจริงใน Go (ตอนที่ 21)'",
+    "date": "2026-10-30",
+    "tags": [
+      "software-security",
+      "input-validation",
+      "output-encoding",
+      "xss",
+      "sql-injection",
+      "owasp",
+      "go"
+    ],
+    "description": "ตอนที่ 21 — เปิดระยะที่สี่ด้วยงานที่ลงลึกถึงบรรทัดโค้ด · แยกให้ชัดว่าการตรวจที่ boundary กับการ encode ที่ sink เป็นงานคนละอย่าง (และทำผิดที่กันไม่ได้) · เดโม Go 4 ตัวรันจริงด้วย standard library ล้วน: ตัวตรวจ next ปล่อยผ่าน 7 จาก 8 ค่าดิบ แต่เหลือ 2 เมื่อถอด percent-encoding ก่อนตรวจ · allowlist รับ 4 จาก 13 ขณะที่ blacklist รับ 10 (ในนั้น 6 ไม่ใช่ชื่อผู้ใช้ที่ถูกต้อง) · ตาราง 5 sink × 4 วิธีเขียน (concat 5 ทะลุ, html.EscapeString 1, text/template 5, html/template 0) · SQL 4 payload (ต่อสตริง 3 รั่ว, placeholder 0, escape เครื่องหมายคำพูด 1) · และ payload ชุดเดียวกันทะลุ 10 จาก 36 ช่องในฝั่งที่พัง แต่ 0 ในฝั่งที่แก้"
+  },
+  {
     "slug": "2026-10-29-software-security-20-compliance-gdpr-pci",
     "title": "'Compliance: GDPR, PCI-DSS และวันที่ security กลายเป็นข้อบังคับ (ตอนที่ 20)'",
     "date": "2026-10-29",
