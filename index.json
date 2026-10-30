@@ -1,5 +1,21 @@
 [
   {
+    "slug": "2026-10-29-software-security-20-compliance-gdpr-pci",
+    "title": "'Compliance: GDPR, PCI-DSS และวันที่ security กลายเป็นข้อบังคับ (ตอนที่ 20)'",
+    "date": "2026-10-29",
+    "tags": [
+      "software-security",
+      "gdpr",
+      "pdpa",
+      "pci-dss",
+      "hipaa",
+      "compliance",
+      "data-privacy",
+      "go"
+    ],
+    "description": "ตอนที่ 20 — จากกรอบงานสมัครใจสู่ข้อบังคับที่มีบทลงโทษ · GDPR (สิทธิ์ 8 ข้อ · lawful basis 6 · หนึ่งเดือน · ปรับถึง €20M หรือ 4%) กับ PDPA ไทย (1 มิ.ย. 2022 · ปรับถึง 5 ล้านบาท) · PCI DSS v4.0.1 (12 requirements · ห้ามเก็บ CVV เด็ดขาด · mask ≠ truncate) · HIPAA แบบย่อ · เดโม Go 3 ตัวรันจริง: DSAR ที่ 16 ระเบียนถูกลบเพียง 6 เพราะ Art 17(3) · ประตู PAN ที่รับ 3 ปฏิเสธ 3 และกรอง log ได้ 3 จุด · retention ที่ purge 5 ระเบียนและส่ง 2 ระเบียนให้คนตัดสิน เพราะไม่มีกฎครอบ"
+  },
+  {
     "slug": "2026-10-28-software-security-19-nist-iso27001",
     "title": "'NIST CSF กับ ISO 27001: เมื่อ security กลายเป็นเรื่องขององค์กร ไม่ใช่ของทีมใดทีมหนึ่ง (ตอนที่ 19)'",
     "date": "2026-10-28",
