@@ -1,5 +1,20 @@
 [
   {
+    "slug": "2026-10-31-software-security-22-authentication-session",
+    "title": "'Authentication และ session: รหัสผ่าน, token และ MFA ในทางปฏิบัติ (ตอนที่ 22)'",
+    "date": "2026-10-31",
+    "tags": [
+      "software-security",
+      "authentication",
+      "password-hashing",
+      "session-management",
+      "mfa",
+      "bcrypt",
+      "go"
+    ],
+    "description": "ตอนที่ 22 — ลงมือสร้างระบบยืนยันตัวตนที่รันได้จริงด้วย standard library ของ Go: เทียบการเก็บรหัสผ่าน 4 วิธีให้เห็นตัวเลขต้นทุนของผู้โจมตี (plaintext 0 · sha256 ไม่มี salt 6 · salt 36 · PBKDF2 600,000 รอบ 21,600,000) · token ที่สร้างจาก math/rand ถูกเดา 5 จาก 5 ขณะที่ crypto/rand เดาไม่ได้เลย · session ที่มี expiry และ revoke ตัด token ที่ถูกขโมยได้จริง และ MFA ตัด credential stuffing จาก 18 จาก 32 (15 รายรหัสซ้ำ + 3 รายรหัสชนกันโดยบังเอิญ) เหลือ 0"
+  },
+  {
     "slug": "2026-10-30-software-security-21-input-validation-output-encoding",
     "title": "'Input validation และ output encoding: ปฏิบัติการจริงใน Go (ตอนที่ 21)'",
     "date": "2026-10-30",
