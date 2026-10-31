@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 600" width="980" height="600" role="img">
+<defs>
+<style>
+  .t  { font-family: sans-serif; font-size: 14px; fill: #12263a; }
+  .s  { font-family: sans-serif; font-size: 12px; fill: #3b4a5a; }
+  .sm { font-family: sans-serif; font-size: 11px; fill: #4a5b6c; }
+  .h  { font-family: sans-serif; font-size: 21px; font-weight: 700; fill: #0b2545; }
+  .hd { font-family: sans-serif; font-size: 15px; font-weight: 700; fill: #0b2545; }
+  .n  { font-family: sans-serif; font-size: 19px; font-weight: 700; fill: #0b2545; }
+  .m  { font-family: monospace; font-size: 12px; fill: #0b2545; }
+  .mm { font-family: monospace; font-size: 11px; fill: #3b4a5a; }
+  .bad { font-family: sans-serif; font-size: 12px; fill: #7a1f1f; }
+  .good{ font-family: sans-serif; font-size: 12px; fill: #14532d; }
+</style>
+</defs>
+<text x="24" y="38" class="h">MFA — ปัจจัยที่สองกันอะไรได้ และกันอะไรไม่ได้</text>
+<text x="24" y="62" class="s">ตัวเลขจาก out/04_mfa.txt · 50 บัญชี · breach 120 คู่ · ยิงจริง 32 อีเมล</text>
+<rect x="24" y="88" width="302" height="86" rx="10" fill="#eef4fb" stroke="#4a7bb5" stroke-width="1.5"/>
+<text x="34" y="118" class="hd">สิ่งที่คุณรู้</text>
+<text x="34" y="144" class="s">รหัสผ่าน · PIN · คำตอบคำถามลับ</text>
+<rect x="338" y="88" width="302" height="86" rx="10" fill="#eefaf1" stroke="#3f9c63" stroke-width="1.5"/>
+<text x="348" y="118" class="hd">สิ่งที่คุณมี</text>
+<text x="348" y="144" class="s">แอป TOTP · กุญแจฮาร์ดแวร์ · มือถือ</text>
+<rect x="652" y="88" width="302" height="86" rx="10" fill="#fdf7e3" stroke="#c9a227" stroke-width="1.5"/>
+<text x="662" y="118" class="hd">สิ่งที่คุณเป็น</text>
+<text x="662" y="144" class="s">ลายนิ้วมือ · ใบหน้า · ม่านตา</text>
+<text x="24" y="196" class="hd">ผลของเดโม: ผู้โจมตีมีอีเมลกับรหัสผ่านจาก breach ที่อื่น</text>
+<rect x="24" y="216" width="932" height="36" rx="10" fill="#e7eef7" stroke="#4a7bb5" stroke-width="1.5"/>
+<text x="40" y="240" class="hd">สถานการณ์</text>
+<text x="520" y="240" class="hd">มีแค่รหัสผ่าน</text>
+<text x="700" y="240" class="hd">มีปัจจัยที่สอง (TOTP)</text>
+<rect x="24" y="252" width="932" height="34" rx="0" fill="#ffffff" stroke="#cfd9e4" stroke-width="1"/>
+<text x="40" y="274" class="s">credential stuffing</text>
+<text x="520" y="274" class="s">เข้าได้ 18/32</text>
+<text x="700" y="274" class="good">เข้าได้ 0/32</text>
+<rect x="24" y="286" width="932" height="34" rx="0" fill="#f7f9fb" stroke="#cfd9e4" stroke-width="1"/>
+<text x="40" y="308" class="s">รหัสผ่านซ้ำกับที่อื่น</text>
+<text x="520" y="308" class="s">21/50 บัญชี</text>
+<text x="700" y="308" class="good">ไม่มีผล — รหัสถูกก็ยังไม่ผ่าน</text>
+<rect x="24" y="320" width="932" height="34" rx="0" fill="#ffffff" stroke="#cfd9e4" stroke-width="1"/>
+<text x="40" y="342" class="s">เดารหัส 6 หลัก</text>
+<text x="520" y="342" class="s">ไม่เกี่ยวกับด่านนี้</text>
+<text x="700" y="342" class="good">3 ใน 1,000,000 ต่อครั้ง</text>
+<rect x="24" y="354" width="932" height="34" rx="0" fill="#f7f9fb" stroke="#cfd9e4" stroke-width="1"/>
+<text x="40" y="376" class="s">phishing แบบ real-time</text>
+<text x="520" y="376" class="s">ได้ทันที</text>
+<text x="700" y="376" class="bad">ยังได้ — ถ้าผู้ใช้กรอกให้เว็บปลอม</text>
+<rect x="24" y="412" width="932" height="120" rx="10" fill="#eef4fb" stroke="#4a7bb5" stroke-width="1.5"/>
+<text x="40" y="440" class="hd">ทำไมปัจจัยที่สองช่วยได้: อุปกรณ์ถือ seed ที่ผู้โจมตีไม่มี</text>
+<text x="40" y="466" class="s">TOTP: HMAC-SHA1 · 6 หลัก · เปลี่ยนทุก 30 วินาที · test vector RFC 6238 ผ่าน 3/3</text>
+<text x="40" y="490" class="s">ข้อจำกัดที่ต้องพูดตรง ๆ: OTP กัน phishing แบบส่งต่อรหัสทันทีไม่ได้ — ทางแก้คือ passkey / FIDO2</text>
+<text x="40" y="514" class="sm">ตัวเลขบนภาพทุกตัวอ่านจาก out/04_mfa.txt</text>
+</svg>

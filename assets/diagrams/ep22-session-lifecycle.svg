@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 580" width="980" height="580" role="img">
+<defs>
+<style>
+  .t  { font-family: sans-serif; font-size: 14px; fill: #12263a; }
+  .s  { font-family: sans-serif; font-size: 12px; fill: #3b4a5a; }
+  .sm { font-family: sans-serif; font-size: 11px; fill: #4a5b6c; }
+  .h  { font-family: sans-serif; font-size: 21px; font-weight: 700; fill: #0b2545; }
+  .hd { font-family: sans-serif; font-size: 15px; font-weight: 700; fill: #0b2545; }
+  .n  { font-family: sans-serif; font-size: 19px; font-weight: 700; fill: #0b2545; }
+  .m  { font-family: monospace; font-size: 12px; fill: #0b2545; }
+  .mm { font-family: monospace; font-size: 11px; fill: #3b4a5a; }
+  .bad { font-family: sans-serif; font-size: 12px; fill: #7a1f1f; }
+  .good{ font-family: sans-serif; font-size: 12px; fill: #14532d; }
+</style>
+</defs>
+<text x="24" y="38" class="h">วงจรชีวิตของ session — token ต้องเกิด เดิน และตายได้</text>
+<text x="24" y="62" class="s">ตัวเลขจาก out/03_session.txt (abs = 24 ชั่วโมง · idle = 30 นาที)</text>
+<rect x="24" y="92" width="184" height="132" rx="10" fill="#eef4fb" stroke="#4a7bb5" stroke-width="1.5"/>
+<text x="34" y="118" class="hd">1 ออก token</text>
+<text x="34" y="142" class="s">crypto/rand 32 ไบต์</text>
+<text x="34" y="164" class="s">เก็บ hash ของ token</text>
+<text x="34" y="186" class="s">ฝั่งเซิร์ฟเวอร์</text>
+<line x1="209" y1="158" x2="215" y2="158" stroke="#4a7bb5" stroke-width="1.6"/>
+<polygon points="215,158 207,153 207,163" fill="#4a7bb5"/>
+<rect x="216" y="92" width="184" height="132" rx="10" fill="#eef4fb" stroke="#4a7bb5" stroke-width="1.5"/>
+<text x="226" y="118" class="hd">2 ส่ง cookie</text>
+<text x="226" y="142" class="s">HttpOnly</text>
+<text x="226" y="164" class="s">Secure · SameSite</text>
+<text x="226" y="186" class="s">Max-Age = 86400</text>
+<line x1="401" y1="158" x2="407" y2="158" stroke="#4a7bb5" stroke-width="1.6"/>
+<polygon points="407,158 399,153 399,163" fill="#4a7bb5"/>
+<rect x="408" y="92" width="184" height="132" rx="10" fill="#eef4fb" stroke="#4a7bb5" stroke-width="1.5"/>
+<text x="418" y="118" class="hd">3 ตรวจทุก request</text>
+<text x="418" y="142" class="s">มีจริงไหม</text>
+<text x="418" y="164" class="s">หมดอายุหรือยัง</text>
+<text x="418" y="186" class="s">idle นานไปไหม</text>
+<line x1="593" y1="158" x2="599" y2="158" stroke="#4a7bb5" stroke-width="1.6"/>
+<polygon points="599,158 591,153 591,163" fill="#4a7bb5"/>
+<rect x="600" y="92" width="184" height="132" rx="10" fill="#eef4fb" stroke="#4a7bb5" stroke-width="1.5"/>
+<text x="610" y="118" class="hd">4 หมดอายุ</text>
+<text x="610" y="142" class="s">abs 24 ชม.</text>
+<text x="610" y="164" class="s">idle 30 นาที</text>
+<text x="610" y="186" class="s">เกินแล้ว = ปฏิเสธ</text>
+<line x1="785" y1="158" x2="791" y2="158" stroke="#4a7bb5" stroke-width="1.6"/>
+<polygon points="791,158 783,153 783,163" fill="#4a7bb5"/>
+<rect x="792" y="92" width="184" height="132" rx="10" fill="#eef4fb" stroke="#4a7bb5" stroke-width="1.5"/>
+<text x="802" y="118" class="hd">5 เพิกถอน</text>
+<text x="802" y="142" class="s">logout 1 เครื่อง</text>
+<text x="802" y="164" class="s">เปลี่ยนรหัส = ล้างหมด</text>
+<text x="802" y="186" class="s">กัน token ที่ถูกขโมย</text>
+<rect x="24" y="248" width="932" height="128" rx="10" fill="#eefaf1" stroke="#3f9c63" stroke-width="1.5"/>
+<text x="40" y="276" class="hd">ฝั่งที่ทำถูก — ทุกทางที่ไม่แน่ใจตอบว่า "ไม่ผ่าน" (fail closed)</text>
+<text x="34" y="298" class="s">ก่อน revoke: 3 session (laptop · phone · tablet)</text>
+<text x="34" y="322" class="s">logout เครื่องเดียว: เหลือ 2 · token ที่เพิกถอนใช้ไม่ได้แล้ว</text>
+<text x="34" y="346" class="s">เปลี่ยนรหัสผ่าน: เพิกถอน 2 · เหลือ 0</text>
+<text x="34" y="370" class="s">token ปลอมกับ token ที่ถูกเพิกถอนได้ error ข้อความเดียวกัน — ไม่บอกใบ้</text>
+<rect x="24" y="396" width="932" height="158" rx="10" fill="#fdeeee" stroke="#c05050" stroke-width="1.5"/>
+<text x="40" y="424" class="hd">สามวิธีที่พัง — เจอได้ในโค้ดจริงทุกสัปดาห์</text>
+<text x="34" y="448" class="s">ไม่มี metadata เวลาเลย: ตอบ "ใช้ได้" เสมอ แม้ผ่านไป 1,000 วัน (time fields = 0)</text>
+<text x="34" y="478" class="s">logout ที่ทำแค่ฝั่งเบราว์เซอร์: token บนเซิร์ฟเวอร์ยังใช้ได้ — คนที่ขโมยไปใช้ต่อได้</text>
+<text x="34" y="508" class="s">เก็บสิทธิ์ไว้ใน cookie โดยไม่ลงนาม: แก้ role=user เป็น role=admin ได้เอง</text>
+</svg>
