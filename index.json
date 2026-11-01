@@ -1,5 +1,20 @@
 [
   {
+    "slug": "2026-11-01-software-security-23-authorization-access-control",
+    "title": "'Authorization และ access control: ทำไม \"ล็อกอินแล้ว\" ไม่เท่ากับ \"มีสิทธิ์\" (ตอนที่ 23)'",
+    "date": "2026-11-01",
+    "tags": [
+      "software-security",
+      "authorization",
+      "access-control",
+      "rbac",
+      "idor",
+      "owasp-top-10",
+      "go"
+    ],
+    "description": "ตอนที่ 23 — ลงมือสร้างชั้นตรวจสิทธิ์ที่รันได้จริงด้วย standard library ของ Go: เซิร์ฟเวอร์ที่ตรวจแค่ล็อกอินปล่อยให้ผู้ใช้ที่ไม่มีสิทธิ์ทำสำเร็จ 4/4 กรณี (อ่านและลบเอกสารคนอื่น เห็นรายชื่อผู้ใช้ทั้งระบบ แต่งตั้งตัวเองเป็น admin) ขณะที่เวอร์ชันที่ตรวจครบสามชั้นปล่อยผ่าน 0/4 · ตาราง RBAC 4 บทบาท × 9 สิทธิ์ = 36 ช่อง ซึ่งว่างอยู่ 18 ช่องเพราะ deny by default · และ 18 request ที่ยิงผ่าน chain เดียวกันให้ผลตรงตาราง 18/18 โดยการตัดสินสิทธิ์เกิดขึ้น 15 ครั้งที่จุดเดียว"
+  },
+  {
     "slug": "2026-10-31-software-security-22-authentication-session",
     "title": "'Authentication และ session: รหัสผ่าน, token และ MFA ในทางปฏิบัติ (ตอนที่ 22)'",
     "date": "2026-10-31",
