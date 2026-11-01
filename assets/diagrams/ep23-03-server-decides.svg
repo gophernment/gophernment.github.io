@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 596" width="980" height="596" role="img">
+<defs>
+<style>
+  .t  { font-family: sans-serif; font-size: 14px; fill: #12263a; }
+  .s  { font-family: sans-serif; font-size: 12px; fill: #3b4a5a; }
+  .sm { font-family: sans-serif; font-size: 11px; fill: #4a5b6c; }
+  .h  { font-family: sans-serif; font-size: 21px; font-weight: 700; fill: #0b2545; }
+  .hd { font-family: sans-serif; font-size: 15px; font-weight: 700; fill: #0b2545; }
+  .n  { font-family: sans-serif; font-size: 19px; font-weight: 700; fill: #0b2545; }
+  .m  { font-family: monospace; font-size: 12px; fill: #0b2545; }
+  .mm { font-family: monospace; font-size: 11px; fill: #3b4a5a; }
+  .bad { font-family: sans-serif; font-size: 12px; fill: #7a1f1f; }
+  .good{ font-family: sans-serif; font-size: 12px; fill: #14532d; }
+</style>
+</defs>
+<text x="24" y="38" class="h">ทุก request ถูกตัดสินที่ server — header/query/body ไม่ใช่หลักฐาน</text>
+<text x="24" y="62" class="s">ตัวเลขจาก out/03_requests.txt · 18 request · ผ่านครบ 18/18</text>
+<rect x="24" y="92" width="430" height="236" rx="10" fill="#fdeeee" stroke="#c05050" stroke-width="1.5"/>
+<text x="40" y="122" class="hd">สิ่งที่ client ส่งมาได้ (ห้ามใช้ตัดสิน)</text>
+<text x="40" y="156" class="m">Authorization: Bearer &lt;token&gt;</text>
+<text x="40" y="186" class="m">X-Role: admin</text>
+<text x="40" y="216" class="m">GET /docs/101?role=admin</text>
+<text x="40" y="246" class="m">body {"role":"admin"}</text>
+<text x="40" y="276" class="m">GET /admin/users  (ยิงตรง ไม่ผ่าน UI)</text>
+<text x="40" y="312" class="bad">สี่อย่างแรกปลอมได้ทั้งหมด · อย่างสุดท้ายคือสิ่งที่ curl ทำได้เสมอ</text>
+<line x1="462" y1="210" x2="494" y2="210" stroke="#c05050" stroke-width="1.6"/>
+<polygon points="494,210 486,205 486,215" fill="#c05050"/>
+<rect x="500" y="92" width="456" height="236" rx="10" fill="#eefaf1" stroke="#3f9c63" stroke-width="1.5"/>
+<text x="516" y="122" class="hd">สิ่งที่ server ใช้ตัดสิน (เชื่อถือได้)</text>
+<text x="516" y="156" class="m">token → session store → userID</text>
+<text x="516" y="186" class="m">userID → role  (จากฐานข้อมูล)</text>
+<text x="516" y="216" class="m">docID → owner  (จากฐานข้อมูล)</text>
+<text x="516" y="246" class="m">role + owner + action → คำตอบเดียว</text>
+<text x="516" y="300" class="good">ค่าพวกนี้ผู้ใช้แก้ไม่ได้ — จึงใช้ตัดสินได้</text>
+<rect x="24" y="352" width="932" height="200" rx="10" fill="#eef4fb" stroke="#4a7bb5" stroke-width="1.5"/>
+<text x="40" y="380" class="hd">ผลของเดโม: 5 route · มีด่าน 4 · public จริง 1 · ลืมใส่ด่าน 0</text>
+<text x="34" y="406" class="s">request ทั้งหมด 18 · ผลตรงตาราง 18/18 · ถูกปฏิเสธ 9 ครั้ง (401 2 · 403 7)</text>
+<text x="34" y="434" class="s">ทุก request ที่ผ่าน authentication ถูกตัดสินสิทธิ์ 15 ครั้ง ที่จุดเดียว (อนุญาต 8 · ปฏิเสธ 7)</text>
+<text x="34" y="462" class="s">header X-Role: admin และ ?role=admin ให้ผล 403 เหมือนกัน — server ไม่เคยอ่านค่านั้น</text>
+<text x="34" y="490" class="sm">ตัวเลขบนภาพทุกตัวอ่านจาก out/03_requests.txt</text>
+</svg>
