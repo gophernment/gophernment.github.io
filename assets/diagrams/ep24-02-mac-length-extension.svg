@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 656" width="980" height="656" role="img">
+<defs>
+<style>
+  .t  { font-family: sans-serif; font-size: 14px; fill: #12263a; }
+  .s  { font-family: sans-serif; font-size: 12px; fill: #3b4a5a; }
+  .sm { font-family: sans-serif; font-size: 11px; fill: #4a5b6c; }
+  .h  { font-family: sans-serif; font-size: 21px; font-weight: 700; fill: #0b2545; }
+  .hd { font-family: sans-serif; font-size: 15px; font-weight: 700; fill: #0b2545; }
+  .n  { font-family: sans-serif; font-size: 19px; font-weight: 700; fill: #0b2545; }
+  .m  { font-family: monospace; font-size: 12px; fill: #0b2545; }
+  .mm { font-family: monospace; font-size: 11px; fill: #3b4a5a; }
+  .bad { font-family: sans-serif; font-size: 12px; fill: #7a1f1f; }
+  .good{ font-family: sans-serif; font-size: 12px; fill: #14532d; }
+</style>
+</defs>
+<text x="24" y="38" class="h">ทำไม sha256(key || message) ใช้เป็น MAC ไม่ได้</text>
+<text x="24" y="62" class="s">ตัวเลขทุกตัวบนภาพนี้อ่านจาก out/03_hmac.txt</text>
+<rect x="24" y="92" width="300" height="96" rx="10" fill="#eef4fb" stroke="#4a7bb5" stroke-width="1.5"/>
+<text x="40" y="118" class="hd">ของเดิม (ผู้ส่ง)</text>
+<text x="40" y="142" class="m">key 16 ไบต์ + ข้อความ 28 ไบต์</text>
+<text x="40" y="166" class="mm">transfer amount=100 to=alice</text>
+<line x1="326" y1="140" x2="348" y2="140" stroke="#4a7bb5" stroke-width="1.6"/>
+<polygon points="348,140 340,135 340,145" fill="#4a7bb5"/>
+<rect x="350" y="92" width="210" height="96" rx="10" fill="#eef4fb" stroke="#4a7bb5" stroke-width="1.5"/>
+<text x="366" y="118" class="hd">SHA-256</text>
+<text x="366" y="144" class="s">สถานะ 8 word (คำละ 32 บิต)</text>
+<text x="366" y="166" class="sm">32 ไบต์ = digest ที่ส่งไป</text>
+<line x1="562" y1="140" x2="584" y2="140" stroke="#4a7bb5" stroke-width="1.6"/>
+<polygon points="584,140 576,135 576,145" fill="#4a7bb5"/>
+<rect x="586" y="92" width="370" height="96" rx="10" fill="#f5f7f9" stroke="#9aa9b8" stroke-width="1.5"/>
+<text x="602" y="118" class="hd">ผู้โจมตีถือ digest นี้</text>
+<text x="602" y="142" class="s">รู้แค่ความยาว key (เดาได้) และข้อความ</text>
+<text x="602" y="166" class="s">ไม่รู้ key เลยสักไบต์</text>
+<rect x="24" y="208" width="932" height="116" rx="10" fill="#fdeeee" stroke="#c05050" stroke-width="1.5"/>
+<text x="40" y="236" class="hd">ต่อท้ายได้ เพราะ digest คือสถานะกลางทาง ไม่ใช่ผลลัพธ์ที่ผูกกับความยาว</text>
+<text x="34" y="260" class="s">เริ่มจากสถานะ = digest เดิม เติม glue 20 ไบต์ (padding ที่ SHA-256 เติมเอง) แล้วต่อ ;admin=1</text>
+<text x="34" y="286" class="bad">ได้ SHA-256 ของข้อความยาว 72 ไบต์ ที่ถูกต้องทุกไบต์</text>
+<text x="34" y="312" class="bad">standard library ยืนยันว่าตรงกัน (forged_digest_matches_stdlib = 1)</text>
+<rect x="24" y="344" width="932" height="176" rx="10" fill="#ffffff" stroke="#cfd9e4" stroke-width="1.5"/>
+<text x="40" y="372" class="hd">เทียบสามแบบ: อะไรที่ตรวจได้จริง</text>
+<line x1="40" y1="386" x2="940" y2="386" stroke="#cfd9e4" stroke-width="1.2"/>
+<text x="44" y="406" class="sm">รูปแบบ</text>
+<text x="520" y="406" class="sm">มีคีย์</text>
+<text x="620" y="406" class="sm">ต่อท้ายได้</text>
+<text x="758" y="406" class="sm">แก้ 1 ไบต์ตรวจเจอ</text>
+<text x="884" y="406" class="sm">ใช้จริง</text>
+<text x="44" y="432" class="mm">sha256(message)</text>
+<text x="520" y="432" class="s">-</text>
+<text x="620" y="432" class="s">ได้ (คำนวณใหม่)</text>
+<text x="758" y="432" class="s">-</text>
+<text x="884" y="432" class="sm">ไม่</text>
+<line x1="40" y1="442" x2="940" y2="442" stroke="#eef2f6" stroke-width="1.2"/>
+<text x="44" y="460" class="mm">sha256(key || message)</text>
+<text x="520" y="460" class="s">มี</text>
+<text x="620" y="460" class="s">ได้</text>
+<text x="758" y="460" class="s">-</text>
+<text x="884" y="460" class="bad">ห้าม</text>
+<line x1="40" y1="470" x2="940" y2="470" stroke="#eef2f6" stroke-width="1.2"/>
+<text x="44" y="488" class="mm">HMAC-SHA-256</text>
+<text x="520" y="488" class="s">มี</text>
+<text x="620" y="488" class="s">ไม่ได้</text>
+<text x="758" y="488" class="s">ได้</text>
+<text x="884" y="488" class="good">ใช้ได้</text>
+<text x="40" y="512" class="sm">ผลรันจริง: naive_mac_verifies_forged = 1 · hmac_tamper_detected = 1 · hmac_forged_by_attacker = 0</text>
+<rect x="24" y="540" width="932" height="96" rx="10" fill="#eefaf1" stroke="#3f9c63" stroke-width="1.5"/>
+<text x="40" y="568" class="hd">HMAC: hash คีย์ที่ผสม ipad ก่อน แล้ว hash ผลซ้ำด้วยคีย์ที่ผสม opad</text>
+<text x="34" y="592" class="s">สถานะที่ได้จึงไม่ใช่จุดที่ต่อจากข้อความเดิมได้ · ฝ่ายโจมตีไม่มีจุดเริ่มต้นให้ต่อ</text>
+</svg>

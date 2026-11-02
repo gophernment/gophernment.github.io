@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 636" width="980" height="636" role="img">
+<defs>
+<style>
+  .t  { font-family: sans-serif; font-size: 14px; fill: #12263a; }
+  .s  { font-family: sans-serif; font-size: 12px; fill: #3b4a5a; }
+  .sm { font-family: sans-serif; font-size: 11px; fill: #4a5b6c; }
+  .h  { font-family: sans-serif; font-size: 21px; font-weight: 700; fill: #0b2545; }
+  .hd { font-family: sans-serif; font-size: 15px; font-weight: 700; fill: #0b2545; }
+  .n  { font-family: sans-serif; font-size: 19px; font-weight: 700; fill: #0b2545; }
+  .m  { font-family: monospace; font-size: 12px; fill: #0b2545; }
+  .mm { font-family: monospace; font-size: 11px; fill: #3b4a5a; }
+  .bad { font-family: sans-serif; font-size: 12px; fill: #7a1f1f; }
+  .good{ font-family: sans-serif; font-size: 12px; fill: #14532d; }
+</style>
+</defs>
+<text x="24" y="38" class="h">สามเครื่องมือ สามคำถาม — ใช้ผิดข้อคือช่องโหว่</text>
+<text x="24" y="62" class="s">ตัวเลขทุกตัวบนภาพนี้อ่านจาก out/01_hash.txt และ out/02_salt.txt</text>
+<rect x="24" y="92" width="300" height="196" rx="10" fill="#eef4fb" stroke="#4a7bb5" stroke-width="1.5"/>
+<text x="34" y="120" class="hd">hash (SHA-256)</text>
+<text x="34" y="146" class="s">letmein2024 → digest 32 ไบต์</text>
+<text x="34" y="172" class="s">ย้อนกลับไม่ได้</text>
+<text x="34" y="198" class="s">แต่คลังคำ 272 คำ</text>
+<text x="34" y="224" class="s">เดาถูกเป็นอันดับ 184</text>
+<line x1="34" y1="252" x2="314" y2="252" stroke="#4a7bb5" stroke-width="1.2" stroke-dasharray="3 3"/>
+<text x="34" y="274" class="sm">ถามว่า: ข้อมูลเดิมไหม</text>
+<rect x="340" y="92" width="300" height="196" rx="10" fill="#fdf7e3" stroke="#c9a227" stroke-width="1.5"/>
+<text x="350" y="120" class="hd">salt ต่อผู้ใช้</text>
+<text x="350" y="146" class="s">3 คน รหัสผ่านเดียวกัน</text>
+<text x="350" y="172" class="s">ไม่มี salt: 1 digest</text>
+<text x="350" y="198" class="s">มี salt: 3 digest</text>
+<text x="350" y="224" class="s">salt ไม่ใช่ความลับ แต่ต้องเก็บ</text>
+<line x1="350" y1="252" x2="630" y2="252" stroke="#c9a227" stroke-width="1.2" stroke-dasharray="3 3"/>
+<text x="350" y="274" class="sm">ถามว่า: สองคนเหมือนกันไหม</text>
+<rect x="656" y="92" width="300" height="196" rx="10" fill="#eefaf1" stroke="#3f9c63" stroke-width="1.5"/>
+<text x="666" y="120" class="hd">encrypt (AES-GCM)</text>
+<text x="666" y="146" class="s">คีย์ 256 บิต · nonce 96 บิต</text>
+<text x="666" y="172" class="s">ciphertext 44 ไบต์ (มี tag)</text>
+<text x="666" y="198" class="s">ถอดได้ด้วยคีย์ที่ถูก</text>
+<text x="666" y="224" class="s">คีย์ผิด = error ไม่ใช่ขยะ</text>
+<line x1="666" y1="252" x2="946" y2="252" stroke="#3f9c63" stroke-width="1.2" stroke-dasharray="3 3"/>
+<text x="666" y="274" class="sm">ถามว่า: ซ่อนจากคนอื่นได้ไหม</text>
+<rect x="24" y="312" width="932" height="148" rx="10" fill="#fdeeee" stroke="#c05050" stroke-width="1.5"/>
+<text x="40" y="340" class="hd">salt ทำให้ผู้โจมตีจ่ายต่อคน ไม่ใช่จ่ายครั้งเดียว</text>
+<text x="34" y="366" class="s">ไม่มี salt: คลังคำ 272 hash แครกได้ทั้ง 3 บัญชีในครั้งเดียว</text>
+<text x="34" y="392" class="s">มี salt: ต้องคำนวณ 816 hash (272 × 3 คน) = งานเพิ่ม 3 เท่า</text>
+<text x="34" y="418" class="bad">แต่แครกได้ 3/3 ทั้งสองแบบ — salt ไม่ได้ทำให้รหัสผ่านที่อ่อนแอแข็งแรงขึ้น</text>
+<rect x="24" y="484" width="932" height="120" rx="10" fill="#eefaf1" stroke="#3f9c63" stroke-width="1.5"/>
+<text x="40" y="512" class="hd">จำสามบรรทัดนี้พอ</text>
+<text x="34" y="538" class="s">hash = ตรวจว่าข้อมูลเดิมไหม · salt = ทำให้เดาแพงขึ้น · encrypt = ซ่อนจากคนอื่น</text>
+<text x="34" y="564" class="s">รหัสผ่านต้อง hash ด้วยของที่ช้า (Argon2id/bcrypt) ไม่ใช่ SHA-256 เปล่า ๆ</text>
+</svg>
