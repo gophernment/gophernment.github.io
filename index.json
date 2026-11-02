@@ -1,5 +1,20 @@
 [
   {
+    "slug": "2026-11-02-software-security-24-crypto-in-practice",
+    "title": "'Cryptography in practice: hash, salt, HMAC, AEAD และ TLS ที่ใช้ให้ถูก (ตอนที่ 24)'",
+    "date": "2026-11-02",
+    "tags": [
+      "software-security",
+      "cryptography",
+      "go",
+      "tls",
+      "aead",
+      "hmac",
+      "salt"
+    ],
+    "description": "ตอนที่ 24 — ใช้ crypto ให้ถูกใน Go: ไม่มี salt 3 คนได้ digest เดียวกัน · มี salt ได้ 3 ค่า · sha256(secret||message) ถูกต่อท้ายได้ · AES-GCM ตรวจการแก้ได้ · TLS ปกป้องสายแต่ไม่ปกป้องปลายทาง"
+  },
+  {
     "slug": "2026-11-01-software-security-23-authorization-access-control",
     "title": "'Authorization และ access control: ทำไม \"ล็อกอินแล้ว\" ไม่เท่ากับ \"มีสิทธิ์\" (ตอนที่ 23)'",
     "date": "2026-11-01",
