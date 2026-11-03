@@ -1,5 +1,20 @@
 [
   {
+    "slug": "2026-11-03-software-security-25-sast-dast-dependency-scanning",
+    "title": "'SAST, DAST และ dependency scanning: ทำให้ช่องโหว่ถูกจับก่อน merge (ตอนที่ 25)'",
+    "date": "2026-11-03",
+    "tags": [
+      "software-security",
+      "sast",
+      "dast",
+      "sca",
+      "dependency-scanning",
+      "ci",
+      "go"
+    ],
+    "description": "ตอนที่ 25 — เครื่องมือตรวจสามตระกูลตอบคำถามคนละข้อ: SAST อ่านซอร์สเจอ 6 จุดแต่พลาด 1 และเตือนเกิน 1 · DAST ยิง 10 request เจอ 3 จุดจากภายนอก · SCA เทียบ 8 module กับ 4 advisory และมีกับดักการเทียบ version · รวมกันเห็น 7 จาก 8 ข้อ แล้วเอาไปประกอบเป็น gate ที่ตอบเป็น exit code"
+  },
+  {
     "slug": "2026-11-02-software-security-24-crypto-in-practice",
     "title": "'Cryptography in practice: hash, salt, HMAC, AEAD และ TLS ที่ใช้ให้ถูก (ตอนที่ 24)'",
     "date": "2026-11-02",
