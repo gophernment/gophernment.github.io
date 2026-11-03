@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 620" width="980" height="620" role="img">
+<defs>
+<style>
+  .t  { font-family: sans-serif; font-size: 14px; fill: #12263a; }
+  .s  { font-family: sans-serif; font-size: 12px; fill: #3b4a5a; }
+  .sm { font-family: sans-serif; font-size: 11px; fill: #4a5b6c; }
+  .h  { font-family: sans-serif; font-size: 21px; font-weight: 700; fill: #0b2545; }
+  .hd { font-family: sans-serif; font-size: 14px; font-weight: 700; fill: #0b2545; }
+  .n  { font-family: sans-serif; font-size: 19px; font-weight: 700; fill: #0b2545; }
+  .m  { font-family: monospace; font-size: 12px; fill: #0b2545; }
+  .mm { font-family: monospace; font-size: 11px; fill: #3b4a5a; }
+  .bad { font-family: sans-serif; font-size: 12px; fill: #7a1f1f; }
+  .good{ font-family: sans-serif; font-size: 12px; fill: #14532d; }
+</style>
+</defs>
+<text x="24" y="36" class="h">สามเครื่องมือตรวจคนละมุม — ไม่มีตัวไหนเห็นครบ</text>
+<text x="24" y="58" class="s">ตัวเลขทุกตัวบนภาพนี้อ่านจาก out/01–05 และซอร์สของเดโม ไม่ได้พิมพ์มือ</text>
+<rect x="24" y="84" width="300" height="236" rx="10" fill="#eef4fb" stroke="#4a7bb5" stroke-width="1.5"/>
+<text x="34" y="112" class="hd">SAST — อ่านซอร์ส</text>
+<text x="34" y="142" class="s">ไม่รันโค้ด · สแกน 7 ไฟล์</text>
+<text x="34" y="166" class="s">ใช้ 4 rule · เจอ 6 จุด</text>
+<text x="34" y="190" class="s">พลาด 1 เคสที่รู้ตัว</text>
+<text x="34" y="214" class="s">เตือนเกิน 1 เคส</text>
+<line x1="34" y1="244" x2="314" y2="244" stroke="#4a7bb5" stroke-width="1.2" stroke-dasharray="3 3"/>
+<text x="34" y="268" class="sm">ไม่เห็น: ค่าที่ไหลมาถึงตอนรัน</text>
+<rect x="340" y="84" width="300" height="236" rx="10" fill="#eefaf1" stroke="#3f9c63" stroke-width="1.5"/>
+<text x="350" y="112" class="hd">DAST — ยิงจากข้างนอก</text>
+<text x="350" y="142" class="s">ยิง 10 request · ครอบ 4/5 route</text>
+<text x="350" y="166" class="s">probe 5 ตัว เจอ 3 จุด</text>
+<text x="350" y="190" class="s">หลังแก้เหลือ 0 จุด</text>
+<text x="350" y="214" class="s">ตัดสินไม่ได้ 1 probe</text>
+<line x1="350" y1="244" x2="630" y2="244" stroke="#3f9c63" stroke-width="1.2" stroke-dasharray="3 3"/>
+<text x="350" y="268" class="sm">ไม่เห็น: ช่องที่ไม่มีสัญญาณตอบกลับ</text>
+<rect x="656" y="84" width="300" height="236" rx="10" fill="#fdf7e3" stroke="#c9a227" stroke-width="1.5"/>
+<text x="666" y="112" class="hd">SCA — dependency</text>
+<text x="666" y="142" class="s">8 module · 4 advisory</text>
+<text x="666" y="166" class="s">ตรงเงื่อนไข 4 ตัว</text>
+<text x="666" y="190" class="s">ถูกเรียกจริง 2 ตัว</text>
+<text x="666" y="214" class="s">ไม่ถูกเรียก 2 ตัว</text>
+<line x1="666" y1="244" x2="946" y2="244" stroke="#c9a227" stroke-width="1.2" stroke-dasharray="3 3"/>
+<text x="666" y="268" class="sm">ไม่เห็น: โค้ดที่เราเขียนเอง</text>
+<rect x="24" y="344" width="932" height="122" rx="10" fill="#fdeeee" stroke="#c05050" stroke-width="1.5"/>
+<text x="40" y="372" class="hd">นับรวมกันแล้ว: เห็น 7 จาก 8 — ที่เหลือไม่มีเครื่องมือไหนเห็น</text>
+<text x="34" y="400" class="s">ช่องโหว่ที่ฝังไว้ 8 ข้อ · SAST เห็น 3 · DAST เห็น 3 · SCA เห็น 2 · รวมกันได้ 7 (ข้อ 1 นับครั้งเดียว)</text>
+<text x="34" y="426" class="bad">เหลือ 1 ข้อ: route ที่ไม่ตรวจสิทธิ์ — คำตอบ 200 ที่ "ถูกต้อง" ทำให้ scanner ไม่มีอะไรให้จับ</text>
+<rect x="24" y="486" width="932" height="112" rx="10" fill="#f5f7f9" stroke="#9aa9b8" stroke-width="1.5"/>
+<text x="40" y="514" class="hd">เลือกให้ตรงจังหวะ: เร็วทุก commit หรือลึกทุกคืน</text>
+<text x="34" y="540" class="s">SAST + SCA: ไม่ต้องรันแอป เร็วพอที่จะรันทุก commit และบล็อก PR ได้</text>
+<text x="34" y="564" class="s">DAST: ต้องมี environment ที่รันได้ — รันทุกคืนหรือก่อน release ไม่ใช่ทุก commit</text>
+</svg>

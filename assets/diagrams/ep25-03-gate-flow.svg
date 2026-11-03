@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 680" width="980" height="680" role="img">
+<defs>
+<style>
+  .t  { font-family: sans-serif; font-size: 14px; fill: #12263a; }
+  .s  { font-family: sans-serif; font-size: 12px; fill: #3b4a5a; }
+  .sm { font-family: sans-serif; font-size: 11px; fill: #4a5b6c; }
+  .h  { font-family: sans-serif; font-size: 21px; font-weight: 700; fill: #0b2545; }
+  .hd { font-family: sans-serif; font-size: 14px; font-weight: 700; fill: #0b2545; }
+  .n  { font-family: sans-serif; font-size: 19px; font-weight: 700; fill: #0b2545; }
+  .m  { font-family: monospace; font-size: 12px; fill: #0b2545; }
+  .mm { font-family: monospace; font-size: 11px; fill: #3b4a5a; }
+  .bad { font-family: sans-serif; font-size: 12px; fill: #7a1f1f; }
+  .good{ font-family: sans-serif; font-size: 12px; fill: #14532d; }
+</style>
+</defs>
+<text x="24" y="36" class="h">gate: เปลี่ยน finding ให้เป็นคำตอบว่า "merge ได้หรือไม่"</text>
+<text x="24" y="58" class="s">ตัวเลขทุกตัวบนภาพนี้อ่านจาก out/04_gate.txt</text>
+<rect x="24" y="84" width="172" height="54" rx="10" fill="#eef4fb" stroke="#4a7bb5" stroke-width="1.5"/>
+<text x="110.0" y="118" class="s" text-anchor="middle">commit</text>
+<line x1="198" y1="111" x2="208" y2="111" stroke="#7d93a8" stroke-width="1.6"/>
+<polygon points="208,111 200,106 200,116" fill="#7d93a8"/>
+<rect x="210" y="84" width="172" height="54" rx="10" fill="#eef4fb" stroke="#4a7bb5" stroke-width="1.5"/>
+<text x="296.0" y="118" class="s" text-anchor="middle">PR: SAST + SCA</text>
+<line x1="384" y1="111" x2="394" y2="111" stroke="#7d93a8" stroke-width="1.6"/>
+<polygon points="394,111 386,106 386,116" fill="#7d93a8"/>
+<rect x="396" y="84" width="172" height="54" rx="10" fill="#f5f7f9" stroke="#9aa9b8" stroke-width="1.5"/>
+<text x="482.0" y="118" class="s" text-anchor="middle">build</text>
+<line x1="570" y1="111" x2="580" y2="111" stroke="#7d93a8" stroke-width="1.6"/>
+<polygon points="580,111 572,106 572,116" fill="#7d93a8"/>
+<rect x="582" y="84" width="172" height="54" rx="10" fill="#f5f7f9" stroke="#9aa9b8" stroke-width="1.5"/>
+<text x="668.0" y="118" class="s" text-anchor="middle">staging</text>
+<line x1="756" y1="111" x2="766" y2="111" stroke="#7d93a8" stroke-width="1.6"/>
+<polygon points="766,111 758,106 758,116" fill="#7d93a8"/>
+<rect x="768" y="84" width="172" height="54" rx="10" fill="#f5f7f9" stroke="#9aa9b8" stroke-width="1.5"/>
+<text x="854.0" y="118" class="s" text-anchor="middle">DAST รายคืน</text>
+<rect x="24" y="186" width="232" height="150" rx="10" fill="#fdeeee" stroke="#c05050" stroke-width="1.5"/>
+<text x="40" y="214" class="hd">finding ขาเข้า</text>
+<text x="40" y="240" class="s">รวม 13 รายการ</text>
+<text x="40" y="262" class="s">high 10 · medium 1</text>
+<text x="40" y="284" class="s">low 2</text>
+<text x="40" y="312" class="sm">สามเครื่องมือ คนละรูปแบบ</text>
+<rect x="292" y="186" width="372" height="150" rx="10" fill="#eef4fb" stroke="#4a7bb5" stroke-width="1.5"/>
+<text x="308" y="214" class="hd">policy (เขียนไว้ล่วงหน้า)</text>
+<text x="302" y="240" class="s">severity ≥ high → บล็อก merge</text>
+<text x="302" y="266" class="s">baseline ต้องมีวันหมดอายุ</text>
+<text x="302" y="292" class="s">symbol ไม่ถูกเรียก → ลดเป็น low</text>
+<rect x="700" y="186" width="256" height="66" rx="10" fill="#fdeeee" stroke="#c05050" stroke-width="1.5"/>
+<text x="716" y="214" class="hd">exit 1 — บล็อก</text>
+<text x="716" y="238" class="s">blocking 9 · เตือน 3</text>
+<rect x="700" y="270" width="256" height="66" rx="10" fill="#eefaf1" stroke="#3f9c63" stroke-width="1.5"/>
+<text x="716" y="298" class="hd">exit 0 — ผ่าน</text>
+<text x="716" y="322" class="s">หลังแก้เหลือ 0 finding</text>
+<line x1="258" y1="240" x2="288" y2="240" stroke="#7d93a8" stroke-width="1.6"/>
+<polygon points="288,240 280,235 280,245" fill="#7d93a8"/>
+<line x1="666" y1="240" x2="696" y2="216" stroke="#7d93a8" stroke-width="1.6"/>
+<polygon points="696,216 688,211 688,221" fill="#7d93a8"/>
+<line x1="666" y1="260" x2="696" y2="296" stroke="#7d93a8" stroke-width="1.6"/>
+<polygon points="696,296 691,288 701,288" fill="#7d93a8"/>
+<rect x="24" y="372" width="932" height="140" rx="10" fill="#fdf7e3" stroke="#c9a227" stroke-width="1.5"/>
+<text x="40" y="400" class="hd">ทำไมตัวเลขสามชุดนี้ต้องอ่านคู่กัน</text>
+<text x="34" y="426" class="s">baseline กลบไป 1 รายการ และหมดอายุแล้ว 0 รายการ — ถ้าไม่มีวันหมดอายุ มันจะกลบตลอดไป</text>
+<text x="34" y="452" class="s">blocking 9 + warn 3 + baseline 1 = 13 (เท่ากับ finding ขาเข้า)</text>
+<text x="34" y="478" class="s">gate ที่ดีตอบเป็นตัวเลข ไม่ใช่คำว่า "มีปัญหาเล็กน้อย" ที่เถียงกันไม่จบ</text>
+<rect x="24" y="530" width="932" height="126" rx="10" fill="#eefaf1" stroke="#3f9c63" stroke-width="1.5"/>
+<text x="40" y="558" class="hd">หลักที่ทำให้ gate เชื่อถือได้</text>
+<text x="34" y="584" class="s">ผลต้องเรียงคงที่และไม่มีความเร็ว/เวลาในรายงาน — ไม่งั้น diff ทุกครั้งจะเต็มไปด้วย noise</text>
+<text x="34" y="608" class="s">ทุก finding ต้องมีพิกัดไฟล์:บรรทัด หรือ route — ไม่มีพิกัด = คนอ่านตรวจตามไม่ได้</text>
+<text x="34" y="632" class="s">และต้องมีรอบที่ "ผ่านจริง" ให้เห็น: exit 0 หลังแก้ ไม่ใช่ผ่านเพราะไม่มีอะไรตรวจ</text>
+</svg>
