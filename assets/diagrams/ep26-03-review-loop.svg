@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 660" width="980" height="660" role="img">
+<defs>
+<style>
+  .t  { font-family: sans-serif; font-size: 14px; fill: #12263a; }
+  .s  { font-family: sans-serif; font-size: 12px; fill: #3b4a5a; }
+  .sm { font-family: sans-serif; font-size: 11px; fill: #4a5b6c; }
+  .h  { font-family: sans-serif; font-size: 21px; font-weight: 700; fill: #0b2545; }
+  .hd { font-family: sans-serif; font-size: 14px; font-weight: 700; fill: #0b2545; }
+  .n  { font-family: sans-serif; font-size: 19px; font-weight: 700; fill: #0b2545; }
+  .m  { font-family: monospace; font-size: 12px; fill: #0b2545; }
+  .mm { font-family: monospace; font-size: 11px; fill: #3b4a5a; }
+  .bad { font-family: sans-serif; font-size: 12px; fill: #7a1f1f; }
+  .good{ font-family: sans-serif; font-size: 12px; fill: #14532d; }
+</style>
+</defs>
+<text x="24" y="36" class="h">รีวิวที่ตอบได้: คำสั่ง / คำถาม / หลักฐาน</text>
+<text x="24" y="58" class="s">checklist 8 ข้อ = ตรวจอัตโนมัติ 4 + ต้องมีคน 4 (out/04_review.txt)</text>
+<rect x="24" y="84" width="172" height="50" rx="10" fill="#eef4fb" stroke="#4a7bb5" stroke-width="1.5"/>
+<text x="110.0" y="114" class="s" text-anchor="middle">diff</text>
+<line x1="198" y1="109" x2="208" y2="109" stroke="#7d93a8" stroke-width="1.6"/>
+<polygon points="208,109 200,104 200,114" fill="#7d93a8"/>
+<rect x="210" y="84" width="172" height="50" rx="10" fill="#eef4fb" stroke="#4a7bb5" stroke-width="1.5"/>
+<text x="296.0" y="114" class="s" text-anchor="middle">จัดลำดับ</text>
+<line x1="384" y1="109" x2="394" y2="109" stroke="#7d93a8" stroke-width="1.6"/>
+<polygon points="394,109 386,104 386,114" fill="#7d93a8"/>
+<rect x="396" y="84" width="172" height="50" rx="10" fill="#eef4fb" stroke="#4a7bb5" stroke-width="1.5"/>
+<text x="482.0" y="114" class="s" text-anchor="middle">สามท่า</text>
+<line x1="570" y1="109" x2="580" y2="109" stroke="#7d93a8" stroke-width="1.6"/>
+<polygon points="580,109 572,104 572,114" fill="#7d93a8"/>
+<rect x="582" y="84" width="172" height="50" rx="10" fill="#fdf7e3" stroke="#c9a227" stroke-width="1.5"/>
+<text x="668.0" y="114" class="s" text-anchor="middle">checklist</text>
+<line x1="756" y1="109" x2="766" y2="109" stroke="#7d93a8" stroke-width="1.6"/>
+<polygon points="766,109 758,104 758,114" fill="#7d93a8"/>
+<rect x="768" y="84" width="172" height="50" rx="10" fill="#fdf7e3" stroke="#c9a227" stroke-width="1.5"/>
+<text x="854.0" y="114" class="s" text-anchor="middle">verdict</text>
+<rect x="24" y="168" width="268" height="178" rx="10" fill="#fdeeee" stroke="#c05050" stroke-width="1.5"/>
+<text x="40" y="196" class="hd">finding ขาเข้า</text>
+<text x="36" y="222" class="s">รวม 5 รายการ</text>
+<text x="36" y="248" class="bad">เป็นคำสั่ง (blocking) 2</text>
+<text x="36" y="274" class="s">เป็นคำถาม 3</text>
+<text x="36" y="300" class="good">ตกหล่นจาก checklist 0</text>
+<rect x="316" y="168" width="300" height="178" rx="10" fill="#fdf7e3" stroke="#c9a227" stroke-width="1.5"/>
+<text x="332" y="196" class="hd">checklist ที่ตรวจได้</text>
+<text x="328" y="222" class="s">8 ข้อ · มีตัวตรวจ 4</text>
+<text x="328" y="248" class="s">ต้องมีคนตอบ 4 (C5–C8)</text>
+<text x="328" y="274" class="bad">หลักฐานที่ขาด 4</text>
+<text x="328" y="300" class="sm">ไม่มีหลักฐาน = ยังไม่ได้ตรวจ</text>
+<rect x="640" y="168" width="316" height="78" rx="10" fill="#fdeeee" stroke="#c05050" stroke-width="1.5"/>
+<text x="656" y="196" class="hd">verdict = changes-requested</text>
+<text x="656" y="222" class="s">ready_to_merge = 0</text>
+<rect x="640" y="258" width="316" height="88" rx="10" fill="#eefaf1" stroke="#3f9c63" stroke-width="1.5"/>
+<text x="656" y="286" class="hd">verdict = approved</text>
+<text x="656" y="312" class="s">ตอบแล้ว 1 · เหลือคำถาม 0</text>
+<text x="656" y="334" class="s">ready_to_merge = 1</text>
+<line x1="292" y1="250" x2="312" y2="250" stroke="#7d93a8" stroke-width="1.6"/>
+<polygon points="312,250 304,245 304,255" fill="#7d93a8"/>
+<line x1="616" y1="250" x2="636" y2="210" stroke="#7d93a8" stroke-width="1.6"/>
+<polygon points="636,210 631,218 641,218" fill="#7d93a8"/>
+<line x1="616" y1="270" x2="636" y2="300" stroke="#7d93a8" stroke-width="1.6"/>
+<polygon points="636,300 631,292 641,292" fill="#7d93a8"/>
+<rect x="24" y="366" width="932" height="132" rx="10" fill="#eef4fb" stroke="#4a7bb5" stroke-width="1.5"/>
+<text x="40" y="394" class="hd">สิ่งที่ทำให้รีวิวเป็นงานวิศวกรรม ไม่ใช่ความคิดเห็น</text>
+<text x="36" y="420" class="s">ทุก finding มีพิกัด (ไฟล์:บรรทัด) และมีด่านใน checklist ที่มันต้องผ่าน — ไม่มีพิกัด = ตรวจตามไม่ได้</text>
+<text x="36" y="446" class="s">แยก "คำสั่ง" ออกจาก "คำถาม": 2 อย่างแรกคือสิ่งที่ต้องแก้, 3 อย่างหลังคือสิ่งที่ต้องคุย</text>
+<text x="36" y="472" class="s">คำถามที่ยังไม่ถูกตอบ ไม่ใช่คำถามที่หายไป — verdict ยังเป็น changes-requested</text>
+<rect x="24" y="518" width="932" height="118" rx="10" fill="#eefaf1" stroke="#3f9c63" stroke-width="1.5"/>
+<text x="40" y="546" class="hd">วงจรที่ทำให้ทีมเก่งขึ้น: finding ที่เจอซ้ำ → check อัตโนมัติ</text>
+<text x="36" y="572" class="s">วันนี้ 5 finding จากสามท่า · พรุ่งนี้มันควรกลายเป็น rule ที่รันเองได้</text>
+<text x="36" y="596" class="s">คนอ่านโค้ดไม่ควรเจอช่องโหว่ชนิดเดียวกันสองครั้งในสองปี — ครั้งที่สองคือความล้มเหลวของกระบวนการ</text>
+<text x="36" y="620" class="sm">และสิ่งที่เหลือไว้ให้คนคือสิ่งที่ไม่เป็นรูปแบบ: invariant ของธุรกิจ ลำดับขั้นตอน และสิทธิ์ที่ควรเป็น</text>
+</svg>
