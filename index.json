@@ -1,5 +1,19 @@
 [
   {
+    "slug": "2026-11-04-software-security-26-secure-code-review",
+    "title": "'Secure code review: อ่านโค้ดหาช่องโหว่ที่เครื่องมือมองไม่เห็น (ตอนที่ 26)'",
+    "date": "2026-11-04",
+    "tags": [
+      "software-security",
+      "code-review",
+      "secure-code-review",
+      "taint-analysis",
+      "business-logic",
+      "go"
+    ],
+    "description": "ตอนที่ 26 — เครื่องมือจับได้ 7 จาก 8 ข้อเมื่อคืน แต่ข้อที่เหลือต้องมีคนอ่าน · บทนี้อ่าน diff 109 บรรทัดแบบจัดลำดับความเสี่ยง (hunk อันตรายที่สุดอยู่ท้ายสุด 16 บรรทัด = 14%) สามท่าที่คนทำได้ด้วยตา (authz, error path, taint) เจอ 5 finding แต่พลาด 1 และเตือนเกิน 1 · แล้วเจอไฟล์ที่ทั้งสามท่าบอกว่าสะอาด 0 finding แต่คืนเงิน 12,000 จาก order 10,000"
+  },
+  {
     "slug": "2026-11-03-software-security-25-sast-dast-dependency-scanning",
     "title": "'SAST, DAST และ dependency scanning: ทำให้ช่องโหว่ถูกจับก่อน merge (ตอนที่ 25)'",
     "date": "2026-11-03",
