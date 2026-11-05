@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 640" width="1000" height="640" role="img">
+<defs>
+<style>
+  .t  { font-family: sans-serif; font-size: 14px; fill: #12263a; }
+  .s  { font-family: sans-serif; font-size: 12px; fill: #3b4a5a; }
+  .sm { font-family: sans-serif; font-size: 11px; fill: #4a5b6c; }
+  .h  { font-family: sans-serif; font-size: 21px; font-weight: 700; fill: #0b2545; }
+  .hd { font-family: sans-serif; font-size: 14px; font-weight: 700; fill: #0b2545; }
+  .n  { font-family: sans-serif; font-size: 19px; font-weight: 700; fill: #0b2545; }
+  .m  { font-family: monospace; font-size: 12px; fill: #0b2545; }
+  .mm { font-family: monospace; font-size: 11px; fill: #3b4a5a; }
+  .bad { font-family: sans-serif; font-size: 12px; fill: #7a1f1f; }
+  .good{ font-family: sans-serif; font-size: 12px; fill: #14532d; }
+  .big { font-family: sans-serif; font-size: 24px; font-weight: 700; fill: #0b2545; }
+</style>
+</defs>
+<text x="28" y="40" class="h">ความต่างของสถานะคือข้อมูล: 403 กับ 404 ไม่ได้แปลว่าเหมือนกัน</text>
+<text x="28" y="64" class="s">18 คำขอ · enumeration_leak=1 (out/02_scan.txt)</text>
+<rect x="28" y="96" width="314.6666666666667" height="46" rx="4" fill="#4a7bb5" stroke="#4a7bb5" stroke-width="1"/>
+<text x="185.33333333333334" y="125" class="s" text-anchor="middle">6</text>
+<rect x="342.6666666666667" y="96" width="52.44444444444444" height="46" rx="4" fill="#6f9fd0" stroke="#6f9fd0" stroke-width="1"/>
+<text x="368.8888888888889" y="125" class="s" text-anchor="middle">1</text>
+<rect x="395.11111111111114" y="96" width="104.88888888888889" height="46" rx="4" fill="#c9a227" stroke="#c9a227" stroke-width="1"/>
+<text x="447.5555555555556" y="125" class="s" text-anchor="middle">2</text>
+<rect x="500.0" y="96" width="157.33333333333334" height="46" rx="4" fill="#c05050" stroke="#c05050" stroke-width="1"/>
+<text x="578.6666666666666" y="125" class="s" text-anchor="middle">3</text>
+<rect x="657.3333333333334" y="96" width="314.6666666666667" height="46" rx="4" fill="#9aa9b8" stroke="#9aa9b8" stroke-width="1"/>
+<text x="814.6666666666667" y="125" class="s" text-anchor="middle">6</text>
+<rect x="28" y="154" width="14" height="14" rx="3" fill="#4a7bb5" stroke="#4a7bb5" stroke-width="1"/>
+<text x="50" y="166" class="s">200 × 6</text>
+<rect x="218" y="154" width="14" height="14" rx="3" fill="#6f9fd0" stroke="#6f9fd0" stroke-width="1"/>
+<text x="240" y="166" class="s">204 × 1</text>
+<rect x="408" y="154" width="14" height="14" rx="3" fill="#c9a227" stroke="#c9a227" stroke-width="1"/>
+<text x="430" y="166" class="s">302 × 2</text>
+<rect x="598" y="154" width="14" height="14" rx="3" fill="#c05050" stroke="#c05050" stroke-width="1"/>
+<text x="620" y="166" class="s">403 × 3</text>
+<rect x="788" y="154" width="14" height="14" rx="3" fill="#9aa9b8" stroke="#9aa9b8" stroke-width="1"/>
+<text x="810" y="166" class="s">404 × 6</text>
+<rect x="28" y="194" width="458" height="214" rx="8" fill="#fdeeee" stroke="#c05050" stroke-width="1.5"/>
+<text x="44" y="224" class="hd">403 — มีอยู่ แต่คุณไม่มีสิทธิ์</text>
+<text x="40" y="252" class="m">/admin</text>
+<text x="40" y="278" class="m">/admin/users</text>
+<text x="40" y="304" class="s">ขอ 3 ครั้ง ได้ 403 ทุกครั้ง</text>
+<text x="40" y="330" class="sm">OPTIONS /admin → 204 · Allow: GET, OPTIONS</text>
+<text x="40" y="356" class="sm">403 ของทั้งสอง path + OPTIONS 204 = มี handler อยู่จริงทั้งคู่</text>
+<rect x="514" y="194" width="458" height="214" rx="8" fill="#f5f7f9" stroke="#9aa9b8" stroke-width="1.5"/>
+<text x="530" y="224" class="hd">404 — ไม่มีจริง</text>
+<text x="526" y="252" class="m">/.git/config</text>
+<text x="526" y="278" class="m">/backup.sql</text>
+<text x="526" y="304" class="m">/api/v1/users</text>
+<text x="526" y="330" class="m">/robots.txt · /server-status · /index.html</text>
+<text x="526" y="356" class="sm">ขอ 6 ครั้ง ได้ 404 ทุกครั้ง</text>
+<rect x="28" y="428" width="944" height="130" rx="8" fill="#eef4fb" stroke="#4a7bb5" stroke-width="1.5"/>
+<text x="44" y="456" class="hd">ทำไมสองกลุ่มนี้ถึงสำคัญ</text>
+<text x="40" y="482" class="s">ถ้าทุกอย่างที่ไม่มีสิทธิ์ตอบ 404 เหมือนกัน ผู้โจมตีจะไม่รู้ว่ามีอะไรอยู่</text>
+<text x="40" y="506" class="s">แต่ lab นี้ตอบ 403 ให้ 2 path — นั่นคือแผนที่ฟรี</text>
+<text x="40" y="530" class="s">ขั้นถัดไปจึงไม่ใช่การเดา path แต่คือการถามว่า "ทำไมสอง path นี้ถึงพิเศษ"</text>
+<text x="40" y="554" class="sm">ใน lab ของจริง (DVWA, Juice Shop) ความต่างแบบนี้เกิดจาก error page, header และเวลาในการตอบ</text>
+</svg>

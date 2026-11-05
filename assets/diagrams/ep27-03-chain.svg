@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" width="1000" height="700" role="img">
+<defs>
+<style>
+  .t  { font-family: sans-serif; font-size: 14px; fill: #12263a; }
+  .s  { font-family: sans-serif; font-size: 12px; fill: #3b4a5a; }
+  .sm { font-family: sans-serif; font-size: 11px; fill: #4a5b6c; }
+  .h  { font-family: sans-serif; font-size: 21px; font-weight: 700; fill: #0b2545; }
+  .hd { font-family: sans-serif; font-size: 14px; font-weight: 700; fill: #0b2545; }
+  .n  { font-family: sans-serif; font-size: 19px; font-weight: 700; fill: #0b2545; }
+  .m  { font-family: monospace; font-size: 12px; fill: #0b2545; }
+  .mm { font-family: monospace; font-size: 11px; fill: #3b4a5a; }
+  .bad { font-family: sans-serif; font-size: 12px; fill: #7a1f1f; }
+  .good{ font-family: sans-serif; font-size: 12px; fill: #14532d; }
+  .big { font-family: sans-serif; font-size: 24px; font-weight: 700; fill: #0b2545; }
+</style>
+</defs>
+<text x="28" y="40" class="h">ลูกโซ่หนึ่งเส้น: จากคนนอกที่ยังไม่ล็อกอิน ถึงแผงผู้ดูแล</text>
+<text x="28" y="64" class="s">2 payload + 1 ใบเสร็จ + cookie 1 อัน → ไปถึงแผงผู้ดูแลที่รายงาน 6 ระเบียน</text>
+<rect x="28" y="92" width="214" height="84" rx="8" fill="#f5f7f9" stroke="#9aa9b8" stroke-width="1.5"/>
+<text x="135.0" y="126" class="hd" text-anchor="middle">ไม่ล็อกอิน</text>
+<text x="135.0" y="150" class="sm" text-anchor="middle">ไปถึง 5 จาก 8 route</text>
+<line x1="245" y1="134.0" x2="263" y2="134.0" stroke="#7d93a8" stroke-width="1.6"/>
+<polygon points="263,134.0 255,129.0 255,139.0" fill="#7d93a8"/>
+<rect x="266" y="92" width="214" height="84" rx="8" fill="#fdeeee" stroke="#c05050" stroke-width="1.5"/>
+<text x="373.0" y="126" class="hd" text-anchor="middle">session ผู้ดูแล</text>
+<text x="373.0" y="150" class="sm" text-anchor="middle">SQLi 2 payload</text>
+<line x1="483" y1="134.0" x2="501" y2="134.0" stroke="#7d93a8" stroke-width="1.6"/>
+<polygon points="501,134.0 493,129.0 493,139.0" fill="#7d93a8"/>
+<rect x="504" y="92" width="214" height="84" rx="8" fill="#fdeeee" stroke="#c05050" stroke-width="1.5"/>
+<text x="611.0" y="126" class="hd" text-anchor="middle">ใบเสร็จของ bob</text>
+<text x="611.0" y="150" class="sm" text-anchor="middle">IDOR 1 ครั้ง</text>
+<line x1="721" y1="134.0" x2="739" y2="134.0" stroke="#7d93a8" stroke-width="1.6"/>
+<polygon points="739,134.0 731,129.0 731,139.0" fill="#7d93a8"/>
+<rect x="742" y="92" width="214" height="84" rx="8" fill="#fdeeee" stroke="#c05050" stroke-width="1.5"/>
+<text x="849.0" y="126" class="hd" text-anchor="middle">แผงผู้ดูแล</text>
+<text x="849.0" y="150" class="sm" text-anchor="middle">role cookie 1 อัน</text>
+<text x="28" y="214" class="hd">ผลกระทบที่วัดได้ (ไม่ใช่การคาดเดา)</text>
+<text x="28" y="236" class="s">route ที่ไปถึงได้: 5 → 8 จาก 8 · เข้าถึงได้ 6 ระเบียน (ตามแผงผู้ดูแล) · ขนออกไป 0 ไบต์</text>
+<text x="28" y="262" class="hd">คะแนน CVSS v3.1 base ของแต่ละ finding</text>
+<text x="28" y="300" class="m">F1</text>
+<rect x="58" y="284" width="380" height="22" rx="4" fill="#ffffff" stroke="#9aa9b8" stroke-width="1"/>
+<rect x="58" y="284" width="372.40000000000003" height="22" rx="4" fill="#c05050" stroke="none" stroke-width="0"/>
+<text x="450" y="300" class="bad">9.8 critical</text>
+<text x="28" y="342" class="m">F2</text>
+<rect x="58" y="326" width="380" height="22" rx="4" fill="#ffffff" stroke="#9aa9b8" stroke-width="1"/>
+<rect x="58" y="326" width="247.0" height="22" rx="4" fill="#c9a227" stroke="none" stroke-width="0"/>
+<text x="450" y="342" class="s">6.5 medium</text>
+<text x="28" y="384" class="m">F3</text>
+<rect x="58" y="368" width="380" height="22" rx="4" fill="#ffffff" stroke="#9aa9b8" stroke-width="1"/>
+<rect x="58" y="368" width="307.8" height="22" rx="4" fill="#c05050" stroke="none" stroke-width="0"/>
+<text x="450" y="384" class="bad">8.1 high</text>
+<text x="28" y="426" class="m">F4</text>
+<rect x="58" y="410" width="380" height="22" rx="4" fill="#ffffff" stroke="#9aa9b8" stroke-width="1"/>
+<rect x="58" y="410" width="163.4" height="22" rx="4" fill="#c9a227" stroke="none" stroke-width="0"/>
+<text x="450" y="426" class="s">4.3 medium</text>
+<text x="28" y="468" class="m">F5</text>
+<rect x="58" y="452" width="380" height="22" rx="4" fill="#ffffff" stroke="#9aa9b8" stroke-width="1"/>
+<rect x="58" y="452" width="201.4" height="22" rx="4" fill="#c9a227" stroke="none" stroke-width="0"/>
+<text x="450" y="468" class="s">5.3 medium</text>
+<rect x="660" y="276" width="312" height="210" rx="8" fill="#fdf7e3" stroke="#c9a227" stroke-width="1.5"/>
+<text x="676" y="304" class="hd">detection เห็นอะไร</text>
+<text x="672" y="328" class="s">log 28 บรรทัดในเดโม</text>
+<text x="672" y="354" class="s">กฎนับ 5xx → เตือน 0 ครั้ง</text>
+<text x="672" y="380" class="s">กฎเชิงความหมาย → เตือน 2 ครั้ง</text>
+<text x="672" y="406" class="bad">เห็นการข้ามรหัสผ่าน 0 ครั้ง</text>
+<text x="672" y="432" class="sm">log ปกติไม่มี actor/owner → ไม่เห็น IDOR</text>
+<rect x="28" y="502" width="944" height="150" rx="8" fill="#eefaf1" stroke="#3f9c63" stroke-width="1.5"/>
+<text x="44" y="532" class="hd">retest บน lab ที่แก้แล้ว — ส่วนที่ลูกค้าจ่ายเงินให้จริง</text>
+<text x="40" y="560" class="s">ปิด 4 จาก 5 · ยังเปิด 1 (accepted risk: rate limit ที่ /login)</text>
+<text x="40" y="586" class="sm">F1 401 · F2 403 · F3 403 · F4 400 · F5 ยังไม่มี 429 หลังลอง 6 ครั้ง</text>
+<text x="40" y="612" class="sm">คะแนนเฉลี่ย 6.8 · สูงสุด 9.8 — ตัวเลขนี้ใช้จัดลำดับ ไม่ได้ใช้ตัดสินว่า "พอแล้ว"</text>
+</svg>

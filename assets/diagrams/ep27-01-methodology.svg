@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 660" width="1000" height="660" role="img">
+<defs>
+<style>
+  .t  { font-family: sans-serif; font-size: 14px; fill: #12263a; }
+  .s  { font-family: sans-serif; font-size: 12px; fill: #3b4a5a; }
+  .sm { font-family: sans-serif; font-size: 11px; fill: #4a5b6c; }
+  .h  { font-family: sans-serif; font-size: 21px; font-weight: 700; fill: #0b2545; }
+  .hd { font-family: sans-serif; font-size: 14px; font-weight: 700; fill: #0b2545; }
+  .n  { font-family: sans-serif; font-size: 19px; font-weight: 700; fill: #0b2545; }
+  .m  { font-family: monospace; font-size: 12px; fill: #0b2545; }
+  .mm { font-family: monospace; font-size: 11px; fill: #3b4a5a; }
+  .bad { font-family: sans-serif; font-size: 12px; fill: #7a1f1f; }
+  .good{ font-family: sans-serif; font-size: 12px; fill: #14532d; }
+  .big { font-family: sans-serif; font-size: 24px; font-weight: 700; fill: #0b2545; }
+</style>
+</defs>
+<text x="28" y="40" class="h">pentest คือกระบวนการห้าขั้น ไม่ใช่การยิงเครื่องมือ</text>
+<text x="28" y="64" class="s">18 คำขอในขั้น scanning · ทุกคำขอวิ่งเข้า ServeHTTP ใน process เดียว (ไม่มีพอร์ต ไม่มีการ dial)</text>
+<rect x="28" y="92" width="944" height="78" rx="8" fill="#eef4fb" stroke="#4a7bb5" stroke-width="1.2"/>
+<rect x="44" y="112" width="36" height="36" rx="8" fill="#ffffff" stroke="#4a7bb5" stroke-width="1.2"/>
+<text x="62" y="137" class="n" text-anchor="middle">1</text>
+<text x="94" y="122" class="hd">Reconnaissance</text>
+<text x="94" y="144" class="sm">อ่านสิ่งที่แอปบอกเราเอง</text>
+<line x1="320" y1="104" x2="320" y2="158" stroke="#4a7bb5" stroke-width="1" stroke-dasharray="4 4"/>
+<text x="336" y="122" class="s">ยิง 1 คำขอ → 4 route · 2 ฟอร์ม · 1 hidden field</text>
+<text x="336" y="144" class="sm">2 คอมเมนต์ในหน้า · 1 อันบอก role จาก client · 1 อันบอก build/LAB_MODE</text>
+<rect x="28" y="182" width="944" height="78" rx="8" fill="#eef4fb" stroke="#4a7bb5" stroke-width="1.2"/>
+<rect x="44" y="202" width="36" height="36" rx="8" fill="#ffffff" stroke="#4a7bb5" stroke-width="1.2"/>
+<text x="62" y="227" class="n" text-anchor="middle">2</text>
+<text x="94" y="212" class="hd">Scanning &amp; enumeration</text>
+<text x="94" y="234" class="sm">หาว่ามีอะไรอยู่</text>
+<line x1="320" y1="194" x2="320" y2="248" stroke="#4a7bb5" stroke-width="1" stroke-dasharray="4 4"/>
+<text x="336" y="212" class="s">18 คำขอ → 403 2 path · 404 6 path · 200 6 ครั้ง</text>
+<text x="336" y="234" class="sm">403 กับ 404 ต่างกัน = แผนที่: ผู้โจมตีไม่ต้องเดา path ผิดอีกต่อไป</text>
+<rect x="28" y="272" width="944" height="78" rx="8" fill="#fdeeee" stroke="#c05050" stroke-width="1.2"/>
+<rect x="44" y="292" width="36" height="36" rx="8" fill="#ffffff" stroke="#c05050" stroke-width="1.2"/>
+<text x="62" y="317" class="n" text-anchor="middle">3</text>
+<text x="94" y="302" class="hd">Exploitation</text>
+<text x="94" y="324" class="sm">พิสูจน์ว่าช่องโหว่ใช้ได้จริง</text>
+<line x1="320" y1="284" x2="320" y2="338" stroke="#c05050" stroke-width="1" stroke-dasharray="4 4"/>
+<text x="336" y="302" class="s">2 payload → session 2 อัน (อลิซ + ผู้ดูแล) · ใบเสร็จของ bob 1</text>
+<text x="336" y="324" class="sm">อ่านแค่ 1 field เพื่อพิสูจน์ · data_exported_bytes=0</text>
+<rect x="28" y="362" width="944" height="78" rx="8" fill="#fdeeee" stroke="#c05050" stroke-width="1.2"/>
+<rect x="44" y="382" width="36" height="36" rx="8" fill="#ffffff" stroke="#c05050" stroke-width="1.2"/>
+<text x="62" y="407" class="n" text-anchor="middle">4</text>
+<text x="94" y="392" class="hd">Post-exploitation</text>
+<text x="94" y="414" class="sm">วัดว่าถ้าไปถึงแล้วกระทบแค่ไหน</text>
+<line x1="320" y1="374" x2="320" y2="428" stroke="#c05050" stroke-width="1" stroke-dasharray="4 4"/>
+<text x="336" y="392" class="s">route ที่ไปถึง 5 → 8 จาก 8 · 6 ระเบียน</text>
+<text x="336" y="414" class="sm">กฎ detection เตือน 2 ครั้ง · แต่เห็นการข้ามรหัสผ่าน 0 ครั้ง</text>
+<rect x="28" y="452" width="944" height="78" rx="8" fill="#eefaf1" stroke="#3f9c63" stroke-width="1.2"/>
+<rect x="44" y="472" width="36" height="36" rx="8" fill="#ffffff" stroke="#3f9c63" stroke-width="1.2"/>
+<text x="62" y="497" class="n" text-anchor="middle">5</text>
+<text x="94" y="482" class="hd">Reporting</text>
+<text x="94" y="504" class="sm">ส่งมอบสิ่งที่ต้องแก้</text>
+<line x1="320" y1="464" x2="320" y2="518" stroke="#3f9c63" stroke-width="1" stroke-dasharray="4 4"/>
+<text x="336" y="482" class="s">5 finding · critical 1 · high 1 · medium 3</text>
+<text x="336" y="504" class="sm">retest: ปิด 4 · เปิด 1 (accepted 1) · คะแนนสูงสุด 9.8</text>
+<rect x="28" y="546" width="944" height="104" rx="8" fill="#fdf7e3" stroke="#c9a227" stroke-width="1.5"/>
+<text x="44" y="574" class="hd">ขอบเขตมาก่อนเครื่องมือ — ประตูเดียวที่ทุกขั้นต้องผ่าน</text>
+<text x="40" y="600" class="s">ทดสอบประตูขอบเขต 4 เป้าหมาย: ผ่าน 1 · ถูกปฏิเสธ 3 (โดเมนนอกขอบเขต, userinfo หลอก host, scheme file)</text>
+<text x="40" y="624" class="sm">การปฏิเสธที่สำคัญที่สุดคือการปฏิเสธเป้าหมาย — ไม่ใช่การหาช่องโหว่ได้มากขึ้น</text>
+</svg>
