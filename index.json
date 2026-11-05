@@ -1,5 +1,20 @@
 [
   {
+    "slug": "2026-11-05-software-security-27-pentest-basics",
+    "title": "'Penetration testing เบื้องต้น: จาก recon ถึงรายงานที่ทีมใช้ได้จริง (ตอนที่ 27)'",
+    "date": "2026-11-05",
+    "tags": [
+      "software-security",
+      "penetration-testing",
+      "pentest",
+      "enumeration",
+      "access-control",
+      "cvss",
+      "go"
+    ],
+    "description": "ตอนที่ 27 — 18 คำขอใน process เดียวเปิดเผย 4 route · 403 สอง path กลายเป็นแผนที่ฟรี · 2 payload → session สองอัน (อลิซ + ผู้ดูแล) · ใบเสร็จของคนอื่นอีก 1 ครั้ง · แล้วรายงาน 5 finding ที่มีเพียง 1 ข้อเป็น critical และ retest ปิดได้ 4"
+  },
+  {
     "slug": "2026-11-04-software-security-26-secure-code-review",
     "title": "'Secure code review: อ่านโค้ดหาช่องโหว่ที่เครื่องมือมองไม่เห็น (ตอนที่ 26)'",
     "date": "2026-11-04",
