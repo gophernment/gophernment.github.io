@@ -1,5 +1,20 @@
 [
   {
+    "slug": "2026-11-06-software-security-28-logging-incident-response",
+    "title": "'Logging และการรับมือเหตุการณ์: log ที่สืบสวนได้ ถึง post-mortem ที่ไม่กล่าวโทษใคร (ตอนที่ 28)'",
+    "date": "2026-11-06",
+    "tags": [
+      "software-security",
+      "logging",
+      "incident-response",
+      "observability",
+      "postmortem",
+      "gdpr",
+      "go"
+    ],
+    "description": "ตอนที่ 28 — log แบบข้อความอิสระเก็บครบ 5 canary และกู้คืนได้ 0 เหตุการณ์ · 14 field ที่เสนอ 7 ถูกปฏิเสธ · บรรทัดปลอม 1 บรรทัดใน log แบบข้อความ และ 0 ใน JSON · 12 สัญญาณ → 2 alert โดยมี 1 กฎที่เงียบ · MTTD 29 นาที แต่คนกดรับรู้ช้า 30 นาที · post-mortem 9 บรรทัด 5 Whys และ action item 4 ข้อ"
+  },
+  {
     "slug": "2026-11-05-software-security-27-pentest-basics",
     "title": "'Penetration testing เบื้องต้น: จาก recon ถึงรายงานที่ทีมใช้ได้จริง (ตอนที่ 27)'",
     "date": "2026-11-05",
