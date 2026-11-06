@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600" role="img">
+<defs>
+<style>
+  .t  { font-family: sans-serif; font-size: 14px; fill: #12263a; }
+  .s  { font-family: sans-serif; font-size: 12px; fill: #3b4a5a; }
+  .sm { font-family: sans-serif; font-size: 11px; fill: #4a5b6c; }
+  .h  { font-family: sans-serif; font-size: 21px; font-weight: 700; fill: #0b2545; }
+  .hd { font-family: sans-serif; font-size: 14px; font-weight: 700; fill: #0b2545; }
+  .n  { font-family: sans-serif; font-size: 19px; font-weight: 700; fill: #0b2545; }
+  .m  { font-family: monospace; font-size: 12px; fill: #0b2545; }
+  .mm { font-family: monospace; font-size: 11px; fill: #3b4a5a; }
+  .bad { font-family: sans-serif; font-size: 12px; fill: #7a1f1f; }
+  .good{ font-family: sans-serif; font-size: 12px; fill: #14532d; }
+  .big { font-family: sans-serif; font-size: 24px; font-weight: 700; fill: #0b2545; }
+</style>
+</defs>
+<text x="28" y="40" class="h">post-mortem ที่ดี: เล่าเหตุการณ์ด้วยบทบาท แล้วจบด้วยงานที่วัดได้</text>
+<text x="28" y="64" class="s">timeline 9 บรรทัด · 5 Whys 5 ชั้น · action item 4 ข้อ · เอกสารที่ผิดกติกาถูกจับได้ 4 ปัญหา (out/05)</text>
+<text x="28" y="86" class="hd">5 Whys: ถามต่อจนถึงสิ่งที่แก้ได้</text>
+<rect x="28" y="106" width="560" height="62" rx="8" fill="#eef4fb" stroke="#4a7bb5" stroke-width="1.5"/>
+<text x="42" y="130" class="hd">Why 1</text>
+<text x="102" y="130" class="s">ทำไมบัญชีถูกเข้าถึงได้</text>
+<text x="42" y="152" class="sm">เพราะไม่มีการจำกัดจำนวนครั้งต่อบัญชี</text>
+<line x1="308" y1="168" x2="308" y2="174" stroke="#9bb0c6" stroke-width="1.2"/>
+<polygon points="308,174 303,166 313,166" fill="#9bb0c6"/>
+<rect x="28" y="176" width="560" height="62" rx="8" fill="#eef4fb" stroke="#4a7bb5" stroke-width="1.5"/>
+<text x="42" y="200" class="hd">Why 2</text>
+<text x="102" y="200" class="s">ทำไมไม่มีการจำกัดจำนวนครั้ง</text>
+<text x="42" y="222" class="sm">เพราะ rate limit นับต่อ IP ไม่ใช่ต่อบัญชี</text>
+<line x1="308" y1="238" x2="308" y2="244" stroke="#9bb0c6" stroke-width="1.2"/>
+<polygon points="308,244 303,236 313,236" fill="#9bb0c6"/>
+<rect x="28" y="246" width="560" height="62" rx="8" fill="#eef4fb" stroke="#4a7bb5" stroke-width="1.5"/>
+<text x="42" y="270" class="hd">Why 3</text>
+<text x="102" y="270" class="s">ทำไมจึงนับต่อ IP</text>
+<text x="42" y="292" class="sm">เพราะถือว่า 1 IP = 1 คน (จริงเฉพาะก่อนยุค bot)</text>
+<line x1="308" y1="308" x2="308" y2="314" stroke="#9bb0c6" stroke-width="1.2"/>
+<polygon points="308,314 303,306 313,306" fill="#9bb0c6"/>
+<rect x="28" y="316" width="560" height="62" rx="8" fill="#eef4fb" stroke="#4a7bb5" stroke-width="1.5"/>
+<text x="42" y="340" class="hd">Why 4</text>
+<text x="102" y="340" class="s">ทำไมสมมติฐานนั้นไม่ถูกทบทวน</text>
+<text x="42" y="362" class="sm">เพราะไม่มีรายการสมมติฐานให้ทบทวนเป็นรอบ</text>
+<line x1="308" y1="378" x2="308" y2="384" stroke="#9bb0c6" stroke-width="1.2"/>
+<polygon points="308,384 303,376 313,376" fill="#9bb0c6"/>
+<rect x="28" y="386" width="560" height="62" rx="8" fill="#fdf7e3" stroke="#c9a227" stroke-width="1.5"/>
+<text x="42" y="410" class="hd">Why 5</text>
+<text x="102" y="410" class="s">ทำไมไม่มีรายการสมมติฐาน</text>
+<text x="42" y="432" class="sm">เพราะไม่ผูกกับการทบทวนภัยคุกคาม (แก้ได้)</text>
+<text x="608" y="86" class="hd">สมดุลของ action item</text>
+<rect x="608" y="102" width="364" height="150" rx="8" fill="#eefaf1" stroke="#3f9c63" stroke-width="1.5"/>
+<text x="620" y="128" class="hd">ทั้งหมด 4 ข้อ</text>
+<text x="620" y="152" class="sm">prevent 2 — แก้ที่ต้นเหตุ</text>
+<text x="620" y="174" class="sm">detect 1 — เห็นเร็วขึ้น</text>
+<text x="620" y="196" class="sm">mitigate 1 — ลดผลกระทบ</text>
+<text x="620" y="218" class="sm">ทุกข้อมีเจ้าของ(บทบาท) + วันครบกำหนด</text>
+<rect x="608" y="264" width="364" height="152" rx="8" fill="#fdeeee" stroke="#c05050" stroke-width="1.5"/>
+<text x="620" y="290" class="hd">ประตูที่ตรวจได้ ไม่ใช่คำสัญญา</text>
+<text x="620" y="314" class="s">เอกสารที่ดี: 0 ปัญหา</text>
+<text x="620" y="336" class="sm">เอกสารที่ผิดกติกา 4 ข้อ: 4 ปัญหา</text>
+<text x="620" y="358" class="sm">timeline ต้องเป็นบทบาท ไม่ใช่ชื่อ</text>
+<text x="620" y="380" class="sm">5 Whys ครบ 5 ชั้น และปิดที่ระบบ</text>
+<rect x="28" y="464" width="944" height="96" rx="8" fill="#f5f7f9" stroke="#9aa9b8" stroke-width="1.5"/>
+<text x="44" y="490" class="hd">post-mortem ที่ไม่มี action item ปิด คือ post-mortem ที่ไม่มีอยู่</text>
+<text x="40" y="514" class="sm">ทุกข้อต้องมีเจ้าของ วันครบกำหนด และชนิด — แล้วนัดตรวจว่าปิดจริง</text>
+<text x="40" y="538" class="sm">ถ้าผู้ใช้เจอก่อนเรา ต้องมี action ชนิด detect อย่างน้อยหนึ่งข้อเสมอ</text>
+</svg>

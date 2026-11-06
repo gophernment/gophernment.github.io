@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 640" width="1000" height="640" role="img">
+<defs>
+<style>
+  .t  { font-family: sans-serif; font-size: 14px; fill: #12263a; }
+  .s  { font-family: sans-serif; font-size: 12px; fill: #3b4a5a; }
+  .sm { font-family: sans-serif; font-size: 11px; fill: #4a5b6c; }
+  .h  { font-family: sans-serif; font-size: 21px; font-weight: 700; fill: #0b2545; }
+  .hd { font-family: sans-serif; font-size: 14px; font-weight: 700; fill: #0b2545; }
+  .n  { font-family: sans-serif; font-size: 19px; font-weight: 700; fill: #0b2545; }
+  .m  { font-family: monospace; font-size: 12px; fill: #0b2545; }
+  .mm { font-family: monospace; font-size: 11px; fill: #3b4a5a; }
+  .bad { font-family: sans-serif; font-size: 12px; fill: #7a1f1f; }
+  .good{ font-family: sans-serif; font-size: 12px; fill: #14532d; }
+  .big { font-family: sans-serif; font-size: 24px; font-weight: 700; fill: #0b2545; }
+</style>
+</defs>
+<text x="28" y="40" class="h">log ที่สืบสวนได้ = field ที่มีความหมาย ไม่ใช่ประโยคที่อ่านรู้เรื่อง</text>
+<text x="28" y="64" class="s">6 เหตุการณ์ · 6/6 มี field บังคับครบ · trace id เดียวกันทั้งคำขอ · ชื่อ field ที่เป็นความลับในผลลัพธ์ 0 (out/02)</text>
+<rect x="28" y="88" width="944" height="176" rx="10" fill="#eef4fb" stroke="#4a7bb5" stroke-width="1.5"/>
+<text x="44" y="116" class="hd">หนึ่งเหตุการณ์ที่เครื่องอ่านได้ (JSON หนึ่งบรรทัด)</text>
+<text x="44" y="144" class="m">{ "ts": "2026-11-06T02:02:00Z",   "level": "INFO",  "event": "auth.login",</text>
+<text x="44" y="166" class="m">  "outcome": "failure",  "actor": "user-7f3a",  "source": "198.51.100.0",</text>
+<text x="44" y="188" class="m">  "trace_id": "4bf92f3577b34da6a3ce929d0e0e4736",</text>
+<text x="44" y="210" class="m">  "route": "/login",  "status": 401,  "duration_ms": 131,  "build": "ep28-1" }</text>
+<rect x="28" y="284" width="304" height="168" rx="8" fill="#eefaf1" stroke="#3f9c63" stroke-width="1.5"/>
+<text x="40" y="310" class="hd">ชื่อ field — allowlist</text>
+<text x="40" y="334" class="sm">12 ชื่อใน allowlist</text>
+<text x="40" y="358" class="sm">ไม่รู้จัก = ปฏิเสธ</text>
+<text x="40" y="382" class="sm">denylist อย่างเดียวไม่พอ</text>
+<text x="40" y="406" class="sm">เพราะชื่อใหม่โผล่ทุก sprint</text>
+<rect x="348" y="284" width="304" height="168" rx="8" fill="#fdeeee" stroke="#c05050" stroke-width="1.5"/>
+<text x="360" y="310" class="hd">ค่าที่ห้ามหลุด</text>
+<text x="360" y="334" class="sm">12 คำต้องห้ามในชื่อ</text>
+<text x="360" y="358" class="sm">password · token · card</text>
+<text x="360" y="382" class="sm">otp · session · email</text>
+<text x="360" y="406" class="sm">ค่าเป็น JWT ก็ถูกปฏิเสธ</text>
+<rect x="668" y="284" width="304" height="168" rx="8" fill="#fdf7e3" stroke="#c9a227" stroke-width="1.5"/>
+<text x="680" y="310" class="hd">ตัวเลขที่วัดได้</text>
+<text x="680" y="334" class="sm">6 เหตุการณ์ผ่านประตู</text>
+<text x="680" y="358" class="sm">ประตูปฏิเสธ 0 field</text>
+<text x="680" y="382" class="sm">หนึ่งเหตุการณ์ใช้ 11 field</text>
+<text x="680" y="406" class="sm">หลุด 0 ชื่อความลับ</text>
+<rect x="28" y="474" width="944" height="132" rx="8" fill="#f5f7f9" stroke="#9aa9b8" stroke-width="1.5"/>
+<text x="44" y="500" class="hd">ห้าม log สิ่งเหล่านี้ — และเหตุผลที่ไม่ใช่แค่ "เสียภาพลักษณ์"</text>
+<text x="40" y="524" class="s">รหัสผ่าน/คีย์/token: ผู้อ่าน log ทุกคนได้สิทธิ์แทนเจ้าของทันที (CWE-532)</text>
+<text x="40" y="548" class="sm">ข้อมูลส่วนบุคคล: ทำให้ log กลายเป็นฐานข้อมูลที่ต้องแจ้งเหตุตาม GDPR</text>
+<text x="40" y="572" class="sm">ข้อความจากผู้ใช้ที่ไม่ได้ escape: ผู้โจมตีพิมพ์บรรทัดปลอมได้ (CWE-117) — ดูเดโม 3</text>
+</svg>

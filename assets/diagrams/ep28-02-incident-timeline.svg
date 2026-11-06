@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 880" width="1000" height="880" role="img">
+<defs>
+<style>
+  .t  { font-family: sans-serif; font-size: 14px; fill: #12263a; }
+  .s  { font-family: sans-serif; font-size: 12px; fill: #3b4a5a; }
+  .sm { font-family: sans-serif; font-size: 11px; fill: #4a5b6c; }
+  .h  { font-family: sans-serif; font-size: 21px; font-weight: 700; fill: #0b2545; }
+  .hd { font-family: sans-serif; font-size: 14px; font-weight: 700; fill: #0b2545; }
+  .n  { font-family: sans-serif; font-size: 19px; font-weight: 700; fill: #0b2545; }
+  .m  { font-family: monospace; font-size: 12px; fill: #0b2545; }
+  .mm { font-family: monospace; font-size: 11px; fill: #3b4a5a; }
+  .bad { font-family: sans-serif; font-size: 12px; fill: #7a1f1f; }
+  .good{ font-family: sans-serif; font-size: 12px; fill: #14532d; }
+  .big { font-family: sans-serif; font-size: 24px; font-weight: 700; fill: #0b2545; }
+</style>
+</defs>
+<text x="28" y="40" class="h">หกขั้นของการตอบสนอง: ทุกขั้นมีเวลาและหลักฐานกำกับ</text>
+<text x="28" y="64" class="s">12 สัญญาณ → 2 alert · MTTD 29 นาที · กดรับรู้ช้า 30 นาที · MTTR 81 นาที</text>
+<line x1="176" y1="116" x2="176" y2="546" stroke="#c9d5e2" stroke-width="2"/>
+<rect x="28" y="92" width="944" height="70" rx="8" fill="#fdeeee" stroke="#c05050" stroke-width="1.2"/>
+<text x="56" y="122" class="m">02:31</text>
+<text x="56" y="142" class="sm">(เริ่มนับ)</text>
+<circle cx="176" cy="127" r="7" fill="#c05050" stroke="#ffffff" stroke-width="2"/>
+<text x="200" y="122" class="hd">ตรวจจับได้</text>
+<text x="200" y="144" class="sm">กฎ R-03 เตือน critical: สำเร็จหลังล้มเหลว 8 ครั้ง</text>
+<rect x="28" y="172" width="944" height="70" rx="8" fill="#eef4fb" stroke="#4a7bb5" stroke-width="1.2"/>
+<text x="56" y="202" class="m">02:36</text>
+<text x="56" y="222" class="sm">(+5 นาที)</text>
+<circle cx="176" cy="207" r="7" fill="#4a7bb5" stroke="#ffffff" stroke-width="2"/>
+<text x="200" y="202" class="hd">คัดกรอง</text>
+<text x="200" y="224" class="sm">ยืนยันว่าเป็นเหตุจริง เปิดช่องทางประสาน ตั้งผู้ดูแล</text>
+<rect x="28" y="252" width="944" height="70" rx="8" fill="#eef4fb" stroke="#4a7bb5" stroke-width="1.2"/>
+<text x="56" y="282" class="m">02:47</text>
+<text x="56" y="302" class="sm">(+16 นาที)</text>
+<circle cx="176" cy="287" r="7" fill="#4a7bb5" stroke="#ffffff" stroke-width="2"/>
+<text x="200" y="282" class="hd">กักกัน</text>
+<text x="200" y="304" class="sm">บล็อกเครือข่ายต้นทาง เพิกถอน session ที่เกี่ยวข้อง</text>
+<rect x="28" y="332" width="944" height="70" rx="8" fill="#eef4fb" stroke="#4a7bb5" stroke-width="1.2"/>
+<text x="56" y="362" class="m">03:19</text>
+<text x="56" y="382" class="sm">(+48 นาที)</text>
+<circle cx="176" cy="367" r="7" fill="#4a7bb5" stroke="#ffffff" stroke-width="2"/>
+<text x="200" y="362" class="hd">กำจัด</text>
+<text x="200" y="384" class="sm">หมุนคีย์ที่อาจรั่ว ปิดเส้นทางที่ใช้เดารหัสผ่าน</text>
+<rect x="28" y="412" width="944" height="70" rx="8" fill="#eefaf1" stroke="#3f9c63" stroke-width="1.2"/>
+<text x="56" y="442" class="m">03:52</text>
+<text x="56" y="462" class="sm">(+81 นาที)</text>
+<circle cx="176" cy="447" r="7" fill="#3f9c63" stroke="#ffffff" stroke-width="2"/>
+<text x="200" y="442" class="hd">กู้คืน</text>
+<text x="200" y="464" class="sm">เปิดบริการครบ ตรวจ log ว่าไม่มีสัญญาณซ้ำ</text>
+<rect x="28" y="492" width="944" height="70" rx="8" fill="#eefaf1" stroke="#3f9c63" stroke-width="1.2"/>
+<text x="56" y="522" class="m">04:40</text>
+<text x="56" y="542" class="sm">(+129 นาที)</text>
+<circle cx="176" cy="527" r="7" fill="#3f9c63" stroke="#ffffff" stroke-width="2"/>
+<text x="200" y="522" class="hd">ปิดและถอดบทเรียน</text>
+<text x="200" y="544" class="sm">ปิดเหตุการณ์ เปิดรอบ post-mortem (ภาพที่ 3)</text>
+<rect x="28" y="576" width="944" height="148" rx="8" fill="#fdf7e3" stroke="#c9a227" stroke-width="1.5"/>
+<text x="44" y="604" class="hd">ตัวเลขที่ต้องรายงาน ไม่ใช่ความรู้สึกว่า "ตอบสนองเร็ว"</text>
+<text x="40" y="630" class="s">สัญญาณแรก 02:02 → ระบบเห็น 02:31 = 29 นาที</text>
+<text x="40" y="656" class="s">alert ครั้งแรก 02:06 → คนกดรับรู้ 02:36 = 30 นาที คือช่วงที่ข้อมูลออกไปได้</text>
+<text x="40" y="682" class="sm">กักกันได้ใน 16 นาทีหลังตรวจจับ · กู้คืนใน 81 นาที · ปิดครบ 158 นาทีนับจากสัญญาณแรก</text>
+<rect x="28" y="740" width="944" height="96" rx="8" fill="#fdeeee" stroke="#c05050" stroke-width="1.5"/>
+<text x="44" y="766" class="hd">นาฬิกาที่เดินคู่กันทันทีที่รู้ตัว: แจ้งเหตุส่วนบุคคลภายใน 72 ชั่วโมง</text>
+<text x="40" y="790" class="sm">เส้นตายแจ้ง (GDPR ข้อ 33): 2026-11-09T02:31:00Z · notify_required=1</text>
+<text x="40" y="814" class="sm">กฎที่เงียบในเดโมนี้: [R-02] — ต้องตอบให้ได้ว่าทำไมมันไม่ยิง</text>
+</svg>
