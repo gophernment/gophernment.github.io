@@ -1,5 +1,20 @@
 [
   {
+    "slug": "2026-11-07-software-security-29-secrets-supply-chain-defense",
+    "title": "'Secrets และ Supply Chain: ความลับที่หลุดไปกับ git และหลักฐานว่า artifact ที่ deploy คือ artifact ที่ build (ตอนที่ 29)'",
+    "date": "2026-11-07",
+    "tags": [
+      "software-security",
+      "secrets-management",
+      "supply-chain",
+      "sbom",
+      "code-signing",
+      "dependency-pinning",
+      "go"
+    ],
+    "description": "ตอนที่ 29 — ลบความลับออกจาก repo แล้วมันยังอยู่ในประวัติ 2 revision · ไฟล์ 0644 ถูกประตูปฏิเสธตอนบูต · SBOM 10 component มี typosquat 1 ตัว · artifact ที่ deploy ต่างจากที่ build (digest ไม่ตรง) · ลายเซ็นที่ครอบแค่ tag ถูกสลับ commit · MVS ดัน dependency เดิมขึ้น 1 ขั้น · go.mod/go.sum ถูกจับ 4 ข้อและประตูปฏิเสธการบูต"
+  },
+  {
     "slug": "2026-11-06-software-security-28-logging-incident-response",
     "title": "'Logging และการรับมือเหตุการณ์: log ที่สืบสวนได้ ถึง post-mortem ที่ไม่กล่าวโทษใคร (ตอนที่ 28)'",
     "date": "2026-11-06",
