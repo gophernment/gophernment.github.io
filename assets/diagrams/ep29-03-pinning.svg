@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 580" width="1000" height="580" role="img">
+<defs>
+<style>
+  .t  { font-family: sans-serif; font-size: 14px; fill: #12263a; }
+  .s  { font-family: sans-serif; font-size: 12px; fill: #3b4a5a; }
+  .sm { font-family: sans-serif; font-size: 11px; fill: #4a5b6c; }
+  .h  { font-family: sans-serif; font-size: 21px; font-weight: 700; fill: #0b2545; }
+  .hd { font-family: sans-serif; font-size: 14px; font-weight: 700; fill: #0b2545; }
+  .n  { font-family: sans-serif; font-size: 19px; font-weight: 700; fill: #0b2545; }
+  .m  { font-family: monospace; font-size: 12px; fill: #0b2545; }
+  .mm { font-family: monospace; font-size: 11px; fill: #3b4a5a; }
+  .bad { font-family: sans-serif; font-size: 12px; fill: #7a1f1f; }
+  .good{ font-family: sans-serif; font-size: 12px; fill: #14532d; }
+  .big { font-family: sans-serif; font-size: 24px; font-weight: 700; fill: #0b2545; }
+</style>
+</defs>
+<text x="28" y="40" class="h">ปักหมุดหรือปล่อยลอย: ผลต่างของการ resolve สองรอบ (การเลือกเวอร์ชันจริง)</text>
+<text x="28" y="64" class="s">MVS ดัน mux จาก v1.2.0 เป็น v1.4.0 โดยเราไม่ได้แก้โค้ด · out/05</text>
+<rect x="28" y="88" width="452" height="224" rx="10" fill="#fdeeee" stroke="#c05050" stroke-width="1.5"/>
+<text x="44" y="114" class="hd">ช่วงเวอร์ชัน  ^1.2.0</text>
+<text x="40" y="142" class="s">index รอบแรก  -&gt; v1.9.3</text>
+<text x="40" y="172" class="s">index รอบที่สอง -&gt; v1.9.4  (มีคน publish เพิ่ม)</text>
+<text x="40" y="202" class="sm">ผลลัพธ์: build คนละเวอร์ชัน ทั้งที่โค้ดเดิม</text>
+<text x="40" y="232" class="m">floating_diff = 1</text>
+<text x="44" y="288" class="sm">ปัญหาไม่ใช่ตัวเลข แต่คือความไม่แน่นอน</text>
+<rect x="520" y="88" width="452" height="224" rx="10" fill="#eefaf1" stroke="#3f9c63" stroke-width="1.5"/>
+<text x="536" y="114" class="hd">ปักหมุด  v1.9.3 + hash</text>
+<text x="532" y="142" class="s">index รอบแรก  -&gt; v1.9.3</text>
+<text x="532" y="172" class="s">index รอบที่สอง -&gt; v1.9.3</text>
+<text x="532" y="202" class="sm">ถ้าเวอร์ชันหายไป: หยุด ไม่ใช่เลื่อนขึ้นเอง</text>
+<text x="532" y="232" class="m">pinned_diff = 0</text>
+<text x="536" y="288" class="sm">ผลเดิมทุกเครื่อง คือสิ่งที่ audit ต้องการ</text>
+<rect x="28" y="332" width="452" height="110" rx="8" fill="#eef4fb" stroke="#4a7bb5" stroke-width="1.5"/>
+<text x="44" y="358" class="hd">MVS: เอาค่ามากสุดของขั้นต่ำทั้งหลาย</text>
+<text x="44" y="386" class="s">เราขอ mux v1.2.0 · dependency ขอ v1.4.0</text>
+<text x="44" y="412" class="m">mvs_bumps = 1 · selected = v1.4.0</text>
+<rect x="520" y="332" width="452" height="110" rx="8" fill="#fdf7e3" stroke="#c9a227" stroke-width="1.5"/>
+<text x="536" y="358" class="hd">สิ่งที่ประตูยังจับได้</text>
+<text x="536" y="386" class="s">missing_hash 2 · pseudo 1 · replace 1</text>
+<text x="536" y="412" class="m">sum_mismatch 1 → gate_refused 1</text>
+<rect x="28" y="462" width="944" height="94" rx="8" fill="#f5f7f9" stroke="#9aa9b8" stroke-width="1.5"/>
+<text x="40" y="486" class="s">go.mod ของ Go ไม่มี range: unpinned = 0 — ปัญหาจึงย้ายไปที่ replace, pseudo-version และ hash</text>
+<text x="40" y="512" class="sm">hash ใน go.sum คือด่านสุดท้าย: เนื้อโมดูลเปลี่ยนแม้เวอร์ชันเดิม ต้องถูกปฏิเสธ</text>
+</svg>
