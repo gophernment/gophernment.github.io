@@ -1,5 +1,19 @@
 [
   {
+    "slug": "2026-11-08-software-security-30-capstone-security-audit",
+    "title": "'Capstone: audit โปรเจกต์จริงตั้งแต่ scope ถึงรายงาน — และเส้นทางสายงานที่ต่อจากตรงนี้ (ตอนที่ 30)'",
+    "date": "2026-11-08",
+    "tags": [
+      "software-security",
+      "security-audit",
+      "appsec",
+      "owasp-top-10",
+      "cvss",
+      "go"
+    ],
+    "description": "ตอนที่ 30 (ตอนจบ) — 8 กฎ static อ่าน AST จับ finding 8 ข้อในแอปจำลอง (critical 1 · high 1 · medium 6) · probe 8 ตัวยืนยันได้ 8/8 และโค้ดที่แก้แล้วเหลือ 0 · คะแนน 9.8 มาจาก CVSS v3.1 ที่คำนวณในโค้ด ไม่ใช่จากเครื่องคิด · โอนเงินที่ได้ error แต่ยอดเงินรวมเพิ่มจาก 13000 เป็น 1013000 · token ของสองอินสแตนซ์ที่เพิ่งบูตออกมาเหมือนกัน · แล้วปิดท้ายด้วยเส้นทางสายงาน security และสรุปทั้ง 30 ตอน"
+  },
+  {
     "slug": "2026-11-07-software-security-29-secrets-supply-chain-defense",
     "title": "'Secrets และ Supply Chain: ความลับที่หลุดไปกับ git และหลักฐานว่า artifact ที่ deploy คือ artifact ที่ build (ตอนที่ 29)'",
     "date": "2026-11-07",
