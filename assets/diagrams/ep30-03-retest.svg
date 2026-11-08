@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 560" width="1080" height="560" role="img">
+<defs>
+<style>
+  .t  { font-family: sans-serif; font-size: 14px; fill: #12263a; }
+  .s  { font-family: sans-serif; font-size: 12px; fill: #3b4a5a; }
+  .sm { font-family: sans-serif; font-size: 11px; fill: #4a5b6c; }
+  .h  { font-family: sans-serif; font-size: 21px; font-weight: 700; fill: #0b2545; }
+  .hd { font-family: sans-serif; font-size: 14px; font-weight: 700; fill: #0b2545; }
+  .n  { font-family: sans-serif; font-size: 19px; font-weight: 700; fill: #0b2545; }
+  .m  { font-family: monospace; font-size: 12px; fill: #0b2545; }
+  .mm { font-family: monospace; font-size: 11px; fill: #3b4a5a; }
+  .bad { font-family: sans-serif; font-size: 12px; fill: #7a1f1f; }
+  .good{ font-family: sans-serif; font-size: 12px; fill: #14532d; }
+  .big { font-family: sans-serif; font-size: 26px; font-weight: 700; fill: #0b2545; }
+  .huge{ font-family: sans-serif; font-size: 40px; font-weight: 700; fill: #0b2545; }
+</style>
+</defs>
+<text x="40" y="44" class="h">retest: กฎชุดเดิม probe ชุดเดิม กับโค้ดที่แก้แล้ว</text>
+<text x="40" y="68" class="s">ช่องว่างระหว่างสองคอลัมน์คือสิ่งที่การแก้ต้องพิสูจน์ — ไม่ใช่คำยืนยันของคนเขียนโค้ด</text>
+<text x="40" y="112" class="hd">finding</text>
+<text x="360" y="112" class="hd">internal/vulnbank</text>
+<text x="700" y="112" class="hd">internal/safebank</text>
+<line x1="40" y1="122" x2="1040" y2="122" stroke="#c9d3de" stroke-width="1.2"/>
+<text x="40" y="158" class="hd">F3</text>
+<text x="76" y="158" class="m">CWE-798</text>
+<text x="160" y="158" class="hd">9.8</text>
+<rect x="360" y="142" width="150" height="26" rx="5" fill="#fdeeee" stroke="#c05050" stroke-width="1.2"/>
+<text x="435" y="160" class="bad" text-anchor="middle">ยืนยัน</text>
+<rect x="700" y="142" width="150" height="26" rx="5" fill="#eefaf1" stroke="#3f9c63" stroke-width="1.2"/>
+<text x="775" y="160" class="good" text-anchor="middle">ไม่พบ</text>
+<text x="40" y="198" class="hd">F7</text>
+<text x="76" y="198" class="m">CWE-330</text>
+<text x="160" y="198" class="hd">7.4</text>
+<rect x="360" y="182" width="150" height="26" rx="5" fill="#fdf1e6" stroke="#c9762b" stroke-width="1.2"/>
+<text x="435" y="200" class="bad" text-anchor="middle">ยืนยัน</text>
+<rect x="700" y="182" width="150" height="26" rx="5" fill="#eefaf1" stroke="#3f9c63" stroke-width="1.2"/>
+<text x="775" y="200" class="good" text-anchor="middle">ไม่พบ</text>
+<text x="40" y="238" class="hd">F1</text>
+<text x="76" y="238" class="m">CWE-89</text>
+<text x="160" y="238" class="hd">6.5</text>
+<rect x="360" y="222" width="150" height="26" rx="5" fill="#fdf7e3" stroke="#c9a227" stroke-width="1.2"/>
+<text x="435" y="240" class="bad" text-anchor="middle">ยืนยัน</text>
+<rect x="700" y="222" width="150" height="26" rx="5" fill="#eefaf1" stroke="#3f9c63" stroke-width="1.2"/>
+<text x="775" y="240" class="good" text-anchor="middle">ไม่พบ</text>
+<text x="40" y="278" class="hd">F2</text>
+<text x="76" y="278" class="m">CWE-639</text>
+<text x="160" y="278" class="hd">6.5</text>
+<rect x="360" y="262" width="150" height="26" rx="5" fill="#fdf7e3" stroke="#c9a227" stroke-width="1.2"/>
+<text x="435" y="280" class="bad" text-anchor="middle">ยืนยัน</text>
+<rect x="700" y="262" width="150" height="26" rx="5" fill="#eefaf1" stroke="#3f9c63" stroke-width="1.2"/>
+<text x="775" y="280" class="good" text-anchor="middle">ไม่พบ</text>
+<text x="40" y="318" class="hd">F4</text>
+<text x="76" y="318" class="m">CWE-841</text>
+<text x="160" y="318" class="hd">6.5</text>
+<rect x="360" y="302" width="150" height="26" rx="5" fill="#fdf7e3" stroke="#c9a227" stroke-width="1.2"/>
+<text x="435" y="320" class="bad" text-anchor="middle">ยืนยัน</text>
+<rect x="700" y="302" width="150" height="26" rx="5" fill="#eefaf1" stroke="#3f9c63" stroke-width="1.2"/>
+<text x="775" y="320" class="good" text-anchor="middle">ไม่พบ</text>
+<text x="40" y="358" class="hd">F8</text>
+<text x="76" y="358" class="m">CWE-799</text>
+<text x="160" y="358" class="hd">5.3</text>
+<rect x="360" y="342" width="150" height="26" rx="5" fill="#fdf7e3" stroke="#c9a227" stroke-width="1.2"/>
+<text x="435" y="360" class="bad" text-anchor="middle">ยืนยัน</text>
+<rect x="700" y="342" width="150" height="26" rx="5" fill="#eefaf1" stroke="#3f9c63" stroke-width="1.2"/>
+<text x="775" y="360" class="good" text-anchor="middle">ไม่พบ</text>
+<text x="40" y="398" class="hd">F5</text>
+<text x="76" y="398" class="m">CWE-532</text>
+<text x="160" y="398" class="hd">4.9</text>
+<rect x="360" y="382" width="150" height="26" rx="5" fill="#fdf7e3" stroke="#c9a227" stroke-width="1.2"/>
+<text x="435" y="400" class="bad" text-anchor="middle">ยืนยัน</text>
+<rect x="700" y="382" width="150" height="26" rx="5" fill="#eefaf1" stroke="#3f9c63" stroke-width="1.2"/>
+<text x="775" y="400" class="good" text-anchor="middle">ไม่พบ</text>
+<text x="40" y="438" class="hd">F6</text>
+<text x="76" y="438" class="m">CWE-209</text>
+<text x="160" y="438" class="hd">4.3</text>
+<rect x="360" y="422" width="150" height="26" rx="5" fill="#fdf7e3" stroke="#c9a227" stroke-width="1.2"/>
+<text x="435" y="440" class="bad" text-anchor="middle">ยืนยัน</text>
+<rect x="700" y="422" width="150" height="26" rx="5" fill="#eefaf1" stroke="#3f9c63" stroke-width="1.2"/>
+<text x="775" y="440" class="good" text-anchor="middle">ไม่พบ</text>
+<line x1="40" y1="496" x2="1040" y2="496" stroke="#dde5ee" stroke-width="1.2"/>
+<text x="40" y="534" class="huge">8</text>
+<text x="86" y="534" class="huge">→</text>
+<text x="120" y="534" class="huge">0</text>
+<text x="190" y="528" class="t">finding ที่ static จับได้ · probe ที่ยืนยันได้ เหลือ 0 ทั้งคู่</text>
+</svg>

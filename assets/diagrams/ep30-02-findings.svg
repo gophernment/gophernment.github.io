@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1150 520" width="1150" height="520" role="img">
+<defs>
+<style>
+  .t  { font-family: sans-serif; font-size: 14px; fill: #12263a; }
+  .s  { font-family: sans-serif; font-size: 12px; fill: #3b4a5a; }
+  .sm { font-family: sans-serif; font-size: 11px; fill: #4a5b6c; }
+  .h  { font-family: sans-serif; font-size: 21px; font-weight: 700; fill: #0b2545; }
+  .hd { font-family: sans-serif; font-size: 14px; font-weight: 700; fill: #0b2545; }
+  .n  { font-family: sans-serif; font-size: 19px; font-weight: 700; fill: #0b2545; }
+  .m  { font-family: monospace; font-size: 12px; fill: #0b2545; }
+  .mm { font-family: monospace; font-size: 11px; fill: #3b4a5a; }
+  .bad { font-family: sans-serif; font-size: 12px; fill: #7a1f1f; }
+  .good{ font-family: sans-serif; font-size: 12px; fill: #14532d; }
+  .big { font-family: sans-serif; font-size: 26px; font-weight: 700; fill: #0b2545; }
+  .huge{ font-family: sans-serif; font-size: 40px; font-weight: 700; fill: #0b2545; }
+</style>
+</defs>
+<text x="40" y="44" class="h">8 finding จาก 8 กฎ — คะแนนคิดจาก CVSS v3.1 base ในโค้ด</text>
+<text x="40" y="68" class="s">แถบยาว = คะแนนสูง · สี = ระดับ · ทุกข้อมี probe ที่ยืนยันผลจริง</text>
+<text x="40" y="116" class="hd">F3</text>
+<text x="78" y="116" class="m">CWE-798</text>
+<rect x="330" y="98" width="548" height="22" rx="4" fill="#fdeeee" stroke="#c05050" stroke-width="1.2"/>
+<text x="888" y="115" class="hd">9.8</text>
+<text x="926" y="115" class="sm">critical</text>
+<text x="990" y="115" class="m">A07:2025</text>
+<text x="40" y="158" class="hd">F7</text>
+<text x="78" y="158" class="m">CWE-330</text>
+<rect x="330" y="140" width="414" height="22" rx="4" fill="#fdf1e6" stroke="#c9762b" stroke-width="1.2"/>
+<text x="754" y="157" class="hd">7.4</text>
+<text x="792" y="157" class="sm">high</text>
+<text x="990" y="157" class="m">A04:2025</text>
+<text x="40" y="200" class="hd">F1</text>
+<text x="78" y="200" class="m">CWE-89</text>
+<rect x="330" y="182" width="364" height="22" rx="4" fill="#fdf7e3" stroke="#c9a227" stroke-width="1.2"/>
+<text x="704" y="199" class="hd">6.5</text>
+<text x="742" y="199" class="sm">medium</text>
+<text x="990" y="199" class="m">A05:2025</text>
+<text x="40" y="242" class="hd">F2</text>
+<text x="78" y="242" class="m">CWE-639</text>
+<rect x="330" y="224" width="364" height="22" rx="4" fill="#fdf7e3" stroke="#c9a227" stroke-width="1.2"/>
+<text x="704" y="241" class="hd">6.5</text>
+<text x="742" y="241" class="sm">medium</text>
+<text x="990" y="241" class="m">A01:2025</text>
+<text x="40" y="284" class="hd">F4</text>
+<text x="78" y="284" class="m">CWE-841</text>
+<rect x="330" y="266" width="364" height="22" rx="4" fill="#fdf7e3" stroke="#c9a227" stroke-width="1.2"/>
+<text x="704" y="283" class="hd">6.5</text>
+<text x="742" y="283" class="sm">medium</text>
+<text x="990" y="283" class="m">A06:2025</text>
+<text x="40" y="326" class="hd">F8</text>
+<text x="78" y="326" class="m">CWE-799</text>
+<rect x="330" y="308" width="296" height="22" rx="4" fill="#fdf7e3" stroke="#c9a227" stroke-width="1.2"/>
+<text x="636" y="325" class="hd">5.3</text>
+<text x="674" y="325" class="sm">medium</text>
+<text x="990" y="325" class="m">A06:2025</text>
+<text x="40" y="368" class="hd">F5</text>
+<text x="78" y="368" class="m">CWE-532</text>
+<rect x="330" y="350" width="274" height="22" rx="4" fill="#fdf7e3" stroke="#c9a227" stroke-width="1.2"/>
+<text x="614" y="367" class="hd">4.9</text>
+<text x="652" y="367" class="sm">medium</text>
+<text x="990" y="367" class="m">A09:2025</text>
+<text x="40" y="410" class="hd">F6</text>
+<text x="78" y="410" class="m">CWE-209</text>
+<rect x="330" y="392" width="240" height="22" rx="4" fill="#fdf7e3" stroke="#c9a227" stroke-width="1.2"/>
+<text x="580" y="409" class="hd">4.3</text>
+<text x="618" y="409" class="sm">medium</text>
+<text x="990" y="409" class="m">A10:2025</text>
+<line x1="40" y1="448" x2="1110" y2="448" stroke="#dde5ee" stroke-width="1.2"/>
+<rect x="40" y="464" width="74" height="24" rx="5" fill="#f5f7f9" stroke="#9aa9b8" stroke-width="1"/>
+<text x="77" y="481" class="sm" text-anchor="middle">A01</text>
+<rect x="124" y="464" width="74" height="24" rx="5" fill="#f5f7f9" stroke="#9aa9b8" stroke-width="1"/>
+<text x="161" y="481" class="sm" text-anchor="middle">A04</text>
+<rect x="208" y="464" width="74" height="24" rx="5" fill="#f5f7f9" stroke="#9aa9b8" stroke-width="1"/>
+<text x="245" y="481" class="sm" text-anchor="middle">A05</text>
+<rect x="292" y="464" width="74" height="24" rx="5" fill="#f5f7f9" stroke="#9aa9b8" stroke-width="1"/>
+<text x="329" y="481" class="sm" text-anchor="middle">A06</text>
+<rect x="376" y="464" width="74" height="24" rx="5" fill="#f5f7f9" stroke="#9aa9b8" stroke-width="1"/>
+<text x="413" y="481" class="sm" text-anchor="middle">A07</text>
+<rect x="460" y="464" width="74" height="24" rx="5" fill="#f5f7f9" stroke="#9aa9b8" stroke-width="1"/>
+<text x="497" y="481" class="sm" text-anchor="middle">A09</text>
+<rect x="544" y="464" width="74" height="24" rx="5" fill="#f5f7f9" stroke="#9aa9b8" stroke-width="1"/>
+<text x="581" y="481" class="sm" text-anchor="middle">A10</text>
+<text x="638" y="481" class="s">7 จาก 10 หมวด · ยืนยันด้วย probe 8/8</text>
+</svg>
