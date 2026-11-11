@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 640" width="1040" height="640" role="img" aria-label="networking เป็นแกนร่วมของ Network Engineer, DevOps, SRE และ Cloud/Platform พร้อมฐานจาก CS Fundamentals และ Software Security">
+<style>
+text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 13px; fill: #1a1a1a; }
+.hdr { font-weight: 700; font-size: 17.5px; }
+.sub { fill: #57606a; font-size: 12.5px; }
+.ptitle { font-weight: 700; font-size: 14.5px; }
+.txt { font-size: 13px; }
+.lbl { fill: #57606a; font-size: 11.5px; }
+.small { fill: #57606a; font-size: 11px; }
+.mono { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12px; fill: #0550ae; }
+.monos { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 11px; fill: #0550ae; }
+.mchip { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12.5px; font-weight: 700; fill: #0550ae; }
+.boxg { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.3; }
+.boxb { fill: #eef4ff; stroke: #0969da; stroke-width: 1.5; }
+.boxy { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.4; }
+.boxi { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.4; }
+.boxv { fill: #f6f2ff; stroke: #8250df; stroke-width: 1.4; }
+.chip { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.1; }
+.wire { stroke: #57606a; stroke-width: 1.8; fill: none; }
+.wirev { stroke: #8250df; stroke-width: 1.8; fill: none; }
+.rule { stroke: #d0d7de; stroke-width: 1.2; }
+</style>
+<defs>
+<marker id="a-n" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#57606a"/></marker>
+</defs>
+<rect x="0" y="0" width="1040" height="640" fill="#ffffff"/>
+<text class="hdr" x="520" y="40" text-anchor="middle">networking เป็นแกนร่วมของหลายสายงาน</text>
+<text class="sub" x="520" y="64" text-anchor="middle">งานต่างกันที่เป้าหมาย — แต่คำถามพื้นฐานเรื่อง packet เหมือนกันหมด</text>
+<rect class="boxg" x="38" y="96" width="230" height="268" rx="8"/>
+<text class="ptitle" x="52" y="124" text-anchor="start">Network Engineer</text>
+<text class="small" x="52" y="144" text-anchor="start">ออกแบบ/ดูแลเครือข่ายจริง</text>
+<line class="rule" x1="52" y1="156" x2="254" y2="156"/>
+<text class="lbl" x="52" y="182" text-anchor="start">· routing / switching</text>
+<text class="lbl" x="52" y="208" text-anchor="start">· VLAN / firewall</text>
+<text class="lbl" x="52" y="234" text-anchor="start">· packet capture</text>
+<text class="small" x="52" y="346" text-anchor="start">ใช้ทุกวัน</text>
+<rect class="boxg" x="290" y="96" width="230" height="268" rx="8"/>
+<text class="ptitle" x="304" y="124" text-anchor="start">DevOps</text>
+<text class="small" x="304" y="144" text-anchor="start">ท่อส่งโค้ดถึง production</text>
+<line class="rule" x1="304" y1="156" x2="506" y2="156"/>
+<text class="lbl" x="304" y="182" text-anchor="start">· DNS / load balancer</text>
+<text class="lbl" x="304" y="208" text-anchor="start">· TLS / certificate</text>
+<text class="lbl" x="304" y="234" text-anchor="start">· VPC / subnet</text>
+<text class="small" x="304" y="346" text-anchor="start">ใช้ทุกวัน</text>
+<rect class="boxg" x="542" y="96" width="230" height="268" rx="8"/>
+<text class="ptitle" x="556" y="124" text-anchor="start">SRE</text>
+<text class="small" x="556" y="144" text-anchor="start">ทำให้ระบบไม่ล่ม</text>
+<line class="rule" x1="556" y1="156" x2="758" y2="156"/>
+<text class="lbl" x="556" y="182" text-anchor="start">· latency / error budget</text>
+<text class="lbl" x="556" y="208" text-anchor="start">· timeout / retry</text>
+<text class="lbl" x="556" y="234" text-anchor="start">· incident triage</text>
+<text class="small" x="556" y="346" text-anchor="start">ใช้ทุกวัน</text>
+<rect class="boxg" x="794" y="96" width="230" height="268" rx="8"/>
+<text class="ptitle" x="808" y="124" text-anchor="start">Cloud / Platform</text>
+<text class="small" x="808" y="144" text-anchor="start">โครงข่ายเสมือนบน cloud</text>
+<line class="rule" x1="808" y1="156" x2="1010" y2="156"/>
+<text class="lbl" x="808" y="182" text-anchor="start">· VPC / peering</text>
+<text class="lbl" x="808" y="208" text-anchor="start">· NAT / IPv6</text>
+<text class="lbl" x="808" y="234" text-anchor="start">· service mesh</text>
+<text class="small" x="808" y="346" text-anchor="start">ใช้ทุกวัน</text>
+<rect class="boxb" x="38" y="404" width="986" height="58" rx="8"/>
+<text class="ptitle" x="56" y="428" text-anchor="start">แกนความรู้ร่วมของทุกสาย</text>
+<text class="mono" x="56" y="448" text-anchor="start">routing · DNS · TCP/UDP · HTTP/TLS · packet analysis · troubleshooting จากล่างขึ้นบน</text>
+<line class="wire" x1="153.0" y1="398" x2="153.0" y2="372" marker-end="url(#a-n)"/>
+<line class="wire" x1="405.0" y1="398" x2="405.0" y2="372" marker-end="url(#a-n)"/>
+<line class="wire" x1="657.0" y1="398" x2="657.0" y2="372" marker-end="url(#a-n)"/>
+<line class="wire" x1="909.0" y1="398" x2="909.0" y2="372" marker-end="url(#a-n)"/>
+<rect class="boxi" x="38" y="500" width="480" height="78" rx="8"/>
+<text class="ptitle" x="56" y="530" text-anchor="start">CS Fundamentals (33 ตอน)</text>
+<text class="small" x="56" y="552" text-anchor="start">OS · memory · compiler · process/thread · syscall</text>
+<text class="small" x="56" y="570" text-anchor="start">→ รู้ว่าโปรแกรมคุยกับ kernel ยังไง</text>
+<rect class="boxv" x="544" y="500" width="480" height="78" rx="8"/>
+<text class="ptitle" x="562" y="530" text-anchor="start">Software Security (30 ตอน)</text>
+<text class="small" x="562" y="552" text-anchor="start">trust boundary · least privilege · crypto · logging</text>
+<text class="small" x="562" y="570" text-anchor="start">→ รู้ว่าอะไรข้ามเส้นเข้ามาแล้วเชื่อไม่ได้</text>
+<line class="wire" x1="278" y1="492" x2="278" y2="470" marker-end="url(#a-n)"/>
+<line class="wire" x1="784" y1="492" x2="784" y2="470" marker-end="url(#a-n)"/>
+<text class="small" x="520" y="612" text-anchor="middle">จุดที่คุณยืนอยู่ตอนนี้: จบสองคอร์สข้างล่างแล้ว — วิชานี้เติมชั้นที่ยังขาด</text>
+</svg>

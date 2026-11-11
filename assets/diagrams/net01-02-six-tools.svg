@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 604" width="1040" height="604" role="img" aria-label="หกเครื่องมือ network กับชั้นที่แต่ละตัวทำงาน: dig, curl, ss, ping, ip, tcpdump">
+<style>
+text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 13px; fill: #1a1a1a; }
+.hdr { font-weight: 700; font-size: 17.5px; }
+.sub { fill: #57606a; font-size: 12.5px; }
+.ptitle { font-weight: 700; font-size: 14.5px; }
+.txt { font-size: 13px; }
+.lbl { fill: #57606a; font-size: 11.5px; }
+.small { fill: #57606a; font-size: 11px; }
+.mono { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12px; fill: #0550ae; }
+.monos { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 11px; fill: #0550ae; }
+.mchip { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12.5px; font-weight: 700; fill: #0550ae; }
+.boxg { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.3; }
+.boxb { fill: #eef4ff; stroke: #0969da; stroke-width: 1.5; }
+.boxy { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.4; }
+.boxi { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.4; }
+.boxv { fill: #f6f2ff; stroke: #8250df; stroke-width: 1.4; }
+.chip { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.1; }
+.wire { stroke: #57606a; stroke-width: 1.8; fill: none; }
+.wirev { stroke: #8250df; stroke-width: 1.8; fill: none; }
+.rule { stroke: #d0d7de; stroke-width: 1.2; }
+</style>
+<defs>
+<marker id="a-n" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#57606a"/></marker>
+</defs>
+<rect x="0" y="0" width="1040" height="604" fill="#ffffff"/>
+<text class="hdr" x="520" y="38" text-anchor="middle">หกเครื่องมือ หกคำถาม — แต่ละตัวตอบคนละชั้น</text>
+<text class="sub" x="520" y="62" text-anchor="middle">อ่านจากบนลงล่าง: จากชื่อที่มนุษย์ใช้ → ลงไปถึง packet จริงบนสาย</text>
+<text class="small" x="42" y="92" text-anchor="start">เครื่องมือ</text>
+<text class="small" x="212" y="92" text-anchor="start">ชั้นที่ทำงาน</text>
+<text class="small" x="448" y="92" text-anchor="start">คำถามที่มันตอบ</text>
+<text class="small" x="762" y="92" text-anchor="start">คำสั่งตั้งต้น</text>
+<rect class="boxg" x="38" y="108" width="964" height="64" rx="8"/>
+<rect class="chip" x="50" y="122" width="132" height="36" rx="7"/>
+<text class="mchip" x="116" y="146" text-anchor="middle">dig</text>
+<text class="txt" x="212" y="134" text-anchor="start">Application — DNS</text>
+<text class="lbl" x="448" y="134" text-anchor="start">ชื่อนี้ตรงกับ IP อะไร</text>
+<text class="lbl" x="448" y="154" text-anchor="start">และใครเป็นคนตอบ</text>
+<text class="monos" x="762" y="132" text-anchor="start">dig +short gophern.cc A</text>
+<rect class="boxg" x="38" y="180" width="964" height="64" rx="8"/>
+<rect class="chip" x="50" y="194" width="132" height="36" rx="7"/>
+<text class="mchip" x="116" y="218" text-anchor="middle">curl</text>
+<text class="txt" x="212" y="206" text-anchor="start">Application — HTTP/TLS</text>
+<text class="lbl" x="448" y="206" text-anchor="start">ปลายทางคุยกันได้ไหม</text>
+<text class="lbl" x="448" y="226" text-anchor="start">ได้ status อะไร ตั้ง TLS ผ่านไหม</text>
+<text class="monos" x="762" y="202" text-anchor="start">curl -sS -o /dev/null</text>
+<text class="monos" x="762" y="219" text-anchor="start">-w '%{http_code}' URL</text>
+<rect class="boxg" x="38" y="252" width="964" height="64" rx="8"/>
+<rect class="chip" x="50" y="266" width="132" height="36" rx="7"/>
+<text class="mchip" x="116" y="290" text-anchor="middle">ss</text>
+<text class="txt" x="212" y="278" text-anchor="start">Transport — TCP/UDP</text>
+<text class="lbl" x="448" y="278" text-anchor="start">บนเครื่องนี้ใครกำลังฟัง</text>
+<text class="lbl" x="448" y="298" text-anchor="start">พอร์ตอะไร ต่อกับใครอยู่</text>
+<text class="monos" x="762" y="276" text-anchor="start">ss -tln</text>
+<rect class="boxg" x="38" y="324" width="964" height="64" rx="8"/>
+<rect class="chip" x="50" y="338" width="132" height="36" rx="7"/>
+<text class="mchip" x="116" y="362" text-anchor="middle">ping</text>
+<text class="txt" x="212" y="350" text-anchor="start">Network — ICMP</text>
+<text class="lbl" x="448" y="350" text-anchor="start">ไปถึงปลายทางไหม</text>
+<text class="lbl" x="448" y="370" text-anchor="start">ไปกลับใช้เวลากี่ ms หายกี่ %</text>
+<text class="monos" x="762" y="348" text-anchor="start">ping -c 3 1.1.1.1</text>
+<rect class="boxg" x="38" y="396" width="964" height="64" rx="8"/>
+<rect class="chip" x="50" y="410" width="132" height="36" rx="7"/>
+<text class="mchip" x="116" y="434" text-anchor="middle">ip</text>
+<text class="txt" x="212" y="422" text-anchor="start">Link + Network</text>
+<text class="lbl" x="448" y="422" text-anchor="start">ฉันมี interface อะไร อยู่ subnet ไหน</text>
+<text class="lbl" x="448" y="442" text-anchor="start">ประตูออก (default route) คือใคร</text>
+<text class="monos" x="762" y="418" text-anchor="start">ip -br addr</text>
+<text class="monos" x="762" y="435" text-anchor="start">ip route</text>
+<rect class="boxv" x="38" y="468" width="964" height="64" rx="8"/>
+<rect class="chip" x="50" y="482" width="132" height="36" rx="7"/>
+<text class="mchip" x="116" y="506" text-anchor="middle">tcpdump</text>
+<text class="txt" x="212" y="494" text-anchor="start">ทุกชั้น — packet จริง</text>
+<text class="lbl" x="448" y="494" text-anchor="start">ในสายมี packet อะไรวิ่งผ่าน</text>
+<text class="lbl" x="448" y="514" text-anchor="start">ใครพูดกับใคร ลำดับเป็นยังไง</text>
+<text class="monos" x="762" y="490" text-anchor="start">tcpdump -i lo -n -c 8</text>
+<text class="monos" x="762" y="507" text-anchor="start">'tcp port 8080'</text>
+<text class="small" x="38" y="558" text-anchor="start">หมายเหตุ: tcpdump ไม่ได้อยู่ชั้นใดชั้นหนึ่ง — มันมองเห็นทุกชั้นพร้อมกัน เพราะจับ packet ดิบก่อนใครจะแปลความ</text>
+</svg>
