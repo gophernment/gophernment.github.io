@@ -1,5 +1,19 @@
 [
   {
+    "slug": "2026-11-11-network-01-why-networking-matters",
+    "title": "'ทำไมต้องเรียน networking จริงจัง: วิชาที่มองไม่เห็น แต่กำหนดทุกอย่างที่คุณสร้าง (ตอนที่ 01)'",
+    "date": "2026-11-11",
+    "tags": [
+      "network",
+      "networking",
+      "tcpip",
+      "dns",
+      "devops",
+      "sre"
+    ],
+    "description": "ตอนเปิดซีรีส์ Network 30 ตอน — ปูภาพว่าทำไม networking ถึงเป็นแกนร่วมของ Network Engineer, DevOps, SRE และ Cloud/Platform, ต่อยอดจาก CS Fundamentals และ Software Security อย่างไร แล้วลงมือติดตั้งและใช้งานเครื่องมือหกตัว (ip, ping, dig, curl, ss, tcpdump) พร้อมผลรันจริงบนเครื่อง และเขียนโปรแกรม Go อ่าน network interface เอง"
+  },
+  {
     "slug": "2026-11-08-software-security-30-capstone-security-audit",
     "title": "'Capstone: audit โปรเจกต์จริงตั้งแต่ scope ถึงรายงาน — และเส้นทางสายงานที่ต่อจากตรงนี้ (ตอนที่ 30)'",
     "date": "2026-11-08",
