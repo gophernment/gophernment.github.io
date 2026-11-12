@@ -1,5 +1,21 @@
 [
   {
+    "slug": "2026-11-12-network-02-arpanet-packet-switching",
+    "title": "'ARPANET (1969): สงครามระหว่าง circuit switching กับ packet switching (ตอนที่ 02)'",
+    "date": "2026-11-12",
+    "tags": [
+      "network",
+      "networking",
+      "arpanet",
+      "packet-switching",
+      "circuit-switching",
+      "history",
+      "tcpip",
+      "golang"
+    ],
+    "description": "ตอนที่ 02 ของซีรีส์ Network — ไล่ประวัติศาสตร์ตั้งแต่ Kleinrock (1961) ผ่าน Baran (1964) และ Davies (1966) ไปจนถึง ARPANET ปี 1969, จาก IMP/NCP สู่ TCP/IP flag day 1983 แล้วลงมือเขียนโปรแกรม Go จำลอง circuit switching กับ packet switching บนกราฟ 5 node เพื่อวัดด้วยตัวเลข deterministic ว่า packet switching ชนะเพราะอะไร และต้องจ่ายด้วยอะไร"
+  },
+  {
     "slug": "2026-11-11-network-01-why-networking-matters",
     "title": "'ทำไมต้องเรียน networking จริงจัง: วิชาที่มองไม่เห็น แต่กำหนดทุกอย่างที่คุณสร้าง (ตอนที่ 01)'",
     "date": "2026-11-11",
