@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1060 726" width="1060" height="726" role="img" aria-label="เทียบ circuit switching (จองช่องทั้ง session) กับ packet switching (แชร์ link เป็นก้อน) บนกราฟ 5 node">
+<style>
+text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 13px; fill: #1a1a1a; }
+.hdr { font-weight: 700; font-size: 17.5px; }
+.sub { fill: #57606a; font-size: 12.5px; }
+.ptitle { font-weight: 700; font-size: 14.5px; }
+.txt { font-size: 13px; }
+.lbl { fill: #57606a; font-size: 11.5px; }
+.small { fill: #57606a; font-size: 11px; }
+.big { font-weight: 700; font-size: 22px; fill: #0550ae; }
+.mono { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12px; fill: #0550ae; }
+.monos { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 11px; fill: #0550ae; }
+.mchip { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12.5px; font-weight: 700; fill: #0550ae; }
+.boxg { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.3; }
+.boxb { fill: #eef4ff; stroke: #0969da; stroke-width: 1.5; }
+.boxy { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.4; }
+.boxi { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.4; }
+.boxv { fill: #f6f2ff; stroke: #8250df; stroke-width: 1.4; }
+.node { fill: #ffffff; stroke: #57606a; stroke-width: 1.8; }
+.nodew { fill: #eff5ff; stroke: #0969da; stroke-width: 2.2; }
+.wire { stroke: #8c959f; stroke-width: 1.8; }
+.wirealt { stroke: #b6bcc4; stroke-width: 1.4; stroke-dasharray: 5 4; }
+.wirehot { stroke: #bf8700; stroke-width: 5; stroke-linecap: round; }
+.rule { stroke: #d0d7de; stroke-width: 1.2; }
+.dark { fill: #0969da; }
+.resv { fill: #dbe6f8; }
+.busy { fill: #1a7f37; }
+.empty { fill: #f1f3f5; }
+.marko { stroke: #bf8700; stroke-width: 1.8; stroke-dasharray: 3 3; }
+.markg { stroke: #1a7f37; stroke-width: 1.8; stroke-dasharray: 3 3; }
+</style>
+<rect x="0" y="0" width="1060" height="726" fill="#ffffff"/>
+<text class="hdr" x="530" y="38" text-anchor="middle">circuit จองช่องทั้ง session — packet แชร์ link เป็นก้อน</text>
+<text class="sub" x="530" y="62" text-anchor="middle">กราฟเดียวกัน งานเดียวกัน 96 packet บน link คอขวด 2 slot/tick — ตัวเลขทุกตัวอ่านจาก out/ ของเดโม</text>
+<rect class="boxg" x="24" y="84" width="496" height="336" rx="10"/>
+<text class="ptitle" x="44" y="110" text-anchor="start">กราฟจำลอง 5 node</text>
+<text class="small" x="44" y="130" text-anchor="start">ชื่อ node ตาม ARPANET 4 node แรก + BBN (ผู้สร้าง IMP)</text>
+<text class="monos" x="44" y="150" text-anchor="start">F1 UCLA->UTAH · F2 UCSB->UTAH · F3 BBN->UTAH</text>
+<line class="wire" x1="153" y1="205" x2="247" y2="257"/>
+<line class="wire" x1="152" y1="336" x2="248" y2="284"/>
+<line class="wire" x1="399" y1="207" x2="297" y2="257"/>
+<line class="wirealt" x1="128" y1="220" x2="128" y2="322"/>
+<line class="wirehot" x1="297" y1="283" x2="399" y2="337"/>
+<text class="monos" x="196" y="217" text-anchor="start">4</text>
+<text class="monos" x="196" y="296" text-anchor="start">4</text>
+<text class="monos" x="348" y="220" text-anchor="start">4</text>
+<text class="small" x="312" y="342" text-anchor="start">2 คอขวด</text>
+<circle class="nodew" cx="272" cy="270" r="28"/>
+<text class="monos" x="272" y="274" text-anchor="middle">SRI</text>
+<circle class="node" cx="128" cy="192" r="28"/>
+<text class="monos" x="128" y="196" text-anchor="middle">UCLA</text>
+<circle class="node" cx="128" cy="350" r="28"/>
+<text class="monos" x="128" y="354" text-anchor="middle">UCSB</text>
+<circle class="node" cx="424" cy="194" r="28"/>
+<text class="monos" x="424" y="198" text-anchor="middle">BBN</text>
+<circle class="nodew" cx="424" cy="350" r="28"/>
+<text class="monos" x="424" y="354" text-anchor="middle">UTAH</text>
+<text class="small" x="44" y="396" text-anchor="start">เส้นหนา = คอขวด 2 slot/tick (SRI--UTAH)</text>
+<text class="small" x="44" y="414" text-anchor="start">เส้นประ = ทางอ้อมที่ routing ไม่เลือกในเดโมนี้</text>
+<rect class="boxg" x="540" y="84" width="496" height="336" rx="10"/>
+<text class="ptitle" x="560" y="110" text-anchor="start">ช่องบน link SRI--UTAH ทีละ tick</text>
+<text class="small" x="560" y="138" text-anchor="start">circuit: 2 ช่องถูกจอง (ฟ้าเข้ม = มีข้อมูล, ฟ้าอ่อน = จองแต่เงียบ)</text>
+<rect class="dark" x="560.0" y="148" width="28.86829268292683" height="12" rx="1"/>
+<rect class="resv" x="589.2682926829268" y="148" width="54.884552845528454" height="12" rx="1"/>
+<rect class="dark" x="644.5528455284552" y="148" width="38.62439024390244" height="12" rx="1"/>
+<rect class="resv" x="683.5772357723578" y="148" width="38.62439024390244" height="12" rx="1"/>
+<rect class="dark" x="722.6016260162602" y="148" width="38.62439024390244" height="12" rx="1"/>
+<rect class="resv" x="761.6260162601626" y="148" width="58.136585365853655" height="12" rx="1"/>
+<rect class="dark" x="820.1626016260162" y="148" width="28.86829268292683" height="12" rx="1"/>
+<rect class="resv" x="849.4308943089432" y="148" width="2.8520325203252033" height="12" rx="1"/>
+<rect class="dark" x="852.6829268292684" y="148" width="103.6650406504065" height="12" rx="1"/>
+<rect class="resv" x="956.7479674796748" y="148" width="2.8520325203252033" height="12" rx="1"/>
+<rect class="dark" x="563.2520325203252" y="161" width="22.364227642276425" height="12" rx="1"/>
+<rect class="resv" x="586.0162601626016" y="161" width="71.14471544715447" height="12" rx="1"/>
+<rect class="dark" x="657.560975609756" y="161" width="12.608130081300812" height="12" rx="1"/>
+<rect class="resv" x="670.5691056910568" y="161" width="64.64065040650405" height="12" rx="1"/>
+<rect class="dark" x="735.609756097561" y="161" width="12.608130081300812" height="12" rx="1"/>
+<rect class="resv" x="748.6178861788618" y="161" width="74.39674796747967" height="12" rx="1"/>
+<rect class="dark" x="823.4146341463415" y="161" width="22.364227642276425" height="12" rx="1"/>
+<rect class="resv" x="846.178861788618" y="161" width="9.35609756097561" height="12" rx="1"/>
+<text class="small" x="1002" y="158" text-anchor="end">ช่อง 1</text>
+<text class="small" x="1002" y="171" text-anchor="end">ช่อง 2</text>
+<text class="small" x="560" y="196" text-anchor="start">packet: 2 slot/tick = 2 แถว</text>
+<text class="small" x="560" y="211" text-anchor="start">เขียว = tick ที่ link ส่ง packet จริง</text>
+<rect class="empty" x="560.0" y="218" width="6.104065040650406" height="12" rx="1"/>
+<rect class="busy" x="566.5040650406504" y="218" width="38.62439024390244" height="12" rx="1"/>
+<rect class="empty" x="605.5284552845528" y="218" width="38.62439024390244" height="12" rx="1"/>
+<rect class="busy" x="644.5528455284552" y="218" width="38.62439024390244" height="12" rx="1"/>
+<rect class="empty" x="683.5772357723578" y="218" width="45.12845528455285" height="12" rx="1"/>
+<rect class="busy" x="729.1056910569106" y="218" width="38.62439024390244" height="12" rx="1"/>
+<rect class="empty" x="768.130081300813" y="218" width="58.136585365853655" height="12" rx="1"/>
+<rect class="busy" x="826.6666666666667" y="218" width="38.62439024390244" height="12" rx="1"/>
+<rect class="empty" x="865.6910569105692" y="218" width="93.90894308943089" height="12" rx="1"/>
+<rect class="empty" x="560.0" y="231" width="6.104065040650406" height="12" rx="1"/>
+<rect class="busy" x="566.5040650406504" y="231" width="38.62439024390244" height="12" rx="1"/>
+<rect class="empty" x="605.5284552845528" y="231" width="38.62439024390244" height="12" rx="1"/>
+<rect class="busy" x="644.5528455284552" y="231" width="38.62439024390244" height="12" rx="1"/>
+<rect class="empty" x="683.5772357723578" y="231" width="45.12845528455285" height="12" rx="1"/>
+<rect class="busy" x="729.1056910569106" y="231" width="38.62439024390244" height="12" rx="1"/>
+<rect class="empty" x="768.130081300813" y="231" width="58.136585365853655" height="12" rx="1"/>
+<rect class="busy" x="826.6666666666667" y="231" width="38.62439024390244" height="12" rx="1"/>
+<rect class="empty" x="865.6910569105692" y="231" width="93.90894308943089" height="12" rx="1"/>
+<text class="small" x="1002" y="228" text-anchor="end">แถว 1</text>
+<text class="small" x="1002" y="241" text-anchor="end">แถว 2</text>
+<line class="markg" x1="865.7" y1="144" x2="865.7" y2="244"/>
+<line class="marko" x1="956.7" y1="144" x2="956.7" y2="244"/>
+<line class="rule" x1="560" y1="252" x2="960" y2="252"/>
+<line class="rule" x1="560.0" y1="252" x2="560.0" y2="257"/>
+<text class="small" x="560.0" y="270" text-anchor="middle">0</text>
+<line class="rule" x1="657.560975609756" y1="252" x2="657.560975609756" y2="257"/>
+<text class="small" x="657.560975609756" y="270" text-anchor="middle">30</text>
+<line class="rule" x1="755.1219512195122" y1="252" x2="755.1219512195122" y2="257"/>
+<text class="small" x="755.1219512195122" y="270" text-anchor="middle">60</text>
+<line class="rule" x1="852.6829268292684" y1="252" x2="852.6829268292684" y2="257"/>
+<text class="small" x="852.6829268292684" y="270" text-anchor="middle">90</text>
+<line class="rule" x1="950.2439024390244" y1="252" x2="950.2439024390244" y2="257"/>
+<text class="small" x="950.2439024390244" y="270" text-anchor="middle">120</text>
+<text class="small" x="960" y="284" text-anchor="end">tick (หนึ่งหน่วยเวลา)</text>
+<text class="small" x="560" y="300" text-anchor="start">ฟ้าอ่อนที่ต่อเนื่อง = ความจุที่ถูกกันไว้ทั้งที่ไม่มีข้อมูลวิ่ง</text>
+<text class="small" x="560" y="318" text-anchor="start">ช่วงนั้น flow อื่นเอาไปใช้ไม่ได้เลย</text>
+<text class="small" x="560" y="348" text-anchor="start">circuit: ปฏิเสธคอลรวม 88 tick | packet: คิวสูงสุด 18 packet</text>
+<text class="small" x="560" y="384" text-anchor="start">เส้นตั้ง: เขียว = packet จบ tick 94 · ทอง = circuit จบ tick 122</text>
+<text class="small" x="560" y="366" text-anchor="start">ทั้งคู่ส่งครบ 96 packet — ต่างกันที่ใครได้ใช้ link ระหว่างทาง</text>
+<rect class="boxy" x="24" y="430" width="316" height="200" rx="10"/>
+<text class="ptitle" x="42" y="460" text-anchor="start">circuit switching</text>
+<line class="rule" x1="42" y1="472" x2="322" y2="472"/>
+<text class="big" x="42" y="506" text-anchor="start">เสร็จที่ tick 122</text>
+<text class="txt" x="42" y="538" text-anchor="start">ทุก link รวม: จองเปล่า 236 slot</text>
+<text class="txt" x="42" y="564" text-anchor="start">คอลที่ถูกบล็อก 88 tick</text>
+<text class="txt" x="42" y="590" text-anchor="start">ใช้ link คอขวด 39.3%</text>
+<rect class="boxi" x="362" y="430" width="316" height="200" rx="10"/>
+<text class="ptitle" x="380" y="460" text-anchor="start">packet switching</text>
+<line class="rule" x1="380" y1="472" x2="660" y2="472"/>
+<text class="big" x="380" y="506" text-anchor="start">เสร็จที่ tick 94</text>
+<text class="txt" x="380" y="538" text-anchor="start">ไม่มี slot ที่จองทิ้งไว้</text>
+<text class="txt" x="380" y="564" text-anchor="start">คิวสูงสุด 18 · ต้องรอในคิว</text>
+<text class="txt" x="380" y="590" text-anchor="start">ใช้ link คอขวด 51.1%</text>
+<rect class="boxb" x="700" y="430" width="316" height="200" rx="10"/>
+<text class="ptitle" x="718" y="460" text-anchor="start">ส่วนต่าง</text>
+<line class="rule" x1="718" y1="472" x2="998" y2="472"/>
+<text class="big" x="718" y="506" text-anchor="start">ใช้เวลาน้อยลง 23.0%</text>
+<text class="txt" x="718" y="538" text-anchor="start">ทุกคอลได้ใช้ ไม่มีใครถูกปฏิเสธ</text>
+<text class="txt" x="718" y="564" text-anchor="start">แลกมาด้วยคิวและ delay ที่ไม่คงที่</text>
+<text class="txt" x="718" y="590" text-anchor="start">นี่คือรากของ internet วันนี้</text>
+<text class="small" x="530" y="654" text-anchor="middle">ที่มาของตัวเลข: out/05_compare.txt และ out/06_timeline.txt (seed 20261112, ทุกอย่างเป็น tick ไม่ใช้เวลาจริง — รันซ้ำได้ผลเดิม)</text>
+<text class="small" x="530" y="676" text-anchor="middle">แบบจำลอง: circuit จอง 1 channel/tick ตลอดช่วงถือสาย · packet ใช้ความจุที่ว่างแบบแย่งกันใช้ ไม่มีการจอง</text>
+</svg>

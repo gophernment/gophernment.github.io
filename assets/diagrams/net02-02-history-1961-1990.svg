@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 648" width="1000" height="648" role="img" aria-label="ไทม์ไลน์ 1961-1990: Kleinrock, Baran, Davies, ARPANET, NCP, TCP/IP flag day 1983, ปิด ARPANET 1990">
+<style>
+text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 13px; fill: #1a1a1a; }
+.hdr { font-weight: 700; font-size: 17.5px; }
+.sub { fill: #57606a; font-size: 12.5px; }
+.ptitle { font-weight: 700; font-size: 14.5px; }
+.txt { font-size: 13px; }
+.lbl { fill: #57606a; font-size: 11.5px; }
+.small { fill: #57606a; font-size: 11px; }
+.big { font-weight: 700; font-size: 22px; fill: #0550ae; }
+.mono { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12px; fill: #0550ae; }
+.monos { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 11px; fill: #0550ae; }
+.mchip { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12.5px; font-weight: 700; fill: #0550ae; }
+.boxg { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.3; }
+.boxb { fill: #eef4ff; stroke: #0969da; stroke-width: 1.5; }
+.boxy { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.4; }
+.boxi { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.4; }
+.boxv { fill: #f6f2ff; stroke: #8250df; stroke-width: 1.4; }
+.node { fill: #ffffff; stroke: #57606a; stroke-width: 1.8; }
+.nodew { fill: #eff5ff; stroke: #0969da; stroke-width: 2.2; }
+.wire { stroke: #8c959f; stroke-width: 1.8; }
+.wirealt { stroke: #b6bcc4; stroke-width: 1.4; stroke-dasharray: 5 4; }
+.wirehot { stroke: #bf8700; stroke-width: 5; stroke-linecap: round; }
+.rule { stroke: #d0d7de; stroke-width: 1.2; }
+.dark { fill: #0969da; }
+.resv { fill: #dbe6f8; }
+.busy { fill: #1a7f37; }
+.empty { fill: #f1f3f5; }
+.marko { stroke: #bf8700; stroke-width: 1.8; stroke-dasharray: 3 3; }
+.markg { stroke: #1a7f37; stroke-width: 1.8; stroke-dasharray: 3 3; }
+</style>
+<rect x="0" y="0" width="1000" height="648" fill="#ffffff"/>
+<text class="hdr" x="500" y="38" text-anchor="middle">จากความคิดถึง internet: 1961-1990</text>
+<text class="sub" x="500" y="62" text-anchor="middle">หกคน ห้าสถาบัน สองทฤษฎี — และหนึ่งวันที่ทุกเครื่องต้องเปลี่ยน protocol พร้อมกัน</text>
+<rect class="boxg" x="24" y="96" width="952" height="52" rx="8"/>
+<text class="mchip" x="50" y="128" text-anchor="start">1961</text>
+<text class="txt" x="118" y="118" text-anchor="start">Kleinrock (MIT) ตีพิมพ์เรื่อง queueing ในเครือข่าย</text>
+<text class="small" x="118" y="136" text-anchor="start">คำถามตั้งต้น: ถ้าคนแชร์สายกัน คิวยาวแค่ไหนถึงจะรับได้</text>
+<rect class="boxv" x="24" y="152" width="952" height="52" rx="8"/>
+<text class="mchip" x="50" y="184" text-anchor="start">1964</text>
+<text class="txt" x="118" y="174" text-anchor="start">Baran (RAND) เผยแพร่ On Distributed Communications</text>
+<text class="small" x="118" y="192" text-anchor="start">แบ่งข้อความเป็น message block + hot-potato routing กันเครือข่ายตายทั้งระบบ</text>
+<rect class="boxg" x="24" y="208" width="952" height="52" rx="8"/>
+<text class="mchip" x="50" y="240" text-anchor="start">1966</text>
+<text class="txt" x="118" y="230" text-anchor="start">Davies (NPL อังกฤษ) เสนอโครงข่ายแบบ packet</text>
+<text class="small" x="118" y="248" text-anchor="start">คำว่า packet เกิดที่นี่ — แยกจาก message switching ของระบบโทรเลข</text>
+<rect class="boxv" x="24" y="264" width="952" height="52" rx="8"/>
+<text class="mchip" x="50" y="296" text-anchor="start">1967</text>
+<text class="txt" x="118" y="286" text-anchor="start">ARPA ประชุมที่ Gatlinburg วางแผนเครือข่าย 4 node</text>
+<text class="small" x="118" y="304" text-anchor="start">Roberts ดึงแนวคิด packet มาใช้ และอัปความเร็ว link จาก 2.4k เป็น 50 kbit/s</text>
+<rect class="boxb" x="24" y="320" width="952" height="52" rx="8"/>
+<text class="mchip" x="50" y="352" text-anchor="start">1969</text>
+<text class="txt" x="118" y="342" text-anchor="start">BBN ส่ง IMP ถึง UCLA 30 ส.ค. — ข้อความแรก 29 ต.ค.</text>
+<text class="small" x="118" y="360" text-anchor="start">ข้อความแรกคือ lo (จาก login ที่ crashed) — สิ้นปีมีครบ 4 node</text>
+<rect class="boxv" x="24" y="376" width="952" height="52" rx="8"/>
+<text class="mchip" x="50" y="408" text-anchor="start">1970</text>
+<text class="txt" x="118" y="398" text-anchor="start">NCP: paper ที่ SJCC ก.พ. → Host-Host Protocol Doc.1 ส.ค.</text>
+<text class="small" x="118" y="416" text-anchor="start">เอกสารที่ใช้จริงไม่ใช่ RFC 33 — ตัว RFC 33 เองบอกว่าข้อมูลไม่พอจะเขียน NCP</text>
+<rect class="boxg" x="24" y="432" width="952" height="52" rx="8"/>
+<text class="mchip" x="50" y="464" text-anchor="start">1974</text>
+<text class="txt" x="118" y="454" text-anchor="start">Cerf + Kahn ตีพิมพ์ paper TCP ฉบับแรก</text>
+<text class="small" x="118" y="472" text-anchor="start">A Protocol for Packet Network Intercommunication — ต่อหลายเครือข่ายเข้าด้วยกัน</text>
+<rect class="boxb" x="24" y="488" width="952" height="52" rx="8"/>
+<text class="mchip" x="50" y="520" text-anchor="start">1983</text>
+<text class="txt" x="118" y="510" text-anchor="start">1 ม.ค.: ARPANET เปลี่ยนจาก NCP เป็น TCP/IP ทั้งเครือข่าย</text>
+<text class="small" x="118" y="528" text-anchor="start">flag day แบบพร้อมกันทั้งระบบ ตามแผน RFC 801 (พ.ย. 1981)</text>
+<rect class="boxg" x="24" y="544" width="952" height="52" rx="8"/>
+<text class="mchip" x="50" y="576" text-anchor="start">1990</text>
+<text class="txt" x="118" y="566" text-anchor="start">28 ก.พ.: ปิด ARPANET อย่างเป็นทางการ</text>
+<text class="small" x="118" y="584" text-anchor="start">งานของมันถูก NSFNET และเครือข่ายเชิงพาณิชย์รับช่วงต่อ</text>
+<text class="small" x="500" y="614" text-anchor="middle">สีฟ้า = สองจุดที่บทนี้เล่าละเอียด: ข้อความแรกปี 1969 และ flag day ปี 1983</text>
+<text class="small" x="500" y="636" text-anchor="middle">sources: RAND, NPL, RFC 33/675/801, UCLA CS, ICANN, Wikipedia (ARPANET) — ตรวจ ณ พ.ย. 2026</text>
+</svg>
