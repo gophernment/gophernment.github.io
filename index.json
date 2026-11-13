@@ -1,5 +1,21 @@
 [
   {
+    "slug": "2026-11-13-network-03-ethernet-lan",
+    "title": "'Ethernet (1973): สายเส้นเดียวที่ทำให้ LAN ทั้งโลกพูดภาษาเดียวกัน (ตอนที่ 03)'",
+    "date": "2026-11-13",
+    "tags": [
+      "network",
+      "ethernet",
+      "lan",
+      "csma-cd",
+      "mac-address",
+      "frame",
+      "history",
+      "golang"
+    ],
+    "description": "ตอนที่ 03 ของซีรีส์ Network — ตามรอย Bob Metcalfe ที่ Xerox PARC จาก memo 22 พฤษภาคม 1973 ผ่าน DIX standard ปี 1980 ถึง IEEE 802.3 ปี 1983 แล้วลงมือประกอบ Ethernet frame ทีละช่องด้วย Go ตรวจ FCS ด้วย CRC-32 อ่าน MAC address ระดับบิต และจำลอง CSMA/CD วัดด้วยตัวเลขจริงว่า hub แชร์ 10 Mbit/s อย่างไร และทำไม switch ถึงมาแทน"
+  },
+  {
     "slug": "2026-11-12-network-02-arpanet-packet-switching",
     "title": "'ARPANET (1969): สงครามระหว่าง circuit switching กับ packet switching (ตอนที่ 02)'",
     "date": "2026-11-12",
