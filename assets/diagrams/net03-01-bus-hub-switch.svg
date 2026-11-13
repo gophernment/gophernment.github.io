@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 760" width="1080" height="760" role="img" aria-label="วิวัฒนาการ medium ของ Ethernet: bus coax → hub → switch และจำนวน collision domain">
+<style>
+text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 12.5px; fill: #1a1a1a; }
+.hdr { font-weight: 700; font-size: 17.5px; }
+.sub { fill: #57606a; font-size: 12.5px; }
+.ptitle { font-weight: 700; font-size: 14px; }
+.txt { font-size: 12.5px; }
+.lbl { fill: #57606a; font-size: 11px; }
+.small { fill: #57606a; font-size: 10.5px; }
+.big { font-weight: 700; font-size: 20px; fill: #0550ae; }
+.mono { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 11.5px; fill: #0550ae; }
+.monos { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 10.5px; fill: #0550ae; }
+.mchip { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12px; font-weight: 700; fill: #0550ae; }
+.boxg { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.3; }
+.boxb { fill: #eef4ff; stroke: #0969da; stroke-width: 1.5; }
+.boxy { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.4; }
+.boxi { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.4; }
+.boxv { fill: #f6f2ff; stroke: #8250df; stroke-width: 1.4; }
+.node { fill: #ffffff; stroke: #57606a; stroke-width: 1.6; }
+.nodew { fill: #eff5ff; stroke: #0969da; stroke-width: 1.8; }
+.wire { stroke: #8c959f; stroke-width: 1.8; fill: none; }
+.wirealt { stroke: #b6bcc4; stroke-width: 1.3; stroke-dasharray: 5 4; fill: none; }
+.coax { stroke: #bf8700; stroke-width: 6; stroke-linecap: round; }
+.coax2 { stroke: #bf8700; stroke-width: 3; stroke-linecap: round; }
+.rule { stroke: #d0d7de; stroke-width: 1.2; }
+.dark { fill: #0969da; }
+.busy { fill: #1a7f37; }
+.empty { fill: #eef1f4; }
+.warn { fill: #bf8700; }
+</style>
+<rect x="0" y="0" width="1080" height="760" fill="#ffffff"/>
+<text class="hdr" x="540" y="34" text-anchor="middle">จาก coax เส้นเดียวถึง switch: สิ่งที่เปลี่ยนคือ 'ใครได้ยินใคร'</text>
+<text class="sub" x="540" y="58" text-anchor="middle">Ethernet frame ไม่เปลี่ยนเลยตั้งแต่ปี 1980 — ที่เปลี่ยนคือ medium และอุปกรณ์ที่ต่ออยู่ปลายสายทั้งสองข้าง</text>
+<rect class="boxg" x="24" y="78" width="328" height="356" rx="10"/>
+<text class="ptitle" x="40" y="106" text-anchor="start">1) bus coax · 1973–1985</text>
+<text class="small" x="40" y="126" text-anchor="start">ทุก station ต่อสายเดียวกัน</text>
+<line class="rule" x1="40" y1="136" x2="336" y2="136"/>
+<rect class="boxg" x="376" y="78" width="328" height="356" rx="10"/>
+<text class="ptitle" x="392" y="106" text-anchor="start">2) 10BASE-T + hub · 1990</text>
+<text class="small" x="392" y="126" text-anchor="start">hub = multiport repeater</text>
+<line class="rule" x1="392" y1="136" x2="688" y2="136"/>
+<rect class="boxg" x="728" y="78" width="328" height="356" rx="10"/>
+<text class="ptitle" x="744" y="106" text-anchor="start">3) switch · 1990s</text>
+<text class="small" x="744" y="126" text-anchor="start">bridge หลายพอร์ต + MAC table</text>
+<line class="rule" x1="744" y1="136" x2="1040" y2="136"/>
+<line class="coax" x1="50" y1="310" x2="326" y2="310"/>
+<line class="coax2" x1="50" y1="301" x2="50" y2="319"/>
+<line class="coax2" x1="326" y1="301" x2="326" y2="319"/>
+<rect class="node" x="56" y="154" width="60" height="34" rx="6"/>
+<text class="monos" x="86" y="176" text-anchor="middle">PC1</text>
+<line class="wire" x1="86" y1="188" x2="86" y2="306"/>
+<polyline class="wire" points="81,298 86,306 91,298"/>
+<rect class="node" x="124" y="154" width="60" height="34" rx="6"/>
+<text class="monos" x="154" y="176" text-anchor="middle">PC2</text>
+<line class="wire" x1="154" y1="188" x2="154" y2="306"/>
+<polyline class="wire" points="149,298 154,306 159,298"/>
+<rect class="node" x="192" y="154" width="60" height="34" rx="6"/>
+<text class="monos" x="222" y="176" text-anchor="middle">PC3</text>
+<line class="wire" x1="222" y1="188" x2="222" y2="306"/>
+<polyline class="wire" points="217,298 222,306 227,298"/>
+<rect class="node" x="260" y="154" width="60" height="34" rx="6"/>
+<text class="monos" x="290" y="176" text-anchor="middle">PC4</text>
+<line class="wire" x1="290" y1="188" x2="290" y2="306"/>
+<polyline class="wire" points="285,298 290,306 295,298"/>
+<text class="small" x="188" y="336" text-anchor="middle">coax หนึ่งเส้น (vampire tap เจาะกลางสาย)</text>
+<text class="lbl" x="40" y="356" text-anchor="start">ทุก station เห็นสัญญาณของทุกคน</text>
+<text class="lbl" x="40" y="373" text-anchor="start">พูดพร้อมกัน = collision ทั้งวง</text>
+<text class="lbl" x="40" y="390" text-anchor="start">แชร์ 10 Mbit/s ร่วมกันทั้งเส้น</text>
+<text class="mchip" x="336" y="414" text-anchor="end">1 collision domain</text>
+<rect class="boxb" x="484.0" y="190" width="112" height="46" rx="8"/>
+<text class="mchip" x="540" y="212" text-anchor="middle">hub</text>
+<text class="small" x="540" y="228" text-anchor="middle">repeater</text>
+<rect class="node" x="412.0" y="142" width="64" height="34" rx="6"/>
+<text class="monos" x="444" y="164" text-anchor="middle">PC1</text>
+<line class="wire" x1="444.0" y1="176" x2="499.68" y2="190"/>
+<rect class="node" x="604.0" y="142" width="64" height="34" rx="6"/>
+<text class="monos" x="636" y="164" text-anchor="middle">PC2</text>
+<line class="wire" x1="636.0" y1="176" x2="580.32" y2="190"/>
+<rect class="node" x="412.0" y="270" width="64" height="34" rx="6"/>
+<text class="monos" x="444" y="292" text-anchor="middle">PC3</text>
+<line class="wire" x1="444.0" y1="270" x2="499.68" y2="236"/>
+<rect class="node" x="604.0" y="270" width="64" height="34" rx="6"/>
+<text class="monos" x="636" y="292" text-anchor="middle">PC4</text>
+<line class="wire" x1="636.0" y1="270" x2="580.32" y2="236"/>
+<text class="small" x="392" y="328" text-anchor="start">hub: รับบิตแล้วยิงซ้ำออกทุกพอร์ต</text>
+<text class="small" x="392" y="346" text-anchor="start">จึงยังเป็นสายเดียวในทางตรรกะ</text>
+<text class="lbl" x="392" y="372" text-anchor="start">สาย UTP + star wiring · ยังชนกันได้</text>
+<text class="lbl" x="392" y="389" text-anchor="start">(ใช้สายโทรศัพท์ในผนังเดิม) · แชร์ 10 Mbit/s</text>
+<text class="mchip" x="688" y="418" text-anchor="end">1 collision domain</text>
+<rect class="boxi" x="830.0" y="190" width="124" height="46" rx="8"/>
+<text class="mchip" x="892" y="212" text-anchor="middle">switch</text>
+<text class="small" x="892" y="228" text-anchor="middle">MAC table</text>
+<rect class="node" x="764.0" y="142" width="64" height="34" rx="6"/>
+<text class="monos" x="796" y="164" text-anchor="middle">PC1</text>
+<line class="wire" x1="796.0" y1="176" x2="851.68" y2="190"/>
+<rect class="node" x="956.0" y="142" width="64" height="34" rx="6"/>
+<text class="monos" x="988" y="164" text-anchor="middle">PC2</text>
+<line class="wire" x1="988.0" y1="176" x2="932.32" y2="190"/>
+<rect class="node" x="764.0" y="270" width="64" height="34" rx="6"/>
+<text class="monos" x="796" y="292" text-anchor="middle">PC3</text>
+<line class="wire" x1="796.0" y1="270" x2="851.68" y2="236"/>
+<rect class="node" x="956.0" y="270" width="64" height="34" rx="6"/>
+<text class="monos" x="988" y="292" text-anchor="middle">PC4</text>
+<line class="wire" x1="988.0" y1="270" x2="932.32" y2="236"/>
+<text class="small" x="744" y="328" text-anchor="start">ส่งเฉพาะพอร์ตที่ปลายทางอยู่ ไม่ flood</text>
+<text class="small" x="744" y="346" text-anchor="start">แต่ละพอร์ต = 1 collision domain</text>
+<text class="lbl" x="744" y="372" text-anchor="start">full duplex: ส่งและรับพร้อมกันได้</text>
+<text class="lbl" x="744" y="389" text-anchor="start">ไม่ต้องใช้ CSMA/CD อีก (แต่ยังรองรับ)</text>
+<text class="mchip" x="1040" y="418" text-anchor="end">N collision domains</text>
+<rect class="boxy" x="24" y="452" width="322" height="190" rx="10"/>
+<text class="ptitle" x="40" y="480" text-anchor="start">ความจุที่ทุกคนแชร์</text>
+<line class="rule" x1="40" y1="490" x2="330" y2="490"/>
+<text class="txt" x="40" y="516" text-anchor="start">bus / hub: 10 Mbit/s รวม</text>
+<text class="txt" x="40" y="546" text-anchor="start">20 station → 0.49 Mbit/s ต่อคน</text>
+<text class="small" x="40" y="576" text-anchor="start">ตัวเลขจาก out/06_csma.txt</text>
+<rect class="boxi" x="370" y="452" width="322" height="190" rx="10"/>
+<text class="ptitle" x="386" y="480" text-anchor="start">switch: ต่อพอร์ต</text>
+<line class="rule" x1="386" y1="490" x2="676" y2="490"/>
+<text class="txt" x="386" y="516" text-anchor="start">แต่ละพอร์ต 10 Mbit/s ของตัวเอง</text>
+<text class="txt" x="386" y="546" text-anchor="start">20 พอร์ต = 20 collision domain</text>
+<text class="small" x="386" y="576" text-anchor="start">ความจุรวมโตตามจำนวนพอร์ต</text>
+<rect class="boxb" x="716" y="452" width="322" height="190" rx="10"/>
+<text class="ptitle" x="732" y="480" text-anchor="start">frame ยังเหมือนเดิม</text>
+<line class="rule" x1="732" y1="490" x2="1022" y2="490"/>
+<text class="mono" x="732" y="516" text-anchor="start">dst 6 + src 6 + type 2</text>
+<text class="mono" x="732" y="546" text-anchor="start">payload 46–1500 + FCS 4</text>
+<text class="mono" x="732" y="576" text-anchor="start">ขนาด 64–1518 ไบต์</text>
+<text class="small" x="540" y="676" text-anchor="middle">hub ไม่ได้เพิ่มความจุ — มันแค่เปลี่ยนรูปสายที่ใช้ · ความจุที่เพิ่มเกิดจาก switch</text>
+<text class="small" x="540" y="700" text-anchor="middle">ตัวเลข 0.49 Mbit/s มาจากตารางที่ N=20 ใน out/06_csma.txt (frame 1024 ไบต์, seed คงที่)</text>
+<text class="small" x="540" y="724" text-anchor="middle">ที่มา: IEEE 802.3-1985 (10BASE5) · 802.3i-1990 (10BASE-T) · Kalpana EtherSwitch 1990</text>
+</svg>

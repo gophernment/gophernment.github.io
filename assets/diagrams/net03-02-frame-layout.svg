@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 700" width="1080" height="700" role="img" aria-label="โครงสร้าง Ethernet II frame: preamble, SFD, dst MAC, src MAC, ethertype, payload, FCS">
+<style>
+text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 12.5px; fill: #1a1a1a; }
+.hdr { font-weight: 700; font-size: 17.5px; }
+.sub { fill: #57606a; font-size: 12.5px; }
+.ptitle { font-weight: 700; font-size: 14px; }
+.txt { font-size: 12.5px; }
+.lbl { fill: #57606a; font-size: 11px; }
+.small { fill: #57606a; font-size: 10.5px; }
+.big { font-weight: 700; font-size: 20px; fill: #0550ae; }
+.mono { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 11.5px; fill: #0550ae; }
+.monos { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 10.5px; fill: #0550ae; }
+.mchip { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12px; font-weight: 700; fill: #0550ae; }
+.boxg { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.3; }
+.boxb { fill: #eef4ff; stroke: #0969da; stroke-width: 1.5; }
+.boxy { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.4; }
+.boxi { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.4; }
+.boxv { fill: #f6f2ff; stroke: #8250df; stroke-width: 1.4; }
+.node { fill: #ffffff; stroke: #57606a; stroke-width: 1.6; }
+.nodew { fill: #eff5ff; stroke: #0969da; stroke-width: 1.8; }
+.wire { stroke: #8c959f; stroke-width: 1.8; fill: none; }
+.wirealt { stroke: #b6bcc4; stroke-width: 1.3; stroke-dasharray: 5 4; fill: none; }
+.coax { stroke: #bf8700; stroke-width: 6; stroke-linecap: round; }
+.coax2 { stroke: #bf8700; stroke-width: 3; stroke-linecap: round; }
+.rule { stroke: #d0d7de; stroke-width: 1.2; }
+.dark { fill: #0969da; }
+.busy { fill: #1a7f37; }
+.empty { fill: #eef1f4; }
+.warn { fill: #bf8700; }
+</style>
+<rect x="0" y="0" width="1080" height="700" fill="#ffffff"/>
+<text class="hdr" x="540" y="34" text-anchor="middle">Ethernet II: 72 ไบต์บนสาย · frame 64 ไบต์ · OS เห็น 60 ไบต์</text>
+<text class="sub" x="540" y="58" text-anchor="middle">ตัวเลข offset/len ทุกตัวอ่านจากตารางที่โปรแกรมพิมพ์เอง (out/01_frame_build.txt)</text>
+<rect class="boxy" x="40" y="112" width="77.0" height="54" rx="4"/>
+<text class="monos" x="78" y="136" text-anchor="middle">preamble</text>
+<text class="monos" x="78" y="154" text-anchor="middle">7B</text>
+<text class="small" x="42" y="104" text-anchor="start">0</text>
+<rect class="boxy" x="117.0" y="112" width="11.0" height="54" rx="4"/>
+<text class="monos" x="122" y="136" text-anchor="middle">1</text>
+<text class="small" x="119" y="104" text-anchor="start">7</text>
+<rect class="boxb" x="128.0" y="112" width="66.0" height="54" rx="4"/>
+<text class="monos" x="161" y="136" text-anchor="middle">dst MAC</text>
+<text class="monos" x="161" y="154" text-anchor="middle">6B</text>
+<text class="small" x="130" y="104" text-anchor="start">8</text>
+<rect class="boxv" x="194.0" y="112" width="66.0" height="54" rx="4"/>
+<text class="monos" x="227" y="136" text-anchor="middle">src MAC</text>
+<text class="monos" x="227" y="154" text-anchor="middle">6B</text>
+<text class="small" x="196" y="104" text-anchor="start">14</text>
+<rect class="boxi" x="260.0" y="112" width="22.0" height="54" rx="4"/>
+<text class="monos" x="271" y="136" text-anchor="middle">2</text>
+<text class="small" x="262" y="104" text-anchor="start">20</text>
+<rect class="boxg" x="282.0" y="112" width="506.0" height="54" rx="4"/>
+<text class="monos" x="535" y="136" text-anchor="middle">payload</text>
+<text class="monos" x="535" y="154" text-anchor="middle">46B</text>
+<text class="small" x="284" y="104" text-anchor="start">22</text>
+<rect class="boxb" x="788.0" y="112" width="44.0" height="54" rx="4"/>
+<text class="monos" x="810" y="136" text-anchor="middle">4</text>
+<text class="small" x="790" y="104" text-anchor="start">60</text>
+<line class="rule" x1="40" y1="90" x2="832.0" y2="90"/>
+<line class="rule" x1="40.0" y1="85" x2="40.0" y2="90"/>
+<text class="small" x="40" y="80" text-anchor="middle">0</text>
+<line class="rule" x1="128.0" y1="85" x2="128.0" y2="90"/>
+<text class="small" x="128" y="80" text-anchor="middle">8</text>
+<line class="rule" x1="216.0" y1="85" x2="216.0" y2="90"/>
+<text class="small" x="216" y="80" text-anchor="middle">16</text>
+<line class="rule" x1="304.0" y1="85" x2="304.0" y2="90"/>
+<text class="small" x="304" y="80" text-anchor="middle">24</text>
+<line class="rule" x1="392.0" y1="85" x2="392.0" y2="90"/>
+<text class="small" x="392" y="80" text-anchor="middle">32</text>
+<line class="rule" x1="480.0" y1="85" x2="480.0" y2="90"/>
+<text class="small" x="480" y="80" text-anchor="middle">40</text>
+<line class="rule" x1="568.0" y1="85" x2="568.0" y2="90"/>
+<text class="small" x="568" y="80" text-anchor="middle">48</text>
+<line class="rule" x1="656.0" y1="85" x2="656.0" y2="90"/>
+<text class="small" x="656" y="80" text-anchor="middle">56</text>
+<line class="rule" x1="744.0" y1="85" x2="744.0" y2="90"/>
+<text class="small" x="744" y="80" text-anchor="middle">64</text>
+<line class="rule" x1="832.0" y1="85" x2="832.0" y2="90"/>
+<text class="small" x="832" y="80" text-anchor="middle">72</text>
+<text class="small" x="122" y="182" text-anchor="middle">SFD</text>
+<text class="small" x="271" y="182" text-anchor="middle">ethertype</text>
+<text class="small" x="722" y="182" text-anchor="middle">FCS</text>
+<text class="small" x="40" y="208" text-anchor="start">preamble + SFD (8 ไบต์) อยู่ชั้น physical — NIC ตัดทิ้งก่อนส่งให้ OS</text>
+<text class="small" x="40" y="224" text-anchor="start">FCS (4 ไบต์) NIC ตรวจแล้วตัดทิ้งเช่นกัน → buffer ที่ OS เห็นจึงสั้นลง 12 ไบต์</text>
+<text class="mchip" x="832" y="208" text-anchor="end">72 ไบต์ (บนสาย)</text>
+<text class="mchip" x="832" y="224" text-anchor="end">60 ไบต์ (OS เห็น)</text>
+<rect class="boxg" x="24" y="232" width="516" height="214" rx="10"/>
+<text class="ptitle" x="40" y="258" text-anchor="start">MAC address 48 bit — ไบต์แรกมีสองบิตที่ต้องอ่านให้ถูก</text>
+<rect class="boxb" x="44" y="276" width="62" height="40" rx="4"/>
+<text class="mchip" x="75" y="302" text-anchor="middle">ff</text>
+<rect class="boxb" x="114" y="276" width="62" height="40" rx="4"/>
+<text class="mchip" x="145" y="302" text-anchor="middle">ff</text>
+<rect class="boxb" x="184" y="276" width="62" height="40" rx="4"/>
+<text class="mchip" x="215" y="302" text-anchor="middle">ff</text>
+<rect class="boxv" x="254" y="276" width="62" height="40" rx="4"/>
+<text class="mchip" x="285" y="302" text-anchor="middle">ff</text>
+<rect class="boxv" x="324" y="276" width="62" height="40" rx="4"/>
+<text class="mchip" x="355" y="302" text-anchor="middle">ff</text>
+<rect class="boxv" x="394" y="276" width="62" height="40" rx="4"/>
+<text class="mchip" x="425" y="302" text-anchor="middle">ff</text>
+<text class="small" x="44" y="332" text-anchor="start">OUI 3 ไบต์ (IEEE ออกให้ผู้ผลิต)</text>
+<text class="small" x="456" y="332" text-anchor="end">3 ไบต์ที่ผู้ผลิตกำหนด</text>
+<line class="rule" x1="44" y1="340" x2="246" y2="340"/>
+<text class="txt" x="40" y="366" text-anchor="start">บิต 0 ของไบต์แรก (I/G): 1 = กลุ่ม → multicast/broadcast</text>
+<text class="txt" x="40" y="385" text-anchor="start">บิต 1 ของไบต์แรก (U/L): 1 = address ที่เครื่องตั้งเอง</text>
+<text class="txt" x="40" y="405" text-anchor="start">ff:ff:ff:ff:ff:ff = broadcast (ทุกบิตเป็น 1)</text>
+<text class="small" x="40" y="434" text-anchor="start">ตัวอย่างข้างบนจึงเป็น broadcast: I/G=1 และ U/L=1 พร้อมกัน</text>
+<rect class="boxg" x="556" y="232" width="500" height="214" rx="10"/>
+<text class="ptitle" x="572" y="258" text-anchor="start">FCS ครอบทุกไบต์ตั้งแต่ dst MAC จนจบ payload</text>
+<rect class="empty" x="572" y="276" width="468" height="26" rx="3"/>
+<rect class="boxb" x="572" y="276" width="442.0" height="26" rx="3"/>
+<rect class="warn" x="1014.0" y="276" width="26.0" height="26" rx="3"/>
+<text class="small" x="582" y="294" text-anchor="start">ข้อมูลที่ CRC-32 คำนวณ (60 ไบต์)</text>
+<text class="small" x="1036" y="322" text-anchor="end">FCS 4</text>
+<text class="lbl" x="572" y="348" text-anchor="start">CRC-32: poly 0x04c11db7 (สะท้อนบิต), init 0xffffffff, xorout 0xffffffff</text>
+<text class="lbl" x="572" y="365" text-anchor="start">ส่ง 4 ไบต์แบบ little-endian · ตรวจทั้ง frame ได้ด้วย residue 0x2144df1c</text>
+<text class="lbl" x="572" y="382" text-anchor="start">พลิก 1 บิตก็จับได้ — แต่ไม่มีอะไรซ่อมให้ ต้องให้ชั้นบนส่งซ้ำ</text>
+<text class="small" x="572" y="434" text-anchor="start">ตัวเลข 0x2144df1c คือค่าที่โปรแกรมพิมพ์ใน out/04_fcs.txt</text>
+<rect class="boxg" x="24" y="466" width="1032" height="92" rx="10"/>
+<text class="ptitle" x="40" y="490" text-anchor="start">ขนาดที่มาตรฐานกำหนด</text>
+<text class="txt" x="40" y="512" text-anchor="start">payload 46–1500 ไบต์ · frame 64–1518 ไบต์ (dst MAC ถึง FCS)</text>
+<text class="small" x="40" y="534" text-anchor="start">payload สั้นกว่า 46 ไบต์ต้องเติม padding — ถ้าไม่เติม station ที่ไกลสุดจะตรวจ collision ไม่ทัน</text>
+<text class="mchip" x="1040" y="512" text-anchor="end">MTU 1500</text>
+<text class="small" x="1040" y="534" text-anchor="end">ไม่รวม preamble/FCS</text>
+<text class="small" x="540" y="596" text-anchor="middle">frame เดียวกันนี้ใช้มาตั้งแต่ 10 Mbit/s coax จนถึง 800 Gbit/s fiber — เปลี่ยนแค่ความเร็วและสื่อ</text>
+<text class="small" x="540" y="620" text-anchor="middle">ที่มา: IEEE 802.3 frame format · RFC 1112 (IPv4 multicast MAC) · RFC 2464 (IPv6 multicast MAC)</text>
+<text class="small" x="540" y="644" text-anchor="middle">ภาพนี้วาดจาก field ที่โปรแกรมใน out/01 ประกอบจริง ไม่ได้ลอกมาจากตำรา</text>
+</svg>

@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 700" width="1080" height="700" role="img" aria-label="ผลวัด CSMA/CD: per-node throughput และ utilisation เมื่อ station เพิ่มขึ้น">
+<style>
+text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 12.5px; fill: #1a1a1a; }
+.hdr { font-weight: 700; font-size: 17.5px; }
+.sub { fill: #57606a; font-size: 12.5px; }
+.ptitle { font-weight: 700; font-size: 14px; }
+.txt { font-size: 12.5px; }
+.lbl { fill: #57606a; font-size: 11px; }
+.small { fill: #57606a; font-size: 10.5px; }
+.big { font-weight: 700; font-size: 20px; fill: #0550ae; }
+.mono { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 11.5px; fill: #0550ae; }
+.monos { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 10.5px; fill: #0550ae; }
+.mchip { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12px; font-weight: 700; fill: #0550ae; }
+.boxg { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.3; }
+.boxb { fill: #eef4ff; stroke: #0969da; stroke-width: 1.5; }
+.boxy { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.4; }
+.boxi { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.4; }
+.boxv { fill: #f6f2ff; stroke: #8250df; stroke-width: 1.4; }
+.node { fill: #ffffff; stroke: #57606a; stroke-width: 1.6; }
+.nodew { fill: #eff5ff; stroke: #0969da; stroke-width: 1.8; }
+.wire { stroke: #8c959f; stroke-width: 1.8; fill: none; }
+.wirealt { stroke: #b6bcc4; stroke-width: 1.3; stroke-dasharray: 5 4; fill: none; }
+.coax { stroke: #bf8700; stroke-width: 6; stroke-linecap: round; }
+.coax2 { stroke: #bf8700; stroke-width: 3; stroke-linecap: round; }
+.rule { stroke: #d0d7de; stroke-width: 1.2; }
+.dark { fill: #0969da; }
+.busy { fill: #1a7f37; }
+.empty { fill: #eef1f4; }
+.warn { fill: #bf8700; }
+</style>
+<rect x="0" y="0" width="1080" height="700" fill="#ffffff"/>
+<text class="hdr" x="540" y="34" text-anchor="middle">วัดจริงจาก simulator: hub แชร์ 10 Mbit/s — switch ให้ 10 Mbit/s ต่อพอร์ต</text>
+<text class="sub" x="540" y="58" text-anchor="middle">ทุก station มี 20 frame พร้อมส่งที่ t=0 · seed คงที่ · ตัวเลขทั้งหมดอ่านจาก out/06_csma.txt</text>
+<rect class="boxg" x="24" y="92" width="518" height="300" rx="10"/>
+<text class="ptitle" x="40" y="116" text-anchor="start">per_node_mbps — ความเร็วที่แต่ละคนได้จริง</text>
+<line class="rule" x1="48" y1="158" x2="48" y2="344"/>
+<line class="rule" x1="48" y1="344" x2="510" y2="344"/>
+<line class="rule" x1="44" y1="344.0" x2="48" y2="344.0"/>
+<text class="small" x="40" y="348" text-anchor="end">0</text>
+<line class="rule" x1="44" y1="306.8" x2="48" y2="306.8"/>
+<text class="small" x="40" y="311" text-anchor="end">2</text>
+<line class="rule" x1="44" y1="269.6" x2="48" y2="269.6"/>
+<text class="small" x="40" y="274" text-anchor="end">4</text>
+<line class="rule" x1="44" y1="232.4" x2="48" y2="232.4"/>
+<text class="small" x="40" y="236" text-anchor="end">6</text>
+<line class="rule" x1="44" y1="195.2" x2="48" y2="195.2"/>
+<text class="small" x="40" y="199" text-anchor="end">8</text>
+<line class="rule" x1="44" y1="158.0" x2="48" y2="158.0"/>
+<text class="small" x="40" y="162" text-anchor="end">10</text>
+<text class="small" x="52" y="148" text-anchor="start">Mbit/s</text>
+<rect class="dark" x="98" y="158.0" width="32" height="186.0" rx="2"/>
+<text class="small" x="114" y="152" text-anchor="middle">10.00</text>
+<rect class="warn" x="134" y="158.0" width="32" height="186.0" rx="2"/>
+<text class="small" x="150" y="152" text-anchor="middle">10.00</text>
+<text class="monos" x="130" y="362" text-anchor="middle">1</text>
+<rect class="dark" x="182" y="251.37199999999999" width="32" height="92.62800000000001" rx="2"/>
+<text class="small" x="198" y="245" text-anchor="middle">4.98</text>
+<rect class="warn" x="218" y="255.464" width="32" height="88.536" rx="2"/>
+<text class="small" x="234" y="249" text-anchor="middle">4.76</text>
+<text class="monos" x="214" y="362" text-anchor="middle">2</text>
+<rect class="dark" x="266" y="306.986" width="32" height="37.014" rx="2"/>
+<text class="small" x="282" y="301" text-anchor="middle">1.99</text>
+<rect class="warn" x="302" y="309.59000000000003" width="32" height="34.41" rx="2"/>
+<text class="small" x="318" y="304" text-anchor="middle">1.85</text>
+<text class="monos" x="298" y="362" text-anchor="middle">5</text>
+<rect class="dark" x="350" y="325.586" width="32" height="18.414" rx="2"/>
+<text class="small" x="366" y="320" text-anchor="middle">0.99</text>
+<rect class="warn" x="386" y="328.004" width="32" height="15.995999999999999" rx="2"/>
+<text class="small" x="402" y="322" text-anchor="middle">0.86</text>
+<text class="monos" x="382" y="362" text-anchor="middle">10</text>
+<rect class="dark" x="434" y="334.886" width="32" height="9.114" rx="2"/>
+<text class="small" x="450" y="329" text-anchor="middle">0.49</text>
+<rect class="warn" x="470" y="337.676" width="32" height="6.324000000000001" rx="2"/>
+<text class="small" x="486" y="332" text-anchor="middle">0.34</text>
+<text class="monos" x="466" y="362" text-anchor="middle">20</text>
+<rect class="dark" x="48" y="374" width="12" height="9" rx="2"/>
+<text class="small" x="66" y="383" text-anchor="start">frame 1024 ไบต์</text>
+<rect class="warn" x="190" y="374" width="12" height="9" rx="2"/>
+<text class="small" x="208" y="383" text-anchor="start">frame 64 ไบต์</text>
+<text class="small" x="330" y="383" text-anchor="start">station บน hub เดียว</text>
+<rect class="boxg" x="548" y="92" width="508" height="300" rx="10"/>
+<text class="ptitle" x="564" y="116" text-anchor="start">util_pct — เวลาที่ medium ถูกใช้ส่งข้อมูล</text>
+<line class="rule" x1="588" y1="158" x2="588" y2="344"/>
+<line class="rule" x1="588" y1="344" x2="998" y2="344"/>
+<line class="rule" x1="584" y1="344.0" x2="588" y2="344.0"/>
+<text class="small" x="580" y="348" text-anchor="end">0</text>
+<line class="rule" x1="584" y1="297.5" x2="588" y2="297.5"/>
+<text class="small" x="580" y="302" text-anchor="end">25</text>
+<line class="rule" x1="584" y1="251.0" x2="588" y2="251.0"/>
+<text class="small" x="580" y="255" text-anchor="end">50</text>
+<line class="rule" x1="584" y1="204.5" x2="588" y2="204.5"/>
+<text class="small" x="580" y="208" text-anchor="end">75</text>
+<line class="rule" x1="584" y1="158.0" x2="588" y2="158.0"/>
+<text class="small" x="580" y="162" text-anchor="end">100</text>
+<text class="small" x="580" y="148" text-anchor="end">%</text>
+<rect class="dark" x="632" y="158.0" width="32" height="186.0" rx="2"/>
+<text class="small" x="648" y="152" text-anchor="middle">100.0</text>
+<rect class="warn" x="668" y="158.0" width="32" height="186.0" rx="2"/>
+<text class="small" x="684" y="152" text-anchor="middle">100.0</text>
+<text class="monos" x="664" y="362" text-anchor="middle">1</text>
+<rect class="dark" x="708" y="158.558" width="32" height="185.442" rx="2"/>
+<text class="small" x="724" y="153" text-anchor="middle">99.7</text>
+<rect class="warn" x="744" y="166.928" width="32" height="177.072" rx="2"/>
+<text class="small" x="760" y="161" text-anchor="middle">95.2</text>
+<text class="monos" x="740" y="362" text-anchor="middle">2</text>
+<rect class="dark" x="784" y="158.93" width="32" height="185.07" rx="2"/>
+<text class="small" x="800" y="153" text-anchor="middle">99.5</text>
+<rect class="warn" x="820" y="171.764" width="32" height="172.236" rx="2"/>
+<text class="small" x="836" y="166" text-anchor="middle">92.6</text>
+<text class="monos" x="816" y="362" text-anchor="middle">5</text>
+<rect class="dark" x="860" y="159.86" width="32" height="184.14" rx="2"/>
+<text class="small" x="876" y="154" text-anchor="middle">99.0</text>
+<rect class="warn" x="896" y="183.668" width="32" height="160.332" rx="2"/>
+<text class="small" x="912" y="178" text-anchor="middle">86.2</text>
+<text class="monos" x="892" y="362" text-anchor="middle">10</text>
+<rect class="dark" x="936" y="163.394" width="32" height="180.606" rx="2"/>
+<text class="small" x="952" y="157" text-anchor="middle">97.1</text>
+<rect class="warn" x="972" y="217.51999999999998" width="32" height="126.48" rx="2"/>
+<text class="small" x="988" y="212" text-anchor="middle">68.0</text>
+<text class="monos" x="968" y="362" text-anchor="middle">20</text>
+<text class="small" x="588" y="382" text-anchor="start">frame เล็กทำให้ slot ว่างกินสัดส่วนงานมากขึ้น</text>
+<rect class="boxy" x="24" y="430" width="240" height="186" rx="10"/>
+<text class="ptitle" x="38" y="456" text-anchor="start">ที่ N=20 · per_node</text>
+<line class="rule" x1="38" y1="466" x2="250" y2="466"/>
+<text class="big" x="38" y="492" text-anchor="start">0.49 Mbit/s</text>
+<text class="txt" x="38" y="526" text-anchor="start">frame เล็ก: 0.34 Mbit/s</text>
+<text class="small" x="38" y="560" text-anchor="start">= 10 Mbit/s ÷ 20 station</text>
+<rect class="boxb" x="282" y="430" width="240" height="186" rx="10"/>
+<text class="ptitle" x="296" y="456" text-anchor="start">ที่ N=20 · agg</text>
+<line class="rule" x1="296" y1="466" x2="508" y2="466"/>
+<text class="big" x="296" y="492" text-anchor="start">9.71 Mbit/s</text>
+<text class="txt" x="296" y="526" text-anchor="start">frame เล็ก: 6.80 Mbit/s</text>
+<text class="small" x="296" y="560" text-anchor="start">ความจุรวมแทบไม่เปลี่ยน</text>
+<rect class="boxv" x="540" y="430" width="240" height="186" rx="10"/>
+<text class="ptitle" x="554" y="456" text-anchor="start">mean_access_slots</text>
+<line class="rule" x1="554" y1="466" x2="766" y2="466"/>
+<text class="txt" x="554" y="492" text-anchor="start">N=1: 152.0</text>
+<text class="txt" x="554" y="526" text-anchor="start">N=20: 3245.0 slot</text>
+<text class="small" x="554" y="560" text-anchor="start">frame เล็ก N=20: 252.5</text>
+<rect class="boxi" x="798" y="430" width="240" height="186" rx="10"/>
+<text class="ptitle" x="812" y="456" text-anchor="start">slot ว่างที่ N=20</text>
+<line class="rule" x1="812" y1="466" x2="1024" y2="466"/>
+<text class="txt" x="812" y="492" text-anchor="start">169 slot @1024</text>
+<text class="txt" x="812" y="526" text-anchor="start">169 slot @64</text>
+<text class="small" x="812" y="560" text-anchor="start">เท่ากัน แต่กิน 28.7% ของงานเล็ก</text>
+<text class="small" x="540" y="646" text-anchor="middle">หนึ่ง slot = 512 bit times = 51.2 us · frame 1024 ไบต์ = 16 slot · 64 ไบต์ = 1 slot</text>
+<text class="small" x="540" y="670" text-anchor="middle">mean_access_slots คือค่าเฉลี่ยว่า frame ต้องรอกี่ slot ก่อนได้ออกอากาศ — ยิ่ง hub มีคนเยอะ ยิ่งรอนาน</text>
+</svg>
