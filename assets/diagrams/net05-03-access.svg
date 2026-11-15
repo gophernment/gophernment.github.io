@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 740" width="1100" height="740" role="img" aria-label="การแบ่งช่องสัญญาณวิทยุสองวิธี: แย่งกันเองแบบ CSMA/CA กับให้ base station จ่ายสิทธิ์">
+<style>
+text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 12.5px; fill: #1a1a1a; }
+.hdr { font-weight: 700; font-size: 17.5px; }
+.sub { fill: #57606a; font-size: 12.5px; }
+.ptitle { font-weight: 700; font-size: 14px; }
+.txt { font-size: 12.5px; }
+.lbl { fill: #57606a; font-size: 11px; }
+.small { fill: #57606a; font-size: 10.5px; }
+.big { font-weight: 700; font-size: 20px; fill: #0550ae; }
+.mono { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 11.5px; fill: #0a3069; }
+.monos { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 10.5px; fill: #57606a; }
+.boxg { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.3; }
+.boxb { fill: #eef4ff; stroke: #0969da; stroke-width: 1.5; }
+.boxy { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.4; }
+.boxi { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.4; }
+.boxr { fill: #fdeff0; stroke: #b62324; stroke-width: 1.4; }
+.wire { stroke: #8c959f; stroke-width: 1.8; fill: none; }
+.wire2 { stroke: #b6bfc8; stroke-width: 1.2; fill: none; stroke-dasharray: 5 5; }
+.head { fill: #8c959f; }
+.rule { stroke: #d0d7de; stroke-width: 1.2; }
+.c1 { stroke: #0969da; stroke-width: 2.2; fill: none; }
+.c2 { stroke: #bf8700; stroke-width: 2.2; fill: none; }
+.c3 { stroke: #1a7f37; stroke-width: 2.2; fill: none; }
+.slot-send { fill: #1a7f37; }
+.slot-idle { fill: #eaeef2; }
+.slot-hit { fill: #b62324; }
+.onbar { fill: #ffffff; font-size: 10.5px; }
+.bar1 { fill: #0969da; }
+.bar2 { fill: #bf8700; }
+</style>
+<rect x="0" y="0" width="1100" height="740" fill="#ffffff"/>
+<text class="hdr" x="550" y="40" text-anchor="middle">ช่องสัญญาณเดียว สองวิธีแบ่ง: แย่งกันเอง กับมีคนจ่ายสิทธิ์</text>
+<text class="sub" x="550" y="66" text-anchor="middle">airtime ของช่องสัญญาณหนึ่งช่อง — ช่วงส่งข้อมูลจริง ช่วงว่าง และช่วงที่ชนกันจนเสียเปล่า</text>
+<text class="ptitle" x="40" y="108" text-anchor="start">CSMA/CA (802.11): ทุก station แย่งกันเองด้วย random backoff</text>
+<rect class="slot-idle" x="40" y="122" width="5.0" height="34" rx="2"/>
+<rect class="slot-idle" x="46.0" y="122" width="5.0" height="34" rx="2"/>
+<rect class="slot-idle" x="52.0" y="122" width="5.0" height="34" rx="2"/>
+<rect class="slot-send" x="58.0" y="122" width="100.8" height="34" rx="2"/>
+<rect class="slot-idle" x="159.8" y="122" width="5.0" height="34" rx="2"/>
+<rect class="slot-idle" x="165.8" y="122" width="5.0" height="34" rx="2"/>
+<rect class="slot-send" x="171.8" y="122" width="100.8" height="34" rx="2"/>
+<rect class="slot-idle" x="273.6" y="122" width="5.0" height="34" rx="2"/>
+<rect class="slot-idle" x="279.6" y="122" width="5.0" height="34" rx="2"/>
+<rect class="slot-idle" x="285.6" y="122" width="5.0" height="34" rx="2"/>
+<rect class="slot-send" x="291.6" y="122" width="100.8" height="34" rx="2"/>
+<rect class="slot-idle" x="393.40000000000003" y="122" width="5.0" height="34" rx="2"/>
+<rect class="slot-idle" x="399.40000000000003" y="122" width="5.0" height="34" rx="2"/>
+<rect class="slot-send" x="405.40000000000003" y="122" width="100.8" height="34" rx="2"/>
+<rect class="slot-idle" x="507.20000000000005" y="122" width="5.0" height="34" rx="2"/>
+<rect class="slot-send" x="513.2" y="122" width="100.8" height="34" rx="2"/>
+<rect class="slot-idle" x="615.0" y="122" width="5.0" height="34" rx="2"/>
+<rect class="slot-idle" x="621.0" y="122" width="5.0" height="34" rx="2"/>
+<rect class="slot-idle" x="627.0" y="122" width="5.0" height="34" rx="2"/>
+<rect class="slot-send" x="633.0" y="122" width="100.8" height="34" rx="2"/>
+<rect class="slot-send" x="734.8" y="122" width="100.8" height="34" rx="2"/>
+<rect class="slot-idle" x="836.5999999999999" y="122" width="5.0" height="34" rx="2"/>
+<rect class="slot-idle" x="842.5999999999999" y="122" width="5.0" height="34" rx="2"/>
+<rect class="slot-idle" x="848.5999999999999" y="122" width="5.0" height="34" rx="2"/>
+<rect class="slot-idle" x="854.5999999999999" y="122" width="5.0" height="34" rx="2"/>
+<rect class="slot-idle" x="860.5999999999999" y="122" width="5.0" height="34" rx="2"/>
+<rect class="slot-idle" x="866.5999999999999" y="122" width="5.0" height="34" rx="2"/>
+<rect class="slot-idle" x="872.5999999999999" y="122" width="5.0" height="34" rx="2"/>
+<rect class="slot-idle" x="878.5999999999999" y="122" width="5.0" height="34" rx="2"/>
+<rect class="slot-idle" x="884.5999999999999" y="122" width="5.0" height="34" rx="2"/>
+<rect class="slot-idle" x="890.5999999999999" y="122" width="5.0" height="34" rx="2"/>
+<rect class="slot-hit" x="896.5999999999999" y="122" width="100.8" height="34" rx="2"/>
+<text class="small" x="947" y="176" text-anchor="middle">ชน</text>
+<rect class="slot-idle" x="998.3999999999999" y="122" width="5.0" height="34" rx="2"/>
+<rect class="slot-idle" x="1004.3999999999999" y="122" width="5.0" height="34" rx="2"/>
+<rect class="slot-idle" x="1010.3999999999999" y="122" width="5.0" height="34" rx="2"/>
+<text class="small" x="40" y="194" text-anchor="start">35 เหตุการณ์แรกจาก 48 ที่บันทึกไว้</text>
+<text class="small" x="1040" y="194" text-anchor="end">สีเขียว = ส่งสำเร็จ · เทา = ช่องว่าง · แดง = ชนกัน</text>
+<text class="ptitle" x="40" y="216" text-anchor="start">scheduled (cellular): base station จ่ายสิทธิ์ให้ทีละ station</text>
+<rect class="slot-send" x="40" y="230" width="99.8" height="34" rx="2"/>
+<text class="onbar" x="89" y="252" text-anchor="middle">1</text>
+<rect class="slot-send" x="140.8" y="230" width="99.8" height="34" rx="2"/>
+<text class="onbar" x="190" y="252" text-anchor="middle">2</text>
+<rect class="slot-send" x="241.60000000000002" y="230" width="99.8" height="34" rx="2"/>
+<text class="onbar" x="291" y="252" text-anchor="middle">3</text>
+<rect class="slot-send" x="342.40000000000003" y="230" width="99.8" height="34" rx="2"/>
+<text class="onbar" x="392" y="252" text-anchor="middle">1</text>
+<rect class="slot-send" x="443.20000000000005" y="230" width="99.8" height="34" rx="2"/>
+<text class="onbar" x="493" y="252" text-anchor="middle">2</text>
+<rect class="slot-send" x="544.0" y="230" width="99.8" height="34" rx="2"/>
+<text class="onbar" x="593" y="252" text-anchor="middle">3</text>
+<rect class="slot-send" x="644.8" y="230" width="99.8" height="34" rx="2"/>
+<text class="onbar" x="694" y="252" text-anchor="middle">1</text>
+<rect class="slot-send" x="745.5999999999999" y="230" width="99.8" height="34" rx="2"/>
+<text class="onbar" x="795" y="252" text-anchor="middle">2</text>
+<rect class="slot-send" x="846.3999999999999" y="230" width="99.8" height="34" rx="2"/>
+<text class="onbar" x="896" y="252" text-anchor="middle">3</text>
+<text class="small" x="40" y="286" text-anchor="start">ต่อเนื่อง ไม่มีช่วงว่าง ไม่มีช่วงชน: ตัวเลขในแท่งคือ station ที่ได้รับสิทธิ์</text>
+<text class="ptitle" x="40" y="312" text-anchor="start">สัดส่วน airtime ที่พา data จริง (ต่อพัน) — 48 เฟรมเท่ากันทุกกรณี</text>
+<text class="txt" x="40" y="350" text-anchor="start">CSMA/CA 2 station</text>
+<rect class="bar1" x="300" y="336" width="465.62" height="20" rx="3"/>
+<text class="monos" x="776" y="351" text-anchor="start">751</text>
+<text class="txt" x="40" y="384" text-anchor="start">CSMA/CA 3 station</text>
+<rect class="bar1" x="300" y="370" width="432.76" height="20" rx="3"/>
+<text class="monos" x="743" y="385" text-anchor="start">698</text>
+<text class="txt" x="40" y="418" text-anchor="start">CSMA/CA 6 station</text>
+<rect class="bar1" x="300" y="404" width="386.88" height="20" rx="3"/>
+<text class="monos" x="697" y="419" text-anchor="start">624</text>
+<text class="txt" x="40" y="452" text-anchor="start">CSMA/CA 12 station</text>
+<rect class="bar1" x="300" y="438" width="327.98" height="20" rx="3"/>
+<text class="monos" x="638" y="453" text-anchor="start">529</text>
+<text class="txt" x="40" y="486" text-anchor="start">scheduled 12 station</text>
+<rect class="bar2" x="300" y="472" width="620.0" height="20" rx="3"/>
+<text class="monos" x="930" y="487" text-anchor="start">1000</text>
+<rect class="boxy" x="40" y="520" width="1020" height="190" rx="8"/>
+<text class="ptitle" x="60" y="548" text-anchor="start">ทำไม WiFi ยอมเสีย airtime มากกว่า cellular</text>
+<text class="txt" x="60" y="574" text-anchor="start">CSMA/CA ไม่ต้องมีใครสั่ง: station ฟังช่องว่างก่อน แล้วนับถอยหลังตาม backoff ที่สุ่มมา</text>
+<text class="txt" x="60" y="593" text-anchor="start">ยิ่งคนเยอะ ยิ่งชนกันบ่อย (2 station ชน 1 ครั้ง, 12 station ชน 19 ครั้ง) และแต่ละครั้งเสีย airtime เต็มเฟรม</text>
+<text class="txt" x="60" y="613" text-anchor="start">ที่ 12 station เหลือ airtime ที่เป็นประโยชน์ 529 จาก 1000 — scheduled ได้ 1000 เต็ม</text>
+<text class="txt" x="60" y="632" text-anchor="start">แลกกับการที่ cellular ต้องมี spectrum ที่จองไว้ (licensed) และมี base station คอยจ่ายสิทธิ์</text>
+</svg>

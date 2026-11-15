@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 690" width="1100" height="690" role="img" aria-label="ห้ารุ่นของเครือข่ายมือถือ: circuit จองช่องสัญญาณตลอดสาย packet ส่งเฉพาะตอนมีข้อมูล">
+<style>
+text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 12.5px; fill: #1a1a1a; }
+.hdr { font-weight: 700; font-size: 17.5px; }
+.sub { fill: #57606a; font-size: 12.5px; }
+.ptitle { font-weight: 700; font-size: 14px; }
+.txt { font-size: 12.5px; }
+.lbl { fill: #57606a; font-size: 11px; }
+.small { fill: #57606a; font-size: 10.5px; }
+.big { font-weight: 700; font-size: 20px; fill: #0550ae; }
+.mono { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 11.5px; fill: #0a3069; }
+.monos { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 10.5px; fill: #57606a; }
+.boxg { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.3; }
+.boxb { fill: #eef4ff; stroke: #0969da; stroke-width: 1.5; }
+.boxy { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.4; }
+.boxi { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.4; }
+.boxr { fill: #fdeff0; stroke: #b62324; stroke-width: 1.4; }
+.wire { stroke: #8c959f; stroke-width: 1.8; fill: none; }
+.wire2 { stroke: #b6bfc8; stroke-width: 1.2; fill: none; stroke-dasharray: 5 5; }
+.head { fill: #8c959f; }
+.rule { stroke: #d0d7de; stroke-width: 1.2; }
+.c1 { stroke: #0969da; stroke-width: 2.2; fill: none; }
+.c2 { stroke: #bf8700; stroke-width: 2.2; fill: none; }
+.c3 { stroke: #1a7f37; stroke-width: 2.2; fill: none; }
+.slot-send { fill: #1a7f37; }
+.slot-idle { fill: #eaeef2; }
+.slot-hit { fill: #b62324; }
+.onbar { fill: #ffffff; font-size: 10.5px; }
+.bar1 { fill: #0969da; }
+.bar2 { fill: #bf8700; }
+</style>
+<rect x="0" y="0" width="1100" height="690" fill="#ffffff"/>
+<text class="hdr" x="550" y="40" text-anchor="middle">จากวงจรเสียงถึง IP ทุกชั้น: ห้ารุ่นที่เปลี่ยนวิธีส่งเสียง</text>
+<text class="sub" x="550" y="66" text-anchor="middle">circuit จองช่องสัญญาณไว้ตลอดสาย — packet ส่งเฉพาะตอนมีข้อมูลจริง</text>
+<text class="lbl" x="40" y="104" text-anchor="start">รุ่น</text>
+<text class="lbl" x="150" y="104" text-anchor="start">air interface</text>
+<text class="lbl" x="400" y="104" text-anchor="start">core network</text>
+<text class="lbl" x="674" y="104" text-anchor="start">เสียงวิ่งบน</text>
+<text class="lbl" x="922" y="104" text-anchor="start">peak data</text>
+<rect class="boxg" x="40" y="118" width="96" height="62" rx="8"/>
+<text class="ptitle" x="88" y="146" text-anchor="middle">1G</text>
+<text class="small" x="88" y="166" text-anchor="middle">1979</text>
+<rect class="boxg" x="150" y="118" width="230" height="62" rx="8"/>
+<text class="mono" x="162" y="144" text-anchor="start">analog-FM</text>
+<text class="small" x="162" y="164" text-anchor="start">อากาศ: analog</text>
+<rect class="boxg" x="396" y="118" width="262" height="62" rx="8"/>
+<text class="mono" x="408" y="144" text-anchor="start">MTSO</text>
+<text class="small" x="408" y="164" text-anchor="start">CS เท่านั้น</text>
+<rect class="boxy" x="674" y="118" width="232" height="62" rx="8"/>
+<text class="mono" x="686" y="144" text-anchor="start">circuit-64k</text>
+<text class="small" x="686" y="164" text-anchor="start">จองช่องไว้ตลอดสาย</text>
+<rect class="boxg" x="922" y="118" width="138" height="62" rx="8"/>
+<text class="monos" x="991" y="154" text-anchor="middle">none</text>
+<rect class="boxg" x="40" y="192" width="96" height="62" rx="8"/>
+<text class="ptitle" x="88" y="220" text-anchor="middle">2G</text>
+<text class="small" x="88" y="240" text-anchor="middle">1991</text>
+<rect class="boxg" x="150" y="192" width="230" height="62" rx="8"/>
+<text class="mono" x="162" y="218" text-anchor="start">digital-TDMA</text>
+<text class="small" x="162" y="238" text-anchor="start">อากาศ: digital</text>
+<rect class="boxg" x="396" y="192" width="262" height="62" rx="8"/>
+<text class="mono" x="408" y="218" text-anchor="start">MSC+SGSN/GGSN</text>
+<text class="small" x="408" y="238" text-anchor="start">CS + PS (GPRS)</text>
+<rect class="boxy" x="674" y="192" width="232" height="62" rx="8"/>
+<text class="mono" x="686" y="218" text-anchor="start">circuit-64k</text>
+<text class="small" x="686" y="238" text-anchor="start">จองช่องไว้ตลอดสาย</text>
+<rect class="boxg" x="922" y="192" width="138" height="62" rx="8"/>
+<text class="monos" x="991" y="228" text-anchor="middle">9.6-kbit/s</text>
+<rect class="boxg" x="40" y="266" width="96" height="62" rx="8"/>
+<text class="ptitle" x="88" y="294" text-anchor="middle">3G</text>
+<text class="small" x="88" y="314" text-anchor="middle">2001</text>
+<rect class="boxg" x="150" y="266" width="230" height="62" rx="8"/>
+<text class="mono" x="162" y="292" text-anchor="start">W-CDMA</text>
+<text class="small" x="162" y="312" text-anchor="start">อากาศ: digital</text>
+<rect class="boxg" x="396" y="266" width="262" height="62" rx="8"/>
+<text class="mono" x="408" y="292" text-anchor="start">CS+PS-domain</text>
+<text class="small" x="408" y="312" text-anchor="start">CS + PS</text>
+<rect class="boxy" x="674" y="266" width="232" height="62" rx="8"/>
+<text class="mono" x="686" y="292" text-anchor="start">circuit-64k</text>
+<text class="small" x="686" y="312" text-anchor="start">จองช่องไว้ตลอดสาย</text>
+<rect class="boxg" x="922" y="266" width="138" height="62" rx="8"/>
+<text class="monos" x="991" y="302" text-anchor="middle">144-kbit/s</text>
+<rect class="boxg" x="40" y="340" width="96" height="62" rx="8"/>
+<text class="ptitle" x="88" y="368" text-anchor="middle">4G</text>
+<text class="small" x="88" y="388" text-anchor="middle">2009</text>
+<rect class="boxg" x="150" y="340" width="230" height="62" rx="8"/>
+<text class="mono" x="162" y="366" text-anchor="start">OFDMA-LTE</text>
+<text class="small" x="162" y="386" text-anchor="start">อากาศ: digital</text>
+<rect class="boxg" x="396" y="340" width="262" height="62" rx="8"/>
+<text class="mono" x="408" y="366" text-anchor="start">EPC-all-IP</text>
+<text class="small" x="408" y="386" text-anchor="start">all-IP (ไม่มี CS)</text>
+<rect class="boxi" x="674" y="340" width="232" height="62" rx="8"/>
+<text class="mono" x="686" y="366" text-anchor="start">VoLTE-packet</text>
+<text class="small" x="686" y="386" text-anchor="start">เป็น packet ธรรมดา</text>
+<rect class="boxg" x="922" y="340" width="138" height="62" rx="8"/>
+<text class="monos" x="991" y="376" text-anchor="middle">1-Gbit/s</text>
+<rect class="boxg" x="40" y="414" width="96" height="62" rx="8"/>
+<text class="ptitle" x="88" y="442" text-anchor="middle">5G</text>
+<text class="small" x="88" y="462" text-anchor="middle">2018</text>
+<rect class="boxg" x="150" y="414" width="230" height="62" rx="8"/>
+<text class="mono" x="162" y="440" text-anchor="start">OFDM-NR</text>
+<text class="small" x="162" y="460" text-anchor="start">อากาศ: digital</text>
+<rect class="boxg" x="396" y="414" width="262" height="62" rx="8"/>
+<text class="mono" x="408" y="440" text-anchor="start">5GC+slicing</text>
+<text class="small" x="408" y="460" text-anchor="start">all-IP (ไม่มี CS)</text>
+<rect class="boxi" x="674" y="414" width="232" height="62" rx="8"/>
+<text class="mono" x="686" y="440" text-anchor="start">VoNR-packet</text>
+<text class="small" x="686" y="460" text-anchor="start">เป็น packet ธรรมดา</text>
+<rect class="boxg" x="922" y="414" width="138" height="62" rx="8"/>
+<text class="monos" x="991" y="450" text-anchor="middle">20-Gbit/s</text>
+<rect class="boxy" x="40" y="494" width="14" height="14" rx="3"/>
+<text class="small" x="62" y="506" text-anchor="start">เสียงบนวงจร (circuit)</text>
+<rect class="boxi" x="250" y="494" width="14" height="14" rx="3"/>
+<text class="small" x="272" y="506" text-anchor="start">เสียงบน packet</text>
+<text class="small" x="430" y="506" text-anchor="start">ตัวเลขทุกตัวในภาพนี้อ่านจากผลรันใน out/01_chain.txt</text>
+<rect class="boxy" x="40" y="526" width="1020" height="128" rx="8"/>
+<text class="ptitle" x="60" y="554" text-anchor="start">ทำไม circuit แพงกว่า — ทั้งที่ส่งข้อมูลเท่ากัน</text>
+<text class="txt" x="60" y="580" text-anchor="start">วงจรเสียงหนึ่งวงจรกัน 64 kbit/s ไว้ตลอดเวลา แม้ตอนที่อีกฝั่งกำลังฟังอยู่เฉย ๆ</text>
+<text class="txt" x="60" y="599" text-anchor="start">ช่องสัญญาณ 1,920 kbit/s จึงรับได้เพียง 30 สาย — แต่ถ้าส่งเป็น packet ที่ออกเสียง 40% ของเวลา รับได้ 75 สาย</text>
+<text class="txt" x="60" y="619" text-anchor="start">circuit domain หายไปที่รุ่น 4G: จากนั้นเสียงเป็นเพียง packet หนึ่งในหลาย ๆ อย่างบน IP</text>
+</svg>
