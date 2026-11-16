@@ -1,5 +1,23 @@
 [
   {
+    "slug": "2026-11-16-network-06-cloud-iot-sdn",
+    "title": "Cloud, IoT และ SDN: วันที่ network กลายเป็นซอฟต์แวร์ (ตอนที่ 06)",
+    "date": "2026-11-16",
+    "tags": [
+      "network",
+      "sdn",
+      "nfv",
+      "cloud",
+      "vxlan",
+      "overlay",
+      "iot",
+      "mqtt",
+      "history",
+      "golang"
+    ],
+    "description": "ห้าตอนแรกของซีรีส์นี้เล่าเรื่องกล่อง hardware มาตลอด บทนี้คือจุดที่กล่องเริ่มหายไป: network virtualization ทำให้โครงข่ายจริงหนึ่งชุดกลายเป็นหลายเครือข่ายที่ประกาศได้ด้วยซอฟต์แวร์ SDN แยกสมองออกจากกล้ามเนื้อ NFV เปลี่ยน firewall ให้เป็นโปรแกรม overlay อย่าง VXLAN ห่อ packet ซ้อน packet และ IoT เอาเซนเซอร์ล้านตัวมาเกาะเครือข่ายที่เหลือแต่ซอฟต์แวร์"
+  },
+  {
     "slug": "2026-11-15-network-05-mobile-1g-to-5g",
     "title": "จากเสาแรกถึง 5G: วันที่เสียงกลายเป็น packet และ WiFi ที่หลุดจากสาย (ตอนที่ 05)",
     "date": "2026-11-15",
