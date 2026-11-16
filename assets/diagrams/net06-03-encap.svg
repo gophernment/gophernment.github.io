@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 640" width="1100" height="640" role="img" aria-label="VXLAN ห่อ packet ของผู้เช่าไว้ใน packet ของ underlay">
+<style>
+text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 12.5px; fill: #1a1a1a; }
+.hdr { font-weight: 700; font-size: 17.5px; }
+.sub { fill: #57606a; font-size: 12.5px; }
+.ptitle { font-weight: 700; font-size: 14px; }
+.txt { font-size: 12.5px; }
+.lbl { fill: #57606a; font-size: 11px; }
+.small { fill: #57606a; font-size: 10.5px; }
+.big { font-weight: 700; font-size: 20px; fill: #0550ae; }
+.mono { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 11.5px; fill: #0a3069; }
+.monos { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 10.5px; fill: #57606a; }
+.boxg { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.3; }
+.boxb { fill: #eef4ff; stroke: #0969da; stroke-width: 1.5; }
+.boxy { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.4; }
+.boxi { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.4; }
+.boxr { fill: #fdeff0; stroke: #b62324; stroke-width: 1.4; }
+.bgw { fill: #ffffff; stroke: none; }
+.wire { stroke: #8c959f; stroke-width: 1.8; fill: none; }
+.wire2 { stroke: #b6bfc8; stroke-width: 1.2; fill: none; stroke-dasharray: 5 5; }
+.head { fill: #8c959f; }
+.rule { stroke: #d0d7de; stroke-width: 1.2; }
+.c1 { stroke: #0969da; stroke-width: 2.6; fill: none; }
+.c2 { stroke: #bf8700; stroke-width: 2.2; fill: none; stroke-dasharray: 7 5; }
+.ctl { stroke: #8250df; stroke-width: 1.2; fill: none; stroke-dasharray: 4 4; }
+.onbar { fill: #ffffff; font-size: 10.5px; }
+.bar1 { fill: #0969da; }
+.bar2 { fill: #bf8700; }
+.bar3 { fill: #b62324; }
+.seg-o { fill: #fdeff0; stroke: #b62324; stroke-width: 1.2; }
+.seg-v { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.2; }
+.seg-i { fill: #eef4ff; stroke: #0969da; stroke-width: 1.2; }
+</style>
+<rect x="0" y="0" width="1100" height="640" fill="#ffffff"/>
+<text class="hdr" x="30" y="40" text-anchor="start">packet ใน packet: ที่อยู่ของผู้เช่าถูกซ่อนไว้ใต้หัวของ underlay</text>
+<text class="sub" x="30" y="66" text-anchor="start">หัวชั้นนอก 50 ไบต์คือราคาที่ overlay จ่ายให้ทุก packet — ไม่ได้วาดตามสัดส่วน</text>
+<rect class="seg-o" x="40" y="100" width="88" height="54" rx="8"/>
+<text class="small" x="84" y="124" text-anchor="middle">outer eth</text>
+<text class="monos" x="84" y="142" text-anchor="middle">14 B</text>
+<rect class="seg-o" x="132" y="100" width="96" height="54" rx="8"/>
+<text class="small" x="180" y="124" text-anchor="middle">outer IPv4</text>
+<text class="monos" x="180" y="142" text-anchor="middle">20 B</text>
+<rect class="seg-o" x="232" y="100" width="74" height="54" rx="8"/>
+<text class="small" x="269" y="124" text-anchor="middle">UDP</text>
+<text class="monos" x="269" y="142" text-anchor="middle">8 B</text>
+<rect class="seg-v" x="310" y="100" width="84" height="54" rx="8"/>
+<text class="small" x="352" y="124" text-anchor="middle">VXLAN</text>
+<text class="monos" x="352" y="142" text-anchor="middle">8 B</text>
+<rect class="seg-i" x="398" y="100" width="642" height="54" rx="8"/>
+<text class="small" x="719" y="124" text-anchor="middle">frame ของ VM ทั้งใบ (สูงสุด 1464 B)</text>
+<text class="small" x="719" y="142" text-anchor="middle">หัวของผู้เช่า + ข้อมูล — underlay มองไม่เห็นข้างใน</text>
+<text class="small" x="40" y="176" text-anchor="start">↑ VTEP ห่อ (encapsulate) ตอนออก   ↓ VTEP แกะ (decapsulate) ตอนเข้า</text>
+<text class="ptitle" x="40" y="216" text-anchor="start">งบ MTU: packet ใหญ่สุดที่ไม่ต้องแบ่ง</text>
+<line class="rule" x1="40" y1="232" x2="670.0" y2="232"/>
+<text class="small" x="40" y="250" text-anchor="start">underlay 1500 B</text>
+<rect class="seg-o" x="40" y="290" width="15.12" height="30" rx="2"/>
+<rect class="seg-i" x="55.12" y="290" width="614.88" height="30" rx="2"/>
+<text class="small" x="40" y="280" text-anchor="start">หัว 36 B</text>
+<line class="rule" x1="47.56" y1="283" x2="47.56" y2="289"/>
+<text class="small" x="363" y="310" text-anchor="middle">frame ของ VM 1464 B</text>
+<text class="small" x="40" y="340" text-anchor="start">หัว 50 ไบต์ = ในงบ MTU 36 + Ethernet นอกงบ 14 · frame ของ VM 1464 → IP ของ VM 1450</text>
+<text class="ptitle" x="40" y="372" text-anchor="start">ผลต่อ TCP: MSS ที่ผู้เช่าใช้ได้</text>
+<text class="txt" x="40" y="404" text-anchor="start">ไม่ผ่าน overlay</text>
+<rect class="bar1" x="230" y="388" width="613.1999999999999" height="24" rx="3"/>
+<text class="onbar" x="835" y="405" text-anchor="end">1460 B</text>
+<text class="txt" x="40" y="448" text-anchor="start">ผ่าน VXLAN</text>
+<rect class="bar2" x="230" y="432" width="592.1999999999999" height="24" rx="3"/>
+<text class="onbar" x="814" y="449" text-anchor="end">1410 B</text>
+<rect class="bar3" x="822.1999999999999" y="432" width="21.0" height="24" rx="2"/>
+<text class="small" x="855" y="449" text-anchor="start">หาย 50 B (3.4%)</text>
+<rect class="boxy" x="40" y="500" width="1020" height="110" rx="8"/>
+<text class="ptitle" x="60" y="528" text-anchor="start">เพดานจำนวนเครือข่ายที่แยกจากกันได้</text>
+<text class="txt" x="60" y="556" text-anchor="start">VLAN (802.1Q): 4,094 เครือข่าย  ·  VXLAN (8 ไบต์ VNI 24 บิต): 16,777,216 เครือข่าย  ·  ต่างกัน 4,098 เท่า</text>
+<text class="small" x="60" y="584" text-anchor="start">ตัวคูณนี้คือเหตุผลที่ cloud ต้องมีโปรโตคอลใหม่ ไม่ใช่ใช้ VLAN ที่มีอยู่</text>
+</svg>

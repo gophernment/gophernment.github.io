@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 700" width="1100" height="700" role="img" aria-label="controller ติดตั้ง rule ครั้งเดียว แล้ว data plane วิ่งเอง">
+<style>
+text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 12.5px; fill: #1a1a1a; }
+.hdr { font-weight: 700; font-size: 17.5px; }
+.sub { fill: #57606a; font-size: 12.5px; }
+.ptitle { font-weight: 700; font-size: 14px; }
+.txt { font-size: 12.5px; }
+.lbl { fill: #57606a; font-size: 11px; }
+.small { fill: #57606a; font-size: 10.5px; }
+.big { font-weight: 700; font-size: 20px; fill: #0550ae; }
+.mono { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 11.5px; fill: #0a3069; }
+.monos { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 10.5px; fill: #57606a; }
+.boxg { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.3; }
+.boxb { fill: #eef4ff; stroke: #0969da; stroke-width: 1.5; }
+.boxy { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.4; }
+.boxi { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.4; }
+.boxr { fill: #fdeff0; stroke: #b62324; stroke-width: 1.4; }
+.bgw { fill: #ffffff; stroke: none; }
+.wire { stroke: #8c959f; stroke-width: 1.8; fill: none; }
+.wire2 { stroke: #b6bfc8; stroke-width: 1.2; fill: none; stroke-dasharray: 5 5; }
+.head { fill: #8c959f; }
+.rule { stroke: #d0d7de; stroke-width: 1.2; }
+.c1 { stroke: #0969da; stroke-width: 2.6; fill: none; }
+.c2 { stroke: #bf8700; stroke-width: 2.2; fill: none; stroke-dasharray: 7 5; }
+.ctl { stroke: #8250df; stroke-width: 1.2; fill: none; stroke-dasharray: 4 4; }
+.onbar { fill: #ffffff; font-size: 10.5px; }
+.bar1 { fill: #0969da; }
+.bar2 { fill: #bf8700; }
+.bar3 { fill: #b62324; }
+.seg-o { fill: #fdeff0; stroke: #b62324; stroke-width: 1.2; }
+.seg-v { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.2; }
+.seg-i { fill: #eef4ff; stroke: #0969da; stroke-width: 1.2; }
+</style>
+<rect x="0" y="0" width="1100" height="700" fill="#ffffff"/>
+<text class="hdr" x="30" y="40" text-anchor="start">controller ติดตั้ง rule ครั้งเดียว แล้ว data plane วิ่งเอง</text>
+<text class="sub" x="30" y="66" text-anchor="start">หนึ่ง packet_in · 3 flow_mod · 300 การ forward = 10 flow_mod ต่อ 1,000 การ forward</text>
+<rect class="boxg" x="28" y="88" width="700" height="380" rx="8"/>
+<rect class="boxb" x="282" y="89" width="260" height="46" rx="8"/>
+<text class="mono" x="412" y="108" text-anchor="middle">controller</text>
+<text class="small" x="412" y="122" text-anchor="middle">Dijkstra + นโยบาย</text>
+<line class="wire2" x1="154.0" y1="236.8695652173913" x2="316.0" y2="198.1304347826087"/>
+<line class="wire2" x1="154.0" y1="257.5652173913044" x2="316.0" y2="317.4347826086956"/>
+<line class="wire2" x1="384.0" y1="198.1304347826087" x2="546.0" y2="236.8695652173913"/>
+<line class="wire2" x1="384.0" y1="317.4347826086956" x2="546.0" y2="257.5652173913044"/>
+<rect class="boxg" x="86" y="210" width="68" height="70" rx="8"/>
+<text class="mono" x="120" y="250" text-anchor="middle">s1</text>
+<line class="ctl" x1="361.50375939849624" y1="135.0" x2="154.0" y2="229.513698630137"/>
+<rect class="boxg" x="316" y="155" width="68" height="70" rx="8"/>
+<text class="mono" x="350" y="195" text-anchor="middle">s2</text>
+<line class="ctl" x1="393.71794871794873" y1="135.0" x2="377.8205128205128" y2="155.0"/>
+<rect class="boxg" x="316" y="295" width="68" height="70" rx="8"/>
+<text class="mono" x="350" y="335" text-anchor="middle">s3</text>
+<line class="ctl" x1="405.45871559633025" y1="135.0" x2="359.95412844036696" y2="295.0"/>
+<rect class="boxg" x="546" y="210" width="68" height="70" rx="8"/>
+<text class="mono" x="580" y="250" text-anchor="middle">s4</text>
+<line class="ctl" x1="441.05263157894734" y1="135.0" x2="546.0" y2="218.08333333333334"/>
+<rect class="boxg" x="29" y="197" width="46" height="36" rx="8"/>
+<text class="monos" x="52" y="219" text-anchor="middle">h1</text>
+<line class="c1" x1="75.0" y1="225.14705882352942" x2="86.0" y2="230.0"/>
+<rect class="boxg" x="29" y="257" width="46" height="36" rx="8"/>
+<text class="monos" x="52" y="279" text-anchor="middle">h3</text>
+<line class="c2" x1="75.0" y1="264.8529411764706" x2="86.0" y2="260.0"/>
+<rect class="boxg" x="625" y="197" width="46" height="36" rx="8"/>
+<text class="monos" x="648" y="219" text-anchor="middle">h2</text>
+<line class="c1" x1="625.0" y1="225.14705882352942" x2="614.0" y2="230.0"/>
+<rect class="boxg" x="625" y="257" width="46" height="36" rx="8"/>
+<text class="monos" x="648" y="279" text-anchor="middle">h4</text>
+<line class="c2" x1="625.0" y1="264.8529411764706" x2="614.0" y2="260.0"/>
+<line class="c1" x1="154.0" y1="236.8695652173913" x2="316.0" y2="198.1304347826087"/>
+<line class="c1" x1="384.0" y1="198.1304347826087" x2="546.0" y2="236.8695652173913"/>
+<line class="c2" x1="154.0" y1="257.5652173913044" x2="316.0" y2="317.4347826086956"/>
+<line class="c2" x1="384.0" y1="317.4347826086956" x2="546.0" y2="257.5652173913044"/>
+<line class="c1" x1="40" y1="396" x2="76" y2="396"/>
+<text class="small" x="86" y="400" text-anchor="start">stream A: s1 -> s2 -> s4 (cost 3)</text>
+<line class="c2" x1="40" y1="416" x2="76" y2="416"/>
+<text class="small" x="86" y="420" text-anchor="start">stream B: s1 -> s3 -> s4 (cost 5)</text>
+<text class="small" x="400" y="382" text-anchor="start">เส้นประสีม่วง = ช่องควบคุม (flow_mod)</text>
+<text class="small" x="400" y="400" text-anchor="start">cost_gap=2: ตัวเลขที่ผู้ดูแลตั้ง</text>
+<text class="small" x="400" y="420" text-anchor="start">เส้นประ = ทางที่ SDN เลือกเอง ไม่ใช่ทางสั้นสุด</text>
+<rect class="bgw" x="202.775" y="196.48" width="64.45" height="15.66" rx="2"/>
+<text class="lbl" x="235" y="208" text-anchor="middle">L1 cost 1</text>
+<rect class="bgw" x="202.775" y="289.48" width="64.45" height="15.66" rx="2"/>
+<text class="lbl" x="235" y="302" text-anchor="middle">L2 cost 1</text>
+<rect class="bgw" x="432.775" y="196.48" width="64.45" height="15.66" rx="2"/>
+<text class="lbl" x="465" y="208" text-anchor="middle">L3 cost 2</text>
+<rect class="bgw" x="432.775" y="289.48" width="64.45" height="15.66" rx="2"/>
+<text class="lbl" x="465" y="302" text-anchor="middle">L4 cost 4</text>
+<rect class="boxg" x="748" y="88" width="322" height="380" rx="8"/>
+<text class="ptitle" x="766" y="116" text-anchor="start">flow table หลัง phase 1</text>
+<text class="small" x="766" y="136" text-anchor="start">หนึ่งแถว = match แล้ว action</text>
+<text class="monos" x="766" y="162" text-anchor="start">switch  match          out  pkts</text>
+<text class="monos" x="766" y="184" text-anchor="start">s1      dst=….20/32  2    100</text>
+<text class="monos" x="766" y="206" text-anchor="start">s2      dst=….20/32  2    100</text>
+<text class="monos" x="766" y="228" text-anchor="start">s4      dst=….20/32  1    100</text>
+<line class="rule" x1="766" y1="246" x2="1054" y2="246"/>
+<text class="small" x="766" y="268" text-anchor="start">packet_in = 1 ครั้ง</text>
+<text class="small" x="766" y="288" text-anchor="start">flow_mod  = 3 แถว</text>
+<text class="small" x="766" y="308" text-anchor="start">forward   = 300 ครั้ง</text>
+<line class="rule" x1="766" y1="326" x2="1054" y2="326"/>
+<text class="small" x="766" y="348" text-anchor="start">ที่เหลือเกิดที่ data plane</text>
+<text class="small" x="766" y="366" text-anchor="start">— controller ไม่ได้อยู่ใน</text>
+<text class="small" x="766" y="384" text-anchor="start">เส้นทางของ packet เลย</text>
+<rect class="boxb" x="766" y="396" width="288" height="58" rx="8"/>
+<text class="small" x="910" y="418" text-anchor="middle">rule + counter อยู่ที่ switch</text>
+<text class="small" x="910" y="438" text-anchor="middle">controller คือคนที่ต้องคอยลบ rule ที่ค้าง</text>
+<text class="ptitle" x="30" y="502" text-anchor="start">กำไรจากการเห็นภาพรวม: peak load บน link (หน่วย: packet)</text>
+<text class="txt" x="40" y="537" text-anchor="start">shortest-path ทุก flow</text>
+<rect class="bar1" x="300" y="522" width="560.0" height="22" rx="3"/>
+<text class="monos" x="872" y="538" text-anchor="start">200</text>
+<text class="txt" x="40" y="577" text-anchor="start">SDN traffic engineering</text>
+<rect class="bar2" x="300" y="562" width="280.0" height="22" rx="3"/>
+<text class="monos" x="592" y="578" text-anchor="start">100</text>
+<text class="small" x="300" y="604" text-anchor="start">ลดได้ครึ่งหนึ่ง = link เดิมรับ traffic ได้สองเท่าก่อนอิ่มตัว (link ที่เหลือ: 100 / 100 / 100 / 100)</text>
+<rect class="boxy" x="30" y="626" width="1040" height="48" rx="8"/>
+<text class="txt" x="550" y="656" text-anchor="middle">แต่ถ้าวันหนึ่ง link L3 ล่ม ทั้งสอง stream กลับมาทางเดียวกัน: peak กลับไป 200</text>
+</svg>
