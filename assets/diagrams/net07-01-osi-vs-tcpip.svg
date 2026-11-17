@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1010 700" width="1010" height="700" role="img" aria-label="OSI 7 layers เทียบกับ TCP/IP 4 layers พร้อมตัวอย่างโปรโตคอลและ PDU ของแต่ละชั้น">
+<style>
+text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 12.5px; fill: #1a1a1a; }
+.hdr { font-weight: 700; font-size: 17.5px; }
+.sub { fill: #57606a; font-size: 12.5px; }
+.ptitle { font-weight: 700; font-size: 14px; }
+.txt { font-size: 12.5px; }
+.lbl { fill: #57606a; font-size: 11px; }
+.small { fill: #57606a; font-size: 10.5px; }
+.big { font-weight: 700; font-size: 20px; fill: #0550ae; }
+.mono { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 11.5px; fill: #0a3069; }
+.monos { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 10.5px; fill: #57606a; }
+.boxg { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.3; }
+.boxb { fill: #eef4ff; stroke: #0969da; stroke-width: 1.5; }
+.boxy { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.4; }
+.boxi { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.4; }
+.boxr { fill: #fdeff0; stroke: #b62324; stroke-width: 1.4; }
+.bgw { fill: #ffffff; stroke: none; }
+.wire { stroke: #8c959f; stroke-width: 1.8; fill: none; }
+.wire2 { stroke: #b6bfc8; stroke-width: 1.2; fill: none; stroke-dasharray: 5 5; }
+.head { fill: #8c959f; }
+.rule { stroke: #d0d7de; stroke-width: 1.2; }
+.c1 { stroke: #0969da; stroke-width: 2.6; fill: none; }
+.ctl { stroke: #8250df; stroke-width: 1.2; fill: none; stroke-dasharray: 4 4; }
+.onbar { fill: #ffffff; font-size: 10.5px; }
+.onbar2 { fill: #1a1a1a; font-size: 10.5px; }
+.bar1 { fill: #0969da; }
+.bar2 { fill: #bf8700; }
+.bar3 { fill: #b62324; }
+.bar4 { fill: #1a7f37; }
+.bar0 { fill: #d0d7de; }
+.seg-o { fill: #fdeff0; stroke: #b62324; stroke-width: 1.2; }
+.seg-v { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.2; }
+.seg-i { fill: #eef4ff; stroke: #0969da; stroke-width: 1.2; }
+.seg-g { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.2; }
+</style>
+<rect x="0" y="0" width="1010" height="700" fill="#ffffff"/>
+<text class="hdr" x="40" y="40" text-anchor="start">OSI 7 layers กับ TCP/IP 4 layers</text>
+<text class="sub" x="40" y="66" text-anchor="start">model เดียวกันสองมุมมอง — ชั้น 5 กับ 6 ไม่มีโปรโตคอลของตัวเอง จึงยุบไปอยู่ใน application</text>
+<text class="ptitle" x="40" y="100" text-anchor="start">OSI (ISO 7498)</text>
+<text class="ptitle" x="650" y="100" text-anchor="start">TCP/IP (RFC 1122)</text>
+<rect class="boxg" x="40" y="112" width="420" height="62" rx="8"/>
+<text class="mono" x="56" y="138" text-anchor="start">7</text>
+<text class="ptitle" x="80" y="138" text-anchor="start">Application</text>
+<text class="small" x="80" y="159" text-anchor="start">data · HTTP, DNS, SMTP, MQTT</text>
+<rect class="boxg" x="40" y="182" width="420" height="62" rx="8"/>
+<text class="mono" x="56" y="208" text-anchor="start">6</text>
+<text class="ptitle" x="80" y="208" text-anchor="start">Presentation</text>
+<text class="small" x="80" y="229" text-anchor="start">data · TLS, gzip, UTF-8, JSON</text>
+<rect class="boxg" x="40" y="252" width="420" height="62" rx="8"/>
+<text class="mono" x="56" y="278" text-anchor="start">5</text>
+<text class="ptitle" x="80" y="278" text-anchor="start">Session</text>
+<text class="small" x="80" y="299" text-anchor="start">data · socket, RPC, WebSocket</text>
+<rect class="boxg" x="40" y="322" width="420" height="62" rx="8"/>
+<text class="mono" x="56" y="348" text-anchor="start">4</text>
+<text class="ptitle" x="80" y="348" text-anchor="start">Transport</text>
+<text class="small" x="80" y="369" text-anchor="start">segment · TCP, UDP, QUIC</text>
+<rect class="boxg" x="40" y="392" width="420" height="62" rx="8"/>
+<text class="mono" x="56" y="418" text-anchor="start">3</text>
+<text class="ptitle" x="80" y="418" text-anchor="start">Network</text>
+<text class="small" x="80" y="439" text-anchor="start">packet · IP, ICMP, OSPF, BGP</text>
+<rect class="boxg" x="40" y="462" width="420" height="62" rx="8"/>
+<text class="mono" x="56" y="488" text-anchor="start">2</text>
+<text class="ptitle" x="80" y="488" text-anchor="start">Data Link</text>
+<text class="small" x="80" y="509" text-anchor="start">frame · Ethernet, 802.11 MAC, VLAN</text>
+<rect class="boxg" x="40" y="532" width="420" height="62" rx="8"/>
+<text class="mono" x="56" y="558" text-anchor="start">1</text>
+<text class="ptitle" x="80" y="558" text-anchor="start">Physical</text>
+<text class="small" x="80" y="579" text-anchor="start">bit · 1000BASE-T, ไฟเบอร์, 802.11 PHY</text>
+<rect class="boxi" x="650" y="112" width="320" height="202" rx="8"/>
+<text class="ptitle" x="670" y="209" text-anchor="start">Application</text>
+<text class="small" x="670" y="231" text-anchor="start">รวม 3 ชั้นของ OSI</text>
+<line class="wire2" x1="460" y1="143.0" x2="644" y2="143.0"/>
+<line class="wire2" x1="644" y1="143.0" x2="650" y2="143.0"/>
+<line class="wire2" x1="460" y1="213.0" x2="644" y2="213.0"/>
+<line class="wire2" x1="644" y1="213.0" x2="650" y2="213.0"/>
+<line class="wire2" x1="460" y1="283.0" x2="644" y2="283.0"/>
+<line class="wire2" x1="644" y1="283.0" x2="650" y2="283.0"/>
+<rect class="boxb" x="650" y="322" width="320" height="62" rx="8"/>
+<text class="ptitle" x="670" y="349" text-anchor="start">Transport</text>
+<text class="small" x="670" y="371" text-anchor="start">รวม 1 ชั้นของ OSI</text>
+<line class="wire2" x1="460" y1="353.0" x2="644" y2="353.0"/>
+<line class="wire2" x1="644" y1="353.0" x2="650" y2="353.0"/>
+<rect class="boxb" x="650" y="392" width="320" height="62" rx="8"/>
+<text class="ptitle" x="670" y="419" text-anchor="start">Internet</text>
+<text class="small" x="670" y="441" text-anchor="start">รวม 1 ชั้นของ OSI</text>
+<line class="wire2" x1="460" y1="423.0" x2="644" y2="423.0"/>
+<line class="wire2" x1="644" y1="423.0" x2="650" y2="423.0"/>
+<rect class="boxg" x="650" y="462" width="320" height="132" rx="8"/>
+<text class="ptitle" x="670" y="524" text-anchor="start">Link</text>
+<text class="small" x="670" y="546" text-anchor="start">รวม 2 ชั้นของ OSI</text>
+<line class="wire2" x1="460" y1="493.0" x2="644" y2="493.0"/>
+<line class="wire2" x1="644" y1="493.0" x2="650" y2="493.0"/>
+<line class="wire2" x1="460" y1="563.0" x2="644" y2="563.0"/>
+<line class="wire2" x1="644" y1="563.0" x2="650" y2="563.0"/>
+<text class="mono" x="40" y="618" text-anchor="start">osi_total=7  tcpip_total=4  merged_layers=3</text>
+<text class="txt" x="40" y="644" text-anchor="start">ตัวอย่าง frame ในบทนี้: ข้อมูล 75 ไบต์ + หัว 58 ไบต์ = 133 ไบต์บนสาย</text>
+<text class="small" x="40" y="668" text-anchor="start">หัวกินไป 436 ส่วนในพัน — encapsulation มีราคาเป็นไบต์ และราคานั้นคงที่ต่อ packet</text>
+</svg>

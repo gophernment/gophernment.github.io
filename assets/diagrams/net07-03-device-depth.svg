@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1030 600" width="1030" height="600" role="img" aria-label="อุปกรณ์ห้าชนิดอ่าน frame 133 ไบต์ได้ลึกไม่เท่ากัน: hub 0, switch 14, router 34, firewall 54, proxy 133">
+<style>
+text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 12.5px; fill: #1a1a1a; }
+.hdr { font-weight: 700; font-size: 17.5px; }
+.sub { fill: #57606a; font-size: 12.5px; }
+.ptitle { font-weight: 700; font-size: 14px; }
+.txt { font-size: 12.5px; }
+.lbl { fill: #57606a; font-size: 11px; }
+.small { fill: #57606a; font-size: 10.5px; }
+.big { font-weight: 700; font-size: 20px; fill: #0550ae; }
+.mono { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 11.5px; fill: #0a3069; }
+.monos { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 10.5px; fill: #57606a; }
+.boxg { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.3; }
+.boxb { fill: #eef4ff; stroke: #0969da; stroke-width: 1.5; }
+.boxy { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.4; }
+.boxi { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.4; }
+.boxr { fill: #fdeff0; stroke: #b62324; stroke-width: 1.4; }
+.bgw { fill: #ffffff; stroke: none; }
+.wire { stroke: #8c959f; stroke-width: 1.8; fill: none; }
+.wire2 { stroke: #b6bfc8; stroke-width: 1.2; fill: none; stroke-dasharray: 5 5; }
+.head { fill: #8c959f; }
+.rule { stroke: #d0d7de; stroke-width: 1.2; }
+.c1 { stroke: #0969da; stroke-width: 2.6; fill: none; }
+.ctl { stroke: #8250df; stroke-width: 1.2; fill: none; stroke-dasharray: 4 4; }
+.onbar { fill: #ffffff; font-size: 10.5px; }
+.onbar2 { fill: #1a1a1a; font-size: 10.5px; }
+.bar1 { fill: #0969da; }
+.bar2 { fill: #bf8700; }
+.bar3 { fill: #b62324; }
+.bar4 { fill: #1a7f37; }
+.bar0 { fill: #d0d7de; }
+.seg-o { fill: #fdeff0; stroke: #b62324; stroke-width: 1.2; }
+.seg-v { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.2; }
+.seg-i { fill: #eef4ff; stroke: #0969da; stroke-width: 1.2; }
+.seg-g { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.2; }
+</style>
+<rect x="0" y="0" width="1030" height="600" fill="#ffffff"/>
+<text class="hdr" x="40" y="40" text-anchor="start">layer ในทางปฏิบัติ = สิทธิ์การอ่านไบต์</text>
+<text class="sub" x="40" y="66" text-anchor="start">frame ใบเดียวกัน (133 ไบต์) เดินผ่านอุปกรณ์ห้าชนิด — ตัวเลขคือจำนวนไบต์ที่แต่ละตัวอ่านจริง</text>
+<rect class="seg-v" x="220" y="96" width="70.0" height="40" rx="4"/>
+<text class="onbar2" x="255" y="122" text-anchor="middle">Eth 14</text>
+<rect class="seg-i" x="290.0" y="96" width="100.0" height="40" rx="4"/>
+<text class="onbar2" x="340" y="122" text-anchor="middle">IP 20</text>
+<rect class="seg-i" x="390.0" y="96" width="100.0" height="40" rx="4"/>
+<text class="onbar2" x="440" y="122" text-anchor="middle">TCP 20</text>
+<rect class="seg-g" x="490.0" y="96" width="375.0" height="40" rx="4"/>
+<text class="onbar2" x="678" y="122" text-anchor="middle">data 75</text>
+<rect class="seg-o" x="865.0" y="96" width="20.0" height="40" rx="4"/>
+<text class="small" x="875" y="88" text-anchor="middle">FCS 4</text>
+<text class="small" x="220" y="88" text-anchor="start">ไบต์ที่ 0</text>
+<text class="ptitle" x="40" y="214" text-anchor="start">hub</text>
+<text class="small" x="40" y="234" text-anchor="start">หยุดที่ L1</text>
+<rect class="bar0" x="220" y="196" width="665.0" height="26" rx="4"/>
+<text class="mono" x="895" y="215" text-anchor="start">0 / 133</text>
+<text class="ptitle" x="40" y="276" text-anchor="start">switch</text>
+<text class="small" x="40" y="296" text-anchor="start">หยุดที่ L2</text>
+<rect class="bar0" x="220" y="258" width="665.0" height="26" rx="4"/>
+<rect class="bar1" x="220" y="258" width="70.0" height="26" rx="4"/>
+<text class="mono" x="895" y="277" text-anchor="start">14 / 133</text>
+<text class="ptitle" x="40" y="338" text-anchor="start">router</text>
+<text class="small" x="40" y="358" text-anchor="start">หยุดที่ L3</text>
+<rect class="bar0" x="220" y="320" width="665.0" height="26" rx="4"/>
+<rect class="bar1" x="220" y="320" width="170.0" height="26" rx="4"/>
+<text class="mono" x="895" y="339" text-anchor="start">34 / 133</text>
+<text class="ptitle" x="40" y="400" text-anchor="start">firewall</text>
+<text class="small" x="40" y="420" text-anchor="start">หยุดที่ L4</text>
+<rect class="bar0" x="220" y="382" width="665.0" height="26" rx="4"/>
+<rect class="bar1" x="220" y="382" width="270.0" height="26" rx="4"/>
+<text class="mono" x="895" y="401" text-anchor="start">54 / 133</text>
+<text class="ptitle" x="40" y="462" text-anchor="start">proxy</text>
+<text class="small" x="40" y="482" text-anchor="start">หยุดที่ L7</text>
+<rect class="bar0" x="220" y="444" width="665.0" height="26" rx="4"/>
+<rect class="bar1" x="220" y="444" width="665.0" height="26" rx="4"/>
+<text class="mono" x="895" y="463" text-anchor="start">133 / 133</text>
+<line class="wire2" x1="290.0" y1="140" x2="290.0" y2="472"/>
+<rect class="bgw" x="274.0" y="141.5" width="32" height="15" rx="0"/>
+<text class="lbl" x="290" y="156" text-anchor="middle">L2</text>
+<line class="wire2" x1="390.0" y1="140" x2="390.0" y2="472"/>
+<rect class="bgw" x="374.0" y="141.5" width="32" height="15" rx="0"/>
+<text class="lbl" x="390" y="156" text-anchor="middle">L3</text>
+<line class="wire2" x1="490.0" y1="140" x2="490.0" y2="472"/>
+<rect class="bgw" x="474.0" y="141.5" width="32" height="15" rx="0"/>
+<text class="lbl" x="490" y="156" text-anchor="middle">L4</text>
+<rect class="boxy" x="40" y="510" width="950" height="66" rx="8"/>
+<text class="txt" x="60" y="538" text-anchor="start">switch อ่านแค่ 14 ไบต์ (105 ส่วนในพันของ frame) จึงตัดสินใจได้เร็ว — proxy ต้องอ่านครบทั้ง 133 ไบต์ก่อนจะรู้ว่าควรทำอะไร</text>
+<text class="small" x="60" y="560" text-anchor="start">นี่คือเหตุผลเชิงกลไกที่ L4 load balancer เร็วกว่า L7 proxy และเป็นเหตุผลที่ proxy พังง่ายกว่าเมื่อโปรโตคอลเปลี่ยน</text>
+</svg>
