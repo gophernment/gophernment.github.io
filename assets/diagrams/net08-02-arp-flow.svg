@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1060 660" width="1060" height="660" role="img" aria-label="ARP request broadcast และ reply แบบ unicast พร้อมลำดับ state ของ neighbour entry">
+<style>
+text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 12.5px; fill: #1a1a1a; }
+.hdr { font-weight: 700; font-size: 17.5px; }
+.sub { fill: #57606a; font-size: 12.5px; }
+.ptitle { font-weight: 700; font-size: 14px; }
+.txt { font-size: 12.5px; }
+.lbl { fill: #57606a; font-size: 11px; }
+.small { fill: #57606a; font-size: 10.5px; }
+.big { font-weight: 700; font-size: 20px; fill: #0550ae; }
+.mono { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 11.5px; fill: #0a3069; }
+.monos { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 10.5px; fill: #57606a; }
+.boxg { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.3; }
+.boxb { fill: #eef4ff; stroke: #0969da; stroke-width: 1.5; }
+.boxy { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.4; }
+.boxi { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.4; }
+.boxr { fill: #fdeff0; stroke: #b62324; stroke-width: 1.4; }
+.bgph { fill: #f2f4f6; stroke: #b6bfc8; stroke-width: 1.2; stroke-dasharray: 4 3; }
+.bgth { fill: #eef4ff; stroke: #8c959f; stroke-width: 1.2; }
+.bgpl { fill: #f6f8fa; stroke: #8c959f; stroke-width: 1.2; }
+.bgpd { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.2; }
+.bgfs { fill: #fdeff0; stroke: #b62324; stroke-width: 1.2; }
+.bgwt { fill: #ffffff; stroke: none; }
+.wire { stroke: #8c959f; stroke-width: 1.8; fill: none; }
+.wire2 { stroke: #b6bfc8; stroke-width: 1.2; fill: none; stroke-dasharray: 5 5; }
+.wire3 { stroke: #b62324; stroke-width: 2.0; fill: none; stroke-dasharray: 6 4; }
+.wire4 { stroke: #1a7f37; stroke-width: 1.8; fill: none; }
+.head { fill: #8c959f; }
+.headr { fill: #b62324; }
+.headg { fill: #1a7f37; }
+.rule { stroke: #d0d7de; stroke-width: 1.2; }
+.dotg { fill: #1a7f37; stroke: #1a7f37; }
+.dotb { fill: #0969da; stroke: #0969da; }
+.dotr { fill: #b62324; stroke: #b62324; }
+.dot0 { fill: #ffffff; stroke: #8c959f; stroke-width: 2; }
+.onbar { fill: #ffffff; font-size: 10.5px; }
+.onbar2 { fill: #1a1a1a; font-size: 10.5px; }
+.onbar3 { fill: #57606a; font-size: 10.5px; }
+</style>
+<rect x="0" y="0" width="1060" height="660" fill="#ffffff"/>
+<text class="hdr" x="40" y="40" text-anchor="start">ARP: ถามแบบ broadcast แล้วตอบแบบ unicast</text>
+<text class="sub" x="40" y="66" text-anchor="start">หนึ่งคำถาม หนึ่งคำตอบ แล้ว mapping ถูกจำไว้จนกว่าจะหมดอายุ</text>
+<rect class="boxb" x="40" y="116" width="250" height="96" rx="8"/>
+<text class="ptitle" x="60" y="142" text-anchor="start">เครื่อง A (ผู้ถาม)</text>
+<text class="mono" x="60" y="166" text-anchor="start">192.0.2.50</text>
+<text class="monos" x="60" y="188" text-anchor="start">02:00:00:00:00:01</text>
+<rect class="boxg" x="400" y="116" width="240" height="96" rx="8"/>
+<text class="ptitle" x="420" y="142" text-anchor="start">switch</text>
+<text class="small" x="420" y="166" text-anchor="start"> floods broadcast</text>
+<text class="small" x="420" y="188" text-anchor="start">จำ MAC จาก src</text>
+<rect class="boxi" x="760" y="116" width="250" height="96" rx="8"/>
+<text class="ptitle" x="780" y="142" text-anchor="start">เครื่อง B (gateway)</text>
+<text class="mono" x="780" y="166" text-anchor="start">192.0.2.1</text>
+<text class="monos" x="780" y="188" text-anchor="start">02:00:00:00:00:fe</text>
+<text class="small" x="345" y="96" text-anchor="middle">ARP request (broadcast)</text>
+<line class="wire3" x1="292" y1="140" x2="398" y2="140"/>
+<polygon class="head" points="398.0,140.0 389.7,143.5 389.7,136.5"/>
+<line class="wire3" x1="642" y1="140" x2="758" y2="140"/>
+<polygon class="head" points="758.0,140.0 749.7,143.5 749.7,136.5"/>
+<text class="small" x="700" y="96" text-anchor="middle">ทุกคนต้องอ่าน</text>
+<text class="small" x="345" y="236" text-anchor="middle">ARP reply (unicast กลับ)</text>
+<line class="wire4" x1="758" y1="190" x2="642" y2="190"/>
+<polygon class="head" points="642.0,190.0 650.3,186.5 650.3,193.5"/>
+<line class="wire4" x1="398" y1="190" x2="292" y2="190"/>
+<polygon class="head" points="292.0,190.0 300.3,186.5 300.3,193.5"/>
+<text class="small" x="700" y="236" text-anchor="middle">เฉพาะคนที่ถาม</text>
+<text class="lbl" x="40" y="300" text-anchor="start">state ของ entry 192.0.2.1 (ค่า t จาก out/03_arp.txt)</text>
+<line class="wire2" x1="70" y1="346" x2="990" y2="346"/>
+<circle class="dotb" cx="70.0" cy="346" r="7"/>
+<text class="monos" x="70" y="326" text-anchor="middle">INCOMPLETE</text>
+<text class="small" x="70" y="368" text-anchor="middle">t=0</text>
+<circle class="dotg" cx="254.0" cy="346" r="7"/>
+<text class="monos" x="254" y="326" text-anchor="middle">REACHABLE</text>
+<text class="small" x="254" y="368" text-anchor="middle">t=2</text>
+<circle class="dotb" cx="438.0" cy="346" r="7"/>
+<text class="monos" x="438" y="326" text-anchor="middle">STALE</text>
+<text class="small" x="438" y="368" text-anchor="middle">t=32</text>
+<circle class="dotb" cx="622.0" cy="346" r="7"/>
+<text class="monos" x="622" y="326" text-anchor="middle">DELAY</text>
+<text class="small" x="622" y="368" text-anchor="middle">t=32</text>
+<circle class="dotb" cx="806.0" cy="346" r="7"/>
+<text class="monos" x="806" y="326" text-anchor="middle">PROBE</text>
+<text class="small" x="806" y="368" text-anchor="middle">t=37</text>
+<circle class="dotr" cx="990.0" cy="346" r="7"/>
+<text class="monos" x="990" y="326" text-anchor="middle">FAILED</text>
+<text class="small" x="990" y="368" text-anchor="middle">t=40</text>
+<text class="txt" x="40" y="400" text-anchor="start">ARP packet ที่ต้องส่งในเส้นทางนี้: 6 ใบ (broadcast 3 + unicast probe 3)</text>
+<rect class="boxb" x="40" y="420" width="980" height="110" rx="8"/>
+<text class="ptitle" x="60" y="448" text-anchor="start">ทำไมต้องมี cache: 200 packet ไปยัง 5 ปลายทาง</text>
+<text class="txt" x="60" y="474" text-anchor="start">ไม่มี cache = 200 ARP request · มี cache = 110 request (ประหยัด 90)</text>
+<text class="small" x="60" y="498" text-anchor="start">cache ที่ดีทำให้จำนวน request เป็นสัดส่วนกับจำนวนปลายทาง ไม่ใช่จำนวน packet</text>
+<text class="small" x="60" y="518" text-anchor="start">และ entry ที่ STALE ยังใช้ค่าเดิมได้ — cache เก่าไม่เท่ากับ cache ผิด</text>
+<rect class="boxy" x="40" y="546" width="980" height="66" rx="8"/>
+<text class="txt" x="60" y="570" text-anchor="start">ARP อยู่ใน payload ของ Ethernet แต่แลกเปลี่ยน IP address — จึงไม่มีชั้นเป็นของตัวเอง (2.5)</text>
+<text class="small" x="60" y="592" text-anchor="start">ผลคือมันถูกออกแบบภายใต้สมมติฐานว่า "ทุกคนบนสายเป็นเพื่อนกัน" ซึ่งผิดในปี 2026</text>
+</svg>

@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1060 620" width="1060" height="620" role="img" aria-label="ARP poisoning: การประกาศตัวแทน gateway ทำให้ packet ทั้งหมดวิ่งไปที่ผู้โจมตี">
+<style>
+text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 12.5px; fill: #1a1a1a; }
+.hdr { font-weight: 700; font-size: 17.5px; }
+.sub { fill: #57606a; font-size: 12.5px; }
+.ptitle { font-weight: 700; font-size: 14px; }
+.txt { font-size: 12.5px; }
+.lbl { fill: #57606a; font-size: 11px; }
+.small { fill: #57606a; font-size: 10.5px; }
+.big { font-weight: 700; font-size: 20px; fill: #0550ae; }
+.mono { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 11.5px; fill: #0a3069; }
+.monos { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 10.5px; fill: #57606a; }
+.boxg { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.3; }
+.boxb { fill: #eef4ff; stroke: #0969da; stroke-width: 1.5; }
+.boxy { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.4; }
+.boxi { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.4; }
+.boxr { fill: #fdeff0; stroke: #b62324; stroke-width: 1.4; }
+.bgph { fill: #f2f4f6; stroke: #b6bfc8; stroke-width: 1.2; stroke-dasharray: 4 3; }
+.bgth { fill: #eef4ff; stroke: #8c959f; stroke-width: 1.2; }
+.bgpl { fill: #f6f8fa; stroke: #8c959f; stroke-width: 1.2; }
+.bgpd { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.2; }
+.bgfs { fill: #fdeff0; stroke: #b62324; stroke-width: 1.2; }
+.bgwt { fill: #ffffff; stroke: none; }
+.wire { stroke: #8c959f; stroke-width: 1.8; fill: none; }
+.wire2 { stroke: #b6bfc8; stroke-width: 1.2; fill: none; stroke-dasharray: 5 5; }
+.wire3 { stroke: #b62324; stroke-width: 2.0; fill: none; stroke-dasharray: 6 4; }
+.wire4 { stroke: #1a7f37; stroke-width: 1.8; fill: none; }
+.head { fill: #8c959f; }
+.headr { fill: #b62324; }
+.headg { fill: #1a7f37; }
+.rule { stroke: #d0d7de; stroke-width: 1.2; }
+.dotg { fill: #1a7f37; stroke: #1a7f37; }
+.dotb { fill: #0969da; stroke: #0969da; }
+.dotr { fill: #b62324; stroke: #b62324; }
+.dot0 { fill: #ffffff; stroke: #8c959f; stroke-width: 2; }
+.onbar { fill: #ffffff; font-size: 10.5px; }
+.onbar2 { fill: #1a1a1a; font-size: 10.5px; }
+.onbar3 { fill: #57606a; font-size: 10.5px; }
+</style>
+<rect x="0" y="0" width="1060" height="620" fill="#ffffff"/>
+<text class="hdr" x="40" y="40" text-anchor="start">ARP poisoning: packet 28 ไบต์ใบเดียวก็พอ</text>
+<text class="sub" x="40" y="66" text-anchor="start">ตัวเลขและทุกแถวในภาพนี้อ่านจาก out/04_spoof.txt — neighbour table ของเหยื่อก่อนและหลัง</text>
+<rect class="boxg" x="40" y="104" width="430" height="210" rx="8"/>
+<text class="ptitle" x="60" y="130" text-anchor="start">ก่อนถูกโจมตี</text>
+<text class="lbl" x="60" y="156" text-anchor="start">ip</text>
+<text class="lbl" x="220" y="156" text-anchor="start">lladdr (MAC)</text>
+<text class="monos" x="60" y="182" text-anchor="start">192.0.2.1</text>
+<text class="monos" x="220" y="182" text-anchor="start">02:00:00:00:00:fe</text>
+<text class="monos" x="390" y="182" text-anchor="end">REACHABLE</text>
+<text class="monos" x="60" y="212" text-anchor="start">192.0.2.53</text>
+<text class="monos" x="220" y="212" text-anchor="start">02:00:00:00:00:35</text>
+<text class="monos" x="390" y="212" text-anchor="end">REACHABLE</text>
+<text class="small" x="60" y="296" text-anchor="start">ทุกอย่างดูปกติ — ping ได้ curl ได้ (2 entry)</text>
+<rect class="boxr" x="590" y="104" width="430" height="210" rx="8"/>
+<text class="ptitle" x="610" y="130" text-anchor="start">หลังได้รับ gratuitous reply</text>
+<text class="lbl" x="610" y="156" text-anchor="start">ip</text>
+<text class="lbl" x="770" y="156" text-anchor="start">lladdr (MAC)</text>
+<text class="monos" x="610" y="182" text-anchor="start">192.0.2.1</text>
+<text class="monos" x="770" y="182" text-anchor="start">02:de:ad:be:ef:01</text>
+<text class="monos" x="940" y="182" text-anchor="end">REACHABLE</text>
+<text class="monos" x="610" y="212" text-anchor="start">192.0.2.53</text>
+<text class="monos" x="770" y="212" text-anchor="start">02:00:00:00:00:35</text>
+<text class="monos" x="940" y="212" text-anchor="end">REACHABLE</text>
+<text class="small" x="610" y="296" text-anchor="start">IP เดิม สถานะเดิม — เปลี่ยนแค่ MAC</text>
+<line class="wire3" x1="476" y1="182" x2="588" y2="182"/>
+<polygon class="head" points="588.0,182.0 579.7,185.5 579.7,178.5"/>
+<text class="small" x="532" y="166" text-anchor="middle">inject</text>
+<text class="monos" x="532" y="202" text-anchor="middle">28 B</text>
+<rect class="boxy" x="300" y="330" width="460" height="76" rx="8"/>
+<text class="txt" x="320" y="356" text-anchor="start">ผู้โจมตี 192.0.2.66 ประกาศว่า "192.0.2.1 is-at 02:de:ad:be:ef:01"</text>
+<text class="small" x="320" y="380" text-anchor="start">RFC 826: sender hardware address ทับของเดิม — ไม่มีการยืนยันตัวตน</text>
+<rect class="boxb" x="40" y="430" width="470" height="110" rx="8"/>
+<text class="ptitle" x="60" y="458" text-anchor="start">10 packet ที่ควรไป gateway</text>
+<text class="txt" x="60" y="486" text-anchor="start">ไปถึง gateway จริง 0 · ไปถึงผู้โจมตี 10</text>
+<text class="small" x="60" y="510" text-anchor="start">ไม่ใช่บางส่วน — ทั้งหมด เพราะ gateway คือปลายทางของทุก packet</text>
+<text class="small" x="60" y="530" text-anchor="start">และ TLS ไม่กัน: ผู้โจมตีอ่านไม่ออก แต่ตัดการเชื่อมต่อได้</text>
+<rect class="boxi" x="550" y="430" width="470" height="110" rx="8"/>
+<text class="ptitle" x="570" y="458" text-anchor="start">ตรวจจับได้จากอะไร</text>
+<text class="txt" x="570" y="486" text-anchor="start">lladdr เปลี่ยน (changed_entries=1) แต่ IP เดิม</text>
+<text class="small" x="570" y="510" text-anchor="start">ต้องเทียบกับ baseline ที่เชื่อถือได้ ไม่ใช่แค่ "MAC ดูปกติ"</text>
+<text class="small" x="570" y="530" text-anchor="start">และ gratuitous ARP ที่ถูกกฎหมายก็เปลี่ยน lladdr เหมือนกัน</text>
+<text class="small" x="40" y="580" text-anchor="start">ทางป้องกัน: static ARP · Dynamic ARP Inspection · port security · เข้ารหัสปลายทาง (และยอมรับว่าไม่มีการยืนยันตัวตนในชั้น 2)</text>
+</svg>
