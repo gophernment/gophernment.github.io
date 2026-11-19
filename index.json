@@ -1,5 +1,19 @@
 [
   {
+    "slug": "2026-11-19-network-09-ip-address-cidr",
+    "title": "IP address และ CIDR: 32 บิตที่แบ่งโลกออกเป็นเครือข่าย (ตอนที่ 09)",
+    "date": "2026-11-19",
+    "tags": [
+      "network",
+      "ipv4",
+      "cidr",
+      "subnetting",
+      "rfc1918",
+      "golang"
+    ],
+    "description": "ทำไมสองเครื่องเสียบ switch เดียวกันจึง ping กันไม่ถึง — คำตอบอยู่ในเลข 32 บิตที่เรามองข้ามทุกวัน บทนี้เปิด IPv4 address ทีละบิต ไล่ประวัติ classful ที่ทำให้ที่อยู่หมดเร็ว อธิบาย CIDR (วิธีเขียนขนาด network ด้วย `/n` แทนการเดาจาก class) กับ prefix notation ที่มาแทนที่ subnet mask แบบเดิม และแยกให้ชัดว่าอะไรคือ public อะไรคือ private พร้อมโค้ด Go ที่คำนวณทุกอย่างจากเลขจริง"
+  },
+  {
     "slug": "2026-11-18-network-08-ethernet-mac-arp",
     "title": "Ethernet frame, MAC address และ ARP: ชั้น 2 ทำงานอย่างไรจริง ๆ (ตอนที่ 08)",
     "date": "2026-11-18",
