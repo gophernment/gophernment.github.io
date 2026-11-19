@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 430" width="920" height="430" role="img" aria-label="IPv4 address 32 บิตแบ่งเป็น 4 octet พร้อมน้ำหนักบิตและตัวอย่างการแปลง">
+<style>
+text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 12.5px; fill: #1a1a1a; }
+.hdr { font-weight: 700; font-size: 17.5px; }
+.sub { fill: #57606a; font-size: 12.5px; }
+.ptitle { font-weight: 700; font-size: 14px; }
+.txt { font-size: 12.5px; }
+.lbl { fill: #57606a; font-size: 11px; }
+.small { fill: #57606a; font-size: 10.5px; }
+.big { font-weight: 700; font-size: 20px; fill: #0550ae; }
+.mono { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 11.5px; fill: #0a3069; }
+.monom { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12.5px; fill: #0a3069; }
+.monos { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 10.5px; fill: #57606a; }
+.bit { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12px; fill: #0550ae; }
+.boxg { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.3; }
+.boxb { fill: #eef4ff; stroke: #0969da; stroke-width: 1.5; }
+.boxy { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.4; }
+.boxi { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.4; }
+.boxr { fill: #fdeff0; stroke: #b62324; stroke-width: 1.4; }
+.bit0 { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1; }
+.bit1 { fill: #dbeafe; stroke: #0969da; stroke-width: 1; }
+.segA { fill: #dbeafe; stroke: #0969da; stroke-width: 1.4; }
+.segB { fill: #e6f4ea; stroke: #1a7f37; stroke-width: 1.4; }
+.segC { fill: #fff4d6; stroke: #bf8700; stroke-width: 1.4; }
+.segD { fill: #f3e8fd; stroke: #8250df; stroke-width: 1.4; }
+.segE { fill: #f6f8fa; stroke: #8c959f; stroke-width: 1.4; }
+.wire { stroke: #8c959f; stroke-width: 1.8; fill: none; }
+.wire2 { stroke: #b6bfc8; stroke-width: 1.2; fill: none; stroke-dasharray: 5 5; }
+.head { fill: #8c959f; }
+.rule { stroke: #d0d7de; stroke-width: 1.2; }
+</style>
+<rect x="0" y="0" width="920" height="430" fill="#ffffff"/>
+<text class="hdr" x="40" y="36" text-anchor="start">IPv4 address: 32 บิต ที่เขียนเป็น 4 octet</text>
+<text class="sub" x="40" y="60" text-anchor="start">จุดคือการเว้นวรรคให้ตาอ่าน ไม่ใช่ข้อมูล — คอมพิวเตอร์เก็บแค่เลข 32 บิตตัวเดียว</text>
+<rect class="bit1" x="40" y="84" width="22" height="34" rx="2"/>
+<text class="bit" x="51" y="107" text-anchor="middle">1</text>
+<rect class="bit1" x="62" y="84" width="22" height="34" rx="2"/>
+<text class="bit" x="73" y="107" text-anchor="middle">1</text>
+<rect class="bit0" x="84" y="84" width="22" height="34" rx="2"/>
+<text class="bit" x="95" y="107" text-anchor="middle">0</text>
+<rect class="bit0" x="106" y="84" width="22" height="34" rx="2"/>
+<text class="bit" x="117" y="107" text-anchor="middle">0</text>
+<rect class="bit0" x="128" y="84" width="22" height="34" rx="2"/>
+<text class="bit" x="139" y="107" text-anchor="middle">0</text>
+<rect class="bit0" x="150" y="84" width="22" height="34" rx="2"/>
+<text class="bit" x="161" y="107" text-anchor="middle">0</text>
+<rect class="bit0" x="172" y="84" width="22" height="34" rx="2"/>
+<text class="bit" x="183" y="107" text-anchor="middle">0</text>
+<rect class="bit0" x="194" y="84" width="22" height="34" rx="2"/>
+<text class="bit" x="205" y="107" text-anchor="middle">0</text>
+<rect class="bit1" x="228" y="84" width="22" height="34" rx="2"/>
+<text class="bit" x="239" y="107" text-anchor="middle">1</text>
+<rect class="bit0" x="250" y="84" width="22" height="34" rx="2"/>
+<text class="bit" x="261" y="107" text-anchor="middle">0</text>
+<rect class="bit1" x="272" y="84" width="22" height="34" rx="2"/>
+<text class="bit" x="283" y="107" text-anchor="middle">1</text>
+<rect class="bit0" x="294" y="84" width="22" height="34" rx="2"/>
+<text class="bit" x="305" y="107" text-anchor="middle">0</text>
+<rect class="bit1" x="316" y="84" width="22" height="34" rx="2"/>
+<text class="bit" x="327" y="107" text-anchor="middle">1</text>
+<rect class="bit0" x="338" y="84" width="22" height="34" rx="2"/>
+<text class="bit" x="349" y="107" text-anchor="middle">0</text>
+<rect class="bit0" x="360" y="84" width="22" height="34" rx="2"/>
+<text class="bit" x="371" y="107" text-anchor="middle">0</text>
+<rect class="bit0" x="382" y="84" width="22" height="34" rx="2"/>
+<text class="bit" x="393" y="107" text-anchor="middle">0</text>
+<rect class="bit0" x="416" y="84" width="22" height="34" rx="2"/>
+<text class="bit" x="427" y="107" text-anchor="middle">0</text>
+<rect class="bit1" x="438" y="84" width="22" height="34" rx="2"/>
+<text class="bit" x="449" y="107" text-anchor="middle">1</text>
+<rect class="bit1" x="460" y="84" width="22" height="34" rx="2"/>
+<text class="bit" x="471" y="107" text-anchor="middle">1</text>
+<rect class="bit0" x="482" y="84" width="22" height="34" rx="2"/>
+<text class="bit" x="493" y="107" text-anchor="middle">0</text>
+<rect class="bit0" x="504" y="84" width="22" height="34" rx="2"/>
+<text class="bit" x="515" y="107" text-anchor="middle">0</text>
+<rect class="bit1" x="526" y="84" width="22" height="34" rx="2"/>
+<text class="bit" x="537" y="107" text-anchor="middle">1</text>
+<rect class="bit0" x="548" y="84" width="22" height="34" rx="2"/>
+<text class="bit" x="559" y="107" text-anchor="middle">0</text>
+<rect class="bit1" x="570" y="84" width="22" height="34" rx="2"/>
+<text class="bit" x="581" y="107" text-anchor="middle">1</text>
+<rect class="bit1" x="604" y="84" width="22" height="34" rx="2"/>
+<text class="bit" x="615" y="107" text-anchor="middle">1</text>
+<rect class="bit0" x="626" y="84" width="22" height="34" rx="2"/>
+<text class="bit" x="637" y="107" text-anchor="middle">0</text>
+<rect class="bit0" x="648" y="84" width="22" height="34" rx="2"/>
+<text class="bit" x="659" y="107" text-anchor="middle">0</text>
+<rect class="bit0" x="670" y="84" width="22" height="34" rx="2"/>
+<text class="bit" x="681" y="107" text-anchor="middle">0</text>
+<rect class="bit0" x="692" y="84" width="22" height="34" rx="2"/>
+<text class="bit" x="703" y="107" text-anchor="middle">0</text>
+<rect class="bit1" x="714" y="84" width="22" height="34" rx="2"/>
+<text class="bit" x="725" y="107" text-anchor="middle">1</text>
+<rect class="bit1" x="736" y="84" width="22" height="34" rx="2"/>
+<text class="bit" x="747" y="107" text-anchor="middle">1</text>
+<rect class="bit0" x="758" y="84" width="22" height="34" rx="2"/>
+<text class="bit" x="769" y="107" text-anchor="middle">0</text>
+<rect class="boxb" x="40" y="130" width="176" height="36" rx="6"/>
+<text class="big" x="128" y="155" text-anchor="middle">192</text>
+<text class="small" x="128" y="182" text-anchor="middle">octet 1</text>
+<rect class="boxb" x="228" y="130" width="176" height="36" rx="6"/>
+<text class="big" x="316" y="155" text-anchor="middle">168</text>
+<text class="small" x="316" y="182" text-anchor="middle">octet 2</text>
+<rect class="boxb" x="416" y="130" width="176" height="36" rx="6"/>
+<text class="big" x="504" y="155" text-anchor="middle">101</text>
+<text class="small" x="504" y="182" text-anchor="middle">octet 3</text>
+<rect class="boxb" x="604" y="130" width="176" height="36" rx="6"/>
+<text class="big" x="692" y="155" text-anchor="middle">134</text>
+<text class="small" x="692" y="182" text-anchor="middle">octet 4</text>
+<text class="lbl" x="40" y="224" text-anchor="start">น้ำหนักของแต่ละบิตในหนึ่ง octet</text>
+<rect class="boxg" x="40" y="236" width="22" height="26" rx="2"/>
+<text class="monos" x="51" y="254" text-anchor="middle">128</text>
+<rect class="boxg" x="62" y="236" width="22" height="26" rx="2"/>
+<text class="monos" x="73" y="254" text-anchor="middle">64</text>
+<rect class="boxg" x="84" y="236" width="22" height="26" rx="2"/>
+<text class="monos" x="95" y="254" text-anchor="middle">32</text>
+<rect class="boxg" x="106" y="236" width="22" height="26" rx="2"/>
+<text class="monos" x="117" y="254" text-anchor="middle">16</text>
+<rect class="boxg" x="128" y="236" width="22" height="26" rx="2"/>
+<text class="monos" x="139" y="254" text-anchor="middle">8</text>
+<rect class="boxg" x="150" y="236" width="22" height="26" rx="2"/>
+<text class="monos" x="161" y="254" text-anchor="middle">4</text>
+<rect class="boxg" x="172" y="236" width="22" height="26" rx="2"/>
+<text class="monos" x="183" y="254" text-anchor="middle">2</text>
+<rect class="boxg" x="194" y="236" width="22" height="26" rx="2"/>
+<text class="monos" x="205" y="254" text-anchor="middle">1</text>
+<text class="mono" x="40" y="296" text-anchor="start">192 = 128+64</text>
+<text class="mono" x="40" y="322" text-anchor="start">168 = 128+32+8</text>
+<text class="mono" x="340" y="296" text-anchor="start">101 = 64+32+4+1</text>
+<text class="mono" x="340" y="322" text-anchor="start">134 = 128+4+2</text>
+<rect class="boxi" x="40" y="340" width="840" height="62" rx="8"/>
+<text class="mono" x="58" y="364" text-anchor="start">192.168.101.134 → 11000000.10101000.01100101.10000110</text>
+<text class="txt" x="58" y="388" text-anchor="start">ที่อยู่ทั้งหมด = 2^32 = 4,294,967,296 ใบ · hex ของตัวอย่าง = 0xc0a86586</text>
+</svg>
