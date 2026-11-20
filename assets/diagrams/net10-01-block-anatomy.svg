@@ -1,0 +1,185 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 460" width="920" height="460" role="img" aria-label="โครงของ /26: 26 บิต network กับ 6 บิต host และสี่ที่อยู่พิเศษของ block">
+<style>
+text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 12.5px; fill: #1a1a1a; }
+.hdr { font-weight: 700; font-size: 17.5px; }
+.sub { fill: #57606a; font-size: 12.5px; }
+.ptitle { font-weight: 700; font-size: 14px; }
+.txt { font-size: 12.5px; }
+.lbl { fill: #57606a; font-size: 11px; }
+.small { fill: #57606a; font-size: 10.5px; }
+.big { font-weight: 700; font-size: 20px; fill: #0550ae; }
+.mono { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 11.5px; fill: #0a3069; }
+.monom { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12.5px; fill: #0a3069; }
+.monos { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 10.5px; fill: #57606a; }
+.bit { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12px; fill: #0550ae; }
+.boxg { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.3; }
+.boxb { fill: #eef4ff; stroke: #0969da; stroke-width: 1.5; }
+.boxy { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.4; }
+.boxi { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.4; }
+.boxr { fill: #fdeff0; stroke: #b62324; stroke-width: 1.4; }
+.bit0 { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1; }
+.bit1 { fill: #dbeafe; stroke: #0969da; stroke-width: 1; }
+.segA { fill: #dbeafe; stroke: #0969da; stroke-width: 1.2; }
+.segB { fill: #e6f4ea; stroke: #1a7f37; stroke-width: 1.2; }
+.segC { fill: #fff4d6; stroke: #bf8700; stroke-width: 1.2; }
+.segD { fill: #f3e8fd; stroke: #8250df; stroke-width: 1.2; }
+.segE { fill: #f6f8fa; stroke: #8c959f; stroke-width: 1.2; }
+.segR { fill: #fdeff0; stroke: #b62324; stroke-width: 1.2; }
+.wire { stroke: #8c959f; stroke-width: 1.8; fill: none; }
+.wire2 { stroke: #b6bfc8; stroke-width: 1.2; fill: none; stroke-dasharray: 5 5; }
+.head { fill: #8c959f; }
+.rule { stroke: #d0d7de; stroke-width: 1.2; }
+.brk { stroke: #57606a; stroke-width: 1.2; fill: none; }
+</style>
+<rect x="0" y="0" width="920" height="460" fill="#ffffff"/>
+<text class="hdr" x="40" y="36" text-anchor="start">หนึ่ง block = บิต network + บิต host</text>
+<text class="sub" x="40" y="60" text-anchor="start">ตัวอย่าง 203.0.113.77/26: บิตแรก 26 ตัวชี้ network, 6 ตัวท้ายชี้ host</text>
+<line class="brk" x1="40.0" y1="84.0" x2="700.0" y2="84.0"/>
+<line class="brk" x1="40.0" y1="78.0" x2="40.0" y2="90.0"/>
+<line class="brk" x1="700.0" y1="78.0" x2="700.0" y2="90.0"/>
+<text class="lbl" x="370" y="76" text-anchor="middle">network: 26 บิต</text>
+<line class="brk" x1="700.0" y1="84.0" x2="844.0" y2="84.0"/>
+<line class="brk" x1="844.0" y1="78.0" x2="844.0" y2="90.0"/>
+<text class="lbl" x="772" y="76" text-anchor="middle">host: 6 บิต</text>
+<rect class="bit1" x="40.0" y="92.0" width="24.0" height="38.0" rx="2"/>
+<text class="bit" x="52" y="117" text-anchor="middle">1</text>
+<rect class="bit1" x="64.0" y="92.0" width="24.0" height="38.0" rx="2"/>
+<text class="bit" x="76" y="117" text-anchor="middle">1</text>
+<rect class="bit0" x="88.0" y="92.0" width="24.0" height="38.0" rx="2"/>
+<text class="bit" x="100" y="117" text-anchor="middle">0</text>
+<rect class="bit0" x="112.0" y="92.0" width="24.0" height="38.0" rx="2"/>
+<text class="bit" x="124" y="117" text-anchor="middle">0</text>
+<rect class="bit1" x="136.0" y="92.0" width="24.0" height="38.0" rx="2"/>
+<text class="bit" x="148" y="117" text-anchor="middle">1</text>
+<rect class="bit0" x="160.0" y="92.0" width="24.0" height="38.0" rx="2"/>
+<text class="bit" x="172" y="117" text-anchor="middle">0</text>
+<rect class="bit1" x="184.0" y="92.0" width="24.0" height="38.0" rx="2"/>
+<text class="bit" x="196" y="117" text-anchor="middle">1</text>
+<rect class="bit1" x="208.0" y="92.0" width="24.0" height="38.0" rx="2"/>
+<text class="bit" x="220" y="117" text-anchor="middle">1</text>
+<rect class="bit0" x="244.0" y="92.0" width="24.0" height="38.0" rx="2"/>
+<text class="bit" x="256" y="117" text-anchor="middle">0</text>
+<rect class="bit0" x="268.0" y="92.0" width="24.0" height="38.0" rx="2"/>
+<text class="bit" x="280" y="117" text-anchor="middle">0</text>
+<rect class="bit0" x="292.0" y="92.0" width="24.0" height="38.0" rx="2"/>
+<text class="bit" x="304" y="117" text-anchor="middle">0</text>
+<rect class="bit0" x="316.0" y="92.0" width="24.0" height="38.0" rx="2"/>
+<text class="bit" x="328" y="117" text-anchor="middle">0</text>
+<rect class="bit0" x="340.0" y="92.0" width="24.0" height="38.0" rx="2"/>
+<text class="bit" x="352" y="117" text-anchor="middle">0</text>
+<rect class="bit0" x="364.0" y="92.0" width="24.0" height="38.0" rx="2"/>
+<text class="bit" x="376" y="117" text-anchor="middle">0</text>
+<rect class="bit0" x="388.0" y="92.0" width="24.0" height="38.0" rx="2"/>
+<text class="bit" x="400" y="117" text-anchor="middle">0</text>
+<rect class="bit0" x="412.0" y="92.0" width="24.0" height="38.0" rx="2"/>
+<text class="bit" x="424" y="117" text-anchor="middle">0</text>
+<rect class="bit0" x="448.0" y="92.0" width="24.0" height="38.0" rx="2"/>
+<text class="bit" x="460" y="117" text-anchor="middle">0</text>
+<rect class="bit1" x="472.0" y="92.0" width="24.0" height="38.0" rx="2"/>
+<text class="bit" x="484" y="117" text-anchor="middle">1</text>
+<rect class="bit1" x="496.0" y="92.0" width="24.0" height="38.0" rx="2"/>
+<text class="bit" x="508" y="117" text-anchor="middle">1</text>
+<rect class="bit1" x="520.0" y="92.0" width="24.0" height="38.0" rx="2"/>
+<text class="bit" x="532" y="117" text-anchor="middle">1</text>
+<rect class="bit0" x="544.0" y="92.0" width="24.0" height="38.0" rx="2"/>
+<text class="bit" x="556" y="117" text-anchor="middle">0</text>
+<rect class="bit0" x="568.0" y="92.0" width="24.0" height="38.0" rx="2"/>
+<text class="bit" x="580" y="117" text-anchor="middle">0</text>
+<rect class="bit0" x="592.0" y="92.0" width="24.0" height="38.0" rx="2"/>
+<text class="bit" x="604" y="117" text-anchor="middle">0</text>
+<rect class="bit1" x="616.0" y="92.0" width="24.0" height="38.0" rx="2"/>
+<text class="bit" x="628" y="117" text-anchor="middle">1</text>
+<rect class="bit0" x="652.0" y="92.0" width="24.0" height="38.0" rx="2"/>
+<text class="bit" x="664" y="117" text-anchor="middle">0</text>
+<rect class="bit1" x="676.0" y="92.0" width="24.0" height="38.0" rx="2"/>
+<text class="bit" x="688" y="117" text-anchor="middle">1</text>
+<rect class="bit0" x="700.0" y="92.0" width="24.0" height="38.0" rx="2"/>
+<text class="bit" x="712" y="117" text-anchor="middle">0</text>
+<rect class="bit0" x="724.0" y="92.0" width="24.0" height="38.0" rx="2"/>
+<text class="bit" x="736" y="117" text-anchor="middle">0</text>
+<rect class="bit1" x="748.0" y="92.0" width="24.0" height="38.0" rx="2"/>
+<text class="bit" x="760" y="117" text-anchor="middle">1</text>
+<rect class="bit1" x="772.0" y="92.0" width="24.0" height="38.0" rx="2"/>
+<text class="bit" x="784" y="117" text-anchor="middle">1</text>
+<rect class="bit0" x="796.0" y="92.0" width="24.0" height="38.0" rx="2"/>
+<text class="bit" x="808" y="117" text-anchor="middle">0</text>
+<rect class="bit1" x="820.0" y="92.0" width="24.0" height="38.0" rx="2"/>
+<text class="bit" x="832" y="117" text-anchor="middle">1</text>
+<text class="mono" x="40" y="154" text-anchor="start">ip    11001011.00000000.01110001.01001101</text>
+<text class="mono" x="40" y="177" text-anchor="start">mask  11111111.11111111.11111111.11000000</text>
+<text class="mono" x="40" y="200" text-anchor="start">AND   11001011.00000000.01110001.01000000</text>
+<text class="lbl" x="40" y="226" text-anchor="start">network 203.0.113.64/26 · broadcast 203.0.113.127</text>
+<line class="rule" x1="40.0" y1="246.0" x2="872.0" y2="246.0"/>
+<text class="small" x="872" y="266" text-anchor="end">64 ที่อยู่ = 2^6</text>
+<rect class="segR" x="48.0" y="292.0" width="12.9" height="26.0" rx="1"/>
+<rect class="segB" x="60.9" y="292.0" width="12.9" height="26.0" rx="1"/>
+<rect class="segB" x="73.8" y="292.0" width="12.9" height="26.0" rx="1"/>
+<rect class="segB" x="86.6" y="292.0" width="12.9" height="26.0" rx="1"/>
+<rect class="segB" x="99.5" y="292.0" width="12.9" height="26.0" rx="1"/>
+<rect class="segB" x="112.4" y="292.0" width="12.9" height="26.0" rx="1"/>
+<rect class="segB" x="125.2" y="292.0" width="12.9" height="26.0" rx="1"/>
+<rect class="segB" x="138.1" y="292.0" width="12.9" height="26.0" rx="1"/>
+<rect class="segB" x="151.0" y="292.0" width="12.9" height="26.0" rx="1"/>
+<rect class="segB" x="163.9" y="292.0" width="12.9" height="26.0" rx="1"/>
+<rect class="segB" x="176.8" y="292.0" width="12.9" height="26.0" rx="1"/>
+<rect class="segB" x="189.6" y="292.0" width="12.9" height="26.0" rx="1"/>
+<rect class="segB" x="202.5" y="292.0" width="12.9" height="26.0" rx="1"/>
+<rect class="segB" x="215.4" y="292.0" width="12.9" height="26.0" rx="1"/>
+<rect class="segB" x="228.2" y="292.0" width="12.9" height="26.0" rx="1"/>
+<rect class="segB" x="241.1" y="292.0" width="12.9" height="26.0" rx="1"/>
+<rect class="segB" x="254.0" y="292.0" width="12.9" height="26.0" rx="1"/>
+<rect class="segB" x="266.9" y="292.0" width="12.9" height="26.0" rx="1"/>
+<rect class="segB" x="279.8" y="292.0" width="12.9" height="26.0" rx="1"/>
+<rect class="segB" x="292.6" y="292.0" width="12.9" height="26.0" rx="1"/>
+<rect class="segB" x="305.5" y="292.0" width="12.9" height="26.0" rx="1"/>
+<rect class="segB" x="318.4" y="292.0" width="12.9" height="26.0" rx="1"/>
+<rect class="segB" x="331.2" y="292.0" width="12.9" height="26.0" rx="1"/>
+<rect class="segB" x="344.1" y="292.0" width="12.9" height="26.0" rx="1"/>
+<rect class="segB" x="357.0" y="292.0" width="12.9" height="26.0" rx="1"/>
+<rect class="segB" x="369.9" y="292.0" width="12.9" height="26.0" rx="1"/>
+<rect class="segB" x="382.8" y="292.0" width="12.9" height="26.0" rx="1"/>
+<rect class="segB" x="395.6" y="292.0" width="12.9" height="26.0" rx="1"/>
+<rect class="segB" x="408.5" y="292.0" width="12.9" height="26.0" rx="1"/>
+<rect class="segB" x="421.4" y="292.0" width="12.9" height="26.0" rx="1"/>
+<rect class="segB" x="434.2" y="292.0" width="12.9" height="26.0" rx="1"/>
+<rect class="segB" x="447.1" y="292.0" width="12.9" height="26.0" rx="1"/>
+<rect class="segB" x="460.0" y="292.0" width="12.9" height="26.0" rx="1"/>
+<rect class="segB" x="472.9" y="292.0" width="12.9" height="26.0" rx="1"/>
+<rect class="segB" x="485.8" y="292.0" width="12.9" height="26.0" rx="1"/>
+<rect class="segB" x="498.6" y="292.0" width="12.9" height="26.0" rx="1"/>
+<rect class="segB" x="511.5" y="292.0" width="12.9" height="26.0" rx="1"/>
+<rect class="segB" x="524.4" y="292.0" width="12.9" height="26.0" rx="1"/>
+<rect class="segB" x="537.2" y="292.0" width="12.9" height="26.0" rx="1"/>
+<rect class="segB" x="550.1" y="292.0" width="12.9" height="26.0" rx="1"/>
+<rect class="segB" x="563.0" y="292.0" width="12.9" height="26.0" rx="1"/>
+<rect class="segB" x="575.9" y="292.0" width="12.9" height="26.0" rx="1"/>
+<rect class="segB" x="588.8" y="292.0" width="12.9" height="26.0" rx="1"/>
+<rect class="segB" x="601.6" y="292.0" width="12.9" height="26.0" rx="1"/>
+<rect class="segB" x="614.5" y="292.0" width="12.9" height="26.0" rx="1"/>
+<rect class="segB" x="627.4" y="292.0" width="12.9" height="26.0" rx="1"/>
+<rect class="segB" x="640.2" y="292.0" width="12.9" height="26.0" rx="1"/>
+<rect class="segB" x="653.1" y="292.0" width="12.9" height="26.0" rx="1"/>
+<rect class="segB" x="666.0" y="292.0" width="12.9" height="26.0" rx="1"/>
+<rect class="segB" x="678.9" y="292.0" width="12.9" height="26.0" rx="1"/>
+<rect class="segB" x="691.8" y="292.0" width="12.9" height="26.0" rx="1"/>
+<rect class="segB" x="704.6" y="292.0" width="12.9" height="26.0" rx="1"/>
+<rect class="segB" x="717.5" y="292.0" width="12.9" height="26.0" rx="1"/>
+<rect class="segB" x="730.4" y="292.0" width="12.9" height="26.0" rx="1"/>
+<rect class="segB" x="743.2" y="292.0" width="12.9" height="26.0" rx="1"/>
+<rect class="segB" x="756.1" y="292.0" width="12.9" height="26.0" rx="1"/>
+<rect class="segB" x="769.0" y="292.0" width="12.9" height="26.0" rx="1"/>
+<rect class="segB" x="781.9" y="292.0" width="12.9" height="26.0" rx="1"/>
+<rect class="segB" x="794.8" y="292.0" width="12.9" height="26.0" rx="1"/>
+<rect class="segB" x="807.6" y="292.0" width="12.9" height="26.0" rx="1"/>
+<rect class="segB" x="820.5" y="292.0" width="12.9" height="26.0" rx="1"/>
+<rect class="segB" x="833.4" y="292.0" width="12.9" height="26.0" rx="1"/>
+<rect class="segB" x="846.2" y="292.0" width="12.9" height="26.0" rx="1"/>
+<rect class="segR" x="859.1" y="292.0" width="12.9" height="26.0" rx="1"/>
+<text class="small" x="48" y="282" text-anchor="start">network 203.0.113.64</text>
+<text class="small" x="872" y="282" text-anchor="end">broadcast 203.0.113.127</text>
+<text class="small" x="48" y="348" text-anchor="start">first host 203.0.113.65</text>
+<text class="small" x="872" y="348" text-anchor="end">last host 203.0.113.126</text>
+<rect class="boxy" x="40.0" y="372.0" width="840.0" height="64.0" rx="8"/>
+<text class="txt" x="58" y="396" text-anchor="start">62 ช่องตรงกลางใช้เป็น host ได้ — 64 − 2 · แดง = network/broadcast (ใช้ตั้งเป็นที่อยู่เครื่องไม่ได้)</text>
+<text class="small" x="58" y="420" text-anchor="start">คำตอบทั้งห้าจึงอ่านออกจากบิตชุดเดียว: network, broadcast, first, last, 62 host</text>
+</svg>
