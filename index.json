@@ -1,5 +1,19 @@
 [
   {
+    "slug": "2026-11-20-network-10-subnetting-hands-on",
+    "title": "Subnetting ลงมือทำ: ห้าเลขที่ต้องตอบได้, VLSM และ subnet calculator ใน Go (ตอนที่ 10)",
+    "date": "2026-11-20",
+    "tags": [
+      "network",
+      "ipv4",
+      "subnetting",
+      "vlsm",
+      "cidr",
+      "golang"
+    ],
+    "description": "จาก IP กับ prefix หา network/broadcast/first/last ได้ในสิบวินาที แบ่ง block เป็น subnet ด้วยการยืมบิต จัดสรรแบบ VLSM เมื่อแต่ละวงต้องการจำนวนเครื่องไม่เท่ากัน และเขียน subnet calculator ใน Go ที่ตรวจแผนของตัวเองได้ — พร้อมกับดักที่ทำให้แผนทับกันแบบไม่มีใครเห็น"
+  },
+  {
     "slug": "2026-11-19-network-09-ip-address-cidr",
     "title": "IP address และ CIDR: 32 บิตที่แบ่งโลกออกเป็นเครือข่าย (ตอนที่ 09)",
     "date": "2026-11-19",
