@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 470" width="920" height="470" role="img" aria-label="flow control: ผู้รับมีบัฟเฟอร์สาม slot เมื่อเต็มจะประกาศ window 0 ผู้ส่งหยุดและส่ง zero-window probe">
+<style>
+text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 12.5px; fill: #1a1a1a; }
+.hdr { font-weight: 700; font-size: 17.5px; }
+.sub { fill: #57606a; font-size: 12.5px; }
+.ptitle { font-weight: 700; font-size: 14px; }
+.txt { font-size: 12.5px; }
+.lbl { fill: #57606a; font-size: 11px; }
+.small { fill: #57606a; font-size: 10.5px; }
+.big { font-weight: 700; font-size: 19px; fill: #0550ae; }
+.mono { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 11.5px; fill: #0a3069; }
+.monom { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12.5px; fill: #0a3069; }
+.monos { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 10.5px; fill: #57606a; }
+.onbar { font-size: 12px; font-weight: 600; }
+.onbar2 { font-size: 10.5px; fill: #57606a; }
+.boxg { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.3; }
+.boxb { fill: #eef4ff; stroke: #0969da; stroke-width: 1.5; }
+.boxy { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.4; }
+.boxi { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.4; }
+.boxr { fill: #fdeff0; stroke: #b62324; stroke-width: 1.4; }
+.cell { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.1; }
+.cellA { fill: #dbeafe; stroke: #0969da; stroke-width: 1.2; }
+.cellR { fill: #fdeff0; stroke: #b62324; stroke-width: 1.6; }
+.slot { fill: #e6f4ea; stroke: #1a7f37; stroke-width: 1.2; }
+.slot0 { fill: #fdeff0; stroke: #b62324; stroke-width: 1.3; }
+.wire { stroke: #8c959f; stroke-width: 1.8; fill: none; }
+.wire2 { stroke: #b6bfc8; stroke-width: 1.2; fill: none; stroke-dasharray: 5 5; }
+.head { fill: #8c959f; }
+.headr { fill: #b62324; }
+.rule { stroke: #d0d7de; stroke-width: 1.2; }
+.life { stroke: #8c959f; stroke-width: 1.4; stroke-dasharray: 6 5; fill: none; }
+</style>
+<rect x="0" y="0" width="920" height="470" fill="#ffffff"/>
+<text class="hdr" x="40" y="34" text-anchor="start">flow control: window คือเพดานของ segment ที่ค้างได้</text>
+<text class="sub" x="40" y="58" text-anchor="start">ผู้รับมีบัฟเฟอร์ 3 segment · แอปผู้รับอ่าน 1 segment ทุก 2 tick </text>
+<text class="sub" x="40" y="76" text-anchor="start">probe เว้นอย่างน้อย 3 tick เมื่อ window เป็น 0 (ในตารางเกิดที่ tick 3 และ 7)</text>
+<rect class="boxb" x="40.0" y="90.0" width="300.0" height="96.0" rx="8"/>
+<text class="ptitle" x="60" y="116" text-anchor="start">ผู้ส่ง (sender)</text>
+<text class="small" x="60" y="140" text-anchor="start">ส่งได้เมื่อ inflight &lt; rwnd</text>
+<text class="monos" x="60" y="160" text-anchor="start">windowOpen = (win − buffer) − inflight</text>
+<text class="small" x="60" y="178" text-anchor="start">win = บัฟเฟอร์ · rwnd = win − buffer</text>
+<rect class="boxi" x="580.0" y="90.0" width="300.0" height="96.0" rx="8"/>
+<text class="ptitle" x="600" y="116" text-anchor="start">ผู้รับ (receiver)</text>
+<text class="small" x="600" y="140" text-anchor="start">บัฟเฟอร์ 3 slot</text>
+<text class="small" x="600" y="160" text-anchor="start">แอปผู้รับอ่านช้ากว่าที่ข้อมูลมา</text>
+<line class="wire" x1="348.0" y1="138.0" x2="572.0" y2="138.0"/>
+<polygon class="head" points="572.0,138.0 563.7,141.5 563.7,134.5"/>
+<text class="lbl" x="460" y="130" text-anchor="middle">ส่งไม่เกินที่ประกาศ</text>
+<text class="monos" x="460" y="156" text-anchor="middle">inflight</text>
+<text class="lbl" x="40" y="208" text-anchor="start">ลำดับที่เกิดขึ้นจริง (จากตารางใน out/06_flow.txt)</text>
+<rect class="boxb" x="40.0" y="222.0" width="200.0" height="66.0" rx="7"/>
+<text class="onbar" x="140" y="241" text-anchor="middle">tick 1</text>
+<text class="monos" x="140" y="259" text-anchor="middle">ส่ง 3 segment</text>
+<text class="monos" x="140" y="277" text-anchor="middle">inflight 3 · rwnd 3</text>
+<rect class="boxy" x="253.0" y="222.0" width="200.0" height="66.0" rx="7"/>
+<text class="onbar" x="353" y="241" text-anchor="middle">tick 2</text>
+<text class="monos" x="353" y="259" text-anchor="middle">บัฟเฟอร์เต็ม</text>
+<text class="monos" x="353" y="277" text-anchor="middle">rwnd 0 · ผู้ส่งหยุด</text>
+<rect class="boxr" x="466.0" y="222.0" width="200.0" height="66.0" rx="7"/>
+<text class="onbar" x="566" y="241" text-anchor="middle">tick 3</text>
+<text class="monos" x="566" y="259" text-anchor="middle">zero-window probe</text>
+<text class="monos" x="566" y="277" text-anchor="middle">1 ไบต์ (ไม่นับใน window)</text>
+<rect class="boxi" x="679.0" y="222.0" width="200.0" height="66.0" rx="7"/>
+<text class="onbar" x="779" y="241" text-anchor="middle">tick 4</text>
+<text class="monos" x="779" y="259" text-anchor="middle">แอปอ่านออก 1</text>
+<text class="monos" x="779" y="277" text-anchor="middle">rwnd 1 · ส่งต่อได้</text>
+<rect class="boxg" x="40.0" y="316.0" width="840.0" height="60.0" rx="8"/>
+<text class="mono" x="58" y="342" text-anchor="start">inflight_max 3 · zero_window_ticks 6 · persist_probes 2 · done_tick 11</text>
+<text class="small" x="58" y="364" text-anchor="start">window เป็น 0 ไม่ได้แปลว่าจบ connection — ผู้ส่งแค่ต้องรอจังหวะที่ผู้รับอ่านออก</text>
+<text class="txt" x="40" y="406" text-anchor="start">ถ้าบัฟเฟอร์เล็กลง (window 2) จำนวน tick จะมากขึ้น แต่ไบต์ที่ถึงปลายทางยังครบเท่าเดิม</text>
+<text class="small" x="40" y="432" text-anchor="start">flow control = ผู้รับปกป้องตัวเอง · congestion control = เครือข่ายปกป้องตัวเอง (ตอนที่ 29)</text>
+</svg>

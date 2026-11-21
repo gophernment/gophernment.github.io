@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 630" width="920" height="630" role="img" aria-label="handshake สามทางและการปิด connection: client SYN seq 1000, server SYN-ACK seq 2000 ack 1001, ACK 2001 แล้วทั้งสองฝั่ง ESTABLISHED">
+<style>
+text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 12.5px; fill: #1a1a1a; }
+.hdr { font-weight: 700; font-size: 17.5px; }
+.sub { fill: #57606a; font-size: 12.5px; }
+.ptitle { font-weight: 700; font-size: 14px; }
+.txt { font-size: 12.5px; }
+.lbl { fill: #57606a; font-size: 11px; }
+.small { fill: #57606a; font-size: 10.5px; }
+.big { font-weight: 700; font-size: 19px; fill: #0550ae; }
+.mono { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 11.5px; fill: #0a3069; }
+.monom { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12.5px; fill: #0a3069; }
+.monos { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 10.5px; fill: #57606a; }
+.onbar { font-size: 12px; font-weight: 600; }
+.onbar2 { font-size: 10.5px; fill: #57606a; }
+.boxg { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.3; }
+.boxb { fill: #eef4ff; stroke: #0969da; stroke-width: 1.5; }
+.boxy { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.4; }
+.boxi { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.4; }
+.boxr { fill: #fdeff0; stroke: #b62324; stroke-width: 1.4; }
+.cell { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.1; }
+.cellA { fill: #dbeafe; stroke: #0969da; stroke-width: 1.2; }
+.cellR { fill: #fdeff0; stroke: #b62324; stroke-width: 1.6; }
+.slot { fill: #e6f4ea; stroke: #1a7f37; stroke-width: 1.2; }
+.slot0 { fill: #fdeff0; stroke: #b62324; stroke-width: 1.3; }
+.wire { stroke: #8c959f; stroke-width: 1.8; fill: none; }
+.wire2 { stroke: #b6bfc8; stroke-width: 1.2; fill: none; stroke-dasharray: 5 5; }
+.head { fill: #8c959f; }
+.headr { fill: #b62324; }
+.rule { stroke: #d0d7de; stroke-width: 1.2; }
+.life { stroke: #8c959f; stroke-width: 1.4; stroke-dasharray: 6 5; fill: none; }
+</style>
+<rect x="0" y="0" width="920" height="630" fill="#ffffff"/>
+<text class="hdr" x="40" y="34" text-anchor="start">handshake สามทาง — และการปิดที่ client ปิดก่อน</text>
+<text class="sub" x="40" y="58" text-anchor="start">ตัวเลข seq/ACK จาก out/01_handshake.txt · state และ accept_queue จาก out/02_states.txt (backlog 4096)</text>
+<rect class="boxb" x="70.0" y="70.0" width="280.0" height="34.0" rx="6"/>
+<text class="monom" x="210" y="93" text-anchor="middle">client  127.0.0.1:&lt;ephemeral&gt;</text>
+<rect class="boxi" x="570.0" y="70.0" width="280.0" height="34.0" rx="6"/>
+<text class="monom" x="730" y="93" text-anchor="middle">server  127.0.0.1:47811</text>
+<line class="life" x1="210.0" y1="104.0" x2="210.0" y2="500.0"/>
+<line class="life" x1="730.0" y1="104.0" x2="730.0" y2="500.0"/>
+<line class="wire" x1="210.0" y1="140.0" x2="724.0" y2="140.0"/>
+<polygon class="head" points="724.0,140.0 715.7,143.5 715.7,136.5"/>
+<text class="mono" x="470" y="133" text-anchor="middle">SYN   seq=1000</text>
+<text class="small" x="202" y="148" text-anchor="end">SYN-SENT</text>
+<line class="wire" x1="730.0" y1="190.0" x2="216.0" y2="190.0"/>
+<polygon class="head" points="216.0,190.0 224.3,186.5 224.3,193.5"/>
+<text class="mono" x="470" y="183" text-anchor="middle">SYN+ACK   seq=2000  ack=1001</text>
+<text class="small" x="738" y="198" text-anchor="start">SYN-RECEIVED</text>
+<line class="wire" x1="210.0" y1="240.0" x2="724.0" y2="240.0"/>
+<polygon class="head" points="724.0,240.0 715.7,243.5 715.7,236.5"/>
+<text class="mono" x="470" y="233" text-anchor="middle">ACK   seq=1001  ack=2001</text>
+<text class="lbl" x="202" y="248" text-anchor="end">ESTABLISHED</text>
+<text class="lbl" x="738" y="248" text-anchor="start">ESTABLISHED</text>
+<rect class="boxy" x="120.0" y="262.0" width="680.0" height="40.0" rx="7"/>
+<text class="txt" x="460" y="287" text-anchor="middle">ทั้งสองฝั่งเป็น ESTABLISHED ก่อนแอปเรียก Accept — accept_queue = 1</text>
+<line class="rule" x1="60.0" y1="326.0" x2="860.0" y2="326.0"/>
+<rect x="34.0" y="334.0" width="509.4" height="26.0" fill="#ffffff"/>
+<text class="ptitle" x="40" y="350" text-anchor="start">ปิด connection: client ปิดก่อน จึงเป็นฝ่ายที่ตกใน TIME-WAIT</text>
+<line class="wire" x1="210.0" y1="378.0" x2="724.0" y2="378.0"/>
+<polygon class="head" points="724.0,378.0 715.7,381.5 715.7,374.5"/>
+<text class="mono" x="470" y="371" text-anchor="middle">FIN   seq=1001</text>
+<text class="small" x="202" y="388" text-anchor="end">FIN-WAIT-1</text>
+<text class="small" x="738" y="388" text-anchor="start">CLOSE-WAIT</text>
+<line class="wire" x1="730.0" y1="412.0" x2="216.0" y2="412.0"/>
+<polygon class="head" points="216.0,412.0 224.3,408.5 224.3,415.5"/>
+<text class="mono" x="470" y="405" text-anchor="middle">ACK   ack=1002</text>
+<text class="small" x="202" y="422" text-anchor="end">FIN-WAIT-2</text>
+<line class="wire" x1="730.0" y1="446.0" x2="216.0" y2="446.0"/>
+<polygon class="head" points="216.0,446.0 224.3,442.5 224.3,449.5"/>
+<text class="mono" x="470" y="439" text-anchor="middle">FIN   seq=2001</text>
+<text class="small" x="738" y="456" text-anchor="start">LAST-ACK</text>
+<line class="wire" x1="210.0" y1="480.0" x2="724.0" y2="480.0"/>
+<polygon class="head" points="724.0,480.0 715.7,483.5 715.7,476.5"/>
+<text class="mono" x="470" y="473" text-anchor="middle">ACK   ack=2002</text>
+<text class="lbl" x="202" y="490" text-anchor="end">TIME-WAIT</text>
+<text class="lbl" x="738" y="490" text-anchor="start">CLOSED</text>
+<rect class="boxg" x="40.0" y="520.0" width="840.0" height="84.0" rx="8"/>
+<text class="txt" x="58" y="546" text-anchor="start">TIME-WAIT อยู่ฝั่งที่ปิดก่อน: กัน ACK สุดท้ายหาย และกัน segment เก่าปนเข้า connection ใหม่</text>
+<text class="txt" x="58" y="570" text-anchor="start">FIN กับ ACK แยกกันคนละข้อความ — จึงเห็น FIN-WAIT-2 ค้างอยู่ก่อน TIME-WAIT</text>
+<text class="small" x="58" y="592" text-anchor="start">ss -t ไม่แสดง TIME-WAIT (ต้องใส่ -a) · เวลารอ = 2 × MSL ไม่ผูกกับ tcp_fin_timeout</text>
+</svg>
