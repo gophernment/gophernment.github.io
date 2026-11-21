@@ -1,5 +1,18 @@
 [
   {
+    "slug": "2026-11-21-network-11-tcp-reliability",
+    "title": "TCP: handshake สามทาง, sequence ที่กันของหาย และ window ที่กันผู้รับจม (ตอนที่ 11)",
+    "date": "2026-11-21",
+    "tags": [
+      "network",
+      "tcp",
+      "reliability",
+      "flow-control",
+      "golang"
+    ],
+    "description": "TCP ไม่ได้สัญญาว่าจะเร็ว แต่สัญญาว่าข้อมูลจะครบและเรียงถูก หรือบอกคุณตรง ๆ ว่าล้มเหลว บทนี้แกะสี่กลไกที่ทำให้มันทำอย่างนั้นได้ — handshake สามทาง, sequence/ACK ระดับไบต์, retransmission สองแบบ (fast retransmit กับ RTO) และ flow control window — พร้อมเขียน TCP client/server ใน Go แล้วดู state จริงด้วย ss บน loopback"
+  },
+  {
     "slug": "2026-11-20-network-10-subnetting-hands-on",
     "title": "Subnetting ลงมือทำ: ห้าเลขที่ต้องตอบได้, VLSM และ subnet calculator ใน Go (ตอนที่ 10)",
     "date": "2026-11-20",
