@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 470" width="920" height="470" role="img" aria-label="เลือก TCP เมื่อข้อมูลต้องครบ เลือก UDP เมื่อข้อมูลที่มาสายหมดค่า พร้อมตัวอย่าง DNS เกม VoIP และ streaming">
+<style>
+text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 12.5px; fill: #1a1a1a; }
+.hdr { font-weight: 700; font-size: 17.5px; }
+.sub { fill: #57606a; font-size: 12.5px; }
+.ptitle { font-weight: 700; font-size: 14px; }
+.txt { font-size: 12.5px; }
+.lbl { fill: #57606a; font-size: 11px; }
+.small { fill: #57606a; font-size: 10.5px; }
+.big { font-weight: 700; font-size: 19px; fill: #0550ae; }
+.mono { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 11.5px; fill: #0a3069; }
+.monom { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12.5px; fill: #0a3069; }
+.monos { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 10.5px; fill: #57606a; }
+.onbar { font-size: 12px; font-weight: 600; }
+.onbar2 { font-size: 10.5px; fill: #57606a; }
+.boxg { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.3; }
+.boxb { fill: #eef4ff; stroke: #0969da; stroke-width: 1.5; }
+.boxy { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.4; }
+.boxi { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.4; }
+.boxr { fill: #fdeff0; stroke: #b62324; stroke-width: 1.4; }
+.cell { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.1; }
+.cellA { fill: #dbeafe; stroke: #0969da; stroke-width: 1.2; }
+.cellR { fill: #fdeff0; stroke: #b62324; stroke-width: 1.6; }
+.wire { stroke: #8c959f; stroke-width: 1.8; fill: none; }
+.wire2 { stroke: #b6bfc8; stroke-width: 1.2; fill: none; stroke-dasharray: 5 5; }
+.head { fill: #8c959f; }
+.rule { stroke: #d0d7de; stroke-width: 1.2; }
+</style>
+<rect x="0" y="0" width="920" height="470" fill="#ffffff"/>
+<text class="hdr" x="40" y="34" text-anchor="start">จะเลือก UDP เมื่อใด: ถามว่าข้อมูลที่มาสายยังมีค่าไหม</text>
+<text class="sub" x="40" y="58" text-anchor="start">สองฝั่งของคำถามเดียวกัน — และสิ่งที่ต้องเติมเองเมื่อเลือกฝั่งขวา</text>
+<rect class="boxy" x="40.0" y="78.0" width="400.0" height="236.0" rx="8"/>
+<text class="ptitle" x="58" y="104" text-anchor="start">TCP — ข้อมูลต้องครบ</text>
+<text class="txt" x="58" y="132" text-anchor="start">• HTTP API · ไฟล์ · การชำระเงิน</text>
+<text class="txt" x="58" y="158" text-anchor="start">• ลำดับสำคัญกว่าความหน่วง</text>
+<text class="txt" x="58" y="184" text-anchor="start">• มี congestion control ใน kernel</text>
+<text class="txt" x="58" y="210" text-anchor="start">• ส่งซ้ำให้เอง ไม่ต้องเขียน</text>
+<rect class="boxi" x="480.0" y="78.0" width="400.0" height="236.0" rx="8"/>
+<text class="ptitle" x="498" y="104" text-anchor="start">UDP — ข้อมูลมีอายุ</text>
+<text class="txt" x="498" y="132" text-anchor="start">• DNS · เกม · VoIP · streaming</text>
+<text class="txt" x="498" y="158" text-anchor="start">• ใบที่มาสายหมดค่าแล้ว</text>
+<text class="txt" x="498" y="184" text-anchor="start">• DNS 1 RTT (TCP 2 RTT)</text>
+<text class="txt" x="498" y="210" text-anchor="start">• งบเสียงราว 150 ms · DNS 512 ไบต์</text>
+<line class="wire" x1="452.0" y1="196.0" x2="472.0" y2="196.0"/>
+<polygon class="head" points="472.0,196.0 463.7,199.5 463.7,192.5"/>
+<rect class="boxg" x="40.0" y="330.0" width="840.0" height="116.0" rx="8"/>
+<text class="txt" x="58" y="356" text-anchor="start">ถ้าเลือก UDP ต้องเติมเอง: seq · deadline · retry · dedupe · congestion control</text>
+<text class="txt" x="58" y="380" text-anchor="start">ไม่มีข้อไหนที่ UDP ทำให้ — ทั้งหมดเป็นงานของแอปที่เลือกมัน</text>
+<text class="small" x="58" y="404" text-anchor="start">ทางออกระดับโปรโตคอล: QUIC (RFC 9000) ยกความน่าเชื่อถือขึ้นมาอยู่บน UDP</text>
+<text class="small" x="58" y="426" text-anchor="start">เพราะ middlebox ปล่อย UDP ผ่าน แต่บล็อกโปรโตคอลใหม่ที่ชั้น IP</text>
+</svg>

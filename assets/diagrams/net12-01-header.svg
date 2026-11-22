@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 486" width="920" height="486" role="img" aria-label="UDP header แปดไบต์: source port, destination port, length, checksum เทียบกับ TCP header ขั้นต่ำยี่สิบไบต์">
+<style>
+text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 12.5px; fill: #1a1a1a; }
+.hdr { font-weight: 700; font-size: 17.5px; }
+.sub { fill: #57606a; font-size: 12.5px; }
+.ptitle { font-weight: 700; font-size: 14px; }
+.txt { font-size: 12.5px; }
+.lbl { fill: #57606a; font-size: 11px; }
+.small { fill: #57606a; font-size: 10.5px; }
+.big { font-weight: 700; font-size: 19px; fill: #0550ae; }
+.mono { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 11.5px; fill: #0a3069; }
+.monom { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12.5px; fill: #0a3069; }
+.monos { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 10.5px; fill: #57606a; }
+.onbar { font-size: 12px; font-weight: 600; }
+.onbar2 { font-size: 10.5px; fill: #57606a; }
+.boxg { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.3; }
+.boxb { fill: #eef4ff; stroke: #0969da; stroke-width: 1.5; }
+.boxy { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.4; }
+.boxi { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.4; }
+.boxr { fill: #fdeff0; stroke: #b62324; stroke-width: 1.4; }
+.cell { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.1; }
+.cellA { fill: #dbeafe; stroke: #0969da; stroke-width: 1.2; }
+.cellR { fill: #fdeff0; stroke: #b62324; stroke-width: 1.6; }
+.wire { stroke: #8c959f; stroke-width: 1.8; fill: none; }
+.wire2 { stroke: #b6bfc8; stroke-width: 1.2; fill: none; stroke-dasharray: 5 5; }
+.head { fill: #8c959f; }
+.rule { stroke: #d0d7de; stroke-width: 1.2; }
+</style>
+<rect x="0" y="0" width="920" height="486" fill="#ffffff"/>
+<text class="hdr" x="40" y="34" text-anchor="start">UDP header: 8 ไบต์ สี่ช่อง ไม่มี options</text>
+<text class="sub" x="40" y="58" text-anchor="start">ตัวเลขจาก out/01_header.txt · TCP header ขั้นต่ำ 20 ไบต์ · payload สูงสุด 65507 ไบต์ (IPv4)</text>
+<rect class="cellA" x="50.0" y="84.0" width="195.0" height="62.0" rx="6"/>
+<text class="mono" x="148" y="108" text-anchor="middle">source_port</text>
+<text class="small" x="148" y="130" text-anchor="middle">2 ไบต์</text>
+<text class="small" x="148" y="166" text-anchor="middle">ไม่ใส่ก็ได้ (ค่า 0)</text>
+<text class="small" x="148" y="184" text-anchor="middle">ใช้เป็นที่อยู่ตอบกลับ</text>
+<rect class="cellA" x="255.0" y="84.0" width="195.0" height="62.0" rx="6"/>
+<text class="mono" x="352" y="108" text-anchor="middle">destination_port</text>
+<text class="small" x="352" y="130" text-anchor="middle">2 ไบต์</text>
+<text class="small" x="352" y="166" text-anchor="middle">ช่องเดียวที่เลือก</text>
+<text class="small" x="352" y="184" text-anchor="middle">โปรเซสปลายทาง</text>
+<rect class="cellA" x="460.0" y="84.0" width="195.0" height="62.0" rx="6"/>
+<text class="mono" x="558" y="108" text-anchor="middle">length</text>
+<text class="small" x="558" y="130" text-anchor="middle">2 ไบต์</text>
+<text class="small" x="558" y="166" text-anchor="middle">นับรวม header</text>
+<text class="small" x="558" y="184" text-anchor="middle">ค่าต่ำสุด = 8</text>
+<rect class="cellA" x="665.0" y="84.0" width="195.0" height="62.0" rx="6"/>
+<text class="mono" x="762" y="108" text-anchor="middle">checksum</text>
+<text class="small" x="762" y="130" text-anchor="middle">2 ไบต์</text>
+<text class="small" x="762" y="166" text-anchor="middle">ปิดได้ใน IPv4</text>
+<text class="small" x="762" y="184" text-anchor="middle">บังคับใน IPv6</text>
+<text class="lbl" x="50" y="214" text-anchor="start">ไบต์ที่ 0</text>
+<text class="lbl" x="870" y="214" text-anchor="end">ไบต์ที่ 8 — แล้วข้อมูลเริ่ม</text>
+<line class="rule" x1="40.0" y1="232.0" x2="880.0" y2="232.0"/>
+<text class="lbl" x="40" y="256" text-anchor="start">ขนาด header เทียบกัน (มาตราส่วนเดียวกัน)</text>
+<text class="txt" x="132" y="291" text-anchor="end">UDP</text>
+<rect class="boxi" x="140.0" y="272.0" width="192.0" height="26.0" rx="4"/>
+<text class="monos" x="236" y="290" text-anchor="middle">8 ไบต์</text>
+<text class="txt" x="132" y="329" text-anchor="end">TCP ขั้นต่ำ</text>
+<rect class="boxy" x="140.0" y="310.0" width="480.0" height="26.0" rx="4"/>
+<text class="monos" x="380" y="328" text-anchor="middle">20 ไบต์</text>
+<text class="small" x="730" y="289" text-anchor="start">UDP ประหยัด header</text>
+<text class="small" x="730" y="305" text-anchor="start">12 ไบต์ต่อ datagram</text>
+<text class="small" x="730" y="327" text-anchor="start">TCP มี options</text>
+<text class="small" x="730" y="343" text-anchor="start">ตามมาอีกได้</text>
+<rect class="boxg" x="40.0" y="356.0" width="840.0" height="112.0" rx="8"/>
+<text class="txt" x="58" y="380" text-anchor="start">เพดาน payload: 65507 ไบต์ (IPv4) · 65527 ไบต์ (IPv6)</text>
+<text class="txt" x="58" y="404" text-anchor="start">MTU 1500 ไบต์บน Ethernet → ส่งได้ไม่เกิน 1472 ไบต์โดยไม่ต้อง fragmentation</text>
+<text class="small" x="58" y="428" text-anchor="start">length นับรวม header (ต่ำสุด 8) · datagram ขนาดศูนย์จึงถูกต้องตามสเปก</text>
+<text class="small" x="58" y="450" text-anchor="start">checksum ครอบ pseudo-header (IP ต้นทาง/ปลายทาง + โปรโตคอล + ความยาว) ไม่ใช่แค่ข้อมูล</text>
+</svg>
