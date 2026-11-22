@@ -1,5 +1,18 @@
 [
   {
+    "slug": "2026-11-22-network-12-udp-connectionless",
+    "title": "UDP: datagram ที่ไม่มีมือจับ — และงานสี่ชนิดที่มันชนะ TCP (ตอนที่ 12)",
+    "date": "2026-11-22",
+    "tags": [
+      "network",
+      "udp",
+      "datagram",
+      "latency",
+      "golang"
+    ],
+    "description": "TCP มี connection มี handshake และมีการส่งซ้ำ ส่วน UDP ไม่มีอะไรเลยนอกจาก port กับ checksum — บทนี้พาไปดูว่า 'ไม่มี' ทั้งสี่อย่างนั้นแปลว่าอะไรในระดับ kernel เขียน UDP echo server ใน Go วัดของหาย/ของสลับ/การตัดข้อมูลเงียบ ๆ บน loopback และสรุปว่าทำไม DNS, streaming, เกม และ VoIP ถึงเลือกจ่ายราคานี้"
+  },
+  {
     "slug": "2026-11-21-network-11-tcp-reliability",
     "title": "TCP: handshake สามทาง, sequence ที่กันของหาย และ window ที่กันผู้รับจม (ตอนที่ 11)",
     "date": "2026-11-21",
