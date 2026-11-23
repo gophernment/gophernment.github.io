@@ -1,5 +1,18 @@
 [
   {
+    "slug": "2026-11-23-network-13-dns-resolution",
+    "title": "DNS: ชื่อเดียวที่ต้องถามสามชั้น — root, TLD, authoritative และสิ่งที่ dig ไล่ให้เห็น (ตอนที่ 13)",
+    "date": "2026-11-23",
+    "tags": [
+      "network",
+      "dns",
+      "resolver",
+      "dig",
+      "golang"
+    ],
+    "description": "พิมพ์ชื่อโดเมนแล้วเว็บขึ้นได้ ทั้งที่เครื่องคุณไม่เคยรู้จัก IP ของมัน — บทนี้ไล่ DNS ทีละชั้น ปั้น query ด้วยไบต์ดิบใน Go เปิด server สามชั้น (root/TLD/authoritative) ไว้ในเครื่องเดียว แล้วใช้ dig ยืนยันว่าเห็นเหมือนกัน พร้อม record types, TTL กับ cache, NXDOMAIN ที่ไม่เหมือน NODATA และบิต TC ที่โยงกลับไปตอน UDP"
+  },
+  {
     "slug": "2026-11-22-network-12-udp-connectionless",
     "title": "UDP: datagram ที่ไม่มีมือจับ — และงานสี่ชนิดที่มันชนะ TCP (ตอนที่ 12)",
     "date": "2026-11-22",
