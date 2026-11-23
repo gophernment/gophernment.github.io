@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 640" width="940" height="640" role="img" aria-label="ลำดับชั้น DNS สามชั้น: root ชี้ไป TLD, TLD ชี้ไป authoritative, แต่ละชั้นตอบแค่ว่าใครควรถูกถามต่อ พร้อม glue record">
+<style>
+text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 12.5px; fill: #1a1a1a; }
+.hdr { font-weight: 700; font-size: 17.5px; }
+.sub { fill: #57606a; font-size: 12.5px; }
+.ptitle { font-weight: 700; font-size: 14px; }
+.txt { font-size: 12.5px; }
+.lbl { fill: #57606a; font-size: 11px; }
+.small { fill: #57606a; font-size: 10.5px; }
+.big { font-weight: 700; font-size: 19px; fill: #0550ae; }
+.mono { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 11.5px; fill: #0a3069; }
+.monom { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12.5px; fill: #0a3069; }
+.monos { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 10.5px; fill: #57606a; }
+.onbar { font-size: 12px; font-weight: 600; }
+.onbar2 { font-size: 10.5px; fill: #57606a; }
+.boxg { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.3; }
+.boxb { fill: #eef4ff; stroke: #0969da; stroke-width: 1.5; }
+.boxy { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.4; }
+.boxi { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.4; }
+.boxr { fill: #fdeff0; stroke: #b62324; stroke-width: 1.4; }
+.cell { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.1; }
+.cellA { fill: #dbeafe; stroke: #0969da; stroke-width: 1.2; }
+.cellG { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.2; }
+.cellR { fill: #fdeff0; stroke: #b62324; stroke-width: 1.6; }
+.wire { stroke: #8c959f; stroke-width: 1.8; fill: none; }
+.wire2 { stroke: #b6bfc8; stroke-width: 1.2; fill: none; stroke-dasharray: 5 5; }
+.head { fill: #8c959f; }
+.rule { stroke: #d0d7de; stroke-width: 1.2; }
+</style>
+<rect x="0" y="0" width="940" height="640" fill="#ffffff"/>
+<text class="hdr" x="40" y="34" text-anchor="start">DNS: ชื่อหนึ่งชื่อต้องผ่านสามชั้น — แต่ละชั้นรู้แค่ว่าถามใครต่อ</text>
+<text class="sub" x="40" y="58" text-anchor="start">ตัวเลขจาก out/02_walk.txt · out/10_root_ns.txt · จุดเชื่อมคือ glue record ที่โซนพ่อพกมาให้</text>
+<rect class="boxb" x="40.0" y="88.0" width="560.0" height="104.0" rx="8"/>
+<text class="ptitle" x="58" y="114" text-anchor="start">root — จุดเริ่มของทุกคำถาม</text>
+<text class="mono" x="58" y="136" text-anchor="start">โซน .   ·   รู้แค่: test. → ns.test.</text>
+<text class="small" x="58" y="158" text-anchor="start">ถือ NS ของโซนลูก ไม่ถือข้อมูลของโซนลูก</text>
+<text class="small" x="58" y="177" text-anchor="start">มี 13 ชื่อ a–m.root-servers.net (anycast: เครื่องจริงหลายร้อย)</text>
+<line class="wire" x1="96.0" y1="192.0" x2="96.0" y2="222.0"/>
+<polygon class="head" points="96.0,222.0 92.5,213.7 99.5,213.7"/>
+<text class="small" x="116" y="212" text-anchor="start">referral · flags qr · an 0 ns 1 ar 1 · glue 127.0.0.2</text>
+<rect class="boxb" x="40.0" y="226.0" width="560.0" height="104.0" rx="8"/>
+<text class="ptitle" x="58" y="252" text-anchor="start">TLD — ชั้นกลางที่คนมักลืม</text>
+<text class="mono" x="58" y="274" text-anchor="start">โซน test.   ·   รู้แค่: lab.test. → ns.lab.test.</text>
+<text class="small" x="58" y="296" text-anchor="start">ตอบ NS ของตัวเองได้ (flags qr aa) แต่ไม่ตอบ A ของ www</text>
+<text class="small" x="58" y="315" text-anchor="start">.com มี 13 ชื่อ (a–m.gtld-servers.net) — TLD อื่น เช่น .org กับ .th มี 6 ชื่อ</text>
+<line class="wire" x1="96.0" y1="330.0" x2="96.0" y2="360.0"/>
+<polygon class="head" points="96.0,360.0 92.5,351.7 99.5,351.7"/>
+<text class="small" x="116" y="350" text-anchor="start">referral · glue 127.0.0.3</text>
+<rect class="boxi" x="40.0" y="364.0" width="560.0" height="104.0" rx="8"/>
+<text class="ptitle" x="58" y="390" text-anchor="start">authoritative — เจ้าของข้อมูลตัวจริง</text>
+<text class="mono" x="58" y="412" text-anchor="start">โซน lab.test.   ·   ตอบได้ทุก record ใต้โซนนี้</text>
+<text class="small" x="58" y="434" text-anchor="start">ขั้นนี้เท่านั้นที่ตอบ flags qr aa และ an 1</text>
+<text class="small" x="58" y="453" text-anchor="start">คำตอบ A 203.0.113.10 ttl 300 คือจุดจบของการเดิน</text>
+<rect class="boxg" x="40.0" y="492.0" width="560.0" height="118.0" rx="8"/>
+<text class="ptitle" x="58" y="516" text-anchor="start">ทำไมต้องเดินสามชั้น ไม่มีใครเก็บทั้งหมด?</text>
+<text class="txt" x="58" y="540" text-anchor="start">เพราะการถามครั้งแรกจ่าย 3 คำถาม แต่คำตอบถูก cache ตาม TTL</text>
+<text class="small" x="58" y="562" text-anchor="start">คำถามชุดเดิมจึงเกิดครั้งเดียวต่ออายุ cache ไม่ใช่ทุกครั้งที่เปิดเว็บ</text>
+<text class="small" x="58" y="584" text-anchor="start">และถ้าชั้นไหนตอบผิด การเดินจะหยุดที่ชั้นนั้น — ไม่มีใครมาแก้ให้</text>
+<rect class="boxy" x="620.0" y="88.0" width="280.0" height="210.0" rx="8"/>
+<text class="ptitle" x="638" y="112" text-anchor="start">glue: ที่อยู่ที่โซนพ่อพกมา</text>
+<text class="small" x="638" y="138" text-anchor="start">referral พก A ของ NS มาด้วย</text>
+<text class="small" x="638" y="158" text-anchor="start">เพราะถ้าไม่พก ต้องถามชื่อ</text>
+<text class="small" x="638" y="178" text-anchor="start">ของ NS ซึ่งอยู่ใต้โซนลูก</text>
+<text class="small" x="638" y="198" text-anchor="start">ที่ยังไม่รู้ว่าจะไปถามใคร</text>
+<text class="small" x="638" y="218" text-anchor="start"></text>
+<text class="small" x="638" y="238" text-anchor="start">glue ไม่ใช่ authoritative</text>
+<text class="small" x="638" y="258" text-anchor="start">ของโซนพ่อ — เป็นข้อมูลยืม</text>
+<rect class="boxg" x="620.0" y="316.0" width="280.0" height="166.0" rx="8"/>
+<text class="ptitle" x="638" y="340" text-anchor="start">ตัวเลขที่ตรวจได้ในบทนี้</text>
+<text class="mono" x="638" y="364" text-anchor="start">queries_sent 3</text>
+<text class="mono" x="638" y="386" text-anchor="start">root_ns_count 13</text>
+<text class="mono" x="638" y="408" text-anchor="start">base_ttl 300</text>
+<text class="small" x="638" y="432" text-anchor="start">ทั้งสามค่าอ่านจาก out/ ที่รัน</text>
+<text class="small" x="638" y="452" text-anchor="start">บนเครื่องนี้ ไม่ได้พิมพ์ด้วยมือ</text>
+<rect class="boxr" x="620.0" y="492.0" width="280.0" height="118.0" rx="8"/>
+<text class="ptitle" x="638" y="516" text-anchor="start">ระวัง: 13 ชื่อ ≠ 13 เครื่อง</text>
+<text class="small" x="638" y="542" text-anchor="start">ชื่อ a–m คือจุดที่ต้องรู้</text>
+<text class="small" x="638" y="562" text-anchor="start">แต่ละชื่อมีเครื่องจริง</text>
+<text class="small" x="638" y="582" text-anchor="start">กระจายอยู่ทั่วโลกด้วย anycast</text>
+</svg>

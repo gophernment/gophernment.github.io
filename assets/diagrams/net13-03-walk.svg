@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 580" width="940" height="580" role="img" aria-label="การเดินคำถามสามชั้น: referral สองครั้งจาก root และ TLD แล้วตามด้วยคำตอบ เดียวที่มีธง aa พร้อมเส้นเวลา TTL ของ cache">
+<style>
+text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 12.5px; fill: #1a1a1a; }
+.hdr { font-weight: 700; font-size: 17.5px; }
+.sub { fill: #57606a; font-size: 12.5px; }
+.ptitle { font-weight: 700; font-size: 14px; }
+.txt { font-size: 12.5px; }
+.lbl { fill: #57606a; font-size: 11px; }
+.small { fill: #57606a; font-size: 10.5px; }
+.big { font-weight: 700; font-size: 19px; fill: #0550ae; }
+.mono { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 11.5px; fill: #0a3069; }
+.monom { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12.5px; fill: #0a3069; }
+.monos { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 10.5px; fill: #57606a; }
+.onbar { font-size: 12px; font-weight: 600; }
+.onbar2 { font-size: 10.5px; fill: #57606a; }
+.boxg { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.3; }
+.boxb { fill: #eef4ff; stroke: #0969da; stroke-width: 1.5; }
+.boxy { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.4; }
+.boxi { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.4; }
+.boxr { fill: #fdeff0; stroke: #b62324; stroke-width: 1.4; }
+.cell { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.1; }
+.cellA { fill: #dbeafe; stroke: #0969da; stroke-width: 1.2; }
+.cellG { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.2; }
+.cellR { fill: #fdeff0; stroke: #b62324; stroke-width: 1.6; }
+.wire { stroke: #8c959f; stroke-width: 1.8; fill: none; }
+.wire2 { stroke: #b6bfc8; stroke-width: 1.2; fill: none; stroke-dasharray: 5 5; }
+.head { fill: #8c959f; }
+.rule { stroke: #d0d7de; stroke-width: 1.2; }
+</style>
+<rect x="0" y="0" width="940" height="580" fill="#ffffff"/>
+<text class="hdr" x="40" y="34" text-anchor="start">walk: สามคำถาม สาม round trip — จาก root ลงมาถึงเจ้าของข้อมูล</text>
+<text class="sub" x="40" y="58" text-anchor="start">ตัวเลขและธงทุกตัวจาก out/02_walk.txt · RD=0 เพราะคนที่ recurse คือเราเอง ไม่ใช่ server</text>
+<rect class="cell" x="40.0" y="88.0" width="44.0" height="92.0" rx="6"/>
+<text class="big" x="62" y="134" text-anchor="middle">1</text>
+<text class="small" x="62" y="158" text-anchor="middle">step</text>
+<rect class="boxg" x="96.0" y="88.0" width="246.0" height="92.0" rx="8"/>
+<text class="mono" x="110" y="112" text-anchor="start">127.0.0.1:5300</text>
+<text class="small" x="110" y="132" text-anchor="start">โซน . (root)</text>
+<text class="monos" x="110" y="152" text-anchor="start">ถาม www.lab.test. A</text>
+<text class="small" x="110" y="170" text-anchor="start">RD=0 (เดินเอง)</text>
+<rect class="boxg" x="360.0" y="88.0" width="238.0" height="92.0" rx="8"/>
+<text class="mono" x="374" y="112" text-anchor="start">flags qr</text>
+<text class="monos" x="374" y="132" text-anchor="start">rcode NOERROR</text>
+<text class="monos" x="374" y="150" text-anchor="start">an 0  ns 1  ar 1</text>
+<text class="small" x="374" y="168" text-anchor="start">คำตอบของชั้นนี้</text>
+<line class="wire" x1="616.0" y1="134.0" x2="654.0" y2="134.0"/>
+<polygon class="head" points="654.0,134.0 645.7,137.5 645.7,130.5"/>
+<rect class="boxy" x="662.0" y="88.0" width="238.0" height="92.0" rx="8"/>
+<text class="mono" x="676" y="112" text-anchor="start">referral test.</text>
+<text class="monos" x="676" y="132" text-anchor="start">ns ns.test.</text>
+<text class="monos" x="676" y="150" text-anchor="start">glue 127.0.0.2</text>
+<text class="small" x="676" y="168" text-anchor="start">ยังไม่จบ — ต้องถามต่อ</text>
+<rect class="cell" x="40.0" y="206.0" width="44.0" height="92.0" rx="6"/>
+<text class="big" x="62" y="252" text-anchor="middle">2</text>
+<text class="small" x="62" y="276" text-anchor="middle">step</text>
+<rect class="boxg" x="96.0" y="206.0" width="246.0" height="92.0" rx="8"/>
+<text class="mono" x="110" y="230" text-anchor="start">127.0.0.2:5300</text>
+<text class="small" x="110" y="250" text-anchor="start">โซน test. (TLD)</text>
+<text class="monos" x="110" y="270" text-anchor="start">ถาม www.lab.test. A</text>
+<text class="small" x="110" y="288" text-anchor="start">RD=0 (เดินเอง)</text>
+<rect class="boxg" x="360.0" y="206.0" width="238.0" height="92.0" rx="8"/>
+<text class="mono" x="374" y="230" text-anchor="start">flags qr</text>
+<text class="monos" x="374" y="250" text-anchor="start">rcode NOERROR</text>
+<text class="monos" x="374" y="268" text-anchor="start">an 0  ns 1  ar 1</text>
+<text class="small" x="374" y="286" text-anchor="start">คำตอบของชั้นนี้</text>
+<line class="wire" x1="616.0" y1="252.0" x2="654.0" y2="252.0"/>
+<polygon class="head" points="654.0,252.0 645.7,255.5 645.7,248.5"/>
+<rect class="boxy" x="662.0" y="206.0" width="238.0" height="92.0" rx="8"/>
+<text class="mono" x="676" y="230" text-anchor="start">referral lab.test.</text>
+<text class="monos" x="676" y="250" text-anchor="start">ns ns.lab.test.</text>
+<text class="monos" x="676" y="268" text-anchor="start">glue 127.0.0.3</text>
+<text class="small" x="676" y="286" text-anchor="start">ยังไม่จบ — ต้องถามต่อ</text>
+<rect class="cellA" x="40.0" y="324.0" width="44.0" height="92.0" rx="6"/>
+<text class="big" x="62" y="370" text-anchor="middle">3</text>
+<text class="small" x="62" y="394" text-anchor="middle">step</text>
+<rect class="boxg" x="96.0" y="324.0" width="246.0" height="92.0" rx="8"/>
+<text class="mono" x="110" y="348" text-anchor="start">127.0.0.3:5300</text>
+<text class="small" x="110" y="368" text-anchor="start">โซน lab.test. (auth)</text>
+<text class="monos" x="110" y="388" text-anchor="start">ถาม www.lab.test. A</text>
+<text class="small" x="110" y="406" text-anchor="start">RD=0 (เดินเอง)</text>
+<rect class="boxg" x="360.0" y="324.0" width="238.0" height="92.0" rx="8"/>
+<text class="mono" x="374" y="348" text-anchor="start">flags qr aa</text>
+<text class="monos" x="374" y="368" text-anchor="start">rcode NOERROR</text>
+<text class="monos" x="374" y="386" text-anchor="start">an 1  ns 0  ar 0</text>
+<text class="small" x="374" y="404" text-anchor="start">คำตอบของชั้นนี้</text>
+<line class="wire" x1="616.0" y1="370.0" x2="654.0" y2="370.0"/>
+<polygon class="head" points="654.0,370.0 645.7,373.5 645.7,366.5"/>
+<rect class="boxi" x="662.0" y="324.0" width="238.0" height="92.0" rx="8"/>
+<text class="mono" x="676" y="348" text-anchor="start">A 203.0.113.10</text>
+<text class="monos" x="676" y="368" text-anchor="start">owner www.lab.test.</text>
+<text class="monos" x="676" y="386" text-anchor="start">ttl 300 · flags qr aa</text>
+<text class="small" x="676" y="404" text-anchor="start">จบ — นี่คือคำตอบจริง</text>
+<line class="rule" x1="40.0" y1="432.0" x2="900.0" y2="432.0"/>
+<text class="lbl" x="40" y="456" text-anchor="start">หลังได้คำตอบ: cache เก็บไว้ตาม TTL แล้วนับถอยหลังทุกวินาที</text>
+<rect class="boxy" x="40.0" y="466.0" width="200.0" height="60.0" rx="7"/>
+<text class="onbar" x="140" y="491" text-anchor="middle">t=0  miss</text>
+<text class="monos" x="140" y="509" text-anchor="middle">ttl_left=300</text>
+<rect class="boxi" x="256.0" y="466.0" width="200.0" height="60.0" rx="7"/>
+<text class="onbar" x="356" y="491" text-anchor="middle">t=60  hit</text>
+<text class="monos" x="356" y="509" text-anchor="middle">ttl_left=240</text>
+<rect class="boxy" x="472.0" y="466.0" width="200.0" height="60.0" rx="7"/>
+<text class="onbar" x="572" y="491" text-anchor="middle">t=301  miss</text>
+<text class="monos" x="572" y="509" text-anchor="middle">ttl_left=300</text>
+<rect class="boxb" x="688.0" y="466.0" width="212.0" height="60.0" rx="7"/>
+<text class="onbar" x="794" y="491" text-anchor="middle">queries_sent 3</text>
+<text class="monos" x="794" y="509" text-anchor="middle">ต่อหนึ่งชื่อ (ยังไม่มี cache)</text>
+<text class="small" x="40" y="552" text-anchor="start">ที่ t=301 (เลย base_ttl 300 ไปหนึ่งวินาที) cache หมดอายุ → miss แล้วถาม upstream ใหม่</text>
+</svg>

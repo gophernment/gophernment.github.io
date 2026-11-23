@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 560" width="940" height="560" role="img" aria-label="โครงสร้าง DNS message: header 12 ไบต์, question 18 ไบต์ และ answer ที่อ้างชื่อเดิมด้วย pointer สองไบต์">
+<style>
+text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 12.5px; fill: #1a1a1a; }
+.hdr { font-weight: 700; font-size: 17.5px; }
+.sub { fill: #57606a; font-size: 12.5px; }
+.ptitle { font-weight: 700; font-size: 14px; }
+.txt { font-size: 12.5px; }
+.lbl { fill: #57606a; font-size: 11px; }
+.small { fill: #57606a; font-size: 10.5px; }
+.big { font-weight: 700; font-size: 19px; fill: #0550ae; }
+.mono { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 11.5px; fill: #0a3069; }
+.monom { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12.5px; fill: #0a3069; }
+.monos { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 10.5px; fill: #57606a; }
+.onbar { font-size: 12px; font-weight: 600; }
+.onbar2 { font-size: 10.5px; fill: #57606a; }
+.boxg { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.3; }
+.boxb { fill: #eef4ff; stroke: #0969da; stroke-width: 1.5; }
+.boxy { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.4; }
+.boxi { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.4; }
+.boxr { fill: #fdeff0; stroke: #b62324; stroke-width: 1.4; }
+.cell { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.1; }
+.cellA { fill: #dbeafe; stroke: #0969da; stroke-width: 1.2; }
+.cellG { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.2; }
+.cellR { fill: #fdeff0; stroke: #b62324; stroke-width: 1.6; }
+.wire { stroke: #8c959f; stroke-width: 1.8; fill: none; }
+.wire2 { stroke: #b6bfc8; stroke-width: 1.2; fill: none; stroke-dasharray: 5 5; }
+.head { fill: #8c959f; }
+.rule { stroke: #d0d7de; stroke-width: 1.2; }
+</style>
+<rect x="0" y="0" width="940" height="560" fill="#ffffff"/>
+<text class="hdr" x="40" y="34" text-anchor="start">DNS message: header 12 ไบต์ + question 18 ไบต์ = 30 ไบต์</text>
+<text class="sub" x="40" y="58" text-anchor="start">ไบต์จริงจาก out/01_wire.txt · ชื่อ 14 ไบต์ถูกบีบอัดเหลือ pointer c0 0c</text>
+<text class="lbl" x="40" y="84" text-anchor="start">header 12 ไบต์ — หกช่อง ช่องละสองไบต์</text>
+<rect class="cellA" x="50.0" y="92.0" width="42.0" height="52.0" rx="4"/>
+<text class="mono" x="71" y="113" text-anchor="middle">ID</text>
+<text class="monos" x="71" y="133" text-anchor="middle">2</text>
+<rect class="cellA" x="94.0" y="92.0" width="42.0" height="52.0" rx="4"/>
+<text class="mono" x="115" y="113" text-anchor="middle">flags</text>
+<text class="monos" x="115" y="133" text-anchor="middle">2</text>
+<rect class="cellA" x="138.0" y="92.0" width="42.0" height="52.0" rx="4"/>
+<text class="mono" x="159" y="113" text-anchor="middle">QD</text>
+<text class="monos" x="159" y="133" text-anchor="middle">2</text>
+<rect class="cellA" x="182.0" y="92.0" width="42.0" height="52.0" rx="4"/>
+<text class="mono" x="203" y="113" text-anchor="middle">AN</text>
+<text class="monos" x="203" y="133" text-anchor="middle">2</text>
+<rect class="cellA" x="226.0" y="92.0" width="42.0" height="52.0" rx="4"/>
+<text class="mono" x="247" y="113" text-anchor="middle">NS</text>
+<text class="monos" x="247" y="133" text-anchor="middle">2</text>
+<rect class="cellA" x="270.0" y="92.0" width="42.0" height="52.0" rx="4"/>
+<text class="mono" x="291" y="113" text-anchor="middle">AR</text>
+<text class="monos" x="291" y="133" text-anchor="middle">2</text>
+<text class="lbl" x="40" y="168" text-anchor="start">question 18 ไบต์ — QNAME เขียนเป็น label ยาวนำหน้า ปิดท้ายด้วยศูนย์</text>
+<rect class="cellG" x="314.0" y="176.0" width="86.0" height="52.0" rx="4"/>
+<text class="mono" x="357" y="197" text-anchor="middle">03</text>
+<text class="monos" x="357" y="217" text-anchor="middle">www</text>
+<rect class="cellG" x="402.0" y="176.0" width="86.0" height="52.0" rx="4"/>
+<text class="mono" x="445" y="197" text-anchor="middle">03</text>
+<text class="monos" x="445" y="217" text-anchor="middle">lab</text>
+<rect class="cellG" x="490.0" y="176.0" width="108.0" height="52.0" rx="4"/>
+<text class="mono" x="544" y="197" text-anchor="middle">04</text>
+<text class="monos" x="544" y="217" text-anchor="middle">test</text>
+<rect class="cellG" x="600.0" y="176.0" width="20.0" height="52.0" rx="4"/>
+<text class="mono" x="610" y="197" text-anchor="middle">00</text>
+<rect class="cell" x="622.0" y="176.0" width="42.0" height="52.0" rx="4"/>
+<text class="mono" x="643" y="197" text-anchor="middle">1</text>
+<text class="monos" x="643" y="217" text-anchor="middle">A</text>
+<rect class="cell" x="666.0" y="176.0" width="42.0" height="52.0" rx="4"/>
+<text class="mono" x="687" y="197" text-anchor="middle">1</text>
+<text class="monos" x="687" y="217" text-anchor="middle">IN</text>
+<text class="small" x="52" y="244" text-anchor="start">0</text>
+<text class="small" x="96" y="244" text-anchor="start">2</text>
+<text class="small" x="140" y="244" text-anchor="start">4</text>
+<text class="small" x="184" y="244" text-anchor="start">6</text>
+<text class="small" x="228" y="244" text-anchor="start">8</text>
+<text class="small" x="272" y="244" text-anchor="start">10</text>
+<text class="small" x="314" y="244" text-anchor="start">12</text>
+<text class="small" x="402" y="244" text-anchor="start">16</text>
+<text class="small" x="490" y="244" text-anchor="start">20</text>
+<text class="small" x="600" y="244" text-anchor="start">25</text>
+<text class="small" x="622" y="244" text-anchor="start">26</text>
+<text class="small" x="666" y="244" text-anchor="start">28</text>
+<text class="small" x="710" y="244" text-anchor="start">30</text>
+<line class="rule" x1="40.0" y1="256.0" x2="900.0" y2="256.0"/>
+<text class="lbl" x="40" y="282" text-anchor="start">answer 16 ไบต์ — เริ่มที่ offset 30 (มาตราส่วนเดียวกัน แต่ไม่ต่อจากแถวบน)</text>
+<rect class="boxr" x="50.0" y="290.0" width="42.0" height="52.0" rx="4"/>
+<text class="mono" x="71" y="311" text-anchor="middle">c0 0c</text>
+<text class="mono" x="71" y="331" text-anchor="middle">ptr</text>
+<rect class="cell" x="94.0" y="290.0" width="42.0" height="52.0" rx="4"/>
+<text class="mono" x="115" y="311" text-anchor="middle">1</text>
+<text class="monos" x="115" y="331" text-anchor="middle">A</text>
+<rect class="cell" x="138.0" y="290.0" width="42.0" height="52.0" rx="4"/>
+<text class="mono" x="159" y="311" text-anchor="middle">1</text>
+<text class="monos" x="159" y="331" text-anchor="middle">IN</text>
+<rect class="cell" x="182.0" y="290.0" width="86.0" height="52.0" rx="4"/>
+<text class="mono" x="225" y="311" text-anchor="middle">300</text>
+<text class="monos" x="225" y="331" text-anchor="middle">ttl</text>
+<rect class="cell" x="270.0" y="290.0" width="42.0" height="52.0" rx="4"/>
+<text class="mono" x="291" y="311" text-anchor="middle">4</text>
+<text class="monos" x="291" y="331" text-anchor="middle">rdlen</text>
+<rect class="cellA" x="314.0" y="290.0" width="86.0" height="52.0" rx="4"/>
+<text class="monos" x="357" y="311" text-anchor="middle">203.0.113.10</text>
+<text class="monos" x="357" y="331" text-anchor="middle">rdata</text>
+<rect class="boxy" x="40.0" y="368.0" width="860.0" height="84.0" rx="8"/>
+<text class="txt" x="58" y="392" text-anchor="start">pointer c0 0c = สองไบต์ที่ชี้กลับไป offset 12 (ต้น QNAME)</text>
+<text class="txt" x="58" y="416" text-anchor="start">ชื่อเต็ม 14 ไบต์จึงถูกใช้ซ้ำด้วยต้นทุน 2 ไบต์ — ประหยัด 12 ไบต์ต่อการอ้างหนึ่งครั้ง</text>
+<text class="small" x="58" y="438" text-anchor="start">สองบิตบนสุด 11 (0xc0) บอกว่าเป็น pointer ส่วน 14 บิตที่เหลือคือ offset</text>
+<rect class="boxg" x="40.0" y="466.0" width="860.0" height="66.0" rx="8"/>
+<text class="txt" x="58" y="490" text-anchor="start">รวมทั้งคำถาม = 30 ไบต์ · คำตอบทั้งใบ = 46 ไบต์</text>
+<text class="small" x="58" y="512" text-anchor="start">QTYPE: A=1 NS=2 CNAME=5 MX=15 TXT=16 AAAA=28 · QCLASS IN=1 · เลข QTYPE คือสิ่งที่กำหนดว่าจะได้ record ชนิดไหนกลับมา</text>
+</svg>
