@@ -1,5 +1,18 @@
 [
   {
+    "slug": "2026-11-24-network-14-dhcp-bootstrapping",
+    "title": "DHCP: ได้ IP ยังไงทั้งที่ยังไม่มี IP — DORA, lease และวันที่ address ชนกัน (ตอนที่ 14)",
+    "date": "2026-11-24",
+    "tags": [
+      "network",
+      "dhcp",
+      "dora",
+      "lease",
+      "golang"
+    ],
+    "description": "เครื่องที่เพิ่งเปิดยังไม่มี IP แต่ต้องใช้ IP ในการส่ง packet — บทนี้แก้ปัญหาไก่กับไข่ด้วยการประกอบ DHCP message เองทีละไบต์ เปิด client กับ server ของเราบน loopback ให้เล่น DORA จริง (DISCOVER/OFFER/REQUEST/ACK) แล้วเดินเส้นเวลา lease 3600 วินาทีจนถึง T1/T2/หมดอายุ ปิดท้ายด้วย ARP probe กับ DHCPDECLINE เมื่อ address ที่ได้มามีคนใช้อยู่แล้ว"
+  },
+  {
     "slug": "2026-11-23-network-13-dns-resolution",
     "title": "DNS: ชื่อเดียวที่ต้องถามสามชั้น — root, TLD, authoritative และสิ่งที่ dig ไล่ให้เห็น (ตอนที่ 13)",
     "date": "2026-11-23",
