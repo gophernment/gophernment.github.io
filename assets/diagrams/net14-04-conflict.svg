@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 620" width="940" height="620" role="img" aria-label="ลำดับเมื่อเจอ IP conflict: server เสนอ address ที่มีคนใช้อยู่ client probe เจอ จึงส่ง DHCPDECLINE แล้วขอใหม่ ได้ address ถัดไป">
+<style>
+text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 12.5px; fill: #1a1a1a; }
+.hdr { font-weight: 700; font-size: 17.5px; }
+.sub { fill: #57606a; font-size: 12.5px; }
+.ptitle { font-weight: 700; font-size: 14px; }
+.txt { font-size: 12.5px; }
+.lbl { fill: #57606a; font-size: 11px; }
+.small { fill: #57606a; font-size: 10.5px; }
+.big { font-weight: 700; font-size: 19px; fill: #0550ae; }
+.mono { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 11.5px; fill: #0a3069; }
+.monom { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12.5px; fill: #0a3069; }
+.monos { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 10.5px; fill: #57606a; }
+.onbar { font-size: 12px; font-weight: 600; }
+.onbar2 { font-size: 10.5px; fill: #57606a; }
+.boxg { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.3; }
+.boxb { fill: #eef4ff; stroke: #0969da; stroke-width: 1.5; }
+.boxy { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.4; }
+.boxi { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.4; }
+.boxr { fill: #fdeff0; stroke: #b62324; stroke-width: 1.4; }
+.cell { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.1; }
+.cellA { fill: #dbeafe; stroke: #0969da; stroke-width: 1.2; }
+.cellG { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.2; }
+.cellR { fill: #fdeff0; stroke: #b62324; stroke-width: 1.6; }
+.cellY { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.2; }
+.wire { stroke: #8c959f; stroke-width: 1.8; fill: none; }
+.wire2 { stroke: #b6bfc8; stroke-width: 1.2; fill: none; stroke-dasharray: 5 5; }
+.head { fill: #8c959f; }
+.rule { stroke: #d0d7de; stroke-width: 1.2; }
+</style>
+<rect x="0" y="0" width="940" height="620" fill="#ffffff"/>
+<text class="hdr" x="40" y="34" text-anchor="start">เจอ address ซ้ำ: probe → DECLINE → ขอใหม่ (ได้ 192.0.2.98 แทน 192.0.2.97)</text>
+<text class="sub" x="40" y="58" text-anchor="start">จาก out/07_conflict.txt · ทุกข้อความเป็น UDP จริงบน loopback (probe ใช้ตารางแทน ARP)</text>
+<rect class="boxi" x="40.0" y="86.0" width="560.0" height="58.0" rx="8"/>
+<text class="onbar" x="58" y="110" text-anchor="start">server OFFER 192.0.2.97</text>
+<text class="small" x="58" y="131" text-anchor="start">client ยังไม่เอาไปใช้ — แค่ได้ข้อเสนอ</text>
+<line class="wire" x1="320.0" y1="144.0" x2="320.0" y2="156.0"/>
+<polygon class="head" points="320.0,156.0 316.5,147.7 323.5,147.7"/>
+<rect class="boxi" x="40.0" y="160.0" width="560.0" height="58.0" rx="8"/>
+<text class="onbar" x="58" y="184" text-anchor="start">client probe ด้วย ARP</text>
+<text class="small" x="58" y="205" text-anchor="start">ถามว่า "มีใครถือ address นี้อยู่ไหม" 3 ครั้ง</text>
+<line class="wire" x1="320.0" y1="218.0" x2="320.0" y2="230.0"/>
+<polygon class="head" points="320.0,230.0 316.5,221.7 323.5,221.7"/>
+<rect class="boxr" x="40.0" y="234.0" width="560.0" height="58.0" rx="8"/>
+<text class="onbar" x="58" y="258" text-anchor="start">printer ตอบ: ฉันใช้ 192.0.2.97</text>
+<text class="small" x="58" y="279" text-anchor="start">ที่อยู่นี้ถูกจองไว้กับเครื่องที่ตั้ง static</text>
+<line class="wire" x1="320.0" y1="292.0" x2="320.0" y2="304.0"/>
+<polygon class="head" points="320.0,304.0 316.5,295.7 323.5,295.7"/>
+<rect class="boxy" x="40.0" y="308.0" width="560.0" height="58.0" rx="8"/>
+<text class="onbar" x="58" y="332" text-anchor="start">client ส่ง DHCPDECLINE</text>
+<text class="small" x="58" y="353" text-anchor="start">broadcast · option 50 + 54 + 56 (บอกเหตุผล)</text>
+<line class="wire" x1="320.0" y1="366.0" x2="320.0" y2="378.0"/>
+<polygon class="head" points="320.0,378.0 316.5,369.7 323.5,369.7"/>
+<rect class="boxg" x="40.0" y="382.0" width="560.0" height="58.0" rx="8"/>
+<text class="onbar" x="58" y="406" text-anchor="start">รอ 10 วินาที แล้ว DISCOVER ใหม่</text>
+<text class="small" x="58" y="427" text-anchor="start">xid ใหม่ · เริ่มจาก INIT ใหม่ทั้งรอบ</text>
+<line class="wire" x1="320.0" y1="440.0" x2="320.0" y2="452.0"/>
+<polygon class="head" points="320.0,452.0 316.5,443.7 323.5,443.7"/>
+<rect class="boxi" x="40.0" y="456.0" width="560.0" height="58.0" rx="8"/>
+<text class="onbar" x="58" y="480" text-anchor="start">OFFER 192.0.2.98 → ACK 192.0.2.98</text>
+<text class="small" x="58" y="501" text-anchor="start">server กันตัวเก่าไว้ ไม่แจกซ้ำ</text>
+<rect class="boxg" x="624.0" y="86.0" width="276.0" height="172.0" rx="8"/>
+<text class="ptitle" x="642" y="110" text-anchor="start">ฝั่ง server หลัง DECLINE</text>
+<text class="mono" x="642" y="136" text-anchor="start">binding 192.0.2.98</text>
+<text class="mono" x="642" y="158" text-anchor="start">declined 192.0.2.97</text>
+<text class="mono" x="642" y="180" text-anchor="start">until 900 วินาที</text>
+<text class="mono" x="642" y="202" text-anchor="start">pool_free 12</text>
+<text class="small" x="642" y="228" text-anchor="start">ตัวที่ถูก decline ไม่กลับมา</text>
+<text class="small" x="642" y="244" text-anchor="start">จนกว่าจะพ้นเวลากัน</text>
+<rect class="boxy" x="624.0" y="272.0" width="276.0" height="196.0" rx="8"/>
+<text class="ptitle" x="642" y="296" text-anchor="start">จังหวะ ARP probe</text>
+<text class="monos" x="642" y="320" text-anchor="start">PROBE_WAIT 1 วินาที</text>
+<text class="monos" x="642" y="342" text-anchor="start">PROBE_NUM 3 ครั้ง</text>
+<text class="monos" x="642" y="364" text-anchor="start">PROBE_MIN–MAX 1–2 วินาที</text>
+<text class="monos" x="642" y="386" text-anchor="start">ANNOUNCE_WAIT 2 วินาที</text>
+<text class="monos" x="642" y="408" text-anchor="start">MAX_CONFLICTS 10 ครั้ง</text>
+<text class="monos" x="642" y="430" text-anchor="start">RATE_LIMIT 60 วินาที</text>
+<text class="small" x="642" y="452" text-anchor="start">ครบ 10 ครั้งขึ้นไป → ลดความถี่</text>
+<rect class="boxr" x="624.0" y="486.0" width="276.0" height="108.0" rx="8"/>
+<text class="ptitle" x="642" y="510" text-anchor="start">ถ้า pool ไม่เหลืออะไร</text>
+<text class="small" x="642" y="534" text-anchor="start">ไม่มี OFFER → ลองซ้ำอีก 4 ครั้ง</text>
+<text class="small" x="642" y="556" text-anchor="start">แล้วตกไป link-local</text>
+<text class="monos" x="642" y="578" text-anchor="start">169.254.0.0/16</text>
+</svg>

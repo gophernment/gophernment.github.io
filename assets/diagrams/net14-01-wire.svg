@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 604" width="940" height="604" role="img" aria-label="โครงสร้าง DHCP message: หัว BOOTP 236 ไบต์, magic cookie 4 ไบต์ และ options แบบ TLV พร้อม offset และขนาดของทุกฟิลด์">
+<style>
+text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 12.5px; fill: #1a1a1a; }
+.hdr { font-weight: 700; font-size: 17.5px; }
+.sub { fill: #57606a; font-size: 12.5px; }
+.ptitle { font-weight: 700; font-size: 14px; }
+.txt { font-size: 12.5px; }
+.lbl { fill: #57606a; font-size: 11px; }
+.small { fill: #57606a; font-size: 10.5px; }
+.big { font-weight: 700; font-size: 19px; fill: #0550ae; }
+.mono { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 11.5px; fill: #0a3069; }
+.monom { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 12.5px; fill: #0a3069; }
+.monos { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 10.5px; fill: #57606a; }
+.onbar { font-size: 12px; font-weight: 600; }
+.onbar2 { font-size: 10.5px; fill: #57606a; }
+.boxg { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.3; }
+.boxb { fill: #eef4ff; stroke: #0969da; stroke-width: 1.5; }
+.boxy { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.4; }
+.boxi { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.4; }
+.boxr { fill: #fdeff0; stroke: #b62324; stroke-width: 1.4; }
+.cell { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.1; }
+.cellA { fill: #dbeafe; stroke: #0969da; stroke-width: 1.2; }
+.cellG { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.2; }
+.cellR { fill: #fdeff0; stroke: #b62324; stroke-width: 1.6; }
+.cellY { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.2; }
+.wire { stroke: #8c959f; stroke-width: 1.8; fill: none; }
+.wire2 { stroke: #b6bfc8; stroke-width: 1.2; fill: none; stroke-dasharray: 5 5; }
+.head { fill: #8c959f; }
+.rule { stroke: #d0d7de; stroke-width: 1.2; }
+</style>
+<rect x="0" y="0" width="940" height="604" fill="#ffffff"/>
+<text class="hdr" x="40" y="34" text-anchor="start">DHCP message 270 ไบต์ = หัว BOOTP 236 + cookie 4 + options 30</text>
+<text class="sub" x="40" y="58" text-anchor="start">offset จาก out/01_wire.txt · ฟิลด์ BOOTP ตายตัวทุกไบต์ มีแต่ส่วน options ที่ยาวไม่เท่ากัน</text>
+<text class="monos" x="60" y="111" text-anchor="end">0</text>
+<line class="wire2" x1="66.0" y1="115.0" x2="144.0" y2="115.0"/>
+<rect class="cell" x="150.0" y="92.0" width="113.5" height="32.0" rx="4"/>
+<text class="monos" x="207" y="106" text-anchor="middle">op</text>
+<text class="monos" x="207" y="119" text-anchor="middle">1</text>
+<rect class="cellA" x="267.5" y="92.0" width="113.5" height="32.0" rx="4"/>
+<text class="monos" x="324" y="106" text-anchor="middle">htype</text>
+<text class="monos" x="324" y="119" text-anchor="middle">1</text>
+<rect class="cell" x="385.0" y="92.0" width="113.5" height="32.0" rx="4"/>
+<text class="monos" x="442" y="106" text-anchor="middle">hlen</text>
+<text class="monos" x="442" y="119" text-anchor="middle">1</text>
+<rect class="cellA" x="502.5" y="92.0" width="113.5" height="32.0" rx="4"/>
+<text class="monos" x="559" y="106" text-anchor="middle">hops</text>
+<text class="monos" x="559" y="119" text-anchor="middle">1</text>
+<text class="small" x="640" y="113" text-anchor="start">1 = BOOTREQUEST</text>
+<text class="monos" x="60" y="146" text-anchor="end">4</text>
+<line class="wire2" x1="66.0" y1="150.0" x2="144.0" y2="150.0"/>
+<rect class="cell" x="150.0" y="127.0" width="470.0" height="32.0" rx="4"/>
+<text class="mono" x="162" y="148" text-anchor="start">xid</text>
+<text class="monos" x="608" y="148" text-anchor="end">4</text>
+<text class="small" x="640" y="148" text-anchor="start">สุ่ม 32 บิต · คำตอบต้อง echo</text>
+<text class="monos" x="60" y="181" text-anchor="end">8</text>
+<line class="wire2" x1="66.0" y1="185.0" x2="144.0" y2="185.0"/>
+<rect class="cell" x="150.0" y="162.0" width="231.0" height="32.0" rx="4"/>
+<text class="monos" x="266" y="176" text-anchor="middle">secs</text>
+<text class="monos" x="266" y="189" text-anchor="middle">2</text>
+<rect class="cellA" x="385.0" y="162.0" width="231.0" height="32.0" rx="4"/>
+<text class="monos" x="500" y="176" text-anchor="middle">flags</text>
+<text class="monos" x="500" y="189" text-anchor="middle">2</text>
+<text class="small" x="640" y="183" text-anchor="start">0x8000 = ขอตอบ broadcast</text>
+<text class="monos" x="60" y="216" text-anchor="end">12</text>
+<line class="wire2" x1="66.0" y1="220.0" x2="144.0" y2="220.0"/>
+<rect class="cellA" x="150.0" y="197.0" width="470.0" height="32.0" rx="4"/>
+<text class="mono" x="162" y="218" text-anchor="start">ciaddr</text>
+<text class="monos" x="608" y="218" text-anchor="end">4</text>
+<text class="small" x="640" y="218" text-anchor="start">client ใส่ตอน renew</text>
+<text class="monos" x="60" y="251" text-anchor="end">16</text>
+<line class="wire2" x1="66.0" y1="255.0" x2="144.0" y2="255.0"/>
+<rect class="cellA" x="150.0" y="232.0" width="470.0" height="32.0" rx="4"/>
+<text class="mono" x="162" y="253" text-anchor="start">yiaddr</text>
+<text class="monos" x="608" y="253" text-anchor="end">4</text>
+<text class="small" x="640" y="253" text-anchor="start">server ใส่ address ที่ให้</text>
+<text class="monos" x="60" y="286" text-anchor="end">20</text>
+<line class="wire2" x1="66.0" y1="290.0" x2="144.0" y2="290.0"/>
+<rect class="cell" x="150.0" y="267.0" width="470.0" height="32.0" rx="4"/>
+<text class="mono" x="162" y="288" text-anchor="start">siaddr</text>
+<text class="monos" x="608" y="288" text-anchor="end">4</text>
+<text class="small" x="640" y="288" text-anchor="start">next server · แทบไม่ใช้</text>
+<text class="monos" x="60" y="321" text-anchor="end">24</text>
+<line class="wire2" x1="66.0" y1="325.0" x2="144.0" y2="325.0"/>
+<rect class="cell" x="150.0" y="302.0" width="470.0" height="32.0" rx="4"/>
+<text class="mono" x="162" y="323" text-anchor="start">giaddr</text>
+<text class="monos" x="608" y="323" text-anchor="end">4</text>
+<text class="small" x="640" y="323" text-anchor="start">relay · 0 = วงเดียวกัน</text>
+<text class="monos" x="60" y="356" text-anchor="end">28</text>
+<line class="wire2" x1="66.0" y1="360.0" x2="144.0" y2="360.0"/>
+<rect class="cell" x="150.0" y="337.0" width="470.0" height="32.0" rx="4"/>
+<text class="mono" x="162" y="358" text-anchor="start">chaddr</text>
+<text class="monos" x="608" y="358" text-anchor="end">16</text>
+<text class="small" x="640" y="358" text-anchor="start">MAC อยู่ 6 ไบต์แรก</text>
+<text class="monos" x="60" y="391" text-anchor="end">44</text>
+<line class="wire2" x1="66.0" y1="395.0" x2="144.0" y2="395.0"/>
+<rect class="cell" x="150.0" y="372.0" width="470.0" height="32.0" rx="4"/>
+<text class="mono" x="162" y="393" text-anchor="start">sname</text>
+<text class="monos" x="608" y="393" text-anchor="end">64</text>
+<text class="small" x="640" y="393" text-anchor="start">BOOTP legacy · ว่าง</text>
+<text class="monos" x="60" y="426" text-anchor="end">108</text>
+<line class="wire2" x1="66.0" y1="430.0" x2="144.0" y2="430.0"/>
+<rect class="cell" x="150.0" y="407.0" width="470.0" height="32.0" rx="4"/>
+<text class="mono" x="162" y="428" text-anchor="start">file</text>
+<text class="monos" x="608" y="428" text-anchor="end">128</text>
+<text class="small" x="640" y="428" text-anchor="start">BOOTP legacy · ยืมได้</text>
+<text class="monos" x="60" y="461" text-anchor="end">236</text>
+<line class="wire2" x1="66.0" y1="465.0" x2="144.0" y2="465.0"/>
+<rect class="cell" x="150.0" y="442.0" width="470.0" height="32.0" rx="4"/>
+<text class="mono" x="162" y="463" text-anchor="start">cookie</text>
+<text class="monos" x="608" y="463" text-anchor="end">4</text>
+<text class="small" x="640" y="463" text-anchor="start">ไม่ตรง = ไม่ใช่ DHCP</text>
+<text class="monos" x="60" y="496" text-anchor="end">240</text>
+<line class="wire2" x1="66.0" y1="500.0" x2="144.0" y2="500.0"/>
+<rect class="cellY" x="150.0" y="477.0" width="470.0" height="32.0" rx="4"/>
+<text class="mono" x="162" y="498" text-anchor="start">options</text>
+<text class="monos" x="608" y="498" text-anchor="end">30</text>
+<text class="small" x="640" y="498" text-anchor="start">53·61·12·55 ในเดโมนี้</text>
+<rect class="boxi" x="40.0" y="520.0" width="860.0" height="76.0" rx="8"/>
+<text class="txt" x="58" y="544" text-anchor="start">ทำไมต้องรู้ทีละไบต์: server อ่านช่อง 12–15 (ciaddr) เพื่อรู้ว่า client มี address อยู่แล้วหรือยัง</text>
+<text class="small" x="58" y="566" text-anchor="start">client ที่ยังไม่มี IP จึงใส่ 0.0.0.0 ในช่องนั้น แล้วส่งจากพอร์ต 68 ไป 255.255.255.255:67</text>
+<text class="small" x="58" y="586" text-anchor="start">ในเดโมนี้ options มี 4 ตัวและจบด้วย 255 — ตัวเลขทุกตัวอ่านจาก out/</text>
+</svg>
