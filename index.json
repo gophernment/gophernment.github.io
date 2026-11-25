@@ -1,5 +1,19 @@
 [
   {
+    "slug": "2026-11-25-network-15-http-evolution",
+    "title": "HTTP สี่รุ่นในสามสิบปี: 1.0 → 1.1 → 2 → 3 — keep-alive, multiplexing และวันที่ TCP กลายเป็นคอขวด (ตอนที่ 15)",
+    "date": "2026-11-25",
+    "tags": [
+      "network",
+      "http",
+      "http2",
+      "http3",
+      "quic",
+      "golang"
+    ],
+    "description": "หน้าเว็บหนึ่งหน้าคือ HTTP หลายสิบคำขอ และคำขอเหล่านั้นเดินทางผ่านสายเดียวกันได้ไม่เท่ากันในแต่ละรุ่น บทนี้ไล่ HTTP/1.0 ที่เปิด connection ใหม่ทุกคำขอ ไปถึง 1.1 ที่ได้ keep-alive แต่ยังทำทีละใบ 2 ที่ multiplex หลาย stream บนสายเดียวด้วย HPACK และ 3 ที่ย้ายไป QUIC บน UDP จน head-of-line blocking ระดับ transport หายไป — วัดจริงด้วย curl -v, server ใน Go และเทสต์ที่เทียบไบต์กับตัวอย่างใน RFC 7541"
+  },
+  {
     "slug": "2026-11-24-network-14-dhcp-bootstrapping",
     "title": "DHCP: ได้ IP ยังไงทั้งที่ยังไม่มี IP — DORA, lease และวันที่ address ชนกัน (ตอนที่ 14)",
     "date": "2026-11-24",
