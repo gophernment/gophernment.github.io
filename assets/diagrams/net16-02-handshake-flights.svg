@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 620" width="1080" height="620" role="img" aria-label="เทียบ handshake TLS 1.2 (สอง round trip, certificate ส่งแบบอ่านออก) กับ TLS 1.3 (หนึ่ง round trip, certificate อยู่ในเที่ยวบินที่เข้ารหัสแล้ว)">
+<style>
+text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 12px; fill: #1a1a1a; }
+.hdr { font-weight: 700; font-size: 17.5px; }
+.sub { fill: #57606a; font-size: 12.5px; }
+.ptitle { font-weight: 700; font-size: 14px; }
+.txt { font-size: 12px; }
+.lbl { fill: #57606a; font-size: 11px; }
+.small { fill: #57606a; font-size: 10.5px; }
+.big { font-weight: 700; font-size: 20px; fill: #0550ae; }
+.mono { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 11px; fill: #0a3069; }
+.monos { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 10px; fill: #57606a; }
+.boxg { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.3; }
+.boxb { fill: #eef4ff; stroke: #0969da; stroke-width: 1.5; }
+.boxy { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.4; }
+.boxi { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.4; }
+.boxr { fill: #fdeff0; stroke: #b62324; stroke-width: 1.4; }
+.shade { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.0; stroke-dasharray: 5 4; }
+.cell { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.1; }
+.wire { stroke: #8c959f; stroke-width: 1.8; fill: none; }
+.wire2 { stroke: #b6bfc8; stroke-width: 1.2; fill: none; stroke-dasharray: 5 5; }
+.s1 { stroke: #0969da; stroke-width: 2.2; fill: none; }
+.s2 { stroke: #1a7f37; stroke-width: 2.2; fill: none; }
+.s3 { stroke: #bf8700; stroke-width: 2.2; fill: none; }
+.s4 { stroke: #8250df; stroke-width: 2.2; fill: none; }
+.lifeline { stroke: #b6bfc8; stroke-width: 1.4; stroke-dasharray: 6 6; }
+.head { fill: #8c959f; }
+.head1 { fill: #0969da; }
+.head2 { fill: #1a7f37; }
+.head3 { fill: #bf8700; }
+.head4 { fill: #8250df; }
+.rule { stroke: #d0d7de; stroke-width: 1.2; }
+</style>
+<rect x="0" y="0" width="1080" height="620" fill="#ffffff"/>
+<text class="hdr" x="40" y="40" text-anchor="start">สอง round trip กับหนึ่ง round trip: ต่างกันตรงไหน</text>
+<text class="sub" x="40" y="64" text-anchor="start">เวลาไหลจากบนลงล่าง · ลูกศรคือข้อความที่วิ่งระหว่าง client กับ server</text>
+<text class="ptitle" x="44" y="112" text-anchor="start">TLS 1.2</text>
+<text class="small" x="300" y="112" text-anchor="start">สอง round trip: client ต้องรอใบรับรองก่อน จึงรู้ว่าจะคุยกับใครและใช้กุญแจอะไร</text>
+<line class="lifeline" x1="150.0" y1="126.0" x2="150.0" y2="272.0"/>
+<line class="lifeline" x1="930.0" y1="126.0" x2="930.0" y2="272.0"/>
+<text class="lbl" x="150" y="124" text-anchor="middle">client</text>
+<text class="lbl" x="930" y="124" text-anchor="middle">server</text>
+<line class="s1" x1="158.0" y1="148.0" x2="922.0" y2="148.0"/>
+<polygon class="head1" points="922.0,148.0 914.6,151.1 914.6,144.9"/>
+<text class="small" x="166" y="142" text-anchor="start">ClientHello — ยังไม่รู้ว่าปลายทางถือกุญแจอะไร</text>
+<line class="s2" x1="922.0" y1="182.0" x2="158.0" y2="182.0"/>
+<polygon class="head2" points="158.0,182.0 165.4,178.9 165.4,185.1"/>
+<text class="small" x="166" y="176" text-anchor="start">ServerHello + Certificate + ServerKeyExchange  ← ใบรับรองอ่านออก  (TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256)</text>
+<line class="s1" x1="158.0" y1="216.0" x2="922.0" y2="216.0"/>
+<polygon class="head1" points="922.0,216.0 914.6,219.1 914.6,212.9"/>
+<text class="small" x="166" y="210" text-anchor="start">ClientKeyExchange + ChangeCipherSpec + Finished</text>
+<line class="s2" x1="922.0" y1="250.0" x2="158.0" y2="250.0"/>
+<polygon class="head2" points="158.0,250.0 165.4,246.9 165.4,253.1"/>
+<text class="small" x="166" y="244" text-anchor="start">Finished — เริ่มส่งข้อมูลได้</text>
+<text class="ptitle" x="44" y="300" text-anchor="start">TLS 1.3</text>
+<text class="small" x="300" y="300" text-anchor="start">หนึ่ง round trip: client เดา group แล้วแนบ key share ไปกับ ClientHello เลย</text>
+<line class="lifeline" x1="150.0" y1="314.0" x2="150.0" y2="460.0"/>
+<line class="lifeline" x1="930.0" y1="314.0" x2="930.0" y2="460.0"/>
+<text class="lbl" x="150" y="312" text-anchor="middle">client</text>
+<text class="lbl" x="930" y="312" text-anchor="middle">server</text>
+<rect class="shade" x="160.0" y="374.0" width="760.0" height="80.0" rx="6"/>
+<text class="small" x="916" y="387" text-anchor="end">อ่านไม่ออกแล้ว</text>
+<line class="s1" x1="158.0" y1="336.0" x2="922.0" y2="336.0"/>
+<polygon class="head1" points="922.0,336.0 914.6,339.1 914.6,332.9"/>
+<text class="small" x="166" y="330" text-anchor="start">ClientHello + key share (X25519MLKEM768) — ไม่มี ServerKeyExchange ให้รอ</text>
+<line class="s2" x1="922.0" y1="370.0" x2="158.0" y2="370.0"/>
+<polygon class="head2" points="158.0,370.0 165.4,366.9 165.4,373.1"/>
+<text class="small" x="166" y="364" text-anchor="start">ServerHello + ChangeCipherSpec แล้วทุกอย่างที่ตามมาเข้ารหัส</text>
+<line class="s2" x1="922.0" y1="404.0" x2="158.0" y2="404.0"/>
+<polygon class="head2" points="158.0,404.0 165.4,400.9 165.4,407.1"/>
+<text class="small" x="166" y="398" text-anchor="start">{Certificate, CertificateVerify, Finished}  (TLS_AES_128_GCM_SHA256)</text>
+<line class="s1" x1="158.0" y1="438.0" x2="922.0" y2="438.0"/>
+<polygon class="head1" points="922.0,438.0 914.6,441.1 914.6,434.9"/>
+<text class="small" x="166" y="432" text-anchor="start">Finished — เริ่มส่งข้อมูลได้</text>
+<rect class="boxg" x="44.0" y="500.0" width="992.0" height="100.0" rx="8"/>
+<text class="lbl" x="60" y="526" text-anchor="start">สิ่งที่ภาพนี้บอกและบทนี้วัดได้</text>
+<text class="txt" x="60" y="548" text-anchor="start">certificate ของ TLS 1.3 อยู่ในเที่ยวบินที่ encrypted แล้ว · ของ TLS 1.2 ยัง cleartext อยู่</text>
+<text class="small" x="60" y="570" text-anchor="start">ชื่อ cipher ของ 1.2 มี key exchange ฝังในชื่อ (TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256) · ของ 1.3 มีแค่ TLS_AES_128_GCM_SHA256</text>
+<text class="small" x="60" y="590" text-anchor="start">เครื่องนี้มี suite ให้เลือก 3 แบบใน TLS 1.3 และ 29 แบบใน TLS 1.2</text>
+</svg>

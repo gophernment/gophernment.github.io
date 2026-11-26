@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 574" width="1080" height="574" role="img" aria-label="ห่วงโซ่ความไว้ใจ: root CA เซ็น intermediate CA และ intermediate เซ็น leaf; client เก็บ root ไว้เอง server ส่งเพียงสองใบล่าง">
+<style>
+text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 12px; fill: #1a1a1a; }
+.hdr { font-weight: 700; font-size: 17.5px; }
+.sub { fill: #57606a; font-size: 12.5px; }
+.ptitle { font-weight: 700; font-size: 14px; }
+.txt { font-size: 12px; }
+.lbl { fill: #57606a; font-size: 11px; }
+.small { fill: #57606a; font-size: 10.5px; }
+.big { font-weight: 700; font-size: 20px; fill: #0550ae; }
+.mono { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 11px; fill: #0a3069; }
+.monos { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 10px; fill: #57606a; }
+.boxg { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.3; }
+.boxb { fill: #eef4ff; stroke: #0969da; stroke-width: 1.5; }
+.boxy { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.4; }
+.boxi { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.4; }
+.boxr { fill: #fdeff0; stroke: #b62324; stroke-width: 1.4; }
+.shade { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.0; stroke-dasharray: 5 4; }
+.cell { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.1; }
+.wire { stroke: #8c959f; stroke-width: 1.8; fill: none; }
+.wire2 { stroke: #b6bfc8; stroke-width: 1.2; fill: none; stroke-dasharray: 5 5; }
+.s1 { stroke: #0969da; stroke-width: 2.2; fill: none; }
+.s2 { stroke: #1a7f37; stroke-width: 2.2; fill: none; }
+.s3 { stroke: #bf8700; stroke-width: 2.2; fill: none; }
+.s4 { stroke: #8250df; stroke-width: 2.2; fill: none; }
+.lifeline { stroke: #b6bfc8; stroke-width: 1.4; stroke-dasharray: 6 6; }
+.head { fill: #8c959f; }
+.head1 { fill: #0969da; }
+.head2 { fill: #1a7f37; }
+.head3 { fill: #bf8700; }
+.head4 { fill: #8250df; }
+.rule { stroke: #d0d7de; stroke-width: 1.2; }
+</style>
+<rect x="0" y="0" width="1080" height="574" fill="#ffffff"/>
+<text class="hdr" x="40" y="40" text-anchor="start">ห่วงโซ่ความไว้ใจ (chain of trust): ใครเซ็นใคร และใครถืออะไร</text>
+<text class="sub" x="40" y="64" text-anchor="start">ลูกศรคือลายเซ็น — ใบบนเซ็นใบล่าง ไม่ใช่ใบล่างเซ็นใบบน</text>
+<rect class="boxy" x="44.0" y="96.0" width="288.0" height="176.0" rx="10"/>
+<text class="ptitle" x="188" y="126" text-anchor="middle">root CA</text>
+<text class="mono" x="188" y="148" text-anchor="middle">Net16 Lab Root CA</text>
+<text class="small" x="60" y="176" text-anchor="start">- basicConstraints: CA:TRUE, pathlen:1</text>
+<text class="small" x="60" y="196" text-anchor="start">- เซ็นตัวเอง (self-signed)</text>
+<text class="small" x="60" y="216" text-anchor="start">- ถือโดย: client (trust store)</text>
+<text class="small" x="188" y="256" text-anchor="middle">ไม่เคยถูกส่งบนสาย</text>
+<line class="s1" x1="334.0" y1="184.0" x2="374.0" y2="184.0"/>
+<polygon class="head1" points="374.0,184.0 366.6,187.1 366.6,180.9"/>
+<text class="small" x="356" y="174" text-anchor="middle">เซ็น</text>
+<rect class="boxb" x="376.0" y="96.0" width="288.0" height="176.0" rx="10"/>
+<text class="ptitle" x="520" y="126" text-anchor="middle">intermediate CA</text>
+<text class="mono" x="520" y="148" text-anchor="middle">Net16 Lab Intermediate CA</text>
+<text class="small" x="392" y="176" text-anchor="start">- CA:TRUE, pathlen:0</text>
+<text class="small" x="392" y="196" text-anchor="start">- เซ็นโดย root เท่านั้น</text>
+<text class="small" x="392" y="216" text-anchor="start">- ถือโดย: server (ส่งไปด้วย)</text>
+<text class="small" x="520" y="241" text-anchor="middle">เซ็น leaf ต่อได้</text>
+<text class="small" x="520" y="256" text-anchor="middle">แต่สร้าง CA ชั้นถัดไปไม่ได้</text>
+<line class="s1" x1="666.0" y1="184.0" x2="706.0" y2="184.0"/>
+<polygon class="head1" points="706.0,184.0 698.6,187.1 698.6,180.9"/>
+<text class="small" x="688" y="174" text-anchor="middle">เซ็น</text>
+<rect class="boxi" x="708.0" y="96.0" width="288.0" height="176.0" rx="10"/>
+<text class="ptitle" x="852" y="126" text-anchor="middle">leaf</text>
+<text class="mono" x="852" y="148" text-anchor="middle">CN=localhost</text>
+<text class="small" x="724" y="176" text-anchor="start">- CA:FALSE + EKU serverAuth</text>
+<text class="small" x="724" y="196" text-anchor="start">- SAN: localhost, 127.0.0.1</text>
+<text class="small" x="724" y="216" text-anchor="start">- ถือโดย: server (ใบที่ใช้จริง)</text>
+<text class="small" x="852" y="256" text-anchor="middle">อายุ 397 วันในห้องแล็บนี้</text>
+<text class="ptitle" x="40" y="306" text-anchor="start">ตอน handshake สิ่งที่วิ่งบนสายมีแค่สองใบล่าง</text>
+<rect class="cell" x="44.0" y="326.0" width="992.0" height="96.0" rx="8"/>
+<text class="txt" x="64" y="352" text-anchor="start">server ส่ง: leaf + intermediate  =  เห็นเป็น BEGIN CERTIFICATE สองก้อน</text>
+<text class="small" x="64" y="376" text-anchor="start">client เติมใบที่สาม (root) จาก trust store ของตัวเอง แล้วไล่ลายเซ็นขึ้นไปจนถึงใบที่มันรู้จัก</text>
+<text class="small" x="64" y="400" text-anchor="start">ใบที่ client ไว้ใจได้ = ใบที่ไล่สายขึ้นไปถึง root ที่มีอยู่แล้ว และชื่อในใบตรงกับชื่อที่ต่อ</text>
+<text class="mono" x="40" y="454" text-anchor="start">ใบที่ server ส่งในบทนี้: 2 ใบ · ความยาวสายที่ตรวจผ่าน: 3 ใบ (leaf → intermediate → root)</text>
+<rect class="boxg" x="44.0" y="466.0" width="992.0" height="88.0" rx="8"/>
+<text class="lbl" x="60" y="492" text-anchor="start">อ่านภาพนี้ให้เป็นคำถามสามข้อที่ client ถามใบรับรองทุกใบ</text>
+<text class="txt" x="60" y="514" text-anchor="start">ใบนี้เซ็นโดยใคร (issuer) · คนที่เซ็นมีสิทธิ์เซ็นจริงไหม (IsCA) · ใบนี้พูดถึงชื่อที่เรากำลังต่อหรือเปล่า (SAN)</text>
+<text class="small" x="60" y="538" text-anchor="start">ขาดข้อไหนก็จบที่เดิม: client ตัดสายทิ้งก่อนส่งข้อมูลอะไรลงไป</text>
+</svg>
