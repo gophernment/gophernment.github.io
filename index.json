@@ -1,5 +1,19 @@
 [
   {
+    "slug": "2026-11-26-network-16-tls-https",
+    "title": "HTTPS คือ HTTP ที่ใส่ซอง: TLS handshake, certificate และห่วงโซ่ที่ client ไล่ตรวจให้ (ตอนที่ 16)",
+    "date": "2026-11-26",
+    "tags": [
+      "network",
+      "tls",
+      "https",
+      "pki",
+      "golang",
+      "openssl"
+    ],
+    "description": "ตอนที่แล้วเราเห็น HTTP เป็นข้อความล้วนที่อ่านออกทุกไบต์ บทนี้เติมชั้นที่ปิดช่องนั้น: TLS 1.3 ที่ย่อ handshake เหลือหนึ่ง round trip และซ่อนใบรับรองไว้ในเที่ยวบินที่เข้ารหัสแล้ว, certificate X.509 กับห่วงโซ่ root → intermediate → leaf ที่ client ไล่ลายเซ็นเอง, และเดโมที่วัดได้จริงบน loopback — marker หายไปจากสายหลังใส่ TLS, การพลิกหนึ่งบิตถูกจับด้วย bad record MAC, และสอง error ที่ client เห็นเมื่อการรับรองล้มเหลว"
+  },
+  {
     "slug": "2026-11-25-network-15-http-evolution",
     "title": "HTTP สี่รุ่นในสามสิบปี: 1.0 → 1.1 → 2 → 3 — keep-alive, multiplexing และวันที่ TCP กลายเป็นคอขวด (ตอนที่ 15)",
     "date": "2026-11-25",
