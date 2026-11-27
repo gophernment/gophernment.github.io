@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 648" width="1080" height="648" role="img" aria-label="หนึ่ง packet สองคำถาม: ปลายทางอยู่ใน subnet ที่ต่อตรงหรือไม่ ถ้าไม่ routing table ตัดสินด้วย longest prefix match แล้วฝากให้ next hop">
+<style>
+text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 12px; fill: #1a1a1a; }
+.hdr { font-weight: 700; font-size: 17.5px; }
+.sub { fill: #57606a; font-size: 12.5px; }
+.ptitle { font-weight: 700; font-size: 14px; }
+.txt { font-size: 12px; }
+.lbl { fill: #57606a; font-size: 11px; }
+.small { fill: #57606a; font-size: 10.5px; }
+.big { font-weight: 700; font-size: 20px; fill: #0550ae; }
+.mono { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 11px; fill: #0a3069; }
+.monos { font-family: ui-monospace, "DejaVu Sans Mono", monospace; font-size: 10px; fill: #57606a; }
+.boxg { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.3; }
+.boxb { fill: #eef4ff; stroke: #0969da; stroke-width: 1.5; }
+.boxy { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.4; }
+.boxi { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.4; }
+.boxr { fill: #fdeff0; stroke: #b62324; stroke-width: 1.4; }
+.shade { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.0; stroke-dasharray: 5 4; }
+.cell { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.1; }
+.win { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.4; }
+.wire { stroke: #8c959f; stroke-width: 1.8; fill: none; }
+.wire2 { stroke: #b6bfc8; stroke-width: 1.2; fill: none; stroke-dasharray: 5 5; }
+.s1 { stroke: #0969da; stroke-width: 2.2; fill: none; }
+.s2 { stroke: #1a7f37; stroke-width: 2.2; fill: none; }
+.s3 { stroke: #bf8700; stroke-width: 2.2; fill: none; }
+.s4 { stroke: #8250df; stroke-width: 2.2; fill: none; }
+.lifeline { stroke: #b6bfc8; stroke-width: 1.4; stroke-dasharray: 6 6; }
+.head { fill: #8c959f; }
+.head1 { fill: #0969da; }
+.head2 { fill: #1a7f37; }
+.head3 { fill: #bf8700; }
+.head4 { fill: #8250df; }
+.rule { stroke: #d0d7de; stroke-width: 1.2; }
+</style>
+<rect x="0" y="0" width="1080" height="648" fill="#ffffff"/>
+<text class="hdr" x="40" y="40" text-anchor="start">หนึ่ง packet สองคำถาม — และกฎเดียวที่ตัดสินทุกอย่าง</text>
+<text class="sub" x="40" y="64" text-anchor="start">kernel ถามตามลำดับนี้ก่อนมี packet ออกสาย · ถ้าคำถามที่สองไม่มีคำตอบ packet จะไม่ออกไปเลย</text>
+<rect class="boxg" x="44.0" y="96.0" width="220.0" height="104.0" rx="10"/>
+<text class="ptitle" x="154" y="124" text-anchor="middle">client</text>
+<text class="mono" x="154" y="148" text-anchor="middle">10.17.1.2/24</text>
+<text class="monos" x="154" y="170" text-anchor="middle">default via 10.17.1.1</text>
+<text class="small" x="154" y="190" text-anchor="middle">มี route 2 บรรทัด</text>
+<line class="s1" x1="268.0" y1="148.0" x2="340.0" y2="148.0"/>
+<polygon class="head1" points="340.0,148.0 332.6,151.1 332.6,144.9"/>
+<text class="small" x="304" y="140" text-anchor="middle">dst</text>
+<rect class="boxy" x="344.0" y="96.0" width="330.0" height="104.0" rx="10"/>
+<text class="lbl" x="359" y="122" text-anchor="start">คำถามที่ 1</text>
+<text class="txt" x="359" y="146" text-anchor="start">ปลายทางอยู่ใน subnet ที่ต่อตรงไหม</text>
+<text class="small" x="359" y="170" text-anchor="start">เทียบกับ 10.17.1.0/24 ของ veth-c</text>
+<text class="small" x="359" y="190" text-anchor="start">ใช่ → ส่งเอง ไม่ผ่าน router</text>
+<line class="s1" x1="678.0" y1="132.0" x2="744.0" y2="132.0"/>
+<polygon class="head1" points="744.0,132.0 736.6,135.1 736.6,128.9"/>
+<text class="small" x="711" y="124" text-anchor="middle">ไม่</text>
+<rect class="boxb" x="748.0" y="88.0" width="288.0" height="182.0" rx="10"/>
+<text class="ptitle" x="763" y="112" text-anchor="start">routing table ของ r1 (ตัวอย่าง)</text>
+<text class="mono" x="763" y="138" text-anchor="start">10.17.1.0/24</text>
+<text class="monos" x="885" y="138" text-anchor="start">dev veth-r1a</text>
+<text class="mono" x="763" y="160" text-anchor="start">10.17.2.0/24</text>
+<text class="monos" x="885" y="160" text-anchor="start">dev veth-r1b</text>
+<text class="mono" x="763" y="182" text-anchor="start">10.17.3.0/24</text>
+<text class="monos" x="885" y="182" text-anchor="start">via 10.17.2.2</text>
+<text class="mono" x="763" y="204" text-anchor="start">10.17.3.0/26</text>
+<text class="monos" x="885" y="204" text-anchor="start">unreachable</text>
+<text class="small" x="763" y="236" text-anchor="start">ไม่มี default — r1 รู้ทั้งสองฝั่ง</text>
+<text class="small" x="763" y="256" text-anchor="start">เจาะจงกว่า = ชนะ: /26 กิน /24</text>
+<line class="s2" x1="509.0" y1="204.0" x2="509.0" y2="244.0"/>
+<polygon class="head2" points="509.0,244.0 505.9,236.6 512.1,236.6"/>
+<text class="small" x="519" y="228" text-anchor="start">ใช่</text>
+<rect class="boxi" x="344.0" y="248.0" width="330.0" height="84.0" rx="10"/>
+<text class="txt" x="359" y="274" text-anchor="start">ส่งเอง: ARP หา MAC ของปลายทาง</text>
+<text class="txt" x="359" y="296" text-anchor="start">แล้วยัด frame ลงสายเดียวกัน</text>
+<text class="small" x="359" y="318" text-anchor="start">router ไม่มีส่วนเกี่ยวข้อง</text>
+<rect class="cell" x="44.0" y="360.0" width="992.0" height="176.0" rx="10"/>
+<text class="ptitle" x="60" y="386" text-anchor="start">คำถามที่ 2: มีหลายบรรทัดที่ครอบปลายทางได้ → เลือก prefix ที่ยาวที่สุด</text>
+<text class="lbl" x="60" y="410" text-anchor="start">route</text>
+<text class="lbl" x="300" y="410" text-anchor="start">ความยาว prefix</text>
+<text class="lbl" x="470" y="410" text-anchor="start">10.17.3.2</text>
+<text class="lbl" x="700" y="410" text-anchor="start">10.17.3.100</text>
+<text class="lbl" x="900" y="410" text-anchor="start">ใครชนะ</text>
+<line class="rule" x1="60.0" y1="444.0" x2="1020.0" y2="444.0"/>
+<text class="mono" x="60" y="436" text-anchor="start">10.17.3.0/24</text>
+<text class="monos" x="310" y="436" text-anchor="start">24</text>
+<text class="small" x="478" y="436" text-anchor="start">ครอบ</text>
+<text class="small" x="706" y="436" text-anchor="start">ครอบ</text>
+<text class="small" x="900" y="436" text-anchor="start">ชนะที่ .100</text>
+<line class="rule" x1="60.0" y1="470.0" x2="1020.0" y2="470.0"/>
+<text class="mono" x="60" y="462" text-anchor="start">10.17.3.0/26</text>
+<text class="monos" x="310" y="462" text-anchor="start">26</text>
+<text class="small" x="478" y="462" text-anchor="start">ครอบ</text>
+<text class="small" x="706" y="462" text-anchor="start">ไม่ครอบ</text>
+<text class="small" x="900" y="462" text-anchor="start">ชนะที่ .2</text>
+<text class="small" x="60" y="494" text-anchor="start">0.0.0.0/0 (ถ้ามี default) ยาว 0 บิต — ครอบทุกอย่างแต่แพ้ทุกบรรทัดที่ยาวกว่า</text>
+<text class="small" x="60" y="520" text-anchor="start">ผล: 10.17.3.2 ถูกจับด้วย /26 (ยาวสุด) · 10.17.3.100 ตกไปที่ /24 — ทั้งสองอยู่ subnet เดียวกันแต่คนละทาง</text>
+<rect class="boxg" x="44.0" y="556.0" width="992.0" height="76.0" rx="8"/>
+<text class="ptitle" x="60" y="582" text-anchor="start">route บอกความตั้งใจ · neigh (ARP) บอกความจริง</text>
+<text class="small" x="60" y="606" text-anchor="start">ไม่มี route = Network is unreachable (kernel ปฏิเสธตั้งแต่ยังไม่ออกสาย) · มี route แต่ next hop ไม่มีจริง = Destination Host Unreachable</text>
+</svg>
