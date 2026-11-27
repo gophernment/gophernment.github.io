@@ -1,5 +1,19 @@
 [
   {
+    "slug": "2026-11-27-network-17-routing-basics-icmp",
+    "title": "Routing พื้นฐาน: routing table, default gateway และ ICMP ที่เล่าให้ฟังว่า packet ตายที่ไหน (ตอนที่ 17)",
+    "date": "2026-11-27",
+    "tags": [
+      "network",
+      "routing",
+      "icmp",
+      "traceroute",
+      "golang",
+      "linux"
+    ],
+    "description": "สิบหกตอนที่ผ่านมาเราสมมติเสมอว่า 'ส่งถึง' — บทนี้เปิดฝา kernel ดูว่าเครื่องตัดสินใจยังไงว่าจะส่ง packet ออก interface ไหน: routing table สามชนิดที่ต้องแยก, longest prefix match ที่ทำให้ route ใหม่ชนะของเก่า, default gateway ที่หายแล้วได้ Network is unreachable ไม่ใช่ 'เน็ตช้า', และ ICMP ที่ ping/traceroute ใช้ — พร้อมแล็บสาม subnet สอง router ใน network namespace และ traceroute ที่เขียนเองใน Go"
+  },
+  {
     "slug": "2026-11-26-network-16-tls-https",
     "title": "HTTPS คือ HTTP ที่ใส่ซอง: TLS handshake, certificate และห่วงโซ่ที่ client ไล่ตรวจให้ (ตอนที่ 16)",
     "date": "2026-11-26",
