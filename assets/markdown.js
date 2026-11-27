@@ -101,8 +101,8 @@ function renderMarkdown(md) {
     if (line.includes("|") && lines[i + 1] && /^\s*\|?\s*-{2,}/.test(lines[i + 1])) {
       const splitRow = (row) =>
         row
-          .split("|")
-          .map((c) => c.trim())
+          .split(/(?<!\\)\|/)
+          .map((c) => c.trim().replace(/\\+\|/g, "|"))
           .filter((c, idx, arr) => !(c === "" && (idx === 0 || idx === arr.length - 1)));
       const headerCells = splitRow(line);
       i += 2;
