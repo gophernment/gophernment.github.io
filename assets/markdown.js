@@ -239,4 +239,60 @@ async function loadBlogPost() {
     tags.map((t) => `<span class="badge">${t}</span>`).join("");
 
   root.innerHTML = renderMarkdown(body);
+
+  await renderPrevNext(slug, meta.tags);
+}
+
+async function renderPrevNext(slug, tags) {
+  const navEl = document.getElementById("post-nav");
+  if (!navEl) return;
+
+  const series = Array.isArray(tags) && tags.length ? tags[0] : null;
+  if (!series) { navEl.style.display = "none"; return; }
+
+  let posts;
+  try {
+    const res = await fetch("/index.json");
+    posts = await res.json();
+  } catch (e) {
+    navEl.style.display = "none";
+    return;
+  }
+  if (!Array.isArray(posts)) { navEl.style.display = "none"; return; }
+
+  // ดึงเลขตอนจาก slug (ตัด date prefix ก่อน): <series>-NN-<name>
+  const epOf = (s) => {
+    const rest = String(s || "").replace(/^\d{4}-\d{2}-\d{2}-/, "");
+    const m = /-(\d{2,3})-/.exec(rest);
+    return m ? parseInt(m[1], 10) : Infinity;
+  };
+
+  const sameSeries = posts
+    .filter((p) => Array.isArray(p.tags) && p.tags[0] === series)
+    .sort((a, b) => epOf(a.slug) - epOf(b.slug));
+
+  const idx = sameSeries.findIndex((p) => p.slug === slug);
+  if (idx < 0) { navEl.style.display = "none"; return; }
+
+  const shortTitle = (t) => {
+    const s = String(t || "").split("—")[0].trim();
+    return s || String(t || "");
+  };
+
+  const makeLink = (p, cls, label) => {
+    const ep = epOf(p.slug);
+    const num = Number.isFinite(ep) ? `ตอน ${ep}` : "";
+    return `<a class="${cls}" href="/blog/post.html?slug=${encodeURIComponent(p.slug)}">
+      <span class="pn-label">${label}${num ? " · " + num : ""}</span>
+      <span class="pn-title">${shortTitle(p.title)}</span>
+    </a>`;
+  };
+
+  const prev = idx > 0 ? sameSeries[idx - 1] : null;
+  const next = idx < sameSeries.length - 1 ? sameSeries[idx + 1] : null;
+
+  navEl.innerHTML =
+    (prev ? makeLink(prev, "pn-prev", "← ตอนก่อน") : '<span class="pn-empty"></span>') +
+    (next ? makeLink(next, "pn-next", "ตอนถัดไป") : '<span class="pn-empty"></span>');
+  navEl.style.display = "grid";
 }

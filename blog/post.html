@@ -105,6 +105,28 @@ article.post { max-width: 720px; margin: 0 auto; padding: 24px 24px 80px; }
 #post-root th, #post-root td { text-align: left; padding: 8px 12px; border: 1px solid var(--border); }
 #post-root th { background: var(--hover); }
 
+#post-nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 40px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+}
+#post-nav a {
+  display: block;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--text);
+  transition: border-color .15s, background .15s;
+}
+#post-nav a:hover { border-color: var(--accent); background: var(--hover); }
+#post-nav .pn-label { display: block; font-size: 0.8em; color: var(--muted); margin-bottom: 4px; }
+#post-nav .pn-title { display: block; font-size: 0.95em; font-weight: 600; line-height: 1.4; }
+#post-nav .pn-next { text-align: right; }
+
 footer.site {
   max-width: 720px;
   margin: 0 auto;
@@ -131,6 +153,8 @@ footer.site a:hover { text-decoration: underline; }
 </header>
 
 <div id="post-root"><p>กำลังโหลดบทความ…</p></div>
+
+<nav id="post-nav" aria-label="ตอนก่อนหน้า / ตอนถัดไป" style="display:none;"></nav>
 </article>
 
 <footer class="site">
@@ -138,7 +162,7 @@ footer.site a:hover { text-decoration: underline; }
 <p>พัฒนาโดย HaveBit Co., Ltd.</p>
 </footer>
 
-<script src="/assets/markdown.js?v=4"></script>
+<script src="/assets/markdown.js?v=5"></script>
 <script>
   loadBlogPost().then(function () {
     if (typeof gtag === "function") {
