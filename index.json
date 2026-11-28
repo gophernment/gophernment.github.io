@@ -1,5 +1,19 @@
 [
   {
+    "slug": "2026-11-28-pm-01-what-is-project-manager",
+    "title": "Project Manager คืออะไร: บทบาทจริง และ 8 ตำแหน่งที่คนชอบสับสน (ตอนที่ 01)",
+    "date": "2026-11-28",
+    "tags": [
+      "pm",
+      "projectmanagement",
+      "career",
+      "productmanagement",
+      "scrum",
+      "agile"
+    ],
+    "description": "ตอนเปิดซีรีส์ Path to PM — แยกให้ชัดว่า Project Manager จริง ๆ ทำอะไร (ไม่ใช่แค่ 'คุมงาน') ต่างจาก Product Manager, Product Owner, Program Manager, PMO, Scrum Master, Delivery Manager และ Project Coordinator อย่างไร พร้อมตารางเทียบ 8 แถว ตัวอย่างโปรเจกต์เดียวที่มี 6 คำตอบ (ห้าคนในโปรเจกต์ — สี่บทบาทในทีม บวก PMO ที่สำนักงานใหญ่ — และอีกหนึ่งคนนอกทีมคือ Program Manager) และวิธีอ่าน JD ให้ออกใน 3 นาที"
+  },
+  {
     "slug": "2026-11-27-network-17-routing-basics-icmp",
     "title": "Routing พื้นฐาน: routing table, default gateway และ ICMP ที่เล่าให้ฟังว่า packet ตายที่ไหน (ตอนที่ 17)",
     "date": "2026-11-27",
