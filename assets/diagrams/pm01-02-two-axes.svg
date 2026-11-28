@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 700" width="1120" height="700" role="img" aria-label="แผนภาพสองแกนของ 5 บทบาทหลัก: แกนนอนคือคำถาม อะไร-ทำไม ถึง ยังไง-เสร็จเมื่อไหร่ แกนตั้งคือขอบเขตและระยะเวลา ทีมเดียว/รอบสั้น ถึง หลายทีม/ข้ามปี — ส่วน Delivery Manager กับ Project Coordinator เขียนไว้รอบกล่อง PM ไม่ได้วางเป็นจุดแยก">
+<style>
+text { font-family: "Noto Sans Thai", "DejaVu Sans", sans-serif; font-size: 13px; fill: #1a1a1a; }
+.hdr { font-weight: 700; font-size: 19px; }
+.sub { fill: #57606a; font-size: 13.5px; }
+.big { font-weight: 700; font-size: 22px; }
+.ptitle { font-weight: 700; font-size: 15.5px; }
+.txt { font-size: 13px; }
+.lbl { fill: #57606a; font-size: 12px; }
+.small { fill: #57606a; font-size: 12px; }
+.tiny { fill: #57606a; font-size: 11px; }
+.qlab { font-weight: 700; font-size: 14px; fill: #7a4d00; }
+.axlab { font-weight: 700; font-size: 13.5px; fill: #57606a; }
+.boxg { fill: #ffffff; stroke: #d0d7de; stroke-width: 1.3; }
+.boxq { fill: #fff8e5; stroke: #bf8700; stroke-width: 1.4; }
+.boxb { fill: #eef4ff; stroke: #0969da; stroke-width: 1.7; }
+.boxi { fill: #eefaf1; stroke: #1a7f37; stroke-width: 1.3; }
+.boxv { fill: #f6f2ff; stroke: #8250df; stroke-width: 1.3; }
+.boxk { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.2; }
+.rule { stroke: #d0d7de; stroke-width: 1.2; }
+.dash { stroke: #b6bfc9; stroke-width: 1.4; stroke-dasharray: 7 6; }
+.axis { stroke: #57606a; stroke-width: 1.8; }
+.note { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.2; }
+</style>
+<defs>
+<marker id="ar" viewBox="0 0 10 10" refX="9.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#57606a"/></marker>
+</defs>
+<rect x="0" y="0" width="1120" height="700" fill="#ffffff"/>
+<text class="hdr" x="560" y="42" text-anchor="middle">สองแกนที่แยก 5 บทบาทหลักออกจากกัน</text>
+<text class="sub" x="560" y="68" text-anchor="middle">นอน = ตอบคำถามอะไร · ตั้ง = ขอบเขตและระยะเวลา</text>
+<rect class="boxg" x="250" y="120" width="810" height="460" rx="4"/>
+<line class="dash" x1="655.0" y1="126" x2="655.0" y2="574" />
+<line class="dash" x1="256" y1="350.0" x2="1054" y2="350.0" />
+<text class="tiny" x="264" y="146" text-anchor="start">กว้าง · ข้ามปี + อะไร/ทำไม</text>
+<text class="tiny" x="264" y="376.0" text-anchor="start">แคบ · ทีมเดียว + อะไร/ทำไม</text>
+<text class="tiny" x="669.0" y="376.0" text-anchor="start">แคบ · โปรเจกต์เดียว + ยังไง/เสร็จเมื่อไหร่</text>
+<text class="tiny" x="669.0" y="146" text-anchor="start">กว้าง · ข้ามปี + หลายโปรเจกต์/ทั้งองค์กร</text>
+<rect class="boxv" x="272" y="164" width="360" height="148" rx="8"/>
+<text class="ptitle" x="290" y="194" text-anchor="start">Product Manager</text>
+<text class="txt" x="290" y="220" text-anchor="start">เจ้าของ “ทำอะไร/ทำไม” ระดับสินค้า</text>
+<text class="lbl" x="290" y="246" text-anchor="start">มองข้ามปี ข้าม release</text>
+<text class="lbl" x="290" y="272" text-anchor="start">ไม่มีวันจบที่ชัดเจน</text>
+<rect class="boxi" x="677.0" y="164" width="360" height="148" rx="8"/>
+<text class="ptitle" x="695.0" y="194" text-anchor="start">Program Manager · PMO</text>
+<text class="txt" x="695.0" y="220" text-anchor="start">ทำให้หลายโปรเจกต์ไปทางเดียวกัน</text>
+<text class="lbl" x="695.0" y="246" text-anchor="start">Program = ผลประโยชน์ที่ต้องได้</text>
+<text class="lbl" x="695.0" y="272" text-anchor="start">PMO = มาตรฐานและ process</text>
+<rect class="boxq" x="272" y="394.0" width="360" height="148" rx="8"/>
+<text class="ptitle" x="290" y="424.0" text-anchor="start">Product Owner</text>
+<text class="txt" x="290" y="450.0" text-anchor="start">เจ้าของ “ทำอะไร/ทำไม” ระดับ backlog</text>
+<text class="lbl" x="290" y="476.0" text-anchor="start">ตัดสินลำดับงาน</text>
+<text class="lbl" x="290" y="502.0" text-anchor="start">ของทีมหนึ่งทีม</text>
+<rect class="boxb" x="677.0" y="394.0" width="360" height="148" rx="8"/>
+<text class="ptitle" x="695.0" y="424.0" text-anchor="start">Project Manager</text>
+<text class="txt" x="695.0" y="450.0" text-anchor="start">เจ้าของ “ทำยังไง/เสร็จเมื่อไหร่”</text>
+<text class="lbl" x="695.0" y="476.0" text-anchor="start">Delivery Manager · Project Coordinator</text>
+<text class="lbl" x="695.0" y="502.0" text-anchor="start">ทำงานอยู่รอบกล่องนี้ ไม่ได้แยกเป็นจุด</text>
+<line class="axis" x1="260" y1="620" x2="1050" y2="620" marker-end="url(#ar)" marker-start="url(#ar)"/>
+<text class="axlab" x="260" y="646" text-anchor="start">คำถาม: “อะไร / ทำไม”</text>
+<text class="axlab" x="1050" y="646" text-anchor="end">คำถาม: “ยังไง / เสร็จเมื่อไหร่”</text>
+<line class="axis" x1="206" y1="570" x2="206" y2="130" marker-end="url(#ar)" marker-start="url(#ar)"/>
+<text class="axlab" x="192" y="574" text-anchor="end">ทีมเดียว/รอบสั้น</text>
+<text class="axlab" x="192" y="140" text-anchor="end">หลายทีม/ข้ามปี</text>
+<text class="tiny" x="192" y="354.0" text-anchor="end">ขอบเขต/เวลา</text>
+<text class="small" x="560" y="684" text-anchor="middle">เส้นแบ่งไม่ตายตัว — บริษัทเล็กมักยุบหลายช่องไว้ที่คนเดียว · Delivery Manager กับ Coordinator อยู่รอบกล่อง PM</text>
+</svg>
